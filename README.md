@@ -1,5 +1,9 @@
 # babakfp.ir
 
+## Todos
+
+- Add `Quicksand` and `MonoLisa` fonts locally.
+
 ## Documentation
 
 ### Editing `.*ignore-sync` files
