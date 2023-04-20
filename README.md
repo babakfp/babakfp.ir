@@ -2,7 +2,7 @@
 
 ## Todos
 
-- Add `Quicksand` and `MonoLisa` fonts locally.
+- Nothing to see here.
 
 ## Documentation
 

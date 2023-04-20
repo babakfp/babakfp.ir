@@ -9,6 +9,62 @@
 			content="Babak Farkhoopak website. It contains portfolios, blog posts, and documentation."
 		/>
 		<link rel="icon" href="%sveltekit.assets%/favicon-dark.svg" />
+
+		<!-- prettier-ignore -->
+		<link rel="preload" href="/fonts/Quicksand/Quicksand-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
+		<!-- prettier-ignore -->
+		<link rel="preload" href="/fonts/MonoLisa/MonoLisa-Regular.ttf" as="font" type="font/ttf" crossorigin />
+		<!-- prettier-ignore -->
+		<link rel="preload" href="/fonts/MonoLisa/MonoLisa-Medium.ttf" as="font" type="font/ttf" crossorigin />
+		<!-- prettier-ignore -->
+		<link rel="preload" href="/fonts/MonoLisa/MonoLisa-Bold.ttf" as="font" type="font/ttf" crossorigin />
+		<!-- prettier-ignore -->
+		<link rel="preload" href="/fonts/MonoLisa/MonoLisa-Black.ttf" as="font" type="font/ttf" crossorigin />
+		<!-- prettier-ignore -->
+		<link rel="preload" href="/fonts/UniNeue/Fontfabric - UniNeueBlack.otf" as="font" type="font/otf" crossorigin />
+
+		<style>
+			/* Quicksand */
+			@font-face {
+				font-family: Quicksand;
+				/* prettier-ignore */
+				src: url("/fonts/Quicksand/Quicksand-VariableFont_wght.ttf") format("truetype supports variations"),
+					 url("/fonts/Quicksand/Quicksand-VariableFont_wght.ttf") format("truetype-variations");
+				font-weight: 300 700;
+				font-display: block;
+			}
+			/* MonoLisa */
+			@font-face {
+				font-family: MonoLisaLOCAL;
+				font-weight: 400;
+				src: url("/fonts/MonoLisa/MonoLisa-Regular.ttf")
+					format("truetype");
+			}
+			@font-face {
+				font-family: MonoLisaLOCAL;
+				font-weight: 500;
+				src: url("/fonts/MonoLisa/MonoLisa-Medium.ttf")
+					format("truetype");
+			}
+			@font-face {
+				font-family: MonoLisaLOCAL;
+				font-weight: 700;
+				src: url("/fonts/MonoLisa/MonoLisa-Bold.ttf") format("truetype");
+			}
+			@font-face {
+				font-family: MonoLisaLOCAL;
+				font-weight: 900;
+				src: url("/fonts/MonoLisa/MonoLisa-Black.ttf")
+					format("truetype");
+			}
+			/* UniNeue */
+			@font-face {
+				font-family: UniNeue;
+				font-weight: 900;
+				src: url("/fonts/UniNeue/Fontfabric - UniNeueBlack.otf")
+					format("opentype");
+			}
+		</style>
 		%sveltekit.head%
 	</head>
 	<body
