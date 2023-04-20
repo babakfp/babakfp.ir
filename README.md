@@ -1,9 +1,5 @@
 # babakfp.ir
 
-## Todos
-
-- Nothing to see here.
-
 ## Documentation
 
 ### Editing `.*ignore-sync` files
