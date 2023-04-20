@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>BABAKFP</title>
+		<meta
+			name="description"
+			content="Babak Farkhoopak website. It contains portfolios, blog posts, and documentation."
+		/>
+		<link rel="icon" href="%sveltekit.assets%/favicon-dark.svg" />
+
+		<style>
+			:root {
+				--container-x: 1rem;
+				--screen-h: 100vh;
+				--screen-h: 100dvh;
+			}
+			@media (min-width: 640px) {
+				:root {
+					--container-x: 1.5rem;
+				}
+			}
+			* {
+				margin: 0;
+			}
+		</style>
+		<style>
+			.container {
+				width: 100%;
+				margin-right: auto;
+				margin-left: auto;
+			}
+			/* prettier-ignore */
+			@media (min-width: 640px) { .container { max-width: 640px } }
+			/* prettier-ignore */
+			@media (min-width: 768px) { .container { max-width: 768px } }
+			/* prettier-ignore */
+			@media (min-width: 1024px) { .container { max-width: 1024px } }
+			/* prettier-ignore */
+			@media (min-width: 1280px) { .container { max-width: 1280px } }
+			/* prettier-ignore */
+			@media (min-width: 1536px) { .container { max-width: 1536px } }
+			/* prettier-ignore */
+			.container { max-width: 20rem }
+		</style>
+		<style>
+			body {
+				min-height: var(--screen-h);
+				overflow-x: hidden;
+				background-color: rgb(24 24 27);
+				color: rgb(212 212 216);
+				overflow-y: auto;
+				overflow-y: overlay;
+				display: grid;
+				align-content: center;
+				justify-items: center;
+				justify-content: center;
+				font-family: "Quicksand";
+				padding-right: var(--container-x);
+				padding-left: var(--container-x);
+				text-align: center;
+			}
+			h1 {
+				margin-bottom: 0.5rem;
+				font-size: 6rem;
+				line-height: 1;
+				font-weight: 700;
+				color: rgb(250 250 250);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>%sveltekit.status%</h1>
+			<p>%sveltekit.error.message%</p>
+		</div>
+	</body>
+</html>
