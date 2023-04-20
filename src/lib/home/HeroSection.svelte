@@ -37,11 +37,9 @@
 			Online Resume
 		</a>
 		<div class="flex gap-2">
-			<a
+			<button
 				title="Email Me"
 				class="btn btn-icon"
-				href="mailto:babak.bxf@gmail.com"
-				rel="noreferrer"
 				on:click={() => {
 					copyText("babak.bxf@gmail.com")
 					toast.success(
@@ -51,7 +49,14 @@
 				}}
 			>
 				<IconEnvelope />
-			</a>
+
+				<a
+					class="absolute inset-0"
+					href="mailto:babak.bxf@gmail.com"
+					rel="noreferrer"
+				/>
+			</button>
+
 			<a
 				title="Github Repositories"
 				class="btn btn-icon"
