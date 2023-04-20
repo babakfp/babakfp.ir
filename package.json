@@ -12,7 +12,7 @@
 		"ignore-sync": "ignore-sync ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "2.0.0",
+		"@sveltejs/adapter-static": "2.0.2",
 		"@sveltejs/kit": "1.15.2",
 		"@tailwindcss/line-clamp": "0.4.4",
 		"autoprefixer": "10.4.14",
