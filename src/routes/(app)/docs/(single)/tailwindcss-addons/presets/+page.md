@@ -28,11 +28,11 @@ By default, these styles will be added to your tailwind config file.
 			ringWidth: {
 				3: '3px',
 			},
+			ringOffsetWidth: {
+				3: '3px',
+			},
 			outlineOffset: {
-				'-1': '-1px',
-				'-2': '-2px',
-				'-3': '-3px',
-				'-4': '-4px',
+				'3': '3px',
 			},
 			fontSize: {
 				'2xs': ['0.625rem', { lineHeight: '1' }],

@@ -1,41 +1,49 @@
+## 0.0.29
+
+- Added new `3px` value to [`ringOffsetWidth`](/docs/tailwindcss-addons/presets).
+
+## 0.0.28
+
+- Added new `3px` value to [`outlineOffset`](/docs/tailwindcss-addons/presets) and removed duplicate ones.
+
 ## 0.0.27
 
 - Added [Dynamic View Fix](/docs/tailwindcss-addons/dynamic-view-fix)
 
 ## 0.0.26
 
-- Removed all `base` styles.
+- [breaking] Removed all `base` styles.
 
 ## 0.0.25
 
-- New: Added arbitrary values support for the `not` variant, like `not-[VALUE]`.
+- New: Added arbitrary values support for the [`not` variant](/docs/tailwindcss-addons/not-variants), like `not-[VALUE]`.
 
 ## 0.0.24
 
 - Fixed `flattenColorPalette is not defined` error.
-- New: `tap-highlight` utility now supports all colors.
+- New: [`tap-highlight`](/docs/tailwindcss-addons/tap-highlight) utility now supports all colors.
 
 ## 0.0.23
 
-- `tap-highlight` utility now supports new `black` and `white` colors.
+- [breaking] Renamed [`tapHighlightTransparent`](/docs/tailwindcss-addons/tap-highlight) to `tapHighlight`.
+- [`tap-highlight`](/docs/tailwindcss-addons/tap-highlight) utility now supports new `black` and `white` colors.
 
 ## 0.0.22
 
-- Added `tapHighlightTransparent`.
-- Renamed `tapHighlightTransparent` to `tapHighlight`.
+- Added [`tapHighlightTransparent`](/docs/tailwindcss-addons/tap-highlight).
 
 ## 0.0.21
 
-- [breaking] Renamed `shortPlacements` to `flexGrid`.
-- Added `fontWeightRegular` to replace `font-normal` with `font-regular`.
+- [breaking] Renamed `shortPlacements` to [`flexGrid`](/docs/tailwindcss-addons/flex-grid).
+- Added [`fontWeightRegular`](/docs/tailwindcss-addons/font-weight-regular) to replace `font-normal` with `font-regular`.
 
 ## 0.0.12
 
-- Modified input reset utilities.
+- [breaking] Modified [input reset](/docs/tailwindcss-addons/input-resets) utilities.
 
 ## 0.0.11
 
-- Removed unused files.
+- Cleaned up and removed dead files.
 
 ## 0.0.10
 
@@ -45,36 +53,35 @@
 
 ## 0.0.9
 
-- Renamed `.link-img` to `.linked-img` and changed its styles.
+- [breaking] Renamed `.link-img` to `.linked-img` and changed its styles.
 
 ## 0.0.8
 
-- Removed `inset: auto` from `insetCenter` utilities.
+- [breaking] Removed `inset: auto` from [`insetCenter`](/docs/tailwindcss-addons/inset) utilities.
 
 ## 0.0.7
 
-- Fixed .link-img component not working
-- Renamed `animate-click` to `simulate-click` and converted to component from utility
+- Fixed `.link-img` component wasn't working.
+- [breaking] Renamed `animate-click` to `simulate-click` and converted to component from utility.
 
 ## 0.0.6
 
-- Added new `.number-input-reset` class
-- Added new `.search-input-reset` class
+- Added new [`.number-input-reset` and `.search-input-reset`](/docs/tailwindcss-addons/input-resets) utilities.
 
 ## 0.0.5
 
-- Added `:not()` variants
+- Added [`not-`](/docs/tailwindcss-addons/not-variants) variants.
 
 ## 0.0.4
 
-- Added new value `3px` to `outlineOffset`
+- Added new value `-3px` to [`outlineOffset`](/docs/tailwindcss-addons/presets).
 
 ## 0.0.3
 
-- Removed `height` from "base" styles `body`
-- Added `min-height: 100vh` to "base" styles `body`
-- Added `b` and `strong` styles from "base" styles
+- [breaking] Removed `height` from "base" styles `body`.
+- [breaking] Added `min-height: 100vh` to "base" styles `body`.
+- [breaking] Added `b` and `strong` styles to "base" styles.
 
 ## 0.0.2
 
-- Fixed typo in `main` key in `package.json`.
+- Fixed typo in `main` property in `package.json`.
