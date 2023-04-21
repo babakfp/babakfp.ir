@@ -12,7 +12,7 @@ export default {
 	kit: {
 		adapter: adapter(),
 		alias: {
-			$icons: "src/lib/icons/index.js",
+			$icons: "src/lib/icons/index.ts",
 			$stores: "src/stores",
 			$portfolios: "src/portfolios",
 			$utils: "src/utils",
