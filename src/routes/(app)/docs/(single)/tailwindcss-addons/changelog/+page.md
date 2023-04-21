@@ -1,3 +1,7 @@
+## 0.0.27
+
+- Added [Dynamic View Fix](/docs/tailwindcss-addons/dynamic-view-fix)
+
 ## 0.0.26
 
 - Removed all `base` styles.

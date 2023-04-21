@@ -119,6 +119,10 @@ export const docsSidebarItems = readable([
 						path: "/docs/tailwindcss-addons/flex-grid",
 					},
 					{
+						title: "Dynamic View Fix",
+						path: "/docs/tailwindcss-addons/dynamic-view-fix",
+					},
+					{
 						title: "Font Weight Regular",
 						path: "/docs/tailwindcss-addons/font-weight-regular",
 					},
