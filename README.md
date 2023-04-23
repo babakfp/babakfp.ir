@@ -1,5 +1,9 @@
 # babakfp.ir
 
+## Todo
+
+- Fix trailingSlash issue!
+
 ## Documentation
 
 ### Editing `.*ignore-sync` files
