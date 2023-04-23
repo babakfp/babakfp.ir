@@ -10,7 +10,7 @@ const codeBlockComponents = require("./src/utils/tailwind/codeBlockComponents.cj
 const linkComponents = require("./src/utils/tailwind/linkComponents.cjs")
 const scrollbar = require("./src/utils/tailwind/scrollbar.cjs")
 
-/** @type {import('tailwindcss').Config} */
+/** @type {import("tailwindcss").Config} */
 module.exports = {
 	content: ["./src/**/*.{html,js,svelte,ts,md}"],
 	presets: [tailwindcssAddons(), dynamicViewSizeFix(), containerUtility()],

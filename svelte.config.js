@@ -6,7 +6,7 @@ import rehypeSlug from "rehype-slug"
 // import { rehypeAccessibleEmojis } from "rehype-accessible-emojis"
 // import rehypeAutolinkHeadings from "rehype-autolink-headings"
 
-/** @type {import('@sveltejs/kit').Config} */
+/** @type {import("@sveltejs/kit").Config} */
 export default {
 	extensions: [".svelte", ".md"],
 	kit: {
