@@ -46,7 +46,7 @@ You may want to exclude some elements from triggering the event. For example, a 
 
 #### `excludeElements`
 
-Type: `HTMLElement | HTMLElement[]`
+- Type: `HTMLElement | HTMLElement[]`
 
 This prop expects an array of DOM nodes. Clicks on those nodes (and their children) will be ignored. Learn about [`bind:this`](https://svelte.dev/tutorial/bind-this).
 
@@ -74,7 +74,7 @@ This prop can receive a single variable or multiple variables in an array.
 
 #### `excludeQuerySelectorAll`
 
-Type: `string`
+- Type: `string`
 
 This prop expects an array of query selectors. Clicks on those nodes (and their children) will be ignored. Selectors element most be present on the document or it will cause an error.
 
@@ -101,7 +101,7 @@ This prop works the same as the `querySelectorAll` method. So, it can contain va
 
 ### `class` prop
 
-Type: `string`
+- Type: `string`
 
 This is the same as the CSS `class` attribute. You can use tools like TailwindCSS without any problems, just add your classes how you normally do. Please check out the demo source code to learn about how to add styles to your custom class.
 
@@ -135,9 +135,8 @@ This is the same as the CSS `class` attribute. You can use tools like TailwindCS
 
 ### `includeSelf`
 
-Type: `boolean`
-
-Default: `false`
+- Type: `boolean`
+- Default: `false`
 
 For example, if you want to close the dropdown when you click on its items, set the value to `true`, so the self(wrapper) can trigger the event.
 
@@ -158,17 +157,15 @@ For example, if you want to close the dropdown when you click on its items, set 
 
 ### `halfClick`
 
-Type: `boolean`
-
-Default: `true`
+- Type: `boolean`
+- Default: `true`
 
 If `true`, outclick will happen when `pointerdown` and `pointerup` events happen after eachother, outside of the element. If `false`, `pointerdown` can solely determine the click outside.
 
 ### `tag`
 
-Type: `string`
-
-Default: `'div'`
+- Type: `string`
+- Default: `'div'`
 
 You can add a prop called `tag` to your `OutClick` component and change the wrapper tag. Added with the help of `svelte:element`.
 
