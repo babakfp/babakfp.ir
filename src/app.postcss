@@ -189,7 +189,10 @@
 			@apply font-normal;
 		}
 		pre:not(table, table *) {
-			@apply pre-code-block;
+			@apply pre-code-block -mx-container-x rounded-none highlight-transparent sm:mx-0 sm:rounded sm:highlight-gray-50/10;
+			code {
+				@apply px-4 sm:px-6;
+			}
 		}
 		:not(pre) code:not(table, table *) {
 			@apply inline-code;
