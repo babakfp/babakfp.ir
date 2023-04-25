@@ -34,7 +34,7 @@
 		"svelte-loading-bar": "0.0.4",
 		"svelte-outclick": "3.5.0",
 		"tailwindcss": "3.2.7",
-		"tailwindcss-addons": "0.0.26",
+		"tailwindcss-addons": "0.0.29",
 		"tslib": "2.5.0",
 		"typescript": "5.0.4",
 		"vite": "4.2.1"

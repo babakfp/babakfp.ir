@@ -1,7 +1,6 @@
 const tailwindcssAddons = require("tailwindcss-addons")
 const colors = require("tailwindcss/colors")
 const defaultTheme = require("tailwindcss/defaultTheme")
-const dynamicViewSizeFix = require("./src/utils/tailwind/dynamicViewSizeFix.cjs")
 const containerUtility = require("./src/utils/tailwind/containerUtility.cjs")
 const outlineInsetUtility = require("./src/utils/tailwind/outlineInsetUtility.cjs")
 const highlightUtility = require("./src/utils/tailwind/highlightUtility.cjs")
@@ -13,7 +12,12 @@ const scrollbar = require("./src/utils/tailwind/scrollbar.cjs")
 /** @type {import("tailwindcss").Config} */
 module.exports = {
 	content: ["./src/**/*.{html,js,svelte,ts,md}"],
-	presets: [tailwindcssAddons(), dynamicViewSizeFix(), containerUtility()],
+	presets: [
+		tailwindcssAddons({
+			dynamicViewFix: true,
+		}),
+		containerUtility(),
+	],
 	theme: {
 		extend: {
 			spacing: {

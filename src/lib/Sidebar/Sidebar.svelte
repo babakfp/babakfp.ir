@@ -45,7 +45,7 @@
 <style lang="postcss">
 	:global(:root) {
 		--remaining-x-spacing: calc(
-			(var(--screen-w) - theme(maxWidth.screen-xl)) / 2
+			(var(--tw-screen-w) - theme(maxWidth.screen-xl)) / 2
 		);
 	}
 	@screen xl {
