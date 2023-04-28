@@ -81,32 +81,9 @@
 		h1 {
 			@apply font-title text-6xl font-[900] sm:text-7xl;
 		}
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			@apply relative;
-			&:hover a[aria-hidden="true"] {
-				@apply show;
-			}
-			a[aria-hidden="true"] {
-				@apply absolute right-full flex h-full items-center pr-1 hide inset-y-center sm:px-2;
-				&:hover span {
-					@apply opacity-50;
-				}
-				span {
-					@apply h-4 w-4 rotate-90 opacity-25 duration-100 sm:h-[.75em] sm:w-[.75em];
-					content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='rgb(255 255 255)' d='M0 256C0 167.6 71.63 96 160 96h96c17.7 0 32 14.3 32 32s-14.3 32-32 32h-96c-53.9 0-96 42.1-96 96 0 53 42.1 96 96 96h96c17.7 0 32 14.3 32 32s-14.3 32-32 32h-96C71.63 416 0 344.4 0 256zm480 160h-96c-17.7 0-32-14.3-32-32s14.3-32 32-32h96c53 0 96-43 96-96 0-53.9-43-96-96-96h-96c-17.7 0-32-14.3-32-32s14.3-32 32-32h96c88.4 0 160 71.6 160 160s-71.6 160-160 160zm-64-192c17.7 0 32 14.3 32 32s-14.3 32-32 32H224c-17.7 0-32-14.3-32-32s14.3-32 32-32h192z'/%3E%3C/svg%3E");
-				}
-			}
-		}
 		h2 {
 			@apply text-3xl sm:text-4xl;
 			@apply border-b-2 border-gray-50/10 pb-2;
-			a[aria-hidden="true"] {
-				@apply pb-[calc(theme(spacing.2)+2px)];
-			}
 		}
 		h3 {
 			@apply text-xl sm:text-2xl;

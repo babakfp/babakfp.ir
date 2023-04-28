@@ -7,7 +7,6 @@ import remarkUnwrapImages from "remark-unwrap-images"
 import rehypeSlug from "rehype-slug"
 import rehypeExternalLinks from "rehype-external-links"
 // import { rehypeAccessibleEmojis } from "rehype-accessible-emojis"
-// import rehypeAutolinkHeadings from "rehype-autolink-headings"
 
 const mdsvexExtension = ".md"
 
@@ -43,7 +42,6 @@ export default {
 					},
 				],
 				// rehypeAccessibleEmojis,
-				// rehypeAutolinkHeadings,
 			],
 			highlight: {
 				highlighter: async (code, lang) => {
