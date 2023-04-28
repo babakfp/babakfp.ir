@@ -4,6 +4,7 @@ import { mdsvex, escapeSvelte } from "mdsvex"
 import { getHighlighter } from "shiki"
 import remarkUnwrapImages from "remark-unwrap-images"
 import rehypeSlug from "rehype-slug"
+import rehypeExternalLinks from "rehype-external-links"
 // import { rehypeAccessibleEmojis } from "rehype-accessible-emojis"
 // import rehypeAutolinkHeadings from "rehype-autolink-headings"
 
@@ -25,6 +26,19 @@ export default {
 			extensions: [".md"],
 			remarkPlugins: [remarkUnwrapImages],
 			rehypePlugins: [
+				[
+					rehypeExternalLinks,
+					{
+						target(element) {
+							console.log(element?.properties?.href)
+							return element?.properties?.href &&
+								isExternalLink(element?.properties?.href)
+								? "_blank"
+								: undefined
+						},
+						rel: ["nofollow", "noopener", "noreferrer"],
+					},
+				],
 				rehypeSlug,
 				// rehypeAccessibleEmojis,
 				// rehypeAutolinkHeadings,
@@ -50,4 +64,12 @@ async function mdsvexHighlight(code, lang) {
 		langs: ["html", "css", "js", "svelte", "php", "cmd"],
 	})
 	return highlighter.codeToHtml(code, { lang })
+}
+
+/**
+ * @param {string} link
+ * @returns {boolean}
+ */
+function isExternalLink(link) {
+	return link.startsWith("http://") || link.startsWith("https://")
 }

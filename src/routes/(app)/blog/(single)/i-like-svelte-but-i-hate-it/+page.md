@@ -1,5 +1,4 @@
 <script>
-	import LinkBlank from "$lib/markdown/LinkBlank.svelte"
 	import Video from "$lib/markdown/Video.svelte"
 	import ShowMore from "$lib/markdown/ShowMore.svelte"
 	import PlatformQuote from "$lib/PlatformQuote.svelte"
@@ -14,15 +13,15 @@ Why I hate Svelte? What are the negatives of using Svelte? Should you learn Svel
 
 First, let's learn a bit about me. I'm a web developer since 2019/2020. I have built open-source and paid Wordpress themes and plugins. I'm currently working as a front-end developer. I have done freelancing. I have built websites and open-source tools and packages. I have maintained multiple dev communities. I also have good knowledge of UI and UX design. I started using Svelte in 2020.
 
-## I got banned from <LinkBlank href="https://svelte.dev/chat">the Discord group</LinkBlank>
+## I got banned from [the Discord group](https://svelte.dev/chat)
 
-Svelte documentation UI sucks, right? In _2021_ I designed a logo a UI for SvelteKit documentation (before the official documentation existed). I share them in the Discord group. I and some community members discussed the design and the related stuff (in a **civil** manner). In the middle of the conversation, _suddenly_ I got removed from the group! Later when I joined (with an alternate account), I couldn't find any of my messages. They probably automatically cleaned up everything after removing me. You can download all UI and logo design source files I ever create for Svelte, <LinkBlank href="https://bit.ly/3tf6mPL">from here</LinkBlank>.
+Svelte documentation UI sucks, right? In _2021_ I designed a logo a UI for SvelteKit documentation (before the official documentation existed). I share them in the Discord group. I and some community members discussed the design and the related stuff (in a **civil** manner). In the middle of the conversation, _suddenly_ I got removed from the group! Later when I joined (with an alternate account), I couldn't find any of my messages. They probably automatically cleaned up everything after removing me. You can download all UI and logo design source files I ever create for Svelte, [from here](https://bit.ly/3tf6mPL)
 
 _This is the result of trying to contribute to Svelte:_
 
 ![A GIF that shows the button to join the Svelte Discord group doesn't work.](/blog/i-like-svelte-but-i-hate-it/2.gif)
 
-## I got banned from <LinkBlank href="https://github.com/sveltejs">the Github repositories</LinkBlank>
+## I got banned from [the Github repositories](https://github.com/sveltejs)
 
 It was difficult for me to use this dropdown:
 
@@ -48,7 +47,7 @@ _This is the result of contributing to svelte:_
 
 ![A screenshot that shows the comments section in github, displaying a message saying that I can't perform the action of writing a comment](/blog/i-like-svelte-but-i-hate-it/1.png)
 
-## I got banned from <LinkBlank href="https://devto">Dev.to</LinkBlank> site
+## I got banned from [Dev.to](https://devto) site
 
 After I got banned from the Svelte repositories on Github, the same day, I write an article about what happened, and my account got restricted because! This is the article:
 
@@ -140,4 +139,4 @@ So, I created a new account and sent the below message, and again, I got removed
 
 ---
 
-Thank you, <LinkBlank href="https://telegram.org/">Telegram</LinkBlank>. You are the reason that I have a backup from these messages😂🙏.
+Thank you, [Telegram](https://telegram.org). You are the reason that I have a backup from these messages😂🙏.
