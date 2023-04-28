@@ -2,6 +2,7 @@ import adapter from "@sveltejs/adapter-static"
 import { vitePreprocess } from "@sveltejs/kit/vite"
 import { mdsvex, escapeSvelte } from "mdsvex"
 import { getHighlighter } from "shiki"
+import remarkUnwrapImages from "remark-unwrap-images"
 import rehypeSlug from "rehype-slug"
 // import { rehypeAccessibleEmojis } from "rehype-accessible-emojis"
 // import rehypeAutolinkHeadings from "rehype-autolink-headings"
@@ -22,6 +23,7 @@ export default {
 		vitePreprocess(),
 		mdsvex({
 			extensions: [".md"],
+			remarkPlugins: [remarkUnwrapImages],
 			rehypePlugins: [
 				rehypeSlug,
 				// rehypeAccessibleEmojis,
