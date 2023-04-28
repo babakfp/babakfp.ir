@@ -1,5 +1,6 @@
 import adapter from "@sveltejs/adapter-static"
 import { vitePreprocess } from "@sveltejs/kit/vite"
+
 import { mdsvex, escapeSvelte } from "mdsvex"
 import { getHighlighter } from "shiki"
 import remarkUnwrapImages from "remark-unwrap-images"
@@ -8,9 +9,11 @@ import rehypeExternalLinks from "rehype-external-links"
 // import { rehypeAccessibleEmojis } from "rehype-accessible-emojis"
 // import rehypeAutolinkHeadings from "rehype-autolink-headings"
 
+const mdsvexExtension = ".md"
+
 /** @type {import("@sveltejs/kit").Config} */
 export default {
-	extensions: [".svelte", ".md"],
+	extensions: [".svelte", mdsvexExtension],
 	kit: {
 		adapter: adapter(),
 		alias: {
@@ -23,14 +26,14 @@ export default {
 	preprocess: [
 		vitePreprocess(),
 		mdsvex({
-			extensions: [".md"],
+			extensions: [mdsvexExtension],
 			remarkPlugins: [remarkUnwrapImages],
 			rehypePlugins: [
+				rehypeSlug,
 				[
 					rehypeExternalLinks,
 					{
 						target(element) {
-							console.log(element?.properties?.href)
 							return element?.properties?.href &&
 								isExternalLink(element?.properties?.href)
 								? "_blank"
@@ -39,7 +42,6 @@ export default {
 						rel: ["nofollow", "noopener", "noreferrer"],
 					},
 				],
-				rehypeSlug,
 				// rehypeAccessibleEmojis,
 				// rehypeAutolinkHeadings,
 			],
