@@ -25,6 +25,7 @@ export default {
 		vitePreprocess(),
 		mdsvex({
 			extensions: [mdsvexExtension],
+			layout: "/src/lib/markdown/MdsvexLayout.svelte",
 			remarkPlugins: [remarkUnwrapImages],
 			rehypePlugins: [
 				rehypeSlug,
