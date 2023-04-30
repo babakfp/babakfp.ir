@@ -23,7 +23,7 @@
 
 <div bind:this={wrapper} class="relative">
 	<div
-		class="max-h-96 after:absolute after:inset-x-0 after:bottom-0 after:h-64 after:bg-gradient-to-b after:from-transparent after:to-gray-900
+		class="max-h-96 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-64 after:bg-gradient-to-b after:from-transparent after:to-gray-900
 		{isOpen ? '!max-h-none after:hidden' : 'overflow-hidden rounded'}"
 	>
 		<slot />
