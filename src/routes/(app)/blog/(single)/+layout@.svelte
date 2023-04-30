@@ -28,10 +28,7 @@
 				<slot />
 			</Article>
 
-			{#if posts.length > 0}
-				<hr class="my-8" />
-				<OtherBlogPosts />
-			{/if}
+			<OtherBlogPosts />
 		</div>
 
 		<TocMenu name="blog" bind:isOpen={$isBlogTocSidebarOpen} />

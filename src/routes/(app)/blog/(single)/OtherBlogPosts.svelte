@@ -2,16 +2,24 @@
 	import { page } from "$app/stores"
 	import posts from "$portfolios/posts.json"
 	import PostCard from "$lib/cards/PostCard.svelte"
+
+	const otherPosts = posts.filter(
+		({ slug }) => slug !== $page.url.pathname.replace("/blog/", "")
+	)
 </script>
 
-<div class="[zoom:0.8]">
-	<h2 class="text-sm font-medium">OTHER BLOG POSTS</h2>
+{#if posts.length > 0}
+	<hr class="my-8" />
 
-	<ul class="mt-4 space-y-4">
-		{#each posts.filter(({ slug }) => slug !== $page.url.pathname.replace("/blog/", "")) as { slug, ...rest }}
-			<li>
-				<PostCard {...rest} href="/blog/{slug}" />
-			</li>
-		{/each}
-	</ul>
-</div>
+	<div class="[zoom:0.8]">
+		<h2 class="text-sm font-medium">OTHER BLOG POSTS</h2>
+
+		<ul class="mt-4 space-y-4">
+			{#each otherPosts as { slug, ...rest }}
+				<li>
+					<PostCard {...rest} href="/blog/{slug}" />
+				</li>
+			{/each}
+		</ul>
+	</div>
+{/if}
