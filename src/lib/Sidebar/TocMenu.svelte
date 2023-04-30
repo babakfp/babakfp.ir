@@ -24,7 +24,7 @@
 		name.slice(1)} (on this page) menu"
 	side="right"
 >
-	<div class="px-4 text-sm font-semibold uppercase">On this page</div>
+	<div class="px-4 text-xl font-bold">ON THIS PAGE</div>
 
 	<ul class="mt-4">
 		{#each contents as content}
