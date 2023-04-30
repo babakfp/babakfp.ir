@@ -45,7 +45,7 @@
 
 @layer components {
 	.main {
-		@apply container min-h-[var(--screen-h-minus-header-h)] pt-12 pb-20;
+		@apply container min-h-[var(--screen-h-minus-header-h)] pb-20 pt-12;
 	}
 }
 
@@ -146,12 +146,8 @@
 
 		blockquote {
 			@apply relative rounded bg-gray-50/5 p-4;
-			&::before {
-				content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='rgb(255 255 255 / 25%)' d='M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64h-64c-35.3 0-64-28.7-64-64V216z'/%3E%3C/svg%3E");
-				@apply absolute top-0 left-0 h-7 w-7 -translate-x-2 -translate-y-2 rounded-full bg-gray-700 px-2 leading-[1.75rem];
-			}
 			blockquote {
-				@apply mt-4 -mr-4 border-l border-b border-gray-50/5 bg-gray-50/[.01] sm:mr-0;
+				@apply -mr-4 mt-4 border-b border-l border-gray-50/5 bg-gray-50/[.01] sm:mr-0;
 			}
 		}
 
