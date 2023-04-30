@@ -24,10 +24,7 @@ module.exports = {
 				"header-h": "var(--header-h)",
 			},
 			colors: {
-				gray: {
-					...colors.zinc,
-					950: "#09090b", // TODO: Remove this after update Tailwindcss to new version
-				},
+				gray: colors.zinc,
 			},
 			borderRadius: {
 				DEFAULT: "0.5rem",
@@ -51,7 +48,6 @@ module.exports = {
 		},
 	},
 	plugins: [
-		require("@tailwindcss/line-clamp"),
 		outlineInsetUtility(),
 		highlightUtility(),
 		buttonComponents(),
