@@ -165,7 +165,7 @@ If `true`, outclick will happen when `pointerdown` and `pointerup` events happen
 ### `tag`
 
 - Type: `string`
-- Default: `'div'`
+- Default: `"div"`
 
 You can add a prop called `tag` to your `OutClick` component and change the wrapper tag. Added with the help of `svelte:element`.
 

@@ -5,7 +5,7 @@ This feature is now available 👏.
 <!-- prettier-ignore -->
 ```svelte
 <script>
-	let tag = 'div'
+	let tag = "div"
 </script>
 
 <svelte:element this={tag}>
@@ -18,7 +18,7 @@ It would be better if they change the the prop name to `tag`. What if we also wa
 <!-- prettier-ignore -->
 ```svelte
 <script>
-	let tag = 'div'
+	let tag = "div"
 	let element
 </script>
 
