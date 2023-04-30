@@ -2,7 +2,7 @@
 
 ## Todo
 
-- Fix trailingSlash issue!
+- Move CSS variables to TW values.
 
 ## Documentation
 
