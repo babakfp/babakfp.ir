@@ -1,6 +1,6 @@
-const tailwindcssAddons = require("tailwindcss-addons")
 const colors = require("tailwindcss/colors")
 const defaultTheme = require("tailwindcss/defaultTheme")
+const tailwindcssAddons = require("tailwindcss-addons")
 const containerUtility = require("./src/utils/tailwind/containerUtility.cjs")
 const outlineInsetUtility = require("./src/utils/tailwind/outlineInsetUtility.cjs")
 const highlightUtility = require("./src/utils/tailwind/highlightUtility.cjs")
