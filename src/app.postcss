@@ -61,11 +61,7 @@
 
 @layer components {
 	.article-content {
-		@apply font-medium leading-7;
-
-		*:not(:first-child):not(table):not(table *) {
-			@apply mt-4;
-		}
+		@apply space-y-4 font-medium leading-7;
 
 		h1,
 		h2,
@@ -114,7 +110,7 @@
 
 		ul,
 		ol {
-			@apply list-inside;
+			@apply list-inside space-y-2;
 			ul,
 			ol {
 				@apply ml-5;
@@ -126,12 +122,8 @@
 		ol {
 			@apply list-decimal;
 		}
-
 		li {
-			@apply leading-6 not-first:!mt-2;
-		}
-		li > p {
-			@apply inline;
+			@apply leading-6;
 		}
 
 		img,
@@ -147,7 +139,7 @@
 		blockquote {
 			@apply relative rounded bg-gray-50/5 p-4;
 			blockquote {
-				@apply -mr-4 mt-4 border-b border-l border-gray-50/5 bg-gray-50/[.01] sm:mr-0;
+				@apply -mr-4 mt-4 border-b-2 border-l-2 border-gray-50/5 bg-gray-50/[.01] sm:mr-0;
 			}
 		}
 

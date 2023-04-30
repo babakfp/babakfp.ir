@@ -9,7 +9,7 @@
 	<img class="inline" {src} {alt} loading="lazy" />
 
 	<a
-		class="btn btn-icon absolute right-3 top-3 !mt-0 hide group-hover:show"
+		class="btn btn-icon absolute right-3 top-3 hide group-hover:show"
 		href={src}
 		target="_blank"
 	>

@@ -1,7 +1,7 @@
 <script>
 	import Video from "$lib/markdown/Video.svelte"
 	import ShowMore from "$lib/markdown/ShowMore.svelte"
-	import PlatformQuote from "$lib/PlatformQuote.svelte"
+	import PlatformQuote from "$lib/markdown/PlatformQuote.svelte"
 	import TheGithubComment from "./_lib/TheGithubComment.md"
 	import TheDevtoArticle from "./_lib/TheDevtoArticle.md"
 	import TheDevtoArticleReply from "./_lib/TheDevtoArticleReply.md"

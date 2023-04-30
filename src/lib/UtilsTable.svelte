@@ -60,7 +60,6 @@
 	{#if isCollapsable}
 		<div
 			class="
-				!m-0
 				{isCollapsed ? 'absolute bottom-0 pb-6' : 'sticky -bottom-2'}
 				inset-x-0 flex items-center justify-center rounded bg-gray-800/50 p-4 backdrop-blur-[2px] xl:hidden
 			"
