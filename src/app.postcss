@@ -7,6 +7,8 @@
 		--header-h: theme(spacing.16);
 		--screen-h-minus-header-h: calc(var(--tw-screen-h) - var(--header-h));
 		--sidebar-width: theme(spacing.64);
+		--main-spacing-t: theme(spacing.12);
+		--main-spacing-b: theme(spacing.20);
 	}
 	::selection {
 		@apply bg-indigo-600/60;
@@ -45,7 +47,7 @@
 
 @layer components {
 	.main {
-		@apply container min-h-[var(--screen-h-minus-header-h)] pb-20 pt-12;
+		@apply container min-h-[var(--screen-h-minus-header-h)] pb-[--main-spacing-b] pt-[--main-spacing-t];
 	}
 }
 
