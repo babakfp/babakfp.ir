@@ -29,7 +29,7 @@
 		<slot />
 	</div>
 
-	<div class="sticky bottom-4 flex justify-center xl:bottom-8">
+	<div class="sticky bottom-4 mt-4 flex justify-center xl:bottom-8">
 		<button class="btn" on:click={handleClick}>
 			{isOpen ? "Show less" : "Show more"}
 		</button>
