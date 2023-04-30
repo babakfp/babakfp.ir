@@ -21,9 +21,13 @@
 	{/if}
 </svelte:head>
 
-<main class="main">
-	<div class="mx-auto max-w-prose lg:grid lg:max-w-none">
-		<div class="article">
+<main class="main xl:py-0">
+	<div
+		class="mx-auto max-w-prose xl:grid xl:max-w-none xl:grid-cols-[auto_auto] xl:justify-center"
+	>
+		<div
+			class="xl:mr-4 xl:border-r xl:border-gray-50/5 xl:pb-[--main-spacing-b] xl:pr-12 xl:pt-[--main-spacing-t]"
+		>
 			<Article {title} {updateDate} {publishDate}>
 				<slot />
 			</Article>
@@ -36,16 +40,3 @@
 </main>
 
 <BackToTopBtn />
-
-<style lang="postcss">
-	@screen xl {
-		.article {
-			/* prettier-ignore */
-			--container: calc( theme(maxWidth.screen-xl) - theme(spacing.container-x) );
-			--total-space-between: calc(theme(spacing.16) * 1);
-			--total-sidebar-width: calc(var(--sidebar-width) * 1);
-			/* prettier-ignore */
-			width: calc( var(--container) - (var(--total-space-between) + var(--total-sidebar-width)) );
-		}
-	}
-</style>

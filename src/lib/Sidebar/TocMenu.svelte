@@ -22,7 +22,6 @@
 	toggleButtonId="{name}-toc-menu-toggle"
 	ariaLabel="{name.charAt(0).toUpperCase() +
 		name.slice(1)} (on this page) menu"
-	side="right"
 >
 	<div class="px-4 text-xl font-bold">ON THIS PAGE</div>
 

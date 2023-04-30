@@ -9,7 +9,6 @@
 	export let id: string
 	export let toggleButtonId: string
 	export let ariaLabel: string
-	export let side: "right" | "left" = "left"
 
 	beforeNavigate(() => (isOpen = false))
 
@@ -25,12 +24,10 @@
 <OutClick
 	tag="nav"
 	{id}
-	class="sidebar fixed top-header-h bottom-0 left-0 z-40 w-full max-w-[var(--sidebar-width)] -translate-x-full overflow-y-auto overscroll-y-contain bg-gray-900 pb-12 pt-8 duration-200
+	class="
+		sidebar fixed bottom-0 left-0 top-header-h z-40 w-[var(--sidebar-width)] -translate-x-full overflow-y-auto overscroll-y-contain bg-gray-900 pb-[--main-spacing-b] pt-[--main-spacing-t] duration-200
 		{isOpen && 'translate-x-0'}
-		xl:z-0 xl:translate-x-0 xl:pt-12
-		{side === 'left' && 'xl:left-[var(--remaining-x-spacing)] xl:ml-container-x'}
-		{side === 'right' &&
-		'xl:right-[var(--remaining-x-spacing)] xl:left-[unset] xl:mr-container-x'}
+		xl:sticky xl:bottom-auto xl:z-0 xl:max-h-[--screen-h-minus-header-h] xl:translate-x-0
 	"
 	on:outclick={() => (isOpen = false)}
 	excludeQuerySelectorAll="#{toggleButtonId}"
@@ -43,12 +40,7 @@
 </OutClick>
 
 <style lang="postcss">
-	:global(:root) {
-		--remaining-x-spacing: calc(
-			(var(--tw-screen-w) - theme(maxWidth.screen-xl)) / 2
-		);
-	}
-	@screen xl {
+	@screen lg {
 		:global(.sidebar::-webkit-scrollbar) {
 			@apply bg-gray-50/5;
 		}
