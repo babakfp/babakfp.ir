@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { fly } from "svelte/transition"
 	import { page } from "$app/stores"
+	import layoutTransition from "$utils/layoutTransition"
 	import { docsSidebarItems } from "$stores/docs"
 	import { isDocsTocSidebarOpen } from "$stores/docs"
 	import npmPackages from "$portfolios/npm-packages.json"
@@ -44,10 +45,7 @@
 		<DocsMenu />
 
 		{#key $page.url.pathname}
-			<article
-				class="article-content"
-				in:fly={{ y: -32, duration: 500, delay: 100 }}
-			>
+			<article class="article-content" in:fly={layoutTransition}>
 				<h1>{documentationPostData.title}</h1>
 				<slot />
 			</article>
