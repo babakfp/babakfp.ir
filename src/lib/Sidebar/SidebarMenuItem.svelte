@@ -17,9 +17,3 @@
 		<slot />
 	</div>
 </a>
-
-<style lang="postcss">
-	:global(.SidebarMenuItem code) {
-		@apply inline-code;
-	}
-</style>

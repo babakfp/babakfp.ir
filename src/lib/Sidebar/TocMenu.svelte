@@ -17,14 +17,14 @@
 </script>
 
 <Sidebar
-	class="xl:max-w-72"
+	class="xl:w-72"
 	id="{name}-toc-menu"
 	bind:isOpen
 	toggleButtonId="{name}-toc-menu-toggle"
 	ariaLabel="{name.charAt(0).toUpperCase() +
 		name.slice(1)} (on this page) menu"
 >
-	<div class="px-4 text-xl font-bold">ON THIS PAGE</div>
+	<div class="px-4 font-bold">TABLE OF CONTENTS</div>
 
 	<ul class="mt-4">
 		{#each contents as content}

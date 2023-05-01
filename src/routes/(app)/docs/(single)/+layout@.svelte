@@ -42,7 +42,7 @@
 
 <main class="main xl:py-0">
 	<div
-		class="mx-auto max-w-prose xl:grid xl:max-w-none xl:grid-cols-[theme(spacing.56)_calc(100%-theme(spacing.56)-theme(spacing.72))_theme(spacing.72)] xl:justify-center"
+		class="mx-auto max-w-prose xl:grid xl:max-w-none xl:grid-cols-[theme(spacing.56)_auto_auto] xl:justify-center"
 	>
 		<DocsMenu />
 

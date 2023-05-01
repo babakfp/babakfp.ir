@@ -7,12 +7,12 @@
 </script>
 
 <a
-	class="SidebarMenuItem group block px-4 outline-inset
+	class="SidebarMenuItem group block px-4 text-sm outline-inset
 	{isActive && 'pointer-events-none'}"
 	{href}
 >
 	<div
-		class="flex items-center gap-2 py-2 text-gray-400 duration-100 group-hover:text-gray-50
+		class="flex items-center gap-2 py-1 text-gray-400 duration-100 group-hover:text-gray-50
 		{isActive && 'text-gray-50'}"
 		style="padding-left: calc(1rem * {depthLvl - 2});"
 	>
@@ -25,9 +25,3 @@
 		</div>
 	</div>
 </a>
-
-<style lang="postcss">
-	:global(.SidebarMenuItem code) {
-		@apply inline-code;
-	}
-</style>
