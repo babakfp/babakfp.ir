@@ -7,7 +7,6 @@ import rehypeSlug from "rehype-slug"
 import rehypeExternalLinks from "rehype-external-links"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import { s } from "hastscript"
-// import { rehypeAccessibleEmojis } from "rehype-accessible-emojis"
 
 const mdsvexExtension = ".md"
 
@@ -75,7 +74,6 @@ export default {
 						test: ["h2", "h3", "h4", "h5", "h6"],
 					},
 				],
-				// rehypeAccessibleEmojis,
 			],
 			highlight: {
 				highlighter: async (code, lang) => {
