@@ -19,7 +19,7 @@
 	>
 		Frontend/JavaScript Developer
 	</code>
-	<p class="mt-4 font-medium leading-7">
+	<p class="mt-4 leading-7">
 		All of my projects are built from the ground up, from planning and
 		designing, all the way to building fully-functional solutions. I have
 		built websites, open-source tools, Wordpress themes and plugins, and

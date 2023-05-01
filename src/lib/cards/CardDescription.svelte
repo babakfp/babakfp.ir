@@ -3,6 +3,6 @@
 	export { className as class }
 </script>
 
-<p class="{className} text-sm font-medium leading-6 sm:line-clamp-1">
+<p class="{className} text-sm leading-6 sm:line-clamp-1">
 	<slot />
 </p>

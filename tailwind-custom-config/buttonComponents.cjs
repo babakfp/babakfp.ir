@@ -4,7 +4,7 @@ module.exports =
 		// prettier-ignore
 		addComponents({
 			".btn": {
-				"@apply relative inline-flex items-center justify-center rounded bg-gray-800 px-3 py-2 text-sm font-medium text-gray-50 duration-100 drag-none highlight-gray-50/10 hover:bg-gray-700": "",
+				"@apply relative inline-flex items-center justify-center rounded bg-gray-800 px-3 py-2 text-sm text-gray-50 duration-100 drag-none highlight-gray-50/10 hover:bg-gray-700": "",
 			},
 			".btn-icon": {
 				"@apply h-9 w-9 p-0 text-gray-400 hover:text-gray-50": "",

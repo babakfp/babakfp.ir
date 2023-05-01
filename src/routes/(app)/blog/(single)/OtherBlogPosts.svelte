@@ -12,7 +12,7 @@
 	<hr class="my-8" />
 
 	<div class="[zoom:0.8]">
-		<h2 class="text-sm font-medium">OTHER BLOG POSTS</h2>
+		<h2 class="font-bold">OTHER BLOG POSTS</h2>
 
 		<ul class="mt-4 space-y-4">
 			{#each otherPosts as { slug, ...rest }}

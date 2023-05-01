@@ -13,7 +13,7 @@
 
 {#key $page.url.pathname}
 	<article in:fly={layoutTransition}>
-		<ul class="flex items-center gap-2 text-sm font-medium">
+		<ul class="flex items-center gap-2 text-sm">
 			<li>
 				<a class="link" href="/">HOME</a>
 			</li>
@@ -24,7 +24,7 @@
 		</ul>
 
 		<div
-			class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs font-medium text-gray-400"
+			class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-400"
 		>
 			<span>
 				Updated: <b title={updateDate}>
