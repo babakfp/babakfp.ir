@@ -92,6 +92,17 @@
 			@apply text-sm;
 		}
 
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			@apply relative sm:[&:hover_.headings-permalink]:show;
+		}
+		.headings-permalink {
+			@apply absolute inset-y-0 right-full flex w-[--container-x] items-center justify-center pb-1 pr-0.5 text-sm opacity-50 sm:w-auto sm:text-[.8em] sm:duration-200 sm:ease-in sm:hide;
+		}
+
 		p em {
 			@apply font-bold not-italic;
 		}
