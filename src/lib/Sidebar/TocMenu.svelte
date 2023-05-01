@@ -11,9 +11,7 @@
 
 	let contents: Element[] = []
 	onMount(() => (contents = getHeadings()))
-	$: if (browser && $page.url.pathname) {
-		contents = getHeadings()
-	}
+	$: if (browser && $page.url.pathname) contents = getHeadings()
 </script>
 
 <Sidebar
