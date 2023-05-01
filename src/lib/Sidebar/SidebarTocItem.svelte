@@ -25,3 +25,10 @@
 		</div>
 	</div>
 </a>
+
+<style lang="postcss">
+	/* TODO: Remove this whenever you fix toc */
+	.SidebarMenuItem :global(a) {
+		@apply pointer-events-none;
+	}
+</style>
