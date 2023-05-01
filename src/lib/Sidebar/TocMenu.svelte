@@ -15,7 +15,7 @@
 </script>
 
 <Sidebar
-	class="xl:w-72"
+	class="sm:w-72"
 	id="{name}-toc-menu"
 	bind:isOpen
 	toggleButtonId="{name}-toc-menu-toggle"

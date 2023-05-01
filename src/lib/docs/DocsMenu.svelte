@@ -5,7 +5,7 @@
 </script>
 
 <Sidebar
-	class="xl:w-56"
+	class="sm:w-56"
 	id="docs-menu"
 	bind:isOpen={$isDocsMenuSidebarOpen}
 	toggleButtonId="docs-menu-toggle"
