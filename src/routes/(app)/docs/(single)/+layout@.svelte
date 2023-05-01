@@ -40,15 +40,22 @@
 	{/if}
 </svelte:head>
 
-<main class="main">
-	<div class="mx-auto max-w-prose xl:max-w-none">
+<main class="main xl:py-0">
+	<div
+		class="mx-auto max-w-prose xl:grid xl:max-w-none xl:grid-cols-[theme(spacing.56)_calc(100%-theme(spacing.56)-theme(spacing.72))_theme(spacing.72)] xl:justify-center"
+	>
 		<DocsMenu />
 
 		{#key $page.url.pathname}
-			<article class="article-content" in:fly={layoutTransition}>
-				<h1>{documentationPostData.title}</h1>
-				<slot />
-			</article>
+			<div
+				class="xl:mr-4 xl:border-x xl:border-gray-50/5 xl:px-12 xl:pb-[--main-spacing-b] xl:pt-[--main-spacing-t]"
+				in:fly={layoutTransition}
+			>
+				<article class="article-content">
+					<h1>{documentationPostData.title}</h1>
+					<slot />
+				</article>
+			</div>
 		{/key}
 
 		<TocMenu name="docs" bind:isOpen={$isDocsTocSidebarOpen} />
@@ -56,17 +63,3 @@
 </main>
 
 <BackToTopBtn />
-
-<style lang="postcss">
-	@screen xl {
-		article {
-			/* prettier-ignore */
-			--container: calc( theme(maxWidth.screen-xl) - theme(spacing.container-x) );
-			--total-space-between: calc(theme(spacing.16) * 2);
-			--total-sidebar-width: calc(var(--sidebar-width) * 2);
-			/* prettier-ignore */
-			width: calc( var(--container) - (var(--total-space-between) + var(--total-sidebar-width)) );
-			@apply mx-auto;
-		}
-	}
-</style>
