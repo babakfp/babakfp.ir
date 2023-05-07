@@ -23,8 +23,11 @@
 	toggleButtonId="{name}-toc-menu-toggle"
 	ariaLabel="{name.charAt(0).toUpperCase() +
 		name.slice(1)} (on this page) menu"
+	hideScrollbar={true}
 >
-	<div class="px-4 font-bold">TABLE OF CONTENTS</div>
+	<div class="whitespace-nowrap px-4 font-bold xl:pr-0">
+		TABLE OF CONTENTS
+	</div>
 
 	<ul class="mt-4">
 		{#each contents as content}
