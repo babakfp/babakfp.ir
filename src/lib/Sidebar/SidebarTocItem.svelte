@@ -1,34 +1,34 @@
 <script lang="ts">
-	import { IconChevronRight } from "$icons"
+    import { IconChevronRight } from "$icons"
 
-	export let href: string
-	export let isActive = false
-	export let depthLvl: number
+    export let href: string
+    export let isActive = false
+    export let depthLvl: number
 </script>
 
 <a
-	class="SidebarMenuItem group block px-4 text-sm outline-inset xl:pr-0
+    class="SidebarMenuItem group block px-4 text-sm outline-inset xl:pr-0
 	{isActive && 'pointer-events-none'}"
-	{href}
+    {href}
 >
-	<div
-		class="flex items-center gap-2 py-1 text-gray-400 duration-100 group-hover:text-gray-50
+    <div
+        class="flex items-center gap-2 py-1 text-gray-400 duration-100 group-hover:text-gray-50
 		{isActive && 'text-gray-50'}"
-		style="padding-left: calc(1rem * {depthLvl - 2});"
-	>
-		{#if depthLvl > 2}
-			<IconChevronRight class="max-h-2 min-h-2 min-w-2 max-w-2" />
-		{/if}
+        style="padding-left: calc(1rem * {depthLvl - 2});"
+    >
+        {#if depthLvl > 2}
+            <IconChevronRight class="max-h-2 min-h-2 min-w-2 max-w-2" />
+        {/if}
 
-		<div class="line-clamp-1">
-			<slot />
-		</div>
-	</div>
+        <div class="line-clamp-1">
+            <slot />
+        </div>
+    </div>
 </a>
 
 <style lang="postcss">
-	/* TODO: Remove this whenever you fix toc */
-	.SidebarMenuItem :global(a) {
-		@apply pointer-events-none;
-	}
+    /* TODO: Remove this whenever you fix toc */
+    .SidebarMenuItem :global(a) {
+        @apply pointer-events-none;
+    }
 </style>

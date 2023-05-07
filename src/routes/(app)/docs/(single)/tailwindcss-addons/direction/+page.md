@@ -16,8 +16,8 @@
 
 ```js
 tailwindcssAddons({
-	utilities: {
-		dir: false,
-	},
+  utilities: {
+    dir: false,
+  },
 })
 ```

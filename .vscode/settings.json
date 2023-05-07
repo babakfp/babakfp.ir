@@ -1,21 +1,21 @@
 {
-	"editor.formatOnSave": false,
-	"files.exclude": {
-		// We're hiding these files because they shouldn't be edited manually.
-		"**/.*ignore": true,
-		"**/pnpm-lock.yaml": true
-	},
-	"search.exclude": {
-		// We're excluding these files because their values are already accessible in ".*ignore-sync".
-		"**/.*ignore": true,
-		"**/pnpm-lock.yaml": true,
-		"**/*.svg": true,
-		"**/Icon*.svelte": true
-	},
-	"path-intellisense.mappings": {
-		"$lib": "${workspaceFolder}/src/lib",
-		"$stores": "${workspaceFolder}/src/stores",
-		"$portfolios": "${workspaceFolder}/src/portfolios",
-		"$utils": "${workspaceFolder}/src/utils"
-	}
+    "editor.formatOnSave": false,
+    "files.exclude": {
+        // We're hiding these files because they shouldn't be edited manually.
+        "**/.*ignore": true,
+        "**/pnpm-lock.yaml": true
+    },
+    "search.exclude": {
+        // We're excluding these files because their values are already accessible in ".*ignore-sync".
+        "**/.*ignore": true,
+        "**/pnpm-lock.yaml": true,
+        "**/*.svg": true,
+        "**/Icon*.svelte": true
+    },
+    "path-intellisense.mappings": {
+        "$lib": "${workspaceFolder}/src/lib",
+        "$stores": "${workspaceFolder}/src/stores",
+        "$portfolios": "${workspaceFolder}/src/portfolios",
+        "$utils": "${workspaceFolder}/src/utils"
+    }
 }

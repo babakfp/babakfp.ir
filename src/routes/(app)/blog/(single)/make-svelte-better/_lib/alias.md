@@ -6,8 +6,8 @@ An example of how an alias and a store value can be confused is demonstrated by 
 
 ```svelte
 <script>
-	const lib = readable("src/lib")
-	import MyComponent from "$lib/MyComponent.svelte"
+  const lib = readable("src/lib")
+  import MyComponent from "$lib/MyComponent.svelte"
 </script>
 ```
 
@@ -15,7 +15,7 @@ To avoid such confusion, it's suggested to use a different symbol for aliases. O
 
 ```svelte
 <script>
-	import MyComponent from "@components/MyComponent.svelte"
+  import MyComponent from "@components/MyComponent.svelte"
 </script>
 ```
 

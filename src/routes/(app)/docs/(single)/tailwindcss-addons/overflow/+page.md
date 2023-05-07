@@ -19,8 +19,8 @@
 
 ```js
 tailwindcssAddons({
-	utilities: {
-		overflowUnset: false,
-	},
+  utilities: {
+    overflowUnset: false,
+  },
 })
 ```

@@ -22,7 +22,7 @@ The function takes an `object` as an argument:
 
 ```js
 tailwindcssAddons({
-	// Here
+  // Here
 })
 ```
 
@@ -30,21 +30,21 @@ tailwindcssAddons({
 
 ```js
 const defaultConfig = {
-	presets: true,
-	utilities: {
-		dir: true,
-		drag: true,
-		flexGrid: false, // Not active by default
-		flip: true,
-		hideShow: true,
-		inputResets: true,
-		insetCenter: true,
-		overflowUnset: true,
-		fontWeightRegular: false, // Not active by default
-	},
-	variants: {
-		notVariants: true,
-	},
+  presets: true,
+  utilities: {
+    dir: true,
+    drag: true,
+    flexGrid: false, // Not active by default
+    flip: true,
+    hideShow: true,
+    inputResets: true,
+    insetCenter: true,
+    overflowUnset: true,
+    fontWeightRegular: false, // Not active by default
+  },
+  variants: {
+    notVariants: true,
+  },
 }
 ```
 
@@ -54,9 +54,9 @@ Use `true` to include and use `false` to exclude.
 
 ```js
 tailwindcssAddons({
-	presets: false, // Excluded
-	utilities: {
-		flexGrid: true, // Included
-	},
+  presets: false, // Excluded
+  utilities: {
+    flexGrid: true, // Included
+  },
 })
 ```

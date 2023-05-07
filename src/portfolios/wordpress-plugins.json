@@ -1,20 +1,20 @@
 [
-	{
-		"title": "WP Administration Style",
-		"description": "Improves UI design and user experience of the Wordpress administration panel.",
-		"homepage": "https://wordpress.org/plugins/wp-administration-style",
-		"thumb": "/images/portfolios/wordpress-plugins/wp-administration-style.png",
-		"activeInstalls": "2,000+",
-		"rating": 5,
-		"reviewsCount": 13
-	},
-	{
-		"title": "Farsi Font for Elementor",
-		"description": "Adds the functionality to easily use a Persian font in the Elementor Page Builder plugin.",
-		"homepage": "https://wordpress.org/plugins/farsi-font-for-elementor",
-		"thumb": "/images/portfolios/wordpress-plugins/farsi-font-for-elementor.png",
-		"activeInstalls": "1,000+",
-		"rating": null,
-		"reviewsCount": 0
-	}
+    {
+        "title": "WP Administration Style",
+        "description": "Improves UI design and user experience of the Wordpress administration panel.",
+        "homepage": "https://wordpress.org/plugins/wp-administration-style",
+        "thumb": "/images/portfolios/wordpress-plugins/wp-administration-style.png",
+        "activeInstalls": "2,000+",
+        "rating": 5,
+        "reviewsCount": 13
+    },
+    {
+        "title": "Farsi Font for Elementor",
+        "description": "Adds the functionality to easily use a Persian font in the Elementor Page Builder plugin.",
+        "homepage": "https://wordpress.org/plugins/farsi-font-for-elementor",
+        "thumb": "/images/portfolios/wordpress-plugins/farsi-font-for-elementor.png",
+        "activeInstalls": "1,000+",
+        "rating": null,
+        "reviewsCount": 0
+    }
 ]

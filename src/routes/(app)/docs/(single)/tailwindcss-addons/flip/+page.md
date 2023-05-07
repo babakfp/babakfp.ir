@@ -24,8 +24,8 @@
 
 ```js
 tailwindcssAddons({
-	utilities: {
-		flip: false,
-	},
+  utilities: {
+    flip: false,
+  },
 })
 ```

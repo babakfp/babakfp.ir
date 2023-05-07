@@ -26,8 +26,8 @@
 
 ```js
 tailwindcssAddons({
-	utilities: {
-		inputResets: false,
-	},
+  utilities: {
+    inputResets: false,
+  },
 })
 ```

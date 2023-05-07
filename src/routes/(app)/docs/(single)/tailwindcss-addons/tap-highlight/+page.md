@@ -23,8 +23,8 @@
 
 ```js
 tailwindcssAddons({
-	utilities: {
-		tapHighlight: false,
-	},
+  utilities: {
+    tapHighlight: false,
+  },
 })
 ```

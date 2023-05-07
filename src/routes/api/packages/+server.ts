@@ -4,6 +4,6 @@ import { getPackagesData } from "$utils/fetchNpmPackages/index"
 export const prerender = true
 
 export async function GET() {
-	const packagesData = await getPackagesData()
-	return json(packagesData)
+    const packagesData = await getPackagesData()
+    return json(packagesData)
 }

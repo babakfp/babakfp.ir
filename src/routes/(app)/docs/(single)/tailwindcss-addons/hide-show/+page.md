@@ -20,8 +20,8 @@
 
 ```js
 tailwindcssAddons({
-	utilities: {
-		hideShow: false,
-	},
+  utilities: {
+    hideShow: false,
+  },
 })
 ```

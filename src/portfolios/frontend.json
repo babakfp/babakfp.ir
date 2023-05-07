@@ -1,33 +1,33 @@
 [
-	{
-		"title": "Angle Berry",
-		"description": "Angle Berry is a website for sharing premium videos. Users can pay or invite others to get access to the content. They can also chat in real-time with each other.",
-		"poster": "/images/portfolios/frontend/framed/angle-berry.png",
-		"url": "https://angle-berry.vercel.app/login?username=demo&password=demodemo",
-		"isSingleRow": true
-	},
-	{
-		"title": "TarVaPood",
-		"description": "Handcrafted Carpets Store",
-		"poster": "/images/portfolios/frontend/framed/tarvapood.png",
-		"url": "https://tarvapood.com"
-	},
-	{
-		"title": "FarsGamer",
-		"description": "In-Game Offers Store",
-		"poster": "/images/portfolios/frontend/framed/farsgamer.png",
-		"url": "https://farsgamer.com"
-	},
-	{
-		"title": "FarsGamer Remastered",
-		"description": "In-Game Offers Store",
-		"poster": "/images/portfolios/frontend/framed/farsgamer-remastered.png",
-		"url": "https://farsgamer.vercel.app"
-	},
-	{
-		"title": "IDPay",
-		"description": "Online Payment Site",
-		"poster": "/images/portfolios/frontend/framed/idpay.png",
-		"url": "https://idpay.vercel.app"
-	}
+    {
+        "title": "Angle Berry",
+        "description": "Angle Berry is a website for sharing premium videos. Users can pay or invite others to get access to the content. They can also chat in real-time with each other.",
+        "poster": "/images/portfolios/frontend/framed/angle-berry.png",
+        "url": "https://angle-berry.vercel.app/login?username=demo&password=demodemo",
+        "isSingleRow": true
+    },
+    {
+        "title": "TarVaPood",
+        "description": "Handcrafted Carpets Store",
+        "poster": "/images/portfolios/frontend/framed/tarvapood.png",
+        "url": "https://tarvapood.com"
+    },
+    {
+        "title": "FarsGamer",
+        "description": "In-Game Offers Store",
+        "poster": "/images/portfolios/frontend/framed/farsgamer.png",
+        "url": "https://farsgamer.com"
+    },
+    {
+        "title": "FarsGamer Remastered",
+        "description": "In-Game Offers Store",
+        "poster": "/images/portfolios/frontend/framed/farsgamer-remastered.png",
+        "url": "https://farsgamer.vercel.app"
+    },
+    {
+        "title": "IDPay",
+        "description": "Online Payment Site",
+        "poster": "/images/portfolios/frontend/framed/idpay.png",
+        "url": "https://idpay.vercel.app"
+    }
 ]

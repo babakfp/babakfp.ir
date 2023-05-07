@@ -112,8 +112,8 @@ By activating this option, you will no longer be able to use the previous classe
 
 ```js
 tailwindcssAddons({
-	utilities: {
-		flexGrid: true,
-	},
+  utilities: {
+    flexGrid: true,
+  },
 })
 ```
