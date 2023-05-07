@@ -42,12 +42,13 @@
 
 <main class="main xl:py-0">
 	<div
-		class="mx-auto max-w-prose xl:grid xl:max-w-none xl:grid-cols-[theme(spacing.56)_auto_auto] xl:justify-center"
+		class="mx-auto max-w-prose xl:grid xl:max-w-none xl:grid-cols-[auto_1fr_auto] xl:justify-center"
 	>
 		<DocsMenu />
 
 		{#key $page.url.pathname}
 			<div
+				id="article-wrapper"
 				class="xl:mr-4 xl:border-x xl:border-gray-50/5 xl:px-12 xl:pb-[--main-spacing-b] xl:pt-[--main-spacing-t]"
 				in:fly={layoutTransition}
 			>
@@ -63,3 +64,9 @@
 </main>
 
 <BackToTopBtn />
+
+<style lang="postcss">
+	#article-wrapper {
+		max-width: calc(1280px - var(--container-x) - var(--container-x) - 1rem - 14rem - 18rem);
+	}
+</style>
