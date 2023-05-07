@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { page } from "$app/stores"
 	import { onMount } from "svelte"
+	import { page } from "$app/stores"
 	import { browser } from "$app/environment"
 	import { getHeadings } from "$utils/toc"
 	import Sidebar from "$lib/Sidebar/Sidebar.svelte"
@@ -11,7 +11,9 @@
 
 	let contents: Element[] = []
 	onMount(() => (contents = getHeadings()))
-	$: if (browser && $page.url.pathname) contents = getHeadings()
+	$: if (browser && $page.url.pathname) {
+		contents = getHeadings()
+	}
 </script>
 
 <Sidebar
