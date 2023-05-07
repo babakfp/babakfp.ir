@@ -26,8 +26,7 @@
 		class="mx-auto max-w-prose xl:grid xl:max-w-none xl:grid-cols-[1fr_auto] xl:justify-center"
 	>
 		<div
-			id="article-wrapper"
-			class="xl:mr-4 xl:border-r xl:border-gray-50/5 xl:pb-[--main-spacing-b] xl:pr-12 xl:pt-[--main-spacing-t]"
+			class="xl:mr-4 min-w-0 xl:border-r xl:border-gray-50/5 xl:pb-[--main-spacing-b] xl:pr-12 xl:pt-[--main-spacing-t]"
 		>
 			<Article {title} {updateDate} {publishDate}>
 				<slot />
@@ -41,9 +40,3 @@
 </main>
 
 <BackToTopBtn />
-
-<style lang="postcss">
-	#article-wrapper {
-		max-width: calc(1280px - var(--container-x) - var(--container-x) - 1rem - 18rem);
-	}
-</style>
