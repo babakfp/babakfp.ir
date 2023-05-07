@@ -48,7 +48,7 @@
 
 		{#key $page.url.pathname}
 			<div
-				class="xl:mr-4 min-w-0 xl:border-x xl:border-gray-50/5 xl:px-12 xl:pb-[--main-spacing-b] xl:pt-[--main-spacing-t]"
+				class="min-w-0 xl:mr-4 xl:border-x xl:border-gray-50/5 xl:px-12 xl:pb-[--main-spacing-b] xl:pt-[--main-spacing-t]"
 				in:fly={layoutTransition}
 			>
 				<article class="article-content">
