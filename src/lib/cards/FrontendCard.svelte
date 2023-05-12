@@ -17,11 +17,7 @@
 >
     <div class="relative {isSingleRow && 'lg:col-start-1 lg:col-end-8'}">
         <img
-            class="
-				aspect-[16/9] w-full rounded-[2px] bg-gray-800 duration-200 group-hover:scale-95
-				{isSingleRow &&
-                'shadow-[0_0_4px_0_rgb(255_255_255/5%),0_0_16px_0_rgb(255_255_255/10%)]'}
-			"
+            class="aspect-[16/9] w-full rounded-[2px] bg-gray-800 duration-200 group-hover:scale-95"
             src={poster}
             alt="Portfolio poster"
         />
