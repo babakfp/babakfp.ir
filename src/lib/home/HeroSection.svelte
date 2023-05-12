@@ -16,7 +16,7 @@
     <code
         class="inline-code pointer-events-none mt-4 inline-block !px-3 text-sm highlight-gray-50/10"
     >
-        FrontEnd/JavaScript Developer
+        JavaScript | FrontEnd Developer
     </code>
     <p class="mt-4 leading-7">
         All of my projects are built from the ground up, from planning and
