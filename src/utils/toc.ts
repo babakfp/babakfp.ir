@@ -22,7 +22,7 @@ export function getHeadings() {
     )
 
     newHeadings.forEach(h => {
-        h.querySelector(".headings-permalink")?.remove()
+        h.querySelector(".heading-permalink")?.remove()
         headings = [...headings, h]
     })
 

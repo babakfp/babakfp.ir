@@ -46,7 +46,7 @@ export default {
                     rehypeAutolinkHeadings,
                     {
                         properties: {
-                            class: "headings-permalink",
+                            class: "heading-permalink",
                             "aria-label": "Permalink to this headline",
                         },
                         content(node) {
