@@ -97,11 +97,14 @@
         h4,
         h5,
         h6 {
-            @apply relative sm:[&:hover_.heading-permalink]:show;
+            @apply relative [&:hover_.heading-permalink]:show;
         }
         .heading-permalink {
-            @apply absolute inset-y-0 right-full flex w-[--container-x] items-center justify-center pb-1 pr-0.5 text-sm opacity-50 sm:w-auto sm:text-[.8em] sm:duration-200 sm:ease-in sm:hide;
+            @apply absolute inset-y-0 right-full flex w-[--container-x] items-center justify-center pr-0.5 text-sm opacity-50 sm:w-auto sm:text-[.8em] duration-200 ease-in hide;
         }
+		h2 .heading-permalink {
+			@apply pb-1;
+		}
 
         p em {
             @apply font-bold not-italic;
