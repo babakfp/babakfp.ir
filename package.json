@@ -2,6 +2,7 @@
     "name": "babakfp.ir",
     "version": "0.0.1",
     "private": true,
+    "type": "module",
     "scripts": {
         "dev": "vite dev",
         "build": "vite build",
@@ -12,7 +13,7 @@
         "ignore-sync": "ignore-sync ."
     },
     "devDependencies": {
-        "@sveltejs/adapter-static": "2.0.2",
+        "@sveltejs/adapter-vercel": "3.0.0",
         "@sveltejs/kit": "1.15.9",
         "autoprefixer": "10.4.14",
         "cssnano": "6.0.1",
@@ -40,6 +41,5 @@
         "tslib": "2.5.0",
         "typescript": "5.0.4",
         "vite": "4.3.3"
-    },
-    "type": "module"
+    }
 }

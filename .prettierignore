@@ -5,7 +5,7 @@
 
 node_modules/
 .svelte-kit/
-/build/
+.vercel/
 .DS_Store
 .env
 .env.*
