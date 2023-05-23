@@ -10,5 +10,4 @@ module.exports = {
         require("prettier-plugin-svelte"),
         require("prettier-plugin-tailwindcss"),
     ],
-    pluginSearchDirs: ["."],
 }
