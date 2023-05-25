@@ -61,6 +61,12 @@
 }
 
 @layer components {
+    .link {
+        @apply break-words text-indigo-300 underline decoration-transparent decoration-2 duration-75 hover:text-indigo-100;
+    }
+}
+
+@layer components {
     .inline-code {
         @apply select-text rounded bg-gray-50/10 px-1.5 py-1 text-[.9em] highlight-gray-50/10 selection:bg-indigo-600/50;
     }
