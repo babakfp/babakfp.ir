@@ -3,7 +3,6 @@ const defaultTheme = require("tailwindcss/defaultTheme")
 const tailwindcssAddons = require("tailwindcss-addons")
 
 const containerUtility = require("./tailwind/containerUtility.cjs")
-const outlineInsetUtility = require("./tailwind/outlineInsetUtility.cjs")
 const highlightUtility = require("./tailwind/highlightUtility.cjs")
 const scrollbar = require("./tailwind/scrollbar.cjs")
 
@@ -78,6 +77,16 @@ function codeComponents() {
         addComponents({
             ".code-block": {},
             ".inline-code": {},
+        })
+    }
+}
+
+function outlineInsetUtility() {
+    return ({ addUtilities }) => {
+        addUtilities({
+            ".outline-inset": {
+                "@apply -outline-offset-2": "",
+            },
         })
     }
 }
