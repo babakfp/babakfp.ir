@@ -1,13 +1,14 @@
 const colors = require("tailwindcss/colors")
 const defaultTheme = require("tailwindcss/defaultTheme")
 const tailwindcssAddons = require("tailwindcss-addons")
-const containerUtility = require("./tailwind-custom-config/containerUtility.cjs")
-const outlineInsetUtility = require("./tailwind-custom-config/outlineInsetUtility.cjs")
-const highlightUtility = require("./tailwind-custom-config/highlightUtility.cjs")
-const buttonComponents = require("./tailwind-custom-config/buttonComponents.cjs")
-const codeBlockComponents = require("./tailwind-custom-config/codeBlockComponents.cjs")
-const linkComponents = require("./tailwind-custom-config/linkComponents.cjs")
-const scrollbar = require("./tailwind-custom-config/scrollbar.cjs")
+
+const containerUtility = require("./tailwind/containerUtility.cjs")
+const outlineInsetUtility = require("./tailwind/outlineInsetUtility.cjs")
+const highlightUtility = require("./tailwind/highlightUtility.cjs")
+const buttonComponents = require("./tailwind/buttonComponents.cjs")
+const codeBlockComponents = require("./tailwind/codeBlockComponents.cjs")
+const linkComponents = require("./tailwind/linkComponents.cjs")
+const scrollbar = require("./tailwind/scrollbar.cjs")
 
 /** @type {import("tailwindcss").Config} */
 module.exports = {
