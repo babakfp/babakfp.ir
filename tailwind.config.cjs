@@ -12,7 +12,7 @@ module.exports = {
         tailwindcssAddons({
             dynamicViewFix: true,
         }),
-        containerUtility(),
+        container(),
     ],
     theme: {
         extend: {
@@ -124,7 +124,7 @@ function highlightUtility() {
     }
 }
 
-function containerUtility() {
+function container() {
     return {
         theme: {
             extend: {
