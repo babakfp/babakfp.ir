@@ -61,6 +61,26 @@
 }
 
 @layer components {
+    .inline-code {
+        @apply select-text rounded bg-gray-50/10 px-1.5 py-1 text-[.9em] highlight-gray-50/10 selection:bg-indigo-600/50;
+    }
+}
+
+@layer components {
+    .code-block {
+        @apply select-text rounded !bg-gray-50/5 p-0.5 text-sm highlight-gray-50/10 [tab-size:4] selection:bg-indigo-400/25;
+
+        code {
+            @apply block overflow-x-auto p-6 leading-6;
+        }
+
+        span {
+            @apply !not-italic;
+        }
+    }
+}
+
+@layer components {
     .article-content {
         @apply space-y-4 leading-7;
 
@@ -190,25 +210,5 @@
     }
     .message {
         @apply text-sm !text-gray-300;
-    }
-}
-
-@layer components {
-    .inline-code {
-        @apply select-text rounded bg-gray-50/10 px-1.5 py-1 text-[.9em] highlight-gray-50/10 selection:bg-indigo-600/50;
-    }
-}
-
-@layer components {
-    .code-block {
-        @apply select-text rounded !bg-gray-50/5 p-0.5 text-sm highlight-gray-50/10 [tab-size:4] selection:bg-indigo-400/25;
-
-        code {
-            @apply block overflow-x-auto p-6 leading-6;
-        }
-
-        span {
-            @apply !not-italic;
-        }
     }
 }
