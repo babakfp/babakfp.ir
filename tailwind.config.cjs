@@ -1,9 +1,9 @@
 const colors = require("tailwindcss/colors")
 const defaultTheme = require("tailwindcss/defaultTheme")
+const {
+    default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette")
 const tailwindcssAddons = require("tailwindcss-addons")
-
-const containerUtility = require("./tailwind/containerUtility.cjs")
-const highlightUtility = require("./tailwind/highlightUtility.cjs")
 
 /** @type {import("tailwindcss").Config} */
 module.exports = {
@@ -102,5 +102,55 @@ function overflowOverlay() {
             ".scrollbar-x": { "overflow-x": "overlay" },
             ".scrollbar-y": { "overflow-y": "overlay" },
         })
+    }
+}
+
+function highlightUtility() {
+    return ({ matchUtilities, theme }) => {
+        // This is for when the "shadow" and "highlight" utilities are used on the same element.
+        const otherShadowUtilityValues =
+            "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)"
+        matchUtilities(
+            {
+                highlight: color => ({
+                    "box-shadow": `${otherShadowUtilityValues}, inset 0 1px 0 0 ${color}`,
+                }),
+            },
+            {
+                type: "color",
+                values: flattenColorPalette(theme("backgroundColor")),
+            }
+        )
+    }
+}
+
+function containerUtility() {
+    return {
+        theme: {
+            extend: {
+                spacing: {
+                    "container-x": "var(--container-x)",
+                },
+                container: {
+                    center: true,
+                    padding: "var(--container-x)",
+                },
+            },
+        },
+        plugins: [
+            ({ addBase }) => {
+                addBase({
+                    ":root": {
+                        "--container-x": "1rem",
+                        "@screen sm": {
+                            "--container-x": "1.5rem",
+                        },
+                    },
+                    ".container": {
+                        "@apply !max-w-screen-xl": "",
+                    },
+                })
+            },
+        ],
     }
 }
