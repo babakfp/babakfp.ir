@@ -1,5 +1,5 @@
 {
-    "editor.formatOnSave": false,
+    "editor.formatOnSave": true,
     "files.exclude": {
         // We're hiding these files because they shouldn't be edited manually.
         "**/.*ignore": true,
