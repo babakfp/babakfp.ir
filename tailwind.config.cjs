@@ -5,7 +5,6 @@ const tailwindcssAddons = require("tailwindcss-addons")
 const containerUtility = require("./tailwind/containerUtility.cjs")
 const outlineInsetUtility = require("./tailwind/outlineInsetUtility.cjs")
 const highlightUtility = require("./tailwind/highlightUtility.cjs")
-const buttonComponents = require("./tailwind/buttonComponents.cjs")
 const scrollbar = require("./tailwind/scrollbar.cjs")
 
 /** @type {import("tailwindcss").Config} */
@@ -54,6 +53,16 @@ module.exports = {
         linkComponents(),
         scrollbar(),
     ],
+}
+
+function buttonComponents() {
+    return ({ addComponents }) => {
+        addComponents({
+            ".btn": {},
+            ".btn-icon": {},
+            ".btn-link": {},
+        })
+    }
 }
 
 function linkComponents() {
