@@ -5,11 +5,9 @@ A Svelte component that allows you to listen to the clicks that happen outside o
 Why choose this over the other packages?
 
 - [No extra wrapper](#no-extra-wrapper)
-- [Supports `class` prop](#class-prop)
-- [Exclude elements from triggering the event](#excluding-elements)
-- [It uses (`on:pointerdown` + `on:pointerup` or only `on:pointerdown`) and `on:keydown` instead of `on:click` to capture the event](#why-are-we-not-using-the-click-event-to-capture-the-outclick-event)
-- [Half click supoort](#halfclick)
-- [Trigger the event on component itself](#includeself)
+- Supports [`class`](#class-prop) prop
+- [Exclude elements](#excluding-elements) from triggering the event
+- [Half click](#halfclick) supoort
 - TypeScript support
 
 ## Installation
