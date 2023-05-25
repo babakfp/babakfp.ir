@@ -6,7 +6,6 @@ const containerUtility = require("./tailwind/containerUtility.cjs")
 const outlineInsetUtility = require("./tailwind/outlineInsetUtility.cjs")
 const highlightUtility = require("./tailwind/highlightUtility.cjs")
 const buttonComponents = require("./tailwind/buttonComponents.cjs")
-const codeBlockComponents = require("./tailwind/codeBlockComponents.cjs")
 const linkComponents = require("./tailwind/linkComponents.cjs")
 const scrollbar = require("./tailwind/scrollbar.cjs")
 
@@ -52,8 +51,17 @@ module.exports = {
         outlineInsetUtility(),
         highlightUtility(),
         buttonComponents(),
-        codeBlockComponents(),
+        codeComponents(),
         linkComponents(),
         scrollbar(),
     ],
+}
+
+function codeComponents() {
+    return ({ addComponents }) => {
+        addComponents({
+            ".code-block": {},
+            ".inline-code": {},
+        })
+    }
 }

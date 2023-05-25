@@ -13,7 +13,7 @@
         @apply bg-indigo-600/60;
     }
     * {
-        @apply select-none scroll-mt-[calc(var(--header-h)+theme(spacing.8))] drag-none tap-highlight-gray-50/10;
+        @apply scroll-mt-[calc(var(--header-h)+theme(spacing.8))] drag-none tap-highlight-gray-50/10;
     }
     html {
         @apply scroll-smooth;
@@ -190,5 +190,25 @@
     }
     .message {
         @apply text-sm !text-gray-300;
+    }
+}
+
+@layer components {
+    .inline-code {
+        @apply select-text rounded bg-gray-50/10 px-1.5 py-1 text-[.9em] highlight-gray-50/10 selection:bg-indigo-600/50;
+    }
+}
+
+@layer components {
+    .code-block {
+        @apply select-text rounded !bg-gray-50/5 p-0.5 text-sm highlight-gray-50/10 [tab-size:4] selection:bg-indigo-400/25;
+
+        code {
+            @apply block overflow-x-auto p-6 leading-6;
+        }
+
+        span {
+            @apply !not-italic;
+        }
     }
 }
