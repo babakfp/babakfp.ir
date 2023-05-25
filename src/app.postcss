@@ -158,8 +158,11 @@
             }
         }
 
+        :not(pre) code {
+            @apply inline-code;
+        }
         pre {
-            @apply pre-code-block -mx-container-x rounded-none highlight-transparent sm:mx-0 sm:rounded sm:highlight-gray-50/10;
+            @apply code-block -mx-container-x rounded-none highlight-transparent sm:mx-0 sm:rounded sm:highlight-gray-50/10;
 
             code {
                 @apply px-4 leading-8 sm:px-6;
@@ -177,9 +180,6 @@
                     color: rgba(115, 138, 148, 0.4);
                 }
             }
-        }
-        :not(pre) code {
-            @apply inline-code;
         }
     }
 }
