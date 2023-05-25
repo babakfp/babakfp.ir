@@ -158,34 +158,27 @@
             }
         }
 
-        table pre {
-            @apply !bg-transparent;
-            code {
-                @apply block;
-            }
-        }
-        pre:not(table, table *) {
+        pre {
             @apply pre-code-block -mx-container-x rounded-none highlight-transparent sm:mx-0 sm:rounded sm:highlight-gray-50/10;
+
             code {
                 @apply px-4 leading-8 sm:px-6;
-            }
-        }
-        :not(pre) code:not(table, table *) {
-            @apply inline-code;
-        }
-        pre code {
-            counter-reset: step;
-            counter-increment: step 0;
+                counter-reset: step;
+                counter-increment: step 0;
 
-            .line::before {
-                content: counter(step);
-                counter-increment: step;
-                width: 1rem;
-                margin-right: 1.5rem;
-                display: inline-block;
-                text-align: right;
-                color: rgba(115, 138, 148, 0.4);
+                .line::before {
+                    content: counter(step);
+                    counter-increment: step;
+                    width: 1rem;
+                    margin-right: 1.5rem;
+                    display: inline-block;
+                    text-align: right;
+                    color: rgba(115, 138, 148, 0.4);
+                }
             }
+        }
+        :not(pre) code {
+            @apply inline-code;
         }
     }
 }
