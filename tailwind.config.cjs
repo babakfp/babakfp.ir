@@ -4,7 +4,6 @@ const tailwindcssAddons = require("tailwindcss-addons")
 
 const containerUtility = require("./tailwind/containerUtility.cjs")
 const highlightUtility = require("./tailwind/highlightUtility.cjs")
-const scrollbar = require("./tailwind/scrollbar.cjs")
 
 /** @type {import("tailwindcss").Config} */
 module.exports = {
@@ -50,7 +49,7 @@ module.exports = {
         buttonComponents(),
         codeComponents(),
         linkComponents(),
-        scrollbar(),
+        overflowOverlay(),
     ],
 }
 
@@ -87,6 +86,21 @@ function outlineInsetUtility() {
             ".outline-inset": {
                 "@apply -outline-offset-2": "",
             },
+        })
+    }
+}
+
+function overflowOverlay() {
+    return ({ addUtilities }) => {
+        addUtilities({
+            ".scrollbar": { overflow: "auto" },
+            ".scrollbar-x": { "overflow-x": "auto" },
+            ".scrollbar-y": { "overflow-y": "auto" },
+        })
+        addUtilities({
+            ".scrollbar": { overflow: "overlay" },
+            ".scrollbar-x": { "overflow-x": "overlay" },
+            ".scrollbar-y": { "overflow-y": "overlay" },
         })
     }
 }
