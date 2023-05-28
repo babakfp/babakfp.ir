@@ -7,7 +7,7 @@
     import BluredBackdrop from "$lib/BluredBackdrop.svelte"
     import PrimMenuItem from "$lib/PrimMenuItem.svelte"
     import stopBodyScroll from "$utils/stopBodyScroll"
-	import {trapFocus} from '$lib/trapFocus.js'
+    import { trapFocus } from "$lib/trapFocus"
 
     beforeNavigate(() => ($isMainMenuOpen = false))
 
