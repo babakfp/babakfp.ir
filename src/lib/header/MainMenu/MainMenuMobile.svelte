@@ -7,6 +7,7 @@
     import BluredBackdrop from "$lib/BluredBackdrop.svelte"
     import PrimMenuItem from "$lib/PrimMenuItem.svelte"
     import stopBodyScroll from "$utils/stopBodyScroll"
+	import {trapFocus} from '$lib/trapFocus.js'
 
     beforeNavigate(() => ($isMainMenuOpen = false))
 
@@ -35,7 +36,7 @@
         excludeQuerySelectorAll="#main-menu-toggle"
         on:outclick={() => ($isMainMenuOpen = false)}
     >
-        <ul>
+        <ul use:trapFocus>
             {#each $mainMenuItems as item}
                 {#if item.href !== $page.url.pathname}
                     <li>
