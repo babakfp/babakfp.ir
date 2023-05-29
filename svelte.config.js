@@ -18,7 +18,7 @@ export default {
         alias: {
             $icons: "src/lib/icons/index.ts",
             $stores: "src/lib/stores",
-            $portfolios: "src/portfolios",
+            $portfolios: "src/lib/portfolios",
             $utils: "src/lib/utils",
         },
     },
