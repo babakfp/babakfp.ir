@@ -17,7 +17,7 @@ export default {
         adapter: adapter(),
         alias: {
             $icons: "src/lib/icons/index.ts",
-            $stores: "src/stores",
+            $stores: "src/lib/stores",
             $portfolios: "src/portfolios",
             $utils: "src/lib/utils",
         },

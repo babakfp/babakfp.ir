@@ -14,7 +14,7 @@
     },
     "path-intellisense.mappings": {
         "$lib": "${workspaceFolder}/src/lib",
-        "$stores": "${workspaceFolder}/src/stores",
+        "$stores": "${workspaceFolder}/src/lib/stores",
         "$portfolios": "${workspaceFolder}/src/portfolios",
         "$utils": "${workspaceFolder}/src/lib/utils"
     }
