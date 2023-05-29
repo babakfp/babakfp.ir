@@ -19,7 +19,7 @@ export default {
             $icons: "src/lib/icons/index.ts",
             $stores: "src/stores",
             $portfolios: "src/portfolios",
-            $utils: "src/utils",
+            $utils: "src/lib/utils",
         },
     },
     preprocess: [

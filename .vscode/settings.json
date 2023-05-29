@@ -16,6 +16,6 @@
         "$lib": "${workspaceFolder}/src/lib",
         "$stores": "${workspaceFolder}/src/stores",
         "$portfolios": "${workspaceFolder}/src/portfolios",
-        "$utils": "${workspaceFolder}/src/utils"
+        "$utils": "${workspaceFolder}/src/lib/utils"
     }
 }
