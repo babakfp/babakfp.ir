@@ -53,17 +53,17 @@ This prop expects an array of DOM nodes. Clicks on those nodes (and their childr
 <script>
 	import OutClick from 'svelte-outclick'
 	let count = 0
-	let thisIsExcluded
+	let excludedElement
 </script>
 
 <OutClick
 	on:outclick={() => count++}
-	excludeElements={[thisIsExcluded]}
+	excludeElements={excludedElement}
 >
 	{count} times clicked outside
 </OutClick>
 
-<div bind:this={thisIsExcluded}>
+<div bind:this={excludedElement}>
 	this doesn't trigger outclick
 </div>
 ```
@@ -85,12 +85,12 @@ This prop expects an array of query selectors. Clicks on those nodes (and their 
 
 <OutClick
 	on:outclick={() => count++}
-	excludeQuerySelectorAll={[".this-is-excluded"]}
+	excludeQuerySelectorAll=".excluded-element"
 >
 	{count} times clicked outside
 </OutClick>
 
-<div class="this-is-excluded">
+<div class="excluded-element">
 	this doesn't trigger outclick
 </div>
 ```
