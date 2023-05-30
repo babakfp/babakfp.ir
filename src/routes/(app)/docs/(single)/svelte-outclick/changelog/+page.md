@@ -1,5 +1,9 @@
 Restart your app after updating the package.
 
+## 3.6.0
+
+- Removed `e.detail` because it wasn't needed.
+
 ## 3.5.0
 
 - Please update to version `3.5.0` if you were using the `3.4.0` version.
