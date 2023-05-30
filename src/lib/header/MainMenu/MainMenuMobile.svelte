@@ -38,16 +38,14 @@
     >
         <ul use:trapFocus>
             {#each $mainMenuItems as item}
-                {#if item.href !== $page.url.pathname}
-                    <li>
-                        <PrimMenuItem
-                            class="py-2 hover:bg-gray-50/10"
-                            title={item.title}
-                            href={item.href}
-                            icon={item.icon}
-                        />
-                    </li>
-                {/if}
+                <li>
+                    <PrimMenuItem
+                        class="py-2 hover:bg-gray-50/10"
+                        title={item.title}
+                        href={item.href}
+                        icon={item.icon}
+                    />
+                </li>
             {/each}
         </ul>
     </OutClick>
