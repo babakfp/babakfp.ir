@@ -23,6 +23,9 @@ export function getHeadings() {
 
     newHeadings.forEach(h => {
         h.querySelector(".heading-permalink")?.remove()
+        h.querySelectorAll("a")?.forEach(a =>
+            a.classList.add("pointer-events-none")
+        )
         headings = [...headings, h]
     })
 
