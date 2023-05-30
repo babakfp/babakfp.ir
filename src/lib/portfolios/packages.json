@@ -6,10 +6,11 @@
         "starsCount": 53,
         "forksCount": 4,
         "openIssuesCount": 0,
-        "version": "3.5.0",
+        "downloadsCount": 1838,
+        "version": "3.6.0",
         "license": "MIT",
         "fileCount": 5,
-        "unpackedSize": 6496
+        "unpackedSize": 6590
     },
     {
         "name": "tailwindcss-addons",
@@ -18,9 +19,10 @@
         "starsCount": 0,
         "forksCount": 0,
         "openIssuesCount": 0,
-        "version": "0.0.26",
+        "downloadsCount": 21,
+        "version": "0.0.29",
         "license": "MIT",
-        "fileCount": 17,
-        "unpackedSize": 11925
+        "fileCount": 18,
+        "unpackedSize": 12527
     }
 ]
