@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { IconBook } from "$icons"
     import SimpleTextCard from "./SimpleTextCard.svelte"
 
     export let title: string
@@ -10,7 +9,7 @@
     export let stars: number
 </script>
 
-<SimpleTextCard {title} {description} {href} icon={IconBook}>
+<SimpleTextCard {title} {description} {href}>
     <li>v{version}</li>
     {#if stars}
         <li>Stars: {stars}</li>

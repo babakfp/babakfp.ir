@@ -7,12 +7,10 @@
     export let title: string
     export let description: string
     export let href: string
-    export let icon: any
 </script>
 
 <Card {href} isExternal={false}>
     <div class="flex items-center gap-2">
-        <svelte:component this={icon} class="text-lg text-gray-400" />
         <CardTitle>{title}</CardTitle>
     </div>
 
