@@ -9,7 +9,7 @@
     export let isOpen: boolean
     export let name: string
 
-    let contents: Element[] = []
+    let contents: HTMLElement[] = []
     onMount(() => (contents = getHeadings()))
     $: if (browser && $page.url.pathname) {
         contents = getHeadings()
