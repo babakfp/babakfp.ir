@@ -1,3 +1,7 @@
+---
+title: CHANGELOG
+---
+
 Restart your app after updating the package.
 
 ## 3.6.0

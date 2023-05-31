@@ -1,3 +1,7 @@
+---
+title: Svelte OutClick
+---
+
 `on:outclick`
 
 A Svelte component that allows you to listen to the clicks that happen outside of an element.
