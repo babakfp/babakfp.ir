@@ -2,7 +2,7 @@
     import { Toaster } from "svelte-french-toast"
     import frontendPortfolios from "$portfolios/frontend.json"
     import posts from "$portfolios/posts.json"
-    import npmPackages from "$portfolios/npm-packages.json"
+    import packages from "$portfolios/packages.json"
     import rtlthemeProducts from "$portfolios/rtltheme-products.json"
     import wordpressPlugins from "$portfolios/wordpress-plugins.json"
     import FrontendCard from "$lib/cards/FrontendCard.svelte"
@@ -33,7 +33,7 @@
 </Section>
 
 <Section title="NPM packages">
-    {#each npmPackages as { name, ...rest }}
+    {#each packages as { name, ...rest }}
         <li>
             <RepoCard {...rest} href="/docs/{name}" />
         </li>

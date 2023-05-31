@@ -5,16 +5,16 @@
     export let description: string
     export let href: string
     export let version: string
-    export let downloads: number
-    export let stars: number
+    export let downloadsCount: number
+    export let starsCount: number
 </script>
 
 <SimpleTextCard {title} {description} {href}>
     <li>v{version}</li>
-    {#if stars}
-        <li>Stars: {stars}</li>
+    {#if starsCount}
+        <li>Stars: {starsCount}</li>
     {/if}
-    {#if downloads}
-        <li>Weekly Downloads: {downloads}</li>
+    {#if downloadsCount}
+        <li>Weekly Downloads: {downloadsCount}</li>
     {/if}
 </SimpleTextCard>

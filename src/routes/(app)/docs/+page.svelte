@@ -1,5 +1,5 @@
 <script lang="ts">
-    import npmPackages from "$portfolios/npm-packages.json"
+    import packages from "$portfolios/packages.json"
     import RepoCard from "$lib/cards/RepoCard.svelte"
 </script>
 
@@ -10,7 +10,7 @@
 <h2 class="text-center text-4xl font-bold uppercase text-gray-50">DOCS</h2>
 
 <ul class="mt-8 grid gap-4">
-    {#each npmPackages as { name, ...rest }}
+    {#each packages as { name, ...rest }}
         <li>
             <RepoCard {...rest} href="/docs/{name}" />
         </li>

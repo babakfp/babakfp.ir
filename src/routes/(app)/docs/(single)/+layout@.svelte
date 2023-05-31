@@ -4,7 +4,7 @@
     import layoutTransition from "$utils/layoutTransition"
     import { docsSidebarItems } from "$stores/docs"
     import { isDocsTocSidebarOpen } from "$stores/docs"
-    import npmPackages from "$portfolios/npm-packages.json"
+    import packages from "$portfolios/packages.json"
     import BackToTopBtn from "$lib/BackToTopBtn.svelte"
     import DocsMenu from "$lib/docs/DocsMenu.svelte"
     import TocMenu from "$lib/Sidebar/TocMenu.svelte"
@@ -14,7 +14,7 @@
     }
 
     $: {
-        documentationPostData = npmPackages.filter(
+        documentationPostData = packages.filter(
             ({ name }) => name === $page.url.pathname.replace("/docs/", "")
         )[0]
 
