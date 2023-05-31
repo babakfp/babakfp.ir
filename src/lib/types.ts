@@ -6,6 +6,11 @@ export interface Post {
     slug: string
 }
 
+export interface Doc {
+    title: string
+    slug: string
+}
+
 export interface Package {
     name: string
     description: string
