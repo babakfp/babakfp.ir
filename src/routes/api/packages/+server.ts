@@ -5,11 +5,29 @@ import { getPackagesData } from "$utils/fetchNpmPackages"
 
 export const prerender = true
 
+const packages = [
+    {
+        title: "Svelte OutClick",
+        name: "svelte-outclick",
+    },
+    {
+        title: "TailwindCSS Addons",
+        name: "tailwindcss-addons",
+    },
+]
+
 export async function GET({ url }) {
-    const packagesData = await getPackagesData([
-        "svelte-outclick",
-        "tailwindcss-addons",
-    ])
+    let packagesData = await getPackagesData(packages.map(pkg => pkg.name))
+
+    if (packagesData) {
+        packagesData = packagesData.map(pkgData => {
+            const pkg = packages.filter(pkg => pkg.name === pkgData.name)[0]
+            return {
+                title: pkg.title,
+                ...pkgData,
+            }
+        })
+    }
 
     if (url.searchParams.has("create")) {
         fs.writeFileSync(
