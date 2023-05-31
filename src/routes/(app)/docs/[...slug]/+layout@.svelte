@@ -2,41 +2,16 @@
     import { fly } from "svelte/transition"
     import { page } from "$app/stores"
     import transition from "$utils/transition"
-    import { docsSidebarItems } from "$stores/docs"
     import { isDocsTocSidebarOpen } from "$stores/docs"
-    import packages from "$portfolios/packages.json"
     import BackToTopBtn from "$lib/BackToTopBtn.svelte"
     import DocsMenu from "$lib/docs/DocsMenu.svelte"
     import TocMenu from "$lib/Sidebar/TocMenu.svelte"
-
-    let documentationPostData: {
-        title: string
-    }
-
-    $: {
-        documentationPostData = packages.filter(
-            ({ name }) => name === $page.url.pathname.replace("/docs/", "")
-        )[0]
-
-        if (!documentationPostData) {
-            $docsSidebarItems.forEach(item => {
-                item.items.forEach(item => {
-                    item.items.forEach(item => {
-                        if (item.path === $page.url.pathname) {
-                            documentationPostData = {
-                                title: item.title,
-                            }
-                        }
-                    })
-                })
-            })
-        }
-    }
+    import { doc } from "./stores"
 </script>
 
 <svelte:head>
-    {#if documentationPostData.title}
-        <title>{documentationPostData.title}</title>
+    {#if $doc.title}
+        <title>{$doc.title}</title>
     {/if}
 </svelte:head>
 
@@ -52,7 +27,10 @@
                 in:fly={transition}
             >
                 <article class="article-content">
-                    <h1>{documentationPostData.title}</h1>
+                    {#if $doc.title}
+                        <h1>{$doc.title}</h1>
+                    {/if}
+
                     <slot />
                 </article>
             </div>
