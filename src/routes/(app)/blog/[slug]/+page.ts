@@ -8,10 +8,10 @@ export async function load({ fetch, params }) {
     try {
         const post = await import(`../../../../posts/${params.slug}/+page.md`)
         return {
-            posts,
             ...post.metadata,
             slug: params.slug,
             content: post.default,
+            posts,
         }
     } catch (e) {
         return error(404)
