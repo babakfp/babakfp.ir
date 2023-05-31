@@ -77,9 +77,9 @@
                     <h2 class="font-bold">OTHER BLOG POSTS</h2>
 
                     <ul class="mt-4 space-y-4">
-                        {#each otherPosts as { slug, ...rest }}
+                        {#each data.posts as post}
                             <li>
-                                <PostCard {...rest} href="/blog/{slug}" />
+                                <PostCard {...post} />
                             </li>
                         {/each}
                     </ul>
