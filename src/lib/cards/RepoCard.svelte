@@ -5,8 +5,8 @@
     export let description: string
     export let href: string
     export let version: string
-    export let downloadsCount: number
     export let starsCount: number
+    export let downloadsCount: number
 </script>
 
 <SimpleTextCard {title} {description} {href}>
