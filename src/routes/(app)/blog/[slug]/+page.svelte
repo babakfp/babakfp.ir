@@ -49,20 +49,26 @@
                         </li>
                     </ul>
 
-                    <div
-                        class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-400"
-                    >
-                        <span>
-                            Updated: <b title={data.updateDate}>
-                                {timeSince(new Date(data.updateDate))}
-                            </b>
-                        </span>
-                        <span>
-                            Published: <b title={data.publishDate}>
-                                {timeSince(new Date(data.publishDate))}
-                            </b>
-                        </span>
-                    </div>
+                    {#if data.updateDate && data.publishDate}
+                        <div
+                            class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-400"
+                        >
+                            {#if data.updateDate}
+                                <span>
+                                    Updated: <b title={data.updateDate}>
+                                        {timeSince(new Date(data.updateDate))}
+                                    </b>
+                                </span>
+                            {/if}
+                            {#if data.publishDate}
+                                <span>
+                                    Published: <b title={data.publishDate}>
+                                        {timeSince(new Date(data.publishDate))}
+                                    </b>
+                                </span>
+                            {/if}
+                        </div>
+                    {/if}
 
                     <div class="article-content">
                         {#if data.title}
