@@ -11,10 +11,10 @@
 
 <SimpleTextCard {title} {description} {href}>
     <li>v{version}</li>
-    {#if starsCount}
-        <li>Stars: {starsCount}</li>
-    {/if}
     {#if downloadsCount}
         <li>Weekly Downloads: {downloadsCount}</li>
+    {/if}
+    {#if starsCount}
+        <li>Stars: {starsCount}</li>
     {/if}
 </SimpleTextCard>
