@@ -2,7 +2,8 @@ import { error } from "@sveltejs/kit"
 
 export async function load({ params }) {
     try {
-        const doc = await import(`../../../../docs/${params.slug}/+page.md`)
+        const url = `../../../../docs/${params.slug}/+page.md`
+        const doc = await import(/* @vite-ignore */ url)
         return {
             ...doc.metadata,
             slug: params.slug,
