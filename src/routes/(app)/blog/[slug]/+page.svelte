@@ -3,17 +3,18 @@
     import { page } from "$app/stores"
     import transition from "$utils/transition"
     import { timeSince } from "$utils/timeSince"
-    import posts from "$portfolios/posts.json"
     import { isBlogTocSidebarOpen } from "$stores/blog"
     import { IconChevronRight } from "$icons"
     import BackToTopBtn from "$lib/BackToTopBtn.svelte"
     import TocMenu from "$lib/Sidebar/TocMenu.svelte"
     import PostCard from "$lib/cards/PostCard.svelte"
 
-    // prettier-ignore
-    const {title, description, updateDate, publishDate} = posts.filter(({ slug }) => slug === $page.url.pathname.replace("/blog/", ""))[0]
+    export let data
 
-    const otherPosts = posts.filter(
+    // prettier-ignore
+    const {title, description, updateDate, publishDate} = data.posts.filter(({ slug }) => slug === $page.url.pathname.replace("/blog/", ""))[0]
+
+    const otherPosts = data.posts.filter(
         ({ slug }) => slug !== $page.url.pathname.replace("/blog/", "")
     )
 </script>
@@ -69,7 +70,7 @@
                 </article>
             {/key}
 
-            {#if posts.length > 0}
+            {#if data.posts.length > 0}
                 <hr class="my-8" />
 
                 <div class="[zoom:0.8]">
