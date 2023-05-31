@@ -11,7 +11,6 @@
     import PostCard from "$lib/cards/PostCard.svelte"
     import HeroSection from "$lib/home/HeroSection.svelte"
     import Section from "$lib/home/Section.svelte"
-
     export let data
 </script>
 
