@@ -6,10 +6,10 @@
 
 <script lang="ts">
     // Prevent warnings (<MdsvexLayout> was created with unknown prop 'title')
-    export let title = ""
-    export let description = ""
-    export let updated = ""
-    export let published = ""
+    export const title = ""
+    export const description = ""
+    export const updated = ""
+    export const published = ""
 </script>
 
 <slot />
