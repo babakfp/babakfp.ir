@@ -4,12 +4,12 @@
 
     export let title: string
     export let description: string
-    export let href: string
     export let updateDate: string
     export let publishDate: string
+    export let slug: string
 </script>
 
-<SimpleTextCard {title} {description} {href}>
+<SimpleTextCard {title} {description} href="/blog/{slug}">
     <li>Updated: {timeSince(new Date(updateDate))}</li>
     <li>Published: {timeSince(new Date(publishDate))}</li>
 </SimpleTextCard>

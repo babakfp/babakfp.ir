@@ -1,7 +1,6 @@
 <script lang="ts">
     import { Toaster } from "svelte-french-toast"
     import frontendPortfolios from "$portfolios/frontend.json"
-    import posts from "$portfolios/posts.json"
     import packages from "$portfolios/packages.json"
     import rtlthemeProducts from "$portfolios/rtltheme-products.json"
     import wordpressPlugins from "$portfolios/wordpress-plugins.json"
@@ -12,6 +11,8 @@
     import PostCard from "$lib/cards/PostCard.svelte"
     import HeroSection from "$lib/home/HeroSection.svelte"
     import Section from "$lib/home/Section.svelte"
+
+    export let data
 </script>
 
 <HeroSection />
@@ -25,9 +26,9 @@
 </section>
 
 <Section title="Recent blogs">
-    {#each posts as { slug, ...rest }}
+    {#each data.posts as post}
         <li>
-            <PostCard {...rest} href="/blog/{slug}" />
+            <PostCard {...post} />
         </li>
     {/each}
 </Section>
