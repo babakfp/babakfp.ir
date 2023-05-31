@@ -2,7 +2,7 @@
 title: I like Svelte, but I hate it!
 description: This is my story of using Svelte since 2020, and this is why I hate it.
 updateDate: 2023/05/16
-publishDate: 2022/02/28
+publishDate: 2022/02/19
 ---
 
 <script>
