@@ -20,8 +20,8 @@
 </script>
 
 <svelte:head>
-    {#if title}
-        <title>{title}</title>
+    {#if data.title}
+        <title>{data.title}</title>
     {/if}
     {#if description}
         <meta name="description" content={description} />
@@ -63,7 +63,9 @@
                     </div>
 
                     <div class="article-content">
-                        <h1 class="mt-8">{title}</h1>
+                        {#if data.title}
+                            <h1 class="mt-8">{data.title}</h1>
+                        {/if}
 
                         <svelte:component this={data.content} />
                     </div>
