@@ -1,3 +1,7 @@
+---
+title: Presets
+---
+
 By default, these styles will be added to your tailwind config file.
 
 ```js

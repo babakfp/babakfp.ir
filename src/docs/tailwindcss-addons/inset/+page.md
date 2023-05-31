@@ -1,3 +1,7 @@
+---
+title: Inset Center
+---
+
 <script>
 	import UtilsTable from '$lib/UtilsTable.svelte'
 	import { cssTransformValue } from '$utils/cssTransformValue'

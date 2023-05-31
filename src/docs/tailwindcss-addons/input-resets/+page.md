@@ -1,3 +1,7 @@
+---
+title: Input Resets
+---
+
 <script>
 	import UtilsTable from '$lib/UtilsTable.svelte'
 	const utilities = {

@@ -1,3 +1,7 @@
+---
+title: Font Weight Regular
+---
+
 By activating the option, your default `font-weight` configuration will be;
 
 ```js

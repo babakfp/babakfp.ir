@@ -1,3 +1,7 @@
+---
+title: TailwindCSS Addons
+---
+
 ## Installation
 
 ```cmd

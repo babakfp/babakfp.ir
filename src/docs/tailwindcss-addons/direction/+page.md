@@ -1,3 +1,7 @@
+---
+title: Direction
+---
+
 <script>
 	import UtilsTable from '$lib/UtilsTable.svelte'
 	const utilities = {

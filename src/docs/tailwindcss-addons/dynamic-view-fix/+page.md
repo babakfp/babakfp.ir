@@ -1,3 +1,7 @@
+---
+title: Dynamic View Fix
+---
+
 This feature will update the screen size values in the `height`, `maxHeight`, `minHeight`, and `width` properties, from `vh` to `dvh` and `vw` to `dvw`.
 
 ```css

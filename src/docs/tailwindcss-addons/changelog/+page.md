@@ -1,3 +1,7 @@
+---
+title: CHANGELOG
+---
+
 ## 0.0.29
 
 - Added new `3px` value to [`ringOffsetWidth`](/docs/tailwindcss-addons/presets).
