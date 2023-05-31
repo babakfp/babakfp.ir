@@ -13,7 +13,7 @@ export async function load({ fetch, params }) {
             content: post.default,
             posts,
         }
-    } catch (e) {
+    } catch {
         return error(404)
     }
 }

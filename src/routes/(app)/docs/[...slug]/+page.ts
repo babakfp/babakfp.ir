@@ -8,7 +8,7 @@ export async function load({ params }) {
             slug: params.slug,
             content: doc.default,
         }
-    } catch (e) {
+    } catch {
         return error(404)
     }
 }
