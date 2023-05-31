@@ -11,9 +11,7 @@
 
     export let data
 
-    const recommendedPosts = data.posts.filter(
-        ({ slug }) => slug !== $page.url.pathname.replace("/blog/", "")
-    )
+    const recommendedPosts = data.posts.filter(({ slug }) => slug !== data.slug)
 </script>
 
 <svelte:head>

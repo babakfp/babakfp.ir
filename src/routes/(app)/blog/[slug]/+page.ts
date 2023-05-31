@@ -10,6 +10,7 @@ export async function load({ fetch, params }) {
         return {
             posts,
             ...post.metadata,
+            slug: params.slug,
             content: post.default,
         }
     } catch (e) {
