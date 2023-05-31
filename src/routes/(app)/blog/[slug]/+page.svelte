@@ -12,7 +12,7 @@
     export let data
 
     // prettier-ignore
-    const {title, description, updateDate, publishDate} = data.posts.filter(({ slug }) => slug === $page.url.pathname.replace("/blog/", ""))[0]
+    const {updateDate, publishDate} = data.posts.filter(({ slug }) => slug === $page.url.pathname.replace("/blog/", ""))[0]
 
     const otherPosts = data.posts.filter(
         ({ slug }) => slug !== $page.url.pathname.replace("/blog/", "")
@@ -23,8 +23,8 @@
     {#if data.title}
         <title>{data.title}</title>
     {/if}
-    {#if description}
-        <meta name="description" content={description} />
+    {#if data.description}
+        <meta name="description" content={data.description} />
     {/if}
 </svelte:head>
 
