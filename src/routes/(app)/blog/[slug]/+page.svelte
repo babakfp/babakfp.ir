@@ -11,9 +11,6 @@
 
     export let data
 
-    // prettier-ignore
-    const {updateDate, publishDate} = data.posts.filter(({ slug }) => slug === $page.url.pathname.replace("/blog/", ""))[0]
-
     const otherPosts = data.posts.filter(
         ({ slug }) => slug !== $page.url.pathname.replace("/blog/", "")
     )
@@ -51,13 +48,13 @@
                         class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-400"
                     >
                         <span>
-                            Updated: <b title={updateDate}>
-                                {timeSince(new Date(updateDate))}
+                            Updated: <b title={data.updateDate}>
+                                {timeSince(new Date(data.updateDate))}
                             </b>
                         </span>
                         <span>
-                            Published: <b title={publishDate}>
-                                {timeSince(new Date(publishDate))}
+                            Published: <b title={data.publishDate}>
+                                {timeSince(new Date(data.publishDate))}
                             </b>
                         </span>
                     </div>
