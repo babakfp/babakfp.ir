@@ -33,9 +33,16 @@
 </Section>
 
 <Section title="NPM packages">
-    {#each packages as { name, ...rest }}
+    {#each packages as pkg}
         <li>
-            <RepoCard {...rest} href="/docs/{name}" />
+            <RepoCard
+                title={pkg.title}
+                description={pkg.description}
+                href="/docs/{pkg.name}"
+                version={pkg.version}
+                starsCount={pkg.starsCount}
+                downloadsCount={pkg.downloadsCount}
+            />
         </li>
     {/each}
 </Section>

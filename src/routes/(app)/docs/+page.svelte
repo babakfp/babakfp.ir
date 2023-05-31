@@ -10,9 +10,16 @@
 <h2 class="text-center text-4xl font-bold uppercase text-gray-50">DOCS</h2>
 
 <ul class="mt-8 grid gap-4">
-    {#each packages as { name, ...rest }}
+    {#each packages as pkg}
         <li>
-            <RepoCard {...rest} href="/docs/{name}" />
+            <RepoCard
+                title={pkg.title}
+                description={pkg.description}
+                href="/docs/{pkg.name}"
+                version={pkg.version}
+                starsCount={pkg.starsCount}
+                downloadsCount={pkg.downloadsCount}
+            />
         </li>
     {/each}
 </ul>
