@@ -65,7 +65,7 @@
                     <div class="article-content">
                         <h1 class="mt-8">{title}</h1>
 
-                        <slot />
+                        <svelte:component this={data.content} />
                     </div>
                 </article>
             {/key}
