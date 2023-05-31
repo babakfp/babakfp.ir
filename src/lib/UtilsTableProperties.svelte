@@ -18,7 +18,18 @@
         </div>
     {:else if typeof valueOrObjectOfPropertyAndValue === "object"}
         <!-- {} -->
-        <span style="color: #908CAA">{propertyOrSelector}</span>
+        <!-- Spliting every selector into a new line
+		Used span to keep selector and { in the same line -->
+        {@const selectors = propertyOrSelector.split(",")}
+        {#each selectors as selector, i}
+            {@const isNotTheLastSelector = i < selectors.length - 1}
+            <svelte:element
+                this={isNotTheLastSelector ? "div" : "span"}
+                style="color: #908CAA"
+            >
+                {selector}{isNotTheLastSelector ? "," : ""}
+            </svelte:element>
+        {/each}
         <span style="color: #908CAA">{"{"}</span>
         <div style="text-indent: {indent}px">
             <svelte:self
