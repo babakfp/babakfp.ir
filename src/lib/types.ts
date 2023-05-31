@@ -1,8 +1,8 @@
 export interface Post {
     title: string
     description: string
-    updateDate: string
-    publishDate: string
+    updated: string
+    published: string
     slug: string
 }
 

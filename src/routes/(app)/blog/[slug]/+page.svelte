@@ -49,21 +49,21 @@
                         </li>
                     </ul>
 
-                    {#if data.updateDate && data.publishDate}
+                    {#if data.updated && data.published}
                         <div
                             class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-400"
                         >
-                            {#if data.updateDate}
+                            {#if data.updated}
                                 <span>
-                                    Updated: <b title={data.updateDate}>
-                                        {timeSince(new Date(data.updateDate))}
+                                    Updated: <b title={data.updated}>
+                                        {timeSince(new Date(data.updated))}
                                     </b>
                                 </span>
                             {/if}
-                            {#if data.publishDate}
+                            {#if data.published}
                                 <span>
-                                    Published: <b title={data.publishDate}>
-                                        {timeSince(new Date(data.publishDate))}
+                                    Published: <b title={data.published}>
+                                        {timeSince(new Date(data.published))}
                                     </b>
                                 </span>
                             {/if}

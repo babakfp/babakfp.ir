@@ -1,8 +1,8 @@
 ---
 title: Make Svelte better
 description: Let's talk about what can be improved in Svelte.
-updateDate: 2023/04/13
-publishDate: 2022/02/28
+updated: 2023/04/13
+published: 2022/02/28
 ---
 
 <script>
