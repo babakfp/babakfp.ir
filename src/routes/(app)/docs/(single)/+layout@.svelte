@@ -1,7 +1,7 @@
 <script lang="ts">
     import { fly } from "svelte/transition"
     import { page } from "$app/stores"
-    import layoutTransition from "$utils/layoutTransition"
+    import transition from "$utils/transition"
     import { docsSidebarItems } from "$stores/docs"
     import { isDocsTocSidebarOpen } from "$stores/docs"
     import packages from "$portfolios/packages.json"
@@ -49,7 +49,7 @@
         {#key $page.url.pathname}
             <div
                 class="min-w-0 xl:mr-4 xl:border-x xl:border-gray-50/5 xl:px-12 xl:pb-[--main-spacing-b] xl:pt-[--main-spacing-t]"
-                in:fly={layoutTransition}
+                in:fly={transition}
             >
                 <article class="article-content">
                     <h1>{documentationPostData.title}</h1>

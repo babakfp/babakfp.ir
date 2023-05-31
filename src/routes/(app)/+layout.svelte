@@ -1,11 +1,11 @@
 <script lang="ts">
     import { fly } from "svelte/transition"
     import { page } from "$app/stores"
-    import layoutTransition from "$utils/layoutTransition"
+    import transition from "$utils/transition"
 </script>
 
 {#key $page.url.pathname}
-    <main class="main" in:fly={layoutTransition}>
+    <main class="main" in:fly={transition}>
         <slot />
     </main>
 {/key}

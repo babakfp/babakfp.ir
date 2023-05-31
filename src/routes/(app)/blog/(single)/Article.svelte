@@ -1,7 +1,7 @@
 <script lang="ts">
     import { fly } from "svelte/transition"
     import { page } from "$app/stores"
-    import layoutTransition from "$utils/layoutTransition"
+    import transition from "$utils/transition"
     import { timeSince } from "$utils/timeSince"
 
     import { IconChevronRight } from "$icons"
@@ -12,7 +12,7 @@
 </script>
 
 {#key $page.url.pathname}
-    <article in:fly={layoutTransition}>
+    <article in:fly={transition}>
         <ul class="flex items-center gap-2 text-sm">
             <li>
                 <a class="link" href="/">HOME</a>
