@@ -2,7 +2,6 @@
     import OutClick from "svelte-outclick"
     import { browser } from "$app/environment"
     import { beforeNavigate } from "$app/navigation"
-    import { page } from "$app/stores"
     import { isMainMenuOpen, mainMenuItems } from "$stores/mainMenu"
     import BluredBackdrop from "$lib/BluredBackdrop.svelte"
     import PrimMenuItem from "$lib/PrimMenuItem.svelte"
