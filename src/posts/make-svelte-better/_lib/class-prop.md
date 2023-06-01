@@ -1,6 +1,6 @@
 ## Creating a class prop
 
-Have you ever created a prop to add custom classes to your component, only to discover that it's not as straightforward as you thought it would be? If so, you're not alone. In this post, we'll take a closer look at how to create a `class` prop in Svelte and the unexpected hurdles you may face along the way.
+Have you ever tried to create a `class` prop to add custom classes to your component, only to discover that it's not that straightforward? If so, you're not alone. Let's take a closer look at how to create a `class` prop in Svelte and the unexpected hurdles you may face along the way.
 
 To start, let's create a component and add the `class` prop to it:
 
@@ -56,5 +56,3 @@ So how can you fix this issue? One solution is to use the [`:global`](https://sv
 ```
 
 By wrapping the component inside an element and adjusting the CSS selector, we make sure that styles don't leak out from the parent component.
-
-In conclusion, creating a class prop is not as simple as it seems. The proposal is to make the first code example work as expected.
