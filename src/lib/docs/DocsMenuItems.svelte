@@ -27,7 +27,7 @@
                 {#each project.items as item}
                     <li class="mt-8">
                         <h5
-                            class="block px-container-x font-semibold text-gray-50 xl:mx-0"
+                            class="block px-container-x font-semibold text-gray-50 xl:px-0"
                         >
                             {item.title}
                         </h5>
