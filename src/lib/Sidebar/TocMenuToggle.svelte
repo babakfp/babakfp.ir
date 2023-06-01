@@ -1,6 +1,7 @@
 <script lang="ts">
     import { page } from "$app/stores"
-    import { IconQueueList, IconX } from "$icons"
+    import IconQueueList from "$icons/IconQueueList.svelte"
+    import IconX from "$icons/IconX.svelte"
     import IconToggler from "$lib/IconToggler.svelte"
 
     export let name: string

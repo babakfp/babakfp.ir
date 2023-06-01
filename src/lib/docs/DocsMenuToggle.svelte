@@ -1,7 +1,8 @@
 <script lang="ts">
     import { page } from "$app/stores"
     import { isDocsMenuSidebarOpen } from "$stores/docs"
-    import { IconList, IconX } from "$icons"
+    import IconList from "$icons/IconList.svelte"
+    import IconX from "$icons/IconX.svelte"
     import IconToggler from "$lib/IconToggler.svelte"
 </script>
 

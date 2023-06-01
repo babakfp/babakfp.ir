@@ -5,7 +5,7 @@
     import transition from "$utils/transition"
     import { timeSince } from "$utils/timeSince"
     import { isBlogTocSidebarOpen } from "$stores/blog"
-    import { IconChevronRight } from "$icons"
+    import IconChevronRight from "$icons/IconChevronRight.svelte"
     import BackToTopBtn from "$lib/BackToTopBtn.svelte"
     import TocMenu from "$lib/Sidebar/TocMenu.svelte"
     import PostCard from "$lib/cards/PostCard.svelte"

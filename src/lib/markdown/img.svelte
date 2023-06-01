@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { IconArrowUpRightSquare } from "$icons"
+    import IconArrowUpRightSquare from "$icons/IconArrowUpRightSquare.svelte"
 
     export let src = ""
     export let alt = ""

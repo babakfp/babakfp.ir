@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { IconChevronRight } from "$icons"
+    import IconChevronRight from "$icons/IconChevronRight.svelte"
 
     export let href: string
     export let isActive = false

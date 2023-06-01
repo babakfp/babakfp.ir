@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { IconQuoteLeft } from "$icons"
+    import IconQuoteLeft from "$icons/IconQuoteLeft.svelte"
 </script>
 
 <blockquote>

@@ -2,13 +2,11 @@
     import { env } from "$env/dynamic/public"
     import { copyText } from "svelte-copy"
     import toast from "svelte-french-toast"
-    import {
-        IconGithub,
-        IconDribbble,
-        IconLinkedin,
-        IconEnvelope,
-        IconTelegram,
-    } from "$icons"
+    import IconGithub from "$icons/IconGithub.svelte"
+    import IconDribbble from "$icons/IconDribbble.svelte"
+    import IconLinkedin from "$icons/IconLinkedin.svelte"
+    import IconEnvelope from "$icons/IconEnvelope.svelte"
+    import IconTelegram from "$icons/IconTelegram.svelte"
 </script>
 
 <section class="mx-auto max-w-prose">
