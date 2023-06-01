@@ -29,12 +29,12 @@ export async function GET({ url }) {
         })
     }
 
-    if (url.searchParams.has("create")) {
-        fs.writeFileSync(
-            "src/lib/portfolios/packages.json",
-            JSON.stringify(packagesData, null, 4)
-        )
-    }
+    // if (url.searchParams.has("create")) {
+    //     fs.writeFileSync(
+    //         "src/lib/portfolios/packages.json",
+    //         JSON.stringify(packagesData, null, 4)
+    //     )
+    // }
 
     return json(packagesData)
 }
