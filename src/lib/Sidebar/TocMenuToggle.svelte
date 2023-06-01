@@ -1,6 +1,6 @@
 <script lang="ts">
     import { page } from "$app/stores"
-    import IconQueueList from "$icons/IconQueueList.svelte"
+    import IconList from "$icons/IconList.svelte"
     import IconX from "$icons/IconX.svelte"
     import IconToggler from "$lib/IconToggler.svelte"
 
@@ -21,7 +21,7 @@
     >
         <IconToggler class="text-2xl" isTrue={isOpen}>
             <svelte:fragment slot="first">
-                <IconQueueList />
+                <IconList />
             </svelte:fragment>
             <svelte:fragment slot="second">
                 <IconX />

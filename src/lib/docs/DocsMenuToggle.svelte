@@ -1,7 +1,7 @@
 <script lang="ts">
     import { page } from "$app/stores"
     import { isDocsMenuSidebarOpen } from "$stores/docs"
-    import IconList from "$icons/IconList.svelte"
+    import IconBarsBottomRight from "$icons/IconBarsBottomRight.svelte"
     import IconX from "$icons/IconX.svelte"
     import IconToggler from "$lib/IconToggler.svelte"
 </script>
@@ -17,7 +17,7 @@
     >
         <IconToggler class="text-2xl" isTrue={$isDocsMenuSidebarOpen}>
             <svelte:fragment slot="first">
-                <IconList />
+                <IconBarsBottomRight />
             </svelte:fragment>
             <svelte:fragment slot="second">
                 <IconX />
