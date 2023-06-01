@@ -1,10 +1,28 @@
 <script>
-    import { getContext } from "svelte"
+    import { fly } from "svelte/transition"
+    import { page } from "$app/stores"
+    import transition from "$utils/transition"
 
     export let data
-
-    const title = getContext("title")
-    $title = data.title
 </script>
 
-<svelte:component this={data.content} />
+<svelte:head>
+    {#if data.title}
+        <title>{data.title}</title>
+    {/if}
+</svelte:head>
+
+{#key $page.url.pathname}
+    <div
+        class="min-w-0 xl:mr-4 xl:border-x xl:border-gray-50/5 xl:px-12 xl:pb-[--main-spacing-b] xl:pt-[--main-spacing-t]"
+        in:fly={transition}
+    >
+        <article class="article-content">
+            {#if data.title}
+                <h1>{data.title}</h1>
+            {/if}
+
+            <svelte:component this={data.content} />
+        </article>
+    </div>
+{/key}

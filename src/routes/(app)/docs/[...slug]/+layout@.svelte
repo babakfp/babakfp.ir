@@ -1,22 +1,9 @@
 <script lang="ts">
-    import { setContext } from "svelte"
-    import { writable } from "svelte/store"
-    import { fly } from "svelte/transition"
-    import { page } from "$app/stores"
-    import transition from "$utils/transition"
     import { isDocsTocSidebarOpen } from "$stores/docs"
     import BackToTopBtn from "$lib/BackToTopBtn.svelte"
     import DocsMenu from "$lib/docs/DocsMenu.svelte"
     import TocMenu from "$lib/Sidebar/TocMenu.svelte"
-
-    const title = setContext("title", writable(""))
 </script>
-
-<svelte:head>
-    {#if $title}
-        <title>{$title}</title>
-    {/if}
-</svelte:head>
 
 <main class="main xl:py-0">
     <div
@@ -24,20 +11,7 @@
     >
         <DocsMenu />
 
-        {#key $page.url.pathname}
-            <div
-                class="min-w-0 xl:mr-4 xl:border-x xl:border-gray-50/5 xl:px-12 xl:pb-[--main-spacing-b] xl:pt-[--main-spacing-t]"
-                in:fly={transition}
-            >
-                <article class="article-content">
-                    {#if $title}
-                        <h1>{$title}</h1>
-                    {/if}
-
-                    <slot />
-                </article>
-            </div>
-        {/key}
+        <slot />
 
         <TocMenu name="docs" bind:isOpen={$isDocsTocSidebarOpen} />
     </div>
