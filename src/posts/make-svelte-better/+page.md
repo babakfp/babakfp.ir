@@ -18,11 +18,9 @@ published: 2022/02/28
 	import PortIsAlreadyInUse from './_lib/port-is-already-in-use.md'
 	import DynamicHTMLTag from './_lib/dynamic-html-tags.md'
 	import BetterErrorHandling from './_lib/better-error-handling.md'
-	import Alias from './_lib/alias.md'
 </script>
 
 <LogicBlocks />
-<Alias />
 <ClassProp />
 <Comments />
 <CSSScope />
