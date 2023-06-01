@@ -14,7 +14,7 @@ There is no clean syntax to dynamically add classes.
 ### ❌ The ternary operator
 
 ```svelte
-<div class="block {condition ? 'text-base font-normal' : ''}" />
+<div class="block {condition ? 'font-normal text-base' : ''}" />
 ```
 
 - ✅ You can add multiple classes.
@@ -23,7 +23,7 @@ There is no clean syntax to dynamically add classes.
 ### ❌ The `&&` operator
 
 ```svelte
-<div class="block {condition && 'text-base font-normal'}" />
+<div class="block {condition && 'font-normal text-base'}" />
 ```
 
 - ✅ You can add multiple classes.
