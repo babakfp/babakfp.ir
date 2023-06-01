@@ -28,7 +28,7 @@
                     </tr>
                 </thead>
 
-                <tbody class="align-baseline">
+                <tbody class="select-text align-baseline selection:bg-white/10">
                     {#each Object.entries(utilities) as [_class, selectorAndStyles], i}
                         <tr
                             class="
@@ -36,10 +36,7 @@
 								{i + 1 >= 8 && isCollapsed && 'hidden'} xl:table-row
 							"
                         >
-                            <td
-                                class="select-text selection:bg-indigo-400/25"
-                                style="color: #C4A7E7"
-                            >
+                            <td style="color: #C4A7E7">
                                 {_class.replace(".", "")}
                             </td>
                             <td>
