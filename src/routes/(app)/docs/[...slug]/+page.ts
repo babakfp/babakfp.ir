@@ -1,14 +1,17 @@
 import { error } from "@sveltejs/kit"
 
 export async function load({ params }) {
-    try {
-        const doc = await import(`../../../../docs/${params.slug}/+page.md`)
+    const paths = import.meta.glob("/src/docs/**/+page.md")
+    const path = paths[`/src/docs/${params.slug}/+page.md`]
+
+    if (path) {
+        const doc = await path()
         return {
             ...doc.metadata,
             slug: params.slug,
             content: doc.default,
         }
-    } catch {
-        return error(404)
     }
+
+    throw error(404)
 }
