@@ -2,17 +2,40 @@
     import { onMount } from "svelte"
     import { page } from "$app/stores"
     import { browser } from "$app/environment"
-    import { getHeadings } from "$utils/toc"
     import Sidebar from "$lib/Sidebar/Sidebar.svelte"
     import SidebarTocItem from "$lib/Sidebar/SidebarTocItem.svelte"
 
     export let isOpen: boolean
     export let name: string
 
-    let contents: HTMLElement[] = []
-    onMount(() => (contents = getHeadings()))
+    interface TocItem {
+        id: string
+        lvl: number
+        value: string
+    }
+
+    let items: TocItem[] = []
+    onMount(() => (items = getHeadings()))
     $: if (browser && $page.url.pathname) {
-        contents = getHeadings()
+        items = getHeadings()
+    }
+
+    function getHeadings() {
+        let items: TocItem[] = []
+
+        const pageHeadings = document.querySelectorAll(
+            ".article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6"
+        )
+
+        pageHeadings?.forEach(h => {
+            items.push({
+                id: h.id!,
+                lvl: Number(h.localName.slice(1)),
+                value: h.textContent!,
+            })
+        })
+
+        return items
     }
 </script>
 
@@ -30,11 +53,10 @@
     </div>
 
     <ul class="mt-4">
-        {#each contents as content}
-            {@const depthLvl = Number(content.localName.slice(1))}
+        {#each items as item}
             <li on:click={() => (isOpen = false)}>
-                <SidebarTocItem href="#{content.id}" {depthLvl}>
-                    {@html content.innerHTML}
+                <SidebarTocItem href="#{item.id}" depthLvl={item.lvl}>
+                    {@html item.value}
                 </SidebarTocItem>
             </li>
         {/each}
