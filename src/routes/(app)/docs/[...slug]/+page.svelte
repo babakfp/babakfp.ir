@@ -1,9 +1,10 @@
 <script>
-    import { doc } from "./stores"
+    import { getContext } from "svelte"
 
     export let data
 
-    $doc = { title: data.title }
+    const title = getContext("title")
+    $title = data.title
 </script>
 
 <svelte:component this={data.content} />

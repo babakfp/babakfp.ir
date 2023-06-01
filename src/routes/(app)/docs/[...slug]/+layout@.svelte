@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { setContext } from "svelte"
+    import { writable } from "svelte/store"
     import { fly } from "svelte/transition"
     import { page } from "$app/stores"
     import transition from "$utils/transition"
@@ -6,12 +8,13 @@
     import BackToTopBtn from "$lib/BackToTopBtn.svelte"
     import DocsMenu from "$lib/docs/DocsMenu.svelte"
     import TocMenu from "$lib/Sidebar/TocMenu.svelte"
-    import { doc } from "./stores"
+
+    const title = setContext("title", writable(""))
 </script>
 
 <svelte:head>
-    {#if $doc.title}
-        <title>{$doc.title}</title>
+    {#if $title}
+        <title>{$title}</title>
     {/if}
 </svelte:head>
 
@@ -27,8 +30,8 @@
                 in:fly={transition}
             >
                 <article class="article-content">
-                    {#if $doc.title}
-                        <h1>{$doc.title}</h1>
+                    {#if $title}
+                        <h1>{$title}</h1>
                     {/if}
 
                     <slot />
