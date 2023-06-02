@@ -50,7 +50,7 @@ You may want to exclude some elements from triggering the event. For example, a 
 
 - Type: `HTMLElement | HTMLElement[]`
 
-This prop expects an array of DOM nodes. Clicks on those nodes (and their children) will be ignored. Learn about [`bind:this`](https://svelte.dev/tutorial/bind-this).
+This prop expects HTML elements. Clicks on those elements (and their children) will be ignored. Learn about [`bind:this`](https://svelte.dev/tutorial/bind-this).
 
 <!-- prettier-ignore -->
 ```svelte
@@ -68,17 +68,17 @@ This prop expects an array of DOM nodes. Clicks on those nodes (and their childr
 </OutClick>
 
 <div bind:this={excludedElement}>
-	this doesn't trigger outclick
+	This doesn't trigger outclick
 </div>
 ```
 
-This prop can receive a single variable or multiple variables in an array.
+This prop can receive a single element or an array of elements.
 
 #### `excludeQuerySelectorAll`
 
 - Type: `string`
 
-This prop expects an array of query selectors. Clicks on those nodes (and their children) will be ignored. Selectors element most be present on the document or it will cause an error.
+This prop expects a string of css selectors. Clicks on those elements (and their children) will be ignored.
 
 <!-- prettier-ignore -->
 ```svelte
@@ -95,17 +95,17 @@ This prop expects an array of query selectors. Clicks on those nodes (and their 
 </OutClick>
 
 <div class="excluded-element">
-	this doesn't trigger outclick
+	This doesn't trigger outclick
 </div>
 ```
 
-This prop works the same as the `querySelectorAll` method. So, it can contain values like `"#element1, .element2"`.
+This prop works the same as the `querySelectorAll` method. It can contain any valid CSS selectors, for example: `"#element1, .element2"`.
 
 ### `class` prop
 
 - Type: `string`
 
-This is the same as the CSS `class` attribute. You can use tools like TailwindCSS without any problems, just add your classes how you normally do. Please check out the demo source code to learn about how to add styles to your custom class.
+This is equivalent to the CSS class attribute. You can seamlessly utilize tools such as TailwindCSS by adding your classes in the usual manner, without encountering any issues.
 
 <!-- prettier-ignore -->
 ```svelte
@@ -124,11 +124,7 @@ This is the same as the CSS `class` attribute. You can use tools like TailwindCS
 </div>
 
 <style lang="postcss">
-	/*
-	You need to use :global() here because Svelte sucks.
-	You need to use an extra element(div) to wrap the component inside it,
-		to prevent your styles from affecting the elements outside of this component.
-	*/
+	/* You need to use :global() here because of some stupid issue with Svelte. You also need to use an extra element (div) to wrap the component inside it, to scope the styles. */
 	div :global(.my-custom-class) {
 		color: red;
 	}
@@ -140,54 +136,39 @@ This is the same as the CSS `class` attribute. You can use tools like TailwindCS
 - Type: `boolean`
 - Default: `false`
 
-For example, if you want to close the dropdown when you click on its items, set the value to `true`, so the self(wrapper) can trigger the event.
-
-<!-- prettier-ignore -->
-```svelte
-<script>
-	import OutClick from 'svelte-outclick'
-	let count = 0
-</script>
-
-<OutClick
-	on:outclick={() => count++}
-	includeSelf={true}
->
-	{count} times clicked outside and inside
-</OutClick>
-```
+For example, if you want to close the dropdown when you click on any of its items, set the value of this option to `true`, so a self-click can trigger the event.
 
 ### `halfClick`
 
 - Type: `boolean`
 - Default: `true`
 
-If `true`, outclick will happen when `pointerdown` and `pointerup` events happen after eachother, outside of the element. If `false`, `pointerdown` can solely determine the click outside.
+If `true`, `pointerdown` can solely determine the click outside. If `false`, outclick will happen when `pointerdown` and `pointerup` events happen after eachother, outside of the element.
 
 ### `tag`
 
 - Type: `string`
 - Default: `"div"`
 
-You can add a prop called `tag` to your `OutClick` component and change the wrapper tag. Added with the help of `svelte:element`.
+You can change the tag name of the wrapper element.
 
 ### Custom attributes
 
-You can add custom attributes to render on the wrapper element. Added with the help of `$$restProps`.
+You can add any custom attributes to the wrapper element.
 
 ```svelte
-<OutClick aria-label="hello" />
+<OutClick aria-label="Hello, World!" />
 ```
 
 ## No extra wrapper
 
-Actually, there is an HTML `<div>` wrapper, but it doesn't affect the layout because of [`display: contents`](https://caniuse.com/css-display-contents). If you use the `class` prop, `display: contents will be removed automatically.
+Actually, there is an HTML `<div>` wrapper, but it doesn't affect the layout because of [`display: contents`](https://caniuse.com/css-display-contents). If you use the `class` prop, the default display will be automatically removed.
 
 ## FAQ
 
 ### Why are we not using the `click` event to capture the `outclick` event?
 
-At first, we were using the `click` event to capture the `outclick` event, but later because of [this issue](https://github.com/babakfp/svelte-outclick/issues/4) we started using the `mousedown` event instead; and later because of [this issue](https://github.com/babakfp/svelte-outclick/issues/6) we started using the `pointerdown` even. Later I have added the ability to use `pointerup` event with the `pointerdown` event.
+At first, we were using the `click` event to capture the `outclick` event, but later because of [this issue](https://github.com/babakfp/svelte-outclick/issues/4) we started using the `mousedown` event instead; and later because of [this issue](https://github.com/babakfp/svelte-outclick/issues/6) we started using the `pointerdown` even. Later I added the ability to use `pointerup` event with the `pointerdown` event to fully simulate the click event.
 
 ### Learn more
 
