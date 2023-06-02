@@ -4,6 +4,10 @@ title: CHANGELOG
 
 Restart your app after updating the package.
 
+## 3.6.1
+
+- Fixed some issues related to props types.
+
 ## 3.6.0
 
 - Removed `e.detail` because it wasn't needed.
