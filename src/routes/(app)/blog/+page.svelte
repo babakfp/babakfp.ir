@@ -9,7 +9,7 @@
 
 <h2 class="text-center text-4xl font-bold uppercase text-gray-50">Blog</h2>
 
-<ul class="mt-8 grid gap-4">
+<ul class="mx-auto mt-8 grid max-w-prose gap-4">
     {#each data.posts as post}
         <li>
             <PostCard {...post} />
