@@ -28,7 +28,9 @@
                     </tr>
                 </thead>
 
-                <tbody class="select-text align-baseline selection:bg-white/10">
+                <tbody
+                    class="select-text align-baseline selection:bg-gray-50/10"
+                >
                     {#each Object.entries(utilities) as [_class, selectorAndStyles], i}
                         <tr
                             class="
