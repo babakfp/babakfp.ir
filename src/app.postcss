@@ -30,7 +30,10 @@
         @apply border-t-2 border-gray-50/25;
     }
     svg.icon {
-        @apply pointer-events-none inline-block h-[1em] w-[1em] fill-current;
+        @apply pointer-events-none inline-block h-[1em] w-[1em];
+        &:not([fill="none"]) {
+            @apply fill-current;
+        }
     }
 }
 
