@@ -2,7 +2,7 @@
 title: Presets
 ---
 
-By default, these styles will be added to your tailwind config file.
+These styles will be added to your tailwind config file.
 
 ```js
 {
@@ -36,7 +36,7 @@ By default, these styles will be added to your tailwind config file.
 				3: '3px',
 			},
 			outlineOffset: {
-				'3': '3px',
+				3: '3px',
 			},
 			fontSize: {
 				'2xs': ['0.625rem', { lineHeight: '1' }],
@@ -49,7 +49,6 @@ By default, these styles will be added to your tailwind config file.
 			},
 		},
 	},
-	plugins: [],
 }
 ```
 
