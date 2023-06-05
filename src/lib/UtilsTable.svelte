@@ -3,8 +3,6 @@
 
     export let utilities: object
     const theadItems = ["class", "properties"]
-    export let className: string = ""
-    export { className as class }
 
     const isCollapsable = Object.entries(utilities).length >= 8
     let isCollapsed = isCollapsable
@@ -14,7 +12,7 @@
     <div class="px-2 xl:max-h-96 xl:overflow-y-auto xl:pr-1 xl:scrollbar-y">
         <div class="table-wrapper overflow-x-auto pb-1">
             <table
-                class="{className} w-full border-collapse whitespace-nowrap text-left font-mono text-sm"
+                class="w-full border-collapse whitespace-nowrap text-left font-mono text-sm"
             >
                 <thead>
                     <tr>
