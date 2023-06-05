@@ -8,49 +8,45 @@
     let isCollapsed = isCollapsable
 </script>
 
-<div class="relative -mx-2 xl:-mr-1">
-    <div class="px-2 xl:max-h-96 xl:overflow-y-auto xl:pr-1 xl:scrollbar-y">
-        <div class="table-wrapper overflow-x-auto pb-1">
-            <table
-                class="w-full border-collapse whitespace-nowrap text-left font-mono text-sm"
-            >
-                <thead>
-                    <tr>
-                        {#each theadItems as title}
-                            <th>
-                                <div class="bg-gray-50/5">
-                                    {title}
-                                </div>
-                            </th>
-                        {/each}
-                    </tr>
-                </thead>
+<div class="relative">
+    <div class="table-wrapper overflow-x-auto">
+        <table
+            class="w-full border-collapse whitespace-nowrap text-left font-mono text-sm"
+        >
+            <thead>
+                <tr>
+                    {#each theadItems as title}
+                        <th>
+                            <div class="bg-gray-50/5">
+                                {title}
+                            </div>
+                        </th>
+                    {/each}
+                </tr>
+            </thead>
 
-                <tbody
-                    class="select-text align-baseline selection:bg-gray-50/10"
-                >
-                    {#each Object.entries(utilities) as [_class, selectorAndStyles], i}
-                        <tr
-                            class="
+            <tbody class="select-text align-baseline selection:bg-gray-50/10">
+                {#each Object.entries(utilities) as [_class, selectorAndStyles], i}
+                    <tr
+                        class="
 								not-first-of-type:border-t-[0.1px] not-first-of-type:border-gray-50/5
 								{i + 1 >= 8 && isCollapsed && 'hidden'} xl:table-row
 							"
-                        >
-                            <td style="color: #C4A7E7">
-                                {_class.replace(".", "")}
-                            </td>
-                            <td>
-                                {#if typeof selectorAndStyles === "string"}
-                                    {@html selectorAndStyles}
-                                {:else}
-                                    <UtilsTableProperties {selectorAndStyles} />
-                                {/if}
-                            </td>
-                        </tr>
-                    {/each}
-                </tbody>
-            </table>
-        </div>
+                    >
+                        <td style="color: #C4A7E7">
+                            {_class.replace(".", "")}
+                        </td>
+                        <td>
+                            {#if typeof selectorAndStyles === "string"}
+                                {@html selectorAndStyles}
+                            {:else}
+                                <UtilsTableProperties {selectorAndStyles} />
+                            {/if}
+                        </td>
+                    </tr>
+                {/each}
+            </tbody>
+        </table>
     </div>
 
     <!-- COLLAPSE STUFF -->
