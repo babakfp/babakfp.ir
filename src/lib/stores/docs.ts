@@ -128,6 +128,14 @@ export const docsSidebarItems = readable([
                         title: "Font Weight Regular",
                         path: "/docs/tailwindcss-addons/font-weight-regular",
                     },
+                    {
+                        title: "Background Grid",
+                        path: "/docs/tailwindcss-addons/bg-grid",
+                    },
+                    {
+                        title: "Background Radial",
+                        path: "/docs/tailwindcss-addons/bg-radial",
+                    },
                 ],
             },
             {

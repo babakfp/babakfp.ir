@@ -2,9 +2,13 @@
 title: CHANGELOG
 ---
 
+## 0.0.31
+
+- [breaking] In [Background Radial](/docs/tailwindcss-addons/bg-radial), renamed `bg-radial-border-size` to `bg-radial-circle-size`.
+
 ## 0.0.30
 
-- Added Background Grid and Background Radial utilities.
+- Added [Background Grid](/docs/tailwindcss-addons/bg-grid) and [Background Radial](/docs/tailwindcss-addons/bg-radial) utilities.
 
 ## 0.0.29
 
