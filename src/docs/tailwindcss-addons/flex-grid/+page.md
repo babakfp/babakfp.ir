@@ -76,39 +76,39 @@ This feature will replace all Tailwind (`justify-content`, `justify-items`, `jus
 
 ## Justify Content
 
-<UtilsTable class="mt-4" utilities={justifyContent} />
+<UtilsTable utilities={justifyContent} />
 
 ## Justify Items
 
-<UtilsTable class="mt-4" utilities={justifyItems} />
+<UtilsTable utilities={justifyItems} />
 
 ## Justify Self
 
-<UtilsTable class="mt-4" utilities={justifySelf} />
+<UtilsTable utilities={justifySelf} />
 
 ## Align Content
 
-<UtilsTable class="mt-4" utilities={alignContent} />
+<UtilsTable utilities={alignContent} />
 
 ## Align Items
 
-<UtilsTable class="mt-4" utilities={alignItems} />
+<UtilsTable utilities={alignItems} />
 
 ## Align Self
 
-<UtilsTable class="mt-4" utilities={alignSelf} />
+<UtilsTable utilities={alignSelf} />
 
 ## Place Content
 
-<UtilsTable class="mt-4" utilities={placeContent} />
+<UtilsTable utilities={placeContent} />
 
 ## Place Items
 
-<UtilsTable class="mt-4" utilities={placeItems} />
+<UtilsTable utilities={placeItems} />
 
 ## Place Self
 
-<UtilsTable class="mt-4" utilities={placeSelf} />
+<UtilsTable utilities={placeSelf} />
 
 ## How to enable it?
 

@@ -17,7 +17,7 @@ title: User Drag
 	}
 </script>
 
-<UtilsTable class="mt-4" {utilities} />
+<UtilsTable {utilities} />
 
 ## How to disable it?
 
