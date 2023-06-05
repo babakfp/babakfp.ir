@@ -3,9 +3,6 @@
 
     export let utilities: object
     const theadItems = ["class", "properties"]
-
-    const isCollapsable = Object.entries(utilities).length >= 8
-    let isCollapsed = isCollapsable
 </script>
 
 <div class="relative">
@@ -26,12 +23,9 @@
             </thead>
 
             <tbody class="select-text align-baseline selection:bg-gray-50/10">
-                {#each Object.entries(utilities) as [_class, selectorAndStyles], i}
+                {#each Object.entries(utilities) as [_class, selectorAndStyles]}
                     <tr
-                        class="
-								not-first-of-type:border-t-[0.1px] not-first-of-type:border-gray-50/5
-								{i + 1 >= 8 && isCollapsed && 'hidden'} xl:table-row
-							"
+                        class="not-first-of-type:border-t-[0.1px] not-first-of-type:border-gray-50/5 xl:table-row"
                     >
                         <td style="color: #C4A7E7">
                             {_class.replace(".", "")}
@@ -48,24 +42,6 @@
             </tbody>
         </table>
     </div>
-
-    <!-- COLLAPSE STUFF -->
-    {#if isCollapsable}
-        <div
-            class="
-				{isCollapsed ? 'absolute bottom-0 pb-6' : 'sticky -bottom-2'}
-				inset-x-0 flex items-center justify-center rounded bg-gray-800/50 p-4 backdrop-blur-[2px] xl:hidden
-			"
-        >
-            <butttn
-                class="relative cursor-pointer rounded-full bg-gray-800 px-6 py-2.5 text-xs duration-150 highlight-gray-50/10 hover:bg-gray-700"
-                on:click={() => (isCollapsed = !isCollapsed)}
-                on:keypress={() => (isCollapsed = !isCollapsed)}
-            >
-                {isCollapsed ? "Show all classes" : "Show fewer classes"}
-            </butttn>
-        </div>
-    {/if}
 </div>
 
 <!-- prettier-ignore -->
