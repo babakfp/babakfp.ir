@@ -4,26 +4,9 @@ title: Inset Center
 
 <script>
 	import UtilsTable from '$lib/UtilsTable.svelte'
-	import { cssTransformValue } from '$utils/cssTransformValue'
-	const utilities = {
-		'.inset-center': {
-			'top': '50%',
-			'right': '50%',
-			'--tw-translate-x': '50%',
-			'--tw-translate-y': '-50%',
-			'transform': cssTransformValue,
-		},
-		'.inset-x-center': {
-			'right': '50%',
-			'--tw-translate-x': '50%',
-			'transform': cssTransformValue,
-		},
-		'.inset-y-center': {
-			'top': '50%',
-			'--tw-translate-y': '-50%',
-			'transform': cssTransformValue,
-		},
-	}
+	import {getUtilities} from '$utils/tailwind.js'
+	import insetCenter from 'tailwindcss-addons/src/utilities/insetCenter.cjs'
+	const utilities = getUtilities(insetCenter.handler);
 </script>
 
 <UtilsTable {utilities} />

@@ -4,18 +4,9 @@ title: Hide & Show
 
 <script>
 	import UtilsTable from '$lib/UtilsTable.svelte'
-	const utilities = {
-		'.hide': {
-			'visibility': 'hidden',
-			'opacity': '0',
-			'pointer-events': 'none',
-		},
-		'.show': {
-			'visibility': 'visible',
-			'opacity': '1',
-			'pointer-events': 'auto',
-		},
-	}
+	import {getUtilities} from '$utils/tailwind.js'
+	import hideShow from 'tailwindcss-addons/src/utilities/hideShow.cjs'
+	const utilities = getUtilities(hideShow.handler);
 </script>
 
 <UtilsTable {utilities} />

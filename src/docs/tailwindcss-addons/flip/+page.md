@@ -4,22 +4,9 @@ title: Flip
 
 <script>
 	import UtilsTable from '$lib/UtilsTable.svelte'
-	import { cssTransformValue } from '$utils/cssTransformValue'
-	const utilities = {
-		'.flip': {
-			'--tw-scale-x': '-1',
-			'--tw-scale-y': '-1',
-			'transform': cssTransformValue,
-		},
-		'.flip-x': {
-			'--tw-scale-x': '-1',
-			'transform': cssTransformValue,
-		},
-		'.flip-y': {
-			'--tw-scale-y': '-1',
-			'transform': cssTransformValue,
-		},
-	}
+	import {getUtilities} from '$utils/tailwind.js'
+	import flip from 'tailwindcss-addons/src/utilities/flip.cjs'
+	const utilities = getUtilities(flip.handler);
 </script>
 
 <UtilsTable {utilities} />

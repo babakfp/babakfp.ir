@@ -4,17 +4,9 @@ title: Overflow Unset
 
 <script>
 	import UtilsTable from '$lib/UtilsTable.svelte'
-	const utilities = {
-		'.overflow-unset': {
-			'overflow': 'unset',
-		},
-		'.overflow-y-unset': {
-			'overflow-y': 'unset',
-		},
-		'.overflow-x-unset': {
-			'overflow-x': 'unset',
-		},
-	}
+	import {getUtilities} from '$utils/tailwind.js'
+	import overflowUnset from 'tailwindcss-addons/src/utilities/overflowUnset.cjs'
+	const utilities = getUtilities(overflowUnset.handler);
 </script>
 
 <UtilsTable {utilities} />
