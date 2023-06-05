@@ -4,71 +4,26 @@ title: Flex & Grid
 
 <script>
 	import UtilsTable from '$lib/UtilsTable.svelte'
-	const justifyContent = {
-		'.jc-start':		{ 'justify-content': 'flex-start' },
-		'.jc-end':			{ 'justify-content': 'flex-end' },
-		'.jc-center':		{ 'justify-content': 'center' },
-		'.jc-between':	{ 'justify-content': 'space-between' },
-		'.jc-around':		{ 'justify-content': 'space-around' },
-		'.jc-evenly':		{ 'justify-content': 'space-evenly' },
-	}
-	const justifyItems = {
-		'.ji-start':		{ 'justify-items': 'start' },
-		'.ji-end':			{ 'justify-items': 'end' },
-		'.ji-center':		{ 'justify-items': 'center' },
-		'.ji-stretch':	{ 'justify-items': 'stretch' },
-	}
-	const justifySelf = {
-		'.js-auto':			{ 'justify-self': 'auto' },
-		'.js-start':		{ 'justify-self': 'start' },
-		'.js-end':			{ 'justify-self': 'end' },
-		'.js-center':		{ 'justify-self': 'center' },
-		'.js-stretch':	{ 'justify-self': 'stretch' },
-	}
-	const alignContent = {
-		'.ac-center':		{ 'align-content': 'center' },
-		'.ac-start':		{ 'align-content': 'flex-start' },
-		'.ac-end':			{ 'align-content': 'flex-end' },
-		'.ac-between':	{ 'align-content': 'space-between' },
-		'.ac-around':		{ 'align-content': 'space-around' },
-		'.ac-evenly':		{ 'align-content': 'space-evenly' },
-	}
-	const alignItems = {
-		'.ai-start':		{ 'align-items': 'flex-start' },
-		'.ai-end':			{ 'align-items': 'flex-end' },
-		'.ai-center':		{ 'align-items': 'center' },
-		'.ai-baseline':	{ 'align-items': 'baseline' },
-		'.ai-stretch':	{ 'align-items': 'stretch' },
-	}
-	const alignSelf = {
-		'.as-auto':			{ 'align-self': 'auto' },
-		'.as-start':		{ 'align-self': 'flex-start' },
-		'.as-end':			{ 'align-self': 'flex-end' },
-		'.as-center':		{ 'align-self': 'center' },
-		'.as-stretch':	{ 'align-self': 'stretch' },
-		'.as-baseline':	{ 'align-self': 'baseline' },
-	}
-	const placeContent = {
-		'.pc-center':		{ 'place-content': 'center' },
-		'.pc-start':		{ 'place-content': 'start' },
-		'.pc-end':			{ 'place-content': 'end' },
-		'.pc-between':	{ 'place-content': 'space-between' },
-		'.pc-around':		{ 'place-content': 'space-around' },
-		'.pc-evenly':		{ 'place-content': 'space-evenly' },
-		'.pc-stretch':	{ 'place-content': 'stretch' },
-	}
-	const placeItems = {
-		'.pi-start':		{ 'place-items': 'start' },
-		'.pi-end':			{ 'place-items': 'end' },
-		'.pi-center':		{ 'place-items': 'center' },
-		'.pi-stretch':	{ 'place-items': 'stretch' },
-	}
-	const placeSelf = {
-		'.ps-auto':			{ 'place-self': 'auto' },
-		'.ps-start':		{ 'place-self': 'start' },
-		'.ps-end':			{ 'place-self': 'end' },
-		'.ps-center':		{ 'place-self': 'center' },
-		'.ps-stretch':	{ 'place-self': 'stretch' },
+	import {getUtilities} from '$utils/tailwind.js'
+	import flexGrid from 'tailwindcss-addons/src/utilities/flexGrid.cjs'
+	const utilities = getUtilities(flexGrid.handler)
+
+	const justifyContent = getUtilsOfASpesificClass('.jc')
+	const justifyItems = getUtilsOfASpesificClass('.ji')
+	const justifySelf = getUtilsOfASpesificClass('.js')
+	const alignContent = getUtilsOfASpesificClass('.ac')
+	const alignItems = getUtilsOfASpesificClass('.ai')
+	const alignSelf = getUtilsOfASpesificClass('.as')
+	const placeContent = getUtilsOfASpesificClass('.pc')
+	const placeItems = getUtilsOfASpesificClass('.pi')
+	const placeSelf = getUtilsOfASpesificClass('.ps')
+
+	function getUtilsOfASpesificClass(classStartsWith) {
+		const utils = Object.entries(utilities).filter(util => {
+			const className = util[0]
+			return className.startsWith(classStartsWith)
+		})
+		return Object.fromEntries(utils)
 	}
 </script>
 
