@@ -2,6 +2,11 @@
 title: CHANGELOG
 ---
 
+### 0.0.32
+
+- [breaking] In [Background Grid](/docs/tailwindcss-addons/bg-grid), renamed `bg-grid-border-w` to `bg-grid-border`.
+- [breaking] In [Background Radial](/docs/tailwindcss-addons/bg-radial), renamed `bg-radial-circle-size` to `bg-radial-circle`.
+
 ## 0.0.31
 
 - [breaking] In [Background Radial](/docs/tailwindcss-addons/bg-radial), renamed `bg-radial-border-size` to `bg-radial-circle-size`.
