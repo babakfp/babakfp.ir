@@ -48,11 +48,13 @@ export function getUtilities(plugin, { includeNegativeValues = false } = {}) {
         addComponents: () => {},
         corePlugins: () => true,
         prefix: x => x,
-        config: (option, defaultValue) =>
-            option ? defaultValue : { future: {} },
+        config: (option, defaultValue) => {
+            return option ? defaultValue : { future: {} }
+        },
         addUtilities,
-        theme: (key, defaultValue) =>
-            dlv(defaultConfig.theme, key, defaultValue),
+        theme: (key, defaultValue) => {
+            return dlv(defaultConfig.theme, key, defaultValue)
+        },
         matchUtilities: (matches, { values, supportsNegativeValues } = {}) => {
             if (!values) return
 
