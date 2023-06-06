@@ -5,8 +5,8 @@ title: Tap Highlight
 <script>
 	import UtilsTable from '$lib/UtilsTable.svelte'
 	const utilities = {
-		'.tap-highlight-TAILWIND_COLOR_NAME': {
-			'-webkit-tap-highlight-color': 'TAILWIND_COLOR_VALUE',
+		'.tap-highlight-COLOR': {
+			'-webkit-tap-highlight-color': 'VALUE',
 		}
 	}
 </script>
