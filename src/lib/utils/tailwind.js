@@ -2,6 +2,11 @@
 Added from https://github.com/tailwindlabs/tailwindcss.com - Monday June 05, 2023
 */
 
+import resolveConfig from "tailwindcss/resolveConfig"
+import defaultConfig from "tailwindcss/defaultConfig"
+const _defaultConfig = resolveConfig(defaultConfig)
+import dlv from "dlv"
+
 function normalizeProperties(input) {
     if (typeof input !== "object") {
         return input
@@ -53,7 +58,7 @@ export function getUtilities(plugin, { includeNegativeValues = false } = {}) {
         },
         addUtilities,
         theme: (key, defaultValue) => {
-            return dlv(defaultConfig.theme, key, defaultValue)
+            return dlv(_defaultConfig.theme, key, defaultValue)
         },
         matchUtilities: (matches, { values, supportsNegativeValues } = {}) => {
             if (!values) return
