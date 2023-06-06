@@ -30,16 +30,16 @@ export function getUtilities(plugin, { includeNegativeValues = false } = {}) {
 
     function addUtilities(utils) {
         utils = Array.isArray(utils) ? utils : [utils]
-        for (let i = 0; i < utils.length; i++) {
-            for (let prop in utils[i]) {
-                for (let p in utils[i][prop]) {
-                    if (p.startsWith("@defaults")) {
-                        delete utils[i][prop][p]
+        utils.forEach(util => {
+            for (let className in util) {
+                for (let property in util[className]) {
+                    if (property.startsWith("@defaults")) {
+                        delete util[className][property]
                     }
                 }
-                utilities[prop] = normalizeProperties(utils[i][prop])
+                utilities[className] = normalizeProperties(util[className])
             }
-        }
+        })
     }
 
     plugin({
