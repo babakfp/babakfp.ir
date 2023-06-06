@@ -2,10 +2,11 @@
 Added from https://github.com/tailwindlabs/tailwindcss.com - Monday June 05, 2023
 */
 
+import dlv from "dlv"
 import resolveConfig from "tailwindcss/resolveConfig"
 import defaultConfig from "tailwindcss/defaultConfig"
 const _defaultConfig = resolveConfig(defaultConfig)
-import dlv from "dlv"
+import nameClass from "tailwindcss/lib/util/nameClass"
 
 function normalizeProperties(input) {
     if (typeof input !== "object") {
@@ -65,19 +66,19 @@ export function getUtilities(plugin, { includeNegativeValues = false } = {}) {
 
             let modifierValues = Object.entries(values)
 
-            if (includeNegativeValues && supportsNegativeValues) {
-                let negativeValues = []
-                for (let [key, value] of modifierValues) {
-                    let negatedValue =
-                        require("tailwindcss/lib/util/negateValue").default(
-                            value
-                        )
-                    if (negatedValue) {
-                        negativeValues.push([`-${key}`, negatedValue])
-                    }
-                }
-                modifierValues.push(...negativeValues)
-            }
+            // if (includeNegativeValues && supportsNegativeValues) {
+            //     let negativeValues = []
+            //     for (let [key, value] of modifierValues) {
+            //         let negatedValue =
+            //             require("tailwindcss/lib/util/negateValue").default(
+            //                 value
+            //             )
+            //         if (negatedValue) {
+            //             negativeValues.push([`-${key}`, negatedValue])
+            //         }
+            //     }
+            //     modifierValues.push(...negativeValues)
+            // }
 
             let result = Object.entries(matches).flatMap(
                 ([name, utilityFunction]) => {
@@ -94,10 +95,7 @@ export function getUtilities(plugin, { includeNegativeValues = false } = {}) {
                             }
 
                             return {
-                                [require("tailwindcss/lib/util/nameClass").default(
-                                    name,
-                                    modifier
-                                )]: declarations,
+                                [nameClass(name, modifier)]: declarations,
                             }
                         })
                         .filter(Boolean)
