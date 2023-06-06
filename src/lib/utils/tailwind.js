@@ -3,8 +3,14 @@ Added from https://github.com/tailwindlabs/tailwindcss.com - Monday June 05, 202
 */
 
 function normalizeProperties(input) {
-    if (typeof input !== "object") return input
-    if (Array.isArray(input)) return input.map(normalizeProperties)
+    if (typeof input !== "object") {
+        return input
+    }
+
+    if (Array.isArray(input)) {
+        return input.map(normalizeProperties)
+    }
+
     return Object.keys(input).reduce((newObj, key) => {
         let val = input[key]
         let newVal = typeof val === "object" ? normalizeProperties(val) : val
