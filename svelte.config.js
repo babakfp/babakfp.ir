@@ -60,6 +60,7 @@ export default {
                                         stroke: "currentColor",
                                         "stroke-width": "1.5",
                                         viewBox: "0 0 24 24",
+                                        class: "icon",
                                     },
                                     [
                                         s("path", {
