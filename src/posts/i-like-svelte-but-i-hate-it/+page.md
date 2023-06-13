@@ -28,7 +28,7 @@ _This is the result of trying to contribute to Svelte:_
 
 ![A GIF that shows the button to join the Svelte Discord group doesn't work.](/blog/i-like-svelte-but-i-hate-it/2.gif)
 
-## I got banned from [the Github repositories](https://github.com/sveltejs)
+## I got banned from [the GitHub repositories](https://github.com/sveltejs)
 
 It was difficult for me to use this dropdown:
 
@@ -38,7 +38,7 @@ So, I opened a PR and this is how it went:
 
 <ShowMore>
 
-![A screenshot that shows my PR (#6851) on Github, containing comments and discussions](/blog/i-like-svelte-but-i-hate-it/5.png)
+![A screenshot that shows my PR (#6851) on GitHub, containing comments and discussions](/blog/i-like-svelte-but-i-hate-it/5.png)
 
 </ShowMore>
 
@@ -56,7 +56,7 @@ _This is the result of contributing to svelte:_
 
 ## I got banned from [Dev.to](https://devto) site
 
-After I got banned from the Svelte repositories on Github, the same day, I write an article about what happened, and my account got restricted because! This is the article:
+After I got banned from the Svelte repositories on GitHub, the same day, I write an article about what happened, and my account got restricted because! This is the article:
 
 <ShowMore>
 	<PlatformQuote title="DEVTO: ARTICLE">
@@ -88,19 +88,19 @@ Everything went great🤩, just kidding. My heart got broken! To be honest, I wa
 
 <Video src="/blog/i-like-svelte-but-i-hate-it/8.mp4" captions="A The full conversation between me and that maintainer (pngwn#8431)" />
 
-## I open another PR and it got my alternate account banned from (Github and Discord) 🙂
+## I open another PR and it got my alternate account banned from (GitHub and Discord) 🙂
 
-Hm, so I had this alternate Github and Discord account (<img inline class="inline-block h-10" src="/blog/i-like-svelte-but-i-hate-it/9.png" alt="A screenshot of my alternate Discord account avatar(a kitty with a pink background) (Windy#4111)" />). I dont' know how, things got messed up, so as result you can see my main account as a contributer to a PR that I opened with my alternate account! So, I guess don't make silly mistakes [like this](https://github.com/sveltejs/svelte/pull/7290)😂.
+Hm, so I had this alternate GitHub and Discord account (<img inline class="inline-block h-10" src="/blog/i-like-svelte-but-i-hate-it/9.png" alt="A screenshot of my alternate Discord account avatar(a kitty with a pink background) (Windy#4111)" />). I dont' know how, things got messed up, so as result you can see my main account as a contributer to a PR that I opened with my alternate account! So, I guess don't make silly mistakes [like this](https://github.com/sveltejs/svelte/pull/7290)😂.
 
 ![A screenshot of my silly mistake that got my alternate Discord account banned from the Svelte Discord group. It shows I created a PR with the alternate account and committed with the original account](/blog/i-like-svelte-but-i-hate-it/10.png)
 
 ## I open an issue to report a bug and I got banned
 
-My other alternate account got banned from accessing Svelte Github repositories. Check this out: [SvelteKit #7260](https://github.com/sveltejs/kit/issues/7260)
+My other alternate account got banned from accessing Svelte GitHub repositories. Check this out: [SvelteKit #7260](https://github.com/sveltejs/kit/issues/7260)
 
 ## They don't know how to maintain and manage a community
 
-Svelte maintainers don't know what the heck they are doing. Did anyone see the Svelte Summit live 🐕💩 video quality? They don't even try to do a good job. Svelte maintainers never managed a community before so they are doing dumb 💩 all the time. You can easily find toxic people in Svelte's Github and Discord community and the maintainers don't do anything about it (they are actualy a part of that toxic community), but for sure they will ban you for life for no reason.
+Svelte maintainers don't know what the heck they are doing. Did anyone see the Svelte Summit live 🐕💩 video quality? They don't even try to do a good job. Svelte maintainers never managed a community before so they are doing dumb 💩 all the time. You can easily find toxic people in Svelte's GitHub and Discord community and the maintainers don't do anything about it (they are actualy a part of that toxic community), but for sure they will ban you for life for no reason.
 
 For example if you are a back-end developer, and back-end is all you know, you don't get to make decisions about the UI! If you don't know how to maintain and manage a community, just step the fuck away.
 
@@ -132,7 +132,7 @@ Svelte is opinionated, not community-oriented.
 
 ## Update 2023/04/06 :)
 
-On 2023/04/06, I responded to a message in the Discord group using one of my alternate accounts. In my reply I said something along the lines of the problems that I had with Svelte, like how they removed me from the Discord group and banned me from the Github repositories, and how Svelte has poor and incomplete documentation and how it doesn't even follow the basic accessibility rules, like how there is no dark mode toggle for years, something so simple and easy to add, and how there has been a lot of open issues that a lot of people were asking for basic and necessary features for years and none of them is addressed yet! I also talked about the inconsistency in Svelte and SvelteKit, for example in some places we refer to words like "svelte" or "sveltejs", "kit", "sveltekit" etc. I also talked about road map for version 4 of Svelte and that it's not going to have anything interesting.
+On 2023/04/06, I responded to a message in the Discord group using one of my alternate accounts. In my reply I said something along the lines of the problems that I had with Svelte, like how they removed me from the Discord group and banned me from the GitHub repositories, and how Svelte has poor and incomplete documentation and how it doesn't even follow the basic accessibility rules, like how there is no dark mode toggle for years, something so simple and easy to add, and how there has been a lot of open issues that a lot of people were asking for basic and necessary features for years and none of them is addressed yet! I also talked about the inconsistency in Svelte and SvelteKit, for example in some places we refer to words like "svelte" or "sveltejs", "kit", "sveltekit" etc. I also talked about road map for version 4 of Svelte and that it's not going to have anything interesting.
 
 When a new major release is announced, developers expect many exciting new features and improvements. The reality is, there aren't going to be any new features or anything interesting in the latest version of Svelte, this can be disappointing for people who were excited about the release. Instead, it's a good idea to include a few important new features in the release to show that Svelte is still being developed and to create positive buzz around it. So, this was what I was talking about in my reply message.
 
@@ -142,7 +142,7 @@ So, what happened? As usual, I got removed from the Discord group, and all of my
 
 So, I created a new account and sent the below message, and again, I got removed :)
 
-![Hello everyone, I wanted to take a moment to address something that happened recently. My account, smithliam#5729, was removed from this group without any explanation or reason given. All of my messages also got removed. I was hurt by this and felt excluded. To make matters worse, I later discovered that some members of the group were talking about me and making fun of me behind my back. This behavior is disrespectful and hurtful, and it's not acceptable in any community. Furthermore, this is not the first time that something like this has happened. In the past, my main account got removed and banned from the community and the github repositories. Again, all of my messages go removed. I tried to contact some higher-up members but I wasn't very successful and some ignored e. my solution was to just create a new account and ignore what happened. it worked for a while but when the maintainers realized it was me, they kicked me out again. The short story is, I kept creating new accounts and DIscord and Github and they kept getting removed and banned. I once even got banned after opening a legit issue on Github related to Sveltekit https://github.com/sveltejs/kit/issues/7260. I wasn't disrespectful to anyone, and I didn't break any rules, but I still got treated with hateful behaviors. Back then I tried to design and build new documentation for Svelte and SvelteKit because I liked Svelte and I got removed while I was discussing the design with some members of the community (in the proper group). It felt really bad, but I tried to ignore it. Later I worked on the official Svelte documentation, I open a PR and I get banned. This is unacceptable behavior from anyone, especially within a community. I believe that everyone deserves to be treated with respect and kindness. You can contact me here: Babak#0011. Thanks for reading.](/blog/i-like-svelte-but-i-hate-it/12.png)
+![Hello everyone, I wanted to take a moment to address something that happened recently. My account, smithliam#5729, was removed from this group without any explanation or reason given. All of my messages also got removed. I was hurt by this and felt excluded. To make matters worse, I later discovered that some members of the group were talking about me and making fun of me behind my back. This behavior is disrespectful and hurtful, and it's not acceptable in any community. Furthermore, this is not the first time that something like this has happened. In the past, my main account got removed and banned from the community and the github repositories. Again, all of my messages go removed. I tried to contact some higher-up members but I wasn't very successful and some ignored e. my solution was to just create a new account and ignore what happened. it worked for a while but when the maintainers realized it was me, they kicked me out again. The short story is, I kept creating new accounts and DIscord and GitHub and they kept getting removed and banned. I once even got banned after opening a legit issue on GitHub related to Sveltekit https://github.com/sveltejs/kit/issues/7260. I wasn't disrespectful to anyone, and I didn't break any rules, but I still got treated with hateful behaviors. Back then I tried to design and build new documentation for Svelte and SvelteKit because I liked Svelte and I got removed while I was discussing the design with some members of the community (in the proper group). It felt really bad, but I tried to ignore it. Later I worked on the official Svelte documentation, I open a PR and I get banned. This is unacceptable behavior from anyone, especially within a community. I believe that everyone deserves to be treated with respect and kindness. You can contact me here: Babak#0011. Thanks for reading.](/blog/i-like-svelte-but-i-hate-it/12.png)
 
 ## I got banned from the Svelte YouTube channel
 
