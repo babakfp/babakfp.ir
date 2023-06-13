@@ -19,7 +19,7 @@
     <p class="mt-4 leading-7">
         All of my projects are built from the ground up, from planning and
         designing, all the way to building fully-functional solutions. I have
-        built websites, open-source tools, Wordpress themes and plugins, and
+        built websites, open-source tools, WordPress themes and plugins, and
         more. I have contributed to communities and helped people in building
         their applications. I have an eye on design and user experience.
     </p>

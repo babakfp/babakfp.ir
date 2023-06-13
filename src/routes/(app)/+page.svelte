@@ -49,7 +49,7 @@
     {/each}
 </Section>
 
-<Section title="Wordpress.org plugins">
+<Section title="WordPress.org plugins">
     {#each wordpressPlugins as plg}
         <li>
             <WordpressPluginCard {...plg} />
@@ -57,7 +57,7 @@
     {/each}
 </Section>
 
-<Section title="Wordpress products">
+<Section title="WordPress products">
     {#each rtlthemeProducts as prd}
         <li>
             <RtlThemeCard {...prd} />

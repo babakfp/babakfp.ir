@@ -18,7 +18,7 @@ Why I hate Svelte? What are the negatives of using Svelte? Should you learn Svel
 
 ## About me
 
-First, let's learn a bit about me. I'm a web developer since 2019/2020. I have built open-source and paid Wordpress themes and plugins. I'm currently working as a front-end developer. I have done freelancing. I have built websites and open-source tools and packages. I have maintained multiple dev communities. I also have good knowledge of UI and UX design. I started using Svelte in 2020.
+First, let's learn a bit about me. I'm a web developer since 2019/2020. I have built open-source and paid WordPress themes and plugins. I'm currently working as a front-end developer. I have done freelancing. I have built websites and open-source tools and packages. I have maintained multiple dev communities. I also have good knowledge of UI and UX design. I started using Svelte in 2020.
 
 ## I got banned from [the Discord group](https://svelte.dev/chat)
 
