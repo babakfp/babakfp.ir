@@ -19,9 +19,7 @@
 <section class="mt-14">
     <ul class="grid gap-8 sm:px-12 lg:grid-cols-2 lg:gap-6 lg:gap-y-8 xl:px-0">
         {#each frontendPortfolios as portfolio}
-            <li>
-                <FrontendCard {...portfolio} />
-            </li>
+            <FrontendCard {...portfolio} />
         {/each}
     </ul>
 </section>
