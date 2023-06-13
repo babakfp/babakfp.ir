@@ -35,7 +35,7 @@
         </a>
         <div class="flex gap-2">
             <button
-                title="Email Me"
+                title="My email address"
                 class="btn btn-icon"
                 on:click={() => {
                     copyText("babak.bxf@gmail.com")
@@ -48,6 +48,7 @@
                 <IconEnvelope />
 
                 <a
+                    title="My email address"
                     class="absolute inset-0"
                     href="mailto:babak.bxf@gmail.com"
                     rel="noreferrer"
@@ -55,7 +56,7 @@
             </button>
 
             <a
-                title="Github Repositories"
+                title="My GitHub repos"
                 class="btn btn-icon"
                 href="https://github.com/babakfp?tab=repositories&q=&type=public&language=&sort=stargazers"
                 target="_blank"
@@ -64,7 +65,7 @@
                 <IconGithub />
             </a>
             <a
-                title="UI Designs"
+                title="My UI designs"
                 class="btn btn-icon"
                 href="https://dribbble.com/babakfp"
                 target="_blank"
@@ -73,7 +74,7 @@
                 <IconDribbble />
             </a>
             <a
-                title="Linkedin Account"
+                title="My LinkedIn account"
                 class="btn btn-icon"
                 href="https://www.linkedin.com/in/babakfp"
                 target="_blank"
@@ -82,7 +83,7 @@
                 <IconLinkedin />
             </a>
             <a
-                title="Telegram Account"
+                title="My Telegram account"
                 class="btn btn-icon"
                 href="https://t.me/babakfp"
                 target="_blank"
