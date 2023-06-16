@@ -24,7 +24,7 @@ Basically, this will only rename the class `font-normal` to `font-regular`.
 
 ```js
 tailwindcssAddons({
-  utilities: {
+  presets: {
     fontWeightRegular: true,
   },
 })

@@ -5,8 +5,8 @@ title: Flex & Grid
 <script>
 	import UtilsTable from '$lib/UtilsTable.svelte'
 	import {getUtilities} from '$utils/tailwind.js'
-	import flexGrid from 'tailwindcss-addons/src/utilities/flexGrid.cjs'
-	const utilities = getUtilities(flexGrid.handler)
+	import flexGrid from 'tailwindcss-addons/src/presets/flexGrid.cjs'
+	const utilities = getUtilities(flexGrid.plugins[0].handler)
 
 	const justifyContent = getUtilsOfASpesificClass('.jc')
 	const justifyItems = getUtilsOfASpesificClass('.ji')
@@ -71,7 +71,7 @@ By activating this option, you will no longer be able to use the previous classe
 
 ```js
 tailwindcssAddons({
-  utilities: {
+  presets: {
     flexGrid: true,
   },
 })

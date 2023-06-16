@@ -2,6 +2,10 @@
 title: CHANGELOG
 ---
 
+### 0.0.34
+
+- [breaking] Changed code and file structure. Take a new look at how you can enable or disable a feature. Name of things also got changed.
+
 ### 0.0.32
 
 - [breaking] In [Background Grid](/docs/tailwindcss-addons/bg-grid), renamed `bg-grid-border-w` to `bg-grid-border`.

@@ -76,14 +76,34 @@ export const docsSidebarItems = readable([
                 title: "Presets",
                 items: [
                     {
-                        title: "Introduction",
-                        path: "/docs/tailwindcss-addons/presets",
+                        title: "Flex & Grid",
+                        path: "/docs/tailwindcss-addons/flex-grid",
+                    },
+                    {
+                        title: "Font Weight Regular",
+                        path: "/docs/tailwindcss-addons/font-weight-regular",
+                    },
+                    {
+                        title: "More Default Values",
+                        path: "/docs/tailwindcss-addons/more-default-values",
+                    },
+                    {
+                        title: "Screen Size Fix",
+                        path: "/docs/tailwindcss-addons/screen-size-fix",
                     },
                 ],
             },
             {
                 title: "Utilities",
                 items: [
+                    {
+                        title: "Background Grid",
+                        path: "/docs/tailwindcss-addons/bg-grid",
+                    },
+                    {
+                        title: "Background Radial",
+                        path: "/docs/tailwindcss-addons/bg-radial",
+                    },
                     {
                         title: "Direction",
                         path: "/docs/tailwindcss-addons/direction",
@@ -115,26 +135,6 @@ export const docsSidebarItems = readable([
                     {
                         title: "Tap Highlight",
                         path: "/docs/tailwindcss-addons/tap-highlight",
-                    },
-                    {
-                        title: "Flex & Grid",
-                        path: "/docs/tailwindcss-addons/flex-grid",
-                    },
-                    {
-                        title: "Dynamic View Fix",
-                        path: "/docs/tailwindcss-addons/dynamic-view-fix",
-                    },
-                    {
-                        title: "Font Weight Regular",
-                        path: "/docs/tailwindcss-addons/font-weight-regular",
-                    },
-                    {
-                        title: "Background Grid",
-                        path: "/docs/tailwindcss-addons/bg-grid",
-                    },
-                    {
-                        title: "Background Radial",
-                        path: "/docs/tailwindcss-addons/bg-radial",
                     },
                 ],
             },
