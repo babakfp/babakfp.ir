@@ -21,11 +21,11 @@ title: CHANGELOG
 
 ## 0.0.29
 
-- Added new `3px` value to [`ringOffsetWidth`](/docs/tailwindcss-addons/presets).
+- Added new `3px` value to [`ringOffsetWidth`](/docs/tailwindcss-addons/more-default-values).
 
 ## 0.0.28
 
-- Added new `3px` value to [`outlineOffset`](/docs/tailwindcss-addons/presets) and removed duplicate ones.
+- Added new `3px` value to [`outlineOffset`](/docs/tailwindcss-addons/more-default-values) and removed duplicate ones.
 
 ## 0.0.27
 
@@ -95,7 +95,7 @@ title: CHANGELOG
 
 ## 0.0.4
 
-- Added new value `-3px` to [`outlineOffset`](/docs/tailwindcss-addons/presets).
+- Added new value `-3px` to [`outlineOffset`](/docs/tailwindcss-addons/more-default-values).
 
 ## 0.0.3
 
