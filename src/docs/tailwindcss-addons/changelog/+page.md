@@ -29,7 +29,7 @@ title: CHANGELOG
 
 ## 0.0.27
 
-- Added [Dynamic View Fix](/docs/tailwindcss-addons/screen-size-fix)
+- Added [Screen Size Fix](/docs/tailwindcss-addons/screen-size-fix)
 
 ## 0.0.26
 
