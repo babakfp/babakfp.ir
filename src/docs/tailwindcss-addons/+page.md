@@ -34,17 +34,23 @@ tailwindcssAddons({
 
 ```js
 const defaultConfig = {
-  presets: true,
+  presets: {
+    flexGrid: false,
+    fontWeightRegular: false,
+    moreDefaultValues: true,
+    screenSizeFix: false,
+  },
   utilities: {
+    bgGrid: true,
+    bgRadial: true,
     dir: true,
     drag: true,
-    flexGrid: false, // Not active by default
     flip: true,
     hideShow: true,
     inputResets: true,
     insetCenter: true,
     overflowUnset: true,
-    fontWeightRegular: false, // Not active by default
+    tapHighlight: true,
   },
   variants: {
     notVariants: true,
