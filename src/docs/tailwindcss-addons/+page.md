@@ -61,12 +61,3 @@ const defaultConfig = {
 ### Add or remove
 
 Use `true` to include and use `false` to exclude.
-
-```js
-tailwindcssAddons({
-  presets: false, // Excluded
-  utilities: {
-    flexGrid: true, // Included
-  },
-})
-```
