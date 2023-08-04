@@ -6,6 +6,12 @@
         "url": "https://angle-berry.vercel.app/login?username=demo&password=demodemo"
     },
     {
+        "title": "TarVaPood",
+        "description": "Handcrafted Carpets Store",
+        "poster": "/images/portfolios/frontend/frame/tarvapood.webp",
+        "url": "https://tarvapood.com"
+    },
+    {
         "title": "FarsGamer",
         "description": "In-Game Offers Store",
         "poster": "/images/portfolios/frontend/frame/farsgamer.webp",
