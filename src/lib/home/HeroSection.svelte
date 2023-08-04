@@ -34,6 +34,42 @@
             Online Resume
         </a>
         <div class="flex gap-2">
+            <a
+                title="My LinkedIn account"
+                class="btn btn-icon"
+                href="https://www.linkedin.com/in/babakfp"
+                target="_blank"
+                rel="noreferrer"
+            >
+                <IconLinkedin />
+            </a>
+            <a
+                title="My GitHub repos"
+                class="btn btn-icon"
+                href="https://github.com/babakfp?tab=repositories&q=&type=public&language=&sort=stargazers"
+                target="_blank"
+                rel="noreferrer"
+            >
+                <IconGithub />
+            </a>
+            <a
+                title="My UI designs"
+                class="btn btn-icon"
+                href="https://dribbble.com/babakfp"
+                target="_blank"
+                rel="noreferrer"
+            >
+                <IconDribbble />
+            </a>
+            <a
+                title="My Telegram account"
+                class="btn btn-icon"
+                href="https://t.me/babakfp"
+                target="_blank"
+                rel="noreferrer"
+            >
+                <IconTelegram />
+            </a>
             <button
                 title="My email address"
                 class="btn btn-icon"
@@ -54,43 +90,6 @@
                     rel="noreferrer"
                 />
             </button>
-
-            <a
-                title="My GitHub repos"
-                class="btn btn-icon"
-                href="https://github.com/babakfp?tab=repositories&q=&type=public&language=&sort=stargazers"
-                target="_blank"
-                rel="noreferrer"
-            >
-                <IconGithub />
-            </a>
-            <a
-                title="My UI designs"
-                class="btn btn-icon"
-                href="https://dribbble.com/babakfp"
-                target="_blank"
-                rel="noreferrer"
-            >
-                <IconDribbble />
-            </a>
-            <a
-                title="My LinkedIn account"
-                class="btn btn-icon"
-                href="https://www.linkedin.com/in/babakfp"
-                target="_blank"
-                rel="noreferrer"
-            >
-                <IconLinkedin />
-            </a>
-            <a
-                title="My Telegram account"
-                class="btn btn-icon"
-                href="https://t.me/babakfp"
-                target="_blank"
-                rel="noreferrer"
-            >
-                <IconTelegram />
-            </a>
         </div>
     </div>
 </section>
