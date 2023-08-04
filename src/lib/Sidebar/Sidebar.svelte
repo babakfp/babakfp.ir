@@ -1,9 +1,7 @@
 <script lang="ts">
     import OutClick from "svelte-outclick"
-    import { browser } from "$app/environment"
     import { beforeNavigate } from "$app/navigation"
     import BluredBackdrop from "$lib/BluredBackdrop.svelte"
-    import stopBodyScroll from "$utils/stopBodyScroll"
 
     export let isOpen = false
     export let id: string
@@ -14,8 +12,6 @@
     export let hideScrollbar = false
 
     beforeNavigate(() => (isOpen = false))
-
-    $: if (browser) stopBodyScroll(isOpen)
 </script>
 
 <svelte:window

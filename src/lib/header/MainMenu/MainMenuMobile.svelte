@@ -1,16 +1,12 @@
 <script lang="ts">
     import OutClick from "svelte-outclick"
-    import { browser } from "$app/environment"
     import { beforeNavigate } from "$app/navigation"
     import { isMainMenuOpen, mainMenuItems } from "$stores/mainMenu"
     import BluredBackdrop from "$lib/BluredBackdrop.svelte"
     import PrimMenuItem from "$lib/PrimMenuItem.svelte"
-    import stopBodyScroll from "$utils/stopBodyScroll"
     import { trapFocus } from "$lib/trapFocus"
 
     beforeNavigate(() => ($isMainMenuOpen = false))
-
-    $: if (browser) stopBodyScroll($isMainMenuOpen)
 </script>
 
 <svelte:window
