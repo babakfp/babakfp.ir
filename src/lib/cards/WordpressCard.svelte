@@ -18,12 +18,14 @@
                 class="aspect-square w-20 min-w-20 drop-shadow"
                 src={thumb}
                 alt={title}
-            />
+				loading="lazy"
+			/>
             <img
                 class="absolute inset-0 -z-1 scale-105 blur-2xl"
                 src={thumb}
                 aria-hidden="true"
-            />
+				loading="lazy"
+			/>
         </div>
         <div>
             <CardTitle class="hidden sm:block">{title}</CardTitle>
