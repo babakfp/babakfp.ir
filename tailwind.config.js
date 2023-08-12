@@ -117,7 +117,7 @@ function highlightUtility() {
             {
                 type: "color",
                 values: flattenColorPalette(theme("backgroundColor")),
-            }
+            },
         )
     }
 }

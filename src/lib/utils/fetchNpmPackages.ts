@@ -11,10 +11,10 @@ export async function getPackagesData(packages: string[]) {
         packages.forEach(packageName => {
             const repo = reposData.filter(pkg => pkg.name === packageName)[0]
             const downloads = downloadsData.filter(
-                dl => dl.name === packageName
+                dl => dl.name === packageName,
             )[0]
             const npmData = npmPackagesData.filter(
-                pkg => pkg.name === packageName
+                pkg => pkg.name === packageName,
             )[0]
 
             packagesData.push({
@@ -31,7 +31,7 @@ export async function getPackagesData(packages: string[]) {
 
 async function getReposData(packages: string[]) {
     const urls = packages.map(
-        pkg => `https://api.github.com/repos/babakfp/${pkg}`
+        pkg => `https://api.github.com/repos/babakfp/${pkg}`,
     )
     const data = await fetchAllUrls(urls)
     const someData = data.map(repo => ({
@@ -61,7 +61,7 @@ async function getSomeNpmData(packages: string[]) {
 
 async function getNpmPackagesDownloads(packages: string[]) {
     const urls = packages.map(
-        pkg => `https://api.npmjs.org/downloads/point/last-week/${pkg}`
+        pkg => `https://api.npmjs.org/downloads/point/last-week/${pkg}`,
     )
     const data = await fetchAllUrls(urls)
     const downloads = data.map(dl => ({

@@ -23,7 +23,7 @@ function normalizeProperties(input) {
         newObj[
             key.replace(
                 /([a-z])([A-Z])/g,
-                (m, p1, p2) => `${p1}-${p2.toLowerCase()}`
+                (m, p1, p2) => `${p1}-${p2.toLowerCase()}`,
             )
         ] = newVal
         return newObj
@@ -99,7 +99,7 @@ export function getUtilities(plugin, { includeNegativeValues = false } = {}) {
                             }
                         })
                         .filter(Boolean)
-                }
+                },
             )
 
             for (let obj of result) {
