@@ -4,6 +4,10 @@ title: CHANGELOG
 
 Restart your app after updating the package.
 
+## 3.6.2
+
+- Now it's compatible with Svelte 4.
+
 ## 3.6.1
 
 - Fixed some issues related to props types.
