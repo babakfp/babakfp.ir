@@ -1,7 +1,7 @@
 ---
 title: Make Svelte better
 description: Let's talk about what can be improved in Svelte.
-updated: 2023/04/13
+updated: 2023/08/30
 published: 2022/02/28
 ---
 
@@ -33,6 +33,6 @@ published: 2022/02/28
 <BetterErrorHandling />
 <I18n />
 
-## `error.html` file
+## Dealing with `error.html` in SvelteKit
 
-When you use SvelteKit, you need to deal with a file called [`error.html`](https://kit.svelte.dev/docs/errors#responses). There is a feature called `prerender`, right? Why can't then SvelteKit prerender the root `+error.svelte` page and use it as the fallback error page, instead of making us create it?
+In SvelteKit, you come across a file named [`error.html`](https://kit.svelte.dev/docs/errors#responses). It's a simple `.html` file where you can't use the cool features of Svelte. You basically start from scratch, needing to manually add all your meta tags and other things. It's not exactly exciting. Duplicating code isn't my thing, and having to update it in two separate spots isn't ideal either.

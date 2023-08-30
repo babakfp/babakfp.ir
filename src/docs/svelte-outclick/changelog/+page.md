@@ -6,7 +6,7 @@ Restart your app after updating the package.
 
 ## 3.6.2
 
-- Now it's compatible with Svelte 4.
+- Now it's compatible with Svelte 5.
 
 ## 3.6.1
 

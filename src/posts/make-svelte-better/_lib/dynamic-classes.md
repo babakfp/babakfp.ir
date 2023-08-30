@@ -1,35 +1,37 @@
 ## Dynamic classes
 
-There is no clean syntax to dynamically add classes.
+Managing dynamic classes in Svelte can be improved for better code readability and flexibility.
 
-### ❌ The class directive
+### The `class` directive
 
 ```svelte
 <div class:bg-brand={condition} />
 ```
 
-- ❌ You can't add multiple classes. So, you need to introduce a new syntax to be able to do the same thing.
-- ❌ It isn't a standard syntax because the classes should come after the equal sign.
+- ❌ Can only add one class at a time.
+- ❌ This syntax isn't standard because the order should have the classes following the equal sign.
 
-### ❌ The ternary operator
+### The ternary operator
 
 ```svelte
 <div class="block {condition ? 'font-normal text-base' : ''}" />
 ```
 
-- ✅ You can add multiple classes.
-- ❌ Boilerplate ` : ''`.
+- ✅ Supports multiple classes.
+- ❌ Includes boilerplate.
 
-### ❌ The `&&` operator
+### The `&&` operator
 
 ```svelte
 <div class="block {condition && 'font-normal text-base'}" />
 ```
 
-- ✅ You can add multiple classes.
+- ✅ Supports multiple classes.
 - ✅ No boilerplate.
-- ❌ You may get classes like `false`, `null`, and `undefined` as a result of a Falsy value.
+- ❌ Can lead to unwanted classes like `false`, `null`, and `undefined`.
 
 ### What is the solution?
 
-Use the `&&` operator and ignore adding classe like `false`, `null` and `undefined`. Deprecate the class directive in Svelte version 4, because it's not gonna be useful anymore.
+Use the `&&` operator and ignore adding classes like `false`, `null`, and `undefined`. However, it may be problematic because some developers may be using classes like `is-open-{isOpen}`!
+
+Deprecate the class directive in Svelte version 4, because it's not gonna be useful anymore.

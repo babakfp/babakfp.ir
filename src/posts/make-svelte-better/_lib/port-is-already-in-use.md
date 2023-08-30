@@ -1,6 +1,6 @@
 ## Port is already in use
 
-Automatically change the port number if the current port was in use.
+Automatically change the port to a random number if the current port is in use.
 
 - [SvelteKit #3311](https://github.com/sveltejs/kit/issues/3311)
 - [SvelteKit #2229](https://github.com/sveltejs/kit/issues/2229)
