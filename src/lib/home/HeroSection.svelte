@@ -36,7 +36,7 @@
         </a>
         <div class="flex gap-2">
             <a
-                title="My LinkedIn account"
+                title="LinkedIn profile"
                 class="btn btn-icon"
                 href="https://www.linkedin.com/in/babakfp"
                 target="_blank"
@@ -45,7 +45,7 @@
                 <IconLinkedin />
             </a>
             <a
-                title="My GitHub repos"
+                title="GitHub repos"
                 class="btn btn-icon"
                 href="https://github.com/babakfp?tab=repositories&q=&type=public&language=&sort=stargazers"
                 target="_blank"
@@ -54,7 +54,7 @@
                 <IconGithub />
             </a>
             <a
-                title="My NPM packages"
+                title="NPM packages"
                 class="btn btn-icon"
                 href="https://www.npmjs.com/~babakfp"
                 target="_blank"
@@ -63,7 +63,7 @@
                 <IconNpm />
             </a>
             <a
-                title="My UI designs"
+                title="UI designs"
                 class="btn btn-icon"
                 href="https://dribbble.com/babakfp"
                 target="_blank"
@@ -72,7 +72,7 @@
                 <IconDribbble />
             </a>
             <a
-                title="My Telegram account"
+                title="Telegram account"
                 class="btn btn-icon"
                 href="https://t.me/babakfp"
                 target="_blank"
@@ -81,7 +81,7 @@
                 <IconTelegram />
             </a>
             <button
-                title="My email address"
+                title="Email address"
                 class="btn btn-icon"
                 on:click={() => {
                     copyText("babak.bxf@gmail.com")
@@ -94,7 +94,7 @@
                 <IconEnvelope />
 
                 <a
-                    title="My email address"
+                    title="Email address"
                     class="absolute inset-0"
                     href="mailto:babak.bxf@gmail.com"
                     rel="noreferrer"
