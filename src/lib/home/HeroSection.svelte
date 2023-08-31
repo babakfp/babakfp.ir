@@ -54,7 +54,7 @@
                 <IconGithub />
             </a>
             <a
-                title="My NPM projects"
+                title="My NPM packages"
                 class="btn btn-icon"
                 href="https://www.npmjs.com/~babakfp"
                 target="_blank"
