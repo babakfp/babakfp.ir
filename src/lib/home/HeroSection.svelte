@@ -7,6 +7,7 @@
     import IconLinkedin from "$icons/IconLinkedin.svelte"
     import IconEnvelope from "$icons/IconEnvelope.svelte"
     import IconTelegram from "$icons/IconTelegram.svelte"
+    import IconNpm from "$icons/IconNpm.svelte"
 </script>
 
 <section class="mx-auto max-w-prose">
@@ -53,6 +54,15 @@
                 <IconGithub />
             </a>
             <a
+                title="My NPM projects"
+                class="btn btn-icon"
+                href="https://www.npmjs.com/~babakfp"
+                target="_blank"
+                rel="noreferrer"
+            >
+                <IconNpm />
+            </a>
+            <a
                 title="My UI designs"
                 class="btn btn-icon"
                 href="https://dribbble.com/babakfp"
@@ -77,7 +87,7 @@
                     copyText("babak.bxf@gmail.com")
                     toast.success(
                         "The email address copied to your Clipboard!",
-                        { position: "bottom-right" }
+                        { position: "bottom-right" },
                     )
                 }}
             >
