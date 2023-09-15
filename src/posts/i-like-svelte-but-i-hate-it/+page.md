@@ -152,7 +152,7 @@ There was a live stream on [Svelte Society](https://www.youtube.com/@SvelteSocie
 
 ## Contributes to other repos vs. contributing to Svelte
 
-I submitted a small [pull request](https://github.com/melt-ui/melt-ui/pull/525) to a repository ![Screenshot displaying PR's added and deleted lines count](/blog/i-like-svelte-but-i-hate-it/15.png), and here's what happened:
+I submitted a small [pull request](https://github.com/melt-ui/melt-ui/pull/525) to a repository <img inline class="inline-block h-8" src="/blog/i-like-svelte-but-i-hate-it/15.png" alt="Screenshot displaying PR's added and deleted lines count" />, and here's what happened:
 
 ![A screenshot showing the owner of the repo saying 'Thank you!' for the PR, and I reacted with a heart emoji](/blog/i-like-svelte-but-i-hate-it/14.png)
 
