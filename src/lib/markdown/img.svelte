@@ -5,7 +5,7 @@
     export let alt = ""
 </script>
 
-<div class="md-img group relative inline-block">
+<div class="group relative inline-block">
     <img class="inline" {src} {alt} loading="lazy" />
 
     <a
