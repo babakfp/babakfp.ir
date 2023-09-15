@@ -1,7 +1,7 @@
 ---
 title: Svelte - A Journey of Hate and Frustration
 description: My experiences with Svelte since 2020...
-updated: 2023/05/16
+updated: 2023/09/15
 published: 2022/02/19
 ---
 
@@ -90,7 +90,7 @@ Everything went great🤩, just kidding. My heart got broken! To be honest, I wa
 
 ## I open another PR and it got my alternate account banned from (GitHub and Discord) 🙂
 
-Hm, so I had this alternate GitHub and Discord account (<img inline class="inline-block h-10" src="/blog/i-like-svelte-but-i-hate-it/9.png" alt="A screenshot of my alternate Discord account avatar(a kitty with a pink background) (Windy#4111)" />). I dont' know how, things got messed up, so as result you can see my main account as a contributer to a PR that I opened with my alternate account! So, I guess don't make silly mistakes [like this](https://github.com/sveltejs/svelte/pull/7290)😂.
+Hm, so I had this alternate GitHub and Discord account <img inline class="inline-block h-8" src="/blog/i-like-svelte-but-i-hate-it/9.png" alt="A screenshot of my alternate Discord account avatar(a kitty with a pink background) (Windy#4111)" />. I dont' know how, things got messed up, so as result you can see my main account as a contributer to a PR that I opened with my alternate account! So, I guess don't make silly mistakes [like this](https://github.com/sveltejs/svelte/pull/7290)😂.
 
 ![A screenshot of my silly mistake that got my alternate Discord account banned from the Svelte Discord group. It shows I created a PR with the alternate account and committed with the original account](/blog/i-like-svelte-but-i-hate-it/10.png)
 
@@ -149,6 +149,14 @@ So, I created a new account and sent the below message, and again, I got removed
 There was a live stream on [Svelte Society](https://www.youtube.com/@SvelteSociety) channel. I sent some comments in live chat and decided to check whether I was banned or not. The answer is of course yes. I was shadowbanned from sending any comments on the Svelte YouTube channel. In the screenshot below you can see on the left browser window there are comments sent by (babakfp), but you the right browser window you can't see those comments.
 
 ![](/blog/i-like-svelte-but-i-hate-it/13.png)
+
+## Contributes to other repos vs. contributing to Svelte
+
+I submitted a small [PR](https://github.com/melt-ui/melt-ui/pull/525) ![Screenshot displaying PR's added and deleted lines count](/blog/i-like-svelte-but-i-hate-it/15.png) to a repository, and here's what happened:
+
+![A screenshot showing the owner of the repo saying 'Thank you!' for the PR, and I reacted with a heart emoji](/blog/i-like-svelte-but-i-hate-it/14.png)
+
+Here's what happened when I contributed to Svelte: I designed a logo and created a documentation site for SvelteKit. However, I got banned from the community when I discussed my work, and the same thing happened when I opened a pull request and reported bugs. You can find more details on each of these incidents by reading the full article.
 
 ---
 
