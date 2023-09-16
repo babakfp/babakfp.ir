@@ -1,10 +1,10 @@
 # babakfp.ir
 
-- https://shots.so
+-   https://shots.so
 
 ## Todo
 
-- Move CSS variables to TW values.
+-   Move CSS variables to TW values.
 
 ## Documentation
 

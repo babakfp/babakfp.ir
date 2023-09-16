@@ -8,8 +8,8 @@ Managing dynamic classes in Svelte can be improved for better code readability a
 <div class:bg-brand={condition} />
 ```
 
-- ❌ Can only add one class at a time.
-- ❌ This syntax isn't standard because the order should have the classes following the equal sign.
+-   ❌ Can only add one class at a time.
+-   ❌ This syntax isn't standard because the order should have the classes following the equal sign.
 
 ### The ternary operator
 
@@ -17,8 +17,8 @@ Managing dynamic classes in Svelte can be improved for better code readability a
 <div class="block {condition ? 'font-normal text-base' : ''}" />
 ```
 
-- ✅ Supports multiple classes.
-- ❌ Includes boilerplate.
+-   ✅ Supports multiple classes.
+-   ❌ Includes boilerplate.
 
 ### The `&&` operator
 
@@ -26,9 +26,9 @@ Managing dynamic classes in Svelte can be improved for better code readability a
 <div class="block {condition && 'font-normal text-base'}" />
 ```
 
-- ✅ Supports multiple classes.
-- ✅ No boilerplate.
-- ❌ Can lead to unwanted classes like `false`, `null`, and `undefined`.
+-   ✅ Supports multiple classes.
+-   ✅ No boilerplate.
+-   ❌ Can lead to unwanted classes like `false`, `null`, and `undefined`.
 
 ### What is the solution?
 

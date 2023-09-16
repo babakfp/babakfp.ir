@@ -71,8 +71,8 @@ By activating this option, you will no longer be able to use the previous classe
 
 ```js
 tailwindcssAddons({
-  presets: {
-    flexGrid: true,
-  },
+    presets: {
+        flexGrid: true,
+    },
 })
 ```

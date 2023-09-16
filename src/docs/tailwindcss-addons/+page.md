@@ -26,7 +26,7 @@ The function takes an `object` as an argument:
 
 ```js
 tailwindcssAddons({
-  // Here
+    // Here
 })
 ```
 
@@ -34,27 +34,27 @@ tailwindcssAddons({
 
 ```js
 const defaultConfig = {
-  presets: {
-    flexGrid: false,
-    fontWeightRegular: false,
-    moreDefaultValues: true,
-    screenSizeFix: false,
-  },
-  utilities: {
-    bgGrid: true,
-    bgRadial: true,
-    dir: true,
-    drag: true,
-    flip: true,
-    hideShow: true,
-    inputResets: true,
-    insetCenter: true,
-    overflowUnset: true,
-    tapHighlight: true,
-  },
-  variants: {
-    notVariants: true,
-  },
+    presets: {
+        flexGrid: false,
+        fontWeightRegular: false,
+        moreDefaultValues: true,
+        screenSizeFix: false,
+    },
+    utilities: {
+        bgGrid: true,
+        bgRadial: true,
+        dir: true,
+        drag: true,
+        flip: true,
+        hideShow: true,
+        inputResets: true,
+        insetCenter: true,
+        overflowUnset: true,
+        tapHighlight: true,
+    },
+    variants: {
+        notVariants: true,
+    },
 }
 ```
 

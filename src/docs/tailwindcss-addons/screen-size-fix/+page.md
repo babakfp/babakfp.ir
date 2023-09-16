@@ -6,11 +6,11 @@ This feature will change the sizing unit in the `h-screen`, `max-h-screen`, and 
 
 ```css
 :root: {
-  --tw-screen-h: 100vh;
-  --tw-screen-h: 100dvh;
+    --tw-screen-h: 100vh;
+    --tw-screen-h: 100dvh;
 
-  --tw-screen-w: 100vw;
-  --tw-screen-w: 100dvw;
+    --tw-screen-w: 100vw;
+    --tw-screen-w: 100dvw;
 }
 ```
 
@@ -20,8 +20,8 @@ The browser will fall back to using `vh` and `vw` if `dvh` and `dvw` wasn't supp
 
 ```js
 tailwindcssAddons({
-  presets: {
-    screenSizeFix: true,
-  },
+    presets: {
+        screenSizeFix: true,
+    },
 })
 ```

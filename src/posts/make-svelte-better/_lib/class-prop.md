@@ -33,8 +33,8 @@ At first glance, this seems like a simple and clean way to add custom classes an
 
 ```svelte
 <script>
-  export let className = ""
-  export { className as class }
+    export let className = ""
+    export { className as class }
 </script>
 
 <div class={className} />

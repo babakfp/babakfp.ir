@@ -112,9 +112,9 @@ Since 2020, when I started using Svelte, I have never seen him sending any messa
 
 They show themselves to be very supportive of accessibility, but their documentation website doesn't even follow the basics of accessibility! They have some simple linting features, but the problem is these features are opinionated:
 
-- You can't turn these features off.
-- When you use a standard feature of the web platform, it may yell at you saying what you are doing is bad/wrong, when it's actually not.
-- They don't always work correctly, it may result in incorrect linting suggests.
+-   You can't turn these features off.
+-   When you use a standard feature of the web platform, it may yell at you saying what you are doing is bad/wrong, when it's actually not.
+-   They don't always work correctly, it may result in incorrect linting suggests.
 
 You can achieve the same features with a linter, and you can even customize it however you like, but with Svelte, you need to suck it up and it doesn't matter how much and how many people complain about it. Svelte punished developers for not following their stupid broken accessibility warnings (DX = 💩).
 

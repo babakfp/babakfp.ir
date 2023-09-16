@@ -30,8 +30,8 @@ title: Input Resets
 
 ```js
 tailwindcssAddons({
-  utilities: {
-    inputResets: false,
-  },
+    utilities: {
+        inputResets: false,
+    },
 })
 ```

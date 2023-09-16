@@ -15,8 +15,8 @@ title: Inset Center
 
 ```js
 tailwindcssAddons({
-  utilities: {
-    insetCenter: false,
-  },
+    utilities: {
+        insetCenter: false,
+    },
 })
 ```

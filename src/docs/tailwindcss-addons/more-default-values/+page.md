@@ -55,8 +55,8 @@ These styles will be added to your tailwind config file.
 
 ```js
 tailwindcssAddons({
-  presets: {
-    moreDefaultValues: false,
-  },
+    presets: {
+        moreDefaultValues: false,
+    },
 })
 ```

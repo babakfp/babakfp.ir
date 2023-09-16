@@ -15,8 +15,8 @@ title: Hide & Show
 
 ```js
 tailwindcssAddons({
-  utilities: {
-    hideShow: false,
-  },
+    utilities: {
+        hideShow: false,
+    },
 })
 ```

@@ -15,8 +15,8 @@ title: User Drag
 
 ```js
 tailwindcssAddons({
-  utilities: {
-    drag: false,
-  },
+    utilities: {
+        drag: false,
+    },
 })
 ```

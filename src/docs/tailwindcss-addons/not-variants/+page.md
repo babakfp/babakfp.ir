@@ -31,8 +31,8 @@ In order to use this feature, your Tailwind version must support the [`matchVari
 
 ```js
 tailwindcssAddons({
-  variants: {
-    notVariants: false,
-  },
+    variants: {
+        notVariants: false,
+    },
 })
 ```
