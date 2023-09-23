@@ -8,7 +8,9 @@ export default {
     content: ["./src/**/*.{html,js,svelte,ts,md}"],
     presets: [
         tailwindcssAddons({
-            dynamicViewFix: true,
+            presets: {
+                screenSizeFix: true,
+            },
         }),
         container(),
     ],
