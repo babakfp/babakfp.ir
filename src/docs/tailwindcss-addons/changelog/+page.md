@@ -2,7 +2,21 @@
 title: CHANGELOG
 ---
 
+## 1.3.0
+
+Update to this version if you are using any of the previous versions!
+
+-   Fixed: `SyntaxError: Identifier 'plugin' has already been declared`.
+
+## 1.2.0
+
+Update to this version if you are using any of the previous versions!
+
+-   Fixed: `Cannot read properties of undefined (reading 'call')`.
+
 ## 1.1.0
+
+Update to this version if you are using any of the previous versions!
 
 -   Fixed: `SyntaxError: Identifier 'plugin' has already been declared`.
 
