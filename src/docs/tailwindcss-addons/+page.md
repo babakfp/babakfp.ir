@@ -10,11 +10,12 @@ pnpm add -D tailwindcss-addons
 
 ## How to use it
 
-Add the code below into your `tailwind.config.cjs` file:
+Add the code below into your `tailwind.config.js` file:
 
 <!-- prettier-ignore -->
 ```js
-const tailwindcssAddons = require("tailwindcss-addons")
+import tailwindcssAddons from "tailwindcss-addons"
+
 const config = {
 	presets: [
 		tailwindcssAddons(),
