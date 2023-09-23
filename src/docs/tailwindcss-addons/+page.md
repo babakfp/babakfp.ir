@@ -5,7 +5,7 @@ title: TailwindCSS Addons
 ## Installation
 
 ```cmd
-npm install -D tailwindcss-addons
+pnpm add -D tailwindcss-addons
 ```
 
 ## How to use it
