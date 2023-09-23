@@ -7,7 +7,7 @@
 </svelte:head>
 
 <div
-    class="mx-auto grid min-h-[var(--screen-h-minus-header-h)] max-w-xs content-center text-center"
+    class="mx-auto grid min-h-[--screen-h-minus-header-h] max-w-xs content-center text-center"
 >
     <h1 class="mb-2 text-8xl font-bold text-gray-50">
         {$page.status}
