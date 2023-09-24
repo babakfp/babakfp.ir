@@ -2,6 +2,12 @@
 title: CHANGELOG
 ---
 
+## 1.4.0
+
+Update to this version if you are using any of the previous versions!
+
+-   We went back to using CJS instead of ESM because of some weird issues!
+
 ## 1.3.0
 
 Update to this version if you are using any of the previous versions!
