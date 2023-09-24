@@ -1,4 +1,2 @@
 [local]
 .gitignore-sync
-[inline]
-tailwind.config.full.js

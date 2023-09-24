@@ -17,5 +17,3 @@ yarn.lock
 yarn-error.log
 pnpm-lock.yaml
 .pnpm-debug.log
-
-tailwind.config.full.cjs
