@@ -4,8 +4,8 @@ title: Font Weight Regular
 
 <script>
 	import UtilsTable from '$lib/UtilsTable.svelte'
-	import fontWeightRegular from 'tailwindcss-addons/src/presets/fontWeightRegular.cjs'
-	let utilities = fontWeightRegular.theme.fontWeight;
+	import { fontWeight } from 'tailwindcss-addons/src/presets/fontWeightRegular.cjs'
+	let utilities = fontWeight;
 	utilities = Object.entries(utilities).map(u => {
 		return [`font-${u[0]}`, { 'font-weight': u[1] }]
 	})
