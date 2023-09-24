@@ -54,8 +54,8 @@
 
     <ul class="mt-4">
         {#each items as item}
-            <li on:click={() => (isOpen = false)}>
-                <SidebarTocItem href="#{item.id}" depthLvl={item.lvl}>
+            <li>
+                <SidebarTocItem href="#{item.id}" depthLvl={item.lvl}  on:click={() => (isOpen = false)}>
                     {@html item.value}
                 </SidebarTocItem>
             </li>

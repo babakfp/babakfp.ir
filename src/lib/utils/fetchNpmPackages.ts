@@ -1,7 +1,7 @@
 import type { Package } from "$lib/types"
 
 export async function getPackagesData(packages: string[]) {
-    let packagesData: Package[] = []
+    const packagesData: Package[] = []
 
     const reposData = await getReposData(packages)
     const downloadsData = await getNpmPackagesDownloads(packages)

@@ -1,8 +1,10 @@
 <script lang="ts">
+    import type { SvelteComponent } from "svelte"
+
     export let title: string
     export let href: string
     export let isExternal = false
-    export let icon: any
+    export let icon: typeof SvelteComponent
 
     export let className: string = ""
     export { className as class }

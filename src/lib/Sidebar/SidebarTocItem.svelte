@@ -10,6 +10,7 @@
     class="SidebarMenuItem group block px-container-x text-sm outline-inset xl:pr-0
 	{isActive && 'pointer-events-none'}"
     {href}
+    on:click
 >
     <div
         class="flex items-center gap-2 py-1 text-gray-400 duration-100 group-hover:text-gray-50

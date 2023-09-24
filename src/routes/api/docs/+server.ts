@@ -7,7 +7,7 @@ export async function GET() {
 }
 
 async function getDocs() {
-    let docs: Doc[] = []
+    const docs: Doc[] = []
 
     const paths = import.meta.glob("/src/docs/**/+page.md", { eager: true })
 

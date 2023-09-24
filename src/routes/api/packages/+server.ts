@@ -1,4 +1,3 @@
-// @ts-ignore
 // import fs from "fs"
 import { json } from "@sveltejs/kit"
 import { getPackagesData } from "$utils/fetchNpmPackages"
