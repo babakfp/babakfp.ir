@@ -2,6 +2,10 @@
 title: CHANGELOG
 ---
 
+## 1.5.0
+
+-   Fixed `minHeight` and `maxHeight` from `moreDefaultValues` not working when using `screenSizeFix`.
+
 ## 1.4.0
 
 Update to this version if you are using any of the previous versions!
