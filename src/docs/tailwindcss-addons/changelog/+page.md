@@ -2,11 +2,19 @@
 title: CHANGELOG
 ---
 
+## 1.7.0
+
+-   [breaking] Renamed `screenSizeFix` option to `screenToDynamicScreen`.
+
 ## 1.6.0
+
+Update to this version if you are using any of the previous versions!
 
 -   Added TypeScript auto-completion for options.
 
 ## 1.5.0
+
+Update to this version if you are using any of the previous versions!
 
 -   Fixed `minHeight` and `maxHeight` from `moreDefaultValues` not working when using `screenSizeFix`.
 
