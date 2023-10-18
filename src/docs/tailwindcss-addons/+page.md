@@ -39,7 +39,7 @@ const defaultConfig = {
         flexGrid: false,
         fontWeightRegular: false,
         moreDefaultValues: true,
-        screenSizeFix: false,
+        screenToDynamicScreen: false,
     },
     utilities: {
         bgGrid: true,

@@ -1,5 +1,5 @@
 ---
-title: Screen Size Fix
+title: Screen to Dynamic Screen
 ---
 
 This feature will change the sizing unit in the `h-screen`, `max-h-screen`, and `min-h-screen` utilities, from `vh` to `dvh`. The same will also happen to the `w-screen` utility, from `vw` to `dvw`.
@@ -21,7 +21,7 @@ The browser will fall back to using `vh` and `vw` if `dvh` and `dvw` wasn't supp
 ```js
 tailwindcssAddons({
     presets: {
-        screenSizeFix: true,
+        screenToDynamicScreen: true,
     },
 })
 ```

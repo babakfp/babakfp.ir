@@ -9,7 +9,7 @@ export default {
     presets: [
         tailwindcssAddons({
             presets: {
-                screenSizeFix: true,
+                screenToDynamicScreen: true,
             },
         }),
         container(),
