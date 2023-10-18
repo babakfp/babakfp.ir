@@ -88,8 +88,8 @@ export const docsSidebarItems = readable([
                         path: "/docs/tailwindcss-addons/more-default-values",
                     },
                     {
-                        title: "Screen Size Fix",
-                        path: "/docs/tailwindcss-addons/screen-size-fix",
+                        title: "Screen to Dynamic Screen",
+                        path: "/docs/tailwindcss-addons/screen-to-dynamic-screen",
                     },
                 ],
             },
