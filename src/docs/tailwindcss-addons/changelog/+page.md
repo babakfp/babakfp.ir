@@ -2,6 +2,10 @@
 title: CHANGELOG
 ---
 
+## 1.6.0
+
+-   Added TypeScript auto-completion for options.
+
 ## 1.5.0
 
 -   Fixed `minHeight` and `maxHeight` from `moreDefaultValues` not working when using `screenSizeFix`.
