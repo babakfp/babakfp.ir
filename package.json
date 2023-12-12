@@ -8,8 +8,8 @@
         "build": "vite build",
         "preview": "vite preview",
         "prepare": "svelte-kit sync",
-        "lint": "prettier --check . && eslint .",
-        "format": "prettier --write .",
+        "lint": "prettier -c . && eslint .",
+        "format": "prettier -w .",
         "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
         "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
         "ignore-sync": "ignore-sync ."
