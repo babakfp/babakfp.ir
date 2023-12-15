@@ -4,6 +4,10 @@ title: CHANGELOG
 
 Restart your app after updating the package.
 
+## 3.7.0
+
+-   Compatible with SvelteKit version `2.0.0`.
+
 ## 3.6.2
 
 -   Now it's compatible with Svelte 5.
