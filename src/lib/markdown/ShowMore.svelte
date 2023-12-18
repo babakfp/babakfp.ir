@@ -12,7 +12,7 @@
             Number(
                 getComputedStyle(document.body)
                     .getPropertyValue("--header-h")
-                    .slice(0, -3)
+                    .slice(0, -3),
             ) * 16
 
         if (wrapper.getBoundingClientRect().top - headerHeight < 0) {

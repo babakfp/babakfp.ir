@@ -13,5 +13,5 @@ export async function load({ params }) {
         }
     }
 
-    error(404);
+    error(404)
 }

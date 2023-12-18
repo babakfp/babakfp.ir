@@ -24,7 +24,7 @@
         let items: TocItem[] = []
 
         const pageHeadings = document.querySelectorAll(
-            ".article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6"
+            ".article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6",
         )
 
         pageHeadings?.forEach(h => {
@@ -55,7 +55,11 @@
     <ul class="mt-4">
         {#each items as item}
             <li>
-                <SidebarTocItem href="#{item.id}" depthLvl={item.lvl}  on:click={() => (isOpen = false)}>
+                <SidebarTocItem
+                    href="#{item.id}"
+                    depthLvl={item.lvl}
+                    on:click={() => (isOpen = false)}
+                >
                     {@html item.value}
                 </SidebarTocItem>
             </li>
