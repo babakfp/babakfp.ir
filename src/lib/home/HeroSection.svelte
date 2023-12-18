@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { env } from "$env/dynamic/public"
+    import { PUBLIC_GOOGLE_DRIVE_RESUME_URL } from "$env/static/public"
     import { copyText } from "svelte-copy"
     import toast from "svelte-french-toast"
     import IconGithub from "$icons/IconGithub.svelte"
@@ -28,7 +28,7 @@
     <div class="mt-4 flex flex-wrap items-center gap-4">
         <a
             class="group btn btn-link"
-            href={env.PUBLIC_GOOGLE_DRIVE_RESUME_URL}
+            href={PUBLIC_GOOGLE_DRIVE_RESUME_URL}
             target="_blank"
             rel="noreferrer"
         >
