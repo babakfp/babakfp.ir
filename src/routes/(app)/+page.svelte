@@ -1,7 +1,6 @@
 <script lang="ts">
     import { Toaster } from "svelte-french-toast"
     import frontendPortfolios from "$portfolios/frontend.json"
-    import packages from "$portfolios/packages.json"
     import rtlthemeProducts from "$portfolios/rtltheme-products.json"
     import wordpressPlugins from "$portfolios/wordpress-plugins.json"
     import FrontendCard from "$lib/cards/FrontendCard.svelte"
@@ -11,6 +10,7 @@
     import PostCard from "$lib/cards/PostCard.svelte"
     import HeroSection from "$lib/home/HeroSection.svelte"
     import Section from "$lib/home/Section.svelte"
+
     export let data
 </script>
 
@@ -36,7 +36,7 @@
 </Section>
 
 <Section title="NPM packages">
-    {#each packages as pkg}
+    {#each data.packages as pkg}
         <li>
             <RepoCard
                 title={pkg.title}

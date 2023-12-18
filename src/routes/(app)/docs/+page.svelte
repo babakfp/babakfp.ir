@@ -1,6 +1,7 @@
 <script lang="ts">
-    import packages from "$portfolios/packages.json"
     import RepoCard from "$lib/cards/RepoCard.svelte"
+
+    export let data
 </script>
 
 <svelte:head>
@@ -10,7 +11,7 @@
 <h2 class="text-center text-4xl font-bold uppercase text-gray-50">DOCS</h2>
 
 <ul class="mx-auto mt-8 grid max-w-prose gap-4">
-    {#each packages as pkg}
+    {#each data.packages as pkg}
         <li>
             <RepoCard
                 title={pkg.title}

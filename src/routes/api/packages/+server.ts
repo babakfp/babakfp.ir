@@ -1,4 +1,3 @@
-// import fs from "fs"
 import { json } from "@sveltejs/kit"
 import { getPackagesData } from "$utils/fetchNpmPackages"
 
@@ -15,25 +14,16 @@ const packages = [
     },
 ]
 
-export async function GET({ url }) {
+export async function GET() {
     let packagesData = await getPackagesData(packages.map(pkg => pkg.name))
 
-    if (packagesData) {
-        packagesData = packagesData.map(pkgData => {
-            const pkg = packages.filter(pkg => pkg.name === pkgData.name)[0]
-            return {
-                title: pkg.title,
-                ...pkgData,
-            }
-        })
-    }
-
-    // if (url.searchParams.has("create")) {
-    //     fs.writeFileSync(
-    //         "src/lib/portfolios/packages.json",
-    //         JSON.stringify(packagesData, null, 4)
-    //     )
-    // }
+    packagesData = packagesData.map(pkgData => {
+        const pkg = packages.filter(pkg => pkg.name === pkgData.name)[0]
+        return {
+            title: pkg.title,
+            ...pkgData,
+        }
+    })
 
     return json(packagesData)
 }
