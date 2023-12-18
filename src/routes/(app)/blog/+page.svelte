@@ -1,5 +1,6 @@
 <script lang="ts">
     import PostCard from "$lib/cards/PostCard.svelte"
+
     export let data
 </script>
 
