@@ -22,4 +22,5 @@ export interface Package {
     license: string
     fileCount: number
     unpackedSize: number
+    downloadsCount: number
 }
