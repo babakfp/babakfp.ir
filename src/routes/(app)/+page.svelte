@@ -35,7 +35,7 @@
     {/each}
 </Section>
 
-<Section title="NPM">
+<Section title="Docs">
     {#each data.packages as pkg}
         <li>
             <RepoCard
