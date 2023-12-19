@@ -1,5 +1,5 @@
 export function timeSince(date: Date) {
-    const seconds = Math.floor((new Date() - date) / 1000)
+    const seconds = Math.floor((new Date().getTime() - date.getTime()) / 1000)
 
     let interval = Math.floor(seconds / 31536000)
     if (interval >= 1) return `${interval} year${interval === 1 ? "" : "s"} ago`
