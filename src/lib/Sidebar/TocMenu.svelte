@@ -49,7 +49,7 @@
     hideScrollbar={true}
 >
     <div class="whitespace-nowrap px-container-x font-bold xl:pr-0">
-        TABLE OF CONTENTS
+        ON THIS PAGE
     </div>
 
     <ul class="mt-4">
