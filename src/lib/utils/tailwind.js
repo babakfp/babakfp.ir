@@ -2,6 +2,8 @@
 Added from https://github.com/tailwindlabs/tailwindcss.com - Monday June 05, 2023
 */
 
+// @ts-nocheck
+
 import dlv from "dlv"
 import resolveConfig from "tailwindcss/resolveConfig"
 import defaultConfig from "tailwindcss/defaultConfig"
