@@ -8,7 +8,7 @@
     <title>Blog</title>
 </svelte:head>
 
-<h2 class="text-center text-4xl font-bold uppercase text-gray-50">Blog</h2>
+<h2 class="text-center font-title text-6xl text-gray-50">Blog</h2>
 
 <ul class="mx-auto mt-8 grid max-w-prose gap-4">
     {#each data.posts as post}

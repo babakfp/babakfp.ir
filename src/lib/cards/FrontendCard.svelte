@@ -38,8 +38,8 @@
 		"
         >
             <h2
-                class="text-xl font-bold text-gray-50
-				{isSingleRow && 'lg:!text-3xl'}"
+                class="font-title text-4xl text-gray-50
+				{isSingleRow && 'lg:text-5xl'}"
             >
                 {title}
             </h2>

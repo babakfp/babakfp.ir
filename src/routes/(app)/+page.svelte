@@ -27,7 +27,7 @@
     </ul>
 </section>
 
-<Section title="Recent blogs">
+<Section title="Blog">
     {#each data.posts as post}
         <li>
             <PostCard {...post} />
@@ -35,7 +35,7 @@
     {/each}
 </Section>
 
-<Section title="NPM packages">
+<Section title="NPM">
     {#each data.packages as pkg}
         <li>
             <RepoCard

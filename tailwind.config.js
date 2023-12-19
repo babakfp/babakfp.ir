@@ -28,7 +28,7 @@ export default {
         },
         fontFamily: {
             sans: ["Quicksand", defaultTheme.fontFamily.sans],
-            title: ["UniNeue", "Quicksand", defaultTheme.fontFamily.sans],
+            title: ["BigNoodleTitling", defaultTheme.fontFamily.sans],
             mono: ["MonoLisa", defaultTheme.fontFamily.mono],
         },
         fontWeight: {
