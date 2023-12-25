@@ -49,7 +49,6 @@ export default {
         buttonComponents(),
         codeComponents(),
         linkComponents(),
-        overflowOverlay(),
     ],
 }
 
@@ -86,21 +85,6 @@ function outlineInsetUtility() {
             ".outline-inset": {
                 "@apply -outline-offset-2": "",
             },
-        })
-    }
-}
-
-function overflowOverlay() {
-    return ({ addUtilities }) => {
-        addUtilities({
-            ".scrollbar": { overflow: "auto" },
-            ".scrollbar-x": { "overflow-x": "auto" },
-            ".scrollbar-y": { "overflow-y": "auto" },
-        })
-        addUtilities({
-            ".scrollbar": { overflow: "overlay" },
-            ".scrollbar-x": { "overflow-x": "overlay" },
-            ".scrollbar-y": { "overflow-y": "overlay" },
         })
     }
 }
