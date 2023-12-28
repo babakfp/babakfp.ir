@@ -6,29 +6,29 @@ published: 2022/02/28
 ---
 
 <script>
-	import LogicBlocks from './_lib/logic-blocks.md'
-	import Layouts from './_lib/layouts.md'
-	import ClassProp from './_lib/class-prop.md'
-	import I18n from './_lib/i18n.md'
-	import Comments from './_lib/comments.md'
-	import CSSScope from './_lib/css-scope.md'
-	import A11Y from './_lib/a11y.md'
-	import Docs from './_lib/docs.md'
-	import DynamicClasses from './_lib/dynamic-classes.md'
-	import PortIsAlreadyInUse from './_lib/port-is-already-in-use.md'
-	import DynamicHTMLTag from './_lib/dynamic-html-tags.md'
-	import BetterErrorHandling from './_lib/better-error-handling.md'
+	import LogicBlocks from './_lib/LogicBlocks.md'
+	import Layouts from './_lib/Layouts.md'
+	import ClassProp from './_lib/ClassProp.md'
+	import I18n from './_lib/I18n.md'
+	import Comments from './_lib/Comments.md'
+	import CssScope from './_lib/CssScope.md'
+	import A11y from './_lib/A11y.md'
+	import Docs from './_lib/Docs.md'
+	import DynamicClasses from './_lib/DynamicClasses.md'
+	import PortIsAlreadyInUse from './_lib/PortIsAlreadyInUse.md'
+	import DynamicHtmlTags from './_lib/DynamicHtmlTags.md'
+	import BetterErrorHandling from './_lib/BetterErrorHandling.md'
 </script>
 
 <LogicBlocks />
 <ClassProp />
 <Comments />
-<CSSScope />
-<A11Y />
+<CssScope />
+<A11y />
 <Layouts />
 <DynamicClasses />
 <PortIsAlreadyInUse />
-<DynamicHTMLTag />
+<DynamicHtmlTags />
 <Docs />
 <BetterErrorHandling />
 <I18n />

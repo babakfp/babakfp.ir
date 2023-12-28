@@ -16,6 +16,7 @@ export default {
     kit: {
         adapter: adapter(),
         alias: {
+            "$content-config": "src/content/config.ts",
             $icons: "src/lib/icons",
             $stores: "src/lib/stores",
             $portfolios: "src/lib/portfolios",

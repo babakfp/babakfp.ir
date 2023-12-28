@@ -9,9 +9,9 @@ published: 2022/02/19
 	import Video from "$lib/markdown/Video.svelte"
 	import ShowMore from "$lib/markdown/ShowMore.svelte"
 	import PlatformQuote from "$lib/markdown/PlatformQuote.svelte"
-	import TheGithubComment from "./_lib/TheGithubComment.md"
-	import TheDevtoArticle from "./_lib/TheDevtoArticle.md"
-	import TheDevtoArticleReply from "./_lib/TheDevtoArticleReply.md"
+	import GithubComment from "./_lib/GithubComment.md"
+	import DevDotToArticle from "./_lib/DevDotToArticle.md"
+	import DevDotToArticleReply from "./_lib/DevDotToArticleReply.md"
 </script>
 
 Why I hate Svelte? What are the negatives of using Svelte? Should you learn Svelte? I'm going to answer them all.
@@ -46,7 +46,7 @@ Here is the comment that got me banned (the comment got removed after I got bann
 
 <ShowMore>
 	<PlatformQuote title="GITHUB: COMMENT">
-		<TheGithubComment />
+		<GithubComment />
 	</PlatformQuote>
 </ShowMore>
 
@@ -60,7 +60,7 @@ After I got banned from the Svelte repositories on GitHub, the same day, I write
 
 <ShowMore>
 	<PlatformQuote title="DEVTO: ARTICLE">
-		<TheDevtoArticle />
+		<DevDotToArticle />
 	</PlatformQuote>
 </ShowMore>
 
@@ -68,7 +68,7 @@ I also replied to one of the comments under the article:
 
 <ShowMore>
 	<PlatformQuote title="DEVTO: ARTICLE REPLY">
-		<TheDevtoArticleReply />
+		<DevDotToArticleReply />
 	</PlatformQuote>
 </ShowMore>
 

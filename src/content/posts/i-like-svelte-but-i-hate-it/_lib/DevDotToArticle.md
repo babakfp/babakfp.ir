@@ -1,6 +1,6 @@
 <script>
 	import PlatformQuote from '$lib/markdown/PlatformQuote.svelte'
-	import TheGithubComment from './TheGithubComment.md'
+	import GithubComment from './GithubComment.md'
 </script>
 
 Hi
@@ -16,7 +16,7 @@ The short story is that the community is toxic. You can find really good people 
 @Rich-Harris Hey, you may want to read this🙂
 
 <PlatformQuote title="GITHUB: COMMENT">
-	<TheGithubComment />
+	<GithubComment />
 </PlatformQuote>
 
 You can see the PR request from [here](https://github.com/sveltejs/svelte/pull/6851).
