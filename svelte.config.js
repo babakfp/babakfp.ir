@@ -94,7 +94,7 @@ export default {
 
 async function mdsvexHighlight(code, lang) {
     const highlighter = await getHighlighter({
-        theme: "rose-pine",
+        theme: "rose-pine-moon",
         langs: ["html", "css", "js", "svelte", "php", "bash"],
     })
     return highlighter.codeToHtml(code, { lang })
