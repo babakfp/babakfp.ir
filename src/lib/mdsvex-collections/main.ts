@@ -127,9 +127,11 @@ export const getCollectionEntry = async (
     slug: string,
     schema: z.AnyZodObject,
 ) => {
-    const allEntries = await markdownFilesToEntries()
-    const entries = allEntries.filter(entry => entry.collection.name === name)
-    const entry = entries.filter(
+    const entries = await markdownFilesToEntries()
+    const collectionEntries = entries.filter(
+        entry => entry.collection.name === name,
+    )
+    const entry = collectionEntries.filter(
         entry => entry.collection.name === name && entry.slug === slug,
     )[0]
 
