@@ -1,4 +1,4 @@
-import config from "$content/config"
+import type { z } from "zod"
 import type {
     ImportGlob,
     MarkdownEntry,
@@ -9,8 +9,6 @@ import {
     validateCollectionName,
     validateCollectionEntryName,
 } from "./validations"
-
-type CollectionNames = keyof typeof config.collections
 
 /**
  * Contains all markdown files located at `src/content`. Learn more about [Glob Import](https://vitejs.dev/guide/features.html#glob-import).
@@ -78,13 +76,11 @@ const markdownFilesToEntries = async () => {
  */
 const getGlobEntryValue = async (
     entry: MarkdownEntry,
-    collectionName: CollectionNames,
+    schema: z.AnyZodObject,
 ) => {
     const globValueResult = (await entry.glob.value()) as ImportGlobItemResolved
 
-    const metadata = config?.collections?.[collectionName]?.schema?.parse(
-        globValueResult.metadata,
-    )
+    const metadata = schema.parse(globValueResult.metadata)
 
     return {
         collection: entry.collection,
@@ -102,7 +98,10 @@ const getGlobEntryValue = async (
  * Gets all markdown entries of the specific collection.
  * @param name - The name of the collection.
  */
-export const getCollectionEntries = async (name: CollectionNames) => {
+export const getCollectionEntries = async (
+    name: string,
+    schema: z.AnyZodObject,
+) => {
     const markdownEntries = await markdownFilesToEntries()
 
     const collectionEntries = markdownEntries.filter(
@@ -111,7 +110,7 @@ export const getCollectionEntries = async (name: CollectionNames) => {
 
     const result = await Promise.all(
         collectionEntries.map(
-            async entry => await getGlobEntryValue(entry, name),
+            async entry => await getGlobEntryValue(entry, schema),
         ),
     )
 
@@ -124,8 +123,9 @@ export const getCollectionEntries = async (name: CollectionNames) => {
  * @param slug - The name of the markdown file without the suffix (`.md`).
  */
 export const getCollectionEntry = async (
-    name: CollectionNames,
+    name: string,
     slug: string,
+    schema: z.AnyZodObject,
 ) => {
     const allEntries = await markdownFilesToEntries()
     const entries = allEntries.filter(entry => entry.collection.name === name)
@@ -134,6 +134,6 @@ export const getCollectionEntry = async (
     )[0]
 
     if (entry) {
-        return await getGlobEntryValue(entry, name)
+        return await getGlobEntryValue(entry, schema)
     }
 }

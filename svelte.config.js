@@ -20,7 +20,6 @@ export default {
             $stores: "src/lib/stores",
             $portfolios: "src/lib/portfolios",
             $utils: "src/lib/utils",
-            $content: "src/content",
             "mdsvex-collections": "src/lib/mdsvex-collections/index.ts",
         },
     },

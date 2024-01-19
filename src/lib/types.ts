@@ -1,17 +1,29 @@
-export interface Post {
-    title: string
-    description: string
-    updated: string
-    published: string
+import { z } from "zod"
+
+export const postMetadataSchema = z.object({
+    title: z.string(),
+    description: z.string(),
+    updated: z.string(),
+    published: z.string(),
+})
+
+export type PostMetadataSchema = typeof postMetadataSchema._type
+
+export type Post = PostMetadataSchema & {
     slug: string
 }
 
-export interface Doc {
-    title: string
+export const docMetadataSchema = z.object({
+    title: z.string(),
+})
+
+export type DocMetadataSchema = typeof docMetadataSchema._type
+
+export type Doc = DocMetadataSchema & {
     slug: string
 }
 
-export interface Package {
+export type Package = {
     name: string
     description: string
     avatarUrl: string

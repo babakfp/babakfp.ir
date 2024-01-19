@@ -1,5 +1,4 @@
 <script lang="ts">
-    import type { SvelteComponent } from "svelte"
     import { fly } from "svelte/transition"
     import { page } from "$app/stores"
     import transition from "$utils/transition"
@@ -9,14 +8,8 @@
     import BackToTopBtn from "$lib/BackToTopBtn.svelte"
     import TocMenu from "$lib/Sidebar/TocMenu.svelte"
     import PostCard from "$lib/cards/PostCard.svelte"
-    import type { Post } from "$lib/types"
 
-    interface Data extends Post {
-        content: typeof SvelteComponent
-        posts: Post[]
-    }
-
-    export let data: Data
+    export let data
 
     const recommendedPosts = data.posts.filter(({ slug }) => slug !== data.slug)
 </script>

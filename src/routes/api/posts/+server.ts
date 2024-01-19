@@ -1,5 +1,9 @@
 import { json } from "@sveltejs/kit"
-import type { Post } from "$lib/types"
+import {
+    type Post,
+    postMetadataSchema,
+    type PostMetadataSchema,
+} from "$lib/types"
 import { getCollectionEntries } from "mdsvex-collections"
 
 export async function GET() {
@@ -8,10 +12,13 @@ export async function GET() {
 }
 
 async function getPosts() {
-    const entries = await getCollectionEntries("posts")
+    const entries = await getCollectionEntries("posts", postMetadataSchema)
 
     const posts: Post[] = entries
-        .map(entry => ({ ...entry.metadata, slug: entry.slug }))
+        .map(entry => ({
+            ...(entry.metadata as PostMetadataSchema),
+            slug: entry.slug,
+        }))
         .sort(
             (first, second) =>
                 new Date(second.published).getTime() -
