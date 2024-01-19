@@ -13,9 +13,7 @@
         <!-- prettier-ignore -->
         <link rel="preload" href="/fonts/Quicksand/Quicksand-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
         <!-- prettier-ignore -->
-        <link rel="preload" href="/fonts/MonoLisa/MonoLisa-Regular.ttf" as="font" type="font/ttf" crossorigin />
-        <!-- prettier-ignore -->
-        <link rel="preload" href="/fonts/MonoLisa/MonoLisa-Bold.ttf" as="font" type="font/ttf" crossorigin />
+        <link rel="preload" href="/fonts/JetBrainsMono/JetBrainsMono[wght].woff2" as="font" type="font/woff2" crossorigin />
         <!-- prettier-ignore -->
         <link rel="preload" href="/fonts/BigNoodleTitling/BigNoodleTitling.ttf" as="font" type="font/ttf" crossorigin />
 
@@ -28,17 +26,13 @@
 					 url("/fonts/Quicksand/Quicksand-VariableFont_wght.ttf") format("truetype-variations");
                 font-weight: 500 700;
             }
-            /* MonoLisa */
+            /* JetBrainsMono */
             @font-face {
-                font-family: MonoLisa;
-                font-weight: 400;
-                src: url("/fonts/MonoLisa/MonoLisa-Regular.ttf")
-                    format("truetype");
-            }
-            @font-face {
-                font-family: MonoLisa;
-                font-weight: 700;
-                src: url("/fonts/MonoLisa/MonoLisa-Bold.ttf") format("truetype");
+                font-family: JetBrainsMono;
+                /* prettier-ignore */
+                src: url("/fonts/JetBrainsMono/JetBrainsMono[wght].woff2") format("woff2 supports variations"),
+					 url("/fonts/JetBrainsMono/JetBrainsMono[wght].woff2") format("woff2-variations");
+                font-weight: 100 800;
             }
             /* BigNoodleTitling */
             @font-face {

@@ -29,7 +29,7 @@ export default {
         fontFamily: {
             sans: ["Quicksand", defaultTheme.fontFamily.sans],
             title: ["BigNoodleTitling", defaultTheme.fontFamily.sans],
-            mono: ["MonoLisa", defaultTheme.fontFamily.mono],
+            mono: ["JetBrainsMono", defaultTheme.fontFamily.mono],
         },
         fontWeight: {
             // thin: "100",
