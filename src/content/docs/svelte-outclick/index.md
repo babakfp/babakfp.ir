@@ -18,7 +18,7 @@ Why choose this over the other packages?
 
 Please check out the [**CHANGELOG**](svelte-outclick/changelog) before updating to the newest version. Restart your app after the update.
 
-```cmd
+```bash
 pnpm add -D svelte-outclick
 ```
 

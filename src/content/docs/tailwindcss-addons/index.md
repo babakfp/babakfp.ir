@@ -4,7 +4,7 @@ title: TailwindCSS Addons
 
 ## Installation
 
-```cmd
+```bash
 pnpm add -D tailwindcss-addons
 ```
 
