@@ -16,7 +16,7 @@ Add the code below into your `tailwind.config.js` file:
 ```js
 import tailwindcssAddons from "tailwindcss-addons"
 
-const config = {
+export default {
 	presets: [
 		tailwindcssAddons(),
 	],
