@@ -90,7 +90,7 @@ const getGlobEntryValue = async (
         },
         slug: entry.slug,
         content: globValueResult.default,
-        metadata: metadata,
+        metadata,
     } satisfies CollectionEntry
 }
 
