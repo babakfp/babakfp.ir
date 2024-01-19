@@ -1,17 +1,5 @@
 import { z } from "zod"
-
-type CollectionConfig = {
-    type: "content" | "data"
-    schema?: z.AnyZodObject
-}
-
-type CollectionsConfig = {
-    [name: string]: CollectionConfig
-}
-
-type Config = {
-    collections?: CollectionsConfig
-}
+import type { Config } from "mdsvex-collections"
 
 export default {
     collections: {
@@ -22,6 +10,12 @@ export default {
                 description: z.string(),
                 updated: z.string(),
                 published: z.string(),
+            }),
+        },
+        docs: {
+            type: "content",
+            schema: z.object({
+                title: z.string(),
             }),
         },
     },

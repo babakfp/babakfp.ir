@@ -1,0 +1,43 @@
+export type ImportGlob = Record<string, () => Promise<unknown>>
+
+export type MarkdownEntry = {
+    glob: {
+        path: keyof ImportGlob
+        value: ImportGlob[keyof ImportGlob]
+    }
+    collection: {
+        name: string
+    }
+    file: {
+        name: string
+    }
+    slug: string
+}
+
+export type ImportGlobItemResolved = {
+    default: {
+        render: () => {
+            html: string
+            css: {
+                code: string
+                map: null
+            }
+            head: string
+        }
+        $$render: () => string
+    }
+    metadata?: Record<string, any>
+}
+
+export type CollectionEntry = {
+    collection: {
+        name: string
+    }
+    file: {
+        name: string
+        path: string
+    }
+    slug: string
+    content: ImportGlobItemResolved["default"]
+    metadata?: ImportGlobItemResolved["metadata"]
+}

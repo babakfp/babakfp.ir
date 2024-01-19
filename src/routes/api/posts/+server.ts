@@ -1,6 +1,6 @@
 import { json } from "@sveltejs/kit"
 import type { Post } from "$lib/types"
-import { getCollectionEntries } from "$utils/markdown"
+import { getCollectionEntries } from "mdsvex-collections"
 
 export async function GET() {
     const posts = await getPosts()
