@@ -32,10 +32,8 @@
             />
         </div>
         <div
-            class="
-			mt-4 grid content-center gap-2
-			{isSingleRow && 'lg:col-start-8 lg:col-end-13 lg:mt-0 lg:gap-4'}
-		"
+            class="mt-4 grid content-center gap-2 {isSingleRow &&
+                'lg:col-start-8 lg:col-end-13 lg:mt-0 lg:gap-4'}"
         >
             <h2
                 class="font-title text-4xl text-gray-50
