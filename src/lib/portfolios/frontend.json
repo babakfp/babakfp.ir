@@ -4,8 +4,10 @@
         "title": "Angle Berry",
         "description": "Angle Berry is a website for sharing premium videos. Users can pay or invite others to get access to the content. They can also chat in real-time with each other.",
         "poster": "/images/portfolios/frontend/frame/angle-berry.webp",
-        "url": "https://angle-berry.vercel.app/login?username=user&password=useruser",
-        "githubRepositoryUrl": "https://github.com/babakfp/angle-berry-client",
+        "links": {
+            "main": "https://angle-berry.vercel.app/login?username=user&password=useruser",
+            "github": "https://github.com/babakfp/angle-berry-client"
+        },
         "techNames": [
             "GitHub",
             "HTML",
@@ -22,7 +24,9 @@
         "title": "FarsGamer Remastered",
         "description": "In-Game Offers Store",
         "poster": "/images/portfolios/frontend/frame/farsgamer-remastered.webp",
-        "url": "https://farsgamer.vercel.app",
+        "links": {
+            "main": "https://farsgamer.vercel.app"
+        },
         "techNames": ["HTML", "CSS", "JavaScript", "Svelte", "TailwindCSS"]
     },
     {
@@ -30,7 +34,9 @@
         "title": "FarsGamer",
         "description": "In-Game Offers Store",
         "poster": "/images/portfolios/frontend/frame/farsgamer.webp",
-        "url": "https://farsgamer.com",
+        "links": {
+            "main": "https://farsgamer.com"
+        },
         "techNames": ["HTML", "CSS", "JavaScript", "TailwindCSS", "Sass"]
     },
     {
@@ -38,7 +44,9 @@
         "title": "TarVaPood",
         "description": "Handcrafted Carpets Store",
         "poster": "/images/portfolios/frontend/frame/tarvapood.webp",
-        "url": "https://tarvapood.onrender.com",
+        "links": {
+            "main": "https://tarvapood.onrender.com"
+        },
         "techNames": ["HTML", "CSS", "JavaScript", "TailwindCSS", "Sass"]
     },
     {
@@ -46,7 +54,9 @@
         "title": "IDPay",
         "description": "Online Payment Site",
         "poster": "/images/portfolios/frontend/frame/idpay.webp",
-        "url": "https://idpay.vercel.app",
+        "links": {
+            "main": "https://idpay.vercel.app"
+        },
         "techNames": [
             "GitHub",
             "HTML",

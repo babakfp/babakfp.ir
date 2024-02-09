@@ -67,16 +67,18 @@
             </div>
 
             <div class="!mt-8 flex flex-wrap gap-4">
-                <a class="btn" href={portfolioData.url} target="_blank">
+                <a class="btn" href={portfolioData.links.main} target="_blank">
                     View Website
                 </a>
-                <a
-                    class="btn"
-                    href={portfolioData.githubRepositoryUrl}
-                    target="_blank"
-                >
-                    View Repository
-                </a>
+                {#if portfolioData.links.github}
+                    <a
+                        class="btn"
+                        href={portfolioData.links.github}
+                        target="_blank"
+                    >
+                        View Repository
+                    </a>
+                {/if}
             </div>
 
             <svelte:component this={data.content} />

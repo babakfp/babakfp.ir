@@ -2,12 +2,12 @@
     import FrontendCardTech from "./FrontendCardTech.svelte"
     import type { TechStack } from "./types"
 
+    export let slug: string
     export let title: string
     export let description: string
     export let poster: string
-    export let url: string
-    export let isSingleRow = false
     export let techNames: TechStack[]
+    export let isSingleRow = false
 </script>
 
 <li class={isSingleRow ? "lg:col-span-full" : ""}>
@@ -15,9 +15,7 @@
         class="group block outline-offset-8 tap-highlight-transparent
 			{isSingleRow && 'lg:grid lg:grid-cols-12 lg:gap-6'}
 		"
-        href={url}
-        target="_blank"
-        rel="noreferrer"
+        href="/portfolios/{slug}"
     >
         <div class="relative {isSingleRow && 'lg:col-start-1 lg:col-end-8'}">
             <div class="relative overflow-hidden">
