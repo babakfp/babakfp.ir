@@ -16,7 +16,7 @@
     export let data
 
     const portfolioData = frontendPortfolios.filter(
-        portfolio => portfolio.name === data.slug,
+        portfolio => portfolio.slug === data.slug,
     )[0]
 
     const techComponents = {
@@ -70,7 +70,11 @@
                 <a class="btn" href={portfolioData.url} target="_blank">
                     View Website
                 </a>
-                <a class="btn" href={portfolioData.githubRepositoryUrl} target="_blank">
+                <a
+                    class="btn"
+                    href={portfolioData.githubRepositoryUrl}
+                    target="_blank"
+                >
                     View Repository
                 </a>
             </div>
