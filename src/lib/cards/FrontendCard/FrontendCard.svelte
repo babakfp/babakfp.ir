@@ -1,9 +1,13 @@
 <script lang="ts">
+    import FrontendCardTech from "./FrontendCardTech.svelte"
+    import type { TechStack } from "./types"
+
     export let title: string
     export let description: string
     export let poster: string
     export let url: string
-    export let isSingleRow: boolean | undefined = false
+    export let isSingleRow = false
+    export let techNames: TechStack[]
 </script>
 
 <li class={isSingleRow ? "lg:col-span-full" : ""}>
@@ -30,6 +34,7 @@
             <div
                 class="absolute inset-0 -z-1 aspect-[16/9] h-full w-full rounded-[2px] bg-gray-50/10 duration-700 ease-in-out hide group-hover:-translate-y-4 group-hover:show"
             />
+            <FrontendCardTech {techNames} {isSingleRow} />
         </div>
         <div
             class="mt-4 grid content-center gap-2 {isSingleRow &&

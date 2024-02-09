@@ -3,7 +3,7 @@
     import frontendPortfolios from "$portfolios/frontend.json"
     import rtlthemeProducts from "$portfolios/rtltheme-products.json"
     import wordpressPlugins from "$portfolios/wordpress-plugins.json"
-    import FrontendCard from "$lib/cards/FrontendCard.svelte"
+    import FrontendCard from "$lib/cards/FrontendCard/FrontendCard.svelte"
     import RepoCard from "$lib/cards/RepoCard.svelte"
     import RtlThemeCard from "$lib/cards/RtlThemeCard.svelte"
     import WordpressPluginCard from "$lib/cards/WordpressPluginCard.svelte"

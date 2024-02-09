@@ -36,3 +36,5 @@ export type Package = {
     unpackedSize: number
     downloadsCount: number
 }
+
+export const portfoliosMetadataSchema = z.object({}).optional()
