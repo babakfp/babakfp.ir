@@ -76,7 +76,7 @@ const markdownFilesToEntries = async () => {
  */
 const getGlobEntryValue = async (
     entry: MarkdownEntry,
-    schema: z.AnyZodObject,
+    schema: z.AnyZodObject | z.ZodOptional<z.AnyZodObject>,
 ) => {
     const globValueResult = (await entry.glob.value()) as ImportGlobItemResolved
 
@@ -100,7 +100,7 @@ const getGlobEntryValue = async (
  */
 export const getCollectionEntries = async (
     name: string,
-    schema: z.AnyZodObject,
+    schema: z.AnyZodObject | z.ZodOptional<z.AnyZodObject>,
 ) => {
     const markdownEntries = await markdownFilesToEntries()
 
@@ -125,7 +125,7 @@ export const getCollectionEntries = async (
 export const getCollectionEntry = async (
     name: string,
     slug: string,
-    schema: z.AnyZodObject,
+    schema: z.AnyZodObject | z.ZodOptional<z.AnyZodObject>,
 ) => {
     const entries = await markdownFilesToEntries()
     const collectionEntries = entries.filter(
