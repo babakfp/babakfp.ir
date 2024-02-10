@@ -78,16 +78,18 @@
                 alt={portfolioData.title}
             />
 
-            <div class="flex flex-wrap gap-2">
-                {#each portfolioData.techNames as name}
-                    {@const component = techComponents.find(
-                        tech => tech.name === name,
-                    )?.component}
-                    {#if component}
-                        <TechBox title={name} {component} />
-                    {/if}
-                {/each}
-            </div>
+            {#if portfolioData.techNames.length}
+                <div class="flex flex-wrap gap-2">
+                    {#each portfolioData.techNames as name}
+                        {@const component = techComponents.find(
+                            tech => tech.name === name,
+                        )?.component}
+                        {#if component}
+                            <TechBox title={name} {component} />
+                        {/if}
+                    {/each}
+                </div>
+            {/if}
 
             <svelte:component this={data.content} />
         </article>
