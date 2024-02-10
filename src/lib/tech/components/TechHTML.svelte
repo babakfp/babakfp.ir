@@ -3,6 +3,6 @@
     import LogoHTML from "../logos/LogoHTML.svelte"
 </script>
 
-<FrontendCardTechItem class="ring-offset-[#e44d26]" tech="HTML">
+<FrontendCardTechItem class="ring-offset-[#e44d26]" title="HTML">
     <LogoHTML />
 </FrontendCardTechItem>

@@ -3,6 +3,6 @@
     import LogoCSS from "../logos/LogoCSS.svelte"
 </script>
 
-<FrontendCardTechItem class="ring-offset-[#264de4]" tech="CSS">
+<FrontendCardTechItem class="ring-offset-[#264de4]" title="CSS">
     <LogoCSS />
 </FrontendCardTechItem>

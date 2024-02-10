@@ -1,12 +1,12 @@
 <script lang="ts">
     import type { TechStack } from "./types"
-
-    import TechGitHub from "$lib/tech/components/TechGitHub.svelte"
-    import TechPocketBase from "$lib/tech/components/TechPocketBase.svelte"
-    import TechSass from "$lib/tech/components/TechSass.svelte"
-    import TechSvelte from "$lib/tech/components/TechSvelte.svelte"
-    import TechTailwindCSS from "$lib/tech/components/TechTailwindCSS.svelte"
-    import TechTypeScript from "$lib/tech/components/TechTypeScript.svelte"
+    import FrontendCardTechItem from "$lib/cards/FrontendCard/FrontendCardTechItem.svelte"
+    import IconGithub from "$icons/IconGithub.svelte"
+    import LogoPocketBase from "$lib/tech/logos/LogoPocketBase.svelte"
+    import LogoSass from "$lib/tech/logos/LogoSass.svelte"
+    import LogoSvelte from "$lib/tech/logos/LogoSvelte.svelte"
+    import LogoTailwindCSS from "$lib/tech/logos/LogoTailwindCSS.svelte"
+    import LogoTypeScript from "$lib/tech/logos/LogoTypeScript.svelte"
 
     export let slug: string
     export let title: string
@@ -53,22 +53,52 @@
                 <div class="flex text-2xs">
                     {#each techNames as tech, i}
                         {#if tech === "GitHub"}
-                            <TechGitHub />
+                            <FrontendCardTechItem
+                                class="ring-offset-[#6e40c9]"
+                                title="Github"
+                            >
+                                <IconGithub class="text-[#6e40c9]" />
+                            </FrontendCardTechItem>
                         {/if}
                         {#if tech === "Sass"}
-                            <TechSass />
+                            <FrontendCardTechItem
+                                class="ring-offset-[#cd6799]"
+                                title="Sass"
+                            >
+                                <LogoSass />
+                            </FrontendCardTechItem>
                         {/if}
                         {#if tech === "Svelte"}
-                            <TechSvelte />
+                            <FrontendCardTechItem
+                                class="ring-offset-[#ff3e00]"
+                                title="Svelte"
+                            >
+                                <LogoSvelte />
+                            </FrontendCardTechItem>
                         {/if}
                         {#if tech === "TailwindCSS"}
-                            <TechTailwindCSS />
+                            <FrontendCardTechItem
+                                class="ring-offset-[#38bdf8]"
+                                title="TailwindCSS"
+                            >
+                                <LogoTailwindCSS />
+                            </FrontendCardTechItem>
                         {/if}
                         {#if tech === "PocketBase"}
-                            <TechPocketBase />
+                            <FrontendCardTechItem
+                                class="ring-offset-[#b8dbe4]"
+                                title="PocketBase"
+                            >
+                                <LogoPocketBase />
+                            </FrontendCardTechItem>
                         {/if}
                         {#if tech === "TypeScript"}
-                            <TechTypeScript />
+                            <FrontendCardTechItem
+                                class="ring-offset-[#3178c6]"
+                                title="TypeScript"
+                            >
+                                <LogoTypeScript />
+                            </FrontendCardTechItem>
                         {/if}
                     {/each}
                 </div>
