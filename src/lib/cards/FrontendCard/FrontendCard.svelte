@@ -51,51 +51,51 @@
                     {title}
                 </h2>
                 <div class="flex text-2xs">
-                    {#each techNames as tech, i}
-                        {#if tech === "GitHub"}
+                    {#each techNames as name, i}
+                        {#if name === "GitHub"}
                             <FrontendCardTechItem
                                 class="ring-offset-[#6e40c9]"
-                                title="Github"
+                                title={name}
                             >
                                 <IconGithub class="text-[#6e40c9]" />
                             </FrontendCardTechItem>
                         {/if}
-                        {#if tech === "Sass"}
+                        {#if name === "Sass"}
                             <FrontendCardTechItem
                                 class="ring-offset-[#cd6799]"
-                                title="Sass"
+                                title={name}
                             >
                                 <LogoSass />
                             </FrontendCardTechItem>
                         {/if}
-                        {#if tech === "Svelte"}
+                        {#if name === "Svelte"}
                             <FrontendCardTechItem
                                 class="ring-offset-[#ff3e00]"
-                                title="Svelte"
+                                title={name}
                             >
                                 <LogoSvelte />
                             </FrontendCardTechItem>
                         {/if}
-                        {#if tech === "TailwindCSS"}
+                        {#if name === "TailwindCSS"}
                             <FrontendCardTechItem
                                 class="ring-offset-[#38bdf8]"
-                                title="TailwindCSS"
+                                title={name}
                             >
                                 <LogoTailwindCSS />
                             </FrontendCardTechItem>
                         {/if}
-                        {#if tech === "PocketBase"}
+                        {#if name === "PocketBase"}
                             <FrontendCardTechItem
                                 class="ring-offset-[#b8dbe4]"
-                                title="PocketBase"
+                                title={name}
                             >
                                 <LogoPocketBase />
                             </FrontendCardTechItem>
                         {/if}
-                        {#if tech === "TypeScript"}
+                        {#if name === "TypeScript"}
                             <FrontendCardTechItem
                                 class="ring-offset-[#3178c6]"
-                                title="TypeScript"
+                                title={name}
                             >
                                 <LogoTypeScript />
                             </FrontendCardTechItem>
