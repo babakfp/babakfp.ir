@@ -1,6 +1,12 @@
 <script lang="ts">
-    import FrontendCardTech from "./FrontendCardTech.svelte"
     import type { TechStack } from "./types"
+
+    import TechGitHub from "$lib/tech/components/TechGitHub.svelte"
+    import TechPocketBase from "$lib/tech/components/TechPocketBase.svelte"
+    import TechSass from "$lib/tech/components/TechSass.svelte"
+    import TechSvelte from "$lib/tech/components/TechSvelte.svelte"
+    import TechTailwindCSS from "$lib/tech/components/TechTailwindCSS.svelte"
+    import TechTypeScript from "$lib/tech/components/TechTypeScript.svelte"
 
     export let slug: string
     export let title: string
@@ -32,18 +38,42 @@
             <div
                 class="absolute inset-0 -z-1 aspect-[16/9] h-full w-full rounded-[2px] bg-gray-50/10 duration-700 ease-in-out hide group-hover:-translate-y-4 group-hover:show"
             />
-            <FrontendCardTech {techNames} {isSingleRow} />
         </div>
         <div
             class="mt-4 grid content-center gap-2 {isSingleRow &&
                 'lg:col-start-8 lg:col-end-13 lg:mt-0 lg:gap-4'}"
         >
-            <h2
-                class="font-title text-4xl text-gray-50
-				{isSingleRow && 'lg:text-5xl'}"
-            >
-                {title}
-            </h2>
+            <div class="flex items-center justify-between">
+                <h2
+                    class="font-title text-4xl text-gray-50
+                        {isSingleRow && 'lg:text-5xl'}"
+                >
+                    {title}
+                </h2>
+                <div class="flex text-2xs">
+                    {#each techNames as tech, i}
+                        {#if tech === "GitHub"}
+                            <TechGitHub />
+                        {/if}
+                        {#if tech === "Sass"}
+                            <TechSass />
+                        {/if}
+                        {#if tech === "Svelte"}
+                            <TechSvelte />
+                        {/if}
+                        {#if tech === "TailwindCSS"}
+                            <TechTailwindCSS />
+                        {/if}
+                        {#if tech === "PocketBase"}
+                            <TechPocketBase />
+                        {/if}
+                        {#if tech === "TypeScript"}
+                            <TechTypeScript />
+                        {/if}
+                    {/each}
+                </div>
+            </div>
+
             <p
                 class="text-sm text-gray-400
 				{isSingleRow && 'lg:text-lg'}"

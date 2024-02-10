@@ -7,7 +7,7 @@
 </script>
 
 <div
-    class="flex scale-50 rounded-full bg-white p-2 ring-2 ring-white ring-offset-2 sm:scale-75 {className}"
+    class="flex rounded-full bg-white p-1.5 ring-2 ring-white ring-offset-2 {className}"
     title={tech}
 >
     <slot />
