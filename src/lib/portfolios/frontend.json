@@ -8,13 +8,7 @@
             "main": "https://angle-berry.vercel.app/login?username=user&password=useruser",
             "github": "https://github.com/babakfp/angle-berry-client"
         },
-        "techNames": [
-            "GitHub",
-            "Svelte",
-            "TailwindCSS",
-            "PocketBase",
-            "TypeScript"
-        ]
+        "techNames": ["Svelte", "TailwindCSS", "PocketBase", "TypeScript"]
     },
     {
         "slug": "farsgamer-remastered",
@@ -52,8 +46,9 @@
         "description": "Online Payment Site",
         "poster": "/images/portfolios/frontend/frame/idpay.webp",
         "links": {
-            "main": "https://idpay.vercel.app"
+            "main": "https://idpay.vercel.app",
+            "github": "https://github.com/babakfp/idpay"
         },
-        "techNames": ["GitHub", "Svelte", "TailwindCSS"]
+        "techNames": ["Svelte", "TailwindCSS"]
     }
 ]

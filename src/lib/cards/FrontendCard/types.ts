@@ -1,10 +1,6 @@
 export type TechStack =
-    | "GitHub"
-    | "HTML"
-    | "CSS"
-    | "JavaScript"
-    | "Sass"
+    | "Svelte"
     | "TailwindCSS"
+    | "Sass"
     | "PocketBase"
     | "TypeScript"
-    | string

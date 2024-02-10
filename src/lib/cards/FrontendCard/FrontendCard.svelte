@@ -54,14 +54,6 @@
                     class="flex flex-row-reverse text-[8px] sm:text-2xs lg:text-xs lg:opacity-0 lg:duration-1000 lg:group-hover:opacity-100 xl:text-sm"
                 >
                     {#each techNames as name, i}
-                        {#if name === "GitHub"}
-                            <FrontendCardTechItem
-                                class="ring-offset-[#6e40c9]"
-                                title={name}
-                            >
-                                <IconGithub class="text-[#6e40c9]" />
-                            </FrontendCardTechItem>
-                        {/if}
                         {#if name === "Sass"}
                             <FrontendCardTechItem
                                 class="ring-offset-[#cd6799]"
