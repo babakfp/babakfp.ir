@@ -50,7 +50,7 @@
                 >
                     {title}
                 </h2>
-                <div class="flex flex-row-reverse text-2xs">
+                <div class="flex flex-row-reverse text-[8px] sm:text-2xs">
                     {#each techNames as name, i}
                         {#if name === "GitHub"}
                             <FrontendCardTechItem
