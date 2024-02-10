@@ -67,7 +67,11 @@
             </div>
 
             <div class="!mt-8 flex flex-wrap gap-4">
-                <a class="btn" href={portfolioData.links.main} target="_blank">
+                <a
+                    class="btn btn-link"
+                    href={portfolioData.links.main}
+                    target="_blank"
+                >
                     View Website
                 </a>
                 {#if portfolioData.links.github}
