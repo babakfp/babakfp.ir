@@ -77,14 +77,13 @@
                 alt={portfolioData.title}
             />
 
-            <div
-                class="!mt-8 grid grid-cols-[repeat(auto-fill,minmax(4rem,1fr))]"
-            >
+            <div class="flex flex-wrap gap-2">
                 {#each portfolioData.techNames as name}
                     {@const component = techComponents[name]}
                     {#if component}
                         <div
-                            class="flex justify-center text-xl sm:text-2xl lg:text-3xl"
+                            class="flex rounded bg-gray-800 p-2 text-xl sm:p-3 sm:text-2xl lg:p-4 lg:text-3xl"
+                            title={name}
                         >
                             <svelte:component this={component} />
                         </div>
