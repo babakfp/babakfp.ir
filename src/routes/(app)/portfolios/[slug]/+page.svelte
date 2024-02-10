@@ -4,7 +4,6 @@
     import transition from "$utils/transition"
     import frontendPortfolios from "$portfolios/frontend.json"
     import IconArrowUpRightSquare from "$icons/IconArrowUpRightSquare.svelte"
-
     import LogoPocketBase2 from "$lib/tech/logos/LogoPocketBase2.svelte"
     import LogoSass from "$lib/tech/logos/LogoSass.svelte"
     import LogoSvelte2 from "$lib/tech/logos/LogoSvelte2.svelte"
