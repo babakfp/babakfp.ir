@@ -3,6 +3,7 @@
     import { page } from "$app/stores"
     import transition from "$utils/transition"
     import frontendPortfolios from "$portfolios/frontend.json"
+    import IconArrowUpRightSquare from "$icons/IconArrowUpRightSquare.svelte"
 
     import LogoCSS from "$lib/tech/logos/LogoCSS.svelte"
     import LogoHTML from "$lib/tech/logos/LogoHTML.svelte"
@@ -75,6 +76,7 @@
                     target="_blank"
                 >
                     View Website
+                    <IconArrowUpRightSquare />
                 </a>
                 {#if portfolioData.links.github}
                     <a
@@ -83,6 +85,7 @@
                         target="_blank"
                     >
                         View Repository
+                        <IconArrowUpRightSquare />
                     </a>
                 {/if}
             </div>
