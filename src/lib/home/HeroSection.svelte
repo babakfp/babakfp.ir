@@ -13,7 +13,7 @@
 <section class="mx-auto max-w-prose">
     <h1 class="font-title text-7xl text-gray-50">Babak Farkhoopak</h1>
     <code
-        class="inline-code pointer-events-none mt-4 inline-block !px-3 text-sm highlight-gray-50/10"
+        class="inline-code pointer-events-none mt-4 inline-block !px-3 text-sm"
     >
         JavaScript | FrontEnd Developer
     </code>
