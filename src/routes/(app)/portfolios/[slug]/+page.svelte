@@ -13,6 +13,7 @@
     import LogoSvelte2 from "$lib/tech/logos/LogoSvelte2.svelte"
     import LogoTailwindCSS from "$lib/tech/logos/LogoTailwindCSS.svelte"
     import LogoTypeScript from "$lib/tech/logos/LogoTypeScript.svelte"
+    import TechBox from "./TechBox.svelte"
 
     export let data
 
@@ -20,16 +21,16 @@
         portfolio => portfolio.slug === data.slug,
     )[0]
 
-    const techComponents = {
-        CSS: LogoCSS,
-        HTML: LogoHTML,
-        JavaScript: LogoJavaScript,
-        PocketBase: LogoPocketBase2,
-        Sass: LogoSass,
-        Svelte: LogoSvelte2,
-        TailwindCSS: LogoTailwindCSS,
-        TypeScript: LogoTypeScript,
-    }
+    const techComponents = [
+        { name: "CSS", component: LogoCSS },
+        { name: "HTML", component: LogoHTML },
+        { name: "JavaScript", component: LogoJavaScript },
+        { name: "PocketBase", component: LogoPocketBase2 },
+        { name: "Sass", component: LogoSass },
+        { name: "Svelte", component: LogoSvelte2 },
+        { name: "TailwindCSS", component: LogoTailwindCSS },
+        { name: "TypeScript", component: LogoTypeScript },
+    ]
 </script>
 
 <svelte:head>
@@ -79,14 +80,11 @@
 
             <div class="flex flex-wrap gap-2">
                 {#each portfolioData.techNames as name}
-                    {@const component = techComponents[name]}
+                    {@const component = techComponents.find(
+                        tech => tech.name === name,
+                    )?.component}
                     {#if component}
-                        <div
-                            class="flex rounded bg-gray-800 p-2 text-xl sm:p-3 sm:text-2xl lg:p-4 lg:text-3xl"
-                            title={name}
-                        >
-                            <svelte:component this={component} />
-                        </div>
+                        <TechBox title={name} {component} />
                     {/if}
                 {/each}
             </div>
