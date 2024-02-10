@@ -21,6 +21,7 @@ export default {
             },
             colors: {
                 gray: colors.zinc,
+                brand: colors.indigo,
             },
             borderRadius: {
                 DEFAULT: "0.5rem",

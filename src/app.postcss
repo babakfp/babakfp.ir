@@ -10,7 +10,7 @@
         --main-spacing-b: theme(spacing.20);
     }
     ::selection {
-        @apply bg-indigo-600/60;
+        @apply bg-brand-600/60;
     }
     ::-webkit-scrollbar {
         @apply h-2.5 w-2.5;
@@ -40,7 +40,7 @@
 /* Outline */
 @layer base {
     * {
-        @apply outline-none outline outline-2 focus-visible:outline-indigo-400;
+        @apply focus-visible:outline-brand-400 outline-none outline outline-2;
     }
     a {
         @apply outline-dashed;
@@ -65,13 +65,13 @@
 
 @layer components {
     .link {
-        @apply break-words text-indigo-300 underline decoration-transparent decoration-2 duration-75 hover:text-indigo-100;
+        @apply text-brand-300 hover:text-brand-100 break-words underline decoration-transparent decoration-2 duration-75;
     }
 }
 
 @layer components {
     .inline-code {
-        @apply select-text rounded-md bg-gray-50/10 px-1.5 py-1 text-[.9em] highlight-gray-50/10 selection:bg-indigo-600/50;
+        @apply selection:bg-brand-600/50 select-text rounded-md bg-gray-50/10 px-1.5 py-1 text-[.9em] highlight-gray-50/10;
     }
 }
 
@@ -97,7 +97,7 @@
         @apply h-9 w-9 p-0 text-gray-400 hover:text-gray-50;
     }
     .btn-link {
-        @apply bg-indigo-600 !text-white highlight-indigo-500 hover:bg-indigo-500 hover:highlight-indigo-400;
+        @apply bg-brand-500 highlight-brand-400 hover:bg-brand-400 hover:highlight-brand-300;
     }
 }
 
@@ -231,6 +231,11 @@
                     color: rgba(115, 138, 148, 0.4);
                 } */
             }
+        }
+
+        .btn,
+        .btn-link {
+            @apply !text-white;
         }
     }
 }
