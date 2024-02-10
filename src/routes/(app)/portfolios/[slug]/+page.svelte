@@ -46,6 +46,29 @@
         <article class="article-content">
             <h1>{portfolioData.title}</h1>
 
+            <div
+                class="sticky top-header-h z-1 flex flex-wrap gap-4 bg-gray-900 py-4"
+            >
+                <a
+                    class="btn btn-link"
+                    href={portfolioData.links.main}
+                    target="_blank"
+                >
+                    View Website
+                    <IconArrowUpRightSquare />
+                </a>
+                {#if portfolioData.links.github}
+                    <a
+                        class="btn"
+                        href={portfolioData.links.github}
+                        target="_blank"
+                    >
+                        View Repository
+                        <IconArrowUpRightSquare />
+                    </a>
+                {/if}
+            </div>
+
             <p>{portfolioData.description}</p>
 
             <img
@@ -67,27 +90,6 @@
                         </div>
                     {/if}
                 {/each}
-            </div>
-
-            <div class="!mt-8 flex flex-wrap gap-4">
-                <a
-                    class="btn btn-link"
-                    href={portfolioData.links.main}
-                    target="_blank"
-                >
-                    View Website
-                    <IconArrowUpRightSquare />
-                </a>
-                {#if portfolioData.links.github}
-                    <a
-                        class="btn"
-                        href={portfolioData.links.github}
-                        target="_blank"
-                    >
-                        View Repository
-                        <IconArrowUpRightSquare />
-                    </a>
-                {/if}
             </div>
 
             <svelte:component this={data.content} />
