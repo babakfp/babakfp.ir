@@ -58,7 +58,7 @@
                     {@const component = techComponents[name]}
                     {#if component}
                         <div
-                            class="flex justify-center py-4 text-xl lg:text-3xl"
+                            class="flex justify-center py-4 text-xl sm:text-2xl lg:text-3xl"
                         >
                             <svelte:component this={component} />
                         </div>
