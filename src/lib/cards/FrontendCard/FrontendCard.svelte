@@ -51,7 +51,7 @@
                     {title}
                 </h2>
                 <div
-                    class="flex flex-row-reverse text-[8px] sm:text-2xs xl:text-sm xl:opacity-0 xl:duration-1000 xl:group-hover:opacity-100"
+                    class="flex flex-row-reverse text-[8px] sm:text-2xs lg:text-xs lg:opacity-0 lg:duration-1000 lg:group-hover:opacity-100 xl:text-sm"
                 >
                     {#each techNames as name, i}
                         {#if name === "GitHub"}
