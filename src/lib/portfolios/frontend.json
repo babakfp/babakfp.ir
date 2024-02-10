@@ -10,9 +10,6 @@
         },
         "techNames": [
             "GitHub",
-            "HTML",
-            "CSS",
-            "JavaScript",
             "Svelte",
             "TailwindCSS",
             "PocketBase",
@@ -27,7 +24,7 @@
         "links": {
             "main": "https://farsgamer.vercel.app"
         },
-        "techNames": ["HTML", "CSS", "JavaScript", "Svelte", "TailwindCSS"]
+        "techNames": ["Svelte", "TailwindCSS"]
     },
     {
         "slug": "farsgamer",
@@ -37,7 +34,7 @@
         "links": {
             "main": "https://farsgamer.com"
         },
-        "techNames": ["HTML", "CSS", "JavaScript", "TailwindCSS", "Sass"]
+        "techNames": ["TailwindCSS", "Sass"]
     },
     {
         "slug": "tarvapood",
@@ -47,7 +44,7 @@
         "links": {
             "main": "https://tarvapood.onrender.com"
         },
-        "techNames": ["HTML", "CSS", "JavaScript", "TailwindCSS", "Sass"]
+        "techNames": ["TailwindCSS", "Sass"]
     },
     {
         "slug": "idpay",
@@ -57,13 +54,6 @@
         "links": {
             "main": "https://idpay.vercel.app"
         },
-        "techNames": [
-            "GitHub",
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Svelte",
-            "TailwindCSS"
-        ]
+        "techNames": ["GitHub", "Svelte", "TailwindCSS"]
     }
 ]
