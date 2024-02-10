@@ -8,7 +8,7 @@
     import LogoCSS from "$lib/tech/logos/LogoCSS.svelte"
     import LogoHTML from "$lib/tech/logos/LogoHTML.svelte"
     import LogoJavaScript from "$lib/tech/logos/LogoJavaScript.svelte"
-    import LogoPocketBase from "$lib/tech/logos/LogoPocketBase.svelte"
+    import LogoPocketBase2 from "$lib/tech/logos/LogoPocketBase2.svelte"
     import LogoSass from "$lib/tech/logos/LogoSass.svelte"
     import LogoSvelte2 from "$lib/tech/logos/LogoSvelte2.svelte"
     import LogoTailwindCSS from "$lib/tech/logos/LogoTailwindCSS.svelte"
@@ -24,7 +24,7 @@
         CSS: LogoCSS,
         HTML: LogoHTML,
         JavaScript: LogoJavaScript,
-        PocketBase: LogoPocketBase,
+        PocketBase: LogoPocketBase2,
         Sass: LogoSass,
         Svelte: LogoSvelte2,
         TailwindCSS: LogoTailwindCSS,
