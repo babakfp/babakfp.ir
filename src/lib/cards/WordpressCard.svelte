@@ -23,8 +23,9 @@
             <img
                 class="absolute inset-0 -z-1 scale-105 blur-2xl"
                 src={thumb}
-                aria-hidden="true"
+                alt={title}
                 loading="lazy"
+                aria-hidden="true"
             />
         </div>
         <div>

@@ -38,8 +38,9 @@
                         class="py-2 hover:bg-gray-50/10"
                         title={item.title}
                         href={item.href}
-                        icon={item.icon}
-                    />
+                    >
+                        <svelte:component this={item.icon} />
+                    </PrimMenuItem>
                 </li>
             {/each}
         </ul>

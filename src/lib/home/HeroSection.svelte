@@ -98,6 +98,7 @@
                     class="absolute inset-0"
                     href="mailto:babak.bxf@gmail.com"
                     rel="noreferrer"
+                    aria-label="Email address"
                 />
             </button>
         </div>

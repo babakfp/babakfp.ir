@@ -14,9 +14,10 @@
                         <PrimMenuItem
                             title={link.title}
                             href={link.url}
-                            icon={link.icon}
                             isExternal={true}
-                        />
+                        >
+                            <svelte:component this={link.icon} />
+                        </PrimMenuItem>
                     </li>
                 {/each}
             </ul>
