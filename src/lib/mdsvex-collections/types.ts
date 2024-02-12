@@ -1,3 +1,5 @@
+import type { SvelteComponent } from "svelte"
+
 export type ImportGlob = Record<string, () => Promise<unknown>>
 
 export type MarkdownEntry = {
@@ -15,17 +17,7 @@ export type MarkdownEntry = {
 }
 
 export type ImportGlobItemResolved = {
-    default: {
-        render: () => {
-            html: string
-            css: {
-                code: string
-                map: null
-            }
-            head: string
-        }
-        $$render: () => string
-    }
+    default: typeof SvelteComponent
     metadata?: Record<string, any>
 }
 
