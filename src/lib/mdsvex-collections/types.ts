@@ -18,7 +18,7 @@ export type MarkdownEntry = {
 
 export type ImportGlobItemResolved = {
     default: typeof SvelteComponent
-    metadata?: Record<string, any>
+    metadata?: Record<string, unknown>
 }
 
 export type CollectionEntry = {
