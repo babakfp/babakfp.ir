@@ -73,23 +73,11 @@ export const docsSidebarItems = readable([
                 ],
             },
             {
-                title: "Presets",
+                title: "Theme",
                 items: [
-                    {
-                        title: "Flex Grid",
-                        path: "/docs/tailwindcss-addons/flex-grid",
-                    },
-                    {
-                        title: "Font Regular",
-                        path: "/docs/tailwindcss-addons/font-regular",
-                    },
                     {
                         title: "Extra Defaults",
                         path: "/docs/tailwindcss-addons/extra-defaults",
-                    },
-                    {
-                        title: "Dynamic Screen",
-                        path: "/docs/tailwindcss-addons/dynamic-screen",
                     },
                 ],
             },
@@ -127,7 +115,7 @@ export const docsSidebarItems = readable([
                 ],
             },
             {
-                title: "New Reset Utilities",
+                title: "Reset Utilities",
                 items: [
                     {
                         title: "Reset Number Input",
@@ -153,15 +141,32 @@ export const docsSidebarItems = readable([
                 ],
             },
             {
+                title: "Modified Utilities",
+                items: [
+                    {
+                        title: "Dynamic Screen",
+                        path: "/docs/tailwindcss-addons/dynamic-screen",
+                    },
+                    {
+                        title: "Flex Grid",
+                        path: "/docs/tailwindcss-addons/flex-grid",
+                    },
+                    {
+                        title: "Font Regular",
+                        path: "/docs/tailwindcss-addons/font-regular",
+                    },
+                ],
+            },
+            {
                 title: "Variants",
                 items: [
                     {
-                        title: "Not",
-                        path: "/docs/tailwindcss-addons/not",
-                    },
-                    {
                         title: "Hocus",
                         path: "/docs/tailwindcss-addons/hocus",
+                    },
+                    {
+                        title: "Not",
+                        path: "/docs/tailwindcss-addons/not",
                     },
                 ],
             },
