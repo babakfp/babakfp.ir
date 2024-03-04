@@ -1,12 +1,12 @@
 ---
-title: Direction
+title: Dir
 ---
 
 <script>
-	import UtilsTable from '$lib/UtilsTable.svelte'
-	import {getUtilities} from '$utils/tailwind.js'
-	import dir from 'tailwindcss-addons/src/utilities/dir.cjs'
-	const utilities = getUtilities(dir.handler);
+    import UtilsTable from "$lib/UtilsTable.svelte"
+    import { getUtilities } from "$utils/tailwind.js"
+    import { dir } from "tailwindcss-addons"
+    const utilities = getUtilities(dir.handler);
 </script>
 
 <UtilsTable {utilities} />

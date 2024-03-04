@@ -3,9 +3,9 @@ title: Overflow Unset
 ---
 
 <script>
-	import UtilsTable from '$lib/UtilsTable.svelte'
-	import {getUtilities} from '$utils/tailwind.js'
-	import overflowUnset from 'tailwindcss-addons/src/utilities/overflowUnset.cjs'
+	import UtilsTable from "$lib/UtilsTable.svelte"
+	import { getUtilities } from "$utils/tailwind.js"
+	import { overflowUnset } from "tailwindcss-addons"
 	const utilities = getUtilities(overflowUnset.handler);
 </script>
 

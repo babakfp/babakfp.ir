@@ -1,24 +1,21 @@
 ---
-title: Not
+title: Hocus
 ---
 
 <script>
-	import UtilsTable from '$lib/UtilsTable.svelte'
+	import UtilsTable from "$lib/UtilsTable.svelte"
 	const utilities = {
-		'.not-first': {
-			'&:not(:first-child)': '',
+		".hocus": {
+			"&:hover": "",
+			"&:focus": "",
 		},
-		'.not-last': {
-			'&:not(:last-child)': '',
+		".hocus-within": {
+			"&:hover": "",
+			"&:focus-within": "",
 		},
-		'.not-first-of-type': {
-			'&:not(:first-of-type)': '',
-		},
-		'.not-last-of-type': {
-			'&:not(:last-of-type)': '',
-		},
-		'.not-[<value>]': {
-			'&:not(<value>)': '',
+		".hocus-visible": {
+			"&:hover": "",
+			"&:focus-visible": "",
 		},
 	}
 </script>
@@ -34,10 +31,10 @@ In order to use this feature, your Tailwind version must support the [`matchVari
 ```js
 // tailwind.config.js | tailwind.config.ts
 
-import { not } from "tailwindcss-addons"
+import { hocus } from "tailwindcss-addons"
 
 export default {
-    plugins: [not],
+    plugins: [hocus],
 }
 ```
 
@@ -51,7 +48,7 @@ import tailwindcssAddons from "tailwindcss-addons"
 export default {
     plugins: [
         ...tailwindcssAddons({
-            not: false, // Enabled by default
+            hocus: false, // Enabled by default
         }),
     ],
 }

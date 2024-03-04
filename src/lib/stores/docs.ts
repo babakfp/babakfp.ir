@@ -76,7 +76,7 @@ export const docsSidebarItems = readable([
                 title: "Presets",
                 items: [
                     {
-                        title: "Flex & Grid",
+                        title: "Flex Grid",
                         path: "/docs/tailwindcss-addons/flex-grid",
                     },
                     {
@@ -84,8 +84,8 @@ export const docsSidebarItems = readable([
                         path: "/docs/tailwindcss-addons/font-regular",
                     },
                     {
-                        title: "More Default Values",
-                        path: "/docs/tailwindcss-addons/more-default-values",
+                        title: "Extra Defaults",
+                        path: "/docs/tailwindcss-addons/extra-defaults",
                     },
                     {
                         title: "Dynamic Screen",
@@ -94,7 +94,7 @@ export const docsSidebarItems = readable([
                 ],
             },
             {
-                title: "Utilities",
+                title: "New Utilities",
                 items: [
                     {
                         title: "Background Grid",
@@ -105,25 +105,43 @@ export const docsSidebarItems = readable([
                         path: "/docs/tailwindcss-addons/bg-radial",
                     },
                     {
-                        title: "Direction",
-                        path: "/docs/tailwindcss-addons/direction",
+                        title: "Dir",
+                        path: "/docs/tailwindcss-addons/dir",
                     },
                     {
-                        title: "User Drag",
-                        path: "/docs/tailwindcss-addons/user-drag",
+                        title: "Drag",
+                        path: "/docs/tailwindcss-addons/drag",
                     },
                     {
                         title: "Flip",
                         path: "/docs/tailwindcss-addons/flip",
                     },
                     {
-                        title: "Hide & Show",
+                        title: "Hide Show",
                         path: "/docs/tailwindcss-addons/hide-show",
                     },
                     {
-                        title: "Input Resets",
-                        path: "/docs/tailwindcss-addons/input-resets",
+                        title: "Tap",
+                        path: "/docs/tailwindcss-addons/tap",
                     },
+                ],
+            },
+            {
+                title: "New Reset Utilities",
+                items: [
+                    {
+                        title: "Reset Number Input",
+                        path: "/docs/tailwindcss-addons/reset-number-input",
+                    },
+                    {
+                        title: "Reset Search Input",
+                        path: "/docs/tailwindcss-addons/reset-search-input",
+                    },
+                ],
+            },
+            {
+                title: "Extended Utilities",
+                items: [
                     {
                         title: "Inset Center",
                         path: "/docs/tailwindcss-addons/inset-center",
@@ -131,10 +149,6 @@ export const docsSidebarItems = readable([
                     {
                         title: "Overflow Unset",
                         path: "/docs/tailwindcss-addons/overflow-unset",
-                    },
-                    {
-                        title: "Tap",
-                        path: "/docs/tailwindcss-addons/tap",
                     },
                 ],
             },
@@ -144,6 +158,10 @@ export const docsSidebarItems = readable([
                     {
                         title: "Not",
                         path: "/docs/tailwindcss-addons/not",
+                    },
+                    {
+                        title: "Hocus",
+                        path: "/docs/tailwindcss-addons/hocus",
                     },
                 ],
             },

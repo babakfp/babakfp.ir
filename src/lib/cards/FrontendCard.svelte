@@ -7,9 +7,8 @@
 </script>
 
 <li class={isSingleRow ? "lg:col-span-full" : ""}>
-    <!-- /* TODO tap-highlight to tap */ -->
     <a
-        class="group block outline-offset-8 tap-highlight-transparent
+        class="group block outline-offset-8 tap-transparent
 			{isSingleRow && 'lg:grid lg:grid-cols-12 lg:gap-6'}
 		"
         href={url}

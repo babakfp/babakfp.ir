@@ -1,5 +1,5 @@
 ---
-title: Input Resets
+title: Reset Number Input
 ---
 
 <script>
@@ -15,23 +15,37 @@ title: Input Resets
 				"-moz-appearance": "textfield",
 			},
 		},
-		".reset-search-input": {
-			"&::-webkit-search-decoration, &::-webkit-search-cancel-button, &::-webkit-search-results-button, &::-webkit-search-results-decoration":
-				{
-					"-webkit-appearance": "none",
-				},
-		},
 	}
 </script>
 
 <UtilsTable {utilities} />
 
-## How to disable it?
+## Usage
+
+### Single import
 
 ```js
-tailwindcssAddons({
-    utilities: {
-        inputResets: false,
-    },
-})
+// tailwind.config.js | tailwind.config.ts
+
+import { resetNumberInput } from "tailwindcss-addons"
+
+export default {
+    plugins: [resetNumberInput],
+}
+```
+
+### Multi import
+
+```js
+// tailwind.config.js | tailwind.config.ts
+
+import tailwindcssAddons from "tailwindcss-addons"
+
+export default {
+    plugins: [
+        ...tailwindcssAddons({
+            resetNumberInput: false, // Enabled by default
+        }),
+    ],
+}
 ```
