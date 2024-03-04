@@ -7,12 +7,32 @@ title: Background Radial
 -   Use `bg-radial-w-<spacing>` and `bg-radial-h-<spacing>` for altering the width and the height separately.
 -   Use `bg-radial-circle-<border-width>` for altering the size of the circle.
 
-## How to disable it?
+## Usage
+
+### Single import
 
 ```js
-tailwindcssAddons({
-    utilities: {
-        bgRadial: false,
-    },
-})
+// tailwind.config.js | tailwind.config.ts
+
+import { bgRadial } from "tailwindcss-addons"
+
+export default {
+    plugins: [bgRadial],
+}
+```
+
+### Multi import
+
+```js
+// tailwind.config.js | tailwind.config.ts
+
+import tailwindcssAddons from "tailwindcss-addons"
+
+export default {
+    plugins: [
+        ...tailwindcssAddons({
+            bgRadial: false, // Enabled by default
+        }),
+    ],
+}
 ```

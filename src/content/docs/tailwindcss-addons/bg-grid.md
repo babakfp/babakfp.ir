@@ -7,12 +7,32 @@ title: Background Grid
 -   Use `bg-grid-w-<spacing>` and `bg-grid-h-<spacing>` for altering the width and the height separately.
 -   Use `bg-grid-border-<border-width>` for altering the thickness of the lines.
 
-## How to disable it?
+## Usage
+
+### Single import
 
 ```js
-tailwindcssAddons({
-    utilities: {
-        bgGrid: false,
-    },
-})
+// tailwind.config.js | tailwind.config.ts
+
+import { bgGrid } from "tailwindcss-addons"
+
+export default {
+    plugins: [bgGrid],
+}
+```
+
+### Multi import
+
+```js
+// tailwind.config.js | tailwind.config.ts
+
+import tailwindcssAddons from "tailwindcss-addons"
+
+export default {
+    plugins: [
+        ...tailwindcssAddons({
+            bgGrid: false, // Enabled by default
+        }),
+    ],
+}
 ```

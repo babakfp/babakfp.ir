@@ -11,12 +11,32 @@ title: Hide & Show
 
 <UtilsTable {utilities} />
 
-## How to disable it?
+## Usage
+
+### Single import
 
 ```js
-tailwindcssAddons({
-    utilities: {
-        hideShow: false,
-    },
-})
+// tailwind.config.js | tailwind.config.ts
+
+import { hideShow } from "tailwindcss-addons"
+
+export default {
+    plugins: [hideShow],
+}
+```
+
+### Multi import
+
+```js
+// tailwind.config.js | tailwind.config.ts
+
+import tailwindcssAddons from "tailwindcss-addons"
+
+export default {
+    plugins: [
+        ...tailwindcssAddons({
+            hideShow: false, // Enabled by default
+        }),
+    ],
+}
 ```

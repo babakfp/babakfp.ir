@@ -11,12 +11,32 @@ title: Overflow Unset
 
 <UtilsTable {utilities} />
 
-## How to disable it?
+## Usage
+
+### Single import
 
 ```js
-tailwindcssAddons({
-    utilities: {
-        overflowUnset: false,
-    },
-})
+// tailwind.config.js | tailwind.config.ts
+
+import { overflowUnset } from "tailwindcss-addons"
+
+export default {
+    plugins: [overflowUnset],
+}
+```
+
+### Multi import
+
+```js
+// tailwind.config.js | tailwind.config.ts
+
+import tailwindcssAddons from "tailwindcss-addons"
+
+export default {
+    plugins: [
+        ...tailwindcssAddons({
+            overflowUnset: false, // Enabled by default
+        }),
+    ],
+}
 ```

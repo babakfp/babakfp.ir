@@ -80,16 +80,16 @@ export const docsSidebarItems = readable([
                         path: "/docs/tailwindcss-addons/flex-grid",
                     },
                     {
-                        title: "Font Weight Regular",
-                        path: "/docs/tailwindcss-addons/font-weight-regular",
+                        title: "Font Regular",
+                        path: "/docs/tailwindcss-addons/font-regular",
                     },
                     {
                         title: "More Default Values",
                         path: "/docs/tailwindcss-addons/more-default-values",
                     },
                     {
-                        title: "Screen to Dynamic Screen",
-                        path: "/docs/tailwindcss-addons/screen-to-dynamic-screen",
+                        title: "Dynamic Screen",
+                        path: "/docs/tailwindcss-addons/dynamic-screen",
                     },
                 ],
             },
@@ -126,15 +126,15 @@ export const docsSidebarItems = readable([
                     },
                     {
                         title: "Inset Center",
-                        path: "/docs/tailwindcss-addons/inset",
+                        path: "/docs/tailwindcss-addons/inset-center",
                     },
                     {
                         title: "Overflow Unset",
-                        path: "/docs/tailwindcss-addons/overflow",
+                        path: "/docs/tailwindcss-addons/overflow-unset",
                     },
                     {
-                        title: "Tap Highlight",
-                        path: "/docs/tailwindcss-addons/tap-highlight",
+                        title: "Tap",
+                        path: "/docs/tailwindcss-addons/tap",
                     },
                 ],
             },
@@ -142,8 +142,8 @@ export const docsSidebarItems = readable([
                 title: "Variants",
                 items: [
                     {
-                        title: "Not Variants",
-                        path: "/docs/tailwindcss-addons/not-variants",
+                        title: "Not",
+                        path: "/docs/tailwindcss-addons/not",
                     },
                 ],
             },

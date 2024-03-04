@@ -11,12 +11,32 @@ title: Flip
 
 <UtilsTable {utilities} />
 
-## How to disable it?
+## Usage
+
+### Single import
 
 ```js
-tailwindcssAddons({
-    utilities: {
-        flip: false,
-    },
-})
+// tailwind.config.js | tailwind.config.ts
+
+import { flip } from "tailwindcss-addons"
+
+export default {
+    plugins: [flip],
+}
+```
+
+### Multi import
+
+```js
+// tailwind.config.js | tailwind.config.ts
+
+import tailwindcssAddons from "tailwindcss-addons"
+
+export default {
+    plugins: [
+        ...tailwindcssAddons({
+            flip: false, // Enabled by default
+        }),
+    ],
+}
 ```

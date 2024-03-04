@@ -9,6 +9,7 @@ export default {
     presets: [
         tailwindcssAddons({
             presets: {
+                // TODO: remove
                 screenToDynamicScreen: true,
             },
         }),

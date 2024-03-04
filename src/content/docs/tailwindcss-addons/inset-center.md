@@ -1,12 +1,12 @@
 ---
-title: User Drag
+title: Inset Center
 ---
 
 <script>
 	import UtilsTable from '$lib/UtilsTable.svelte'
 	import {getUtilities} from '$utils/tailwind.js'
-	import drag from 'tailwindcss-addons/src/utilities/drag.cjs'
-	const utilities = getUtilities(drag.handler);
+	import insetCenter from 'tailwindcss-addons/src/utilities/insetCenter.cjs'
+	const utilities = getUtilities(insetCenter.handler);
 </script>
 
 <UtilsTable {utilities} />
@@ -18,10 +18,10 @@ title: User Drag
 ```js
 // tailwind.config.js | tailwind.config.ts
 
-import { drag } from "tailwindcss-addons"
+import { insetCenter } from "tailwindcss-addons"
 
 export default {
-    plugins: [drag],
+    plugins: [insetCenter],
 }
 ```
 
@@ -35,7 +35,7 @@ import tailwindcssAddons from "tailwindcss-addons"
 export default {
     plugins: [
         ...tailwindcssAddons({
-            drag: false, // Enabled by default
+            insetCenter: false, // Enabled by default
         }),
     ],
 }
