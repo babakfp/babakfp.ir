@@ -5,8 +5,16 @@
 
 <div class="leading-6">
     {#each Object.entries(selectorAndStyles) as [propertyOrSelector, valueOrObjectOfPropertyAndValue]}
-        <!-- For variants -->
-        {#if valueOrObjectOfPropertyAndValue === ""}
+        <!-- For @apply -->
+        {#if propertyOrSelector.includes("@apply")}
+            <span style="color: #908CAA">{"@apply"}</span>
+            <span style="color: #9CCFD8">
+                {propertyOrSelector.replace("@apply", "").trim()}<span
+                    style="color: #908CAA">{";"}</span
+                >
+            </span>
+        {:else if valueOrObjectOfPropertyAndValue === ""}
+            <!-- For variants -->
             <!-- selector -->
             <div>{propertyOrSelector}</div>
         {:else if typeof valueOrObjectOfPropertyAndValue === "string"}
