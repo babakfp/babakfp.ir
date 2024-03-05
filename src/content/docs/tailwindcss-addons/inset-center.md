@@ -1,12 +1,12 @@
 ---
-title: Hide & Show
+title: Inset Center
 ---
 
 <script>
 	import UtilsTable from "$lib/UtilsTable.svelte"
 	import { getUtilities } from "$utils/tailwind.js"
-	import { hideShow } from "tailwindcss-addons"
-	const utilities = getUtilities(hideShow.handler);
+	import { insetCenter } from "tailwindcss-addons"
+	const utilities = getUtilities(insetCenter.handler);
 </script>
 
 <UtilsTable {utilities} />
@@ -18,10 +18,10 @@ title: Hide & Show
 ```js
 // tailwind.config.js | tailwind.config.ts
 
-import { hideShow } from "tailwindcss-addons"
+import { insetCenter } from "tailwindcss-addons"
 
 export default {
-    plugins: [hideShow],
+    plugins: [insetCenter],
 }
 ```
 
@@ -35,7 +35,7 @@ import tailwindcssAddons from "tailwindcss-addons"
 export default {
     plugins: [
         ...tailwindcssAddons({
-            hideShow: false, // Enabled by default
+            insetCenter: false, // Enabled by default
         }),
     ],
 }

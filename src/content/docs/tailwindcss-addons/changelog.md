@@ -2,6 +2,35 @@
 title: CHANGELOG
 ---
 
+## 1.8.3
+
+-   Added `base` param to `resetNumberInput()` as `resetSearchInput()`. When using them as single imports, excute them.
+
+## 1.8.2
+
+-   [fix] Included file extension when importing.
+-   Onlu included source files in published package.
+
+## 1.8.1
+
+-   Reverted the feature that was syncing the values of `spacing` with `minWidth`, `maxWidth`, `minHeight`, and `maxHeight` utils. https://github.com/tailwindlabs/tailwindcss/pull/12300.
+
+## 1.8.0
+
+-   [breaking] Requires `"tailwindcss": ">= 3.4.1 < 4"`.
+-   [breaking] Dropped CJS support (ESM only).
+-   [breaking] Rewrote the API.
+-   [breaking] Renamed `notVariants` to `not`.
+-   [breaking] Renamed `tap-highlight` to `tab`.
+-   [breaking] Renamed `screenToDynamicScreen` to `dynamicScreen`.
+-   [breaking] Removed `resetInputs` and added (`resetNumberInput` and `resetSearchInput`) utils.
+-   [breaking] Renamed `fontWeightRegular` to `fontRegular`.
+-   [breaking] Renamed `moreDefaultValues` to `extraDefaults`.
+-   [breaking] Enabled `dynamicScreen` by default.
+-   Added JSDoc support.
+-   Added hocus variants.
+-   Can import plugins individually.
+
 ## 1.7.0
 
 -   [breaking] Renamed `screenSizeFix` option to `screenToDynamicScreen`.

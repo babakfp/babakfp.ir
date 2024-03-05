@@ -1,12 +1,12 @@
 ---
-title: Hide & Show
+title: Dir
 ---
 
 <script>
-	import UtilsTable from "$lib/UtilsTable.svelte"
-	import { getUtilities } from "$utils/tailwind.js"
-	import { hideShow } from "tailwindcss-addons"
-	const utilities = getUtilities(hideShow.handler);
+    import UtilsTable from "$lib/UtilsTable.svelte"
+    import { getUtilities } from "$utils/tailwind.js"
+    import { dir } from "tailwindcss-addons"
+    const utilities = getUtilities(dir.handler);
 </script>
 
 <UtilsTable {utilities} />
@@ -18,10 +18,10 @@ title: Hide & Show
 ```js
 // tailwind.config.js | tailwind.config.ts
 
-import { hideShow } from "tailwindcss-addons"
+import { dir } from "tailwindcss-addons"
 
 export default {
-    plugins: [hideShow],
+    plugins: [dir],
 }
 ```
 
@@ -35,7 +35,7 @@ import tailwindcssAddons from "tailwindcss-addons"
 export default {
     plugins: [
         ...tailwindcssAddons({
-            hideShow: false, // Enabled by default
+            dir: false, // Enabled by default
         }),
     ],
 }

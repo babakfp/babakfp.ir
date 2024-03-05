@@ -1,5 +1,5 @@
 ---
-title: Not Variants
+title: Not
 ---
 
 <script>
@@ -17,8 +17,8 @@ title: Not Variants
 		'.not-last-of-type': {
 			'&:not(:last-of-type)': '',
 		},
-		'.not-[VALUE]': {
-			'&:not(VALUE)': '',
+		'.not-[<value>]': {
+			'&:not(<value>)': '',
 		},
 	}
 </script>
@@ -27,12 +27,32 @@ title: Not Variants
 
 In order to use this feature, your Tailwind version must support the [`matchVariant`](https://tailwindcss.com/docs/plugins#dynamic-variants) feature. You're safe if using `v3.2.1` or above (I'm not sure about the older versions).
 
-## How to disable it?
+## Usage
+
+### Single import
 
 ```js
-tailwindcssAddons({
-    variants: {
-        notVariants: false,
-    },
-})
+// tailwind.config.js | tailwind.config.ts
+
+import { not } from "tailwindcss-addons"
+
+export default {
+    plugins: [not],
+}
+```
+
+### Multi import
+
+```js
+// tailwind.config.js | tailwind.config.ts
+
+import tailwindcssAddons from "tailwindcss-addons"
+
+export default {
+    plugins: [
+        ...tailwindcssAddons({
+            not: false, // Enabled by default
+        }),
+    ],
+}
 ```

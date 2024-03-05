@@ -1,12 +1,12 @@
 ---
-title: Tap Highlight
+title: Tap
 ---
 
 <script>
 	import UtilsTable from '$lib/UtilsTable.svelte'
 	const utilities = {
-		'.tap-highlight-COLOR': {
-			'-webkit-tap-highlight-color': 'VALUE',
+		'.tap-<color>': {
+			'-webkit-tap-color': '<value>',
 		}
 	}
 </script>
@@ -17,12 +17,32 @@ title: Tap Highlight
 -   <a href="https://tailwindcss.com/docs/background-color#changing-the-opacity" target="_blank" rel="noreferrer">Changing the opacity</a>
 -   <a href="https://tailwindcss.com/docs/background-color#arbitrary-values" target="_blank" rel="noreferrer">Arbitrary values</a>
 
-## How to disable it?
+## Usage
+
+### Single import
 
 ```js
-tailwindcssAddons({
-    utilities: {
-        tapHighlight: false,
-    },
-})
+// tailwind.config.js | tailwind.config.ts
+
+import { tap } from "tailwindcss-addons"
+
+export default {
+    plugins: [tap],
+}
+```
+
+### Multi import
+
+```js
+// tailwind.config.js | tailwind.config.ts
+
+import tailwindcssAddons from "tailwindcss-addons"
+
+export default {
+    plugins: [
+        ...tailwindcssAddons({
+            tap: false, // Enabled by default
+        }),
+    ],
+}
 ```

@@ -8,57 +8,41 @@ title: TailwindCSS Addons
 pnpm add -D tailwindcss-addons
 ```
 
-## How to use it
+## Usage
 
-Add the code below into your `tailwind.config.js` file:
+### Single import
 
 <!-- prettier-ignore -->
 ```js
+// tailwind.config.js | tailwind.config.ts
+
+import { /* <plugin-name> */ } from "tailwindcss-addons"
+
+export default {
+    plugins: [/* <plugin-name> */],
+}
+```
+
+### Multi import
+
+```js
+// tailwind.config.js | tailwind.config.ts
+
 import tailwindcssAddons from "tailwindcss-addons"
 
 export default {
-	presets: [
-		tailwindcssAddons(),
-	],
+    plugins: [
+        ...tailwindcssAddons({
+            /* <plugin-name> */: /* <boolean> */,
+        }),
+    ],
 }
 ```
 
-The function takes an `object` as an argument:
+### Default options
 
-```js
-tailwindcssAddons({
-    // Here
-})
-```
+When using multi import syntax, all options except `flexGrid` and `fontRegular` are enabled by default.
 
-### Default configuration
+### Enable or disable
 
-```js
-const defaultConfig = {
-    presets: {
-        flexGrid: false,
-        fontWeightRegular: false,
-        moreDefaultValues: true,
-        screenToDynamicScreen: false,
-    },
-    utilities: {
-        bgGrid: true,
-        bgRadial: true,
-        dir: true,
-        drag: true,
-        flip: true,
-        hideShow: true,
-        inputResets: true,
-        insetCenter: true,
-        overflowUnset: true,
-        tapHighlight: true,
-    },
-    variants: {
-        notVariants: true,
-    },
-}
-```
-
-### Add or remove
-
-Use `true` to include and use `false` to exclude.
+Use `true` to enable and use `false` to disable.

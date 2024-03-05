@@ -18,7 +18,7 @@
         style="padding-left: calc(1rem * {depthLvl - 2});"
     >
         {#if depthLvl > 2}
-            <IconChevronRight class="max-h-2 min-h-2 min-w-2 max-w-2" />
+            <IconChevronRight class="text-[0.5rem]" />
         {/if}
 
         <div class="line-clamp-1">

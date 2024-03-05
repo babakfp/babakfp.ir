@@ -1,19 +1,12 @@
+import type { Config } from "tailwindcss"
 import colors from "tailwindcss/colors"
 import defaultTheme from "tailwindcss/defaultTheme"
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette"
 import tailwindcssAddons from "tailwindcss-addons"
+import plugin from "tailwindcss/plugin"
 
-/** @type {import("tailwindcss").Config} */
 export default {
     content: ["./src/**/*.{html,js,svelte,ts,md}"],
-    presets: [
-        tailwindcssAddons({
-            presets: {
-                screenToDynamicScreen: true,
-            },
-        }),
-        container(),
-    ],
     theme: {
         extend: {
             spacing: {
@@ -27,9 +20,9 @@ export default {
             },
         },
         fontFamily: {
-            sans: ["Quicksand", defaultTheme.fontFamily.sans],
-            title: ["BigNoodleTitling", defaultTheme.fontFamily.sans],
-            mono: ["JetBrainsMono", defaultTheme.fontFamily.mono],
+            sans: ["Quicksand", ...defaultTheme.fontFamily.sans],
+            title: ["BigNoodleTitling", ...defaultTheme.fontFamily.sans],
+            mono: ["JetBrainsMono", ...defaultTheme.fontFamily.mono],
         },
         fontWeight: {
             // thin: "100",
@@ -44,53 +37,55 @@ export default {
         },
     },
     plugins: [
+        ...tailwindcssAddons(),
+        containerUtility(),
         outlineInsetUtility(),
         highlightUtility(),
         buttonComponents(),
         codeComponents(),
         linkComponents(),
     ],
-}
+} satisfies Config
 
 function buttonComponents() {
-    return ({ addComponents }) => {
+    return plugin(({ addComponents }) => {
         addComponents({
             ".btn": {},
             ".btn-icon": {},
             ".btn-link": {},
         })
-    }
+    })
 }
 
 function linkComponents() {
-    return ({ addComponents }) => {
+    return plugin(({ addComponents }) => {
         addComponents({
             ".link": {},
         })
-    }
+    })
 }
 
 function codeComponents() {
-    return ({ addComponents }) => {
+    return plugin(({ addComponents }) => {
         addComponents({
             ".code-block": {},
             ".inline-code": {},
         })
-    }
+    })
 }
 
 function outlineInsetUtility() {
-    return ({ addUtilities }) => {
+    return plugin(({ addUtilities }) => {
         addUtilities({
             ".outline-inset": {
                 "@apply -outline-offset-2": "",
             },
         })
-    }
+    })
 }
 
 function highlightUtility() {
-    return ({ matchUtilities, theme }) => {
+    return plugin(({ matchUtilities, theme }) => {
         // This is for when the "shadow" and "highlight" utilities are used on the same element.
         const otherShadowUtilityValues =
             "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)"
@@ -105,36 +100,36 @@ function highlightUtility() {
                 values: flattenColorPalette(theme("backgroundColor")),
             },
         )
-    }
+    })
 }
 
-function container() {
-    return {
-        theme: {
-            extend: {
-                spacing: {
-                    "container-x": "var(--container-x)",
+function containerUtility() {
+    return plugin(
+        ({ addBase }) => {
+            addBase({
+                ":root": {
+                    "--container-x": "1rem",
+                    "@screen sm": {
+                        "--container-x": "1.5rem",
+                    },
                 },
-                container: {
-                    center: true,
-                    padding: "var(--container-x)",
+                ".container": {
+                    "@apply !max-w-screen-xl": "",
+                },
+            })
+        },
+        {
+            theme: {
+                extend: {
+                    spacing: {
+                        "container-x": "var(--container-x)",
+                    },
+                    container: {
+                        center: true,
+                        padding: "var(--container-x)",
+                    },
                 },
             },
         },
-        plugins: [
-            ({ addBase }) => {
-                addBase({
-                    ":root": {
-                        "--container-x": "1rem",
-                        "@screen sm": {
-                            "--container-x": "1.5rem",
-                        },
-                    },
-                    ".container": {
-                        "@apply !max-w-screen-xl": "",
-                    },
-                })
-            },
-        ],
-    }
+    )
 }

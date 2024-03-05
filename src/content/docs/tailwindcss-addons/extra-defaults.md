@@ -1,20 +1,16 @@
 ---
-title: Presets
+title: Extra Defaults
 ---
 
-These styles will be added to your tailwind config file.
+Your tailwind config file will be extended with these values:
 
 ```js
 {
     theme: {
         extend: {
-            spacing: generateSpacing([
+            spacing: sizeToRem([
                 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 13, 15, 17, 18, 19, 21, 22, 23,
             ]),
-            minWidth: ({ theme }) => theme("spacing"),
-            maxWidth: ({ theme }) => theme("spacing"),
-            minHeight: ({ theme }) => theme("spacing"),
-            maxHeight: ({ theme }) => theme("spacing"),
             zIndex: {
                 1: "1",
                 2: "2",
@@ -41,9 +37,9 @@ These styles will be added to your tailwind config file.
                 "2xs": ["0.625rem", { lineHeight: "1" }],
             },
             letterSpacing: {
-                "widest-2": ".25em",
-                "widest-3": ".5em",
-                "widest-4": ".75em",
+                "widest-2": "0.25em",
+                "widest-3": "0.5em",
+                "widest-4": "0.75em",
                 "widest-5": "1em",
             },
         },
@@ -51,12 +47,32 @@ These styles will be added to your tailwind config file.
 }
 ```
 
-## How to disable it?
+## Usage
+
+### Single import
 
 ```js
-tailwindcssAddons({
-    presets: {
-        moreDefaultValues: false,
-    },
-})
+// tailwind.config.js | tailwind.config.ts
+
+import { extraDefaults } from "tailwindcss-addons"
+
+export default {
+    plugins: [extraDefaults],
+}
+```
+
+### Multi import
+
+```js
+// tailwind.config.js | tailwind.config.ts
+
+import tailwindcssAddons from "tailwindcss-addons"
+
+export default {
+    plugins: [
+        ...tailwindcssAddons({
+            extraDefaults: false, // Enabled by default
+        }),
+    ],
+}
 ```

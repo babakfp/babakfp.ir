@@ -1,12 +1,12 @@
 ---
-title: Hide & Show
+title: Overflow Unset
 ---
 
 <script>
 	import UtilsTable from "$lib/UtilsTable.svelte"
 	import { getUtilities } from "$utils/tailwind.js"
-	import { hideShow } from "tailwindcss-addons"
-	const utilities = getUtilities(hideShow.handler);
+	import { overflowUnset } from "tailwindcss-addons"
+	const utilities = getUtilities(overflowUnset.handler);
 </script>
 
 <UtilsTable {utilities} />
@@ -18,10 +18,10 @@ title: Hide & Show
 ```js
 // tailwind.config.js | tailwind.config.ts
 
-import { hideShow } from "tailwindcss-addons"
+import { overflowUnset } from "tailwindcss-addons"
 
 export default {
-    plugins: [hideShow],
+    plugins: [overflowUnset],
 }
 ```
 
@@ -35,7 +35,7 @@ import tailwindcssAddons from "tailwindcss-addons"
 export default {
     plugins: [
         ...tailwindcssAddons({
-            hideShow: false, // Enabled by default
+            overflowUnset: false, // Enabled by default
         }),
     ],
 }

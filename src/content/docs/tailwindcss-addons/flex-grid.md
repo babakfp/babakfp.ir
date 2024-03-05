@@ -3,20 +3,20 @@ title: Flex & Grid
 ---
 
 <script>
-	import UtilsTable from '$lib/UtilsTable.svelte'
-	import { getUtilities } from '$utils/tailwind.js'
-	import { plugin as flexGrid } from 'tailwindcss-addons/src/presets/flexGrid.cjs'
+	import UtilsTable from "$lib/UtilsTable.svelte"
+	import { getUtilities } from "$utils/tailwind.js"
+	import { flexGrid } from "tailwindcss-addons"
 	const utilities = getUtilities(flexGrid.handler)
 
-	const justifyContent = getUtilsOfASpesificClass('.jc')
-	const justifyItems = getUtilsOfASpesificClass('.ji')
-	const justifySelf = getUtilsOfASpesificClass('.js')
-	const alignContent = getUtilsOfASpesificClass('.ac')
-	const alignItems = getUtilsOfASpesificClass('.ai')
-	const alignSelf = getUtilsOfASpesificClass('.as')
-	const placeContent = getUtilsOfASpesificClass('.pc')
-	const placeItems = getUtilsOfASpesificClass('.pi')
-	const placeSelf = getUtilsOfASpesificClass('.ps')
+	const justifyContent = getUtilsOfASpesificClass(".jc")
+	const justifyItems = getUtilsOfASpesificClass(".ji")
+	const justifySelf = getUtilsOfASpesificClass(".js")
+	const alignContent = getUtilsOfASpesificClass(".ac")
+	const alignItems = getUtilsOfASpesificClass(".ai")
+	const alignSelf = getUtilsOfASpesificClass(".as")
+	const placeContent = getUtilsOfASpesificClass(".pc")
+	const placeItems = getUtilsOfASpesificClass(".pi")
+	const placeSelf = getUtilsOfASpesificClass(".ps")
 
 	function getUtilsOfASpesificClass(classStartsWith) {
 		const utils = Object.entries(utilities).filter(util => {
@@ -27,7 +27,7 @@ title: Flex & Grid
 	}
 </script>
 
-This feature will replace all Tailwind (`justify-content`, `justify-items`, `justify-self`, `align-content`, `align-items`, `align-self`, `place-content`, `place-items`, `place-self`) classes.
+This feature will replace all Tailwind (`justify-content`, `justify-items`, `justify-self`, `align-content`, `align-items`, `align-self`, `place-content`, `place-items`, `place-self`) classes. You will no longer be able to use the original classes.
 
 ## Justify Content
 
@@ -65,14 +65,32 @@ This feature will replace all Tailwind (`justify-content`, `justify-items`, `jus
 
 <UtilsTable utilities={placeSelf} />
 
-## How to enable it?
+## Usage
 
-By activating this option, you will no longer be able to use the previous classes, for example: `items-center`, and `justify-center`. If you were using the old classes, your site may crash and Tailwind will throw you an error.
+### Single import
 
 ```js
-tailwindcssAddons({
-    presets: {
-        flexGrid: true,
-    },
-})
+// tailwind.config.js | tailwind.config.ts
+
+import { flexGrid } from "tailwindcss-addons"
+
+export default {
+    plugins: [flexGrid],
+}
+```
+
+### Multi import
+
+```js
+// tailwind.config.js | tailwind.config.ts
+
+import tailwindcssAddons from "tailwindcss-addons"
+
+export default {
+    plugins: [
+        ...tailwindcssAddons({
+            flexGrid: true, // Disabled by default
+        }),
+    ],
+}
 ```
