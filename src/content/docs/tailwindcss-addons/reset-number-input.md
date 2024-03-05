@@ -4,18 +4,9 @@ title: Reset Number Input
 
 <script>
 	import UtilsTable from '$lib/UtilsTable.svelte'
-	const utilities = {
-		".reset-number-input": {
-			"&::-webkit-outer-spin-button, &::-webkit-inner-spin-button": {
-				// Using `display: none` crashes Chrome on hover
-				"-webkit-appearance": "none",
-				//  Apparently some margin are still there even though it's hidden
-				margin: "0",
-				// Firefox
-				"-moz-appearance": "textfield",
-			},
-		},
-	}
+	import { getUtilities } from "$utils/tailwind.js"
+    import { resetNumberInput } from "tailwindcss-addons"
+    const utilities = getUtilities(resetNumberInput.handler);
 </script>
 
 <UtilsTable {utilities} />
