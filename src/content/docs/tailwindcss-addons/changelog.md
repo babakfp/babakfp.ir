@@ -2,6 +2,11 @@
 title: CHANGELOG
 ---
 
+## 1.8.2
+
+-   [fix] Included file extension when importing.
+-   Onlu included source files in published package.
+
 ## 1.8.1
 
 -   Reverted the feature that was syncing the values of `spacing` with `minWidth`, `maxWidth`, `minHeight`, and `maxHeight` utils. https://github.com/tailwindlabs/tailwindcss/pull/12300.
