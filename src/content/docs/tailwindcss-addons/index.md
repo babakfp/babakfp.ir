@@ -33,7 +33,7 @@ import tailwindcssAddons from "tailwindcss-addons"
 export default {
     plugins: [
         ...tailwindcssAddons({
-            /* <plugin-name> */: false,
+            /* <plugin-name> */: /* <boolean> */,
         }),
     ],
 }

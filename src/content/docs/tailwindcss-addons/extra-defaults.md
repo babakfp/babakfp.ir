@@ -47,12 +47,32 @@ These styles will be added to your tailwind config file.
 }
 ```
 
-## How to disable it?
+## Usage
+
+### Single import
 
 ```js
-tailwindcssAddons({
-    presets: {
-        moreDefaultValues: false,
-    },
-})
+// tailwind.config.js | tailwind.config.ts
+
+import { extraDefaults } from "tailwindcss-addons"
+
+export default {
+    plugins: [extraDefaults],
+}
+```
+
+### Multi import
+
+```js
+// tailwind.config.js | tailwind.config.ts
+
+import tailwindcssAddons from "tailwindcss-addons"
+
+export default {
+    plugins: [
+        ...tailwindcssAddons({
+            extraDefaults: false, // Enabled by default
+        }),
+    ],
+}
 ```
