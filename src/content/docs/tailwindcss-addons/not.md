@@ -4,6 +4,7 @@ title: Not Variants
 
 <script>
 	import UtilsTable from '$lib/UtilsTable.svelte'
+
 	const utilities = {
 		'.not-first': {
 			'&:not(:first-child)': '',

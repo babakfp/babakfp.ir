@@ -4,6 +4,7 @@ title: Tap
 
 <script>
 	import UtilsTable from '$lib/UtilsTable.svelte'
+
 	const utilities = {
 		'.tap-<color>': {
 			'-webkit-tap-color': '<value>',
