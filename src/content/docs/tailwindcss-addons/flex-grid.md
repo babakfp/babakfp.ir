@@ -1,5 +1,5 @@
 ---
-title: Flex & Grid
+title: Flex Grid
 ---
 
 <script>

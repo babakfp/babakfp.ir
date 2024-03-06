@@ -1,5 +1,5 @@
 ---
-title: Hide & Show
+title: Hide Show
 ---
 
 <script>
