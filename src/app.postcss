@@ -112,7 +112,7 @@
 
 @layer components {
     .article-content {
-        @apply space-y-4 leading-7;
+        @apply space-y-md-base leading-7;
 
         h1,
         h2,
@@ -120,17 +120,16 @@
         h4,
         h5,
         h6 {
-            @apply break-words text-gray-50 not-first:!my-8;
+            @apply my-md-title break-words text-gray-50;
             code {
                 @apply [text-transform:none];
             }
         }
         h1 {
-            @apply mb-8 font-title text-5xl sm:text-6xl;
+            @apply font-title text-5xl sm:text-6xl;
         }
         h2 {
             @apply text-3xl sm:text-4xl;
-            @apply border-b-2 border-gray-50/10 pb-2;
         }
         h3 {
             @apply text-xl sm:text-2xl;
@@ -206,9 +205,9 @@
         }
 
         blockquote {
-            @apply relative rounded border-b-2 border-l-2 border-gray-50/5 bg-gray-800 p-4;
+            @apply relative rounded bg-gray-400/5 p-4 shadow-sm shadow-gray-400/20;
             blockquote {
-                @apply -mr-4 mt-4 sm:mr-0;
+                @apply mt-md-base -mr-4 sm:mr-0;
             }
         }
 

@@ -11,7 +11,7 @@
         {title}
     </div>
 
-    <div class="mt-4 space-y-4 text-sm sm:mt-8 sm:text-base">
+    <div class="space-y-md-base mt-4 text-sm sm:mt-8 sm:text-base">
         <slot />
     </div>
 </div>

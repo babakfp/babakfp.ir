@@ -65,7 +65,7 @@
 
                     <div class="article-content">
                         {#if data.title}
-                            <h1 class="mt-8">{data.title}</h1>
+                            <h1>{data.title}</h1>
                         {/if}
 
                         <svelte:component this={data.content} />

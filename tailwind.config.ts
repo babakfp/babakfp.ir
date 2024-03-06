@@ -11,6 +11,8 @@ export default {
         extend: {
             spacing: {
                 "header-h": "var(--header-h)",
+                "md-base": "1.5rem",
+                "md-title": "2.5rem",
             },
             colors: {
                 gray: colors.zinc,
