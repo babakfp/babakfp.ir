@@ -3,10 +3,11 @@ title: Hide Show
 ---
 
 <script>
-	import UtilsTable from "$lib/UtilsTable.svelte"
-	import { getUtilities } from "$utils/tailwind.js"
-	import { hideShow } from "tailwindcss-addons"
-	const utilities = getUtilities(hideShow.handler);
+    import { hideShow } from "tailwindcss-addons"
+    import UtilsTable from "$lib/UtilsTable.svelte"
+    import { getUtilities } from "$utils/tailwind/getUtilities.ts"
+
+    const utilities = getUtilities(hideShow)
 </script>
 
 <UtilsTable {utilities} />

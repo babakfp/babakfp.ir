@@ -3,10 +3,11 @@ title: Flip
 ---
 
 <script>
-	import UtilsTable from "$lib/UtilsTable.svelte"
-	import { getUtilities } from "$utils/tailwind.js"
-	import { flip } from "tailwindcss-addons"
-	const utilities = getUtilities(flip.handler);
+    import { flip } from "tailwindcss-addons"
+    import UtilsTable from "$lib/UtilsTable.svelte"
+    import { getUtilities } from "$utils/tailwind/getUtilities.ts"
+
+    const utilities = getUtilities(flip)
 </script>
 
 <UtilsTable {utilities} />

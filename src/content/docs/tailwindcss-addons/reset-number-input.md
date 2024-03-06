@@ -3,10 +3,11 @@ title: Reset Number Input
 ---
 
 <script>
-	import UtilsTable from '$lib/UtilsTable.svelte'
-	import { getUtilities } from "$utils/tailwind.js"
     import { resetNumberInput } from "tailwindcss-addons"
-    const utilities = getUtilities(resetNumberInput().handler);
+    import UtilsTable from "$lib/UtilsTable.svelte"
+    import { getUtilities } from "$utils/tailwind/getUtilities.ts"
+
+    const utilities = getUtilities(resetNumberInput())
 </script>
 
 <UtilsTable {utilities} />

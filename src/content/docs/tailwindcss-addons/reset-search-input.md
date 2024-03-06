@@ -3,10 +3,11 @@ title: Reset Search Input
 ---
 
 <script>
-	import UtilsTable from '$lib/UtilsTable.svelte'
-	import { getUtilities } from "$utils/tailwind.js"
     import { resetSearchInput } from "tailwindcss-addons"
-    const utilities = getUtilities(resetSearchInput().handler);
+    import UtilsTable from "$lib/UtilsTable.svelte"
+    import { getUtilities } from "$utils/tailwind/getUtilities.ts"
+
+    const utilities = getUtilities(resetSearchInput())
 </script>
 
 <UtilsTable {utilities} />
