@@ -2,50 +2,42 @@
 title: Extra Defaults
 ---
 
-These styles will be added to your tailwind config file.
+<script>
+    import { onMount } from "svelte"
+    import { extraDefaults } from "tailwindcss-addons"
+    import stringifyObject from "stringify-object"
+    import UtilsTable from "$lib/UtilsTable.svelte"
 
-```js
-{
-    theme: {
-        extend: {
-            spacing: spacing([
-                4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 13, 15, 17, 18, 19, 21, 22, 23,
-            ]),
-            zIndex: {
-                1: "1",
-                2: "2",
-                3: "3",
-                4: "4",
-            },
-            blur: {
-                px: "1px",
-                xs: "2px",
-            },
-            borderWidth: {
-                3: "3px",
-            },
-            ringWidth: {
-                3: "3px",
-            },
-            ringOffsetWidth: {
-                3: "3px",
-            },
-            outlineOffset: {
-                3: "3px",
-            },
-            fontSize: {
-                "2xs": ["0.625rem", { lineHeight: "1" }],
-            },
-            letterSpacing: {
-                "widest-2": ".25em",
-                "widest-3": ".5em",
-                "widest-4": ".75em",
-                "widest-5": "1em",
-            },
-        },
-    },
-}
-```
+    let codeHTML = ""
+
+    const getHighlightedCode = async () => {
+		const response = await fetch("/api/highlighter", {
+			method: "POST",
+			body: json({
+                code: stringifyObject(extraDefaults.config, {
+                    indent: "    ",
+                    singleQuotes: false
+                }),
+                lang: "js"
+            }),
+			headers: {
+				"content-type": "application/json",
+			},
+		});
+	
+		return await response.json();
+	}
+
+    onMount(async () => {
+        codeHTML = await getHighlightedCode()
+    })
+</script>
+
+<UtilsTable utilities={extraDefaults.config.theme.extend} />
+
+Your tailwind config file will be extended with these values:
+
+{@html codeHTML}
 
 ## Usage
 

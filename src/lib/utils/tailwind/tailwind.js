@@ -127,5 +127,6 @@ export function getUtilities(plugin, { includeNegativeValues = false } = {}) {
             addUtilities(result)
         },
     })
+
     return utilities
 }

@@ -39,6 +39,7 @@
         "rehype-slug": "6.0.0",
         "remark-unwrap-images": "4.0.0",
         "shiki": "0.14.7",
+        "stringify-object": "5.0.0",
         "svelte": "4.2.9",
         "svelte-check": "3.6.3",
         "svelte-copy": "1.4.1",

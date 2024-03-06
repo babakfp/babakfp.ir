@@ -1,7 +1,7 @@
 import adapter from "@sveltejs/adapter-vercel"
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte"
 import { mdsvex, escapeSvelte } from "mdsvex"
-import { getHighlighter } from "shiki"
+import { highlighter } from "./src/lib/utils/shiki/highlighter.js"
 import remarkUnwrapImages from "remark-unwrap-images"
 import rehypeSlug from "rehype-slug"
 import rehypeExternalLinks from "rehype-external-links"
@@ -20,7 +20,7 @@ export default {
             $stores: "src/lib/stores",
             $portfolios: "src/lib/portfolios",
             $utils: "src/lib/utils",
-            "mdsvex-collections": "src/lib/mdsvex-collections/index.ts",
+            "mdsvex-collections": "src/lib/mdsvex-collections/index",
         },
     },
     preprocess: [
@@ -79,7 +79,7 @@ export default {
             ],
             highlight: {
                 highlighter: async (code, lang) => {
-                    const highlightedCode = await mdsvexHighlight(code, lang)
+                    const highlightedCode = await highlighter(code, lang)
                     return highlightedCode ? escapeSvelte(highlightedCode) : ""
                 },
             },
@@ -90,14 +90,6 @@ export default {
         if (warning.code.startsWith("a11y-")) return
         handler(warning)
     },
-}
-
-async function mdsvexHighlight(code, lang) {
-    const highlighter = await getHighlighter({
-        theme: "rose-pine-moon",
-        langs: ["html", "css", "js", "svelte", "php", "bash"],
-    })
-    return highlighter.codeToHtml(code, { lang })
 }
 
 /**
