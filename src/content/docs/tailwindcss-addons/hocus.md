@@ -1,5 +1,5 @@
 ---
-title: Hocus
+title: Hocus Variants
 ---
 
 <script>

@@ -1,5 +1,5 @@
 ---
-title: Not
+title: Not Variants
 ---
 
 <script>
