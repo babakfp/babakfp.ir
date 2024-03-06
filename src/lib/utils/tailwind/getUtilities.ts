@@ -19,6 +19,8 @@ export const getUtilities = (plugin: ReturnType<typeof twPlugin>) => {
                     if (property.startsWith("@defaults")) continue
                 }
 
+                normalizeProperties(properties)
+
                 outputUtilities[selector] = properties
             }
         })
@@ -27,6 +29,39 @@ export const getUtilities = (plugin: ReturnType<typeof twPlugin>) => {
     plugin.handler({ addUtilities })
 
     return outputUtilities
+}
+
+function normalizeProperties(input:string | RecursiveStringObject) {
+    if (typeof input !== "object") {
+        return input
+    }
+
+    // if (Array.isArray(input)) {
+    //     return input.map(normalizeProperties)
+    // }
+
+    return Object.keys(input).reduce((newObject, key) => {
+        const value = input[key]
+        let newValue = typeof value === "object" ? normalizeProperties(value) : value
+        
+        console.log('key',key);
+        
+        key.replace(
+            /([a-z])([A-Z])/g,
+            (m, p1, p2) => `${p1}-${p2.toLowerCase()}`,
+        )
+        
+        console.log('key',key);
+
+        
+        // newObject[
+        //     key.replace(
+        //         /([a-z])([A-Z])/g,
+        //         (m, p1, p2) => `${p1}-${p2.toLowerCase()}`,
+        //     )
+        // ] = newValue
+        return newObject
+    })
 }
 
 function cleanCSSRuleObject(utilities: CSSRuleObject) {
