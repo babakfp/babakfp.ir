@@ -3,7 +3,7 @@
 </script>
 
 <section class="mx-auto mt-14 w-full max-w-prose">
-    <h2 class="font-title text-6xl text-gray-50">
+    <h2 class="font-title text-4xl text-gray-50">
         {title}
     </h2>
 

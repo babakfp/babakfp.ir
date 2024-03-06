@@ -8,7 +8,7 @@
     <title>Docs</title>
 </svelte:head>
 
-<h2 class="text-center font-title text-6xl text-gray-50">DOCS</h2>
+<h2 class="text-center font-title text-4xl text-gray-50">DOCS</h2>
 
 <ul class="mx-auto mt-8 grid max-w-prose gap-4">
     {#each data.packages as pkg}

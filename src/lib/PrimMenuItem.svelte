@@ -19,5 +19,5 @@
         <slot />
     </div>
 
-    <span class="font-mono">{title}</span>
+    <span>{title}</span>
 </a>

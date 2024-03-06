@@ -2,13 +2,13 @@
     import UtilsTableProperties from "$lib/UtilsTableProperties.svelte"
 
     export let utilities: object
-    const theadItems = ["class", "properties"]
+    const theadItems = ["Class", "Properties"]
 </script>
 
 <div class="relative">
     <div class="table-wrapper overflow-x-auto">
         <table
-            class="w-full border-collapse whitespace-nowrap text-left font-mono text-sm"
+            class="w-full border-collapse whitespace-nowrap text-left text-sm"
         >
             <thead>
                 <tr>
@@ -22,7 +22,9 @@
                 </tr>
             </thead>
 
-            <tbody class="select-text align-baseline selection:bg-gray-50/10">
+            <tbody
+                class="select-text align-baseline font-mono selection:bg-gray-50/10"
+            >
                 {#each Object.entries(utilities) as [_class, selectorAndStyles]}
                     <tr
                         class="not-first-of-type:border-t-[0.1px] not-first-of-type:border-gray-50/5 xl:table-row"

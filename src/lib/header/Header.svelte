@@ -13,10 +13,10 @@
 <header class="sticky top-0 z-50 bg-gray-950">
     <div class="container flex h-header-h justify-between px-0">
         {#if $page.url.pathname === "/"}
-            <div class="header-btn font-mono font-bold">BABAKFP</div>
+            <div class="header-btn font-bold">BABAKFP</div>
         {:else}
             <a
-                class="header-btn font-mono font-bold"
+                class="header-btn font-bold"
                 href="/"
                 aria-label="Go to home page"
             >
