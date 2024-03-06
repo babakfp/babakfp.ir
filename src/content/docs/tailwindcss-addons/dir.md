@@ -3,10 +3,11 @@ title: Dir
 ---
 
 <script>
-    import UtilsTable from "$lib/UtilsTable.svelte"
-    import { getUtilities } from "$utils/tailwind.js"
     import { dir } from "tailwindcss-addons"
-    const utilities = getUtilities(dir.handler);
+    import UtilsTable from "$lib/UtilsTable.svelte"
+    import { getUtils } from "$utils/tailwind/getUtils.ts"
+
+    const utilities = getUtils(dir)
 </script>
 
 <UtilsTable {utilities} />

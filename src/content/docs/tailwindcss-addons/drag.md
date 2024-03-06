@@ -3,10 +3,11 @@ title: Drag
 ---
 
 <script>
-    import UtilsTable from "$lib/UtilsTable.svelte"
-    import { getUtilities } from "$utils/tailwind.js"
     import { drag } from "tailwindcss-addons"
-    const utilities = getUtilities(drag.handler);
+    import UtilsTable from "$lib/UtilsTable.svelte"
+    import { getUtils } from "$utils/tailwind/getUtils.ts"
+
+    const utilities = getUtils(drag)
 </script>
 
 <UtilsTable {utilities} />

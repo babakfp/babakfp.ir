@@ -3,10 +3,11 @@ title: Flex & Grid
 ---
 
 <script>
-	import UtilsTable from "$lib/UtilsTable.svelte"
-	import { getUtilities } from "$utils/tailwind.js"
-	import { flexGrid } from "tailwindcss-addons"
-	const utilities = getUtilities(flexGrid.handler)
+    import { flexGrid } from "tailwindcss-addons"
+    import UtilsTable from "$lib/UtilsTable.svelte"
+    import { getUtils } from "$utils/tailwind/getUtils.ts"
+
+    const utilities = getUtils(flexGrid)
 
 	const justifyContent = getUtilsOfASpesificClass(".jc")
 	const justifyItems = getUtilsOfASpesificClass(".ji")
