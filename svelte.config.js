@@ -1,12 +1,16 @@
 import adapter from "@sveltejs/adapter-vercel"
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte"
-import { mdsvex, escapeSvelte } from "mdsvex"
+import {
+    mdsvex,
+    escapeSvelte,
+} from "../MDsveX/packages/mdsvex/dist/main.cjs.js"
 import { getHighlighter } from "shiki"
 import remarkUnwrapImages from "remark-unwrap-images"
 import rehypeSlug from "rehype-slug"
 import rehypeExternalLinks from "rehype-external-links"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import { s } from "hastscript"
+import { svelteInMarkdown } from "../svelte-in-markdown/dist/main.js"
 
 const mdsvexExtension = ".md"
 
@@ -25,65 +29,68 @@ export default {
     },
     preprocess: [
         vitePreprocess(),
-        mdsvex({
-            extensions: [mdsvexExtension],
-            layout: "/src/lib/markdown/MdsvexLayout.svelte",
-            remarkPlugins: [remarkUnwrapImages],
-            rehypePlugins: [
-                rehypeSlug,
-                [
-                    rehypeExternalLinks,
-                    {
-                        target(element) {
-                            return element?.properties?.href &&
-                                isExternalLink(element?.properties?.href)
-                                ? "_blank"
-                                : undefined
-                        },
-                        rel: ["nofollow", "noopener", "noreferrer"],
-                    },
-                ],
-                [
-                    rehypeAutolinkHeadings,
-                    {
-                        properties: {
-                            class: "heading-permalink",
-                            "aria-label": "Permalink to this headline",
-                        },
-                        content() {
-                            return [
-                                // <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5"/></svg>
-                                s(
-                                    "svg",
-                                    {
-                                        xmlns: "http://www.w3.org/2000/svg",
-                                        fill: "none",
-                                        stroke: "currentColor",
-                                        "stroke-width": "1.5",
-                                        viewBox: "0 0 24 24",
-                                        class: "icon",
-                                    },
-                                    [
-                                        s("path", {
-                                            "stroke-linecap": "round",
-                                            "stroke-linejoin": "round",
-                                            d: "M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5",
-                                        }),
-                                    ],
-                                ),
-                            ]
-                        },
-                        test: ["h2", "h3", "h4", "h5", "h6"],
-                    },
-                ],
-            ],
-            highlight: {
-                highlighter: async (code, lang) => {
-                    const highlightedCode = await mdsvexHighlight(code, lang)
-                    return highlightedCode ? escapeSvelte(highlightedCode) : ""
-                },
-            },
+        svelteInMarkdown({
+            extensions: [".md"],
         }),
+        // mdsvex({
+        //     extensions: [mdsvexExtension],
+        //     layout: "/src/lib/markdown/MdsvexLayout.svelte",
+        //     remarkPlugins: [remarkUnwrapImages],
+        //     rehypePlugins: [
+        //         rehypeSlug,
+        //         [
+        //             rehypeExternalLinks,
+        //             {
+        //                 target(element) {
+        //                     return element?.properties?.href &&
+        //                         isExternalLink(element?.properties?.href)
+        //                         ? "_blank"
+        //                         : undefined
+        //                 },
+        //                 rel: ["nofollow", "noopener", "noreferrer"],
+        //             },
+        //         ],
+        //         [
+        //             rehypeAutolinkHeadings,
+        //             {
+        //                 properties: {
+        //                     class: "heading-permalink",
+        //                     "aria-label": "Permalink to this headline",
+        //                 },
+        //                 content() {
+        //                     return [
+        //                         // <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5"/></svg>
+        //                         s(
+        //                             "svg",
+        //                             {
+        //                                 xmlns: "http://www.w3.org/2000/svg",
+        //                                 fill: "none",
+        //                                 stroke: "currentColor",
+        //                                 "stroke-width": "1.5",
+        //                                 viewBox: "0 0 24 24",
+        //                                 class: "icon",
+        //                             },
+        //                             [
+        //                                 s("path", {
+        //                                     "stroke-linecap": "round",
+        //                                     "stroke-linejoin": "round",
+        //                                     d: "M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5",
+        //                                 }),
+        //                             ],
+        //                         ),
+        //                     ]
+        //                 },
+        //                 test: ["h2", "h3", "h4", "h5", "h6"],
+        //             },
+        //         ],
+        //     ],
+        //     highlight: {
+        //         highlighter: async (code, lang) => {
+        //             const highlightedCode = await mdsvexHighlight(code, lang)
+        //             return highlightedCode ? escapeSvelte(highlightedCode) : ""
+        //         },
+        //     },
+        // }),
     ],
     // Disable A11Y warnings
     onwarn: (warning, handler) => {

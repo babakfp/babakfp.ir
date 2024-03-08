@@ -80,7 +80,7 @@ const getGlobEntryValue = async (
 ) => {
     const globValueResult = (await entry.glob.value()) as ImportGlobItemResolved
 
-    const metadata = schema.parse(globValueResult.metadata)
+    const metadata = {}
 
     return {
         collection: entry.collection,
