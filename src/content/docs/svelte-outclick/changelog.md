@@ -4,6 +4,11 @@ title: CHANGELOG
 
 Restart your app after updating the package.
 
+## 3.7.1
+
+-   [feature] Added `e.detail.target` property.
+-   [breaking] Requires version `4.2.12` or higher.
+
 ## 3.7.0
 
 -   Compatible with SvelteKit version `2.0.0`.
