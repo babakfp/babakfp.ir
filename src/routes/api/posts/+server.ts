@@ -16,7 +16,7 @@ async function getPosts() {
 
     const posts: Post[] = entries
         .map(entry => ({
-            ...(entry.metadata as PostMetadataSchema),
+            ...(entry.frontmatter as PostMetadataSchema),
             slug: entry.slug,
         }))
         .sort(

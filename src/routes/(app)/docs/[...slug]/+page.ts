@@ -10,7 +10,7 @@ export async function load({ params }) {
     }
 
     return {
-        ...(doc.metadata as DocMetadataSchema),
+        ...(doc.frontmatter as DocMetadataSchema),
         slug: params.slug,
         content: doc.content,
     }

@@ -20,7 +20,7 @@ export async function load({ fetch, params }) {
     }
 
     return {
-        ...(post.metadata as PostMetadataSchema),
+        ...(post.frontmatter as PostMetadataSchema),
         slug: params.slug,
         content: post.content,
         posts,
