@@ -2,12 +2,12 @@
     import img from "./img.svelte"
     import blockquote from "./blockquote.svelte"
 
-    export const MarkdownElements = { img, blockquote }
+    export const markdownElements = { img, blockquote }
 </script>
 
 <script lang="ts">
     import { setContext } from "svelte"
-    setContext("MarkdownElements", MarkdownElements)
+    setContext("markdownElements", markdownElements)
 </script>
 
 <slot />

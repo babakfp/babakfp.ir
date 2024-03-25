@@ -30,7 +30,7 @@ export default {
     preprocess: [
         vitePreprocess(),
         svelteInMarkdown({
-            MarkdownElements: ["img", "blockquote"],
+            markdownElements: ["img", "blockquote"],
             extensions: [".md"],
         }),
         // mdsvex({
