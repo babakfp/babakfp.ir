@@ -1,10 +1,10 @@
 import { json } from "@sveltejs/kit"
 import {
     type Post,
-    postMetadataSchema,
-    type PostMetadataSchema,
+    postFrontmatterSchema,
+    type PostFrontmatter,
 } from "$lib/types"
-import { getCollectionEntries } from "mdsvex-collections"
+import { getCollectionEntries } from "$lib/markdown/collections"
 
 export async function GET() {
     const posts = await getPosts()
@@ -12,11 +12,11 @@ export async function GET() {
 }
 
 async function getPosts() {
-    const entries = await getCollectionEntries("posts", postMetadataSchema)
+    const entries = await getCollectionEntries("posts", postFrontmatterSchema)
 
     const posts: Post[] = entries
         .map(entry => ({
-            ...(entry.metadata as PostMetadataSchema),
+            ...(entry.frontmatter as PostFrontmatter),
             slug: entry.slug,
         }))
         .sort(

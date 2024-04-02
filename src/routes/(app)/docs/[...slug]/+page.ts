@@ -1,16 +1,20 @@
 import { error } from "@sveltejs/kit"
-import { docMetadataSchema, type DocMetadataSchema } from "$lib/types.js"
-import { getCollectionEntry } from "mdsvex-collections"
+import { docFrontmatterSchema, type DocFrontmatter } from "$lib/types.js"
+import { getCollectionEntry } from "$lib/markdown/collections"
 
 export async function load({ params }) {
-    const doc = await getCollectionEntry("docs", params.slug, docMetadataSchema)
+    const doc = await getCollectionEntry(
+        "docs",
+        params.slug,
+        docFrontmatterSchema,
+    )
 
     if (!doc) {
         error(404)
     }
 
     return {
-        ...(doc.metadata as DocMetadataSchema),
+        ...(doc.frontmatter as DocFrontmatter),
         slug: params.slug,
         content: doc.content,
     }

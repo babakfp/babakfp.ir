@@ -1,10 +1,10 @@
 import { error } from "@sveltejs/kit"
 import {
     type Post,
-    postMetadataSchema,
-    type PostMetadataSchema,
+    postFrontmatterSchema,
+    type PostFrontmatter,
 } from "$lib/types.js"
-import { getCollectionEntry } from "mdsvex-collections"
+import { getCollectionEntry } from "$lib/markdown/collections"
 
 export async function load({ fetch, params }) {
     const res = await fetch("/api/posts")
@@ -12,7 +12,7 @@ export async function load({ fetch, params }) {
     const post = await getCollectionEntry(
         "posts",
         params.slug,
-        postMetadataSchema,
+        postFrontmatterSchema,
     )
 
     if (!post) {
@@ -20,7 +20,7 @@ export async function load({ fetch, params }) {
     }
 
     return {
-        ...(post.metadata as PostMetadataSchema),
+        ...(post.frontmatter as PostFrontmatter),
         slug: params.slug,
         content: post.content,
         posts,

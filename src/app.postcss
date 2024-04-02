@@ -74,7 +74,7 @@
 
 @layer components {
     .inline-code {
-        @apply select-text rounded-md bg-gray-50/10 px-1.5 py-1 text-[.9em] highlight-gray-50/10 selection:bg-indigo-600/50;
+        @apply select-text rounded-md bg-gray-50/10 px-1.5 py-0.5 text-[.9em] highlight-gray-50/10 selection:bg-indigo-600/50;
     }
 }
 
@@ -149,10 +149,7 @@
             @apply relative [&:hover_.heading-permalink]:show;
         }
         .heading-permalink {
-            @apply absolute inset-y-0 right-full flex w-[--container-x] items-center justify-center pr-0.5 text-sm opacity-50 duration-200 ease-in hide sm:w-auto sm:text-[.8em];
-        }
-        h2 .heading-permalink {
-            @apply pb-1;
+            @apply text-[1em] delay-300 duration-300 hide;
         }
 
         p em {
@@ -207,7 +204,7 @@
         blockquote {
             @apply relative rounded bg-gray-400/5 p-4 shadow-sm shadow-gray-400/20;
             blockquote {
-                @apply mt-md-base -mr-4 sm:mr-0;
+                @apply -mr-4 mt-md-base sm:mr-0;
             }
         }
 

@@ -18,7 +18,9 @@ export type MarkdownEntry = {
 
 export type ImportGlobItemResolved = {
     default: typeof SvelteComponent
-    metadata?: Record<string, unknown>
+    markdownData: {
+        frontmatter: Record<string, unknown>
+    }
 }
 
 export type CollectionEntry = {
@@ -31,5 +33,5 @@ export type CollectionEntry = {
     }
     slug: string
     content: ImportGlobItemResolved["default"]
-    metadata?: ImportGlobItemResolved["metadata"]
+    frontmatter: ImportGlobItemResolved["markdownData"]["frontmatter"]
 }

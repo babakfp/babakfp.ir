@@ -72,7 +72,7 @@ const markdownFilesToEntries = async () => {
 }
 
 /**
- * @returns The resolved value of an entry with metadata.
+ * @returns The resolved value of an entry with frontmatter.
  */
 const getGlobEntryValue = async (
     entry: MarkdownEntry,
@@ -80,7 +80,7 @@ const getGlobEntryValue = async (
 ) => {
     const globValueResult = (await entry.glob.value()) as ImportGlobItemResolved
 
-    const metadata = schema.parse(globValueResult.metadata)
+    const frontmatter = schema.parse(globValueResult.markdownData.frontmatter)
 
     return {
         collection: entry.collection,
@@ -90,7 +90,7 @@ const getGlobEntryValue = async (
         },
         slug: entry.slug,
         content: globValueResult.default,
-        metadata,
+        frontmatter,
     } satisfies CollectionEntry
 }
 

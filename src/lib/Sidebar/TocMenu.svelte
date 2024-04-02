@@ -4,39 +4,34 @@
     import { browser } from "$app/environment"
     import Sidebar from "$lib/Sidebar/Sidebar.svelte"
     import SidebarTocItem from "$lib/Sidebar/SidebarTocItem.svelte"
+    import { getTableOfContents } from "../../../../svelte-in-markdown/dist/getTableOfContents.js"
 
     export let isOpen: boolean
     export let name: string
 
-    interface TocItem {
+    type TocItem = {
         id: string
-        lvl: number
-        value: string
+        level: number
+        textContent: string
     }
 
     let items: TocItem[] = []
+
     onMount(() => (items = getHeadings()))
+
     $: if (browser && $page.url.pathname) {
         items = getHeadings()
     }
 
-    function getHeadings() {
-        let items: TocItem[] = []
-
-        const pageHeadings = document.querySelectorAll(
-            ".article-content > h2, .article-content > h3, .article-content > h4, .article-content > h5, .article-content > h6",
-        )
-
-        pageHeadings?.forEach(h => {
-            items.push({
-                id: h.id!,
-                lvl: Number(h.localName.slice(1)),
-                value: h.textContent!,
-            })
-        })
-
-        return items
-    }
+    const getHeadings = () =>
+        getTableOfContents({
+            containerSelector: ".article-content",
+            headingLevels: [2, 3, 4, 5, 6],
+        })?.map(item => ({
+            id: item.attributes.id ?? "",
+            level: Number(item.level),
+            textContent: item.textContent,
+        })) satisfies TocItem[]
 </script>
 
 <Sidebar
@@ -57,10 +52,10 @@
             <li>
                 <SidebarTocItem
                     href="#{item.id}"
-                    depthLvl={item.lvl}
+                    depthLvl={item.level}
                     on:click={() => (isOpen = false)}
                 >
-                    {@html item.value}
+                    {@html item.textContent}
                 </SidebarTocItem>
             </li>
         {/each}

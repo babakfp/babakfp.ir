@@ -16,7 +16,6 @@
         "$lib": "${workspaceFolder}/src/lib",
         "$stores": "${workspaceFolder}/src/lib/stores",
         "$portfolios": "${workspaceFolder}/src/lib/portfolios",
-        "$utils": "${workspaceFolder}/src/lib/utils",
-        "mdsvex-collections": "${workspaceFolder}/src/lib/mdsvex-collections/index.ts"
+        "$utils": "${workspaceFolder}/src/lib/utils"
     }
 }

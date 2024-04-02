@@ -1,4 +1,5 @@
 <script lang="ts">
+    import Layout from "$lib/markdown/Layout.svelte"
     import { isDocsTocSidebarOpen } from "$stores/docs"
     import BackToTopBtn from "$lib/BackToTopBtn.svelte"
     import DocsMenu from "$lib/docs/DocsMenu.svelte"
@@ -11,7 +12,9 @@
     >
         <DocsMenu />
 
-        <slot />
+        <Layout>
+            <slot />
+        </Layout>
 
         <TocMenu name="docs" bind:isOpen={$isDocsTocSidebarOpen} />
     </div>
