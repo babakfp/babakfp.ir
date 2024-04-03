@@ -1,14 +1,14 @@
 import adapter from "@sveltejs/adapter-vercel"
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte"
-import { svelteInMarkdown } from "../svelte-in-markdown/dist/main.js"
-import { transformer } from "../svelte-in-markdown/dist/transformers/unified/index.js"
-import { fromHtml } from "../svelte-in-markdown/dist/transformers/unified/hast-util-from-html.js"
-
-const MARKDOWN_EXTENSION = ".md"
+import { svelteInMarkdown, DEFAULT_EXTENSIONS } from "svelte-in-markdown"
+import {
+    transformer,
+    hastFromHtml,
+} from "svelte-in-markdown/transformers/unified"
 
 /** @type {import("@sveltejs/kit").Config} */
 export default {
-    extensions: [".svelte", MARKDOWN_EXTENSION],
+    extensions: [".svelte", ...DEFAULT_EXTENSIONS],
     kit: {
         adapter: adapter(),
         alias: {
@@ -21,7 +21,6 @@ export default {
     preprocess: [
         vitePreprocess(),
         svelteInMarkdown({
-            extensions: [MARKDOWN_EXTENSION],
             layouts: {
                 default: ["img", "blockquote"],
             },
@@ -40,12 +39,9 @@ export default {
                                     "aria-label": "Permalink to this headline",
                                 },
                                 content() {
-                                    return fromHtml(
+                                    return hastFromHtml(
                                         `<svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 8.25h15m-16.5 7.5h15m-1.8-13.5-3.9 19.5m-2.1-19.5-3.9 19.5"/></svg>`,
-                                        {
-                                            fragment: true,
-                                        },
-                                    ).children
+                                    )
                                 },
                                 test: ["h2", "h3", "h4", "h5", "h6"],
                             },

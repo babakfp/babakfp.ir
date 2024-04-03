@@ -4,34 +4,36 @@
     import { browser } from "$app/environment"
     import Sidebar from "$lib/Sidebar/Sidebar.svelte"
     import SidebarTocItem from "$lib/Sidebar/SidebarTocItem.svelte"
-    import { getTableOfContents } from "../../../../svelte-in-markdown/dist/getTableOfContents.js"
+    import { getTableOfContents } from "svelte-in-markdown"
 
     export let isOpen: boolean
     export let name: string
 
-    type TocItem = {
+    type Headings = {
         id: string
         level: number
         textContent: string
-    }
+    }[]
 
-    let items: TocItem[] = []
+    let headings: Headings = []
 
-    onMount(() => (items = getHeadings()))
+    onMount(() => {
+        headings = getHeadings()
+    })
 
     $: if (browser && $page.url.pathname) {
-        items = getHeadings()
+        headings = getHeadings()
     }
 
     const getHeadings = () =>
         getTableOfContents({
             containerSelector: ".article-content",
             headingLevels: [2, 3, 4, 5, 6],
-        })?.map(item => ({
-            id: item.attributes.id ?? "",
-            level: Number(item.level),
-            textContent: item.textContent,
-        })) satisfies TocItem[]
+        })?.map(heading => ({
+            id: heading.attributes.id ?? "",
+            level: Number(heading.level),
+            textContent: heading.textContent,
+        })) satisfies Headings
 </script>
 
 <Sidebar
@@ -47,17 +49,21 @@
         ON THIS PAGE
     </div>
 
-    <ul class="mt-4">
-        {#each items as item}
-            <li>
-                <SidebarTocItem
-                    href="#{item.id}"
-                    depthLvl={item.level}
-                    on:click={() => (isOpen = false)}
-                >
-                    {@html item.textContent}
-                </SidebarTocItem>
-            </li>
-        {/each}
-    </ul>
+    {#if headings.length}
+        <ul class="mt-4">
+            {#each headings as heading}
+                <li>
+                    <SidebarTocItem
+                        href="#{heading.id}"
+                        depthLvl={heading.level}
+                        on:click={() => (isOpen = false)}
+                    >
+                        {heading.textContent}
+                    </SidebarTocItem>
+                </li>
+            {/each}
+        </ul>
+    {:else}
+        <p>No headings found!</p>
+    {/if}
 </Sidebar>

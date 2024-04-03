@@ -80,7 +80,7 @@ const getGlobEntryValue = async (
 ) => {
     const globValueResult = (await entry.glob.value()) as ImportGlobItemResolved
 
-    const frontmatter = schema.parse(globValueResult.markdownData.frontmatter)
+    const frontmatter = schema.parse(globValueResult.markdownData_.frontmatter)
 
     return {
         collection: entry.collection,
