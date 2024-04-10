@@ -1,9 +1,5 @@
 {
     "editor.formatOnSave": true,
-    "files.exclude": {
-        // We're hiding these files because they shouldn't be edited manually.
-        "**/pnpm-lock.yaml": true
-    },
     "search.exclude": {
         "**/.gitignore": true,
         "**/pnpm-lock.yaml": true,
