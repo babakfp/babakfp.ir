@@ -112,10 +112,10 @@
 
 @layer components {
     .article-content {
-        --md-base: theme(spacing.6);
-        --md-title: theme(spacing.10);
+        --markdown-spacing-base: theme(spacing.6);
+        --markdown-spacing-title: theme(spacing.10);
 
-        @apply space-y-[--md-base] leading-7;
+        @apply space-y-[--markdown-spacing-base] leading-7;
 
         h1,
         h2,
@@ -123,7 +123,7 @@
         h4,
         h5,
         h6 {
-            @apply !my-[--md-title] break-words text-gray-50;
+            @apply !my-[--markdown-spacing-title] break-words text-gray-50;
             code {
                 @apply [text-transform:none];
             }
@@ -207,7 +207,7 @@
         blockquote {
             @apply relative rounded bg-gray-400/5 p-4 shadow-sm shadow-gray-400/20;
             blockquote {
-                @apply -mr-4 mt-[--md-base] sm:mr-0;
+                @apply -mr-4 mt-[--markdown-spacing-base] sm:mr-0;
             }
         }
 
