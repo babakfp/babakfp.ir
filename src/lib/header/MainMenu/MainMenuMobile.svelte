@@ -18,7 +18,7 @@
 
 <nav
     id="main-menu-mobile"
-    class="fixed inset-x-0 top-header-h z-40 w-full -translate-y-full duration-200 hide xl:hidden
+    class="fixed inset-x-0 top-[--header-h] z-40 w-full -translate-y-full duration-200 hide xl:hidden
 	{$isMainMenuOpen && 'translate-y-0 show'}"
     aria-hidden={!$isMainMenuOpen}
     aria-label="Main menu"

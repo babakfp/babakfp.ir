@@ -11,7 +11,7 @@
 </script>
 
 <header class="sticky top-0 z-50 bg-gray-950">
-    <div class="container flex h-header-h justify-between px-0">
+    <div class="container flex h-[--header-h] justify-between px-0">
         {#if $page.url.pathname === "/"}
             <div class="header-btn font-bold">BABAKFP</div>
         {:else}
