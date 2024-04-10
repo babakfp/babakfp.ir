@@ -36,20 +36,20 @@
         })) satisfies Headings
 </script>
 
-<Sidebar
-    class="xl:w-auto xl:max-w-72"
-    id="{name}-toc-menu"
-    bind:isOpen
-    toggleButtonId="{name}-toc-menu-toggle"
-    ariaLabel="{name.charAt(0).toUpperCase() +
-        name.slice(1)} (on this page) menu"
-    hideScrollbar={true}
->
-    <div class="whitespace-nowrap px-container-x font-bold xl:pr-0">
-        ON THIS PAGE
-    </div>
+{#if headings.length}
+    <Sidebar
+        class="xl:ml-container-x xl:w-auto xl:max-w-72"
+        id="{name}-toc-menu"
+        bind:isOpen
+        toggleButtonId="{name}-toc-menu-toggle"
+        ariaLabel="{name.charAt(0).toUpperCase() +
+            name.slice(1)} (on this page) menu"
+        hideScrollbar={true}
+    >
+        <div class="whitespace-nowrap px-container-x font-bold xl:pr-0">
+            ON THIS PAGE
+        </div>
 
-    {#if headings.length}
         <ul class="mt-4">
             {#each headings as heading}
                 <li>
@@ -63,7 +63,5 @@
                 </li>
             {/each}
         </ul>
-    {:else}
-        <p>No headings found!</p>
-    {/if}
-</Sidebar>
+    </Sidebar>
+{/if}
