@@ -5,7 +5,6 @@
         "**/pnpm-lock.yaml": true
     },
     "search.exclude": {
-        // We're excluding these files because their values are already accessible in ".*ignore-sync".
         "**/.gitignore": true,
         "**/pnpm-lock.yaml": true,
         "**/*.svg": true,
