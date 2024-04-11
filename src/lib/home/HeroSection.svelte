@@ -14,9 +14,7 @@
     <h1 class="font-title text-5xl text-gray-50 sm:text-7xl">
         Babak Farkhoopak
     </h1>
-    <code
-        class="inline-code pointer-events-none mt-4 inline-block !px-3 text-sm highlight-gray-50/10"
-    >
+    <code class="inline-code pointer-events-none mt-4 inline-block">
         JavaScript | FrontEnd Developer
     </code>
     <p class="mt-4 leading-7">
