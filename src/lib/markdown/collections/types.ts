@@ -1,4 +1,5 @@
 import type { SvelteComponent } from "svelte"
+import type { MarkdownData } from "svelte-in-markdown"
 
 export type ImportGlob = Record<string, () => Promise<unknown>>
 
@@ -18,9 +19,7 @@ export type MarkdownEntry = {
 
 export type ImportGlobItemResolved = {
     default: typeof SvelteComponent
-    markdownData_: {
-        frontmatter: Record<string, unknown>
-    }
+    markdownData_: MarkdownData
 }
 
 export type CollectionEntry = {
