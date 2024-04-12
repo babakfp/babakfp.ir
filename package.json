@@ -29,6 +29,7 @@
         "prettier": "3.2.5",
         "prettier-plugin-svelte": "3.2.2",
         "prettier-plugin-tailwindcss": "0.5.13",
+        "remark-github-alerts": "0.1.0-beta.3",
         "svelte": "4.2.13",
         "svelte-check": "3.6.9",
         "svelte-copy": "1.4.1",
