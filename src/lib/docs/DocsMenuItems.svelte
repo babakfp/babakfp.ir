@@ -27,13 +27,13 @@
             <ul>
                 {#each project.items as item}
                     <li class="mt-8">
-                        <h5
-                            class="block px-container-x font-semibold text-gray-50 xl:px-0"
-                        >
-                            {item.title}
-                        </h5>
+                        {#if item.items && item.items.length}
+                            <h5
+                                class="block px-container-x font-semibold text-gray-50 xl:px-0"
+                            >
+                                {item.title}
+                            </h5>
 
-                        {#if item.items && item.items.length > 0}
                             <ul class="mt-4">
                                 {#each item.items as { title, path }}
                                     <li>
@@ -47,6 +47,12 @@
                                     </li>
                                 {/each}
                             </ul>
+                        {:else if item.path}
+                            <h5
+                                class="block px-container-x font-semibold text-gray-50 xl:px-0"
+                            >
+                                <a href={item.path}>{item.title}</a>
+                            </h5>
                         {/if}
                     </li>
                 {/each}

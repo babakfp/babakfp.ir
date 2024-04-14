@@ -1,6 +1,9 @@
 import adapter from "@sveltejs/adapter-static"
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte"
-import { svelteInMarkdown, DEFAULT_EXTENSIONS } from "svelte-in-markdown"
+import {
+    SVELTE_EXTENSIONS,
+    svelteInMarkdownPreprocess,
+} from "svelte-in-markdown"
 import {
     transformer,
     hastFromHtml,
@@ -9,7 +12,7 @@ import remarkGithubAlerts from "remark-github-alerts"
 
 /** @type {import("@sveltejs/kit").Config} */
 export default {
-    extensions: [".svelte", ...DEFAULT_EXTENSIONS],
+    extensions: SVELTE_EXTENSIONS,
     kit: {
         adapter: adapter(),
         alias: {
@@ -20,8 +23,7 @@ export default {
         },
     },
     preprocess: [
-        vitePreprocess(),
-        svelteInMarkdown({
+        svelteInMarkdownPreprocess({
             layouts: {
                 default: ["img", "blockquote"],
             },
@@ -62,6 +64,7 @@ export default {
                                     "svelte",
                                     "php",
                                     "bash",
+                                    "yaml",
                                 ],
                             },
                         },
@@ -69,6 +72,7 @@ export default {
                 })
             },
         }),
+        vitePreprocess(),
     ],
     // Disable A11Y warnings
     onwarn: (warning, handler) => {

@@ -29,7 +29,7 @@ export const docsSidebarItems = readable([
         ],
         items: [
             {
-                title: "Getting Started",
+                title: "Get Started",
                 items: [
                     {
                         title: "Introduction",
@@ -37,9 +37,12 @@ export const docsSidebarItems = readable([
                     },
                     {
                         title: "CHANGELOG",
-                        path: "/docs/svelte-outclick/changelog",
                     },
                 ],
+            },
+            {
+                title: "CHANGELOG",
+                path: "/docs/svelte-outclick/changelog",
             },
         ],
     },
@@ -60,15 +63,11 @@ export const docsSidebarItems = readable([
         ],
         items: [
             {
-                title: "Getting Started",
+                title: "Get Started",
                 items: [
                     {
                         title: "Introduction",
                         path: "/docs/tailwindcss-addons",
-                    },
-                    {
-                        title: "CHANGELOG",
-                        path: "/docs/tailwindcss-addons/changelog",
                     },
                 ],
             },
@@ -169,6 +168,92 @@ export const docsSidebarItems = readable([
                         path: "/docs/tailwindcss-addons/not",
                     },
                 ],
+            },
+            {
+                title: "CHANGELOG",
+                path: "/docs/tailwindcss-addons/changelog",
+            },
+        ],
+    },
+    {
+        name: "svelte-in-markdown",
+        path: "/docs/svelte-in-markdown",
+        primaryLinks: [
+            {
+                title: "GitHub",
+                url: "https://github.com/babakfp/svelte-in-markdown",
+                icon: IconGithub,
+            },
+            {
+                title: "NPM",
+                url: "https://www.npmjs.com/package/svelte-in-markdown",
+                icon: IconNpm,
+            },
+        ],
+        items: [
+            {
+                title: "Get Started",
+                items: [
+                    {
+                        title: "Introduction",
+                        path: "/docs/svelte-in-markdown",
+                    },
+                    {
+                        title: "Installation",
+                        path: "/docs/svelte-in-markdown/installation",
+                    },
+                ],
+            },
+            {
+                title: "Things",
+                items: [
+                    {
+                        title: "Table of Contents",
+                        path: "/docs/svelte-in-markdown/table-of-contents",
+                    },
+                    {
+                        title: "Options",
+                        path: "/docs/svelte-in-markdown/options",
+                    },
+                ],
+            },
+            {
+                title: "Transformers",
+                items: [
+                    {
+                        title: "Introduction",
+                        path: "/docs/svelte-in-markdown/transformers",
+                    },
+                    {
+                        title: "Build a Transformer",
+                        path: "/docs/svelte-in-markdown/transformers/build",
+                    },
+                ],
+            },
+            {
+                title: "Unified",
+                items: [
+                    {
+                        title: "Introduction",
+                        path: "/docs/svelte-in-markdown/unified",
+                    },
+                    {
+                        title: "HAST from HTML",
+                        path: "/docs/svelte-in-markdown/unified/hast-from-html",
+                    },
+                    {
+                        title: "Plugins",
+                        path: "/docs/svelte-in-markdown/unified/plugins",
+                    },
+                    {
+                        title: "Add plugin",
+                        path: "/docs/svelte-in-markdown/unified/add-plugin",
+                    },
+                ],
+            },
+            {
+                title: "CHANGELOG",
+                path: "/docs/svelte-in-markdown/changelog",
             },
         ],
     },
