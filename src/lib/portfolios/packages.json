@@ -1,5 +1,19 @@
 [
     {
+        "title": "Svelte in Markdown",
+        "name": "svelte-in-markdown",
+        "description": "A preprocessor that allows you to write Svelte in Markdown.",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/44144724?v=4",
+        "starsCount": 0,
+        "forksCount": 0,
+        "openIssuesCount": 0,
+        "downloadsCount": 174,
+        "version": "0.0.2",
+        "license": "MIT",
+        "fileCount": 66,
+        "unpackedSize": 58800
+    },
+    {
         "title": "Svelte OutClick",
         "name": "svelte-outclick",
         "description": "A Svelte component that allows you to listen to the clicks that happen outside of an element.",

@@ -5,6 +5,10 @@ export const prerender = true
 
 const packages = [
     {
+        title: "Svelte in Markdown",
+        name: "svelte-in-markdown",
+    },
+    {
         title: "Svelte OutClick",
         name: "svelte-outclick",
     },
