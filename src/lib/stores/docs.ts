@@ -202,15 +202,6 @@ export const docsSidebarItems = readable([
                         title: "Installation",
                         path: "/docs/svelte-in-markdown/installation",
                     },
-                ],
-            },
-            {
-                title: "Things",
-                items: [
-                    {
-                        title: "Table of Contents",
-                        path: "/docs/svelte-in-markdown/table-of-contents",
-                    },
                     {
                         title: "Options",
                         path: "/docs/svelte-in-markdown/options",
@@ -248,6 +239,19 @@ export const docsSidebarItems = readable([
                     {
                         title: "Add plugin",
                         path: "/docs/svelte-in-markdown/unified/add-plugin",
+                    },
+                ],
+            },
+            {
+                title: "Stuff",
+                items: [
+                    {
+                        title: "Table of Contents",
+                        path: "/docs/svelte-in-markdown/table-of-contents",
+                    },
+                    {
+                        title: "Real-world Examples",
+                        path: "/docs/svelte-in-markdown/real-world-examples",
                     },
                 ],
             },
