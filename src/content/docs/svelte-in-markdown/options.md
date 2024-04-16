@@ -150,14 +150,14 @@ layout: blog
 
 ## `nodeModules`
 
--   Type:
+Type:
 
-    ```ts
-    {
-        ignore?: boolean // Default: `true`
-        allowedDependencies?: string[] // Default: `[]`
-    }
-    ```
+```ts
+{
+    ignore?: boolean // Default: `true`
+    allowedDependencies?: string[] // Default: `[]`
+}
+```
 
 > [!WARNING]
 > Not implemented!
