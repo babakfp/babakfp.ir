@@ -1,7 +1,7 @@
 <script lang="ts">
     import OutClick from "svelte-outclick"
     import { beforeNavigate } from "$app/navigation"
-    import BluredBackdrop from "$lib/BluredBackdrop.svelte"
+    import BlurredBackdrop from "$lib/BlurredBackdrop.svelte"
 
     export let isOpen = false
     export let id: string
@@ -18,7 +18,7 @@
     on:keydown={e => isOpen && e.key === "Escape" && (isOpen = false)}
 />
 
-<BluredBackdrop isVisible={isOpen} />
+<BlurredBackdrop isVisible={isOpen} />
 
 <OutClick
     tag="nav"

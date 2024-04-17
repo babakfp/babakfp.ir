@@ -2,7 +2,7 @@
     import OutClick from "svelte-outclick"
     import { beforeNavigate } from "$app/navigation"
     import { isMainMenuOpen, mainMenuItems } from "$stores/mainMenu"
-    import BluredBackdrop from "$lib/BluredBackdrop.svelte"
+    import BlurredBackdrop from "$lib/BlurredBackdrop.svelte"
     import PrimMenuItem from "$lib/PrimMenuItem.svelte"
     import { trapFocus } from "$lib/trapFocus"
 
@@ -14,7 +14,7 @@
         $isMainMenuOpen && e.key === "Escape" && ($isMainMenuOpen = false)}
 />
 
-<BluredBackdrop isVisible={$isMainMenuOpen} />
+<BlurredBackdrop isVisible={$isMainMenuOpen} />
 
 <nav
     id="main-menu-mobile"
