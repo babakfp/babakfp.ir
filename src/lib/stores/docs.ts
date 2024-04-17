@@ -240,6 +240,10 @@ export const docsSidebarItems = readable([
                         title: "Add plugin",
                         path: "/docs/svelte-in-markdown/unified/add-plugin",
                     },
+                    {
+                        title: "Options",
+                        path: "/docs/svelte-in-markdown/unified/options",
+                    },
                 ],
             },
             {
