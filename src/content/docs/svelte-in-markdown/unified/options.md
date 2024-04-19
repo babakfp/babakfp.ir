@@ -2,4 +2,4 @@
 title: Options
 ---
 
-jsDoc comments are available!
+IntelliSense and jsDoc comments are available!
