@@ -169,11 +169,11 @@ If `ignore` was `true`, set exceptions to allow the files of some packages to be
 ## `onFileIgnore`
 
 > [!NOTE]
-> Please refer to the jsDoc comments to learn more!
+> Please refer to the jsDoc comments to learn more.
 
 ## `onTransform`
 
 [Example](/docs/svelte-in-markdown/unified) usage.
 
 > [!NOTE]
-> Please refer to the jsDoc comments to learn more!
+> Please refer to the jsDoc comments to learn more.

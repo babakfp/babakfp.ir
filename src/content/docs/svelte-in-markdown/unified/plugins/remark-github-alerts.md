@@ -26,4 +26,4 @@ All importable styles:
 ```
 
 > [!NOTE]
-> Please refer to the jsDoc comments to learn more!
+> Please refer to the jsDoc comments to learn more.

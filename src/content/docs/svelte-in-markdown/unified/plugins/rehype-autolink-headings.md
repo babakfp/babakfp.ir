@@ -5,7 +5,7 @@ title: "rehype-autolink-headings"
 ["rehype-autolink-headings"](https://npmjs.com/package/rehype-autolink-headings).
 
 > [!NOTE]
-> Please refer to the jsDoc comments to learn more!
+> Please refer to the jsDoc comments to learn more.
 
 ## Example usage
 

@@ -5,7 +5,7 @@ title: "rehype-shiki"
 ["rehype-shiki"](https://npmjs.com/package/rehype-shiki).
 
 > [!NOTE]
-> Please refer to the jsDoc comments to learn more!
+> Please refer to the jsDoc comments to learn more.
 
 ## Example usage
 
