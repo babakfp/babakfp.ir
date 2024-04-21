@@ -247,15 +247,6 @@ export const docsSidebarItems = readable([
                 ],
             },
             {
-                title: "Advanced",
-                items: [
-                    {
-                        title: "Customize Elements",
-                        path: "/docs/svelte-in-markdown/customize-markdown-elements",
-                    },
-                ],
-            },
-            {
                 title: "Stuff",
                 items: [
                     {
@@ -265,6 +256,15 @@ export const docsSidebarItems = readable([
                     {
                         title: "Real-world Examples",
                         path: "/docs/svelte-in-markdown/real-world-examples",
+                    },
+                ],
+            },
+            {
+                title: "Advanced",
+                items: [
+                    {
+                        title: "Customize Elements",
+                        path: "/docs/svelte-in-markdown/customize-markdown-elements",
                     },
                 ],
             },
