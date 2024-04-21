@@ -5,6 +5,7 @@ title: Unified plugins
 -   ["remark-frontmatter"](/docs/svelte-in-markdown/unified/plugins/remark-frontmatter)
 -   ["remark-frontmatter-yaml"](/docs/svelte-in-markdown/unified/plugins/remark-frontmatter-yaml)
 -   ["remark-gfm"](/docs/svelte-in-markdown/unified/plugins/remark-gfm)
+-   ["remark-github-alerts"](/docs/svelte-in-markdown/unified/plugins/remark-github-alerts)
 -   ["remark-unwrap-images"](/docs/svelte-in-markdown/unified/plugins/remark-unwrap-images)
 -   ["remark-toc"](/docs/svelte-in-markdown/unified/plugins/remark-toc)
 -   ["rehype-slug"](/docs/svelte-in-markdown/unified/plugins/rehype-slug)
