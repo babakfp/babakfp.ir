@@ -2,7 +2,7 @@
 title: Svelte in Markdown
 ---
 
-A preprocessor that allows you to write Svelte in Markdown.
+Hey there! Welcome to [Svelte in Markdown](https://github.com/babakfp/svelte-in-markdown). Ever wished you could sprinkle some Svelte magic into your Markdown files? Well, now you can! With [Svelte in Markdown](https://github.com/babakfp/svelte-in-markdown), writing Svelte code directly in Markdown is a breeze. Whether you're jazzing up docs, crafting tutorials, or spicing up your content, we've got you covered. Say goodbye to boring Markdown and hello to dynamic, interactive content. Ready to level up your Markdown game? Let's dive in!
 
 ## What is this?
 
