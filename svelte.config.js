@@ -8,7 +8,6 @@ import {
     transformer,
     hastFromHtml,
 } from "svelte-in-markdown/transformers/unified"
-import remarkGithubAlerts from "remark-github-alerts"
 
 /** @type {import("@sveltejs/kit").Config} */
 export default {
@@ -30,11 +29,6 @@ export default {
             onTransform: async (options, config) => {
                 return await transformer(options, config, {
                     builtInPlugins: {
-                        remarkGfm: {
-                            plugins: {
-                                after: remarkGithubAlerts,
-                            },
-                        },
                         remarkToc: {
                             enable: false,
                         },
