@@ -34,3 +34,7 @@ Modify your `+layout.svelte` file:
     //                          ^ IMPORTANT
 </script>
 ```
+
+## Related resources
+
+-   Learn more about the [`layouts`](/docs/svelte-in-markdown/options#layouts) option.
