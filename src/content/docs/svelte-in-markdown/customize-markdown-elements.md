@@ -27,6 +27,14 @@ svelteInMarkdownPreprocess({
 Modify your `+layout.svelte` file:
 
 ```svelte
+<script lang="ts" context="module">
+    <!--          ^^^^^^^^^^^^^^^^ IMPORTANT -->
+
+    import img from "$lib/markdown/img.svelte"
+
+    export const markdownElements = { img }
+</script>
+
 <script lang="ts">
     import { setContext } from "svelte"
 
