@@ -109,8 +109,8 @@ Example `+layout.svelte` file:
 
 ```svelte
 <script lang="ts" context="module">
-    import img from "$lib/markdown/img.svelte"
-    import blockquote from "$lib/markdown/blockquote.svelte"
+    import img from "./img.svelte"
+    import blockquote from "./blockquote.svelte"
 
     export const markdownElements = { img, blockquote }
 </script>
