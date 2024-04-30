@@ -1,21 +1,21 @@
-import { z } from "zod"
+import * as v from "valibot"
 
-export const PostsFrontmatterSchema = z.object({
-    title: z.string(),
-    description: z.string(),
-    updated: z.string(),
-    published: z.string(),
+export const PostsFrontmatterSchema = v.object({
+    title: v.string(),
+    description: v.string(),
+    updated: v.string(),
+    published: v.string(),
 })
 
-export type Post = typeof PostsFrontmatterSchema._type & {
+export type Post = v.Input<typeof PostsFrontmatterSchema> & {
     slug: string
 }
 
-export const DocsFrontmatterSchema = z.object({
-    title: z.string(),
+export const DocsFrontmatterSchema = v.object({
+    title: v.string(),
 })
 
-export type Doc = typeof DocsFrontmatterSchema._type & {
+export type Doc = v.Input<typeof DocsFrontmatterSchema> & {
     slug: string
 }
 

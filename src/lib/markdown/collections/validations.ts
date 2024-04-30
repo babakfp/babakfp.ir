@@ -1,12 +1,12 @@
-import { z } from "zod"
+import * as v from "valibot"
 
-const collectionNameSchema = z
-    .string()
-    .min(1)
-    .regex(
+const collectionNameSchema = v.string([
+    v.minLength(1),
+    v.regex(
         /^[a-z]+$/,
         "The collection name can only contain lowercase letters.",
-    )
+    ),
+])
 
 export const validateCollectionName = (name: string) => {
     validateAnEntryName(collectionNameSchema, name)
@@ -14,13 +14,13 @@ export const validateCollectionName = (name: string) => {
 
 // ---
 
-const collectionEntryNameSchema = z
-    .string()
-    .min(1)
-    .regex(
+const collectionEntryNameSchema = v.string([
+    v.minLength(1),
+    v.regex(
         /^[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*$/,
         "The collection entry name can only contain letters, numbers, and a single hyphen in between them.",
-    )
+    ),
+])
 
 export const validateCollectionEntryName = (name: string) => {
     validateAnEntryName(collectionEntryNameSchema, name)
@@ -28,10 +28,10 @@ export const validateCollectionEntryName = (name: string) => {
 
 // ---
 
-const validateAnEntryName = (schema: z.ZodString, name: string) => {
-    const result = schema.safeParse(name)
+const validateAnEntryName = (schema: v.StringSchema, name: string) => {
+    const result = v.safeParse(schema, name)
     if (!result.success) {
-        const error_message = result.error.issues[0].message
+        const error_message = result.issues[0].message
         throw new Error(error_message)
     }
 }

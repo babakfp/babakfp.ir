@@ -1,4 +1,4 @@
-import type { z } from "zod"
+import * as v from "valibot"
 import type {
     ImportMetaGlob,
     ImportMetaGlobValueResult,
@@ -74,14 +74,17 @@ const markdownFilesToEntries = async () => {
 /**
  * @returns The resolved value of an entry with frontmatter.
  */
-const getGlobEntryValue = async <T extends z.ZodRawShape>(
+const getGlobEntryValue = async <T extends v.ObjectEntries>(
     entry: MarkdownEntry,
-    schema: z.ZodObject<T>,
+    schema: v.ObjectSchema<T>,
 ) => {
     const globValueResult =
         (await entry.glob.value()) as ImportMetaGlobValueResult
 
-    const frontmatter = schema.parse(globValueResult.markdownData_.frontmatter)
+    const frontmatter = v.parse(
+        schema,
+        globValueResult.markdownData_.frontmatter,
+    )
 
     return {
         collection: entry.collection,
@@ -99,9 +102,9 @@ const getGlobEntryValue = async <T extends z.ZodRawShape>(
  * Gets all markdown entries of the specific collection.
  * @param name - The name of the collection.
  */
-export const getCollectionEntries = async <T extends z.ZodRawShape>(
+export const getCollectionEntries = async <T extends v.ObjectEntries>(
     name: string,
-    schema: z.ZodObject<T>,
+    schema: v.ObjectSchema<T>,
 ) => {
     const markdownEntries = await markdownFilesToEntries()
 
@@ -123,10 +126,10 @@ export const getCollectionEntries = async <T extends z.ZodRawShape>(
  * @param name - The name of the collection.
  * @param slug - The name of the markdown file without the suffix (`.md`).
  */
-export const getCollectionEntry = async <T extends z.ZodRawShape>(
+export const getCollectionEntry = async <T extends v.ObjectEntries>(
     name: string,
     slug: string,
-    schema: z.ZodObject<T>,
+    schema: v.ObjectSchema<T>,
 ) => {
     const entries = await markdownFilesToEntries()
     const collectionEntries = entries.filter(
