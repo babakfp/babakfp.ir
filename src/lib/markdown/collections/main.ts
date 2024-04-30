@@ -1,3 +1,4 @@
+import { error } from "@sveltejs/kit"
 import * as v from "valibot"
 import type {
     ImportMetaGlob,
@@ -87,7 +88,7 @@ const getGlobEntryValue = async <T extends v.ObjectEntries>(
     )
 
     if (!frontmatterParseResult.success) {
-        throw new Error(frontmatterParseResult.issues[0].message)
+        return error(400, frontmatterParseResult.issues[0].message)
     }
 
     const frontmatter = frontmatterParseResult.output

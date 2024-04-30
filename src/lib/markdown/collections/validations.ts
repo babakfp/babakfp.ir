@@ -1,3 +1,4 @@
+import { error } from "@sveltejs/kit"
 import * as v from "valibot"
 
 const collectionNameSchema = v.string([
@@ -31,7 +32,6 @@ export const validateCollectionEntryName = (name: string) => {
 const validateAnEntryName = (schema: v.StringSchema, name: string) => {
     const result = v.safeParse(schema, name)
     if (!result.success) {
-        const error_message = result.issues[0].message
-        throw new Error(error_message)
+        return error(400, result.issues[0].message)
     }
 }
