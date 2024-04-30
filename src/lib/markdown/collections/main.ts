@@ -81,10 +81,16 @@ const getGlobEntryValue = async <T extends v.ObjectEntries>(
     const globValueResult =
         (await entry.glob.value()) as ImportMetaGlobValueResult
 
-    const frontmatter = v.parse(
+    const frontmatterParseResult = v.safeParse(
         schema,
         globValueResult.markdownData_.frontmatter,
     )
+
+    if (!frontmatterParseResult.success) {
+        throw new Error(frontmatterParseResult.issues[0].message)
+    }
+
+    const frontmatter = frontmatterParseResult.output
 
     return {
         collection: entry.collection,
