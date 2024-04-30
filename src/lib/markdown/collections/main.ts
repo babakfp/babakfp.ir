@@ -23,10 +23,6 @@ const markdownFiles = import.meta.glob([
     "!/src/content/*/**/_*.md",
 ]) satisfies ImportMetaGlob
 
-/**
- * Validates markdown entries.
- * @returns The glob in the structure of `MarkdownEntry[]`.
- */
 const markdownFilesToEntries = async () => {
     const markdownEntries: MarkdownEntry[] = []
 
