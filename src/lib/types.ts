@@ -1,10 +1,18 @@
 import * as v from "valibot"
 
 export const PostsFrontmatterSchema = v.object({
-    title: v.string(),
-    description: v.string(),
-    updated: v.string(),
-    published: v.string(),
+    title: v.string('Post "title" field must be a string.', [
+        v.minLength(1, 'Post "title" field is required.'),
+    ]),
+    description: v.string('Post "description" field must be a string.', [
+        v.minLength(1, 'Post "description" field is required.'),
+    ]),
+    updated: v.string('Post "updated" field must be a string.', [
+        v.minLength(1, 'Post "updated" field is required.'),
+    ]),
+    published: v.string('Post "published" field must be a string.', [
+        v.minLength(1, 'Post "published" field is required.'),
+    ]),
 })
 
 export type Post = v.Input<typeof PostsFrontmatterSchema> & {
@@ -12,7 +20,9 @@ export type Post = v.Input<typeof PostsFrontmatterSchema> & {
 }
 
 export const DocsFrontmatterSchema = v.object({
-    title: v.string(),
+    title: v.string('Doc "title" field must be a string.', [
+        v.minLength(1, 'Doc "title" field is required.'),
+    ]),
 })
 
 export type Doc = v.Input<typeof DocsFrontmatterSchema> & {
