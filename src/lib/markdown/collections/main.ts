@@ -1,8 +1,8 @@
 import type { z } from "zod"
 import type {
-    ImportGlob,
+    ImportMetaGlob,
+    ImportMetaGlobValueResult,
     MarkdownEntry,
-    ImportGlobItemResolved,
     CollectionEntry,
 } from "./types"
 import {
@@ -18,7 +18,7 @@ const markdownFiles = import.meta.glob([
     "/src/content/*/**/*.md",
     "!/src/content/*/**/_*/*.md",
     "!/src/content/*/**/_*.md",
-]) satisfies ImportGlob
+]) satisfies ImportMetaGlob
 
 /**
  * Validates markdown entries.
@@ -78,7 +78,8 @@ const getGlobEntryValue = async <T extends z.ZodRawShape>(
     entry: MarkdownEntry,
     schema: z.ZodObject<T>,
 ) => {
-    const globValueResult = (await entry.glob.value()) as ImportGlobItemResolved
+    const globValueResult =
+        (await entry.glob.value()) as ImportMetaGlobValueResult
 
     const frontmatter = schema.parse(globValueResult.markdownData_.frontmatter)
 
