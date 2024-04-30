@@ -1,21 +1,21 @@
 import { z } from "zod"
 
-export const postFrontmatterSchema = z.object({
+export const PostsFrontmatterSchema = z.object({
     title: z.string(),
     description: z.string(),
     updated: z.string(),
     published: z.string(),
 })
 
-export type Post = typeof postFrontmatterSchema._type & {
+export type Post = typeof PostsFrontmatterSchema._type & {
     slug: string
 }
 
-export const docFrontmatterSchema = z.object({
+export const DocsFrontmatterSchema = z.object({
     title: z.string(),
 })
 
-export type Doc = typeof docFrontmatterSchema._type & {
+export type Doc = typeof DocsFrontmatterSchema._type & {
     slug: string
 }
 
