@@ -1,9 +1,5 @@
 import { error } from "@sveltejs/kit"
-import {
-    type Post,
-    postFrontmatterSchema,
-    type PostFrontmatter,
-} from "$lib/types.js"
+import { type Post, postFrontmatterSchema } from "$lib/types.js"
 import { getCollectionEntry } from "$lib/markdown/collections"
 
 export async function load({ fetch, params }) {
@@ -20,7 +16,7 @@ export async function load({ fetch, params }) {
     }
 
     return {
-        ...(post.frontmatter as PostFrontmatter),
+        ...post.frontmatter,
         slug: params.slug,
         content: post.content,
         posts,

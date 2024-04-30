@@ -1,5 +1,5 @@
 import { error } from "@sveltejs/kit"
-import { docFrontmatterSchema, type DocFrontmatter } from "$lib/types.js"
+import { docFrontmatterSchema } from "$lib/types.js"
 import { getCollectionEntry } from "$lib/markdown/collections"
 
 export async function load({ params }) {
@@ -14,7 +14,7 @@ export async function load({ params }) {
     }
 
     return {
-        ...(doc.frontmatter as DocFrontmatter),
+        ...doc.frontmatter,
         slug: params.slug,
         content: doc.content,
     }

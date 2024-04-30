@@ -7,9 +7,7 @@ export const postFrontmatterSchema = z.object({
     published: z.string(),
 })
 
-export type PostFrontmatter = typeof postFrontmatterSchema._type
-
-export type Post = PostFrontmatter & {
+export type Post = typeof postFrontmatterSchema._type & {
     slug: string
 }
 
@@ -17,9 +15,7 @@ export const docFrontmatterSchema = z.object({
     title: z.string(),
 })
 
-export type DocFrontmatter = typeof docFrontmatterSchema._type
-
-export type Doc = DocFrontmatter & {
+export type Doc = typeof docFrontmatterSchema._type & {
     slug: string
 }
 
