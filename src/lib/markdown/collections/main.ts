@@ -12,8 +12,10 @@ import {
 } from "./validations"
 
 /**
- * Contains all markdown files located at `src/content`. Learn more about [Glob Import](https://vitejs.dev/guide/features.html#glob-import).
- * Ignores files that contain underscores (`_`) in their path to use them as components.
+ * Contains all markdown files located at `src/content`.
+ * Ignores files and folders containing (`_`) in their name to avoid conflict between pages and components.
+ *
+ * Learn more about [Glob Import](https://vitejs.dev/guide/features.html#glob-import).
  */
 const markdownFiles = import.meta.glob([
     "/src/content/*/**/*.md",
