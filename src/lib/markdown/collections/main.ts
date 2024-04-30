@@ -74,9 +74,9 @@ const markdownFilesToEntries = async () => {
 /**
  * @returns The resolved value of an entry with frontmatter.
  */
-const getGlobEntryValue = async (
+const getGlobEntryValue = async <T extends z.ZodRawShape>(
     entry: MarkdownEntry,
-    schema: z.AnyZodObject,
+    schema: z.ZodObject<T>,
 ) => {
     const globValueResult = (await entry.glob.value()) as ImportGlobItemResolved
 
@@ -98,9 +98,9 @@ const getGlobEntryValue = async (
  * Gets all markdown entries of the specific collection.
  * @param name - The name of the collection.
  */
-export const getCollectionEntries = async (
+export const getCollectionEntries = async <T extends z.ZodRawShape>(
     name: string,
-    schema: z.AnyZodObject,
+    schema: z.ZodObject<T>,
 ) => {
     const markdownEntries = await markdownFilesToEntries()
 
@@ -110,7 +110,7 @@ export const getCollectionEntries = async (
 
     const result = await Promise.all(
         collectionEntries.map(
-            async entry => await getGlobEntryValue(entry, schema),
+            async entry => await getGlobEntryValue<T>(entry, schema),
         ),
     )
 
@@ -122,10 +122,10 @@ export const getCollectionEntries = async (
  * @param name - The name of the collection.
  * @param slug - The name of the markdown file without the suffix (`.md`).
  */
-export const getCollectionEntry = async (
+export const getCollectionEntry = async <T extends z.ZodRawShape>(
     name: string,
     slug: string,
-    schema: z.AnyZodObject,
+    schema: z.ZodObject<T>,
 ) => {
     const entries = await markdownFilesToEntries()
     const collectionEntries = entries.filter(
@@ -136,6 +136,6 @@ export const getCollectionEntry = async (
     )[0]
 
     if (entry) {
-        return await getGlobEntryValue(entry, schema)
+        return await getGlobEntryValue<T>(entry, schema)
     }
 }
