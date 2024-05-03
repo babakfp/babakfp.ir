@@ -2,10 +2,25 @@
 title: TailwindCSS Addons
 ---
 
+A TailwindCSS plugin that adds extra utilities and more.
+
 ## Installation
 
 ```bash
 pnpm add -D tailwindcss-addons
+```
+
+<!-- prettier-ignore -->
+```js
+// tailwind.config.js | tailwind.config.ts
+
+import tailwindcssAddons from "tailwindcss-addons"
+
+export default {
+    plugins: [
+        ...tailwindcssAddons(),
+    ],
+}
 ```
 
 ## Usage
