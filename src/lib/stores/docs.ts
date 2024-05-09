@@ -35,9 +35,6 @@ export const docsSidebarItems = readable([
                         title: "Introduction",
                         path: "/docs/svelte-outclick",
                     },
-                    {
-                        title: "CHANGELOG",
-                    },
                 ],
             },
             {
