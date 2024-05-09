@@ -117,19 +117,21 @@
 
         @apply space-y-[--markdown-spacing-base] leading-7;
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            @apply !my-[--markdown-spacing-title] break-words text-gray-50;
+        /* prettier-ignore */
+        h1, h2, h3, h4, h5, h6 {
+            @apply break-words text-gray-50;
             code {
                 @apply [text-transform:none];
             }
         }
+
+        /* prettier-ignore */
+        h2, h3, h4, h5, h6 {
+            @apply !my-[--markdown-spacing-title];
+        }
+
         h1 {
-            @apply font-title text-5xl sm:text-6xl;
+            @apply font-title mb-[--markdown-spacing-title] text-5xl sm:text-6xl;
         }
         h2 {
             @apply text-3xl sm:text-4xl;
@@ -144,11 +146,8 @@
             @apply text-sm;
         }
 
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
+        /* prettier-ignore */
+        h2, h3, h4, h5, h6 {
             @apply relative [&:hover_.heading-permalink]:show;
         }
         .heading-permalink {
