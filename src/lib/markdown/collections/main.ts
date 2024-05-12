@@ -18,16 +18,16 @@ import {
  * Learn more about [Glob Import](https://vitejs.dev/guide/features.html#glob-import).
  */
 const markdownFiles = import.meta.glob([
-    "/src/content/*/**/*.md",
-    "!/src/content/*/**/_*/*.md",
-    "!/src/content/*/**/_*.md",
+    "/../content/*/**/*.md",
+    "!/../content/*/**/_*/*.md",
+    "!/../content/*/**/_*.md",
 ]) satisfies ImportMetaGlob
 
 const markdownFilesToEntries = async () => {
     const markdownEntries: MarkdownEntry[] = []
 
     for (const [path, value] of Object.entries(markdownFiles)) {
-        const segments = path.replace("/src/content/", "").split("/")
+        const segments = path.replace("../content/", "").split("/")
 
         const collectionName = segments[0]
         validateCollectionName(collectionName)
