@@ -4,9 +4,11 @@ title: Supports Hover
 
 <script>
     import UtilsTable from "$lib/UtilsTable.svelte"
-    import { getUtilities } from "$utils/tailwind.js"
-    import { supportsHover } from "tailwindcss-addons"
-    const utilities = getUtilities(supportsHover.handler);
+	const utilities = {
+		".supports-hover": {
+			"@media (hover: hover)": "",
+		},
+	}
 </script>
 
 <UtilsTable {utilities} />

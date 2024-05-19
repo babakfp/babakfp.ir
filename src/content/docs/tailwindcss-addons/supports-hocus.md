@@ -4,9 +4,17 @@ title: Supports Hocus
 
 <script>
     import UtilsTable from "$lib/UtilsTable.svelte"
-    import { getUtilities } from "$utils/tailwind.js"
-    import { supportsHocus } from "tailwindcss-addons"
-    const utilities = getUtilities(supportsHocus.handler);
+    const utilities = {
+		".supports-focus": {
+			"@media (focus: focus)": "",
+		},
+        ".supports-focus-within": {
+			"@media (focus-within: focus-within)": "",
+		},
+        ".supports-focus-visible": {
+			"@media (focus-visible: focus-visible)": "",
+		},
+	}
 </script>
 
 <UtilsTable {utilities} />
