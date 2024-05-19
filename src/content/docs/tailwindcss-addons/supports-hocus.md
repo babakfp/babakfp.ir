@@ -4,15 +4,15 @@ title: Supports Hocus
 
 <script>
     import UtilsTable from "$lib/UtilsTable.svelte"
-    const utilities = {
-		".supports-focus": {
-			"@media (focus: focus)": "",
+   	const utilities = {
+		".supports-hocus": {
+			"@media (hover: hover) and (focus: focus)": "",
 		},
-        ".supports-focus-within": {
-			"@media (focus-within: focus-within)": "",
+		".supports-hocus-within": {
+			"@media (hover: hover) and (focus-within: focus-within)": "",
 		},
-        ".supports-focus-visible": {
-			"@media (focus-visible: focus-visible)": "",
+		".supports-hocus-visible": {
+			"@media (hover: hover) and (focus-visible: focus-visible)": "",
 		},
 	}
 </script>
