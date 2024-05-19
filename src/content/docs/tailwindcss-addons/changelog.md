@@ -2,14 +2,14 @@
 title: CHANGELOG
 ---
 
-## 1.9.2
+## 1.9.3
 
 -   Added TypeScript support.
 -   Added new `supports-hover`, `supports-focus`, `supports-focus-within`, `supports-focus-visible`, `supports-hocus`, `supports-hocus-within`, `supports-hocus-visible` utilities.
 
-## 1.9.0 - 1.9.1
+## 1.9.0 - 1.9.2
 
-Update to 1.9.2 version!
+Update to 1.9.3 version!
 
 ## 1.8.3
 
