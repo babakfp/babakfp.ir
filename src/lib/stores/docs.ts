@@ -164,6 +164,18 @@ export const docsSidebarItems = readable([
                         title: "Not",
                         path: "/docs/tailwindcss-addons/not",
                     },
+                    {
+                        title: "Supports Hover",
+                        path: "/docs/tailwindcss-addons/supports-hover",
+                    },
+                    {
+                        title: "Supports Focus",
+                        path: "/docs/tailwindcss-addons/supports-focus",
+                    },
+                    {
+                        title: "Supports Hocus",
+                        path: "/docs/tailwindcss-addons/supports-hocus",
+                    },
                 ],
             },
             {

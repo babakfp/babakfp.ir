@@ -2,6 +2,11 @@
 title: CHANGELOG
 ---
 
+## 1.9.0
+
+-   Added TypeScript support.
+-   Added new `supports-hover`, `supports-focus`, `supports-focus-within`, `supports-focus-visible`, `supports-hocus`, `supports-hocus-within`, `supports-hocus-visible` utilities.
+
 ## 1.8.3
 
 -   Added `base` param to `resetNumberInput()` as `resetSearchInput()`. When using them as single imports, excute them.
