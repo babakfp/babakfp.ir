@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss"
 import colors from "tailwindcss/colors"
 import defaultTheme from "tailwindcss/defaultTheme"
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette"
-import addons from "tailwindcss-addons"
+import tailwindcssAddons from "tailwindcss-addons"
 import plugin from "tailwindcss/plugin"
 
 export default {
@@ -28,7 +28,7 @@ export default {
         },
     },
     plugins: [
-        ...addons(),
+        ...tailwindcssAddons(),
         containerUtility(),
         outlineInsetUtility(),
         highlightUtility(),
