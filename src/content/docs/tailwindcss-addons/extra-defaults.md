@@ -66,11 +66,11 @@ export default {
 ```js
 // tailwind.config.js | tailwind.config.ts
 
-import tailwindcssAddons from "tailwindcss-addons"
+import addons from "tailwindcss-addons"
 
 export default {
     plugins: [
-        ...tailwindcssAddons({
+        ...addons({
             extraDefaults: false, // Enabled by default
         }),
     ],

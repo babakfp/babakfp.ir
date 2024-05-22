@@ -14,11 +14,11 @@ pnpm add -D tailwindcss-addons
 ```js
 // tailwind.config.js | tailwind.config.ts
 
-import tailwindcssAddons from "tailwindcss-addons"
+import addons from "tailwindcss-addons"
 
 export default {
     plugins: [
-        ...tailwindcssAddons(),
+        ...addons(),
     ],
 }
 ```
@@ -43,11 +43,11 @@ export default {
 ```js
 // tailwind.config.js | tailwind.config.ts
 
-import tailwindcssAddons from "tailwindcss-addons"
+import addons from "tailwindcss-addons"
 
 export default {
     plugins: [
-        ...tailwindcssAddons({
+        ...addons({
             /* <plugin-name> */: /* <boolean> */,
         }),
     ],
