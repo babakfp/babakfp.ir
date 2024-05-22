@@ -2,6 +2,10 @@
 title: CHANGELOG
 ---
 
+## 1.10.0
+
+-   [breaking] Removed the default export and added named export `allAddons` instead.
+
 ## 1.9.3
 
 -   Added TypeScript support.
