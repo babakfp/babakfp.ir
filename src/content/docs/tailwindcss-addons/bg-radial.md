@@ -26,11 +26,11 @@ export default {
 ```js
 // tailwind.config.js | tailwind.config.ts
 
-import tailwindcssAddons from "tailwindcss-addons"
+import { allAddons } from "tailwindcss-addons"
 
 export default {
     plugins: [
-        ...tailwindcssAddons({
+        ...allAddons({
             bgRadial: false, // Enabled by default
         }),
     ],

@@ -1,9 +1,8 @@
 import type { Config } from "tailwindcss"
 import colors from "tailwindcss/colors"
-import defaultTheme from "tailwindcss/defaultTheme"
-import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette"
-import tailwindcssAddons from "tailwindcss-addons"
 import plugin from "tailwindcss/plugin"
+import defaultTheme from "tailwindcss/defaultTheme"
+import { allAddons, flattenColorPalette } from "tailwindcss-addons"
 
 export default {
     content: ["./src/**/*.{html,js,svelte,ts,md}"],
@@ -28,7 +27,7 @@ export default {
         },
     },
     plugins: [
-        ...tailwindcssAddons(),
+        ...allAddons(),
         containerUtility(),
         outlineInsetUtility(),
         highlightUtility(),
