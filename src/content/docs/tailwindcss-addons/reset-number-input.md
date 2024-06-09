@@ -4,7 +4,7 @@ title: Reset Number Input
 
 <script>
 	import UtilsTable from '$lib/UtilsTable.svelte'
-	import { getUtilities } from "$utils/tailwind.js"
+	import { getUtilities } from "$lib/utils/tailwind.js"
     import { resetNumberInput } from "tailwindcss-addons"
     const utilities = getUtilities(resetNumberInput().handler);
 </script>

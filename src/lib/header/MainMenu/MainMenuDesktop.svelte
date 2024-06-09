@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { mainMenuItems } from "$stores/mainMenu"
+    import { mainMenuItems } from "$lib/stores/mainMenu"
 </script>
 
 <nav class="hidden xl:flex">

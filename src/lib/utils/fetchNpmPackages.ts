@@ -8,13 +8,13 @@ export async function getPackagesData(packages: string[]) {
     const npmPackagesData = await getSomeNpmData(packages)
 
     if (reposData && downloadsData && npmPackagesData) {
-        packages.forEach(packageName => {
-            const repo = reposData.filter(pkg => pkg.name === packageName)[0]
+        packages.forEach((packageName) => {
+            const repo = reposData.filter((pkg) => pkg.name === packageName)[0]
             const downloads = downloadsData.filter(
-                dl => dl.name === packageName,
+                (dl) => dl.name === packageName,
             )[0]
             const npmData = npmPackagesData.filter(
-                pkg => pkg.name === packageName,
+                (pkg) => pkg.name === packageName,
             )[0]
 
             packagesData.push({
@@ -31,10 +31,10 @@ export async function getPackagesData(packages: string[]) {
 
 async function getReposData(packages: string[]) {
     const urls = packages.map(
-        pkg => `https://api.github.com/repos/babakfp/${pkg}`,
+        (pkg) => `https://api.github.com/repos/babakfp/${pkg}`,
     )
     const data = await fetchAllUrls(urls)
-    const someData = data.map(repo => ({
+    const someData = data.map((repo) => ({
         name: repo.name as string,
         description: repo.description as string,
         avatarUrl: repo.owner.avatar_url as string,
@@ -46,9 +46,11 @@ async function getReposData(packages: string[]) {
 }
 
 async function getSomeNpmData(packages: string[]) {
-    const urls = packages.map(pkg => `https://registry.npmjs.org/${pkg}/latest`)
+    const urls = packages.map(
+        (pkg) => `https://registry.npmjs.org/${pkg}/latest`,
+    )
     const data = await fetchAllUrls(urls)
-    const someData = data.map(pkg => ({
+    const someData = data.map((pkg) => ({
         name: pkg.name as string,
         description: pkg.description as string,
         version: pkg.version as string,
@@ -61,10 +63,10 @@ async function getSomeNpmData(packages: string[]) {
 
 async function getNpmPackagesDownloads(packages: string[]) {
     const urls = packages.map(
-        pkg => `https://api.npmjs.org/downloads/point/last-week/${pkg}`,
+        (pkg) => `https://api.npmjs.org/downloads/point/last-week/${pkg}`,
     )
     const data = await fetchAllUrls(urls)
-    const downloads = data.map(dl => ({
+    const downloads = data.map((dl) => ({
         name: dl.package as string,
         downloadsCount: dl.downloads as number,
     }))
@@ -72,7 +74,9 @@ async function getNpmPackagesDownloads(packages: string[]) {
 }
 
 async function fetchAllUrls(urls: string[]) {
-    const responses = await Promise.all(urls.map(url => fetch(url)))
-    const data = await Promise.all(responses.map(async res => await res.json()))
+    const responses = await Promise.all(urls.map((url) => fetch(url)))
+    const data = await Promise.all(
+        responses.map(async (res) => await res.json()),
+    )
     return data
 }

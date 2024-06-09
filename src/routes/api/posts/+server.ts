@@ -1,6 +1,6 @@
 import { json } from "@sveltejs/kit"
-import { type Post, PostsFrontmatterSchema } from "$lib/types"
 import { getCollectionEntries } from "$lib/markdown/collections"
+import { PostsFrontmatterSchema, type Post } from "$lib/types"
 
 export async function GET() {
     const posts = await getPosts()
@@ -11,7 +11,7 @@ async function getPosts() {
     const entries = await getCollectionEntries("posts", PostsFrontmatterSchema)
 
     const posts: Post[] = entries
-        .map(entry => ({
+        .map((entry) => ({
             ...entry.frontmatter,
             slug: entry.slug,
         }))

@@ -5,8 +5,8 @@ import {
     svelteInMarkdownPreprocess,
 } from "svelte-in-markdown"
 import {
-    transformer,
     hastFromHtml,
+    transformer,
 } from "svelte-in-markdown/transformers/unified"
 
 /** @type {import("@sveltejs/kit").Config} */
@@ -14,12 +14,6 @@ export default {
     extensions: SVELTE_EXTENSIONS,
     kit: {
         adapter: adapter(),
-        alias: {
-            $icons: "src/lib/icons",
-            $stores: "src/lib/stores",
-            $portfolios: "src/lib/portfolios",
-            $utils: "src/lib/utils",
-        },
     },
     preprocess: [
         svelteInMarkdownPreprocess({

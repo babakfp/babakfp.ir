@@ -1,8 +1,8 @@
 <script lang="ts">
     import { page } from "$app/stores"
-    import { docsSidebarItems } from "$stores/docs"
-    import SidebarMenuItem from "$lib/Sidebar/SidebarMenuItem.svelte"
     import PrimMenuItem from "$lib/PrimMenuItem.svelte"
+    import SidebarMenuItem from "$lib/Sidebar/SidebarMenuItem.svelte"
+    import { docsSidebarItems } from "$lib/stores/docs"
 </script>
 
 {#each $docsSidebarItems as project}

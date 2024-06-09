@@ -1,6 +1,6 @@
 import { error } from "@sveltejs/kit"
-import { type Post, PostsFrontmatterSchema } from "$lib/types.js"
 import { getCollectionEntry } from "$lib/markdown/collections"
+import { PostsFrontmatterSchema, type Post } from "$lib/types.js"
 
 export async function load({ fetch, params }) {
     const res = await fetch("/api/posts")

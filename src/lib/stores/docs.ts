@@ -1,7 +1,7 @@
-import { writable, readable } from "svelte/store"
-import IconCode from "$icons/IconCode.svelte"
-import IconGithub from "$icons/IconGithub.svelte"
-import IconNpm from "$icons/IconNpm.svelte"
+import { readable, writable } from "svelte/store"
+import IconCode from "$lib/icons/IconCode.svelte"
+import IconGithub from "$lib/icons/IconGithub.svelte"
+import IconNpm from "$lib/icons/IconNpm.svelte"
 
 export const isDocsMenuSidebarOpen = writable(false)
 export const isDocsTocSidebarOpen = writable(false)

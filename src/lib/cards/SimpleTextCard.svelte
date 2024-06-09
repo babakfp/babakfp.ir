@@ -1,8 +1,8 @@
 <script lang="ts">
     import Card from "./Card.svelte"
-    import CardTitle from "./CardTitle.svelte"
     import CardDescription from "./CardDescription.svelte"
     import CardFooter from "./CardFooter.svelte"
+    import CardTitle from "./CardTitle.svelte"
 
     export let title: string
     export let description: string

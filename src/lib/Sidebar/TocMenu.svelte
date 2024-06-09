@@ -1,10 +1,10 @@
 <script lang="ts">
     import { onMount } from "svelte"
-    import { page } from "$app/stores"
+    import { getTableOfContents } from "svelte-in-markdown"
     import { browser } from "$app/environment"
+    import { page } from "$app/stores"
     import Sidebar from "$lib/Sidebar/Sidebar.svelte"
     import SidebarTocItem from "$lib/Sidebar/SidebarTocItem.svelte"
-    import { getTableOfContents } from "svelte-in-markdown"
 
     export let isOpen: boolean
     export let name: string
@@ -29,7 +29,7 @@
         getTableOfContents({
             containerSelector: ".article-content",
             headingLevels: [2, 3, 4, 5, 6],
-        })?.map(heading => ({
+        })?.map((heading) => ({
             id: heading.attributes.id ?? "",
             level: Number(heading.level),
             textContent: heading.textContent,

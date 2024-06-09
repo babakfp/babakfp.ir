@@ -4,9 +4,9 @@ title: Build a Transformer
 
 ```ts
 import {
-    type RequiredNonNullable,
-    type MarkupPreprocessorOptions,
     type ConfigOutput,
+    type MarkupPreprocessorOptions,
+    type RequiredNonNullable,
 } from "svelte-in-markdown"
 
 type MyOptions = {}

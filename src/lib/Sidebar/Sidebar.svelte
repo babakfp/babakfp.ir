@@ -15,7 +15,7 @@
 </script>
 
 <svelte:window
-    on:keydown={e => isOpen && e.key === "Escape" && (isOpen = false)}
+    on:keydown={(e) => isOpen && e.key === "Escape" && (isOpen = false)}
 />
 
 <BlurredBackdrop isVisible={isOpen} />

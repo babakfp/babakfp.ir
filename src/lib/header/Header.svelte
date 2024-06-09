@@ -1,13 +1,12 @@
 <script lang="ts">
     import { page } from "$app/stores"
-    import { isBlogTocSidebarOpen } from "$stores/blog"
-    import { isDocsTocSidebarOpen } from "$stores/docs"
-
-    import MainMenuMobile from "./MainMenu/MainMenuMobile.svelte"
-    import MainMenuDesktop from "./MainMenu/MainMenuDesktop.svelte"
-    import MainMenuMobileToggle from "./MainMenu/MainMenuMobileToggle.svelte"
     import DocsMenuToggle from "$lib/docs/DocsMenuToggle.svelte"
     import TocMenuToggle from "$lib/Sidebar/TocMenuToggle.svelte"
+    import { isBlogTocSidebarOpen } from "$lib/stores/blog"
+    import { isDocsTocSidebarOpen } from "$lib/stores/docs"
+    import MainMenuDesktop from "./MainMenu/MainMenuDesktop.svelte"
+    import MainMenuMobile from "./MainMenu/MainMenuMobile.svelte"
+    import MainMenuMobileToggle from "./MainMenu/MainMenuMobileToggle.svelte"
 </script>
 
 <header class="sticky top-0 z-50 bg-gray-950">

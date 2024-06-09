@@ -1,7 +1,7 @@
 <script lang="ts">
     import { fly } from "svelte/transition"
     import { page } from "$app/stores"
-    import transition from "$utils/transition"
+    import transition from "$lib/utils/transition"
 
     export let data
 </script>

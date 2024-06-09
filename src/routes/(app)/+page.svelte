@@ -1,15 +1,15 @@
 <script lang="ts">
     import { Toaster } from "svelte-french-toast"
-    import frontendPortfolios from "$portfolios/frontend.json"
-    import rtlthemeProducts from "$portfolios/rtltheme-products.json"
-    import wordpressPlugins from "$portfolios/wordpress-plugins.json"
     import FrontendCard from "$lib/cards/FrontendCard.svelte"
+    import PostCard from "$lib/cards/PostCard.svelte"
     import RepoCard from "$lib/cards/RepoCard.svelte"
     import RtlThemeCard from "$lib/cards/RtlThemeCard.svelte"
     import WordpressPluginCard from "$lib/cards/WordpressPluginCard.svelte"
-    import PostCard from "$lib/cards/PostCard.svelte"
     import HeroSection from "$lib/home/HeroSection.svelte"
     import Section from "$lib/home/Section.svelte"
+    import frontendPortfolios from "$lib/portfolios/frontend.json"
+    import rtlthemeProducts from "$lib/portfolios/rtltheme-products.json"
+    import wordpressPlugins from "$lib/portfolios/wordpress-plugins.json"
 
     export let data
 </script>

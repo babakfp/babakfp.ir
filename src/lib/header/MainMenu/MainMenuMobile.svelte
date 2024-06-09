@@ -1,16 +1,16 @@
 <script lang="ts">
     import OutClick from "svelte-outclick"
     import { beforeNavigate } from "$app/navigation"
-    import { isMainMenuOpen, mainMenuItems } from "$stores/mainMenu"
     import BlurredBackdrop from "$lib/BlurredBackdrop.svelte"
     import PrimMenuItem from "$lib/PrimMenuItem.svelte"
+    import { isMainMenuOpen, mainMenuItems } from "$lib/stores/mainMenu"
     import { trapFocus } from "$lib/trapFocus"
 
     beforeNavigate(() => ($isMainMenuOpen = false))
 </script>
 
 <svelte:window
-    on:keydown={e =>
+    on:keydown={(e) =>
         $isMainMenuOpen && e.key === "Escape" && ($isMainMenuOpen = false)}
 />
 

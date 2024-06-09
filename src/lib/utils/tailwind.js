@@ -5,10 +5,11 @@ Added from https://github.com/tailwindlabs/tailwindcss.com - Monday June 05, 202
 // @ts-nocheck
 
 import dlv from "dlv"
-import resolveConfig from "tailwindcss/resolveConfig"
 import defaultConfig from "tailwindcss/defaultConfig"
-const _defaultConfig = resolveConfig(defaultConfig)
 import nameClass from "tailwindcss/lib/util/nameClass"
+import resolveConfig from "tailwindcss/resolveConfig"
+
+const _defaultConfig = resolveConfig(defaultConfig)
 
 function normalizeProperties(input) {
     if (typeof input !== "object") {
@@ -38,7 +39,7 @@ export function getUtilities(plugin, { includeNegativeValues = false } = {}) {
 
     function addUtilities(utils) {
         utils = Array.isArray(utils) ? utils : [utils]
-        utils.forEach(util => {
+        utils.forEach((util) => {
             for (let className in util) {
                 for (let property in util[className]) {
                     if (property.startsWith("@defaults")) {
@@ -55,7 +56,7 @@ export function getUtilities(plugin, { includeNegativeValues = false } = {}) {
         addDefaults: () => {},
         addComponents: () => {},
         corePlugins: () => true,
-        prefix: x => x,
+        prefix: (x) => x,
         config: (option, defaultValue) => {
             return option ? defaultValue : { future: {} }
         },

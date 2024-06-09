@@ -1,13 +1,13 @@
 <script lang="ts">
     import { fly } from "svelte/transition"
     import { page } from "$app/stores"
-    import transition from "$utils/transition"
-    import { timeSince } from "$utils/timeSince"
-    import { isBlogTocSidebarOpen } from "$stores/blog"
-    import IconChevronRight from "$icons/IconChevronRight.svelte"
     import BackToTopBtn from "$lib/BackToTopBtn.svelte"
-    import TocMenu from "$lib/Sidebar/TocMenu.svelte"
     import PostCard from "$lib/cards/PostCard.svelte"
+    import IconChevronRight from "$lib/icons/IconChevronRight.svelte"
+    import TocMenu from "$lib/Sidebar/TocMenu.svelte"
+    import { isBlogTocSidebarOpen } from "$lib/stores/blog"
+    import { timeSince } from "$lib/utils/timeSince"
+    import transition from "$lib/utils/transition"
 
     export let data
 

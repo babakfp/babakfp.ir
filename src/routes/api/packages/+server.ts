@@ -1,5 +1,5 @@
 import { json } from "@sveltejs/kit"
-import { getPackagesData } from "$utils/fetchNpmPackages"
+import { getPackagesData } from "$lib/utils/fetchNpmPackages"
 
 export const prerender = true
 
@@ -19,10 +19,10 @@ const packages = [
 ]
 
 export async function GET() {
-    let packagesData = await getPackagesData(packages.map(pkg => pkg.name))
+    let packagesData = await getPackagesData(packages.map((pkg) => pkg.name))
 
-    packagesData = packagesData.map(pkgData => {
-        const pkg = packages.filter(pkg => pkg.name === pkgData.name)[0]
+    packagesData = packagesData.map((pkgData) => {
+        const pkg = packages.filter((pkg) => pkg.name === pkgData.name)[0]
         return {
             title: pkg.title,
             ...pkgData,

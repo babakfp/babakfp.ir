@@ -1,6 +1,6 @@
 <script lang="ts">
-    import WordpressCard from "./WordpressCard.svelte"
     import CardFooter from "./CardFooter.svelte"
+    import WordpressCard from "./WordpressCard.svelte"
 
     export let title: string
     export let description: string

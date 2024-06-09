@@ -1,8 +1,8 @@
 <script lang="ts">
+    import IconMenu from "$lib/icons/IconMenu.svelte"
+    import IconX from "$lib/icons/IconX.svelte"
     import IconToggler from "$lib/IconToggler.svelte"
-    import { isMainMenuOpen } from "$stores/mainMenu"
-    import IconMenu from "$icons/IconMenu.svelte"
-    import IconX from "$icons/IconX.svelte"
+    import { isMainMenuOpen } from "$lib/stores/mainMenu"
 </script>
 
 <button

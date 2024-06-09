@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { timeSince } from "$utils/timeSince"
+    import { timeSince } from "$lib/utils/timeSince"
     import SimpleTextCard from "./SimpleTextCard.svelte"
 
     export let title: string

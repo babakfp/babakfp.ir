@@ -4,7 +4,7 @@ title: Hide & Show
 
 <script>
 	import UtilsTable from "$lib/UtilsTable.svelte"
-	import { getUtilities } from "$utils/tailwind.js"
+	import { getUtilities } from "$lib/utils/tailwind.js"
 	import { hideShow } from "tailwindcss-addons"
 	const utilities = getUtilities(hideShow.handler);
 </script>

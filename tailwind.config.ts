@@ -1,8 +1,8 @@
 import type { Config } from "tailwindcss"
-import colors from "tailwindcss/colors"
-import plugin from "tailwindcss/plugin"
-import defaultTheme from "tailwindcss/defaultTheme"
 import { allAddons, flattenColorPalette } from "tailwindcss-addons"
+import colors from "tailwindcss/colors"
+import defaultTheme from "tailwindcss/defaultTheme"
+import plugin from "tailwindcss/plugin"
 
 export default {
     content: ["./src/**/*.{html,js,svelte,ts,md}"],
@@ -81,7 +81,7 @@ function highlightUtility() {
             "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)"
         matchUtilities(
             {
-                highlight: color => ({
+                highlight: (color) => ({
                     "box-shadow": `${otherShadowUtilityValues}, inset 0 1px 0 0 ${color}`,
                 }),
             },

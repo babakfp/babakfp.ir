@@ -7,10 +7,6 @@
         "**/Icon*.svelte": true
     },
     "path-intellisense.mappings": {
-        "$icons": "${workspaceFolder}/src/lib/icons",
-        "$lib": "${workspaceFolder}/src/lib",
-        "$stores": "${workspaceFolder}/src/lib/stores",
-        "$portfolios": "${workspaceFolder}/src/lib/portfolios",
-        "$utils": "${workspaceFolder}/src/lib/utils"
+        "$lib": "${workspaceFolder}/src/lib"
     }
 }

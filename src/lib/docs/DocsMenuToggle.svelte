@@ -1,9 +1,9 @@
 <script lang="ts">
     import { page } from "$app/stores"
-    import { isDocsMenuSidebarOpen } from "$stores/docs"
-    import IconBarsBottomRight from "$icons/IconBarsBottomRight.svelte"
-    import IconX from "$icons/IconX.svelte"
+    import IconBarsBottomRight from "$lib/icons/IconBarsBottomRight.svelte"
+    import IconX from "$lib/icons/IconX.svelte"
     import IconToggler from "$lib/IconToggler.svelte"
+    import { isDocsMenuSidebarOpen } from "$lib/stores/docs"
 </script>
 
 {#if $page.url.pathname.startsWith("/docs") && $page.url.pathname !== "/docs"}

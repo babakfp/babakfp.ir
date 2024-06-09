@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { isDocsMenuSidebarOpen } from "$stores/docs"
     import Sidebar from "$lib/Sidebar/Sidebar.svelte"
+    import { isDocsMenuSidebarOpen } from "$lib/stores/docs"
     import DocsMenuItems from "./DocsMenuItems.svelte"
 </script>
 

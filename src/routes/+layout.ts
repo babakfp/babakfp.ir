@@ -1,5 +1,5 @@
+import packagesJson from "$lib/portfolios/packages.json"
 import type { Package } from "$lib/types"
-import packagesJson from "$portfolios/packages.json"
 
 export const prerender = true
 

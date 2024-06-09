@@ -1,5 +1,5 @@
 <script lang="ts">
-    import IconArrowUpRightSquare from "$icons/IconArrowUpRightSquare.svelte"
+    import IconArrowUpRightSquare from "$lib/icons/IconArrowUpRightSquare.svelte"
 
     export let href: string
     export let isExternal = false

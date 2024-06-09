@@ -1,14 +1,14 @@
 import { error } from "@sveltejs/kit"
 import * as v from "valibot"
 import type {
+    CollectionEntry,
     ImportMetaGlob,
     ImportMetaGlobValueResult,
     MarkdownEntry,
-    CollectionEntry,
 } from "./types"
 import {
-    validateCollectionName,
     validateCollectionEntryName,
+    validateCollectionName,
 } from "./validations"
 
 /**
@@ -36,7 +36,7 @@ const markdownFilesToEntries = async () => {
         validateCollectionEntryName(fileName.replace(".md", ""))
 
         const slugSegments = segments.slice(1, -1)
-        slugSegments.forEach(slugSegment =>
+        slugSegments.forEach((slugSegment) =>
             validateCollectionEntryName(slugSegment),
         )
 
@@ -54,14 +54,14 @@ const markdownFilesToEntries = async () => {
         })
     }
 
-    markdownEntries.forEach(entry => {
+    markdownEntries.forEach((entry) => {
         const sameSlugEntries = markdownEntries.filter(
-            e => e.slug === entry.slug,
+            (e) => e.slug === entry.slug,
         )
         if (sameSlugEntries.length > 1) {
             throw new Error(
                 `Conflicting routes found:
-                ${sameSlugEntries.map(e => e.glob.path).join("\n")}
+                ${sameSlugEntries.map((e) => e.glob.path).join("\n")}
                 Both entries resolve at the same route. One must be removed.`,
             )
         }
@@ -114,12 +114,12 @@ export const getCollectionEntries = async <T extends v.ObjectEntries>(
     const markdownEntries = await markdownFilesToEntries()
 
     const collectionEntries = markdownEntries.filter(
-        page => page.collection.name === name,
+        (page) => page.collection.name === name,
     )
 
     const result = await Promise.all(
         collectionEntries.map(
-            async entry => await getGlobEntryValue<T>(entry, schema),
+            async (entry) => await getGlobEntryValue<T>(entry, schema),
         ),
     )
 
@@ -138,10 +138,10 @@ export const getCollectionEntry = async <T extends v.ObjectEntries>(
 ) => {
     const entries = await markdownFilesToEntries()
     const collectionEntries = entries.filter(
-        entry => entry.collection.name === name,
+        (entry) => entry.collection.name === name,
     )
     const entry = collectionEntries.filter(
-        entry => entry.collection.name === name && entry.slug === slug,
+        (entry) => entry.collection.name === name && entry.slug === slug,
     )[0]
 
     if (entry) {

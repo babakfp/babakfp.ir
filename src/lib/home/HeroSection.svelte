@@ -1,13 +1,13 @@
 <script lang="ts">
-    import { PUBLIC_GOOGLE_DRIVE_RESUME_URL } from "$env/static/public"
     import { copyText } from "svelte-copy"
     import toast from "svelte-french-toast"
-    import IconGithub from "$icons/IconGithub.svelte"
-    import IconDribbble from "$icons/IconDribbble.svelte"
-    import IconLinkedin from "$icons/IconLinkedin.svelte"
-    import IconEnvelope from "$icons/IconEnvelope.svelte"
-    import IconTelegram from "$icons/IconTelegram.svelte"
-    import IconNpm from "$icons/IconNpm.svelte"
+    import { PUBLIC_GOOGLE_DRIVE_RESUME_URL } from "$env/static/public"
+    import IconDribbble from "$lib/icons/IconDribbble.svelte"
+    import IconEnvelope from "$lib/icons/IconEnvelope.svelte"
+    import IconGithub from "$lib/icons/IconGithub.svelte"
+    import IconLinkedin from "$lib/icons/IconLinkedin.svelte"
+    import IconNpm from "$lib/icons/IconNpm.svelte"
+    import IconTelegram from "$lib/icons/IconTelegram.svelte"
 </script>
 
 <section class="mx-auto max-w-prose">
