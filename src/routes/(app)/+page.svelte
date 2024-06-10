@@ -20,7 +20,11 @@
     <ul class="grid gap-8 sm:px-12 lg:grid-cols-2 lg:gap-6 lg:gap-y-8 xl:px-0">
         {#each frontendPortfolios as portfolio}
             <FrontendCard
-                {...portfolio}
+                slug={portfolio.slug}
+                title={portfolio.title}
+                description={portfolio.description}
+                poster={portfolio.poster}
+                technologies={portfolio.technologies}
                 isSingleRow={portfolio.title === "Angle Berry" ? true : false}
             />
         {/each}
