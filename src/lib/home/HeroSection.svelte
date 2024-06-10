@@ -27,7 +27,7 @@
 
     <div class="mt-4 flex flex-wrap items-center gap-4">
         <a
-            class="group btn btn-link"
+            class="group btn btn-primary"
             href={PUBLIC_GOOGLE_DRIVE_RESUME_URL}
             target="_blank"
             rel="noreferrer"

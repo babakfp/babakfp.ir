@@ -43,7 +43,7 @@ function buttonComponents() {
         addComponents({
             ".btn": {},
             ".btn-icon": {},
-            ".btn-link": {},
+            ".btn-primary": {},
         })
     })
 }
