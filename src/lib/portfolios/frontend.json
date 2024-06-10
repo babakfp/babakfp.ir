@@ -1,32 +1,54 @@
 [
     {
         "title": "Angle Berry",
+        "slug": "angle-berry",
         "description": "Angle Berry is a website for sharing premium videos. Users can pay or invite others to get access to the content. They can also chat in real-time with each other.",
         "poster": "/images/portfolios/frontend/frame/angle-berry.webp",
-        "url": "https://angle-berry.vercel.app/login?username=user&password=useruser"
+        "urls": {
+            "main": "https://angle-berry.vercel.app/login?username=user&password=useruser",
+            "github": "https://github.com/babakfp/angle-berry-client"
+        },
+        "technologies": ["Svelte", "TailwindCSS", "PocketBase", "TypeScript"]
     },
     {
         "title": "FarsGamer Remastered",
+        "slug": "farsgamer-remastered",
         "description": "In-Game Offers Store",
         "poster": "/images/portfolios/frontend/frame/farsgamer-remastered.webp",
-        "url": "https://farsgamer.vercel.app"
+        "urls": {
+            "main": "https://farsgamer.vercel.app"
+        },
+        "technologies": ["Svelte", "TailwindCSS"]
     },
     {
         "title": "FarsGamer",
+        "slug": "farsgamer",
         "description": "In-Game Offers Store",
         "poster": "/images/portfolios/frontend/frame/farsgamer.webp",
-        "url": "https://farsgamer.com"
+        "urls": {
+            "main": "https://farsgamer.com"
+        },
+        "technologies": ["TailwindCSS", "Sass"]
     },
     {
         "title": "TarVaPood",
+        "slug": "tarvapood",
         "description": "Handcrafted Carpets Store",
         "poster": "/images/portfolios/frontend/frame/tarvapood.webp",
-        "url": "https://tarvapood.onrender.com"
+        "urls": {
+            "main": "https://tarvapood.onrender.com"
+        },
+        "technologies": ["TailwindCSS", "Sass"]
     },
     {
         "title": "IDPay",
+        "slug": "idpay",
         "description": "Online Payment Site",
         "poster": "/images/portfolios/frontend/frame/idpay.webp",
-        "url": "https://idpay.vercel.app"
+        "urls": {
+            "main": "https://idpay.vercel.app",
+            "github": "https://github.com/babakfp/idpay"
+        },
+        "technologies": ["Svelte", "TailwindCSS"]
     }
 ]

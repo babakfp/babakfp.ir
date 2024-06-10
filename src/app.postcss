@@ -10,7 +10,7 @@
         --main-spacing-b: theme(spacing.20);
     }
     ::selection {
-        @apply bg-indigo-600/60;
+        @apply bg-brand-600/60;
     }
     ::-webkit-scrollbar {
         @apply h-2.5 w-2.5;
@@ -43,7 +43,7 @@
 /* Outline */
 @layer base {
     * {
-        @apply outline-none outline outline-2 focus-visible:outline-indigo-400;
+        @apply outline-none outline outline-2 focus-visible:outline-brand-400;
     }
     a {
         @apply outline-dashed;
@@ -68,13 +68,13 @@
 
 @layer components {
     .link {
-        @apply break-words text-indigo-300 underline decoration-transparent decoration-2 duration-75 hover:text-indigo-100;
+        @apply break-words text-brand-300 underline decoration-transparent decoration-2 duration-75 hover:text-brand-100;
     }
 }
 
 @layer components {
     .inline-code {
-        @apply select-text rounded-md bg-gray-50/10 px-1.5 py-0.5 text-[.9em] selection:bg-indigo-600/50;
+        @apply select-text rounded-md bg-gray-50/10 px-1.5 py-0.5 text-[.9em] selection:bg-brand-600/50;
     }
 }
 
@@ -94,13 +94,13 @@
 
 @layer components {
     .btn {
-        @apply relative inline-flex items-center justify-center rounded bg-gray-800 px-3 py-2 text-sm text-gray-50 duration-100 drag-none highlight-gray-50/10 hover:bg-gray-700;
+        @apply relative inline-flex items-center justify-center gap-2 rounded bg-gray-800 px-3 py-2 text-sm text-gray-50 duration-100 drag-none highlight-gray-50/10 hover:bg-gray-700;
     }
     .btn-icon {
         @apply h-9 w-9 p-0 text-gray-400 hover:text-gray-50;
     }
     .btn-link {
-        @apply bg-indigo-400/30 text-indigo-300 hover:bg-indigo-400/40 hover:text-indigo-200;
+        @apply bg-brand-400/30 text-brand-300 hover:bg-brand-400/40 hover:text-brand-200;
     }
 }
 

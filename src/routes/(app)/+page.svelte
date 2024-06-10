@@ -1,6 +1,6 @@
 <script lang="ts">
     import { Toaster } from "svelte-french-toast"
-    import FrontendCard from "$lib/cards/FrontendCard.svelte"
+    import FrontendCard from "$lib/cards/FrontendCard/FrontendCard.svelte"
     import PostCard from "$lib/cards/PostCard.svelte"
     import RepoCard from "$lib/cards/RepoCard.svelte"
     import RtlThemeCard from "$lib/cards/RtlThemeCard.svelte"

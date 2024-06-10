@@ -28,7 +28,7 @@ Modify your `+layout.svelte` file:
 
 ```svelte
 <script lang="ts" context="module">
-    <!--          ^^^^^^^^^^^^^^^^ IMPORTANT -->
+    //            ^^^^^^^^^^^^^^^^ IMPORTANT
 
     import img from "$lib/markdown/img.svelte"
 

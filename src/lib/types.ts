@@ -29,6 +29,12 @@ export type Doc = v.Input<typeof DocsFrontmatterSchema> & {
     slug: string
 }
 
+export const PortfoliosFrontmatterSchema = v.object({})
+
+export type Portfolio = v.Input<typeof PortfoliosFrontmatterSchema> & {
+    slug: string
+}
+
 export type Package = {
     name: string
     description: string
