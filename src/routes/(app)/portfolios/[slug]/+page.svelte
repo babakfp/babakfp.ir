@@ -34,7 +34,7 @@
 
 {#key $page.url.pathname}
     <div in:fly={transition}>
-        <article class="article-content">
+        <article class="article-content pb-12 sm:pb-24">
             <h1>{portfolioData.title}</h1>
 
             <p class="text-xl leading-8">{portfolioData.description}</p>
@@ -62,17 +62,19 @@
 
             <svelte:component this={data.content} />
 
-            <h2>Gallery</h2>
-
             {#if portfolioData.gallery}
+                <h2>Gallery</h2>
+
                 {#each portfolioData.gallery as img}
                     <img class="w-full" src={img} alt={portfolioData.title} />
                 {/each}
             {/if}
+        </article>
 
-            <div
-                class="sticky bottom-0 !my-0 flex gap-4 bg-gray-900 pb-8 pt-4 sm:justify-center sm:pb-4"
-            >
+        <div
+            class="container fixed inset-x-0 bottom-0 border-t border-gray-800 bg-gray-900 sm:border-none"
+        >
+            <div class="flex justify-center gap-4 pb-8 pt-4">
                 <a
                     class="btn-primary btn"
                     href={portfolioData.urls.main}
@@ -81,6 +83,7 @@
                     View Website
                     <IconArrowUpRightSquare />
                 </a>
+
                 {#if portfolioData.urls.github}
                     <a
                         class="btn"
@@ -92,6 +95,6 @@
                     </a>
                 {/if}
             </div>
-        </article>
+        </div>
     </div>
 {/key}
