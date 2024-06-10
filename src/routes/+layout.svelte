@@ -1,5 +1,5 @@
 <script lang="ts">
-    import "../app.postcss"
+    import "$lib/app.pcss"
     import { LoadingBar } from "svelte-loading-bar"
     import Header from "$lib/header/Header.svelte"
 </script>
