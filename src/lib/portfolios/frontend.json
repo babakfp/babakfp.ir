@@ -8,6 +8,13 @@
             "main": "https://angle-berry.vercel.app/login?username=user&password=useruser",
             "github": "https://github.com/babakfp/angle-berry-client"
         },
+        "gallery": [
+            "/content/portfolios/angle-berry/gallery-1.png",
+            "/content/portfolios/angle-berry/gallery-2.png",
+            "/content/portfolios/angle-berry/gallery-3.png",
+            "/content/portfolios/angle-berry/gallery-4.png",
+            "/content/portfolios/angle-berry/gallery-5.png"
+        ],
         "technologies": ["Svelte", "TailwindCSS", "PocketBase", "TypeScript"]
     },
     {

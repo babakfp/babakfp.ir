@@ -84,6 +84,14 @@
             {/if}
 
             <svelte:component this={data.content} />
+
+            <h2>Gallery</h2>
+
+            {#if portfolioData.gallery}
+                {#each portfolioData.gallery as img}
+                    <img class="w-full" src={img} alt={portfolioData.title} />
+                {/each}
+            {/if}
         </article>
     </div>
 {/key}
