@@ -25,6 +25,12 @@
         "urls": {
             "main": "https://farsgamer.vercel.app"
         },
+        "gallery": [
+            "/content/portfolios/farsgamer-remastered/gallery-1.png",
+            "/content/portfolios/farsgamer-remastered/gallery-2.png",
+            "/content/portfolios/farsgamer-remastered/gallery-3.png",
+            "/content/portfolios/farsgamer-remastered/gallery-4.png"
+        ],
         "technologies": ["Svelte", "TailwindCSS"]
     },
     {
