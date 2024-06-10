@@ -9,7 +9,7 @@
     import IconArrowUpRightSquare from "$lib/icons/IconArrowUpRightSquare.svelte"
     import frontendPortfolios from "$lib/portfolios/frontend.json"
     import transition from "$lib/utils/transition"
-    import TechBox from "./TechBox.svelte"
+    import TechnologyBox from "./TechnologyBox.svelte"
 
     export let data
 
@@ -52,9 +52,9 @@
                             (tech) => tech.name === technology,
                         )}
                         {#if tech?.component}
-                            <TechBox title={technology}>
+                            <TechnologyBox title={technology}>
                                 <svelte:component this={tech.component} />
-                            </TechBox>
+                            </TechnologyBox>
                         {/if}
                     {/each}
                 </div>
