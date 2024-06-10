@@ -37,30 +37,7 @@
         <article class="article-content">
             <h1>{portfolioData.title}</h1>
 
-            <div
-                class="sticky top-[--header-h] z-1 !-my-4 flex flex-wrap gap-4 bg-gray-900 py-4"
-            >
-                <a
-                    class="btn btn-primary"
-                    href={portfolioData.urls.main}
-                    target="_blank"
-                >
-                    View Website
-                    <IconArrowUpRightSquare />
-                </a>
-                {#if portfolioData.urls.github}
-                    <a
-                        class="btn"
-                        href={portfolioData.urls.github}
-                        target="_blank"
-                    >
-                        View Repository
-                        <IconArrowUpRightSquare />
-                    </a>
-                {/if}
-            </div>
-
-            <p>{portfolioData.description}</p>
+            <p class="text-xl leading-8">{portfolioData.description}</p>
 
             <img
                 class="w-full"
@@ -92,6 +69,29 @@
                     <img class="w-full" src={img} alt={portfolioData.title} />
                 {/each}
             {/if}
+
+            <div
+                class="sticky bottom-0 !my-0 flex gap-4 bg-gray-900 pb-8 pt-4 sm:justify-center sm:pb-4"
+            >
+                <a
+                    class="btn-primary btn"
+                    href={portfolioData.urls.main}
+                    target="_blank"
+                >
+                    View Website
+                    <IconArrowUpRightSquare />
+                </a>
+                {#if portfolioData.urls.github}
+                    <a
+                        class="btn"
+                        href={portfolioData.urls.github}
+                        target="_blank"
+                    >
+                        View Repository
+                        <IconArrowUpRightSquare />
+                    </a>
+                {/if}
+            </div>
         </article>
     </div>
 {/key}
