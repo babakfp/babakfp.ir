@@ -38,7 +38,7 @@
             <h1>{portfolioData.title}</h1>
 
             <div
-                class="top-header-h sticky z-1 !-my-4 flex flex-wrap gap-4 bg-gray-900 py-4"
+                class="sticky top-[--header-h] z-1 !-my-4 flex flex-wrap gap-4 bg-gray-900 py-4"
             >
                 <a
                     class="btn btn-link"
