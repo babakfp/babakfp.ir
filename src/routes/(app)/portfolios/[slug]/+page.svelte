@@ -76,7 +76,7 @@
         >
             <div class="flex justify-center gap-4 pb-8 pt-4">
                 <a
-                    class="btn-primary btn"
+                    class="btn btn-primary"
                     href={portfolioData.urls.main}
                     target="_blank"
                 >
