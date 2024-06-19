@@ -13,6 +13,8 @@ title: Supports Hover
 
 <UtilsTable {utilities} />
 
+> **Note:** You can use this [workaround](https://github.com/tailwindlabs/tailwindcss/discussions/1739#discussioncomment-3630717) instead of this plugin.
+
 ## Usage
 
 ### Single import
