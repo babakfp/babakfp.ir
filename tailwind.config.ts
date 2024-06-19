@@ -36,6 +36,9 @@ export default {
         codeComponents(),
         linkComponents(),
     ],
+    future: {
+        hoverOnlyWhenSupported: true,
+    },
 } satisfies Config
 
 function buttonComponents() {
