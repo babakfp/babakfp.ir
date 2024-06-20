@@ -14,6 +14,11 @@
     export let data
 </script>
 
+<svelte:head>
+    <title>Babak Farkhoopak</title>
+    <meta name="description" content="Babak Farkhoopak website." />
+</svelte:head>
+
 <HeroSection />
 
 <section class="mt-14">
