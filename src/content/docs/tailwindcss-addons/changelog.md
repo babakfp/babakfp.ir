@@ -22,7 +22,7 @@ Update to 1.9.3 version!
 ## 1.8.2
 
 -   [fix] Included file extension when importing.
--   Onlu included source files in published package.
+-   Only included source files in published package.
 
 ## 1.8.1
 
