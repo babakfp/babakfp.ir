@@ -1,8 +1,8 @@
 ---
 title: Fuck Linux
 description: My experience with Linux. I hate it.
-updated: 2024/06/21
-published: 2024/06/20
+update: 2024/06/21
+create: 2024/06/20
 ---
 
 "Fuck Linux", is how I felt when using Linux.

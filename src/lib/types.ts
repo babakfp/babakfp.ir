@@ -7,11 +7,11 @@ export const PostsFrontmatterSchema = v.object({
     description: v.string('Post "description" field must be a string.', [
         v.minLength(1, 'Post "description" field is required.'),
     ]),
-    updated: v.string('Post "updated" field must be a string.', [
-        v.minLength(1, 'Post "updated" field is required.'),
+    update: v.string('Post "update" field must be a string.', [
+        v.minLength(1, 'Post "update" field is required.'),
     ]),
-    published: v.string('Post "published" field must be a string.', [
-        v.minLength(1, 'Post "published" field is required.'),
+    create: v.string('Post "create" field must be a string.', [
+        v.minLength(1, 'Post "create" field is required.'),
     ]),
 })
 

@@ -42,21 +42,21 @@
                         </li>
                     </ul>
 
-                    {#if data.updated && data.published}
+                    {#if data.update && data.create}
                         <div
                             class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-400"
                         >
-                            {#if data.updated}
+                            {#if data.update}
                                 <span>
-                                    Updated: <b title={data.updated}>
-                                        {timeSince(new Date(data.updated))}
+                                    Update: <b title={data.update}>
+                                        {timeSince(new Date(data.update))}
                                     </b>
                                 </span>
                             {/if}
-                            {#if data.published}
+                            {#if data.create}
                                 <span>
-                                    Published: <b title={data.published}>
-                                        {timeSince(new Date(data.published))}
+                                    Create: <b title={data.create}>
+                                        {timeSince(new Date(data.create))}
                                     </b>
                                 </span>
                             {/if}
