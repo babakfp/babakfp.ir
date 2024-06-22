@@ -91,6 +91,10 @@ I hate Rust. Deno is a tool for JavaScript developers, and using Rust means less
 
 When it was announced, I was excited about it. I Later realized that no one was using it.
 
+## Compile to executable feature
+
+The only thing that you can do, is to compile to an executable. There is no customization or features or anything like that.
+
 ## Last words
 
 Sorry, but I can't think positive about Deno anymore.
