@@ -11,6 +11,7 @@ async function getPosts() {
     const entries = await getCollectionEntries("posts", PostsFrontmatterSchema)
 
     const posts: Post[] = entries
+        .filter((entry) => entry.slug.split("/").length === 1)
         .map((entry) => ({
             ...entry.frontmatter,
             slug: entry.slug,
