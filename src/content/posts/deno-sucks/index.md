@@ -7,6 +7,10 @@ create: 2024/06/20
 
 When Deno was first released, I was excited to see the potential of the project. I thought it would be a great alternative to Node.js, and I was _wrong_.
 
+## Deno isn't available in sanctioned countries
+
+If you live in a sanctioned country, you need to use a VPN to access the docs, download any files and packages from their servers.
+
 ## Deno doesn't natively support JSX
 
 This is what you see in their website:
