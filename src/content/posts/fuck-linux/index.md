@@ -114,3 +114,5 @@ I tried other Linux distributions too in this third experience.
 ## Conclusion (Good Things About Linux)
 
 This was my third attempt at using Linux, and I always ended up returning to Windows. While Linux has some advantages, like faster performance in some areas and less need for system debloating, the frustrations outweighed the benefits for me.
+
+When I was frustrated with Linux, I read this [message](https://devrant.com/rants/1903975/does-linux-suck-imho-yes-a-lot-of-the-people-bash-windows-regarding-automatic-re), and it cheered me up!
