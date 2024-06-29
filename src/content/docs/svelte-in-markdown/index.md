@@ -11,7 +11,7 @@ This library exports a function that acts as a preprocessor for Svelte. It trans
 This library uses ["unified"](https://github.com/unifiedjs/unified) and its ecosystem, as a transformer, to parse and transform Markdown to HTML.
 
 > [!NOTE]
-> This library is an alternative to ["mdsvex"](https://github.com/pngwn/mdsvex).
+> Svelte in Markdown is an alternative to ["mdsvex"](https://github.com/pngwn/mdsvex).
 
 ## When should I use this?
 
