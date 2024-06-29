@@ -4,11 +4,16 @@
     import transition from "$lib/utils/transition"
 
     export let data
+
+    const morePackageData = data.packages.find((pkg) => pkg.name === data.slug)
 </script>
 
 <svelte:head>
     {#if data.title}
         <title>{data.title}</title>
+    {/if}
+    {#if morePackageData?.description}
+        <meta name="description" content={morePackageData?.description} />
     {/if}
 </svelte:head>
 
