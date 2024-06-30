@@ -1,37 +1,37 @@
-import * as v from "valibot"
+import { z } from "zod"
 
-export const PostsFrontmatterSchema = v.object({
-    title: v.string('Post "title" field must be a string.', [
-        v.minLength(1, 'Post "title" field is required.'),
-    ]),
-    description: v.string('Post "description" field must be a string.', [
-        v.minLength(1, 'Post "description" field is required.'),
-    ]),
-    update: v.string('Post "update" field must be a string.', [
-        v.minLength(1, 'Post "update" field is required.'),
-    ]),
-    create: v.string('Post "create" field must be a string.', [
-        v.minLength(1, 'Post "create" field is required.'),
-    ]),
+export const PostsFrontmatterSchema = z.object({
+    title: z
+        .string({ message: 'Post "title" field must be a string.' })
+        .min(1, 'Post "title" field is required.'),
+    description: z
+        .string({ message: 'Post "description" field must be a string.' })
+        .min(1, 'Post "description" field is required.'),
+    update: z
+        .string({ message: 'Post "update" field must be a string.' })
+        .min(1, 'Post "update" field is required.'),
+    create: z
+        .string({ message: 'Post "create" field must be a string.' })
+        .min(1, 'Post "create" field is required.'),
 })
 
-export type Post = v.Input<typeof PostsFrontmatterSchema> & {
+export type Post = z.input<typeof PostsFrontmatterSchema> & {
     slug: string
 }
 
-export const DocsFrontmatterSchema = v.object({
-    title: v.string('Doc "title" field must be a string.', [
-        v.minLength(1, 'Doc "title" field is required.'),
-    ]),
+export const DocsFrontmatterSchema = z.object({
+    title: z
+        .string({ message: 'Doc "title" field must be a string.' })
+        .min(1, 'Doc "title" field is required.'),
 })
 
-export type Doc = v.Input<typeof DocsFrontmatterSchema> & {
+export type Doc = z.input<typeof DocsFrontmatterSchema> & {
     slug: string
 }
 
-export const PortfoliosFrontmatterSchema = v.object({})
+export const PortfoliosFrontmatterSchema = z.object({}).optional()
 
-export type Portfolio = v.Input<typeof PortfoliosFrontmatterSchema> & {
+export type Portfolio = z.input<typeof PortfoliosFrontmatterSchema> & {
     slug: string
 }
 

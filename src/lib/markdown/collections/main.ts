@@ -1,5 +1,5 @@
 import { error } from "@sveltejs/kit"
-import * as v from "valibot"
+import { z } from "zod"
 import type {
     CollectionEntry,
     ImportMetaGlob,
@@ -73,23 +73,22 @@ const markdownFilesToEntries = async () => {
 /**
  * @returns The resolved value of an entry with frontmatter.
  */
-const getGlobEntryValue = async <T extends v.ObjectEntries>(
+const getGlobEntryValue = async <T extends z.ZodRawShape>(
     entry: MarkdownEntry,
-    schema: v.ObjectSchema<T>,
+    schema: z.ZodObject<T>,
 ) => {
     const globValueResult =
         (await entry.glob.value()) as ImportMetaGlobValueResult
 
-    const frontmatterParseResult = v.safeParse(
-        schema,
+    const frontmatterParseResult = schema.safeParse(
         globValueResult.markdownData_.frontmatter,
     )
 
     if (!frontmatterParseResult.success) {
-        return error(400, frontmatterParseResult.issues[0].message)
+        return error(400, frontmatterParseResult.error.message)
     }
 
-    const frontmatter = frontmatterParseResult.output
+    const frontmatter = frontmatterParseResult.data
 
     return {
         collection: entry.collection,
@@ -107,9 +106,9 @@ const getGlobEntryValue = async <T extends v.ObjectEntries>(
  * Gets all markdown entries of the specific collection.
  * @param name - The name of the collection.
  */
-export const getCollectionEntries = async <T extends v.ObjectEntries>(
+export const getCollectionEntries = async <T extends z.ZodRawShape>(
     name: string,
-    schema: v.ObjectSchema<T>,
+    schema: z.ZodObject<T>,
 ) => {
     const markdownEntries = await markdownFilesToEntries()
 
@@ -131,10 +130,10 @@ export const getCollectionEntries = async <T extends v.ObjectEntries>(
  * @param name - The name of the collection.
  * @param slug - The name of the markdown file without the suffix (`.md`).
  */
-export const getCollectionEntry = async <T extends v.ObjectEntries>(
+export const getCollectionEntry = async <T extends z.ZodRawShape>(
     name: string,
     slug: string,
-    schema: v.ObjectSchema<T>,
+    schema: z.ZodObject<T>,
 ) => {
     const entries = await markdownFilesToEntries()
     const collectionEntries = entries.filter(
