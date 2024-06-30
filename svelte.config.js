@@ -1,22 +1,16 @@
 import adapter from "@sveltejs/adapter-vercel"
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte"
-import {
-    SVELTE_EXTENSIONS,
-    svelteInMarkdownPreprocess,
-} from "svelte-in-markdown"
-import {
-    hastFromHtml,
-    transformer,
-} from "svelte-in-markdown/transformers/unified"
+import { EXTENSIONS, mdxPreprocess } from "mdx-svelte"
+import { hastFromHtml, transformer } from "mdx-svelte/transformers/unified"
 
 /** @type {import("@sveltejs/kit").Config} */
 export default {
-    extensions: SVELTE_EXTENSIONS,
+    extensions: EXTENSIONS,
     kit: {
         adapter: adapter(),
     },
     preprocess: [
-        svelteInMarkdownPreprocess({
+        mdxPreprocess({
             layouts: {
                 default: ["img", "blockquote"],
             },

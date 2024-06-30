@@ -1,8 +1,8 @@
 [
     {
-        "title": "Svelte in Markdown",
-        "name": "svelte-in-markdown",
-        "description": "A preprocessor that allows you to write Svelte in Markdown.",
+        "title": "MDX Svelte",
+        "name": "mdx-svelte",
+        "description": "MDX for Svelte - A Svelte Preprocessor that allows you to write Svelte code in Markdown files.",
         "avatarUrl": "https://avatars.githubusercontent.com/u/44144724?v=4",
         "starsCount": 0,
         "forksCount": 0,

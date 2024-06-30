@@ -185,17 +185,17 @@ export const docsSidebarItems = readable([
         ],
     },
     {
-        name: "svelte-in-markdown",
-        path: "/docs/svelte-in-markdown",
+        name: "mdx-svelte",
+        path: "/docs/mdx-svelte",
         primaryLinks: [
             {
                 title: "GitHub",
-                url: "https://github.com/babakfp/svelte-in-markdown",
+                url: "https://github.com/babakfp/mdx-svelte",
                 icon: IconGithub,
             },
             {
                 title: "NPM",
-                url: "https://www.npmjs.com/package/svelte-in-markdown",
+                url: "https://www.npmjs.com/package/mdx-svelte",
                 icon: IconNpm,
             },
         ],
@@ -205,15 +205,15 @@ export const docsSidebarItems = readable([
                 items: [
                     {
                         title: "Introduction",
-                        path: "/docs/svelte-in-markdown",
+                        path: "/docs/mdx-svelte",
                     },
                     {
                         title: "Installation",
-                        path: "/docs/svelte-in-markdown/installation",
+                        path: "/docs/mdx-svelte/installation",
                     },
                     {
                         title: "Options",
-                        path: "/docs/svelte-in-markdown/options",
+                        path: "/docs/mdx-svelte/options",
                     },
                 ],
             },
@@ -222,11 +222,11 @@ export const docsSidebarItems = readable([
                 items: [
                     {
                         title: "Introduction",
-                        path: "/docs/svelte-in-markdown/transformers",
+                        path: "/docs/mdx-svelte/transformers",
                     },
                     {
                         title: "Build a Transformer",
-                        path: "/docs/svelte-in-markdown/transformers/build",
+                        path: "/docs/mdx-svelte/transformers/build",
                     },
                 ],
             },
@@ -235,23 +235,23 @@ export const docsSidebarItems = readable([
                 items: [
                     {
                         title: "Introduction",
-                        path: "/docs/svelte-in-markdown/unified",
+                        path: "/docs/mdx-svelte/unified",
                     },
                     {
                         title: "HAST from HTML",
-                        path: "/docs/svelte-in-markdown/unified/hast-from-html",
+                        path: "/docs/mdx-svelte/unified/hast-from-html",
                     },
                     {
                         title: "Plugins",
-                        path: "/docs/svelte-in-markdown/unified/plugins",
+                        path: "/docs/mdx-svelte/unified/plugins",
                     },
                     {
                         title: "Add plugin",
-                        path: "/docs/svelte-in-markdown/unified/add-plugin",
+                        path: "/docs/mdx-svelte/unified/add-plugin",
                     },
                     {
                         title: "Options",
-                        path: "/docs/svelte-in-markdown/unified/options",
+                        path: "/docs/mdx-svelte/unified/options",
                     },
                 ],
             },
@@ -260,11 +260,11 @@ export const docsSidebarItems = readable([
                 items: [
                     {
                         title: "Table of Contents",
-                        path: "/docs/svelte-in-markdown/table-of-contents",
+                        path: "/docs/mdx-svelte/table-of-contents",
                     },
                     {
                         title: "Real-world Examples",
-                        path: "/docs/svelte-in-markdown/real-world-examples",
+                        path: "/docs/mdx-svelte/real-world-examples",
                     },
                 ],
             },
@@ -273,13 +273,13 @@ export const docsSidebarItems = readable([
                 items: [
                     {
                         title: "Customize Elements",
-                        path: "/docs/svelte-in-markdown/customize-markdown-elements",
+                        path: "/docs/mdx-svelte/customize-markdown-elements",
                     },
                 ],
             },
             {
                 title: "CHANGELOG",
-                path: "/docs/svelte-in-markdown/changelog",
+                path: "/docs/mdx-svelte/changelog",
             },
         ],
     },

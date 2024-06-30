@@ -9,4 +9,4 @@ title: "remark-frontmatter-yaml"
 
 ## Related resources
 
--   ["remark-frontmatter"](/docs/svelte-in-markdown/unified/plugins/remark-frontmatter)
+-   ["remark-frontmatter"](/docs/mdx-svelte/unified/plugins/remark-frontmatter)

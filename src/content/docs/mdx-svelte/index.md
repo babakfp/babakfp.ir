@@ -1,8 +1,10 @@
 ---
-title: Svelte in Markdown
+title: MDX Svelte
 ---
 
-Hey there! Welcome to [Svelte in Markdown](https://github.com/babakfp/svelte-in-markdown). Ever wished you could sprinkle some Svelte magic into your Markdown files? Well, now you can! With [Svelte in Markdown](https://github.com/babakfp/svelte-in-markdown), writing Svelte code directly in Markdown is a breeze. Whether you're jazzing up docs, crafting tutorials, or spicing up your content, we've got you covered. Say goodbye to boring Markdown and hello to dynamic, interactive content. Ready to level up your Markdown game? Let's dive in!
+MDX for Svelte - A Svelte Preprocessor that allows you to write Svelte code in Markdown files.
+
+Hey there! Welcome to [MDX Svelte](https://github.com/babakfp/mdx-svelte). Ever wished you could sprinkle some Svelte magic into your Markdown files? Well, now you can! With [MDX Svelte](https://github.com/babakfp/mdx-svelte), writing Svelte code directly in Markdown is a breeze. Whether you're jazzing up docs, crafting tutorials, or spicing up your content, we've got you covered. Say goodbye to boring Markdown and hello to dynamic, interactive content. Ready to level up your Markdown game? Let's dive in!
 
 ## What is this?
 
@@ -11,7 +13,7 @@ This library exports a function that acts as a preprocessor for Svelte. It trans
 This library uses ["unified"](https://github.com/unifiedjs/unified) and its ecosystem, as a transformer, to parse and transform Markdown to HTML.
 
 > [!NOTE]
-> Svelte in Markdown is an alternative to ["mdsvex"](https://github.com/pngwn/mdsvex).
+> MDX Svelte is an alternative to ["mdsvex"](https://github.com/pngwn/mdsvex).
 
 ## When should I use this?
 
@@ -37,7 +39,7 @@ I developed this project due to the issues and limitations with ["mdsvex"](https
     -   ["rehype-external-links"](https://www.npmjs.com/package/rehype-external-links)
 -   Allows utilization of the native SvelteKit layout files (`+layout.svelte`).
 -   Eliminates annoying "was created with unknown prop" warnings.
--   Offers the flexibility to create custom [transformer plugins](/docs/svelte-in-markdown/transformers) for alternatives to Markdown.
+-   Offers the flexibility to create custom [transformer plugins](/docs/mdx-svelte/transformers) for alternatives to Markdown.
 -   Enables usage of any code highlighting libraries without encountering issues like the need to escape certain characters to prevent conflicts with Svelte syntax.
 
 ## Limitations

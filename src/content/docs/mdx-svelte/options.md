@@ -15,7 +15,7 @@ type Options = {
     }
 }
 
-svelteInMarkdownPreprocess(options: Options)
+mdxPreprocess(options: Options)
 ```
 
 ## `extensions`
@@ -28,33 +28,25 @@ Include the extension of files to be preprocessed. Only include the markdown fil
 ### Example with the default value
 
 ```ts
-import {
-    SVELTE_EXTENSIONS,
-    svelteInMarkdownPreprocess,
-} from "svelte-in-markdown"
+import { EXTENSIONS, mdxPreprocess } from "mdx-svelte"
 
 const config = {
-    extensions: SVELTE_EXTENSIONS,
-    preprocess: [svelteInMarkdownPreprocess(), vitePreprocess()],
+    extensions: EXTENSIONS,
+    preprocess: [mdxPreprocess(), vitePreprocess()],
 }
 ```
 
 ### Example with a custom value
 
 ```ts
-import {
-    SVELTE_EXTENSION,
-    //             ^ DOESN'T END WITH "S"
-    svelteInMarkdownPreprocess,
-} from "svelte-in-markdown"
+import { DOT_SVELTE, mdxPreprocess } from "mdx-svelte"
 
 const MY_CUSTOM_EXTENSION = ".hello"
 
 const config = {
-    extensions: [SVELTE_EXTENSION, MY_CUSTOM_EXTENSION],
-    //                          ^ DOESN'T END WITH "S"
+    extensions: [DOT_SVELTE, MY_CUSTOM_EXTENSION],
     preprocess: [
-        svelteInMarkdownPreprocess({
+        mdxPreprocess({
             extensions: [MY_CUSTOM_EXTENSION],
         }),
         vitePreprocess(),
@@ -92,7 +84,7 @@ Example `svelte.config.js` file:
 ```ts
 const config = {
     preprocess: [
-        svelteInMarkdownPreprocess({
+        mdxPreprocess({
             layouts: {
                 default: ["img", "blockquote"],
             },
@@ -173,7 +165,7 @@ If `ignore` was `true`, set exceptions to allow the files of some packages to be
 
 ## `onTransform`
 
-[Example](/docs/svelte-in-markdown/unified) usage.
+[Example](/docs/mdx-svelte/unified) usage.
 
 > [!NOTE]
 > Please refer to the jsDoc comments to learn more.

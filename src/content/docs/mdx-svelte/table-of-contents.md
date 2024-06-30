@@ -2,7 +2,7 @@
 title: Table of Contents
 ---
 
-The default ["remark-toc"](https://npmjs.com/package/remark-toc) plugin may not generate a TOC for markdown files that are imported as Svelte components. To address this limitation, you can use a built-in function provided by the ["svelte-in-markdown"](https://github.com/babakfp/svelte-in-markdown) package.
+The default ["remark-toc"](https://npmjs.com/package/remark-toc) plugin may not generate a TOC for markdown files that are imported as Svelte components. To address this limitation, you can use a built-in function provided by the ["mdx-svelte"](https://github.com/babakfp/mdx-svelte) package.
 
 ## Example usage
 
@@ -10,7 +10,7 @@ The default ["remark-toc"](https://npmjs.com/package/remark-toc) plugin may not 
 <!-- +layout.svelte -->
 
 <script lang="ts">
-    import { getTableOfContents } from "svelte-in-markdown"
+    import { getTableOfContents } from "mdx-svelte"
 
     const headings = getTableOfContents({
         containerSelector: ".my-markdown-container",
@@ -36,9 +36,9 @@ Returns:
 ## How to disable ["remark-toc"](https://npmjs.com/package/remark-toc) plugin?
 
 ```ts
-import { transformer } from "svelte-in-markdown/transformers/unified"
+import { transformer } from "mdx-svelte/transformers/unified"
 
-svelteInMarkdownPreprocess({
+mdxPreprocess({
     onTransform: async (options, config) => {
         return await transformer(options, config, {
             builtInPlugins: {
@@ -48,5 +48,5 @@ svelteInMarkdownPreprocess({
             },
         })
     },
-}),
+})
 ```

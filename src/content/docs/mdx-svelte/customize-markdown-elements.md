@@ -17,7 +17,7 @@ It's possible to replace Markdown elements (HTML tags) rendered into the page wi
 Modify preprocessor config:
 
 ```ts
-svelteInMarkdownPreprocess({
+mdxPreprocess({
     layouts: {
         default: ["img"],
     },
@@ -45,4 +45,4 @@ Modify your `+layout.svelte` file:
 
 ## Related resources
 
--   Learn more about the [`layouts`](/docs/svelte-in-markdown/options#layouts) option.
+-   Learn more about the [`layouts`](/docs/mdx-svelte/options#layouts) option.

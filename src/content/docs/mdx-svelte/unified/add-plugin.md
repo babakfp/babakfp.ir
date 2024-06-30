@@ -9,7 +9,7 @@ Let's say we want to use the ["remark-github-alerts"](https://github.com/hyoban/
 ```ts
 import remarkGithubAlerts from "remark-github-alerts"
 
-svelteInMarkdownPreprocess({
+mdxPreprocess({
     onTransform: async (options, config) => {
         return await transformer(options, config, {
             builtInPlugins: {

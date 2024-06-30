@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount } from "svelte"
-    import { getTableOfContents } from "svelte-in-markdown"
+    import { getTableOfContents } from "mdx-svelte"
     import { browser } from "$app/environment"
     import { page } from "$app/stores"
     import Sidebar from "$lib/Sidebar/Sidebar.svelte"

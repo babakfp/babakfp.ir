@@ -10,7 +10,7 @@ title: "rehype-autolink-headings"
 ## Example usage
 
 ```ts
-import { hastFromHtml } from "svelte-in-markdown/transformers/unified"
+import { hastFromHtml } from "mdx-svelte/transformers/unified"
 
 rehypeAutolinkHeadings: {
     enable: true,
@@ -32,4 +32,4 @@ rehypeAutolinkHeadings: {
 
 ## Related resources
 
--   [Table of Contents](/docs/svelte-in-markdown/table-of-contents)
+-   [Table of Contents](/docs/mdx-svelte/table-of-contents)

@@ -6,4 +6,4 @@ In this context, transformers are functions that take a string as an argument an
 
 ## Built-in transformers
 
--   [Unified](/docs/svelte-in-markdown/unified)
+-   [Unified](/docs/mdx-svelte/unified)

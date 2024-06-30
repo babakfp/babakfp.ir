@@ -1,5 +1,5 @@
+import type { MarkdownData } from "mdx-svelte"
 import type { SvelteComponent } from "svelte"
-import type { MarkdownData } from "svelte-in-markdown"
 
 export type ImportMetaGlob = Record<string, () => Promise<unknown>>
 

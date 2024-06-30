@@ -3,7 +3,7 @@ title: Installation
 ---
 
 ```bash
-pnpm add -D svelte-in-markdown
+pnpm add -D mdx-svelte
 ```
 
 > [!IMPORTANT]
@@ -14,19 +14,16 @@ pnpm add -D svelte-in-markdown
 Import the package and modify the `svelte.config.js` file:
 
 ```ts
-import {
-    SVELTE_EXTENSIONS,
-    svelteInMarkdownPreprocess,
-} from "svelte-in-markdown"
+import { EXTENSIONS, mdxPreprocess } from "mdx-svelte"
 
 const config = {
-    extensions: SVELTE_EXTENSIONS,
-    preprocess: [svelteInMarkdownPreprocess(), vitePreprocess()],
+    extensions: EXTENSIONS,
+    preprocess: [mdxPreprocess(), vitePreprocess()],
 }
 ```
 
 > [!IMPORTANT]
-> Place `svelteInMarkdownPreprocess()` before `vitePreprocess()`, Otherwise you will encounter unexpected behaviors!
+> Place `mdxPreprocess()` before `vitePreprocess()`, Otherwise you will encounter unexpected behaviors!
 
 **All done!** Create a `+page.md` file in the `src/routes` folder and add your content in!
 
@@ -52,4 +49,4 @@ const config = {
 ## More help
 
 > [!NOTE]
-> Everything is documented using jsDoc/tsDoc. Please take a look at everything that this library exports and all of the available configs and options to have a better understanding of things. Alternatively you can use [tsdocs.dev](https://tsdocs.dev/docs/svelte-in-markdown).
+> Everything is documented using jsDoc/tsDoc. Please take a look at everything that this library exports and all of the available configs and options to have a better understanding of things. Alternatively you can use [tsdocs.dev](https://tsdocs.dev/docs/mdx-svelte).
