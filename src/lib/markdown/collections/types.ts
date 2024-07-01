@@ -32,5 +32,5 @@ export type CollectionEntry = {
     }
     slug: string
     content: ImportMetaGlobValueResult["default"]
-    frontmatter: ImportMetaGlobValueResult["mdxData"]["frontmatter"]
+    frontmatter?: ImportMetaGlobValueResult["mdxData"]["frontmatter"]
 }
