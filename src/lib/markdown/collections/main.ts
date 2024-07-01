@@ -89,8 +89,10 @@ const getGlobEntryValue = async <T extends z.ZodRawShape>(
             if (!frontmatterParseResult.success) {
                 return error(400, frontmatterParseResult.error.message)
             }
+
             return frontmatterParseResult.data
         }
+
         return {}
     }
 
