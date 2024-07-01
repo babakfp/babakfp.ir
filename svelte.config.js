@@ -1,13 +1,7 @@
 import adapter from "@sveltejs/adapter-vercel"
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte"
-import {
-    mdxPreprocess,
-    SVELTE_CONFIG_EXTENSIONS,
-} from "mdx-svelte/dist/index.js"
-import {
-    hastFromHtml,
-    transformer,
-} from "mdx-svelte/dist/transformers/unified/index.js"
+import { mdxPreprocess, SVELTE_CONFIG_EXTENSIONS } from "mdx-svelte"
+import { hastFromHtml, transformer } from "mdx-svelte/transformers/unified"
 
 /** @type {import("@sveltejs/kit").Config} */
 export default {
