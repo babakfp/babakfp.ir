@@ -1,11 +1,11 @@
-import type { MarkdownData } from "mdx-svelte"
+import type { Data } from "mdx-svelte"
 import type { SvelteComponent } from "svelte"
 
 export type ImportMetaGlob = Record<string, () => Promise<unknown>>
 
 export type ImportMetaGlobValueResult = {
     default: typeof SvelteComponent
-    markdownData_: MarkdownData
+    mdxData: Data
 }
 
 export type MarkdownEntry = {
@@ -32,5 +32,5 @@ export type CollectionEntry = {
     }
     slug: string
     content: ImportMetaGlobValueResult["default"]
-    frontmatter: ImportMetaGlobValueResult["markdownData_"]["frontmatter"]
+    frontmatter: ImportMetaGlobValueResult["mdxData"]["frontmatter"]
 }

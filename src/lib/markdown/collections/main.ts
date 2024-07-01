@@ -75,20 +75,29 @@ const markdownFilesToEntries = async () => {
  */
 const getGlobEntryValue = async <T extends z.ZodRawShape>(
     entry: MarkdownEntry,
-    schema: z.ZodObject<T>,
+    schema?: z.ZodObject<T>,
 ) => {
     const globValueResult =
         (await entry.glob.value()) as ImportMetaGlobValueResult
 
-    const frontmatterParseResult = schema.safeParse(
-        globValueResult.markdownData_.frontmatter,
-    )
+    const validateFrontmatter = () => {
+        if (schema) {
+            const frontmatterParseResult = schema.safeParse(
+                globValueResult.mdxData.frontmatter,
+            )
 
-    if (!frontmatterParseResult.success) {
-        return error(400, frontmatterParseResult.error.message)
+            if (!frontmatterParseResult.success) {
+                return error(400, frontmatterParseResult.error.message)
+            }
+            return frontmatterParseResult.data
+        }
+        return {}
     }
 
-    const frontmatter = frontmatterParseResult.data
+    const frontmatter = {
+        ...(validateFrontmatter() as z.infer<z.ZodObject<T>>),
+        ...globValueResult.mdxData.frontmatter,
+    }
 
     return {
         collection: entry.collection,
@@ -108,7 +117,7 @@ const getGlobEntryValue = async <T extends z.ZodRawShape>(
  */
 export const getCollectionEntries = async <T extends z.ZodRawShape>(
     name: string,
-    schema: z.ZodObject<T>,
+    schema?: z.ZodObject<T>,
 ) => {
     const markdownEntries = await markdownFilesToEntries()
 
@@ -133,7 +142,7 @@ export const getCollectionEntries = async <T extends z.ZodRawShape>(
 export const getCollectionEntry = async <T extends z.ZodRawShape>(
     name: string,
     slug: string,
-    schema: z.ZodObject<T>,
+    schema?: z.ZodObject<T>,
 ) => {
     const entries = await markdownFilesToEntries()
     const collectionEntries = entries.filter(

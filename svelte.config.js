@@ -1,11 +1,17 @@
 import adapter from "@sveltejs/adapter-vercel"
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte"
-import { EXTENSIONS, mdxPreprocess } from "mdx-svelte"
-import { hastFromHtml, transformer } from "mdx-svelte/transformers/unified"
+import {
+    mdxPreprocess,
+    SVELTE_CONFIG_EXTENSIONS,
+} from "mdx-svelte/dist/index.js"
+import {
+    hastFromHtml,
+    transformer,
+} from "mdx-svelte/dist/transformers/unified/index.js"
 
 /** @type {import("@sveltejs/kit").Config} */
 export default {
-    extensions: EXTENSIONS,
+    extensions: SVELTE_CONFIG_EXTENSIONS,
     kit: {
         adapter: adapter(),
     },
@@ -14,8 +20,8 @@ export default {
             layouts: {
                 default: ["img", "blockquote"],
             },
-            onTransform: async (options, config) => {
-                return await transformer(options, config, {
+            onTransform: (options, config) => {
+                return transformer(options, config, {
                     builtInPlugins: {
                         remarkToc: {
                             enable: false,

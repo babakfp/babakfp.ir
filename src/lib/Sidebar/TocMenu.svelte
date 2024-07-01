@@ -1,6 +1,6 @@
 <script lang="ts">
+    import { makeToc } from "mdx-svelte"
     import { onMount } from "svelte"
-    import { getTableOfContents } from "mdx-svelte"
     import { browser } from "$app/environment"
     import { page } from "$app/stores"
     import Sidebar from "$lib/Sidebar/Sidebar.svelte"
@@ -26,8 +26,8 @@
     }
 
     const getHeadings = () =>
-        getTableOfContents({
-            containerSelector: ".article-content",
+        makeToc({
+            container: ".article-content",
             headingLevels: [2, 3, 4, 5, 6],
         })?.map((heading) => ({
             id: heading.attributes.id ?? "",

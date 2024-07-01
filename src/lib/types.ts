@@ -29,9 +29,7 @@ export type Doc = z.input<typeof DocsFrontmatterSchema> & {
     slug: string
 }
 
-export const PortfoliosFrontmatterSchema = z.object({}).optional()
-
-export type Portfolio = z.input<typeof PortfoliosFrontmatterSchema> & {
+export type Portfolio = {
     slug: string
 }
 
