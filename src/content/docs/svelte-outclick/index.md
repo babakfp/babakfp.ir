@@ -11,7 +11,7 @@ Why choose this over the other packages?
 -   [No extra wrapper](#no-extra-wrapper)
 -   Supports [`class`](#class-prop) prop
 -   [Exclude elements](#excluding-elements) from triggering the event
--   [Half click](#halfclick) supoort
+-   [Half click](#halfclick) support
 -   TypeScript support
 
 ## Installation
@@ -143,7 +143,7 @@ For example, if you want to close the dropdown when you click on any of its item
 -   Type: `boolean`
 -   Default: `true`
 
-If `true`, `pointerdown` can solely determine the click outside. If `false`, outclick will happen when `pointerdown` and `pointerup` events happen after eachother, outside of the element.
+If `true`, `pointerdown` can solely determine the click outside. If `false`, outclick will happen when `pointerdown` and `pointerup` events happen after each other, outside of the element.
 
 ### `tag`
 
