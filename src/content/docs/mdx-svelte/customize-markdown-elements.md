@@ -18,9 +18,7 @@ Modify preprocessor config:
 
 ```ts
 mdxPreprocess({
-    layouts: {
-        default: ["img"],
-    },
+    elements: ["img"],
 })
 ```
 
@@ -45,4 +43,4 @@ Modify your `+layout.svelte` file:
 
 ## Related resources
 
--   Learn more about the [`layouts`](/docs/mdx-svelte/options#layouts) option.
+-   Learn more about the [`elements`](/docs/mdx-svelte/options#elements) option.

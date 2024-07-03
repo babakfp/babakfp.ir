@@ -33,24 +33,20 @@ const config = {
 > [!IMPORTANT]
 > Whatever value you add to the `extensions` option, it must be added to the `config.extensions` too.
 
-## `layouts`
+## `elements`
 
 -   Optional
--   Type: `{ [x: string]: string[] }`
+-   Type: `string[] | { [x: string]: string[] }`
 
 This option is useful for replacing markdown elements with custom components.
 
-### `default` layout
-
-The `default` key is useful for applying custom components to all markdown files without needing to add the `layout` frontmatter property to **all** markdown files.
+By using an array, all components inside it with be applied to all markdown files.
 
 `svelte.config.js`:
 
 ```ts
 {
-    layouts: {
-        default: ["img", "blockquote"],
-    },
+    elements: ["img", "blockquote"],
 }
 ```
 
@@ -61,19 +57,19 @@ The `default` key is useful for applying custom components to all markdown files
     import blockquote from "./blockquote.svelte"
     import img from "./img.svelte"
 
-    export const MdxCustomElements = { img, blockquote }
+    export const MdxElements = { img, blockquote }
 </script>
 
 <script lang="ts">
     import { setContext } from "svelte"
 
-    setContext("MdxCustomElements", MdxCustomElements)
+    setContext("MdxElements", MdxElements)
 </script>
 
 <slot />
 ```
 
-A `getContext` will be preprocessed to all of the markdown files to receive the value of `MdxCustomElements`.
+A `getContext` will be preprocessed to all of the markdown files to receive the value of `MdxElements`.
 
 ### Custom layouts
 
@@ -82,7 +78,7 @@ As an example, let's create a layout named `blog`:
 
 ```ts
 {
-    layouts: {
+    elements: {
         blog: ["img", "blockquote"],
     },
 }
