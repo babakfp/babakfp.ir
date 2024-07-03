@@ -2,11 +2,11 @@
 title: Customize Markdown Elements
 ---
 
-It's possible to replace Markdown elements (HTML tags) rendered into the page with Svelte components! Example:
+You can replace HTML elements of Markdown output with Svelte components.
+
+`img.svelte` (The file name must match the HTML tag name):
 
 ```svelte
-<!-- img.svelte - The file name must match the HTML tag name. -->
-
 <script lang="ts">
     export let src: string
 </script>
@@ -14,7 +14,7 @@ It's possible to replace Markdown elements (HTML tags) rendered into the page wi
 <img {src} />
 ```
 
-Modify preprocessor config:
+`svelte.config.js`:
 
 ```ts
 mdxPreprocess({
@@ -22,22 +22,19 @@ mdxPreprocess({
 })
 ```
 
-Modify your `+layout.svelte` file:
+`+layout.svelte`:
 
 ```svelte
 <script lang="ts" context="module">
-    //            ^^^^^^^^^^^^^^^^ IMPORTANT
-
     import img from "$lib/markdown/img.svelte"
 
-    export const markdownElements = { img }
+    export const MdxElements = { img }
 </script>
 
 <script lang="ts">
     import { setContext } from "svelte"
 
-    setContext("markdownElements_", markdownElements)
-    //                          ^ IMPORTANT
+    setContext("MdxElements", MdxElements)
 </script>
 ```
 

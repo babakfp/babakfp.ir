@@ -8,9 +8,9 @@ The built-in ["unified"](https://github.com/unifiedjs/unified) transformer is a 
 import { unifiedTransformer } from "mdx-svelte/unified"
 
 mdxPreprocess({
-    onTransform: async (options, config) => {
-        return await unifiedTransformer(options, config, {
-            // Your options here!
+    onTransform: async (markup, options) => {
+        return await unifiedTransformer(markup, options, {
+            // ...
         })
     },
 })

@@ -10,8 +10,8 @@ Let's say we want to use the ["remark-github-alerts"](https://github.com/hyoban/
 import remarkGithubAlerts from "remark-github-alerts"
 
 mdxPreprocess({
-    onTransform: async (options, config) => {
-        return await unifiedTransformer(options, config, {
+    onTransform: async (markup, options) => {
+        return await unifiedTransformer(markup, options, {
             builtInPlugins: {
                 remarkGfm: {
                     plugins: {
@@ -23,6 +23,8 @@ mdxPreprocess({
     },
 })
 ```
+
+Something like ["remark-github-alerts"](https://github.com/hyoban/remark-github-alerts) is already built-in.
 
 > [!NOTE]
 > It doesn't matter if the built-in plugin is disabled, the custom plugin added by you will work.

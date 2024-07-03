@@ -1,20 +1,19 @@
 ---
-title: Table of Contents
+title: TOC - Table of Contents
 ---
 
 The default ["remark-toc"](https://npmjs.com/package/remark-toc) plugin may not generate a TOC for markdown files that are imported as Svelte components. To address this limitation, you can use a built-in function provided by the ["mdx-svelte"](https://github.com/babakfp/mdx-svelte) package.
 
 ## Example usage
 
+`+layout.svelte`:
+
 ```svelte
-<!-- +layout.svelte -->
-
 <script lang="ts">
-    import { getTableOfContents } from "mdx-svelte"
+    import { makeToc } from "mdx-svelte"
 
-    const headings = getTableOfContents({
-        containerSelector: ".my-markdown-container",
-        headingLevels: [2, 3, 4, 5, 6],
+    const headings = makeToc({
+        container: ".my-markdown-container",
     })
 </script>
 ```
@@ -24,7 +23,7 @@ Returns:
 <!-- prettier-ignore -->
 ```json
 [{
-    "level": "2",
+    "level": "2", // or 3, 4, 5, 6
     "textContent": "Example usage",
     "attributes": { "id": "example-usage" }
 }]

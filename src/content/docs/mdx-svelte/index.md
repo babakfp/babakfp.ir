@@ -54,4 +54,4 @@ I developed this project due to the issues and limitations with ["mdsvex"](https
 
 -   Only works in SvelteKit projects.
 -   Prettier can't properly format Svelte code in Markdown files.
--   No intellisense support.
+-   No IntelliSense support.
