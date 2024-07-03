@@ -4,33 +4,29 @@ title: "remark-frontmatter"
 
 ["remark-frontmatter"](https://npmjs.com/package/remark-frontmatter).
 
+It's configured to use the `"yaml"` format by default.
+
 ## TOML
 
-If you want to use TOML, you need to change the `options` property of `remarkFrontmatter` plugin to `toml`.
+If you want to use TOML, change the `options` property of `remarkFrontmatter` plugin to `toml`.
 
 ```ts
-{
-    builtInPlugins: {
-        remarkFrontmatter: {
-            options: "toml",
-        },
-    }
-}
+mdxPreprocess({
+    onTransform: async (markup, options) => {
+        return await unifiedTransformer(markup, options, {
+            builtInPlugins: {
+                remarkFrontmatter: {
+                    options: "toml",
+                },
+            },
+        })
+    },
+})
 ```
 
-If you want to use both Yaml and TOML, you need to change it to `["yaml", "toml"]`.
+If you want to use both Yaml and TOML, change it to `["yaml", "toml"]`.
 
-```ts
-{
-    builtInPlugins: {
-        remarkFrontmatter: {
-            options: ["yaml", "toml"],
-        },
-    }
-}
-```
-
-You also need to add a plugin to parse the content and pass in to a property called `frontmatter` in `file.data`.Learn how it's done for Yaml in ["remark-frontmatter-yaml"](https://npmjs.com/package/remark-frontmatter-yaml).
+You also need to add a plugin to parse the TOML content and pass in to a property called `frontmatter` in `file.data`. Learn how it's done for Yaml in ["remark-frontmatter-yaml"](https://npmjs.com/package/remark-frontmatter-yaml).
 
 Add you custom plugin inside the `builtinPlugins` after `remarkFrontmatter`.
 
@@ -42,7 +38,7 @@ Add you custom plugin inside the `builtinPlugins` after `remarkFrontmatter`.
                 after: remarkFrontmatterToml,
             }
         },
-        // Disable the default Yaml plugin if you want to use only TOML.
+        // Disable the default Yaml plugin if you want to only use TOML.
         remarkFrontmatterYaml: {
             enable: false
         },
