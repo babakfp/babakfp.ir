@@ -2,52 +2,28 @@
 title: Options
 ---
 
-```ts
-type Options = {
-    extensions?: string[]
-    markdownElementsStrategy?: "cheap" | "expensive"
-    layouts?: {
-        [x: string]: string[]
-    }
-    nodeModules?: {
-        ignore?: boolean
-        allowedDependencies?: string[]
-    }
-}
-
-mdxPreprocess(options: Options)
-```
+The options are passed to the `mdxPreprocess` function.
 
 ## `extensions`
 
+-   Optional
 -   Type: `string[]`
--   Default: `[".md", ".svelte.md"]`
+-   Default: `[".md"]`
 
-Include the extension of files to be preprocessed. Only include the markdown files (or similar), not the `.svelte` files or any other.
+Include the extension of files to be preprocessed and transformed. Don't include the `.svelte` extension.
 
-### Example with the default value
-
-```ts
-import { EXTENSIONS, mdxPreprocess } from "mdx-svelte"
-
-const config = {
-    extensions: EXTENSIONS,
-    preprocess: [mdxPreprocess(), vitePreprocess()],
-}
-```
-
-### Example with a custom value
+### Add custom extensions
 
 ```ts
 import { DOT_SVELTE, mdxPreprocess } from "mdx-svelte"
 
-const MY_CUSTOM_EXTENSION = ".hello"
+const DOT_SVELTE_MD = ".svelte.md"
 
 const config = {
-    extensions: [DOT_SVELTE, MY_CUSTOM_EXTENSION],
+    extensions: [DOT_SVELTE, DOT_SVELTE_MD],
     preprocess: [
         mdxPreprocess({
-            extensions: [MY_CUSTOM_EXTENSION],
+            extensions: [DOT_SVELTE_MD],
         }),
         vitePreprocess(),
     ],
@@ -57,67 +33,47 @@ const config = {
 > [!IMPORTANT]
 > Whatever value you add to the `extensions` option, it must be added to the `config.extensions` too.
 
-## `markdownElementsStrategy`
-
--   Type: `"cheap" | "expensive"`
--   Default: `"cheap"`
-
-This option is useful for replacing markdown elements with custom components.
-
-> [!IMPORTANT]
-> It's recommended to avoid using `"expensive"`, because it can 10x the bundle size.
-
-When using `"expensive"`, you don't need configure the `layouts` option and use the `layout` frontmatter property in markdown files.
-
 ## `layouts`
 
+-   Optional
 -   Type: `{ [x: string]: string[] }`
 
 This option is useful for replacing markdown elements with custom components.
 
-This option is only useful when `markdownElementsStrategy` is set to `"cheap"` (which is the default value).
+### `default` layout
 
-### Default layout
+The `default` key is useful for applying custom components to all markdown files without needing to add the `layout` frontmatter property to **all** markdown files.
 
-Example `svelte.config.js` file:
+`svelte.config.js`:
 
 ```ts
-const config = {
-    preprocess: [
-        mdxPreprocess({
-            layouts: {
-                default: ["img", "blockquote"],
-            },
-        }),
-        vitePreprocess(),
-    ],
+{
+    layouts: {
+        default: ["img", "blockquote"],
+    },
 }
 ```
 
-> [!TIP]
-> The `default` key is useful for applying custom components to all markdown files without needing to add the `layout` frontmatter property to **all** markdown files.
-
-Example `+layout.svelte` file:
+`+layout.svelte`:
 
 ```svelte
 <script lang="ts" context="module">
     import blockquote from "./blockquote.svelte"
     import img from "./img.svelte"
 
-    export const markdownElements = { img, blockquote }
+    export const MdxCustomElements = { img, blockquote }
 </script>
 
 <script lang="ts">
     import { setContext } from "svelte"
 
-    setContext("markdownElements_", markdownElements)
-    //                          ^ IMPORTANT
+    setContext("MdxCustomElements", MdxCustomElements)
 </script>
 
 <slot />
 ```
 
-A `getContext` will be injected to all of the markdown files to receive the value of `markdownElements`.
+A `getContext` will be preprocessed to all of the markdown files to receive the value of `MdxCustomElements`.
 
 ### Custom layouts
 
@@ -140,23 +96,13 @@ layout: blog
 ---
 ```
 
-## `nodeModules`
+## `preprocessDependencies`
 
-Type:
+-   Optional
+-   Type: `string[]`
+-   Default: `[]`
 
-```ts
-{
-    ignore?: boolean // Default: `true`
-    allowedDependencies?: string[] // Default: `[]`
-}
-```
-
-> [!WARNING]
-> Not implemented!
-
-Set `ignore` to `false` to allow the files located in the `node_modules` folder be preprocessed.
-
-If `ignore` was `true`, set exceptions to allow the files of some packages to be preprocess. Useful when you import a Markdown file from an external package. Add the name of the package to the `allowedDependencies` option.
+Preprocess of the files located in the `node_modules` folder are disabled by default. Include the name of the packages to be preprocessed.
 
 ## `onFileIgnore`
 

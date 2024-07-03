@@ -5,7 +5,7 @@ title: Unified
 This is the default built-in [transformer](/docs/mdx-svelte/transformers).
 
 ```ts
-import { transformer } from "mdx-svelte/transformers/unified"
+import { transformer } from "mdx-svelte/unified"
 
 mdxPreprocess({
     onTransform: async (options, config) => {

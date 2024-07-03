@@ -9,8 +9,8 @@ To get the built-in styles working for this plugin, add the following code into 
 
 ```svelte
 <script>
-    import "mdx-svelte/transformers/unified/remark-github-alerts/github-base.css"
-    import "mdx-svelte/transformers/unified/remark-github-alerts/github-colors-dark-media.css"
+    import "mdx-svelte/unified/remark-github-alerts/github-base.css"
+    import "mdx-svelte/unified/remark-github-alerts/github-colors-dark-media.css"
 </script>
 ```
 
@@ -18,10 +18,10 @@ All importable styles:
 
 ```svelte
 <script>
-    import "mdx-svelte/transformers/unified/remark-github-alerts/github-base.css"
-    import "mdx-svelte/transformers/unified/remark-github-alerts/github-colors-dark-class.css"
-    import "mdx-svelte/transformers/unified/remark-github-alerts/github-colors-dark-media.css"
-    import "mdx-svelte/transformers/unified/remark-github-alerts/github-colors-light.css"
+    import "mdx-svelte/unified/remark-github-alerts/github-base.css"
+    import "mdx-svelte/unified/remark-github-alerts/github-colors-dark-class.css"
+    import "mdx-svelte/unified/remark-github-alerts/github-colors-dark-media.css"
+    import "mdx-svelte/unified/remark-github-alerts/github-colors-light.css"
 </script>
 ```
 

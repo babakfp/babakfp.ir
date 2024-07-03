@@ -2,6 +2,22 @@
 title: MDX Svelte
 ---
 
+```
+---
+title: Hello, World!
+---
+
+<script>
+    import Markdown from "./Markdown.md"
+    import Component from "./Component.svelte"
+</script>
+
+The title of this page is {frontmatter.title}!
+
+<Markdown />
+<Component />
+```
+
 MDX for Svelte. Svelte in Markdown. A Markdown preprocessor for Svelte. A Preprocessor for Svelte that allows you to write Svelte code inside Markdown files.
 
 Hey there! Welcome to [MDX Svelte](https://github.com/babakfp/mdx-svelte). Ever wished you could sprinkle some Svelte magic into your Markdown files? Well, now you can! With [MDX Svelte](https://github.com/babakfp/mdx-svelte), writing Svelte code directly in Markdown is a breeze. Whether you're jazzing up docs, crafting tutorials, or spicing up your content, we've got you covered. Say goodbye to boring Markdown and hello to dynamic, interactive content. Ready to level up your Markdown game? Let's dive in!
@@ -16,7 +32,7 @@ This library has a built-in [transformer](/docs/mdx-svelte/transformers) that us
 
 ## When should I use this?
 
-This library is useful when you want to display markdown content on a web page.
+This library is useful when you want to display markdown content on a web page. And it's also useful when you want to use Svelte code inside Markdown files.
 
 > [!IMPORTANT]
 > This library is built to be used in SvelteKit projects only!
@@ -27,8 +43,8 @@ I developed this project due to the issues and limitations with ["mdsvex"](https
 
 ### What does it address?
 
--   Built-in Unified transformer with good defaults.
--   Built-in helper utilities.
+-   Built-in [transformer](/docs/mdx-svelte/unified) (["unified"](https://github.com/unifiedjs/unified)) with good defaults.
+-   Built-in helper utilities. [`hastFromHtml`](/docs/mdx-svelte/unified/helpers/hast-from-html), [`isHrefExternal`](/docs/mdx-svelte/unified/helpers/is-href-external).
 -   Allows utilization of the native SvelteKit layouts (`+layout.svelte`).
 -   Eliminates annoying "was created with unknown prop" warnings.
 -   Offers the flexibility to create custom [transformers](/docs/mdx-svelte/transformers).
@@ -38,4 +54,4 @@ I developed this project due to the issues and limitations with ["mdsvex"](https
 
 -   Only works in SvelteKit projects.
 -   Prettier can't properly format Svelte code in Markdown files.
--   No intellisense support
+-   No intellisense support.

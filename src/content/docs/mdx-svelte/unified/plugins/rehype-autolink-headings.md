@@ -10,7 +10,7 @@ title: "rehype-autolink-headings"
 ## Example usage
 
 ```ts
-import { hastFromHtml } from "mdx-svelte/transformers/unified"
+import { hastFromHtml } from "mdx-svelte/unified"
 
 rehypeAutolinkHeadings: {
     enable: true,
