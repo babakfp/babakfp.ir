@@ -28,13 +28,13 @@ mdxPreprocess({
 <script lang="ts" context="module">
     import img from "$lib/markdown/img.svelte"
 
-    export const MdxElements = { img }
+    export const mdxElements = { img }
 </script>
 
 <script lang="ts">
     import { setContext } from "svelte"
 
-    setContext("MdxElements", MdxElements)
+    setContext("mdxElements", mdxElements)
 </script>
 ```
 

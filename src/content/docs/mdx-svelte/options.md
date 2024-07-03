@@ -57,19 +57,19 @@ By using an array, all components inside it with be applied to all markdown file
     import blockquote from "./blockquote.svelte"
     import img from "./img.svelte"
 
-    export const MdxElements = { img, blockquote }
+    export const mdxElements = { img, blockquote }
 </script>
 
 <script lang="ts">
     import { setContext } from "svelte"
 
-    setContext("MdxElements", MdxElements)
+    setContext("mdxElements", mdxElements)
 </script>
 
 <slot />
 ```
 
-A `getContext` will be preprocessed to all of the markdown files to receive the value of `MdxElements`.
+A `getContext` will be preprocessed to all of the markdown files to receive the value of `mdxElements`.
 
 ### Custom layouts
 
