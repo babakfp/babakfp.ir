@@ -2,14 +2,14 @@
 title: Unified
 ---
 
-This is the default built-in [transformer](/docs/mdx-svelte/transformers).
+The built-in ["unified"](https://github.com/unifiedjs/unified) transformer is a wrapper around the unified ecosystem.
 
 ```ts
-import { transformer } from "mdx-svelte/unified"
+import { unifiedTransformer } from "mdx-svelte/unified"
 
 mdxPreprocess({
     onTransform: async (options, config) => {
-        return await transformer(options, config, {
+        return await unifiedTransformer(options, config, {
             // Your options here!
         })
     },

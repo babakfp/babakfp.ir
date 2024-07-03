@@ -43,7 +43,7 @@ I developed this project due to the issues and limitations with ["mdsvex"](https
 
 ### What does it address?
 
--   Built-in [transformer](/docs/mdx-svelte/unified) (["unified"](https://github.com/unifiedjs/unified)) with good defaults.
+-   Built-in (["unified"](https://github.com/unifiedjs/unified)) [transformer](/docs/mdx-svelte/unified) with good defaults.
 -   Built-in helper utilities. [`hastFromHtml`](/docs/mdx-svelte/unified/helpers/hast-from-html), [`isHrefExternal`](/docs/mdx-svelte/unified/helpers/is-href-external).
 -   Allows utilization of the native SvelteKit layouts (`+layout.svelte`).
 -   Eliminates annoying "was created with unknown prop" warnings.

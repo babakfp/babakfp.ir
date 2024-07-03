@@ -36,11 +36,11 @@ Returns:
 ## How to disable ["remark-toc"](https://npmjs.com/package/remark-toc) plugin?
 
 ```ts
-import { transformer } from "mdx-svelte/unified"
+import { unifiedTransformer } from "mdx-svelte/unified"
 
 mdxPreprocess({
     onTransform: async (options, config) => {
-        return await transformer(options, config, {
+        return await unifiedTransformer(options, config, {
             builtInPlugins: {
                 remarkToc: {
                     enable: false,

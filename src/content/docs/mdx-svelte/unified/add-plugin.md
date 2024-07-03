@@ -11,7 +11,7 @@ import remarkGithubAlerts from "remark-github-alerts"
 
 mdxPreprocess({
     onTransform: async (options, config) => {
-        return await transformer(options, config, {
+        return await unifiedTransformer(options, config, {
             builtInPlugins: {
                 remarkGfm: {
                     plugins: {
