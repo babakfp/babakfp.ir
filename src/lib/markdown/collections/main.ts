@@ -83,7 +83,7 @@ const getGlobEntryValue = async <T extends z.ZodRawShape>(
     const validateFrontmatter = () => {
         if (schema) {
             const frontmatterParseResult = schema.safeParse(
-                globValueResult.mdxData.frontmatter,
+                globValueResult.mdx.frontmatter,
             )
 
             if (!frontmatterParseResult.success) {
@@ -98,7 +98,7 @@ const getGlobEntryValue = async <T extends z.ZodRawShape>(
 
     const frontmatter = {
         ...(validateFrontmatter() as z.infer<z.ZodObject<T>>),
-        ...globValueResult.mdxData.frontmatter,
+        ...globValueResult.mdx.frontmatter,
     }
 
     return {
@@ -109,6 +109,7 @@ const getGlobEntryValue = async <T extends z.ZodRawShape>(
         },
         slug: entry.slug,
         content: globValueResult.default,
+        mdx: globValueResult.mdx,
         frontmatter,
     } satisfies CollectionEntry
 }

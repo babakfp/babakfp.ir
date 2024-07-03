@@ -6,8 +6,8 @@
 </script>
 
 <script lang="ts">
-    import "mdx-svelte/transformers/unified/remark-github-alerts/github-base.css"
-    import "mdx-svelte/transformers/unified/remark-github-alerts/github-colors-dark-media.css"
+    import "mdx-svelte/unified/remark-github-alerts/github-base.css"
+    import "mdx-svelte/unified/remark-github-alerts/github-colors-dark-media.css"
     import { setContext } from "svelte"
 
     setContext("MdxCustomElements", MdxCustomElements)
