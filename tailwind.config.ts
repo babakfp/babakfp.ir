@@ -99,13 +99,10 @@ function highlightUtility() {
 
 function containerUtility() {
     return plugin(
-        ({ addBase }) => {
+        ({ addBase, theme }) => {
             addBase({
                 ":root": {
-                    "--container-x": "1rem",
-                    "@screen sm": {
-                        "--container-x": "1.5rem",
-                    },
+                    "--container": theme("spacing.6"),
                 },
                 ".container": {
                     "@apply !max-w-screen-xl": "",
@@ -116,11 +113,11 @@ function containerUtility() {
             theme: {
                 extend: {
                     spacing: {
-                        "container-x": "var(--container-x)",
+                        container: "var(--container)",
                     },
                     container: {
                         center: true,
-                        padding: "var(--container-x)",
+                        padding: "var(--container)",
                     },
                 },
             },

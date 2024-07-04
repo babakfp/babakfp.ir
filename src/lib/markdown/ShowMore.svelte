@@ -3,7 +3,7 @@
 
     let wrapper: HTMLDivElement
 
-    function handleClick() {
+    const handleClick = () => {
         isOpen = !isOpen
 
         if (isOpen) return

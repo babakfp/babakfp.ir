@@ -1,6 +1,6 @@
 import { z } from "zod"
 
-export const PostsFrontmatterSchema = z.object({
+export const postsFrontmatterSchema = z.object({
     title: z
         .string({ message: 'Post "title" field must be a string.' })
         .min(1, 'Post "title" field is required.'),
@@ -15,17 +15,17 @@ export const PostsFrontmatterSchema = z.object({
         .min(1, 'Post "create" field is required.'),
 })
 
-export type Post = z.input<typeof PostsFrontmatterSchema> & {
+export type Post = z.input<typeof postsFrontmatterSchema> & {
     slug: string
 }
 
-export const DocsFrontmatterSchema = z.object({
+export const docsFrontmatterSchema = z.object({
     title: z
         .string({ message: 'Doc "title" field must be a string.' })
         .min(1, 'Doc "title" field is required.'),
 })
 
-export type Doc = z.input<typeof DocsFrontmatterSchema> & {
+export type Doc = z.input<typeof docsFrontmatterSchema> & {
     slug: string
 }
 

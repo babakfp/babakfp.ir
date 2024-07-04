@@ -19,7 +19,7 @@
         }
     }
     * {
-        @apply scroll-mt-[calc(var(--header-h)+theme(spacing.8))] drag-none tap-gray-50/10;
+        @apply scroll-mt-[calc(var(--header-h)+theme(spacing.8))] drag-none;
     }
     b,
     strong,
@@ -58,7 +58,7 @@
 
 @layer components {
     .header-btn {
-        @apply flex h-full items-center px-container-x outline-inset;
+        @apply flex h-full items-center px-container outline-inset;
     }
     a.header-btn,
     button.header-btn {
@@ -94,7 +94,7 @@
 
 @layer components {
     .btn {
-        @apply relative inline-flex items-center justify-center gap-2 rounded bg-gray-800 px-3 py-2 text-sm text-gray-50 duration-100 drag-none highlight-gray-50/10 hover:bg-gray-700;
+        @apply relative inline-flex items-center justify-center gap-2 rounded bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-50 duration-100 drag-none highlight-gray-50/10 hover:bg-gray-700;
     }
     .btn-icon {
         @apply h-9 w-9 p-0 text-gray-400 hover:text-gray-50;
@@ -217,10 +217,10 @@
             @apply inline-code;
         }
         pre {
-            @apply code-block -mx-container-x rounded-none sm:mx-0 sm:rounded;
+            @apply code-block -mx-container rounded-none sm:mx-0 sm:rounded;
 
             code {
-                @apply px-container-x leading-8;
+                @apply px-container leading-8;
 
                 /* counter-reset: step;
                 counter-increment: step 0;

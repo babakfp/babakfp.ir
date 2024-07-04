@@ -1,7 +1,7 @@
 import { error } from "@sveltejs/kit"
 import { getCollectionEntry } from "$lib/markdown/collections"
 
-export async function load({ params }) {
+export const load = async ({ params }) => {
     const portfolio = await getCollectionEntry("portfolios", params.slug)
 
     if (!portfolio) {
@@ -9,7 +9,6 @@ export async function load({ params }) {
     }
 
     return {
-        ...portfolio.frontmatter,
         slug: params.slug,
         content: portfolio.content,
     }

@@ -11,7 +11,7 @@ import resolveConfig from "tailwindcss/resolveConfig"
 
 const _defaultConfig = resolveConfig(defaultConfig)
 
-function normalizeProperties(input) {
+const normalizeProperties = (input) => {
     if (typeof input !== "object") {
         return input
     }
@@ -33,11 +33,14 @@ function normalizeProperties(input) {
     }, {})
 }
 
-export function getUtilities(plugin, { includeNegativeValues = false } = {}) {
+export const getUtilities = (
+    plugin,
+    { includeNegativeValues = false } = {},
+) => {
     if (!plugin) return {}
     const utilities = {}
 
-    function addUtilities(utils) {
+    const addUtilities = (utils) => {
         utils = Array.isArray(utils) ? utils : [utils]
         utils.forEach((util) => {
             for (let className in util) {

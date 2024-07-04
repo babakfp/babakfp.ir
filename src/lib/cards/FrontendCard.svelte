@@ -8,7 +8,7 @@
 
 <li class={isSingleRow ? "lg:col-span-full" : ""}>
     <a
-        class="group block outline-offset-8 tap-transparent
+        class="group block outline-offset-8
 			{isSingleRow && 'lg:grid lg:grid-cols-12 lg:gap-6'}
 		"
         href={url}
@@ -49,7 +49,7 @@
             </p>
             {#if isSingleRow}
                 <span class="hidden lg:inline-block lg:text-sm lg:underline">
-                    View Website
+                    View website
                 </span>
             {/if}
         </div>

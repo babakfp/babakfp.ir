@@ -18,7 +18,7 @@ const packages = [
     },
 ]
 
-export async function GET() {
+export const GET = async () => {
     let packagesData = await getPackagesData(packages.map((pkg) => pkg.name))
 
     packagesData = packagesData.map((pkgData) => {

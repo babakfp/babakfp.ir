@@ -1,7 +1,6 @@
 <script lang="ts">
     import { copyText } from "svelte-copy"
     import toast from "svelte-french-toast"
-    import { PUBLIC_GOOGLE_DRIVE_RESUME_URL } from "$env/static/public"
     import IconDribbble from "$lib/icons/IconDribbble.svelte"
     import IconEnvelope from "$lib/icons/IconEnvelope.svelte"
     import IconGithub from "$lib/icons/IconGithub.svelte"
@@ -10,30 +9,37 @@
     import IconTelegram from "$lib/icons/IconTelegram.svelte"
 </script>
 
-<section class="mx-auto max-w-prose">
+<section class="mx-auto grid max-w-prose gap-4">
     <h1 class="font-title text-5xl text-gray-50 sm:text-7xl">
-        Babak Farkhoopak
+        <span>
+            Babak <small class="text-xs font-semibold">
+                TypeScript Developer
+            </small>
+        </span> Farkhoopak
     </h1>
-    <code class="inline-code pointer-events-none mt-4 inline-block">
-        JavaScript | FrontEnd Developer
-    </code>
-    <p class="mt-4 leading-7">
-        All of my projects are built from the ground up, from planning and
-        designing, all the way to building fully-functional solutions. I have
-        built websites, open-source tools, WordPress themes and plugins, and
-        more. I have contributed to communities and helped people in building
-        their applications. I have an eye on design and user experience.
+    <p class="text-justify leading-7">
+        I'm a <strong>Front-end</strong> developer with some
+        <strong>Back-end</strong>
+        experience and strong <strong>UI/UX</strong>
+        skills. My tech stack includes <strong>TypeScript</strong>,
+        <strong>Svelte/Kit</strong>, <strong>TailwindCSS</strong>, and
+        <strong>PocketBase</strong>. I contribute to
+        <strong>open-source</strong>
+        projects and am open to <strong>remote work</strong>. I'm seeking a
+        position with <strong>relocation</strong> options.
     </p>
-
-    <div class="mt-4 flex flex-wrap items-center gap-4">
-        <a
-            class="group btn btn-primary"
-            href={PUBLIC_GOOGLE_DRIVE_RESUME_URL}
-            target="_blank"
-            rel="noreferrer"
-        >
-            Online Resume
-        </a>
+    <div class="mt-2 flex flex-wrap justify-between gap-4">
+        <div class="flex gap-2">
+            <a
+                class="btn btn-primary"
+                href="/resume"
+                target="_blank"
+                rel="noreferrer"
+            >
+                Online resume
+            </a>
+            <a class="btn" href="/portfolios">Portfolios</a>
+        </div>
         <div class="flex gap-2">
             <a
                 title="LinkedIn profile"

@@ -8,17 +8,7 @@ title: Flex & Grid
 	import { flexGrid } from "tailwindcss-addons"
 	const utilities = getUtilities(flexGrid.handler)
 
-	const justifyContent = getUtilsOfASpesificClass(".jc")
-	const justifyItems = getUtilsOfASpesificClass(".ji")
-	const justifySelf = getUtilsOfASpesificClass(".js")
-	const alignContent = getUtilsOfASpesificClass(".ac")
-	const alignItems = getUtilsOfASpesificClass(".ai")
-	const alignSelf = getUtilsOfASpesificClass(".as")
-	const placeContent = getUtilsOfASpesificClass(".pc")
-	const placeItems = getUtilsOfASpesificClass(".pi")
-	const placeSelf = getUtilsOfASpesificClass(".ps")
-
-	function getUtilsOfASpesificClass(classStartsWith) {
+	const getClassUtils = (classStartsWith) => {
 		const utils = Object.entries(utilities).filter(util => {
 			const className = util[0]
 			return className.startsWith(classStartsWith)
@@ -31,39 +21,39 @@ This feature will replace all Tailwind (`justify-content`, `justify-items`, `jus
 
 ## Justify Content
 
-<UtilsTable utilities={justifyContent} />
+<UtilsTable utilities="{() => getClassUtils('.jc')}" />
 
 ## Justify Items
 
-<UtilsTable utilities={justifyItems} />
+<UtilsTable utilities="{() => getClassUtils('.ji')}" />
 
 ## Justify Self
 
-<UtilsTable utilities={justifySelf} />
+<UtilsTable utilities="{() => getClassUtils('.js')}" />
 
 ## Align Content
 
-<UtilsTable utilities={alignContent} />
+<UtilsTable utilities="{() => getClassUtils('.ac')}" />
 
 ## Align Items
 
-<UtilsTable utilities={alignItems} />
+<UtilsTable utilities="{() => getClassUtils('.ai')}" />
 
 ## Align Self
 
-<UtilsTable utilities={alignSelf} />
+<UtilsTable utilities="{() => getClassUtils('.as')}" />
 
 ## Place Content
 
-<UtilsTable utilities={placeContent} />
+<UtilsTable utilities="{() => getClassUtils('.pc')}" />
 
 ## Place Items
 
-<UtilsTable utilities={placeItems} />
+<UtilsTable utilities="{() => getClassUtils('.pi')}" />
 
 ## Place Self
 
-<UtilsTable utilities={placeSelf} />
+<UtilsTable utilities="{() => getClassUtils('.ps')}" />
 
 ## Usage
 

@@ -27,8 +27,8 @@
 </script>
 
 <svelte:head>
-    {#if data.title}
-        <title>{data.title}</title>
+    {#if portfolioData.title}
+        <title>{portfolioData.title}</title>
     {/if}
 </svelte:head>
 
@@ -37,7 +37,7 @@
         <article class="article-content pb-12 sm:pb-24">
             <h1>{portfolioData.title}</h1>
 
-            <p class="text-xl leading-8">{portfolioData.description}</p>
+            <p class="!-mt-6 text-xl leading-8">{portfolioData.description}</p>
 
             <img
                 class="w-full"
@@ -80,7 +80,7 @@
                     href={portfolioData.urls.main}
                     target="_blank"
                 >
-                    View Website
+                    View website
                     <IconArrowUpRightSquare />
                 </a>
 
@@ -90,7 +90,7 @@
                         href={portfolioData.urls.github}
                         target="_blank"
                     >
-                        View Repository
+                        View repository
                         <IconArrowUpRightSquare />
                     </a>
                 {/if}

@@ -1,16 +1,10 @@
-import { json } from "@sveltejs/kit"
 import { getCollectionEntries } from "$lib/markdown/collections"
-import { PostsFrontmatterSchema, type Post } from "$lib/types"
+import { postsFrontmatterSchema } from "$lib/types"
 
-export async function GET() {
-    const posts = await getPosts()
-    return json(posts)
-}
+export const getPosts = async () => {
+    const entries = await getCollectionEntries("posts", postsFrontmatterSchema)
 
-async function getPosts() {
-    const entries = await getCollectionEntries("posts", PostsFrontmatterSchema)
-
-    const posts: Post[] = entries
+    const posts = entries
         .filter((entry) => entry.slug.split("/").length === 1)
         .map((entry) => ({
             ...entry.frontmatter,

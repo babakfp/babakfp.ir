@@ -1,6 +1,6 @@
 import type { Package } from "$lib/types"
 
-export async function getPackagesData(packages: string[]) {
+export const getPackagesData = async (packages: string[]) => {
     const packagesData: Package[] = []
 
     const reposData = await getReposData(packages)
@@ -29,7 +29,7 @@ export async function getPackagesData(packages: string[]) {
     return packagesData
 }
 
-async function getReposData(packages: string[]) {
+const getReposData = async (packages: string[]) => {
     const urls = packages.map(
         (pkg) => `https://api.github.com/repos/babakfp/${pkg}`,
     )
@@ -45,7 +45,7 @@ async function getReposData(packages: string[]) {
     return someData
 }
 
-async function getSomeNpmData(packages: string[]) {
+const getSomeNpmData = async (packages: string[]) => {
     const urls = packages.map(
         (pkg) => `https://registry.npmjs.org/${pkg}/latest`,
     )
@@ -61,7 +61,7 @@ async function getSomeNpmData(packages: string[]) {
     return someData
 }
 
-async function getNpmPackagesDownloads(packages: string[]) {
+const getNpmPackagesDownloads = async (packages: string[]) => {
     const urls = packages.map(
         (pkg) => `https://api.npmjs.org/downloads/point/last-week/${pkg}`,
     )
@@ -73,7 +73,7 @@ async function getNpmPackagesDownloads(packages: string[]) {
     return downloads
 }
 
-async function fetchAllUrls(urls: string[]) {
+const fetchAllUrls = async (urls: string[]) => {
     const responses = await Promise.all(urls.map((url) => fetch(url)))
     const data = await Promise.all(
         responses.map(async (res) => await res.json()),

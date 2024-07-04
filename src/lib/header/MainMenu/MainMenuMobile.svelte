@@ -33,7 +33,7 @@
     >
         <ul use:trapFocus>
             {#each $mainMenuItems as item}
-                <li>
+                <li class="odd:bg-white/[0.02]">
                     <PrimMenuItem
                         class="py-2 hover:bg-gray-50/10"
                         title={item.title}
