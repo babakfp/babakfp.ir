@@ -1,6 +1,8 @@
 ---
-title: hastFromHtml
+title: Helpers
 ---
+
+## `hastFromHtml`
 
 This helper function helps you to get HTML AST from HTML string.
 
@@ -13,3 +15,18 @@ const svgHast = hastFromHtml(
 ```
 
 You can use this helper function in plugins like ["rehype-autolink-headings"](https://npmjs.com/package/rehype-autolink-headings).
+
+## `isHrefExternal`
+
+This helper function helps you to check if a URL is external.
+
+```ts
+import { isHrefExternal } from "mdx-svelte/unified"
+
+if (
+    isHrefExternal("http://example.com") &&
+    isHrefExternal("https://example.com")
+) {
+    // True
+}
+```

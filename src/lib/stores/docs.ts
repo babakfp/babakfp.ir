@@ -238,12 +238,8 @@ export const docsSidebarItems = readable([
                         path: "/docs/mdx-svelte/unified",
                     },
                     {
-                        title: "hastFromHtml",
-                        path: "/docs/mdx-svelte/unified/helpers/hast-from-html",
-                    },
-                    {
-                        title: "isHrefExternal",
-                        path: "/docs/mdx-svelte/unified/helpers/is-href-external",
+                        title: "Helpers",
+                        path: "/docs/mdx-svelte/unified/helpers",
                     },
                     {
                         title: "Plugins",
