@@ -1,5 +1,5 @@
 <script>
-	import PlatformQuote from '$lib/markdown/PlatformQuote.svelte'
+	import PlatformQuote from '$lib/markdown/components/PlatformQuote.svelte'
 	import GithubComment from './GithubComment.md'
 </script>
 

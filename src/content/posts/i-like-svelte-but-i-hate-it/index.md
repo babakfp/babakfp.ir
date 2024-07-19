@@ -6,9 +6,9 @@ create: 2022/02/19
 ---
 
 <script>
-	import Video from "$lib/markdown/Video.svelte"
-	import ShowMore from "$lib/markdown/ShowMore.svelte"
-	import PlatformQuote from "$lib/markdown/PlatformQuote.svelte"
+	import Video from "$lib/markdown/components/Video.svelte"
+	import ShowMore from "$lib/markdown/components/ShowMore.svelte"
+	import PlatformQuote from "$lib/markdown/components/PlatformQuote.svelte"
 	import GithubComment from "./_lib/GithubComment.md"
 	import DevDotToArticle from "./_lib/DevDotToArticle.md"
 	import DevDotToArticleReply from "./_lib/DevDotToArticleReply.md"
