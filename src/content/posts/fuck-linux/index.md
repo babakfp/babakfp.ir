@@ -10,10 +10,6 @@ create: 2024/06/20
 -   Ubuntu version: `ubuntu-24.04-desktop-amd64.iso`.
 -   Linux Mint version: `linuxmint-21.3-cinnamon-64bit.iso`.
 
-## My System Info
-
-TODO: Add system info.
-
 ## Display Scaling
 
 On Windows, I can set display scaling to 100%, 125%, 150%, or 175%, and it works flawlessly. Currently, I use 150% scaling on my 15.6-inch laptop screen for easy readability.
