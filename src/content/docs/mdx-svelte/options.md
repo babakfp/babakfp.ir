@@ -57,7 +57,7 @@ By using an array, all components inside it with be applied to all markdown file
     import blockquote from "./blockquote.svelte"
     import img from "./img.svelte"
 
-    export const mdxElements = { img, blockquote }
+    export const mdxElements = { blockquote, img }
 </script>
 
 <script lang="ts">
