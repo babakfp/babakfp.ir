@@ -12,10 +12,16 @@
     ::selection {
         @apply bg-brand-600/60;
     }
-    ::-webkit-scrollbar {
-        @apply h-2.5 w-2.5;
+    body::-webkit-scrollbar {
+        @apply w-3;
         &-thumb {
-            @apply h-12 max-h-[40%] w-12 max-w-[40%] rounded-full border-4 border-solid border-transparent bg-gray-600 bg-clip-padding;
+            @apply border-x-4;
+        }
+    }
+    ::-webkit-scrollbar {
+        @apply h-2.5 w-1.5 bg-gray-800;
+        &-thumb {
+            @apply h-12 max-h-[40%] w-12 max-w-[40%] border-x-2 border-y-0 border-solid border-transparent bg-gray-700 bg-clip-padding hover:bg-gray-600;
         }
     }
     * {

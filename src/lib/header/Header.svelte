@@ -9,8 +9,10 @@
     import MainMenuMobileToggle from "./MainMenu/MainMenuMobileToggle.svelte"
 </script>
 
-<header class="sticky top-0 z-50 bg-gray-950">
-    <div class="container flex h-[--header-h] justify-between px-0">
+<header
+    class="sticky top-0 z-50 h-[--header-h] border-b border-gray-800 bg-gray-900"
+>
+    <div class="container flex h-full justify-between px-0">
         {#if $page.url.pathname === "/"}
             <div class="header-btn font-mono font-bold">BABAKFP</div>
         {:else}

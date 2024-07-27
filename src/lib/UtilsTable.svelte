@@ -58,6 +58,6 @@
 	tbody tr:first-of-type td { @apply pt-4 }
 
 	.table-wrapper::-webkit-scrollbar { @apply h-4 bg-gray-50/5 rounded-full;
-		&-thumb { @apply border-[6px] }
+		&-thumb { @apply border-[6px] rounded-full }
 	}
 </style>
