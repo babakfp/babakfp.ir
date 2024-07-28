@@ -40,6 +40,8 @@ mdxPreprocess({
 
 ## Advanced
 
+Find and replace HTML elements with custom components using CSS selectors.
+
 `svelte.config.js`:
 
 ```ts

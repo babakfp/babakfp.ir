@@ -2,6 +2,8 @@
 title: Global Imports / Auto Imports
 ---
 
+Can globally import (auto import) components and whatever into Markdown files.
+
 `svelte.config.js`:
 
 ```ts
