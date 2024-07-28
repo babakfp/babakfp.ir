@@ -38,6 +38,27 @@ mdxPreprocess({
 </script>
 ```
 
+## Advanced
+
+`svelte.config.js`:
+
+```ts
+mdxPreprocess({
+    elements: [
+        {
+            tag: "MyBlockCode",
+            selector: "pre code",
+        },
+        {
+            tag: "MyInlineCode",
+            selector: ":not(pre) code",
+        },
+    ],
+})
+```
+
+[Supported CSS selectors](https://www.npmjs.com/package/hast-util-select#support).
+
 ## Related resources
 
 -   Learn more about the [`elements`](/docs/mdx-svelte/options#elements) option.
