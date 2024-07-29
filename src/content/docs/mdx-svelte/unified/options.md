@@ -2,4 +2,4 @@
 title: Options
 ---
 
-jsDoc comments are available!
+TypeScript autocompletion and jsDoc comments are available.
