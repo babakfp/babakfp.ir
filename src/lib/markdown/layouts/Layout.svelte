@@ -1,8 +1,9 @@
 <script lang="ts" context="module">
+    import BlockCode from "$lib/markdown/elements/BlockCode.svelte"
     import blockquote from "$lib/markdown/elements/blockquote.svelte"
     import img from "$lib/markdown/elements/img.svelte"
 
-    export const mdxElements = { img, blockquote }
+    export const mdxElements = { BlockCode, img, blockquote }
 </script>
 
 <script lang="ts">

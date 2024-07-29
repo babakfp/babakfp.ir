@@ -86,10 +86,10 @@
 
 @layer components {
     .code-block {
-        @apply select-text rounded !bg-gray-50/5 p-0.5 text-sm font-semibold [tab-size:4] selection:bg-gray-50/10;
+        @apply rounded !bg-gray-50/5 p-0.5 text-sm font-semibold [tab-size:4] selection:bg-gray-50/10;
 
         code {
-            @apply block overflow-x-auto p-6;
+            @apply block select-text overflow-x-auto p-6;
         }
 
         span {
@@ -133,7 +133,7 @@
 
         /* prettier-ignore */
         h2, h3, h4, h5, h6 {
-            @apply !my-[--markdown-spacing-title];
+            @apply !my-[--markdown-spacing-title] inline-block;
         }
 
         h1 {
@@ -221,6 +221,12 @@
 
         code:not(pre code) {
             @apply inline-code;
+        }
+        pre {
+            @apply relative flex;
+        }
+        pre:hover .block-code-copy {
+            @apply opacity-100;
         }
         pre {
             @apply code-block -mx-container rounded-none sm:mx-0 sm:rounded;
