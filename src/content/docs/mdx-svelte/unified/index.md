@@ -18,4 +18,4 @@ mdxPreprocess({
 
 ## Related resources
 
--   [`onTransform`](/docs/mdx-svelte/options#ontransform) in [`mdxPreprocess`](/docs/mdx-svelte/installation#setup).
+-   [`onTransform`](/docs/mdx-svelte/options#ontransform) in [`mdxPreprocess`](/docs/mdx-svelte/install#setup).

@@ -4,7 +4,7 @@ title: TailwindCSS Addons
 
 A TailwindCSS plugin that adds extra utilities and more.
 
-## Installation
+## Install
 
 ```bash
 pnpm add -D tailwindcss-addons

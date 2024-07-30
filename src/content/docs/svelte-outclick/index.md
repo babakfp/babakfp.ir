@@ -14,7 +14,7 @@ Why choose this over the other packages?
 -   [Half click](#halfclick) support
 -   TypeScript support
 
-## Installation
+## Install
 
 Please check out the [**CHANGELOG**](svelte-outclick/changelog) before updating to the newest version. Restart your app after the update.
 

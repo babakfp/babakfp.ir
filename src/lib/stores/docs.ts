@@ -32,7 +32,7 @@ export const docsSidebarItems = readable([
                 title: "Get Started",
                 items: [
                     {
-                        title: "Introduction",
+                        title: "Intro",
                         path: "/docs/svelte-outclick",
                     },
                 ],
@@ -63,7 +63,7 @@ export const docsSidebarItems = readable([
                 title: "Get Started",
                 items: [
                     {
-                        title: "Introduction",
+                        title: "Intro",
                         path: "/docs/tailwindcss-addons",
                     },
                 ],
@@ -204,12 +204,12 @@ export const docsSidebarItems = readable([
                 title: "Get Started",
                 items: [
                     {
-                        title: "Introduction",
+                        title: "Intro",
                         path: "/docs/mdx-svelte",
                     },
                     {
-                        title: "Installation",
-                        path: "/docs/mdx-svelte/installation",
+                        title: "Install",
+                        path: "/docs/mdx-svelte/install",
                     },
                     {
                         title: "Options",
@@ -221,7 +221,7 @@ export const docsSidebarItems = readable([
                 title: "Transformers",
                 items: [
                     {
-                        title: "Introduction",
+                        title: "Intro",
                         path: "/docs/mdx-svelte/transformers",
                     },
                     {
@@ -234,7 +234,7 @@ export const docsSidebarItems = readable([
                 title: "Unified",
                 items: [
                     {
-                        title: "Introduction",
+                        title: "Intro",
                         path: "/docs/mdx-svelte/unified",
                     },
                     {
