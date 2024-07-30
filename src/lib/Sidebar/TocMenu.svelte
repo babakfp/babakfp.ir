@@ -38,7 +38,7 @@
 
 {#if headings.length}
     <Sidebar
-        class="xl:ml-container xl:w-auto xl:max-w-72"
+        class="xl:w-auto xl:max-w-72"
         id="{name}-toc-menu"
         bind:isOpen
         toggleButtonId="{name}-toc-menu-toggle"
@@ -46,7 +46,7 @@
             name.slice(1)} (on this page) menu"
         hideScrollbar={true}
     >
-        <div class="px-container whitespace-nowrap font-bold xl:pr-0">
+        <div class="whitespace-nowrap px-container font-bold xl:pr-0">
             ON THIS PAGE
         </div>
 
