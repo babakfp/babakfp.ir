@@ -133,7 +133,7 @@
 
         /* prettier-ignore */
         h2, h3, h4, h5, h6 {
-            @apply !my-[--markdown-spacing-title] inline-block;
+            @apply !mt-[--markdown-spacing-title];
         }
 
         h1 {
