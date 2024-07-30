@@ -1,5 +1,5 @@
 ---
-title: Global Imports / Auto Imports
+title: Auto-Imports
 ---
 
 Can globally import (auto import) components and whatever into Markdown files.

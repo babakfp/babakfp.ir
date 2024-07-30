@@ -275,6 +275,10 @@ export const docsSidebarItems = readable([
                         title: "Customize Elements",
                         path: "/docs/mdx-svelte/customize-markdown-elements",
                     },
+                    {
+                        title: "Auto-Imports",
+                        path: "/docs/mdx-svelte/auto-imports",
+                    },
                 ],
             },
             {

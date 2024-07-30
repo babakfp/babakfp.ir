@@ -49,8 +49,8 @@ I developed this project due to the issues and limitations with ["mdsvex"](https
 -   Eliminates annoying "was created with unknown prop" warnings.
 -   Offers the flexibility to create custom [transformers](/docs/mdx-svelte/transformers).
 -   Enables usage of any code highlighting libraries without encountering issues like the need to escape certain characters to prevent conflicts with Svelte syntax.
--   Find and replace HTML elements with custom components using CSS selectors. You are not limited to just tag names.
--   Can auto-import components (and any files) into Markdown files.
+-   Find and replace HTML elements with [custom components](/docs/mdx-svelte/customize-markdown-elements#advanced) using CSS selectors. So, you are not limited to just tag names.
+-   Can [auto-import](/docs/mdx-svelte/auto-imports) components (and any files) into Markdown files.
 
 ## Limitations
 
