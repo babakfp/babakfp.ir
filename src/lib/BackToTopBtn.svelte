@@ -6,7 +6,7 @@
 <svelte:window bind:scrollY={windowScrollY} bind:innerHeight={windowHeight} />
 
 <a
-    class="right-container btn fixed bottom-0 z-30 translate-y-full duration-200
+    class="btn fixed bottom-0 right-container z-30 translate-y-full duration-200
 	{windowScrollY >= windowHeight && '!-translate-y-container'}"
     href="#body"
 >
