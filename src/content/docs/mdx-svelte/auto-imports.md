@@ -8,7 +8,7 @@ Can globally import (auto import) components and whatever into Markdown files.
 
 ```ts
 mdxPreprocess({
-    globalImports: [
+    imports: [
         {
             context: "module",
             imports: ['import MyComponent from "$lib/MyComponent.svelte"'],

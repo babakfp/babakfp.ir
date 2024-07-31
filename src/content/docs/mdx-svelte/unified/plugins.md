@@ -83,7 +83,7 @@ To get the built-in styles working for this plugin, add the following code into 
 ```svelte
 <script>
     import "mdx-svelte/unified/remark-github-alerts/github-base.css"
-    import "mdx-svelte/unified/remark-github-alerts/github-colors-dark-media.css"
+    import "mdx-svelte/unified/remark-github-alerts/github-colors-dark.css"
 </script>
 ```
 
@@ -94,6 +94,9 @@ All importable styles:
     import "mdx-svelte/unified/remark-github-alerts/github-base.css"
     import "mdx-svelte/unified/remark-github-alerts/github-colors-dark-class.css"
     import "mdx-svelte/unified/remark-github-alerts/github-colors-dark-media.css"
+    import "mdx-svelte/unified/remark-github-alerts/github-colors-dark.css"
+    import "mdx-svelte/unified/remark-github-alerts/github-colors-light-class.css"
+    import "mdx-svelte/unified/remark-github-alerts/github-colors-light-media.css"
     import "mdx-svelte/unified/remark-github-alerts/github-colors-light.css"
 </script>
 ```
@@ -126,33 +129,9 @@ All importable styles:
 > [!NOTE]
 > Please refer to the jsDoc comments to learn more.
 
-## "rehype-shiki"
+## "rehype-pretty-code"
 
-["rehype-shiki"](https://npmjs.com/package/rehype-shiki).
-
-> [!NOTE]
-> Please refer to the jsDoc comments to learn more.
-
-### Example usage
-
-```ts
-{
-    rehypeShiki: {
-        options: {
-            theme: "rose-pine-moon",
-            langs: [
-                "html",
-                "css",
-                "js",
-                "svelte",
-                "php",
-                "bash",
-                "yaml",
-            ],
-        },
-    },
-}
-```
+["rehype-pretty-code"](https://npmjs.com/package/rehype-pretty-code).
 
 ## "rehype-autolink-headings"
 
