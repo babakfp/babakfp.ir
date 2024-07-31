@@ -11,14 +11,7 @@ export default {
     },
     preprocess: [
         mdxPreprocess({
-            elements: [
-                {
-                    tag: "BlockCode",
-                    selector: "pre code",
-                },
-                "blockquote",
-                "img",
-            ],
+            elements: ["blockquote", "img", "pre"],
             onTransform: (options, config) => {
                 return unifiedTransformer(options, config, {
                     builtInPlugins: {
@@ -39,20 +32,6 @@ export default {
                                     )
                                 },
                                 test: ["h2", "h3", "h4", "h5", "h6"],
-                            },
-                        },
-                        rehypeShiki: {
-                            options: {
-                                theme: "rose-pine-moon",
-                                langs: [
-                                    "html",
-                                    "css",
-                                    "js",
-                                    "svelte",
-                                    "php",
-                                    "bash",
-                                    "yaml",
-                                ],
                             },
                         },
                     },

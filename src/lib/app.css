@@ -223,12 +223,6 @@
             @apply inline-code;
         }
         pre {
-            @apply relative flex;
-        }
-        pre:hover .block-code-copy {
-            @apply opacity-100;
-        }
-        pre {
             @apply code-block -mx-container rounded-none sm:mx-0 sm:rounded;
 
             code {
