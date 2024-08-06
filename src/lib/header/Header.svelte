@@ -7,23 +7,22 @@
     import MainMenuDesktop from "./MainMenu/MainMenuDesktop.svelte"
     import MainMenuMobile from "./MainMenu/MainMenuMobile.svelte"
     import MainMenuMobileToggle from "./MainMenu/MainMenuMobileToggle.svelte"
+
+    $: isHome = $page.url.pathname === "/"
 </script>
 
 <header
     class="sticky top-0 z-50 h-[--header-h] border-b border-gray-800 bg-gray-900"
 >
     <div class="container flex h-full justify-between px-0">
-        {#if $page.url.pathname === "/"}
-            <div class="header-btn font-mono font-bold">BABAKFP</div>
-        {:else}
-            <a
-                class="header-btn font-mono font-bold"
-                href="/"
-                aria-label="Go to home page"
-            >
-                BABAKFP
-            </a>
-        {/if}
+        <svelte:element
+            this={!isHome ? "a" : "div"}
+            class="header-btn font-mono font-bold"
+            href={!isHome ? "/" : undefined}
+            aria-label={!isHome ? "Go to home page" : undefined}
+        >
+            BABAKFP
+        </svelte:element>
 
         <div class="flex">
             <TocMenuToggle name="blog" bind:isOpen={$isBlogTocSidebarOpen} />
