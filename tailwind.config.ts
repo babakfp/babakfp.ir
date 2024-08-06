@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss"
 import { allAddons, flattenColorPalette } from "tailwindcss-addons"
 import colors from "tailwindcss/colors"
-import defaultTheme from "tailwindcss/defaultTheme"
 import plugin from "tailwindcss/plugin"
 
 export default {
@@ -17,14 +16,14 @@ export default {
             },
         },
         fontFamily: {
-            sans: ["TitilliumWeb", ...defaultTheme.fontFamily.sans],
-            mono: ["JetBrainsMono", ...defaultTheme.fontFamily.mono],
+            sans: ["Recursive Variable"],
+            mono: ["Recursive Variable", { fontVariationSettings: "'MONO' 1" }],
         },
         fontWeight: {
             normal: "400",
             semibold: "600",
             bold: "700",
-            black: "900",
+            extrablack: "1000",
         },
     },
     plugins: [

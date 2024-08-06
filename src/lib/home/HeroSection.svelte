@@ -17,7 +17,7 @@
             </small>
         </span> Farkhoopak
     </h1>
-    <p class="text-justify leading-7">
+    <p class="leading-7">
         I'm a <strong>Front-end</strong> developer with some
         <strong>Back-end</strong>
         experience and strong <strong>UI/UX</strong>

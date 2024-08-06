@@ -42,7 +42,7 @@
         }
     }
     .font-title {
-        @apply font-black uppercase;
+        @apply font-extrablack uppercase;
     }
 }
 
