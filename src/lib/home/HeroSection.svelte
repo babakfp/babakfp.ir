@@ -10,16 +10,16 @@
 </script>
 
 <section class="mx-auto grid max-w-prose gap-4">
-    <h1 class="font-title text-5xl text-gray-50 sm:text-7xl">
+    <h1 class="text-5xl text-gray-50 sm:text-7xl">
         <span>
-            Babak <small class="text-xs font-semibold">
-                TypeScript Developer
-            </small>
-        </span> Farkhoopak
+            <span class="font-title">Babak</span>
+            <span class="text-xs font-semibold"> TypeScript Developer </span>
+        </span>
+        <span class="font-title">Farkhoopak</span>
     </h1>
     <p class="leading-7">
-        I'm a <strong>Front-end</strong> developer with some
-        <strong>Back-end</strong>
+        I'm a <strong>FrontEnd</strong> developer with some
+        <strong>BackEnd</strong>
         experience and strong <strong>UI/UX</strong>
         skills. My tech stack includes <strong>TypeScript</strong>,
         <strong>Svelte/Kit</strong>, <strong>TailwindCSS</strong>, and
