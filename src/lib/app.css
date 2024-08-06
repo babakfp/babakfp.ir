@@ -133,7 +133,7 @@
 
         /* prettier-ignore */
         h2, h3, h4, h5, h6 {
-            @apply !mt-[--markdown-spacing-title];
+            @apply !mt-[--markdown-spacing-title] font-bold;
         }
 
         h1 {
