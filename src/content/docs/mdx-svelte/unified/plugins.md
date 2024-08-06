@@ -2,6 +2,8 @@
 title: Unified plugins
 ---
 
+These are the built-in plugins that are used by the transformer.
+
 ## "remark-frontmatter"
 
 ["remark-frontmatter"](https://npmjs.com/package/remark-frontmatter).
@@ -121,6 +123,63 @@ All importable styles:
 ### Related resources
 
 -   [TOC - Table of Contents](/docs/mdx-svelte/table-of-contents)
+
+## "remark-directive"
+
+["remark-directive"](https://npmjs.com/package/remark-directive).
+
+This plugin is used to create custom built-in directives. Built-in directives:
+
+-   `info`
+-   `warning`
+-   `danger`
+-   `success`
+-   `tip`
+-   `details`
+
+Input:
+
+```md
+:::info
+Hello, World!
+:::
+
+:::info[Hi]
+Hello, World!
+:::
+
+:::info{.my-class}
+My, Class!
+:::
+
+:::info{#my-id}
+My, ID!
+:::
+```
+
+Output:
+
+```html
+<div class="remark-directive remark-directive-info">
+    <p>Info</p>
+    <p>Hello, World!</p>
+</div>
+
+<div class="remark-directive remark-directive-info">
+    <p>Hi</p>
+    <p>Hello, World!</p>
+</div>
+
+<div class="remark-directive remark-directive-info my-class">
+    <p>Info</p>
+    <p>My, Class!</p>
+</div>
+
+<div class="remark-directive remark-directive-info" id="my-id">
+    <p>Info</p>
+    <p>My, ID!</p>
+</div>
+```
 
 ## "rehype-slug"
 
