@@ -2,7 +2,6 @@
     import { fly } from "svelte/transition"
     import { page } from "$app/stores"
     import BackToTopBtn from "$lib/BackToTopBtn.svelte"
-    import PostCard from "$lib/cards/PostCard.svelte"
     import IconChevronRight from "$lib/icons/IconChevronRight.svelte"
     import TocMenu from "$lib/Sidebar/TocMenu.svelte"
     import { isBlogTocSidebarOpen } from "$lib/stores/blog"
@@ -10,8 +9,6 @@
     import transition from "$lib/utils/transition"
 
     export let data
-
-    const recommendedPosts = data.posts.filter(({ slug }) => slug !== data.slug)
 </script>
 
 <svelte:head>
@@ -72,22 +69,6 @@
                     </div>
                 </article>
             {/key}
-
-            {#if recommendedPosts.length > 0}
-                <hr class="my-8" />
-
-                <div class="[zoom:0.8]">
-                    <h2 class="font-bold">OTHER BLOG POSTS</h2>
-
-                    <ul class="mt-4 space-y-4">
-                        {#each recommendedPosts as post}
-                            <li>
-                                <PostCard {...post} />
-                            </li>
-                        {/each}
-                    </ul>
-                </div>
-            {/if}
         </div>
 
         <TocMenu name="blog" bind:isOpen={$isBlogTocSidebarOpen} />
