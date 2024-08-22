@@ -62,7 +62,9 @@
 
                     <div class="article-content">
                         {#if data.title}
-                            <h1>{data.title}</h1>
+                            <h1 class="mt-[--markdown-spacing-title]">
+                                {data.title}
+                            </h1>
                         {/if}
 
                         <svelte:component this={data.content} />
