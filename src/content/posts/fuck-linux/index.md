@@ -2,31 +2,43 @@
 title: Fuck Linux
 description: My experience with Linux. I hate it.
 update: 2024/06/23
-create: 2024/06/20
+create: 2024/08/23
 ---
 
-"Fuck Linux", is how I felt when using Linux. I tried using Linux three times, and I always ended up returning to Windows. This story is about my third Linux experience: I tried Linux Mint and Ubuntu.
+Whenever I tried using Linux, "Fuck Linux" was always how I ended up feeling. Despite giving it three tries over the years, I kept returning to Windows. This story is about my third experience, where I explored both Linux Mint and Ubuntu.
 
--   Ubuntu version: `ubuntu-24.04-desktop-amd64.iso`.
--   Linux Mint version: `linuxmint-21.3-cinnamon-64bit.iso`.
+-   Ubuntu: `ubuntu-24.04-desktop-amd64.iso`
+-   Linux Mint: `linuxmint-21.3-cinnamon-64bit.iso`
+
+## From Linux Mint to Ubuntu
+
+First off, I installed Linux Mint. However, some clueless individuals online recommended Ubuntu. Due to issues with [Display Scaling](#display-scaling) and an Nvidia driver error on startup, I decided to switch to Ubuntu.
 
 ## Display Scaling
 
 On Windows, I can set display scaling to 100%, 125%, 150%, or 175%, and it works flawlessly. Currently, I use 150% scaling on my 15.6-inch laptop screen for easy readability.
 
-With Linux Mint, I couldn't set the scaling to anything other than 100% and 200%, making everything either too small or too big. Ubuntu had an option called fractional scaling, which allowed 125% scaling, but it messed up the mouse speed and made text in some software like Chrome and VSCode look blurry. Although I could fix Chrome by enabling a flag option, VSCode remained blurry.
+With Linux Mint, I couldn't set the scaling to anything other than 100% and 200%, making everything either too small or too big.
 
-I tried both Nvidia open-source and proprietary drivers available on Ubuntu and Linux Mint.
+Ubuntu had an option called fractional scaling, which allowed 125% scaling, but it messed up the mouse speed and made text in some software like Chrome and VSCode look blurry. Although I could fix Chrome by enabling a flag option, VSCode remained blurry.
+
+I tried both Nvidia open-source and proprietary drivers available on Ubuntu and Linux Mint, but neither solved this issue.
 
 ### Ineffective Solutions
 
 Suggestions like "Just make the font size bigger" don't solve the problem, as not all text scales properly. For example, the Chrome URL bar stays the same size.
 
+### Importance of Display Scaling
+
+Display scaling is crucial for clarity and precision, especially for design and development work.
+
 ### I Broke the System Trying to Fix Blurry Text
 
-I installed Tweaks on Ubuntu to fix the blurry text issue, but after changing some settings, I encountered a persistent full-screen error message. The fix involved removing all Nvidia drivers, which likely caused other problems.
+I installed Tweaks on Ubuntu to fix the blurry text issue, but a few minutes after changing some settings, I encountered a persistent full-screen error message.
 
-I just changed a few options in Tweaks, and after a few minutes, the system broke. Restarting the computer didn't fix it. The login screen was working fine, but after logging in, it showed me the same error message. I solved it by googling, finding a keyboard shortcut to open a full-screen terminal app-like thing, copying and pasting a command to remove all Nvidia drivers.
+Restarting the computer didn't fix it. The login screen was working fine, but after logging in, it showed me the same error message.
+
+The fix involved removing all Nvidia drivers by using a command that I found on the internet, which likely caused [other problems](#external-hard-drive-issues).
 
 The error message was:
 
@@ -34,59 +46,54 @@ The error message was:
 >
 > A problem has occurred and the system can't recover. Please log out and try again.
 
-### Importance of Display Scaling
-
-Display scaling is crucial for clarity and precision, especially for design and development work.
-
 ## Nvidia Drivers
 
-The open-source Nvidia driver was faster. The proprietary driver was slower and laggy (relatively speaking).
+The proprietary Nvidia driver was laggy and slower compared to the open-source driver (relatively speaking).
 
 ## Distribution Hell
 
-Linux has too many distributions and none of them are good. Distributions can have their own package managers, which means every software now has to support multiple package managers. LOL. This looks so much like how Front-end developers have too many runtimes, frameworks, and package managers to choose from. There can only be a single runtime, framework, and package manager, and it can solve all problems. Same with Linux distributions. Just build something that works for everyone. Windows is a good example of this.
+Linux is flooded with countless distributions, each one more frustrating than the last. Every distro has its own package manager, forcing software to support an array of incompatible systems. The worst part? These distros aren't just different—they're all consistently awful in their own ways, making the experience a nightmare no matter which one you choose.
 
 ## Package Management Nightmares
 
-Linux has too many distributions and package managers. On Ubuntu, I dealt with `.deb`, `.AppImage`, `.tar.gz`, and `.tar.xz` files.
+On Windows, you can install a program by double-clicking a `.exe` or `.msi` file. Some programs also offer portable versions that run without installation. Alternatively, you can unzip certain files and run the executable directly.
 
-On Ubuntu, it's not possible to install a Debian package by double-clicking on the `.deb` file. You have to use the command line to install it.
+On Ubuntu, I encountered various file types including `.deb`, `.AppImage`, `.tar.gz`, and `.tar.xz`. Although Ubuntu is based on Debian, I couldn't install `.deb` packages by simply double-clicking them; I kept running into missing dependency errors.
 
-Whenever Linux users talk about Ubuntu, they say that it's based on Debian. This tells me that I can easily install Debian packages. However, when I tried to install a package, I got an error message saying that some dependencies were missing. I wasted a lot of time on this. I found out there is a thing called GDebi. I installed it, and then I used it to install the package. It worked. However, it didn't always work. Not sure if this was an issue with GDebi or if it was something else.
+After wasting a lot of time troubleshooting, I discovered GDebi. Installing and using GDebi from the command line allowed me to install Debian packages successfully, but it didn't always work. I'm unsure whether the issue was with GDebi or something else.
 
-I had issues with `.AppImage`, `.tar.gz`, and `.tar.xz` files too. I don't remember much, and I don't feel like explaining it. Just know that I wasted a lot of time, and it made me frustrated.
+I had issues with `.AppImage`, `.tar.gz`, and `.tar.xz` files too. I don't remember much, and I don't feel like remembering it. Just know that I wasted a lot of time, and it made me frustrated.
 
 Linux Mint was much better than Ubuntu. I could just double-click on a `.deb` file and install it.
 
-I installed Ubuntu because I thought it might fix the scaling issue.
-
 ## Customization
 
-Ubuntu didn't have many customization options. You need to install a software called Tweaks to change basic settings.
+Ubuntu has very little customization options. You need to install Tweaks to change basic things. It's nothing close to Windows.
 
 ## VSCode Shortcuts
 
-I use VSCode, and on Linux/Ubuntu, the shortcuts were different.
+I use VSCode, and on Linux/Ubuntu, the shortcuts were different. [Terminal shortcuts](#shell-differences) were different too. WTF!
 
 ## Shell Differences
 
-I use PowerShell on Windows and Linux uses Bash. The shortcuts and the behavior of keys and their features were different.
+The shortcuts and the behavior of keys and their features are different on Windows and Linux.
 
--   I couldn't do `ctrl` + `c` to copy text, and `ctrl` + `v` to paste text.
--   I couldn't do `ctrl` + "a" to select all input text.
--   I couldn't select part of the input text with (`ctrl`) + `shift` + "arrow keys".
+-   No (`ctrl` + `c`) to copy text.
+-   No (`ctrl` + `v`) to paste text.
+-   No (`ctrl` + `a`) to select input text. Only input text, not the whote output text.
+-   No (`shift` + ArrowKeys) and (`ctrl` + `shift` + ArrowKeys) for text selection.
 
-I used Terminal settings to change `ctrl` + `shift` + `c` to `ctrl` + `c` (and the same for `v`), and `ctrl` + `shift` + `c` for killing the process. This only worked for the Terminal app, not the Bash that I use inside VSCode.
+I modified some Terminal configuration options, but the changes only applied to the Terminal app, not to the Bash environment I use in VSCode.
 
-I installed zsh and oh-my-zsh. It made things just a bit better. I made Bash look less bloated. I found a plugin that somewhat implemented the `shift` + "arrow keys" to select text (it wasn't good).
+I installed zsh and oh-my-zsh, which improved things slightly. I managed to make zsh look less cluttered and found a plugin that partially enabled text selection with (`Shift` + ArrowKeys), though it wasn't very good.
 
-I was going to install PowerShell on Linux, but I just installed Windows itself instead.
+I was going to install PowerShell on Linux, but I just installed Windows instead.
 
 ## External Hard Drive Issues
 
-Linux stopped mounting my external hard drive (WD - HDD - My Passport - Ultra). It was shown in the file manager, but when I was trying to open it, it was showing an error message. I used ChatGPT and after a bunch of time wasted, I could fix it. However, it suggested a way to create a folder and mount the external hard drive to that folder. I needed to do this every time I restarted my computer (or disconnected the hard drive).
+Linux suddenly stopped mounting my external hard drive (WD - HDD - My Passport - Ultra). Although it appeared in the file manager, attempting to open it resulted in an error message. After wasting a lot of time troubleshooting with ChatGPT, I finally found a fix. The solution involved creating a folder and manually mounting the external hard drive to that folder, which worked—but I had to repeat the process every time I restarted my computer or reconnected the drive.
 
-This issue didn't exist before, but I think this may be caused by deleting all Nvidia drivers (I did this because of the "Something went wrong" error that I explained). Connecting normal flash devices worked fine.
+This issue hadn't occurred before, and I suspect it may have been caused by [deleting all Nvidia drivers](#i-broke-the-system-trying-to-fix-blurry-text) (an action I took due to the "Something went wrong" error I previously mentioned). Interestingly, connecting regular flash drives still worked without any problems.
 
 ## Software Installation Problems
 
@@ -94,21 +101,23 @@ BalenaEtcher didn't work for me with the `.AppImage` file. The `.deb` file also 
 
 ## Restart and Refresh Reality
 
-Contrary to popular belief, I had to restart Linux and refresh windows frequently.
+Despite the common belief, I found myself needing to restart Linux and refresh windows quite often.
+
+This is just one example of how Linux users can be lying to you.
 
 ## Dislike for Flatpak
 
-In my country, the network speed is very slow and also extremely expensive. So, using more than 1GB bandwidth instead of 100/200MB for downloading VSCode is insane.
+In my country, network speeds are slow and extremely expensive. Using over 1GB of bandwidth to download VSCode, instead of 100-200MB, is just ridiculous.
 
 ## My Experience with Other Linux Distributions
 
-I tried other Linux distributions too in this third experience.
+I tried other Linux distributions during this third experience:
 
--   Fedora: I couldn't get it to even boot. Something about the ISO file (`Fedora-Workstation-Live-x86_64-40-1.14.iso`) was wrong.
--   NixOS: I couldn't get it to boot (`nixos-gnome-24.05.1503.752c634c09ce-x86_64-linux.iso`).
+-   Fedora: I couldn't even get it to boot. Something was wrong with the ISO file (`Fedora-Workstation-Live-x86_64-40-1.14.iso`).
+-   NixOS: It wouldn't boot either (`nixos-gnome-24.05.1503.752c634c09ce-x86_64-linux.iso`).
 
-## Conclusion (Good Things About Linux)
+## Last Words
 
-This was my third attempt at using Linux, and I always ended up returning to Windows. While Linux has some advantages, like faster performance in some areas and less need for system debloating, the frustrations outweighed the benefits for me.
+This was my third attempt at using Linux, and I always ended up returning to Windows. While Linux has some advantages, like faster performance in some areas and less need for system debloating, the frustrations far outweighed the benefits for me.
 
 When I was frustrated with Linux, I read this [message](https://devrant.com/rants/1903975/does-linux-suck-imho-yes-a-lot-of-the-people-bash-windows-regarding-automatic-re), and it cheered me up!
