@@ -116,6 +116,11 @@ I tried other Linux distributions during this third experience:
 -   Fedora: I couldn't even get it to boot. Something was wrong with the ISO file (`Fedora-Workstation-Live-x86_64-40-1.14.iso`).
 -   NixOS: It wouldn't boot either (`nixos-gnome-24.05.1503.752c634c09ce-x86_64-linux.iso`).
 
+## What Others Say About Linux? (Honest Reviews)
+
+-   [Linux Is a Garbage/Joke Of a OS Windows Is KING](https://www.youtube.com/watch?v=GZUujOCPJKE)
+-   [Why Linux Sucks](https://www.youtube.com/watch?v=oTiztqndGco)
+
 ## Last Words
 
 This was my third attempt at using Linux, and I always ended up returning to Windows. While Linux has some advantages, like faster performance in some areas and less need for system debloating, the frustrations far outweighed the benefits for me.
