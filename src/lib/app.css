@@ -157,7 +157,7 @@
             @apply relative [&:hover_.heading-permalink]:show;
         }
         .heading-permalink {
-            @apply text-[1em] delay-300 duration-300 hide;
+            @apply absolute text-[1em] delay-300 duration-300 hide;
         }
 
         p strong {
