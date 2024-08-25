@@ -31,7 +31,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            bgGrid: false, // Enabled by default
+            bgGrid: false, // Enabled by default.
         }),
     ],
 }

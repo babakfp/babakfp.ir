@@ -2,7 +2,7 @@
 title: Extra Defaults
 ---
 
-Your tailwind config file will be extended with these values:
+Your tailwind config will be extended with these values:
 
 ```js
 {
@@ -71,7 +71,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            extraDefaults: false, // Enabled by default
+            extraDefaults: false, // Enabled by default.
         }),
     ],
 }

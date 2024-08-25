@@ -35,7 +35,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            overflowUnset: false, // Enabled by default
+            overflowUnset: false, // Enabled by default.
         }),
     ],
 }

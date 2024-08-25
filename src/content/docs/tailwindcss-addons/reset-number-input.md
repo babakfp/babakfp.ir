@@ -35,7 +35,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            resetNumberInput: false, // Enabled by default
+            resetNumberInput: false, // Enabled by default.
         }),
     ],
 }

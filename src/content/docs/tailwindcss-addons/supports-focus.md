@@ -43,7 +43,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            supportsFocus: false, // Enabled by default
+            supportsFocus: false, // Enabled by default.
         }),
     ],
 }

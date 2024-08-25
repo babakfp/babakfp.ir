@@ -40,7 +40,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            dynamicScreen: false, // Enabled by default
+            dynamicScreen: false, // Enabled by default.
         }),
     ],
 }

@@ -51,7 +51,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            not: false, // Enabled by default
+            not: false, // Enabled by default.
         }),
     ],
 }

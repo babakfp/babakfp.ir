@@ -35,7 +35,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            hideShow: false, // Enabled by default
+            hideShow: false, // Enabled by default.
         }),
     ],
 }

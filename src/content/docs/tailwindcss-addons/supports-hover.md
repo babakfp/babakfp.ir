@@ -39,7 +39,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            supportsHover: false, // Enabled by default
+            supportsHover: false, // Enabled by default.
         }),
     ],
 }

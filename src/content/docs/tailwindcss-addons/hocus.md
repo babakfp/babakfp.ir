@@ -48,7 +48,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            hocus: false, // Enabled by default
+            hocus: false, // Enabled by default.
         }),
     ],
 }

@@ -31,7 +31,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            bgRadial: false, // Enabled by default
+            bgRadial: false, // Enabled by default.
         }),
     ],
 }

@@ -35,7 +35,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            drag: false, // Enabled by default
+            drag: false, // Enabled by default.
         }),
     ],
 }

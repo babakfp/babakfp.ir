@@ -35,7 +35,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            resetSearchInput: false, // Enabled by default
+            resetSearchInput: false, // Enabled by default.
         }),
     ],
 }

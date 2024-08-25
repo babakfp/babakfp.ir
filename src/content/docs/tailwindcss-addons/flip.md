@@ -35,7 +35,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            flip: false, // Enabled by default
+            flip: false, // Enabled by default.
         }),
     ],
 }

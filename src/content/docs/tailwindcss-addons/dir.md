@@ -35,7 +35,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            dir: false, // Enabled by default
+            dir: false, // Enabled by default.
         }),
     ],
 }

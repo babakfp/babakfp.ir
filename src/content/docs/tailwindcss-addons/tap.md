@@ -41,7 +41,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            tap: false, // Enabled by default
+            tap: false, // Enabled by default.
         }),
     ],
 }

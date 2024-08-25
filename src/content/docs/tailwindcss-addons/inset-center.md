@@ -35,7 +35,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            insetCenter: false, // Enabled by default
+            insetCenter: false, // Enabled by default.
         }),
     ],
 }
