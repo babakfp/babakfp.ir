@@ -21,39 +21,39 @@ This feature will replace all Tailwind (`justify-content`, `justify-items`, `jus
 
 ## Justify Content
 
-<UtilsTable utilities="{() => getClassUtils('.jc')}" />
+<UtilsTable utilities="{getClassUtils('.jc')}" />
 
 ## Justify Items
 
-<UtilsTable utilities="{() => getClassUtils('.ji')}" />
+<UtilsTable utilities="{getClassUtils('.ji')}" />
 
 ## Justify Self
 
-<UtilsTable utilities="{() => getClassUtils('.js')}" />
+<UtilsTable utilities="{getClassUtils('.js')}" />
 
 ## Align Content
 
-<UtilsTable utilities="{() => getClassUtils('.ac')}" />
+<UtilsTable utilities="{getClassUtils('.ac')}" />
 
 ## Align Items
 
-<UtilsTable utilities="{() => getClassUtils('.ai')}" />
+<UtilsTable utilities="{getClassUtils('.ai')}" />
 
 ## Align Self
 
-<UtilsTable utilities="{() => getClassUtils('.as')}" />
+<UtilsTable utilities="{getClassUtils('.as')}" />
 
 ## Place Content
 
-<UtilsTable utilities="{() => getClassUtils('.pc')}" />
+<UtilsTable utilities="{getClassUtils('.pc')}" />
 
 ## Place Items
 
-<UtilsTable utilities="{() => getClassUtils('.pi')}" />
+<UtilsTable utilities="{getClassUtils('.pi')}" />
 
 ## Place Self
 
-<UtilsTable utilities="{() => getClassUtils('.ps')}" />
+<UtilsTable utilities="{getClassUtils('.ps')}" />
 
 ## Usage
 
