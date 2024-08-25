@@ -18,6 +18,9 @@ title: Tap
 -   <a href="https://tailwindcss.com/docs/background-color#changing-the-opacity" target="_blank" rel="noreferrer">Changing the opacity</a>
 -   <a href="https://tailwindcss.com/docs/background-color#arbitrary-values" target="_blank" rel="noreferrer">Arbitrary values</a>
 
+> [!NOTE]
+> The tap color is transparent by default, when using Tailwind CSS.
+
 ## Usage
 
 ### Single import
