@@ -79,7 +79,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            flexGrid: true, // Disabled by default
+            flexGrid: true, // Disabled by default.
         }),
     ],
 }

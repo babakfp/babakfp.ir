@@ -28,7 +28,7 @@ import { allAddons } from "tailwindcss-addons"
 export default {
     plugins: [
         ...allAddons({
-            fontRegular: true, // Disabled by default
+            fontRegular: true, // Disabled by default.
         }),
     ],
 }
