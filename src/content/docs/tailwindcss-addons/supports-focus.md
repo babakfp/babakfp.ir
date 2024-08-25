@@ -19,6 +19,9 @@ title: Supports Focus
 
 <UtilsTable {utilities} />
 
+> [!TIP] Alternative
+> You can use this [workaround](https://github.com/tailwindlabs/tailwindcss/discussions/1739#discussioncomment-3630717).
+
 ## Usage
 
 ### Single import
