@@ -9,7 +9,7 @@ By activating this option, the `font-normal` class will be renamed to `font-regu
 ### Single import
 
 ```js
-// tailwind.config.js | tailwind.config.ts
+// tailwind.config.js
 
 import { fontRegular } from "tailwindcss-addons"
 
@@ -21,7 +21,7 @@ export default {
 ### Multi import
 
 ```js
-// tailwind.config.js | tailwind.config.ts
+// tailwind.config.js
 
 import { allAddons } from "tailwindcss-addons"
 

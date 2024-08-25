@@ -52,7 +52,7 @@ Your tailwind config will be extended with these values:
 ### Single import
 
 ```js
-// tailwind.config.js | tailwind.config.ts
+// tailwind.config.js
 
 import { extraDefaults } from "tailwindcss-addons"
 
@@ -64,7 +64,7 @@ export default {
 ### Multi import
 
 ```js
-// tailwind.config.js | tailwind.config.ts
+// tailwind.config.js
 
 import { allAddons } from "tailwindcss-addons"
 

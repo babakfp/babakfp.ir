@@ -21,7 +21,7 @@ The browser will fall back to using `vh` and `vw` if `dvh` and `dvw` wasn't supp
 ### Single import
 
 ```js
-// tailwind.config.js | tailwind.config.ts
+// tailwind.config.js
 
 import { dynamicScreen } from "tailwindcss-addons"
 
@@ -33,7 +33,7 @@ export default {
 ### Multi import
 
 ```js
-// tailwind.config.js | tailwind.config.ts
+// tailwind.config.js
 
 import { allAddons } from "tailwindcss-addons"
 

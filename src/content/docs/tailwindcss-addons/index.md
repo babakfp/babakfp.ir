@@ -12,7 +12,7 @@ pnpm add -D tailwindcss-addons
 
 <!-- prettier-ignore -->
 ```js
-// tailwind.config.js | tailwind.config.ts
+// tailwind.config.js
 
 import { allAddons } from "tailwindcss-addons"
 
@@ -29,7 +29,7 @@ export default {
 
 <!-- prettier-ignore -->
 ```js
-// tailwind.config.js | tailwind.config.ts
+// tailwind.config.js
 
 import { /* <plugin-name> */ } from "tailwindcss-addons"
 
@@ -41,7 +41,7 @@ export default {
 ### Multi import
 
 ```js
-// tailwind.config.js | tailwind.config.ts
+// tailwind.config.js
 
 import { allAddons } from "tailwindcss-addons"
 

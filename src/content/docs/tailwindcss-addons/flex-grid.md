@@ -60,7 +60,7 @@ This feature will replace all Tailwind (`justify-content`, `justify-items`, `jus
 ### Single import
 
 ```js
-// tailwind.config.js | tailwind.config.ts
+// tailwind.config.js
 
 import { flexGrid } from "tailwindcss-addons"
 
@@ -72,7 +72,7 @@ export default {
 ### Multi import
 
 ```js
-// tailwind.config.js | tailwind.config.ts
+// tailwind.config.js
 
 import { allAddons } from "tailwindcss-addons"
 

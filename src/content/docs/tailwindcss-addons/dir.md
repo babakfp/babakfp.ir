@@ -16,7 +16,7 @@ title: Dir
 ### Single import
 
 ```js
-// tailwind.config.js | tailwind.config.ts
+// tailwind.config.js
 
 import { dir } from "tailwindcss-addons"
 
@@ -28,7 +28,7 @@ export default {
 ### Multi import
 
 ```js
-// tailwind.config.js | tailwind.config.ts
+// tailwind.config.js
 
 import { allAddons } from "tailwindcss-addons"
 
