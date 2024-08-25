@@ -22,7 +22,7 @@
         <strong>BackEnd</strong>
         experience and strong <strong>UI/UX</strong>
         skills. My tech stack includes <strong>TypeScript</strong>,
-        <strong>Svelte/Kit</strong>, <strong>TailwindCSS</strong>, and
+        <strong>Svelte/Kit</strong>, <strong>Tailwind CSS</strong>, and
         <strong>PocketBase</strong>. I contribute to
         <strong>open-source</strong>
         projects and am open to <strong>remote work</strong>. I'm seeking a

@@ -3,7 +3,7 @@
     import PocketBaseOutline from "$lib/components/technology-logos/PocketBaseOutline.svelte"
     import Sass from "$lib/components/technology-logos/Sass.svelte"
     import Svelte from "$lib/components/technology-logos/Svelte.svelte"
-    import TailwindCSS from "$lib/components/technology-logos/TailwindCSS.svelte"
+    import TailwindCss from "$lib/components/technology-logos/TailwindCss.svelte"
     import TypeScript from "$lib/components/technology-logos/TypeScript.svelte"
 
     export let slug: string
@@ -68,12 +68,12 @@
                                 <Svelte />
                             </FrontendCardTechItem>
                         {/if}
-                        {#if technology === "TailwindCSS"}
+                        {#if technology === "Tailwind CSS"}
                             <FrontendCardTechItem
                                 class="ring-offset-[#38bdf8]"
                                 title={technology}
                             >
-                                <TailwindCSS />
+                                <TailwindCss />
                             </FrontendCardTechItem>
                         {/if}
                         {#if technology === "PocketBase"}

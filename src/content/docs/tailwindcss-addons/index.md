@@ -1,8 +1,8 @@
 ---
-title: TailwindCSS Addons
+title: Tailwind CSS Addons
 ---
 
-A TailwindCSS plugin that adds extra utilities and more.
+A Tailwind CSS plugin that adds extra utilities and more.
 
 ## Install
 

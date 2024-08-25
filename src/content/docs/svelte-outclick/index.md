@@ -105,7 +105,7 @@ This prop works the same as the `querySelectorAll` method. It can contain any va
 
 -   Type: `string`
 
-This is equivalent to the CSS class attribute. You can seamlessly utilize tools such as TailwindCSS by adding your classes in the usual manner, without encountering any issues.
+This is equivalent to the CSS class attribute. You can seamlessly utilize tools such as Tailwind CSS by adding your classes in the usual manner, without encountering any issues.
 
 <!-- prettier-ignore -->
 ```svelte

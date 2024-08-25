@@ -13,7 +13,7 @@ const packages = [
         name: "svelte-outclick",
     },
     {
-        title: "TailwindCSS Addons",
+        title: "Tailwind CSS Addons",
         name: "tailwindcss-addons",
     },
 ]

@@ -53,7 +53,7 @@ https://discord.com/channels/684898665143206084/1237650610778804264/123765061077
 
 I was looking for a CSS parser. Deno website [suggests](https://docs.deno.com/runtime/manual/advanced/jsx_dom/css) two different CSS parsers, and none of them were what I wanted (they sucked).
 
-I found Lightning CSS, and it was fast, feature-rich, and type-safe in my experience. The new version of TailwindCSS (v4) uses it too.
+I found Lightning CSS, and it was fast, feature-rich, and type-safe in my experience. The new version of Tailwind CSS (v4) uses it too.
 
 After building my project, I realized that when I tried to run the compiled executable, it didn't work. After a few days and talking to a community member, I found that Deno doesn't support something related to Node.js. Check out the GitHub [issue](https://github.com/denoland/deno/issues/23266).
 

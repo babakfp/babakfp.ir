@@ -15,7 +15,7 @@
             "/content/portfolios/angle-berry/gallery-4.png",
             "/content/portfolios/angle-berry/gallery-5.png"
         ],
-        "technologies": ["Svelte", "TailwindCSS", "PocketBase", "TypeScript"]
+        "technologies": ["Svelte", "Tailwind CSS", "PocketBase", "TypeScript"]
     },
     {
         "title": "FarsGamer Remastered",
@@ -31,7 +31,7 @@
             "/content/portfolios/farsgamer-remastered/gallery-3.png",
             "/content/portfolios/farsgamer-remastered/gallery-4.png"
         ],
-        "technologies": ["Svelte", "TailwindCSS"]
+        "technologies": ["Svelte", "Tailwind CSS"]
     },
     {
         "title": "FarsGamer",
@@ -41,7 +41,7 @@
         "urls": {
             "main": "https://farsgamer.com"
         },
-        "technologies": ["TailwindCSS", "Sass"]
+        "technologies": ["Tailwind CSS", "Sass"]
     },
     {
         "title": "TarVaPood",
@@ -51,7 +51,7 @@
         "urls": {
             "main": "https://tarvapood.onrender.com"
         },
-        "technologies": ["TailwindCSS", "Sass"]
+        "technologies": ["Tailwind CSS", "Sass"]
     },
     {
         "title": "IDPay",
@@ -62,6 +62,6 @@
             "main": "https://idpay.vercel.app",
             "github": "https://github.com/babakfp/idpay"
         },
-        "technologies": ["Svelte", "TailwindCSS"]
+        "technologies": ["Svelte", "Tailwind CSS"]
     }
 ]

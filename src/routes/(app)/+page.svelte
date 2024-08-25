@@ -7,7 +7,7 @@
     <title>Babak Farkhoopak</title>
     <meta
         name="description"
-        content="Babak Farkhoopak website. Front-end Developer. JavaScript Developer. TypeScript Developer. TailwindCSS Developer. Full-stack Developer. PocketBase Developer."
+        content="Babak Farkhoopak website. Front-end Developer. JavaScript Developer. TypeScript Developer. Tailwind CSS Developer. Full-stack Developer. PocketBase Developer."
     />
 </svelte:head>
 

@@ -1,6 +1,6 @@
 export type TechStack =
     | "Svelte"
-    | "TailwindCSS"
+    | "Tailwind CSS"
     | "Sass"
     | "PocketBase"
     | "TypeScript"

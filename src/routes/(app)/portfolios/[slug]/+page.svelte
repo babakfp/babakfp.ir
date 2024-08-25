@@ -4,7 +4,7 @@
     import PocketBaseFill from "$lib/components/technology-logos/PocketBaseFill.svelte"
     import Sass from "$lib/components/technology-logos/Sass.svelte"
     import Svelte from "$lib/components/technology-logos/Svelte.svelte"
-    import TailwindCSS from "$lib/components/technology-logos/TailwindCSS.svelte"
+    import TailwindCss from "$lib/components/technology-logos/TailwindCss.svelte"
     import TypeScript from "$lib/components/technology-logos/TypeScript.svelte"
     import IconArrowUpRightSquare from "$lib/icons/IconArrowUpRightSquare.svelte"
     import frontendPortfolios from "$lib/portfolios/frontend.json"
@@ -21,7 +21,7 @@
         { name: "PocketBase", component: PocketBaseFill },
         { name: "Sass", component: Sass },
         { name: "Svelte", component: Svelte },
-        { name: "TailwindCSS", component: TailwindCSS },
+        { name: "Tailwind CSS", component: TailwindCss },
         { name: "TypeScript", component: TypeScript },
     ]
 </script>
