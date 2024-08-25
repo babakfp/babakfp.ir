@@ -2,7 +2,7 @@
 title: Tailwind CSS Addons
 ---
 
-A Tailwind CSS plugin that adds extra utilities and more.
+A set of Tailwind CSS plugins that add extra defaults, utilities, variants, and more.
 
 ## Install
 
