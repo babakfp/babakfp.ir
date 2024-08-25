@@ -11,6 +11,9 @@ title: Overflow Unset
 
 <UtilsTable {utilities} />
 
+> [!NOTE]
+> How is this userful? I don't remember. Feel free to open an issue or PR if you know.
+
 ## Usage
 
 ### Single import
