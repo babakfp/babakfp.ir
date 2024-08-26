@@ -3,6 +3,6 @@
     export { className as class }
 </script>
 
-<h3 class="{className} text-lg font-semibold text-gray-50">
+<h3 class="{className} text-lg font-bold text-gray-50">
     <slot />
 </h3>
