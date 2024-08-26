@@ -48,6 +48,6 @@
         }
     }
     :global(.hide-scrollbar::-webkit-scrollbar) {
-        @apply w-0;
+        @apply !w-0;
     }
 </style>

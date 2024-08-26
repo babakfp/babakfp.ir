@@ -3,6 +3,40 @@
 @tailwind utilities;
 
 @layer base {
+    ::-webkit-scrollbar {
+        @apply bg-gray-800;
+        &-thumb {
+            @apply border-solid border-transparent bg-gray-700 bg-clip-padding hover:bg-gray-600;
+        }
+    }
+
+    ::-webkit-scrollbar {
+        &:vertical {
+            @apply h-2.5 w-1.5;
+        }
+        &:horizontal {
+            @apply h-1.5 w-2.5;
+        }
+    }
+
+    ::-webkit-scrollbar-thumb {
+        &:vertical {
+            @apply border-x-2 border-y-0;
+        }
+        &:horizontal {
+            @apply border-x-0 border-y-2;
+        }
+    }
+
+    body::-webkit-scrollbar:vertical {
+        @apply w-3;
+    }
+    body::-webkit-scrollbar-thumb:vertical {
+        @apply border-x-4;
+    }
+}
+
+@layer base {
     :root {
         --header-h: theme(spacing.16);
         --screen-h-minus-header-h: calc(var(--tw-screen-h) - var(--header-h));
@@ -11,18 +45,6 @@
     }
     ::selection {
         @apply bg-brand-600/60;
-    }
-    body::-webkit-scrollbar {
-        @apply w-3;
-        &-thumb {
-            @apply border-x-4;
-        }
-    }
-    ::-webkit-scrollbar {
-        @apply h-2.5 w-1.5 bg-gray-800;
-        &-thumb {
-            @apply h-12 max-h-[40%] w-12 max-w-[40%] border-x-2 border-y-0 border-solid border-transparent bg-gray-700 bg-clip-padding hover:bg-gray-600;
-        }
     }
     * {
         @apply scroll-mt-[calc(var(--header-h)+theme(spacing.8))] drag-none;
