@@ -32,7 +32,6 @@ export default {
         outlineInsetUtility(),
         highlightUtility(),
         buttonComponents(),
-        codeComponents(),
         linkComponents(),
     ],
     future: {
@@ -54,15 +53,6 @@ function linkComponents() {
     return plugin(({ addComponents }) => {
         addComponents({
             ".link": {},
-        })
-    })
-}
-
-function codeComponents() {
-    return plugin(({ addComponents }) => {
-        addComponents({
-            ".code-block": {},
-            ".inline-code": {},
         })
     })
 }
