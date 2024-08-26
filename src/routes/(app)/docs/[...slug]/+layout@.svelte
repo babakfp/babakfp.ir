@@ -8,7 +8,7 @@
 
 <main class="main xl:py-0">
     <div
-        class="mx-auto max-w-prose xl:grid xl:max-w-none xl:grid-cols-[auto_1fr_auto] xl:justify-center"
+        class="mx-auto max-w-prose pb-9 xl:grid xl:max-w-none xl:grid-cols-[auto_1fr_auto] xl:justify-center xl:pb-0"
     >
         <DocsMenu />
 

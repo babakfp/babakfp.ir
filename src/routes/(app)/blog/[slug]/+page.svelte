@@ -22,7 +22,7 @@
 
 <main class="main xl:py-0">
     <div
-        class="mx-auto max-w-prose xl:grid xl:max-w-none xl:grid-cols-[1fr_auto] xl:justify-center"
+        class="mx-auto max-w-prose pb-9 xl:grid xl:max-w-none xl:grid-cols-[1fr_auto] xl:justify-center xl:pb-0"
     >
         <div
             class="min-w-0 xl:border-r xl:border-gray-50/5 xl:pb-[--main-spacing-b] xl:pr-12 xl:pt-[--main-spacing-t]"
