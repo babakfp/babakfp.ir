@@ -15,14 +15,13 @@
     }
 </script>
 
-<div class="group relative">
-    <pre bind:this={pre} {...$$restProps}><slot /></pre>
+<pre bind:this={pre} {...$$restProps}><slot /></pre>
 
-    <button
-        class="btn absolute right-4 top-4 text-xs opacity-0 group-hover:opacity-100"
-        on:click={handleCopy}
-        disabled={isDisabled}
-    >
-        {isDisabled ? "Copied" : "Copy"}
-    </button>
-</div>
+<button
+    class="btn absolute -right-container top-0 rounded-none text-xs group-hover:opacity-100 sm:right-container sm:top-container sm:rounded sm:opacity-0"
+    on:click={handleCopy}
+    disabled={isDisabled}
+    data-rehype-pretty-code-copy-button
+>
+    {isDisabled ? "Copied" : "Copy"}
+</button>

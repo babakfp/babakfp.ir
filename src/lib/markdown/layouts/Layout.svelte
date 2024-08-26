@@ -1,9 +1,10 @@
 <script lang="ts" context="module">
     import blockquote from "$lib/markdown/elements/blockquote.svelte"
+    import figure from "$lib/markdown/elements/figure.svelte"
     import img from "$lib/markdown/elements/img.svelte"
     import pre from "$lib/markdown/elements/pre.svelte"
 
-    export const mdxElements = { img, blockquote, pre }
+    export const mdxElements = { blockquote, figure, img, pre }
 </script>
 
 <script lang="ts">
