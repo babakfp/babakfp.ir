@@ -15,10 +15,18 @@
 </script>
 
 <svelte:window
-    on:keydown={(e) => isOpen && e.key === "Escape" && (isOpen = false)}
+    on:keydown={(e) => {
+        if (isOpen && e.key === "Escape") {
+            isOpen = false
+        }
+    }}
 />
 
-<BlurredBackdrop isVisible={isOpen} />
+<BlurredBackdrop
+    id="{id}-backdrop"
+    isVisible={isOpen}
+    on:click={() => (isOpen = false)}
+/>
 
 <OutClick
     tag="nav"
@@ -26,13 +34,13 @@
     class="
 		{className}
 		{hideScrollbar && 'hide-scrollbar'}
-		sidebar fixed bottom-0 left-0 right-14 top-[--header-h] z-40 -translate-x-full overflow-y-auto overscroll-y-contain bg-gray-900 pb-[--main-spacing-b] pt-[--main-spacing-t] duration-200
+		sidebar fixed bottom-0 left-0 right-14 top-[--header-height] z-40 -translate-x-full overflow-y-auto overscroll-y-contain bg-gray-900 pb-[--main-pb] pt-[--main-pt] duration-200
 		{isOpen && 'translate-x-0'}
 		sm:w-72
-		xl:sticky xl:bottom-auto xl:right-auto xl:z-0 xl:max-h-[--screen-h-minus-header-h] xl:translate-x-0
+		xl:sticky xl:bottom-auto xl:right-auto xl:z-0 xl:max-h-[--svh-no-header] xl:translate-x-0
 	"
     on:outclick={() => (isOpen = false)}
-    excludeQuerySelectorAll="#{toggleButtonId}"
+    excludeQuerySelectorAll="#{toggleButtonId}, #{id}-backdrop"
     aria-hidden={!isOpen}
     aria-label={ariaLabel}
     aria-labelledby="toggleButtonId"

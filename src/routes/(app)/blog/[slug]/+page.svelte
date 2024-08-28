@@ -1,14 +1,25 @@
 <script lang="ts">
-    import { fly } from "svelte/transition"
+    import { onMount } from "svelte"
+    import { browser } from "$app/environment"
     import { page } from "$app/stores"
     import BackToTopBtn from "$lib/BackToTopBtn.svelte"
-    import IconChevronRight from "$lib/icons/IconChevronRight.svelte"
-    import TocMenu from "$lib/Sidebar/TocMenu.svelte"
-    import { isBlogTocSidebarOpen } from "$lib/stores/blog"
+    import DesktopToc from "$lib/components/DesktopToc.svelte"
+    import MobileToc from "$lib/components/MobileToc.svelte"
+    import IconList from "$lib/icons/IconList.svelte"
+    import { getHeadings, type Headings } from "$lib/utilities/getHeadings.js"
     import { timeSince } from "$lib/utils/timeSince"
-    import transition from "$lib/utils/transition"
 
     export let data
+
+    let isTocOpen = false
+
+    let headings: Headings = []
+
+    onMount(() => (headings = getHeadings()))
+
+    $: if (browser && $page.url.pathname) {
+        headings = getHeadings()
+    }
 </script>
 
 <svelte:head>
@@ -20,61 +31,73 @@
     {/if}
 </svelte:head>
 
-<main class="main xl:py-0">
-    <div
-        class="mx-auto max-w-prose pb-9 xl:grid xl:max-w-none xl:grid-cols-[1fr_auto] xl:justify-center xl:pb-0"
+<div
+    class="container max-w-screen-xl xl:grid xl:grid-cols-[1fr_auto] xl:justify-center"
+>
+    <main
+        class="mx-auto min-h-[--svh-no-header] min-w-0 max-w-prose pb-[--main-pb] pt-[--main-pt] xl:max-w-none xl:border-r xl:border-gray-50/5 xl:pr-12"
     >
-        <div
-            class="min-w-0 xl:border-r xl:border-gray-50/5 xl:pb-[--main-spacing-b] xl:pr-12 xl:pt-[--main-spacing-t]"
-        >
-            {#key $page.url.pathname}
-                <article in:fly={transition}>
-                    <ul class="flex items-center gap-2 text-sm">
-                        <li>
-                            <a class="link" href="/">HOME</a>
-                        </li>
-                        <IconChevronRight class="text-xs opacity-40" />
-                        <li>
-                            <a class="link" href="/blog">BLOG</a>
-                        </li>
-                    </ul>
+        <article>
+            <ul class="flex items-center gap-2 text-sm">
+                <li>
+                    <a class="link" href="/">HOME</a>
+                </li>
+                <span class="text-xs text-gray-700">/</span>
+                <li>
+                    <a class="link" href="/blog">BLOG</a>
+                </li>
+            </ul>
 
-                    {#if data.update && data.create}
-                        <div
-                            class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-400"
-                        >
-                            {#if data.update}
-                                <span>
-                                    Update: <b title={data.update}>
-                                        {timeSince(new Date(data.update))}
-                                    </b>
-                                </span>
-                            {/if}
-                            {#if data.create}
-                                <span>
-                                    Create: <b title={data.create}>
-                                        {timeSince(new Date(data.create))}
-                                    </b>
-                                </span>
-                            {/if}
-                        </div>
+            {#if data.update || data.create}
+                <div
+                    class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-400"
+                >
+                    {#if data.update}
+                        <span>
+                            Updated: <b title={data.update}>
+                                {timeSince(new Date(data.update))}
+                            </b>
+                        </span>
                     {/if}
+                    {#if data.create}
+                        <span>
+                            Created: <b title={data.create}>
+                                {timeSince(new Date(data.create))}
+                            </b>
+                        </span>
+                    {/if}
+                </div>
+            {/if}
 
-                    <div class="article-content">
-                        {#if data.title}
-                            <h1 class="mt-[--markdown-spacing-title]">
-                                {data.title}
-                            </h1>
-                        {/if}
+            <div class="article-content">
+                {#if data.title}
+                    <h1 class="mt-[--md-title-mt]">
+                        {data.title}
+                    </h1>
+                {/if}
 
-                        <svelte:component this={data.content} />
-                    </div>
-                </article>
-            {/key}
-        </div>
+                <svelte:component this={data.content} />
+            </div>
+        </article>
+    </main>
 
-        <TocMenu name="blog" bind:isOpen={$isBlogTocSidebarOpen} />
-    </div>
-</main>
+    <DesktopToc class="hidden max-w-72 xl:block" {headings} />
+</div>
+
+{#if !isTocOpen}
+    <button
+        id="open-mobile-toc"
+        class="btn fixed bottom-16 right-4 xl:!hidden"
+        on:click={() => (isTocOpen = true)}
+    >
+        <IconList class="text-xl" />
+    </button>
+{/if}
 
 <BackToTopBtn />
+
+<MobileToc
+    {headings}
+    bind:isOpen={isTocOpen}
+    excluderQuery="#open-mobile-toc"
+/>

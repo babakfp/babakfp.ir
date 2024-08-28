@@ -1,5 +1,6 @@
 ---
 title: Tailwind CSS Addons
+description: A set of Tailwind CSS plugins that add extra defaults, utilities, variants, and more.
 ---
 
 A set of Tailwind CSS plugins that add extra defaults, utilities, variants, and more.

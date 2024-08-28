@@ -11,7 +11,7 @@
         const headerHeight =
             Number(
                 getComputedStyle(document.body)
-                    .getPropertyValue("--header-h")
+                    .getPropertyValue("--header-height")
                     .slice(0, -3),
             ) * 16
 

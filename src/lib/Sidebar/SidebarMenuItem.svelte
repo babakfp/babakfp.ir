@@ -5,7 +5,7 @@
 </script>
 
 <a
-    class="SidebarMenuItem group block px-container outline-inset xl:pl-0
+    class="SidebarMenuItem group block px-4 outline-inset xl:pl-0
 	{isActive && 'pointer-events-none'} {isToc && 'pl-0'}"
     {href}
 >

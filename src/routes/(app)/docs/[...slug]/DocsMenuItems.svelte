@@ -29,7 +29,7 @@
                     <li class="mt-8">
                         {#if item.items && item.items.length}
                             <h5
-                                class="block px-container font-semibold text-gray-50 xl:px-0"
+                                class="block px-4 font-semibold text-gray-50 xl:px-0"
                             >
                                 {item.title}
                             </h5>
@@ -49,7 +49,7 @@
                             </ul>
                         {:else if item.path}
                             <h5
-                                class="block px-container font-semibold text-gray-50 xl:px-0"
+                                class="block px-4 font-semibold text-gray-50 xl:px-0"
                             >
                                 <a href={item.path}>{item.title}</a>
                             </h5>

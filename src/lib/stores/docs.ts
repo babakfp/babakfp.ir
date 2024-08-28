@@ -3,9 +3,6 @@ import IconCode from "$lib/icons/IconCode.svelte"
 import IconGithub from "$lib/icons/IconGithub.svelte"
 import IconNpm from "$lib/icons/IconNpm.svelte"
 
-export const isDocsMenuSidebarOpen = writable(false)
-export const isDocsTocSidebarOpen = writable(false)
-
 export const docsSidebarItems = readable([
     {
         name: "svelte-outclick",

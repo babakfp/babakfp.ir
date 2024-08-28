@@ -8,7 +8,7 @@
 </script>
 
 <a
-    class="{className} group flex items-center gap-4 px-container py-1 font-mono text-sm duration-100 outline-inset hover:text-gray-50 xl:px-0"
+    class="{className} group flex items-center gap-4 px-4 py-1 font-mono text-sm duration-100 outline-inset hover:text-gray-50 xl:px-0"
     {href}
     target={isExternal ? "_blank" : null}
     rel={isExternal ? "noreferrer" : null}

@@ -1,4 +1,4 @@
-export const trapFocus = (node: HTMLElement) => {
+export const focusTrap = (node: HTMLElement) => {
     const previous = document.activeElement as HTMLElement | null
 
     const focusable = (): HTMLElement[] => {

@@ -54,7 +54,7 @@
 	thead th:first-of-type div { @apply rounded-tl rounded-bl }
 	thead th:last-of-type div { @apply rounded-tr rounded-br }
 
-	thead th div, tbody td { @apply py-3 px-container }
+	thead th div, tbody td { @apply py-3 px-4 }
 	tbody tr:first-of-type td { @apply pt-4 }
 
 	.table-wrapper::-webkit-scrollbar { @apply h-4 bg-gray-50/5 rounded-full;

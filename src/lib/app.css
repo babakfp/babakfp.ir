@@ -38,16 +38,16 @@
 
 @layer base {
     :root {
-        --header-h: theme(spacing.16);
-        --screen-h-minus-header-h: calc(var(--tw-screen-h) - var(--header-h));
-        --main-spacing-t: theme(spacing.12);
-        --main-spacing-b: theme(spacing.20);
+        --header-height: theme(spacing.16);
+        --svh-no-header: calc(theme(height.svh) - var(--header-height));
+        --main-pt: theme(spacing.12);
+        --main-pb: theme(spacing.20);
     }
     ::selection {
         @apply bg-brand-600/60;
     }
     * {
-        @apply scroll-mt-[calc(var(--header-h)+theme(spacing.8))] drag-none;
+        @apply select-none scroll-mt-[calc(var(--header-height)+theme(spacing.8))] outline-none drag-none;
     }
     b,
     strong,
@@ -63,8 +63,11 @@
             @apply fill-current;
         }
     }
+}
+
+@layer utilities {
     .font-title {
-        @apply font-extrablack uppercase;
+        @apply font-black uppercase;
     }
 }
 
@@ -79,14 +82,8 @@
 }
 
 @layer components {
-    .main {
-        @apply container min-h-[var(--screen-h-minus-header-h)] pb-[--main-spacing-b] pt-[--main-spacing-t];
-    }
-}
-
-@layer components {
     .header-btn {
-        @apply flex h-full items-center px-container outline-inset;
+        @apply flex h-full items-center px-4 outline-inset;
     }
     a.header-btn,
     button.header-btn {
@@ -108,11 +105,11 @@
         @apply h-9 w-9 p-0 text-gray-400 hover:text-gray-50;
     }
     .btn-primary {
-        @apply bg-brand-600 text-white hover:bg-brand-500;
+        @apply bg-brand-600 text-brand-50 hover:bg-brand-500;
     }
 }
 
-@layer components {
+@layer utilities {
     .outline-inset {
         @apply -outline-offset-2;
     }
@@ -120,10 +117,10 @@
 
 @layer components {
     .article-content {
-        --markdown-spacing-base: theme(spacing.6);
-        --markdown-spacing-title: theme(spacing.10);
+        --md-base-mt: theme(spacing.6);
+        --md-title-mt: theme(spacing.10);
 
-        @apply space-y-[--markdown-spacing-base] leading-7;
+        @apply space-y-[--md-base-mt] leading-7;
 
         /* prettier-ignore */
         h1, h2, h3, h4, h5, h6 {
@@ -135,7 +132,7 @@
 
         /* prettier-ignore */
         h2, h3, h4, h5, h6 {
-            @apply !mt-[--markdown-spacing-title] font-bold;
+            @apply !mt-[--md-title-mt] font-bold;
         }
 
         h1 {
@@ -217,8 +214,12 @@
         blockquote {
             @apply relative rounded bg-gray-400/5 p-4 shadow-sm shadow-gray-400/20;
             blockquote {
-                @apply -mr-4 mt-[--markdown-spacing-base] sm:mr-0;
+                @apply -mr-4 mt-[--md-base-mt] sm:mr-0;
             }
+        }
+
+        code {
+            @apply not-italic;
         }
 
         code:not(pre code) {
@@ -226,10 +227,10 @@
         }
 
         pre {
-            @apply -mx-container !bg-gray-50/5 p-0.5 text-sm font-semibold [tab-size:4] selection:bg-gray-50/10 sm:mx-0 sm:rounded;
+            @apply -mx-4 !bg-gray-50/5 p-0.5 text-sm font-semibold [tab-size:4] selection:bg-gray-50/10 sm:mx-0 sm:rounded;
 
             code {
-                @apply block select-text overflow-x-auto p-container leading-8;
+                @apply block select-text overflow-x-auto p-4 leading-8;
 
                 /* counter-reset: step;
                 counter-increment: step 0;

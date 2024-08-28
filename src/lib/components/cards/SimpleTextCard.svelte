@@ -5,7 +5,7 @@
     import CardTitle from "./CardTitle.svelte"
 
     export let title: string
-    export let description: string
+    export let description: string | undefined
     export let href: string
 </script>
 
@@ -18,7 +18,9 @@
         <CardDescription class="mt-1.5">{description}</CardDescription>
     {/if}
 
-    <CardFooter>
-        <slot />
-    </CardFooter>
+    {#if $$slots.default}
+        <CardFooter>
+            <slot />
+        </CardFooter>
+    {/if}
 </Card>

@@ -8,7 +8,7 @@
 </script>
 
 <a
-    class="{className} group relative block overflow-hidden rounded bg-gray-50 bg-opacity-5 p-4 shadow duration-200 highlight-gray-50/10 hover:bg-opacity-10"
+    class="{className} group relative block overflow-hidden rounded bg-gray-50 bg-opacity-5 p-4 shadow duration-200 highlight-gray-50/10 hover:bg-opacity-10 sm:p-6"
     {href}
     target={isExternal ? "_blank" : null}
 >

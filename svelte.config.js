@@ -11,7 +11,7 @@ export default {
     },
     preprocess: [
         mdxPreprocess({
-            elements: ["blockquote", "figure", "img", "pre"],
+            elements: ["blockquote", "img", "pre"],
             onTransform: (options, config) => {
                 return unifiedTransformer(options, config, {
                     builtInPlugins: {

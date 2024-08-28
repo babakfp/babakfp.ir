@@ -1,5 +1,5 @@
 <script lang="ts">
-    import FrontendCardTechItem from "$lib/cards/FrontendCard/FrontendCardTechItem.svelte"
+    import FrontendCardTechItem from "$lib/components/cards/FrontendCard/FrontendCardTechItem.svelte"
     import PocketBaseOutline from "$lib/components/technology-logos/PocketBaseOutline.svelte"
     import Sass from "$lib/components/technology-logos/Sass.svelte"
     import Svelte from "$lib/components/technology-logos/Svelte.svelte"
@@ -43,7 +43,7 @@
         >
             <div class="flex items-center justify-between">
                 <h2
-                    class="font-title text-4xl text-gray-50
+                    class="font-title text-3xl text-gray-50
                         {isSingleRow && 'lg:text-5xl'}"
                 >
                     {title}

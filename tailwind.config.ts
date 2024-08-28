@@ -1,3 +1,4 @@
+import { pick } from "remeda"
 import type { Config } from "tailwindcss"
 import { allAddons, flattenColorPalette } from "tailwindcss-addons"
 import colors from "tailwindcss/colors"
@@ -7,28 +8,32 @@ export default {
     content: ["./src/**/*.{html,js,svelte,ts,md}"],
     theme: {
         extend: {
-            colors: {
-                gray: colors.zinc,
-                brand: colors.indigo,
-            },
             borderRadius: {
                 DEFAULT: "0.5rem",
             },
+        },
+        colors: {
+            ...pick(colors, ["transparent", "current"]),
+            gray: colors.zinc,
+            brand: colors.indigo,
+        },
+        container: {
+            center: true,
+            padding: "1rem",
         },
         fontFamily: {
             sans: ["Recursive Variable"],
             mono: ["Recursive Variable", { fontVariationSettings: "'MONO' 1" }],
         },
         fontWeight: {
-            normal: "400",
+            light: "300",
             semibold: "600",
             bold: "700",
-            extrablack: "1000",
+            black: "900",
         },
     },
     plugins: [
         ...allAddons(),
-        containerUtility(),
         outlineInsetUtility(),
         highlightUtility(),
         buttonComponents(),
@@ -84,32 +89,4 @@ function highlightUtility() {
             },
         )
     })
-}
-
-function containerUtility() {
-    return plugin(
-        ({ addBase, theme }) => {
-            addBase({
-                ":root": {
-                    "--container": theme("spacing.6"),
-                },
-                ".container": {
-                    "@apply !max-w-screen-xl": "",
-                },
-            })
-        },
-        {
-            theme: {
-                extend: {
-                    spacing: {
-                        container: "var(--container)",
-                    },
-                    container: {
-                        center: true,
-                        padding: "var(--container)",
-                    },
-                },
-            },
-        },
-    )
 }

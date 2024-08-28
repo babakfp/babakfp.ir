@@ -9,24 +9,19 @@
     import IconTelegram from "$lib/icons/IconTelegram.svelte"
 </script>
 
-<section class="mx-auto grid max-w-prose gap-4">
-    <h1 class="text-5xl text-gray-50 sm:text-7xl">
-        <span>
-            <span class="font-title">Babak</span>
-            <span class="text-xs font-semibold"> TypeScript Developer </span>
-        </span>
-        <span class="font-title">Farkhoopak</span>
+<section class="relative mx-auto grid max-w-prose gap-4">
+    <h1 class="font-title text-5xl text-gray-50 sm:text-7xl">
+        Babak Farkhoopak
     </h1>
-    <p class="leading-7">
-        I'm a <strong>FrontEnd</strong> developer with some
-        <strong>BackEnd</strong>
-        experience and strong <strong>UI/UX</strong>
+    <p class="font-light leading-8">
+        I'm a <strong>FrontEnd</strong> developer with strong
+        <strong>UI</strong>/<strong>UX</strong>
         skills. My tech stack includes <strong>TypeScript</strong>,
-        <strong>Svelte/Kit</strong>, <strong>Tailwind CSS</strong>, and
-        <strong>PocketBase</strong>. I contribute to
-        <strong>open-source</strong>
-        projects and am open to <strong>remote work</strong>. I'm seeking a
-        position with <strong>relocation</strong> options.
+        <strong>Svelte</strong>/<strong>Kit</strong>,
+        <strong>Tailwind CSS</strong>, and
+        <strong>PocketBase</strong>. I'm open to
+        <strong>remote work</strong>, and seeking opportunities that offer
+        <strong>relocation</strong> options.
     </p>
     <div class="mt-2 flex flex-wrap justify-between gap-4">
         <div class="flex gap-2">
