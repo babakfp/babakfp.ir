@@ -21,7 +21,7 @@
                     style="padding-left: calc(1rem * {heading.level - 1});"
                 >
                     {#if heading.level > 2}
-                        <IconChevronRight class="text-2xs text-gray-700" />
+                        <IconChevronRight class="text-2xs text-gray-600" />
                     {/if}
 
                     <div class="line-clamp-1">

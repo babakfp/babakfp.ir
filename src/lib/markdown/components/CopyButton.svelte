@@ -16,7 +16,7 @@
 </script>
 
 <button
-    class="btn absolute right-0 top-0 rounded-none text-xs group-hover:opacity-100 sm:right-4 sm:top-4 sm:rounded sm:opacity-0"
+    class="btn absolute right-0 top-0 rounded-none text-xs opacity-0 group-[:hover]:opacity-100 sm:right-4 sm:top-4 sm:rounded"
     on:click={handleCopy}
     disabled={isDisabled}
     data-rehype-pretty-code-copy-button

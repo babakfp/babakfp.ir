@@ -8,7 +8,7 @@
 </script>
 
 <nav
-    class="{class_} sticky top-[--header-height] max-h-[--svh-no-header] overflow-y-auto overscroll-y-contain pb-[--main-pb] pt-[--main-pt] [&::-webkit-scrollbar]:w-0"
+    class="{class_} sticky top-[--header-height] max-h-[--svh-no-header] min-w-72 max-w-72 overflow-y-auto overscroll-y-contain pb-[--main-pb] pt-[--main-pt] [&::-webkit-scrollbar]:w-0"
 >
     <ul class="text-gray-300">
         {#each headings as heading}
@@ -22,7 +22,7 @@
                         : heading.level});"
                 >
                     {#if heading.level > 2}
-                        <IconChevronRight class="text-2xs text-gray-700" />
+                        <IconChevronRight class="text-2xs text-gray-600" />
                     {/if}
 
                     <div class="line-clamp-1">

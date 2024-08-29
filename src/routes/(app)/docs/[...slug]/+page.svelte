@@ -34,27 +34,27 @@
 </svelte:head>
 
 <main
-    class="container min-h-[var(--svh-no-header)] max-w-screen-xl pb-[--main-pb] pt-[--main-pt] xl:py-0"
+    class="container max-w-screen-xl xl:grid xl:grid-cols-[auto_1fr_auto] xl:gap-12"
 >
-    <div
-        class="mx-auto max-w-prose pb-9 xl:grid xl:max-w-none xl:grid-cols-[auto_1fr_auto] xl:justify-center xl:pb-0"
+    <DocsMenu
+        class="xl:border-r xl:border-gray-50/5"
+        bind:isOpen={isMenuOpen}
+    />
+
+    <article
+        class="article-content mx-auto max-w-prose pb-[--main-pb] pt-[--main-pt] xl:mx-0 xl:min-h-[--svh-no-header]"
     >
-        <DocsMenu bind:isOpen={isMenuOpen} />
+        {#if data.title}
+            <h1>{data.title}</h1>
+        {/if}
 
-        <div
-            class="min-w-0 xl:border-x xl:border-gray-50/5 xl:px-12 xl:pb-[--main-pb] xl:pt-[--main-pt]"
-        >
-            <article class="article-content">
-                {#if data.title}
-                    <h1>{data.title}</h1>
-                {/if}
+        <svelte:component this={data.content} />
+    </article>
 
-                <svelte:component this={data.content} />
-            </article>
-        </div>
-
-        <DesktopToc class="hidden max-w-72 xl:block" {headings} />
-    </div>
+    <DesktopToc
+        class="hidden max-w-72 xl:block xl:border-l xl:border-gray-50/5"
+        {headings}
+    />
 </main>
 
 {#if !isTocOpen}

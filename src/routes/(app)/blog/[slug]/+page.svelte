@@ -31,58 +31,61 @@
     {/if}
 </svelte:head>
 
-<div
-    class="container max-w-screen-xl xl:grid xl:grid-cols-[1fr_auto] xl:justify-center"
+<main
+    class="container max-w-screen-xl xl:grid xl:grid-cols-[auto_1fr_auto] xl:gap-12"
 >
-    <main
-        class="mx-auto min-h-[--svh-no-header] min-w-0 max-w-prose pb-[--main-pb] pt-[--main-pt] xl:max-w-none xl:border-r xl:border-gray-50/5 xl:pr-12"
-    >
-        <article>
-            <ul class="flex items-center gap-2 text-sm">
-                <li>
-                    <a class="link" href="/">HOME</a>
-                </li>
-                <span class="text-xs text-gray-700">/</span>
-                <li>
-                    <a class="link" href="/blog">BLOG</a>
-                </li>
-            </ul>
+    <div class="hidden min-w-72 max-w-72 xl:block" />
 
-            {#if data.update || data.create}
-                <div
-                    class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-400"
-                >
-                    {#if data.update}
-                        <span>
-                            Updated: <b title={data.update}>
-                                {timeSince(new Date(data.update))}
-                            </b>
-                        </span>
-                    {/if}
-                    {#if data.create}
-                        <span>
-                            Created: <b title={data.create}>
-                                {timeSince(new Date(data.create))}
-                            </b>
-                        </span>
-                    {/if}
-                </div>
+    <article
+        class="mx-auto max-w-prose pb-[--main-pb] pt-[--main-pt] xl:mx-0 xl:min-h-[--svh-no-header]"
+    >
+        <ul class="flex items-center gap-2 text-sm">
+            <li>
+                <a class="link" href="/">HOME</a>
+            </li>
+            <span class="text-xs text-gray-700">/</span>
+            <li>
+                <a class="link" href="/blog">BLOG</a>
+            </li>
+        </ul>
+
+        {#if data.update || data.create}
+            <div
+                class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-400"
+            >
+                {#if data.update}
+                    <span>
+                        Updated: <b title={data.update}>
+                            {timeSince(new Date(data.update))}
+                        </b>
+                    </span>
+                {/if}
+                {#if data.create}
+                    <span>
+                        Created: <b title={data.create}>
+                            {timeSince(new Date(data.create))}
+                        </b>
+                    </span>
+                {/if}
+            </div>
+        {/if}
+
+        <div class="article-content">
+            {#if data.title}
+                <h1 class="mt-[--md-title-mt]">
+                    {data.title}
+                </h1>
             {/if}
 
-            <div class="article-content">
-                {#if data.title}
-                    <h1 class="mt-[--md-title-mt]">
-                        {data.title}
-                    </h1>
-                {/if}
+            <svelte:component this={data.content} />
+        </div>
+    </article>
 
-                <svelte:component this={data.content} />
-            </div>
-        </article>
-    </main>
-
-    <DesktopToc class="hidden max-w-72 xl:block" {headings} />
-</div>
+    <DesktopToc
+        class="hidden max-w-72 xl:block xl:border-l xl:border-gray-50/5"
+        {headings}
+    />
+</main>
 
 {#if !isTocOpen}
     <button

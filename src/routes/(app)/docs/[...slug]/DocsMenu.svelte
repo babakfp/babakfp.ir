@@ -3,10 +3,12 @@
     import DocsMenuItems from "./DocsMenuItems.svelte"
 
     export let isOpen = false
+    export let class_ = ""
+    export { class_ as class }
 </script>
 
 <Sidebar
-    class="xl:w-56"
+    class="xl:min-w-56 xl:max-w-56 {class_}"
     id="docs-menu"
     bind:isOpen
     toggleButtonId="docs-menu-toggle"
