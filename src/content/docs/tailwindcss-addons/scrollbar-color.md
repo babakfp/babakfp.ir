@@ -4,9 +4,16 @@ title: Scrollbar Color
 
 <script>
     import UtilsTable from "$lib/UtilsTable.svelte"
-    import { getUtilities } from "$lib/utils/tailwind.js"
-    import { scrollbarColor } from "tailwindcss-addons"
-    const utilities = getUtilities(scrollbarColor.handler);
+	const utilities = {
+		'.scrollbar-thumb-<color>': {
+            '--tw-scrollbar-thumb': '<value>',
+            'scrollbar-color': 'var(--tw-scrollbar-thumb) var(--tw-scrollbar-track)',
+        },
+        '.scrollbar-track-<color>': {
+            '--tw-scrollbar-track': '<value>',
+            'scrollbar-color': 'var(--tw-scrollbar-thumb) var(--tw-scrollbar-track)',
+        },
+	}
 </script>
 
 <UtilsTable {utilities} />

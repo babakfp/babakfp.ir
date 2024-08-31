@@ -2,6 +2,10 @@
 title: CHANGELOG
 ---
 
+## 1.11.0
+
+-   Added [Scrollbar Color](/docs/tailwindcss-addons/scrollbar-color) and [Scrollbar Width](/docs/tailwindcss-addons/scrollbar-width) utilities.
+
 ## 1.10.0
 
 -   [breaking] Removed the default export and added named export `allAddons` instead.
