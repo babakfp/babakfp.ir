@@ -102,6 +102,14 @@ export const docsSidebarItems = readable([
                         path: "/docs/tailwindcss-addons/hide-show",
                     },
                     {
+                        title: "Scrollbar Color",
+                        path: "/docs/tailwindcss-addons/scrollbar-color",
+                    },
+                    {
+                        title: "Scrollbar Width",
+                        path: "/docs/tailwindcss-addons/scrollbar-width",
+                    },
+                    {
                         title: "Tap",
                         path: "/docs/tailwindcss-addons/tap",
                     },
