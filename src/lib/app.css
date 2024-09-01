@@ -222,24 +222,33 @@
             @apply select-text rounded-md bg-gray-50/10 px-1.5 py-0.5 text-[.9em] selection:bg-brand-600/50;
         }
 
+        code[data-line-numbers] {
+            counter-reset: line;
+        }
+
+        code[data-line-numbers] > [data-line]::before {
+            counter-increment: line;
+            content: counter(line);
+            @apply mr-8 inline-block w-3 text-right text-gray-50/10;
+        }
+
+        code[data-line-numbers-max-digits="2"] > [data-line]::before {
+            @apply w-5;
+        }
+
+        code[data-line-numbers-max-digits="3"] > [data-line]::before {
+            @apply w-7;
+        }
+
+        code[data-line-numbers-max-digits="4"] > [data-line]::before {
+            @apply w-9;
+        }
+
         pre {
             @apply -mx-4 !bg-gray-50/5 p-0.5 text-sm [tab-size:4] selection:bg-gray-50/10 sm:mx-0 sm:rounded;
 
             code {
                 @apply block select-text overflow-x-auto p-4 leading-8;
-
-                /* counter-reset: step;
-                counter-increment: step 0;
-
-                .line::before {
-                    content: counter(step);
-                    counter-increment: step;
-                    width: 1rem;
-                    margin-right: 1.5rem;
-                    display: inline-block;
-                    text-align: right;
-                    color: rgba(115, 138, 148, 0.4);
-                } */
             }
         }
 
