@@ -218,10 +218,6 @@
             }
         }
 
-        code {
-            @apply not-italic;
-        }
-
         code:not(pre code) {
             @apply select-text rounded-md bg-gray-50/10 px-1.5 py-0.5 text-[.9em] selection:bg-brand-600/50;
         }
@@ -244,10 +240,6 @@
                     text-align: right;
                     color: rgba(115, 138, 148, 0.4);
                 } */
-            }
-
-            span {
-                @apply !not-italic;
             }
         }
 
