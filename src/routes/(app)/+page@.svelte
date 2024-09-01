@@ -14,11 +14,11 @@
 
 <div class="container max-w-screen-xl">
     <main
-        class="grid min-h-[--svh-no-header] content-center border-x border-dashed border-gray-800 px-6 pb-[--main-pb] pt-[--main-pt] bg-grid-gray-800/25 [box-shadow:inset_0_0_4rem_2rem_theme(colors.gray.900)]"
+        class="grid min-h-[--svh-no-header] content-center border-x border-dashed border-gray-800 px-6 pb-[--main-pb] pt-[--main-pt] shadow-[inset_0_0_4rem_2rem_theme(colors.gray.900)] bg-grid-gray-800/25"
     >
         <div class="relative">
             <div
-                class="absolute z-0 size-1/2 bg-gray-900 inset-center [box-shadow:0_0_4rem_2rem_theme(colors.gray.900)]"
+                class="absolute z-0 size-1/2 bg-gray-900 shadow-[0_0_4rem_2rem_theme(colors.gray.900)] inset-center"
             />
             <HeroSection />
         </div>
