@@ -227,7 +227,7 @@
         }
 
         pre {
-            @apply -mx-4 !bg-gray-50/5 p-0.5 text-sm font-semibold [tab-size:4] selection:bg-gray-50/10 sm:mx-0 sm:rounded;
+            @apply -mx-4 !bg-gray-50/5 p-0.5 text-sm [tab-size:4] selection:bg-gray-50/10 sm:mx-0 sm:rounded;
 
             code {
                 @apply block select-text overflow-x-auto p-4 leading-8;
