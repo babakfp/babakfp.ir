@@ -2,10 +2,64 @@
 title: Background Grid
 ---
 
--   Use `bg-grid-<color>` for adding a background grid.
--   Use `bg-grid-<spacing>` for altering the size of the squares.
--   Use `bg-grid-w-<spacing>` and `bg-grid-h-<spacing>` for altering the width and the height separately.
--   Use `bg-grid-border-<border-width>` for altering the thickness of the lines.
+<script>
+	import UtilsTable from '$lib/UtilsTable.svelte'
+	const bgGridColorUtilities = {
+		'.bg-grid-<color>': {
+            'background-size':
+                'var(--tw-bg-grid-size, var(--tw-bg-grid-w, 32px)) var(--tw-bg-grid-size, var(--tw-bg-grid-h, 32px))',
+            'background-image': `
+                linear-gradient(to right, <color> var(--tw-bg-grid-border-w, 1px), transparent 0px),
+                linear-gradient(to bottom, <color> var(--tw-bg-grid-border-w, 1px), transparent 0px)`,
+		}
+	}
+    const bgGridSpacingSizeUtilities = {
+		'.bg-grid-<spacing>': {
+            '--tw-bg-grid-size': '<spacing>',
+		}
+	}
+    const bgGridSpacingWidthUtilities = {
+		'.bg-grid-w-<spacing>': {
+            '--tw-bg-grid-w': '<spacing>',
+		}
+	}
+    const bgGridSpacingHeightUtilities = {
+		'.bg-grid-h-<spacing>': {
+            '--tw-bg-grid-h': '<spacing>',
+		}
+	}
+    const bgGridBorderWidthUtilities = {
+		'.bg-grid-border-<border-width>': {
+            "--tw-bg-grid-border-w": '<border-width>',
+		}
+	}
+</script>
+
+<UtilsTable utilities={bgGridColorUtilities} />
+
+<br />
+
+## Size
+
+<UtilsTable utilities={bgGridSpacingSizeUtilities} />
+
+<br />
+
+### Width
+
+<UtilsTable utilities={bgGridSpacingWidthUtilities} />
+
+<br />
+
+### Height
+
+<UtilsTable utilities={bgGridSpacingHeightUtilities} />
+
+<br />
+
+## Border Width
+
+<UtilsTable utilities={bgGridBorderWidthUtilities} />
 
 ## Usage
 
