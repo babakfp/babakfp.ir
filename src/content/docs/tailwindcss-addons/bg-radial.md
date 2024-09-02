@@ -22,8 +22,8 @@ title: Background Radial
 <!-- prettier-ignore -->
 ```css
 .bg-radial-COLOR: {
-    background-size: var(--tw-bg-radial-size, var(--tw-bg-radial-w, 32px)) var(--tw-bg-radial-size, var(--tw-bg-radial-h, 32px));
-    background-image: radial-gradient(circle, COLOR var(--tw-bg-radial-circle-size, 1px), transparent 0px);
+    background-size: var(--tw-bg-radial-gap-x, 32px) var(--tw-bg-radial-gap-y, 32px);
+    background-image: radial-gradient(circle, COLOR var(--tw-bg-radial-size, 1px), transparent 0px);
 }
 ```
 
@@ -49,73 +49,74 @@ title: Background Radial
 <div class="bg-center shadow-[inset_0_0_4rem_2rem_theme(colors.gray.900)] bg-radial-gray-700 ..." />
 ```
 
-### Sizes
+### Spacing
 
-#### Width and Height
+#### X and Y
 
 <Preview useGrid={false}>
-    <div class="h-32 bg-radial-gray-700 bg-radial-4"></div>
+    <div class="h-32 bg-radial-gray-700 bg-radial-gap-4"></div>
 </Preview>
 
 <!-- prettier-ignore -->
-```svelte /bg-radial-4/
-<div class="bg-radial-gray-700 bg-radial-4 ..." />
+```svelte /bg-radial-gap-4/
+<div class="bg-radial-gray-700 bg-radial-gap-4 ..." />
 ```
 
 ```css
-.bg-radial-SPACING: {
-    --tw-bg-radial-size: SPACING;
+.bg-radial-gap-SPACING: {
+    --tw-bg-radial-gap-x: SPACING;
+    --tw-bg-radial-gap-y: SPACING;
 }
 ```
 
-#### Rows
+#### X
 
 <Preview useGrid={false}>
-    <div class="h-32 bg-radial-gray-700 bg-radial-w-16"></div>
+    <div class="h-32 bg-radial-gray-700 bg-radial-gap-x-16"></div>
 </Preview>
 
 <!-- prettier-ignore -->
-```svelte /bg-radial-w-16/
-<div class="bg-radial-gray-700 bg-radial-w-16 ..." />
+```svelte /bg-radial-gap-x-16/
+<div class="bg-radial-gray-700 bg-radial-gap-x-16 ..." />
 ```
 
 ```css
-.bg-radial-w-SPACING: {
-    --tw-bg-radial-w: SPACING;
+.bg-radial-gap-x-SPACING: {
+    --tw-bg-radial-gap-x: SPACING;
 }
 ```
 
-#### Columns
+#### Y
 
 <Preview useGrid={false}>
-    <div class="h-32 bg-radial-gray-700 bg-radial-h-16"></div>
+    <div class="h-32 bg-radial-gray-700 bg-radial-gap-y-16"></div>
 </Preview>
 
 <!-- prettier-ignore -->
-```svelte /bg-radial-h-16/
-<div class="bg-radial-gray-700 bg-radial-h-16 ..." />
+```svelte /bg-radial-gap-y-16/
+<div class="bg-radial-gray-700 bg-radial-gap-y-16 ..." />
 ```
 
 ```css
-.bg-radial-h-SPACING: {
-    --tw-bg-radial-h: SPACING;
+.bg-radial-gap-y-SPACING: {
+    --tw-bg-radial-gap-y: SPACING;
 }
 ```
 
-### Border Width
+## Size
 
 <Preview useGrid={false}>
-    <div class="h-32 bg-radial-gray-700 bg-radial-circle-2"></div>
+    <div class="h-32 bg-radial-gray-700 bg-radial-size-2"></div>
 </Preview>
 
 <!-- prettier-ignore -->
-```svelte /bg-radial-circle-2/
-<div class="bg-radial-gray-700 bg-radial-circle-2 ..." />
+```svelte /bg-radial-size-2/
+<div class="bg-radial-gray-700 bg-radial-size-2 ..." />
 ```
 
 ```css
-.bg-radial-circle-BORDER_WIDTH: {
-    --tw-bg-radial-circle-size: BORDER_WIDTH;
+.bg-radial-size-BORDER_WIDTH: {
+    --tw-bg-radial-size: BORDER_WIDTH;
 }
 ```
 

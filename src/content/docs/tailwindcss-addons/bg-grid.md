@@ -22,7 +22,7 @@ title: Background Grid
 <!-- prettier-ignore -->
 ```css
 .bg-grid-COLOR: {
-    background-size: var(--tw-bg-grid-size, var(--tw-bg-grid-w, 32px)) var(--tw-bg-grid-size, var(--tw-bg-grid-h, 32px));
+    background-size: var(--tw-bg-grid-w, 32px) var(--tw-bg-grid-h, 32px);
     background-image: linear-gradient(to right, COLOR var(--tw-bg-grid-border-w, 1px), transparent 0px), linear-gradient( to bottom, COLOR var(--tw-bg-grid-border-w, 1px), transparent 0px);
 }
 ```
@@ -64,7 +64,8 @@ title: Background Grid
 
 ```css
 .bg-grid-SPACING: {
-    --tw-bg-grid-size: SPACING;
+    --tw-bg-grid-w: SPACING;
+    --tw-bg-grid-h: SPACING;
 }
 ```
 
