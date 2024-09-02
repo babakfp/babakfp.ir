@@ -9,6 +9,8 @@ title: Reset Search Input
     const utilities = getUtilities(resetSearchInput().handler);
 </script>
 
+Removed the x from search inputs.
+
 <UtilsTable {utilities} />
 
 ## Usage

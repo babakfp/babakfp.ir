@@ -9,6 +9,8 @@ title: Reset Number Input
     const utilities = getUtilities(resetNumberInput().handler);
 </script>
 
+Removes the arrows from number inputs.
+
 <UtilsTable {utilities} />
 
 ## Usage
