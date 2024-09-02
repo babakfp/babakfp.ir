@@ -47,7 +47,7 @@
         @apply bg-brand-600/60;
     }
     * {
-        @apply select-none scroll-mt-[calc(var(--header-height)+theme(spacing.8))] outline-none drag-none;
+        @apply scroll-mt-[calc(var(--header-height)+theme(spacing.8))] outline-none drag-none;
     }
     b,
     strong,
