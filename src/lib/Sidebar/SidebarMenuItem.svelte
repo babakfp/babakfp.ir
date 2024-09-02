@@ -10,7 +10,7 @@
     {href}
 >
     <div
-        class="line-clamp-1 border-l border-gray-50/5 py-2 pl-4 text-gray-400 duration-100 hover:border-gray-50 hover:text-gray-50
+        class="line-clamp-1 border-l border-gray-50/5 py-2 pl-4 text-gray-400 duration-100 hover:text-gray-50
 		{isActive && '!border-gray-50 text-gray-50'}
 		{isToc && 'border-none xl:border-solid'}"
     >
