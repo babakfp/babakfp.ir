@@ -222,6 +222,10 @@
             @apply bg-gray-50/10 p-1 text-[.9em] selection:bg-brand-600/50;
         }
 
+        code span {
+            @apply !not-italic;
+        }
+
         code:not(pre code) {
             @apply select-text rounded-md bg-gray-50/10 px-1.5 py-0.5 text-[.9em] selection:bg-brand-600/50;
         }
