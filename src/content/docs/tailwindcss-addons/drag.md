@@ -11,6 +11,8 @@ title: Drag
 
 <UtilsTable {utilities} />
 
+-   [Can I use `-webkit-user-drag`?](https://caniuse.com/webkit-user-drag)
+
 ## Usage
 
 ### Single import

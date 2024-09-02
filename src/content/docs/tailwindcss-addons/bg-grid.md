@@ -27,6 +27,11 @@ title: Background Grid
 }
 ```
 
+-   [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
+-   [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+-   [`background-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
+-   [`linear-gradient()`](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient)
+
 ### Center
 
 <Preview useGrid={false}>
@@ -38,6 +43,8 @@ title: Background Grid
 <div class="bg-center bg-grid-gray-800 ..." />
 ```
 
+-   [`background-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
+
 ### Shadow
 
 <Preview useGrid={false}>
@@ -48,6 +55,8 @@ title: Background Grid
 ```svelte /shadow-[inset_0_0_4rem_2rem_theme(colors.gray.900)]/
 <div class="bg-center shadow-[inset_0_0_4rem_2rem_theme(colors.gray.900)] bg-grid-gray-800 ..." />
 ```
+
+-   [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
 
 ### Sizes
 
@@ -69,6 +78,8 @@ title: Background Grid
 }
 ```
 
+-   [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+
 #### Rows
 
 <Preview useGrid={false}>
@@ -85,6 +96,8 @@ title: Background Grid
     --tw-bg-grid-w: SPACING;
 }
 ```
+
+-   [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 
 #### Columns
 
@@ -103,6 +116,8 @@ title: Background Grid
 }
 ```
 
+-   [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+
 ### Border Width
 
 <Preview useGrid={false}>
@@ -119,6 +134,8 @@ title: Background Grid
     --tw-bg-grid-border-w: BORDER_WIDTH;
 }
 ```
+
+-   [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 
 ## Usage
 
