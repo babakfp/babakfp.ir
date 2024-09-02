@@ -2,6 +2,14 @@
 title: CHANGELOG
 ---
 
+## 2.0.0
+
+-   [breaking] Renamed `bg-radial-*` classes and variables.
+    -   `bg-radial-SPACING` → `bg-radial-gap-SPACING`
+    -   `bg-radial-w-SPACING` → `bg-radial-gap-x-SPACING`
+    -   `bg-radial-h-SPACING` → `bg-radial-gap-y-SPACING`
+    -   `bg-radial-circle-BORDER_WIDTH` → `bg-radial-size-BORDER_WIDTH`
+
 ## 1.11.0
 
 -   Added [Scrollbar Color](/docs/tailwindcss-addons/scrollbar-color) and [Scrollbar Width](/docs/tailwindcss-addons/scrollbar-width) utilities.
