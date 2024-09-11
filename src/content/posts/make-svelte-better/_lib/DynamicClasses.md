@@ -14,7 +14,7 @@ Managing dynamic classes in Svelte can be improved for better code readability a
 ### The ternary operator
 
 ```svelte
-<div class="block {condition ? 'text-base font-normal' : ''}" />
+<div class="block {condition ? 'font-normal text-base' : ''}" />
 ```
 
 -   ✅ Supports multiple classes.
@@ -23,7 +23,7 @@ Managing dynamic classes in Svelte can be improved for better code readability a
 ### The `&&` operator
 
 ```svelte
-<div class="block {condition && 'text-base font-normal'}" />
+<div class="block {condition && 'font-normal text-base'}" />
 ```
 
 -   ✅ Supports multiple classes.
