@@ -145,10 +145,6 @@ export const docsSidebarItems = readable([
                 title: "Modified Utilities",
                 items: [
                     {
-                        title: "Dynamic Screen",
-                        path: "/docs/tailwindcss-addons/dynamic-screen",
-                    },
-                    {
                         title: "Flex Grid",
                         path: "/docs/tailwindcss-addons/flex-grid",
                     },

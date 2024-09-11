@@ -2,6 +2,10 @@
 title: CHANGELOG
 ---
 
+## 3.0.0
+
+- [breaking] Removed Dynamic Screen feature.
+
 ## 2.0.0
 
 -   [breaking] Renamed `bg-radial-*` classes and variables.
