@@ -4,7 +4,10 @@ title: CHANGELOG
 
 ## 3.0.0
 
-- [breaking] Removed Dynamic Screen feature.
+-   [breaking] Removed Dynamic Screen feature.
+-   [breaking] Changed `line-height` of `2xs` font size to `0.75rem` (from `1`).
+-   Added `group-hocus`, `group-hocus-within`, `group-hocus-visible`, `peer-hocus`, `peer-hocus-within` and `peer-hocus-visible` variants.
+-   Added `5`, `6`, `7`, `8` and `9` to `zIndex` utilities.
 
 ## 2.0.0
 
