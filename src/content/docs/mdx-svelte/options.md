@@ -17,13 +17,13 @@ Include the extension of files to be preprocessed and transformed. Don't include
 ```ts
 import { DOT_SVELTE, mdxPreprocess } from "mdx-svelte"
 
-const DOT_SVELTE_MD = ".svelte.md"
+const DOT_SVELTE_DOT_MD = ".svelte.md"
 
 const config = {
-    extensions: [DOT_SVELTE, DOT_SVELTE_MD],
+    extensions: [DOT_SVELTE, DOT_SVELTE_DOT_MD],
     preprocess: [
         mdxPreprocess({
-            extensions: [DOT_SVELTE_MD],
+            extensions: [DOT_SVELTE_DOT_MD],
         }),
         vitePreprocess(),
     ],
