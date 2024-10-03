@@ -3,7 +3,8 @@ title: MDX Svelte
 description: MDX for Svelte - A Svelte Preprocessor that allows you to write Svelte code in Markdown files.
 ---
 
-```
+<!-- prettier-ignore -->
+```svelte
 ---
 title: Hello, World!
 ---
