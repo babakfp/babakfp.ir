@@ -45,14 +45,14 @@ I developed this project due to the issues and limitations with ["mdsvex"](https
 
 ### What does it address?
 
--   Built-in (["unified"](https://github.com/unifiedjs/unified)) [transformer](/docs/mdx-svelte/unified) with good defaults.
--   Built-in helper utilities. [`hastFromHtml`](/docs/mdx-svelte/unified/helpers#hastfromhtml), [`isHrefExternal`](/docs/mdx-svelte/unified/helpers#ishrefexternal).
--   Allows utilization of the native SvelteKit layouts (`+layout.svelte`).
--   Eliminates annoying "was created with unknown prop" warnings.
+-   Built-in ["unified"](/docs/mdx-svelte/unified) transformer with good defaults.
 -   Offers the flexibility to create custom [transformers](/docs/mdx-svelte/transformers).
+-   Can [auto-import](/docs/mdx-svelte/auto-imports) files and components into Markdown files.
+-   Built-in [`hastFromHtml`](/docs/mdx-svelte/unified/helpers#hastfromhtml) and [`isHrefExternal`](/docs/mdx-svelte/unified/helpers#ishrefexternal) "unified" utilities.
+-   Eliminates annoying "was created with unknown prop" warnings.
+-   Allows utilization of the native SvelteKit layouts (`+layout.svelte`).
+-   Replace HTML elements with components using [tag name](/docs/mdx-svelte/customize-markdown-elements) or [CSS selectors](/docs/mdx-svelte/customize-markdown-elements#advanced).
 -   Enables usage of any code highlighting libraries without encountering issues like the need to escape certain characters to prevent conflicts with Svelte syntax.
--   Find and replace HTML elements with [custom components](/docs/mdx-svelte/customize-markdown-elements#advanced) using CSS selectors. So, you are not limited to just tag names.
--   Can [auto-import](/docs/mdx-svelte/auto-imports) components (and any files) into Markdown files.
 
 ## Limitations
 
