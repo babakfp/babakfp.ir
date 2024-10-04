@@ -257,21 +257,12 @@ export const docsSidebarItems = readable([
                 ],
             },
             {
-                title: "Stuff",
+                title: "Advanced",
                 items: [
                     {
                         title: "Table of Contents",
                         path: "/docs/mdx-svelte/table-of-contents",
                     },
-                    {
-                        title: "Real-world Examples",
-                        path: "/docs/mdx-svelte/real-world-examples",
-                    },
-                ],
-            },
-            {
-                title: "Advanced",
-                items: [
                     {
                         title: "Customize Elements",
                         path: "/docs/mdx-svelte/customize-markdown-elements",
@@ -281,6 +272,10 @@ export const docsSidebarItems = readable([
                         path: "/docs/mdx-svelte/auto-imports",
                     },
                 ],
+            },
+            {
+                title: "Real-world Examples",
+                path: "/docs/mdx-svelte/real-world-examples",
             },
             {
                 title: "CHANGELOG",
