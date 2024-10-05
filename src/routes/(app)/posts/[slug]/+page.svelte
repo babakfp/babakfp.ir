@@ -32,12 +32,10 @@
 </svelte:head>
 
 <main
-    class="container max-w-screen-xl xl:grid xl:grid-cols-[auto_1fr_auto] xl:gap-12"
+    class="container max-w-screen-xl xl:grid xl:grid-cols-[1fr_auto] xl:gap-12 xl:pl-8"
 >
-    <div class="hidden min-w-72 max-w-72 xl:block" />
-
     <article
-        class="mx-auto max-w-prose pb-[--main-pb] pt-[--main-pt] xl:mx-0 xl:min-h-[--svh-no-header]"
+        class="mx-auto max-w-prose pb-[--main-pb] pt-[--main-pt] xl:mx-0 xl:min-h-[--svh-no-header] xl:max-w-none"
     >
         <ul class="flex items-center gap-2 text-sm">
             <li>
