@@ -6,14 +6,10 @@ export const getPosts = async () => {
 
     const posts = entries
         .filter((entry) => entry.slug.split("/").length === 1)
-        .map((entry) => ({
-            ...entry.frontmatter,
-            slug: entry.slug,
-        }))
         .sort(
             (first, second) =>
-                new Date(second.update).getTime() -
-                new Date(first.update).getTime(),
+                new Date(second.frontmatter.update).getTime() -
+                new Date(first.frontmatter.update).getTime(),
         )
 
     return posts

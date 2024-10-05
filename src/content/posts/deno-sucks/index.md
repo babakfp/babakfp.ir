@@ -15,7 +15,7 @@ If you live in a sanctioned country, you need to use a VPN to access the docs, d
 
 This is what you see in their website:
 
-![](/content/blog/fuck-deno/jsx-native-support.png)
+![](/content/posts/fuck-deno/jsx-native-support.png)
 
 It's a _lie_.
 

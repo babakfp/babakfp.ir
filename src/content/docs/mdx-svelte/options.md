@@ -73,22 +73,22 @@ A `getContext` will be preprocessed to all of the markdown files to receive the 
 
 ### Custom layouts
 
-You can use different components for different collections like blog, documentation, etc.
-As an example, let's create a layout named `blog`:
+You can use different components for different collections like posts, documentation, etc.
+As an example, let's create a layout named `posts`:
 
 ```ts
 {
     elements: {
-        blog: ["img", "blockquote"],
+        posts: ["img", "blockquote"],
     },
 }
 ```
 
-Add the following property into the frontmatter of a markdown file of a blog collection:
+Add the following property into the frontmatter of a markdown file of a `posts` collection:
 
 ```yaml
 ---
-layout: blog
+layout: posts
 ---
 ```
 

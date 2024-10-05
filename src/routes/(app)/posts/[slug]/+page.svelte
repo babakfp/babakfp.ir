@@ -23,11 +23,11 @@
 </script>
 
 <svelte:head>
-    {#if data.title}
-        <title>{data.title}</title>
+    {#if data.frontmatter.title}
+        <title>{data.frontmatter.title}</title>
     {/if}
-    {#if data.description}
-        <meta name="description" content={data.description} />
+    {#if data.frontmatter.description}
+        <meta name="description" content={data.frontmatter.description} />
     {/if}
 </svelte:head>
 
@@ -45,25 +45,25 @@
             </li>
             <span class="text-xs text-gray-700">/</span>
             <li>
-                <a class="link" href="/blog">BLOG</a>
+                <a class="link" href="/posts">POSTS</a>
             </li>
         </ul>
 
-        {#if data.update || data.create}
+        {#if data.frontmatter.update || data.frontmatter.create}
             <div
                 class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-400"
             >
-                {#if data.update}
+                {#if data.frontmatter.update}
                     <span>
-                        Updated: <b title={data.update}>
-                            {timeSince(new Date(data.update))}
+                        Updated: <b title={data.frontmatter.update}>
+                            {timeSince(new Date(data.frontmatter.update))}
                         </b>
                     </span>
                 {/if}
-                {#if data.create}
+                {#if data.frontmatter.create}
                     <span>
-                        Created: <b title={data.create}>
-                            {timeSince(new Date(data.create))}
+                        Created: <b title={data.frontmatter.create}>
+                            {timeSince(new Date(data.frontmatter.create))}
                         </b>
                     </span>
                 {/if}
@@ -71,13 +71,13 @@
         {/if}
 
         <div class="article-content">
-            {#if data.title}
+            {#if data.frontmatter.title}
                 <h1 class="mt-[--md-title-mt]">
-                    {data.title}
+                    {data.frontmatter.title}
                 </h1>
             {/if}
 
-            <svelte:component this={data.content} />
+            <svelte:component this={data.default} />
         </div>
     </article>
 

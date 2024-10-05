@@ -1,37 +1,18 @@
 import type { Data } from "mdx-svelte"
-import type { SvelteComponent } from "svelte"
+import type { ComponentType } from "svelte"
 
-export type ImportMetaGlob = Record<string, () => Promise<unknown>>
-
-export type ImportMetaGlobValueResult = {
-    default: typeof SvelteComponent
+type ImportGlobMarkdown = {
+    default: ComponentType
     mdx: Data
+    frontmatter?: Data["frontmatter"]
 }
 
-export type MarkdownEntry = {
-    glob: {
-        path: keyof ImportMetaGlob
-        value: ImportMetaGlob[keyof ImportMetaGlob]
-    }
-    collection: {
-        name: string
-    }
-    file: {
-        name: string
-    }
-    slug: string
-}
+export type ImportGlobMarkdownMap = Record<string, ImportGlobMarkdown>
 
-export type CollectionEntry = {
-    collection: {
-        name: string
-    }
-    file: {
-        name: string
-        path: string
-    }
+export type CollectionEntry = ImportGlobMarkdown & {
+    path: string
+    file: string
+    collection: string
     slug: string
-    content: ImportMetaGlobValueResult["default"]
-    mdx: ImportMetaGlobValueResult["mdx"]
-    frontmatter?: ImportMetaGlobValueResult["mdx"]["frontmatter"]
+    href: string
 }

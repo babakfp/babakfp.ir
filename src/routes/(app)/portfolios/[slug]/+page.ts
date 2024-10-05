@@ -10,6 +10,6 @@ export const load = async ({ params }) => {
 
     return {
         slug: params.slug,
-        content: portfolio.content,
+        default: portfolio.default,
     }
 }

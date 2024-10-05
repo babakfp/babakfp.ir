@@ -13,9 +13,5 @@ export const load = async ({ params }) => {
         error(404)
     }
 
-    return {
-        ...doc.frontmatter,
-        slug: params.slug,
-        content: doc.content,
-    }
+    return { ...doc }
 }

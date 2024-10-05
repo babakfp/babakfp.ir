@@ -51,7 +51,7 @@
         </div>
     {/if}
 
-    <svelte:component this={data.content} />
+    <svelte:component this={data.default} />
 
     {#if portfolioData.gallery}
         <h2>Gallery</h2>

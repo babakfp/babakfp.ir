@@ -1,39 +1,38 @@
 import { error } from "@sveltejs/kit"
 import { z } from "zod"
-import type {
-    CollectionEntry,
-    ImportMetaGlob,
-    ImportMetaGlobValueResult,
-    MarkdownEntry,
-} from "./types"
+import type { CollectionEntry, ImportGlobMarkdownMap } from "./types"
 import {
     validateCollectionEntryName,
     validateCollectionName,
 } from "./validations"
 
 /**
- * Contains all markdown files located at `src/content`.
- * Ignores files and folders containing (`_`) in their name to avoid conflict between pages and components.
+ * All markdown content pages.
  *
- * Learn more about [Glob Import](https://vitejs.dev/guide/features.html#glob-import).
+ * Paths that contain (`_`) in their name are ignored to avoid conflict between pages and components.
+ *
+ * [Glob Import](https://vitejs.dev/guide/features.html#glob-import).
  */
-const markdownFiles = import.meta.glob([
-    "/src/content/*/**/*.md",
-    "!/src/content/*/**/_*/*.md",
-    "!/src/content/*/**/_*.md",
-]) satisfies ImportMetaGlob
+const pages = import.meta.glob(
+    [
+        "/src/content/*/**/*.md",
+        "!/src/content/*/**/_*/*.md",
+        "!/src/content/*/**/_*.md",
+    ],
+    { eager: true },
+) satisfies ImportGlobMarkdownMap
 
-const markdownFilesToEntries = async () => {
-    const markdownEntries: MarkdownEntry[] = []
+const markdownFilesToEntries = () => {
+    const markdownEntries: CollectionEntry[] = []
 
-    for (const [path, value] of Object.entries(markdownFiles)) {
+    for (const [path, value] of Object.entries(pages)) {
         const segments = path.replace("/src/content/", "").split("/")
 
-        const collectionName = segments[0]
-        validateCollectionName(collectionName)
+        const collection = segments[0]
+        validateCollectionName(collection)
 
-        const fileName = segments[segments.length - 1]
-        validateCollectionEntryName(fileName.replace(".md", ""))
+        const file = segments[segments.length - 1]
+        validateCollectionEntryName(file.replace(".md", ""))
 
         const slugSegments = segments.slice(1, -1)
         slugSegments.forEach((slugSegment) =>
@@ -47,10 +46,12 @@ const markdownFilesToEntries = async () => {
             .replace("/index", "")
 
         markdownEntries.push({
-            glob: { path, value },
-            collection: { name: collectionName },
-            file: { name: fileName },
+            path,
+            ...value,
+            collection: collection,
+            file,
             slug,
+            href: `/${collection}/${slug}`,
         })
     }
 
@@ -61,7 +62,7 @@ const markdownFilesToEntries = async () => {
         if (sameSlugEntries.length > 1) {
             throw new Error(
                 `Conflicting routes found:
-                ${sameSlugEntries.map((e) => e.glob.path).join("\n")}
+                ${sameSlugEntries.map((e) => e.path).join("\n")}
                 Both entries resolve at the same route. One must be removed.`,
             )
         }
@@ -73,17 +74,14 @@ const markdownFilesToEntries = async () => {
 /**
  * @returns The resolved value of an entry with frontmatter.
  */
-const getGlobEntryValue = async <T extends z.ZodRawShape>(
-    entry: MarkdownEntry,
+const getGlobEntryValue = <T extends z.ZodRawShape>(
+    entry: CollectionEntry,
     schema?: z.ZodObject<T>,
 ) => {
-    const globValueResult =
-        (await entry.glob.value()) as ImportMetaGlobValueResult
-
     const validateFrontmatter = () => {
         if (schema) {
             const frontmatterParseResult = schema.safeParse(
-                globValueResult.mdx.frontmatter,
+                entry.mdx.frontmatter,
             )
 
             if (!frontmatterParseResult.success) {
@@ -98,19 +96,18 @@ const getGlobEntryValue = async <T extends z.ZodRawShape>(
 
     const frontmatter = {
         ...(validateFrontmatter() as z.infer<z.ZodObject<T>>),
-        ...globValueResult.mdx.frontmatter,
+        ...entry.mdx.frontmatter,
     }
 
     return {
         collection: entry.collection,
-        file: {
-            ...entry.file,
-            path: entry.glob.path,
-        },
+        path: entry.path,
+        file: entry.file,
         slug: entry.slug,
-        content: globValueResult.default,
-        mdx: globValueResult.mdx,
+        default: entry.default,
+        mdx: entry.mdx,
         frontmatter,
+        href: entry.href,
     } satisfies CollectionEntry
 }
 
@@ -118,20 +115,18 @@ const getGlobEntryValue = async <T extends z.ZodRawShape>(
  * Gets all markdown entries of the specific collection.
  * @param name - The name of the collection.
  */
-export const getCollectionEntries = async <T extends z.ZodRawShape>(
+export const getCollectionEntries = <T extends z.ZodRawShape>(
     name: string,
     schema?: z.ZodObject<T>,
 ) => {
-    const markdownEntries = await markdownFilesToEntries()
+    const markdownEntries = markdownFilesToEntries()
 
     const collectionEntries = markdownEntries.filter(
-        (page) => page.collection.name === name,
+        (page) => page.collection === name,
     )
 
-    const result = await Promise.all(
-        collectionEntries.map(
-            async (entry) => await getGlobEntryValue<T>(entry, schema),
-        ),
+    const result = collectionEntries.map((entry) =>
+        getGlobEntryValue<T>(entry, schema),
     )
 
     return result
@@ -142,20 +137,20 @@ export const getCollectionEntries = async <T extends z.ZodRawShape>(
  * @param name - The name of the collection.
  * @param slug - The name of the markdown file without the suffix (`.md`).
  */
-export const getCollectionEntry = async <T extends z.ZodRawShape>(
+export const getCollectionEntry = <T extends z.ZodRawShape>(
     name: string,
     slug: string,
     schema?: z.ZodObject<T>,
 ) => {
-    const entries = await markdownFilesToEntries()
+    const entries = markdownFilesToEntries()
     const collectionEntries = entries.filter(
-        (entry) => entry.collection.name === name,
+        (entry) => entry.collection === name,
     )
     const entry = collectionEntries.filter(
-        (entry) => entry.collection.name === name && entry.slug === slug,
+        (entry) => entry.collection === name && entry.slug === slug,
     )[0]
 
     if (entry) {
-        return await getGlobEntryValue<T>(entry, schema)
+        return getGlobEntryValue<T>(entry, schema)
     }
 }

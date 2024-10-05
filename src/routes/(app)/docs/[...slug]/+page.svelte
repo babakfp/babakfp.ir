@@ -25,11 +25,11 @@
 </script>
 
 <svelte:head>
-    {#if data.title}
-        <title>{data.title}</title>
+    {#if data.frontmatter.title}
+        <title>{data.frontmatter.title}</title>
     {/if}
-    {#if data?.description}
-        <meta name="description" content={data.description} />
+    {#if data.frontmatter.description}
+        <meta name="description" content={data.frontmatter.description} />
     {/if}
 </svelte:head>
 
@@ -44,11 +44,11 @@
     <article
         class="article-content mx-auto max-w-prose pb-[--main-pb] pt-[--main-pt] xl:mx-0 xl:min-h-[--svh-no-header]"
     >
-        {#if data.title}
-            <h1>{data.title}</h1>
+        {#if data.frontmatter.title}
+            <h1>{data.frontmatter.title}</h1>
         {/if}
 
-        <svelte:component this={data.content} />
+        <svelte:component this={data.default} />
     </article>
 
     <DesktopToc

@@ -16,10 +16,5 @@ export const load = async ({ params }) => {
 
     const posts = await getPosts()
 
-    return {
-        ...post.frontmatter,
-        slug: params.slug,
-        content: post.content,
-        posts,
-    }
+    return { ...post, posts }
 }

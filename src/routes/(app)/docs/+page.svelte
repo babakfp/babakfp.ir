@@ -14,8 +14,8 @@
     {#each data.docs as doc}
         <li>
             <SimpleTextCard
-                title={doc.title}
-                description={doc.description}
+                title={doc.frontmatter.title}
+                description={doc.frontmatter.description}
                 href="/docs/{doc.slug}"
             />
         </li>
