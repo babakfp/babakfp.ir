@@ -66,9 +66,7 @@ const getGlobEntryValue = <T extends z.ZodRawShape>(
 ) => {
     const validateFrontmatter = () => {
         if (schema) {
-            const frontmatterParseResult = schema.safeParse(
-                entry.mdx.frontmatter,
-            )
+            const frontmatterParseResult = schema.safeParse(entry.frontmatter)
 
             if (!frontmatterParseResult.success) {
                 return error(400, frontmatterParseResult.error.message)
@@ -82,7 +80,7 @@ const getGlobEntryValue = <T extends z.ZodRawShape>(
 
     const frontmatter = {
         ...(validateFrontmatter() as z.infer<z.ZodObject<T>>),
-        ...entry.mdx.frontmatter,
+        ...entry.frontmatter,
     }
 
     return {
