@@ -279,7 +279,7 @@ export const docsSidebarItems = readable([
             },
             {
                 title: "CHANGELOG",
-                path: "/docs/mdx-svelte/changelog",
+                path: "https://github.com/babakfp/mdx-svelte/blob/main/CHANGELOG.md",
             },
         ],
     },
