@@ -1,7 +1,7 @@
 import { error } from "@sveltejs/kit"
 import { z } from "zod"
 
-const collectionNameSchema = z
+const collectionSchema = z
     .string()
     .min(1)
     .regex(
@@ -9,13 +9,7 @@ const collectionNameSchema = z
         "The collection name can only contain lowercase letters.",
     )
 
-export const validateCollectionName = (name: string) => {
-    validateAnEntryName(collectionNameSchema, name)
-}
-
-// ---
-
-const collectionEntryNameSchema = z
+const slugSegmentSchema = z
     .string()
     .min(1)
     .regex(
@@ -23,16 +17,14 @@ const collectionEntryNameSchema = z
         "The collection entry name can only contain letters, numbers, and a single hyphen in between them.",
     )
 
-export const validateCollectionEntryName = (name: string) => {
-    validateAnEntryName(collectionEntryNameSchema, name)
+export const validateCollection = (name: string) => {
+    const result = collectionSchema.safeParse(name)
+    if (result.success) return
+    return error(400, result.error.message)
 }
 
-// ---
-
-const validateAnEntryName = (schema: z.ZodString, name: string) => {
-    const result = schema.safeParse(name)
-
-    if (!result.success) {
-        return error(400, result.error?.message)
-    }
+export const validateSlugSegment = (name: string) => {
+    const result = slugSegmentSchema.safeParse(name)
+    if (result.success) return
+    return error(400, result.error.message)
 }

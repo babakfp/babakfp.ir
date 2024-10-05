@@ -8,7 +8,6 @@ title: Flip
 	import { flip } from "tailwindcss-addons"
     import Preview from "$lib/components/Preview.svelte"
 	const utilities = getUtilities(flip.handler);
-    console.log(utilities)
 </script>
 
 <UtilsTable {utilities} />

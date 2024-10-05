@@ -1,10 +1,7 @@
 import { error } from "@sveltejs/kit"
 import { z } from "zod"
 import type { CollectionEntry, ImportGlobMarkdownMap } from "./types"
-import {
-    validateCollectionEntryName,
-    validateCollectionName,
-} from "./validations"
+import { validateCollection, validateSlugSegment } from "./validations"
 
 /**
  * All markdown content pages.
@@ -23,21 +20,19 @@ const pages = import.meta.glob(
 ) satisfies ImportGlobMarkdownMap
 
 const markdownFilesToEntries = () => {
-    const markdownEntries: CollectionEntry[] = []
+    const entries: CollectionEntry[] = []
 
     for (const [path, value] of Object.entries(pages)) {
         const segments = path.replace("/src/content/", "").split("/")
 
         const collection = segments[0]
-        validateCollectionName(collection)
+        validateCollection(collection)
 
         const file = segments[segments.length - 1]
-        validateCollectionEntryName(file.replace(".md", ""))
+        validateSlugSegment(file.replace(".md", ""))
 
         const slugSegments = segments.slice(1, -1)
-        slugSegments.forEach((slugSegment) =>
-            validateCollectionEntryName(slugSegment),
-        )
+        slugSegments.forEach((slugSegment) => validateSlugSegment(slugSegment))
 
         const slug = segments
             .slice(1)
@@ -45,30 +40,21 @@ const markdownFilesToEntries = () => {
             .replace(".md", "")
             .replace("/index", "")
 
-        markdownEntries.push({
-            path,
-            ...value,
-            collection: collection,
-            file,
-            slug,
-            href: `/${collection}/${slug}`,
-        })
+        const href = `/${collection}/${slug}`
+
+        entries.push({ path, ...value, collection, file, slug, href })
     }
 
-    markdownEntries.forEach((entry) => {
-        const sameSlugEntries = markdownEntries.filter(
-            (e) => e.slug === entry.slug,
-        )
+    entries.forEach((entry) => {
+        const sameSlugEntries = entries.filter((e) => e.slug === entry.slug)
         if (sameSlugEntries.length > 1) {
             throw new Error(
-                `Conflicting routes found:
-                ${sameSlugEntries.map((e) => e.path).join("\n")}
-                Both entries resolve at the same route. One must be removed.`,
+                `Conflicting routes found:\n${sameSlugEntries.map((e) => `    .${e.path}`).join("\n")}\nOne must be removed.`,
             )
         }
     })
 
-    return markdownEntries
+    return entries
 }
 
 /**
@@ -119,11 +105,9 @@ export const getCollectionEntries = <T extends z.ZodRawShape>(
     name: string,
     schema?: z.ZodObject<T>,
 ) => {
-    const markdownEntries = markdownFilesToEntries()
+    const entries = markdownFilesToEntries()
 
-    const collectionEntries = markdownEntries.filter(
-        (page) => page.collection === name,
-    )
+    const collectionEntries = entries.filter((page) => page.collection === name)
 
     const result = collectionEntries.map((entry) =>
         getGlobEntryValue<T>(entry, schema),
