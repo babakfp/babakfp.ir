@@ -3,7 +3,7 @@ title: Svelte OutClick
 description: A Svelte component that allows you to listen to the clicks that happen outside of an element.
 ---
 
-`on:outclick`
+`onOutClick`
 
 A Svelte component that allows you to listen to the clicks that happen outside of an element.
 
@@ -30,12 +30,12 @@ It works the same as the Javascript click event. A few events are attached to th
 <!-- prettier-ignore -->
 ```svelte
 <script>
-	import OutClick from 'svelte-outclick'
+	import { OutClick } from "svelte-outclick"
 	let count = 0
 </script>
 
 <OutClick
-	on:outclick={() => count++}
+	onOutClick={() => count += 1}
 >
 	{count} times clicked outside
 </OutClick>
@@ -55,14 +55,14 @@ This prop expects HTML elements. Clicks on those elements (and their children) w
 
 <!-- prettier-ignore -->
 ```svelte
-<script>
-	import OutClick from 'svelte-outclick'
+<script lang="ts">
+	import { OutClick } from "svelte-outclick"
+	let excludedElement: HTMLDivElement
 	let count = 0
-	let excludedElement
 </script>
 
 <OutClick
-	on:outclick={() => count++}
+	onOutClick={() => count += 1}
 	excludeElements={excludedElement}
 >
 	{count} times clicked outside
@@ -84,12 +84,12 @@ This prop expects a string of css selectors. Clicks on those elements (and their
 <!-- prettier-ignore -->
 ```svelte
 <script>
-	import OutClick from 'svelte-outclick'
+	import { OutClick } from "svelte-outclick"
 	let count = 0
 </script>
 
 <OutClick
-	on:outclick={() => count++}
+	onOutClick={() => count += 1}
 	excludeQuerySelectorAll=".excluded-element"
 >
 	{count} times clicked outside
@@ -111,14 +111,14 @@ This is equivalent to the CSS class attribute. You can seamlessly utilize tools 
 <!-- prettier-ignore -->
 ```svelte
 <script>
-	import OutClick from 'svelte-outclick'
+	import { OutClick } from "svelte-outclick"
 	let count = 0
 </script>
 
 <div>
 	<OutClick
 		class="my-custom-class another-class"
-		on:outclick={() => count++}
+		onOutClick={() => count += 1}
 	>
 		{count} times clicked outside
 	</OutClick>

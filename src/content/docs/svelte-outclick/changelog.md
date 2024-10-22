@@ -4,6 +4,48 @@ title: CHANGELOG
 
 Restart your app after updating the package.
 
+## 4.0.0
+
+> [!IMPORTANT]
+> There are breaking changes in this version.
+
+-   [breaking] Use `e.target` instead of `e.detail.target`.
+-   [breaking] `OutClickEvent` now returns `pointerdown` or `pointerup` or `keydown`, depending on how the outclick event is fired.
+-   [breaking] Also, take a look at the migration guide below.
+-   Exports `OutClickEvent` type.
+
+### Migration guide
+
+Before:
+
+```svelte
+<script>
+    import OutClick from "svelte-outclick"
+</script>
+```
+
+After:
+
+```svelte
+<script>
+    import { OutClick } from "svelte-outclick"
+</script>
+```
+
+---
+
+Before:
+
+```svelte
+<OutClick on:outclick={() => {}}></OutClick>
+```
+
+After:
+
+```svelte
+<OutClick onOutClick={() => {}}></OutClick>
+```
+
 ## 3.7.1
 
 -   [feature] Added `e.detail.target` property.
