@@ -1,12 +1,21 @@
 <script lang="ts">
+    import type { Snippet } from "svelte"
     import Card from "./Card.svelte"
     import CardDescription from "./CardDescription.svelte"
     import CardFooter from "./CardFooter.svelte"
     import CardTitle from "./CardTitle.svelte"
 
-    export let title: string
-    export let description: string | undefined
-    export let href: string
+    let {
+        title,
+        description,
+        href,
+        children,
+    }: {
+        title: string
+        description: string | undefined
+        href: string
+        children?: Snippet
+    } = $props()
 </script>
 
 <Card {href} isExternal={false}>
@@ -18,9 +27,9 @@
         <CardDescription class="mt-1.5">{description}</CardDescription>
     {/if}
 
-    {#if $$slots.default}
+    {#if children}
         <CardFooter>
-            <slot />
+            {@render children()}
         </CardFooter>
     {/if}
 </Card>

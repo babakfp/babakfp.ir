@@ -1,5 +1,12 @@
 <script lang="ts">
+    import type { Snippet } from "svelte"
     import IconQuoteLeft from "$lib/icons/IconQuoteLeft.svelte"
+
+    let {
+        children,
+    }: {
+        children: Snippet
+    } = $props()
 </script>
 
 <blockquote>
@@ -8,6 +15,6 @@
     </div>
 
     <div class="mt-2">
-        <slot />
+        {@render children()}
     </div>
 </blockquote>

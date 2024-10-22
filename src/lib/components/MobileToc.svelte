@@ -5,9 +5,15 @@
     import IconX from "$lib/icons/IconX.svelte"
     import type { Headings } from "$lib/utilities/getHeadings"
 
-    export let isOpen = false
-    export let headings: Headings = []
-    export let excluderQuery: string
+    let {
+        isOpen = $bindable(),
+        headings = [],
+        excluderQuery,
+    }: {
+        isOpen?: boolean
+        headings?: Headings
+        excluderQuery: string
+    } = $props()
 </script>
 
 <DrawerDown class="xl:hidden" bind:isOpen {excluderQuery}>
@@ -17,7 +23,7 @@
                 <a
                     class="flex items-center gap-2 py-2 pr-4 outline-inset group-first:pt-6 group-last:pb-6"
                     href="#{heading.id}"
-                    on:click={() => (isOpen = false)}
+                    onclick={() => (isOpen = false)}
                     style="padding-left: calc(1rem * {heading.level - 1});"
                 >
                     {#if heading.level > 2}
@@ -34,7 +40,7 @@
 
     <button
         class="btn fixed bottom-16 right-4"
-        on:click={() => (isOpen = false)}
+        onclick={() => (isOpen = false)}
     >
         <IconX class="text-xl" />
     </button>

@@ -1,8 +1,15 @@
 <script lang="ts">
-    export let className = ""
-    export { className as class }
+    import type { Snippet } from "svelte"
+
+    let {
+        class: class_,
+        children,
+    }: {
+        class?: string
+        children: Snippet
+    } = $props()
 </script>
 
-<h3 class="{className} text-lg font-bold text-gray-50">
-    <slot />
+<h3 class="{class_} text-lg font-bold text-gray-50">
+    {@render children()}
 </h3>

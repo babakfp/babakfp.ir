@@ -1,6 +1,14 @@
 <script lang="ts">
-    export let selectorAndStyles: object
-    export let indent = 16
+    import UtilsTableProperties from "./UtilsTableProperties.svelte"
+
+    let {
+        selectorAndStyles,
+        indent = $bindable(16),
+    }: {
+        // TODO: Bad type.
+        selectorAndStyles: object
+        indent?: number
+    } = $props()
 </script>
 
 <div class="leading-6">
@@ -41,7 +49,7 @@
             {/each}
             <span style="color: #908CAA">{"{"}</span>
             <div style="text-indent: {indent}px">
-                <svelte:self
+                <UtilsTableProperties
                     selectorAndStyles={valueOrObjectOfPropertyAndValue}
                     indent={(indent += 16)}
                 />

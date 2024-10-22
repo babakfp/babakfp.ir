@@ -1,7 +1,7 @@
 <script lang="ts">
     import SimpleTextCard from "$lib/components/cards/SimpleTextCard.svelte"
 
-    export let data
+    let { data } = $props()
 </script>
 
 <svelte:head>

@@ -106,6 +106,40 @@ All importable styles:
 > [!NOTE]
 > Please refer to the jsDoc comments to learn more.
 
+### Usage
+
+> [!NOTE]
+> Highlights information that users should take into account, even when skimming.
+
+> [!TIP]
+> Optional information to help a user be more successful.
+
+> [!IMPORTANT]
+> Crucial information necessary for users to succeed.
+
+> [!WARNING]
+> Critical content demanding immediate user attention due to potential risks.
+
+> [!CAUTION]
+> Negative potential consequences of an action.
+
+```md
+> [!NOTE]
+> Highlights information that users should take into account, even when skimming.
+
+> [!TIP]
+> Optional information to help a user be more successful.
+
+> [!IMPORTANT]
+> Crucial information necessary for users to succeed.
+
+> [!WARNING]
+> Critical content demanding immediate user attention due to potential risks.
+
+> [!CAUTION]
+> Negative potential consequences of an action.
+```
+
 ## "remark-unwrap-images"
 
 ["remark-unwrap-images"](https://npmjs.com/package/remark-unwrap-images).
@@ -155,6 +189,10 @@ My, Class!
 :::info{#my-id}
 My, ID!
 :::
+
+:::details
+Hello, World!
+:::
 ```
 
 Output:
@@ -179,6 +217,11 @@ Output:
     <p>Info</p>
     <p>My, ID!</p>
 </div>
+
+<details class="remark-directive remark-directive-details">
+    <summary>Details</summary>
+    <p>Hello, World!</p>
+</details>
 ```
 
 ## "rehype-slug"

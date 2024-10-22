@@ -1,5 +1,13 @@
 <script lang="ts">
-    export let title: string
+    import type { Snippet } from "svelte"
+
+    let {
+        title,
+        children,
+    }: {
+        title: string
+        children: Snippet
+    } = $props()
 </script>
 
 <section class="mx-auto mt-14 w-full max-w-prose">
@@ -8,6 +16,6 @@
     </h2>
 
     <ul class="mt-4 grid gap-4">
-        <slot />
+        {@render children()}
     </ul>
 </section>

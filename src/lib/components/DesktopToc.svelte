@@ -1,10 +1,19 @@
 <script lang="ts">
+    import type { Snippet } from "svelte"
     import IconChevronRight from "$lib/icons/IconChevronRight.svelte"
     import type { Headings } from "$lib/utilities/getHeadings"
 
-    export let headings: Headings = []
-    export let class_ = ""
-    export { class_ as class }
+    let {
+        headings = [],
+        class: class_,
+        children,
+        onclick,
+    }: {
+        headings?: Headings
+        class?: string
+        children?: Snippet
+        onclick?: (e: MouseEvent) => void
+    } = $props()
 </script>
 
 <nav
@@ -16,7 +25,7 @@
                 <a
                     class="flex items-center gap-2 py-2 pr-4 text-gray-400 duration-100 outline-inset hover:text-gray-50"
                     href="#{heading.id}"
-                    on:click
+                    {onclick}
                     style="padding-left: calc(1rem * {heading.level === 2
                         ? 2
                         : heading.level});"
@@ -33,5 +42,5 @@
         {/each}
     </ul>
 
-    <slot />
+    {@render children?.()}
 </nav>

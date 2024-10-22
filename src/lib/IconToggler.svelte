@@ -1,15 +1,22 @@
 <script lang="ts">
-    export let isTrue = false
-    export let className = ""
-    export { className as class }
+    import type { Snippet } from "svelte"
+
+    type Props = {
+        isTrue?: boolean
+        class?: string
+        first: Snippet
+        second: Snippet
+    }
+
+    let { isTrue = false, class: class_, first, second }: Props = $props()
 </script>
 
-<div class="{className} flex">
+<div class="{class_} flex">
     <div class="flex duration-100 {isTrue && 'scale-0'}">
-        <slot name="first" />
+        {@render first()}
     </div>
 
     <div class="absolute flex scale-0 duration-100 {isTrue && 'scale-100'}">
-        <slot name="second" />
+        {@render second()}
     </div>
 </div>

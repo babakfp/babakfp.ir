@@ -1,6 +1,6 @@
 <script lang="ts">
-    let windowScrollY: number
-    let windowHeight: number
+    let windowScrollY = $state(0)
+    let windowHeight = $state(0)
 </script>
 
 <svelte:window bind:scrollY={windowScrollY} bind:innerHeight={windowHeight} />

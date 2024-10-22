@@ -16,7 +16,7 @@
                             href={link.url}
                             isExternal={true}
                         >
-                            <svelte:component this={link.icon} />
+                            <link.icon />
                         </PrimMenuItem>
                     </li>
                 {/each}

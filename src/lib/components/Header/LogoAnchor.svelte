@@ -1,7 +1,14 @@
 <script lang="ts">
+    import type { Snippet } from "svelte"
     import { page } from "$app/stores"
 
-    $: isHome = $page.url.pathname === "/"
+    let {
+        children,
+    }: {
+        children: Snippet
+    } = $props()
+
+    const isHome = $derived($page.url.pathname === "/")
 </script>
 
 <svelte:element
@@ -10,6 +17,6 @@
     href={!isHome ? "/" : undefined}
     aria-label={!isHome ? "Go to home page" : undefined}
 >
-    <slot />
+    {@render children()}
     <span class="font-bold">BABAKFP</span>
 </svelte:element>

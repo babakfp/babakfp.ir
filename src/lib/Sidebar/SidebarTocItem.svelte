@@ -1,16 +1,27 @@
 <script lang="ts">
+    import type { Snippet } from "svelte"
     import IconChevronRight from "$lib/icons/IconChevronRight.svelte"
 
-    export let href: string
-    export let isActive = false
-    export let depthLvl: number
+    let {
+        href,
+        isActive = false,
+        depthLvl,
+        children,
+        onclick,
+    }: {
+        href: string
+        isActive?: boolean
+        depthLvl: number
+        children: Snippet
+        onclick: (e: MouseEvent) => void
+    } = $props()
 </script>
 
 <a
     class="SidebarMenuItem group block px-4 outline-inset xl:pr-0
 	{isActive && 'pointer-events-none'}"
     {href}
-    on:click
+    {onclick}
 >
     <div
         class="flex items-center gap-2 py-1 text-gray-400 duration-100 group-hover:text-gray-50
@@ -22,7 +33,7 @@
         {/if}
 
         <div class="line-clamp-1">
-            <slot />
+            {@render children()}
         </div>
     </div>
 </a>

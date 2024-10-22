@@ -8,7 +8,7 @@
     import frontendPortfolios from "$lib/portfolios/frontend.json"
     import TechnologyBox from "./TechnologyBox.svelte"
 
-    export let data
+    let { data } = $props()
 
     const portfolioData = frontendPortfolios.filter(
         (portfolio) => portfolio.slug === data.slug,
@@ -44,14 +44,14 @@
                 )}
                 {#if tech?.component}
                     <TechnologyBox title={technology}>
-                        <svelte:component this={tech.component} />
+                        <tech.component />
                     </TechnologyBox>
                 {/if}
             {/each}
         </div>
     {/if}
 
-    <svelte:component this={data.default} />
+    <data.default />
 
     {#if portfolioData.gallery}
         <h2>Gallery</h2>

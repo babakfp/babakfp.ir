@@ -1,7 +1,13 @@
 <script lang="ts">
     import UtilsTableProperties from "$lib/UtilsTableProperties.svelte"
 
-    export let utilities: object
+    let {
+        utilities,
+    }: {
+        // TODO: Bad type.
+        utilities: object
+    } = $props()
+
     const theadItems = ["Class", "Properties"]
 </script>
 

@@ -6,12 +6,21 @@
     import TailwindCss from "$lib/components/technology-logos/TailwindCss.svelte"
     import TypeScript from "$lib/components/technology-logos/TypeScript.svelte"
 
-    export let slug: string
-    export let title: string
-    export let description: string
-    export let poster: string
-    export let technologies: string[]
-    export let isSingleRow = false
+    let {
+        slug,
+        title,
+        description,
+        poster,
+        technologies,
+        isSingleRow,
+    }: {
+        slug: string
+        title: string
+        description: string
+        poster: string
+        technologies: string[]
+        isSingleRow?: boolean
+    } = $props()
 </script>
 
 <li class={isSingleRow ? "lg:col-span-full" : ""}>
@@ -31,11 +40,11 @@
                 />
                 <div
                     class="absolute inset-0 aspect-[16/9] h-full w-full -translate-y-8 scale-90 rounded-[2px] border-2 border-dashed border-gray-50/20 duration-1000 ease-in-out hide group-hover:translate-y-0 group-hover:rotate-1 group-hover:scale-[.85] group-hover:show"
-                />
+                ></div>
             </div>
             <div
                 class="absolute inset-0 -z-1 aspect-[16/9] h-full w-full rounded-[2px] bg-gray-50/10 duration-700 ease-in-out hide group-hover:-translate-y-4 group-hover:show"
-            />
+            ></div>
         </div>
         <div
             class="mt-4 grid content-center gap-2 {isSingleRow &&

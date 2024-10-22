@@ -1,7 +1,17 @@
 <script lang="ts">
-    export let href: string
-    export let isActive = false
-    export let isToc = false
+    import type { Snippet } from "svelte"
+
+    let {
+        href,
+        isActive,
+        isToc,
+        children,
+    }: {
+        href: string
+        isActive?: boolean
+        isToc?: boolean
+        children: Snippet
+    } = $props()
 </script>
 
 <a
@@ -14,6 +24,6 @@
 		{isActive && '!border-gray-50 text-gray-50'}
 		{isToc && 'border-none xl:border-solid'}"
     >
-        <slot />
+        {@render children()}
     </div>
 </a>

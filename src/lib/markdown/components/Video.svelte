@@ -1,6 +1,11 @@
 <script lang="ts">
-    export let src: string
-    export let captions: string
+    let {
+        src,
+        captions,
+    }: {
+        src: string
+        captions: string
+    } = $props()
 </script>
 
 <video controls>

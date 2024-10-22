@@ -1,9 +1,16 @@
 <script lang="ts">
+    import type { Snippet } from "svelte"
     import { twMerge } from "tailwind-merge"
 
-    export let class_ = ""
-    export { class_ as class }
-    export let useGrid = true
+    let {
+        class: class_,
+        useGrid = true,
+        children,
+    }: {
+        class?: string
+        useGrid?: boolean
+        children: Snippet
+    } = $props()
 </script>
 
 <div
@@ -12,5 +19,5 @@
         class_,
     )}
 >
-    <slot />
+    {@render children()}
 </div>

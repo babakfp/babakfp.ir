@@ -1,5 +1,5 @@
 <script lang="ts">
-    import OutClick from "svelte-outclick"
+    import { OutClick } from "svelte-outclick"
     import { beforeNavigate } from "$app/navigation"
     import { focusTrap } from "$lib/focusTrap"
     import PrimMenuItem from "$lib/PrimMenuItem.svelte"
@@ -9,10 +9,10 @@
 </script>
 
 <svelte:window
-    on:scroll={() => {
+    onscroll={() => {
         $isMainMenuOpen = false
     }}
-    on:keydown={(e) => {
+    onkeydown={(e) => {
         if ($isMainMenuOpen && e.key === "Escape") {
             $isMainMenuOpen = false
         }
@@ -30,15 +30,15 @@
     <div
         id="main-menu-backdrop"
         class="absolute inset-0 bg-gray-950/95"
-        on:click={() => ($isMainMenuOpen = false)}
-    />
+        onclick={() => ($isMainMenuOpen = false)}
+    ></div>
 
     <OutClick
         id="main-menu-mobile"
         tag="div"
         class="relative border-b border-gray-800 bg-gray-900 py-4"
         excludeQuerySelectorAll="#main-menu-toggle, #main-menu-backdrop"
-        on:outclick={() => ($isMainMenuOpen = false)}
+        onOutClick={() => ($isMainMenuOpen = false)}
     >
         <ul use:focusTrap>
             {#each $mainMenuItems as item}
@@ -48,7 +48,7 @@
                         title={item.title}
                         href={item.href}
                     >
-                        <svelte:component this={item.icon} />
+                        <item.icon />
                     </PrimMenuItem>
                 </li>
             {/each}

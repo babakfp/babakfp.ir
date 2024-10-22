@@ -1,23 +1,24 @@
 <script lang="ts">
-    import { onMount } from "svelte"
-    import { browser } from "$app/environment"
     import { page } from "$app/stores"
     import Sidebar from "$lib/Sidebar/Sidebar.svelte"
     import SidebarTocItem from "$lib/Sidebar/SidebarTocItem.svelte"
     import { getHeadings, type Headings } from "$lib/utilities/getHeadings"
 
-    export let isOpen: boolean
-    export let name: string
+    let {
+        isOpen = $bindable(),
+        name,
+    }: {
+        isOpen: boolean
+        name: string
+    } = $props()
 
-    let headings: Headings = []
+    let headings: Headings = $state([])
 
-    onMount(() => {
-        headings = getHeadings()
+    $effect(() => {
+        if ($page.url.pathname) {
+            headings = getHeadings()
+        }
     })
-
-    $: if (browser && $page.url.pathname) {
-        headings = getHeadings()
-    }
 </script>
 
 {#if headings.length}
@@ -36,7 +37,7 @@
                     <SidebarTocItem
                         href="#{heading.id}"
                         depthLvl={heading.level}
-                        on:click={() => (isOpen = false)}
+                        onclick={() => (isOpen = false)}
                     >
                         {heading.textContent}
                     </SidebarTocItem>

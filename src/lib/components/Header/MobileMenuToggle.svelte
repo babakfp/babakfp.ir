@@ -8,17 +8,17 @@
 <button
     id="main-menu-toggle"
     class="header-btn xl:!hidden"
-    on:click={() => ($isMainMenuOpen = !$isMainMenuOpen)}
+    onclick={() => ($isMainMenuOpen = !$isMainMenuOpen)}
     aria-label="{$isMainMenuOpen ? 'Close' : 'Open'} main menu"
     aria-controls="main-menu-mobile"
     aria-expanded={$isMainMenuOpen}
 >
     <IconToggler class="text-2xl" isTrue={$isMainMenuOpen}>
-        <svelte:fragment slot="first">
+        {#snippet first()}
             <IconMenu />
-        </svelte:fragment>
-        <svelte:fragment slot="second">
+        {/snippet}
+        {#snippet second()}
             <IconX />
-        </svelte:fragment>
+        {/snippet}
     </IconToggler>
 </button>

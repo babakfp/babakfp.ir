@@ -19,7 +19,7 @@
         <div class="relative">
             <div
                 class="absolute z-0 size-1/2 bg-gray-900 shadow-[0_0_4rem_2rem_theme(colors.gray.900)] inset-center"
-            />
+            ></div>
             <HeroSection />
         </div>
     </main>

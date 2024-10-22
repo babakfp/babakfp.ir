@@ -2,9 +2,13 @@
     import Sidebar from "$lib/Sidebar/Sidebar.svelte"
     import DocsMenuItems from "./DocsMenuItems.svelte"
 
-    export let isOpen = false
-    export let class_ = ""
-    export { class_ as class }
+    let {
+        isOpen = $bindable(),
+        class: class_,
+    }: {
+        isOpen?: boolean
+        class?: string
+    } = $props()
 </script>
 
 <Sidebar

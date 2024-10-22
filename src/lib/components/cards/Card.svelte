@@ -1,18 +1,26 @@
 <script lang="ts">
+    import type { Snippet } from "svelte"
     import IconArrowUpRightSquare from "$lib/icons/IconArrowUpRightSquare.svelte"
 
-    export let href: string
-    export let isExternal = false
-    export let className = ""
-    export { className as class }
+    let {
+        href,
+        isExternal = false,
+        class: class_,
+        children,
+    }: {
+        href: string
+        isExternal?: boolean
+        class?: string
+        children: Snippet
+    } = $props()
 </script>
 
 <a
-    class="{className} group relative block overflow-hidden rounded bg-gray-50 bg-opacity-5 p-4 shadow duration-200 highlight-gray-50/10 hover:bg-opacity-10 sm:p-6"
+    class="{class_} group relative block overflow-hidden rounded bg-gray-50 bg-opacity-5 p-4 shadow duration-200 highlight-gray-50/10 hover:bg-opacity-10 sm:p-6"
     {href}
     target={isExternal ? "_blank" : null}
 >
-    <slot />
+    {@render children()}
 
     {#if isExternal}
         <div

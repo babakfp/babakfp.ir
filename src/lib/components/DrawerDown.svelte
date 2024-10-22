@@ -1,29 +1,37 @@
 <script lang="ts">
-    import OutClick from "svelte-outclick"
+    import type { Snippet } from "svelte"
+    import { OutClick } from "svelte-outclick"
 
-    export let isOpen = false
-    export let class_ = ""
-    export { class_ as class }
-    export let excluderQuery: string
+    let {
+        isOpen = $bindable(),
+        class: class_,
+        excluderQuery,
+        children,
+    }: {
+        isOpen?: boolean
+        class?: string
+        excluderQuery: string
+        children: Snippet
+    } = $props()
 
-    let backdrop: HTMLDivElement
+    let backdrop = $state<HTMLDivElement>()
 </script>
 
 <div class="relative z-40 hidden {isOpen && '!block'} {class_}">
     <div
         class="fixed inset-0 bg-gray-950/95"
         bind:this={backdrop}
-        on:click={() => (isOpen = false)}
-    />
+        onclick={() => (isOpen = false)}
+    ></div>
 
     <OutClick
         class="fixed inset-x-0 bottom-0 max-h-[--svh-no-header] overflow-y-auto overscroll-contain border-t border-gray-800 bg-gray-900 [&::-webkit-scrollbar]:w-0"
         excludeElements={[backdrop]}
         excludeQuerySelectorAll={excluderQuery}
-        on:outclick={() => (isOpen = false)}
+        onOutClick={() => (isOpen = false)}
     >
         <div class="max-h-96">
-            <slot />
+            {@render children()}
         </div>
     </OutClick>
 </div>

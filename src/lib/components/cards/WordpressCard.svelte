@@ -1,12 +1,22 @@
 <script lang="ts">
+    import type { Snippet } from "svelte"
     import Card from "./Card.svelte"
     import CardDescription from "./CardDescription.svelte"
     import CardTitle from "./CardTitle.svelte"
 
-    export let title: string
-    export let description: string
-    export let url: string
-    export let thumb: string
+    let {
+        title,
+        description,
+        url,
+        thumb,
+        children,
+    }: {
+        title: string
+        description: string
+        url: string
+        thumb: string
+        children: Snippet
+    } = $props()
 </script>
 
 <Card href={url} isExternal={true}>
@@ -34,5 +44,5 @@
         </div>
     </div>
 
-    <slot />
+    {@render children()}
 </Card>

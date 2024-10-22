@@ -1,6 +1,4 @@
 <script lang="ts">
-    import { onMount } from "svelte"
-    import { browser } from "$app/environment"
     import { page } from "$app/stores"
     import BackToTopBtn from "$lib/BackToTopBtn.svelte"
     import DesktopToc from "$lib/components/DesktopToc.svelte"
@@ -9,17 +7,17 @@
     import { getHeadings, type Headings } from "$lib/utilities/getHeadings.js"
     import { timeSince } from "$lib/utils/timeSince"
 
-    export let data
+    let { data } = $props()
 
-    let isTocOpen = false
+    let isTocOpen = $state(false)
 
-    let headings: Headings = []
+    let headings: Headings = $state([])
 
-    onMount(() => (headings = getHeadings()))
-
-    $: if (browser && $page.url.pathname) {
-        headings = getHeadings()
-    }
+    $effect(() => {
+        if ($page.url.pathname) {
+            headings = getHeadings()
+        }
+    })
 </script>
 
 <svelte:head>
@@ -75,7 +73,7 @@
                 </h1>
             {/if}
 
-            <svelte:component this={data.default} />
+            <data.default />
         </div>
     </article>
 
@@ -89,7 +87,7 @@
     <button
         id="open-mobile-toc"
         class="btn fixed bottom-16 right-4 xl:!hidden"
-        on:click={() => (isTocOpen = true)}
+        onclick={() => (isTocOpen = true)}
     >
         <IconList class="text-xl" />
     </button>

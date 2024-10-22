@@ -2,13 +2,23 @@
     import CardFooter from "./CardFooter.svelte"
     import WordpressCard from "./WordpressCard.svelte"
 
-    export let title: string
-    export let description: string
-    export let homepage: string
-    export let thumb: string
-    export let activeInstalls: string
-    export let rating: number | null
-    export let reviewsCount: number
+    let {
+        title,
+        description,
+        homepage,
+        thumb,
+        activeInstalls,
+        rating,
+        reviewsCount,
+    }: {
+        title: string
+        description: string
+        homepage: string
+        thumb: string
+        activeInstalls: string
+        rating: number | null
+        reviewsCount: number
+    } = $props()
 </script>
 
 <WordpressCard {title} {description} url={homepage} {thumb}>

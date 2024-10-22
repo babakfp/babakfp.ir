@@ -1,8 +1,13 @@
 <script lang="ts">
     import IconArrowUpRightSquare from "$lib/icons/IconArrowUpRightSquare.svelte"
 
-    export let src = ""
-    export let alt = ""
+    let {
+        src,
+        alt,
+    }: {
+        src?: string
+        alt?: string
+    } = $props()
 </script>
 
 <div class="group relative inline-block">

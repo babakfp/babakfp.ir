@@ -42,7 +42,7 @@ export default {
     ],
     // Disable A11Y warnings
     onwarn: (warning, handler) => {
-        if (warning.code.startsWith("a11y-")) return
+        if (warning.code.startsWith("a11y_")) return
         handler(warning)
     },
 }

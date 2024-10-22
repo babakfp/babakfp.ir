@@ -84,8 +84,8 @@
             <button
                 title="Email address"
                 class="btn btn-icon"
-                on:click={() => {
-                    copyText("babak.bxf@gmail.com")
+                onclick={async () => {
+                    await copyText("babak.bxf@gmail.com")
                     toast.success(
                         "The email address copied to your Clipboard!",
                         { position: "bottom-right" },
@@ -100,7 +100,7 @@
                     href="mailto:babak.bxf@gmail.com"
                     rel="noreferrer"
                     aria-label="Email address"
-                />
+                ></a>
             </button>
         </div>
     </div>

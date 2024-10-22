@@ -1,4 +1,4 @@
-<script lang="ts" context="module">
+<script lang="ts" module>
     import blockquote from "$lib/markdown/elements/blockquote.svelte"
     import img from "$lib/markdown/elements/img.svelte"
     import pre from "$lib/markdown/elements/pre.svelte"
@@ -9,9 +9,15 @@
 <script lang="ts">
     import "mdx-svelte/unified/remark-github-alerts/github-base.css"
     import "mdx-svelte/unified/remark-github-alerts/github-colors-dark.css"
-    import { setContext } from "svelte"
+    import { setContext, type Snippet } from "svelte"
+
+    let {
+        children,
+    }: {
+        children: Snippet
+    } = $props()
 
     setContext("mdxElements", mdxElements)
 </script>
 
-<slot />
+{@render children()}
