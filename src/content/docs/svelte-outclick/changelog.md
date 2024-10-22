@@ -4,6 +4,10 @@ title: CHANGELOG
 
 Restart your app after updating the package.
 
+## 4.0.1
+
+-   Fixed `"svelte"` `"peerDependencies"` version by changing it to `">= 5"`.
+
 ## 4.0.0
 
 > [!IMPORTANT]
