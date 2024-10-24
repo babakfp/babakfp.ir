@@ -1,14 +1,17 @@
 <script lang="ts">
     import type { Snippet } from "svelte"
 
-    type Props = {
+    let {
+        isTrue,
+        class: class_,
+        first,
+        second,
+    }: {
         isTrue?: boolean
         class?: string
         first: Snippet
         second: Snippet
-    }
-
-    let { isTrue = false, class: class_, first, second }: Props = $props()
+    } = $props()
 </script>
 
 <div class="{class_} flex">

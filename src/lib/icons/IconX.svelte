@@ -1,9 +1,9 @@
 <script lang="ts">
-    interface Props {
+    let {
+        class: class_,
+    }: {
         class?: string
-    }
-
-    let { class: class_ }: Props = $props()
+    } = $props()
 </script>
 
 <!-- prettier-ignore -->
