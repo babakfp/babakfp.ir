@@ -53,7 +53,7 @@ By using an array, all components inside it with be applied to all markdown file
 `+layout.svelte`:
 
 ```svelte
-<script lang="ts" context="module">
+<script module lang="ts">
     import blockquote from "./blockquote.svelte"
     import img from "./img.svelte"
 

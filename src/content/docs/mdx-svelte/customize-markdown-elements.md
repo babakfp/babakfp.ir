@@ -25,7 +25,7 @@ mdxPreprocess({
 `+layout.svelte`:
 
 ```svelte
-<script lang="ts" context="module">
+<script module lang="ts">
     import img from "$lib/markdown/img.svelte"
 
     export const mdxElements = { img }
