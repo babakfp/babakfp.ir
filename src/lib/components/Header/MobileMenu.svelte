@@ -41,7 +41,7 @@
         onOutClick={() => ($isMainMenuOpen = false)}
     >
         <ul use:focusTrap>
-            {#each $mainMenuItems as item}
+            {#each mainMenuItems as item}
                 <li class="odd:bg-gray-50/[0.02]">
                     <PrimMenuItem
                         class="py-2 hover:bg-gray-50/10"
