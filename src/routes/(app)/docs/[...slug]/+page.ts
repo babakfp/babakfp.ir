@@ -1,6 +1,6 @@
 import { error } from "@sveltejs/kit"
 import { getCollectionEntry } from "$lib/markdown/collections"
-import { docsFrontmatterSchema } from "$lib/types.js"
+import { docsFrontmatterSchema } from "$lib/markdown/frontmatterSchemas.js"
 
 export const load = async ({ params }) => {
     const doc = await getCollectionEntry(

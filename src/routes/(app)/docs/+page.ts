@@ -1,5 +1,5 @@
 import { getCollectionEntries } from "$lib/markdown/collections"
-import { docsFrontmatterSchema } from "$lib/types"
+import { docsFrontmatterSchema } from "$lib/markdown/frontmatterSchemas"
 
 export const load = async () => {
     const entries = await getCollectionEntries("docs", docsFrontmatterSchema)
