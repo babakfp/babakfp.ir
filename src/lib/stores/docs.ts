@@ -1,7 +1,6 @@
-import { readable } from "svelte/store"
 import { IconCode, IconGithub, IconNpm } from "$lib/components/icons"
 
-export const docsSidebarItems = readable([
+export const docsSidebarItems = [
     {
         name: "svelte-outclick",
         path: "/docs/svelte-outclick",
@@ -281,4 +280,4 @@ export const docsSidebarItems = readable([
             },
         ],
     },
-])
+]

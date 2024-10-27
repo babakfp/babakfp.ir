@@ -5,7 +5,7 @@
     import { docsSidebarItems } from "$lib/stores/docs"
 </script>
 
-{#each $docsSidebarItems as project}
+{#each docsSidebarItems as project}
     {#if $page.url.pathname.startsWith(project.path) || $page.url.pathname === "/docs"}
         {#if project.primaryLinks && project.primaryLinks.length > 0}
             <ul>
