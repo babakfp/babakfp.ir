@@ -5,7 +5,7 @@
     import MobileToc from "$lib/components/MobileToc.svelte"
     import IconList from "$lib/icons/IconList.svelte"
     import { getHeadings, type Headings } from "$lib/utilities/getHeadings.js"
-    import { timeSince } from "$lib/utils/timeSince"
+    import { timeSince } from "$lib/utilities/timeSince"
 
     let { data } = $props()
 

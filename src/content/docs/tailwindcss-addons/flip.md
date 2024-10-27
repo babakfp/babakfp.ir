@@ -4,7 +4,7 @@ title: Flip
 
 <script>
 	import UtilsTable from "$lib/UtilsTable.svelte"
-	import { getUtilities } from "$lib/utils/tailwind.js"
+	import { getUtilities } from "$lib/utilities/tailwind.js"
 	import { flip } from "tailwindcss-addons"
     import Preview from "$lib/components/Preview.svelte"
 	const utilities = getUtilities(flip.handler);
