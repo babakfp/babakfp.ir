@@ -2,9 +2,7 @@
 /.svelte-kit/
 /.vercel/
 /build/
-.DS_Store
-.env
-.env.*
-!.env.example
-vite.config.ts.timestamp-*
-pnpm-lock.yaml
+/.env
+/.env.*
+!/.env.example
+/vite.config.*.timestamp-*
