@@ -1,7 +1,6 @@
 <script lang="ts">
     import DrawerDown from "$lib/components/DrawerDown.svelte"
-    import IconChevronRight from "$lib/components/icons/IconChevronRight.svelte"
-    import IconX from "$lib/components/icons/IconX.svelte"
+    import { IconChevronRight, IconX } from "$lib/components/icons"
     import { focusTrap } from "$lib/utilities/focusTrap"
     import type { Headings } from "$lib/utilities/getHeadings"
 

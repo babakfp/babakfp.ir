@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { Snippet } from "svelte"
-    import IconArrowUpRightSquare from "$lib/components/icons/IconArrowUpRightSquare.svelte"
+    import { IconArrowUpRightSquare } from "$lib/components/icons"
 
     let {
         href,

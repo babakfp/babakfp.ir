@@ -1,5 +1,5 @@
 <script lang="ts">
-    import IconArrowUpRightSquare from "$lib/components/icons/IconArrowUpRightSquare.svelte"
+    import { IconArrowUpRightSquare } from "$lib/components/icons"
     import PocketBaseFill from "$lib/components/technology-logos/PocketBaseFill.svelte"
     import Sass from "$lib/components/technology-logos/Sass.svelte"
     import Svelte from "$lib/components/technology-logos/Svelte.svelte"

@@ -1,7 +1,5 @@
 import { readable, writable } from "svelte/store"
-import IconArticle from "$lib/components/icons/IconArticle.svelte"
-import IconBookOpen from "$lib/components/icons/IconBookOpen.svelte"
-import IconHome from "$lib/components/icons/IconHome.svelte"
+import { IconArticle, IconBookOpen, IconHome } from "$lib/components/icons"
 
 export const isMainMenuOpen = writable(false)
 

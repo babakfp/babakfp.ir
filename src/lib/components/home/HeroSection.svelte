@@ -1,12 +1,14 @@
 <script lang="ts">
     import { copyText } from "svelte-copy"
     import toast from "svelte-french-toast"
-    import IconDribbble from "$lib/components/icons/IconDribbble.svelte"
-    import IconEnvelope from "$lib/components/icons/IconEnvelope.svelte"
-    import IconGithub from "$lib/components/icons/IconGithub.svelte"
-    import IconLinkedin from "$lib/components/icons/IconLinkedin.svelte"
-    import IconNpm from "$lib/components/icons/IconNpm.svelte"
-    import IconTelegram from "$lib/components/icons/IconTelegram.svelte"
+    import {
+        IconDribbble,
+        IconEnvelope,
+        IconGithub,
+        IconLinkedin,
+        IconNpm,
+        IconTelegram,
+    } from "$lib/components/icons"
 </script>
 
 <section class="relative mx-auto grid max-w-prose gap-4">
