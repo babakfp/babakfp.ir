@@ -1,5 +1,5 @@
 <script lang="ts">
-    import UtilsTableProperties from "./UtilsTableProperties.svelte"
+    import UtilsTableProperties from "$lib/components/UtilsTableProperties.svelte"
 
     let {
         selectorAndStyles,

@@ -1,7 +1,7 @@
 <script lang="ts">
     import { page } from "$app/stores"
-    import PrimMenuItem from "$lib/PrimMenuItem.svelte"
-    import SidebarMenuItem from "$lib/Sidebar/SidebarMenuItem.svelte"
+    import PrimMenuItem from "$lib/components/PrimMenuItem.svelte"
+    import SidebarMenuItem from "$lib/components/Sidebar/SidebarMenuItem.svelte"
     import { docsSidebarItems } from "$lib/stores/docs"
 </script>
 

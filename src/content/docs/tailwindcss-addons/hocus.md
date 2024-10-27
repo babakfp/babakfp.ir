@@ -3,7 +3,7 @@ title: Hocus Variants
 ---
 
 <script>
-	import UtilsTable from "$lib/UtilsTable.svelte"
+	import UtilsTable from "$lib/components/UtilsTable.svelte"
 	const utilities = {
 		".hocus": {
 			"&:hover": "",

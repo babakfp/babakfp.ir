@@ -1,6 +1,6 @@
 <script lang="ts">
     import { page } from "$app/stores"
-    import BackToTopBtn from "$lib/BackToTopBtn.svelte"
+    import BackToTopBtn from "$lib/components/BackToTopBtn.svelte"
     import DesktopToc from "$lib/components/DesktopToc.svelte"
     import MobileToc from "$lib/components/MobileToc.svelte"
     import IconList from "$lib/icons/IconList.svelte"

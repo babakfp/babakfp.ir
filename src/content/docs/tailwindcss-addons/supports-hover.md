@@ -3,7 +3,7 @@ title: Supports Hover
 ---
 
 <script>
-    import UtilsTable from "$lib/UtilsTable.svelte"
+    import UtilsTable from "$lib/components/UtilsTable.svelte"
 	const utilities = {
 		".supports-hover": {
 			"@media (hover: hover)": "",

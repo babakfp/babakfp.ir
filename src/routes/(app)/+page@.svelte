@@ -1,7 +1,7 @@
 <script lang="ts">
     import { Toaster } from "svelte-french-toast"
+    import Footer from "$lib/components/Footer.svelte"
     import HeroSection from "$lib/components/home/HeroSection.svelte"
-    import Footer from "$lib/Footer.svelte"
 </script>
 
 <svelte:head>

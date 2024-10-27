@@ -3,7 +3,7 @@ title: Scrollbar Color
 ---
 
 <script>
-    import UtilsTable from "$lib/UtilsTable.svelte"
+    import UtilsTable from "$lib/components/UtilsTable.svelte"
 	const utilities = {
 		'.scrollbar-thumb-<color>': {
             '--tw-scrollbar-thumb': '<value>',

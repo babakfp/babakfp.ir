@@ -1,7 +1,7 @@
 <script lang="ts">
     import { page } from "$app/stores"
-    import Sidebar from "$lib/Sidebar/Sidebar.svelte"
-    import SidebarTocItem from "$lib/Sidebar/SidebarTocItem.svelte"
+    import Sidebar from "$lib/components/Sidebar/Sidebar.svelte"
+    import SidebarTocItem from "$lib/components/Sidebar/SidebarTocItem.svelte"
     import { getHeadings, type Headings } from "$lib/utilities/getHeadings"
 
     let {

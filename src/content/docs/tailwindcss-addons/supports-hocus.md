@@ -3,7 +3,7 @@ title: Supports Hocus
 ---
 
 <script>
-    import UtilsTable from "$lib/UtilsTable.svelte"
+    import UtilsTable from "$lib/components/UtilsTable.svelte"
    	const utilities = {
 		".supports-hocus": {
 			"@media (hover: hover) and (focus: focus)": "",

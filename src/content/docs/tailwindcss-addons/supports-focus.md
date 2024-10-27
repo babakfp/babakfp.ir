@@ -3,7 +3,7 @@ title: Supports Focus
 ---
 
 <script>
-    import UtilsTable from "$lib/UtilsTable.svelte"
+    import UtilsTable from "$lib/components/UtilsTable.svelte"
     const utilities = {
 		".supports-focus": {
 			"@media (focus: focus)": "",

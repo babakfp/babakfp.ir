@@ -2,7 +2,7 @@
     import type { Snippet } from "svelte"
     import { OutClick } from "svelte-outclick"
     import { beforeNavigate } from "$app/navigation"
-    import BlurredBackdrop from "$lib/BlurredBackdrop.svelte"
+    import BlurredBackdrop from "$lib/components/BlurredBackdrop.svelte"
 
     let {
         isOpen = $bindable(),

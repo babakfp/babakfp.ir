@@ -3,7 +3,7 @@ title: Inset Center
 ---
 
 <script>
-	import UtilsTable from "$lib/UtilsTable.svelte"
+	import UtilsTable from "$lib/components/UtilsTable.svelte"
 	import { getUtilities } from "$lib/utilities/tailwind.js"
 	import { insetCenter } from "tailwindcss-addons"
 	const utilities = getUtilities(insetCenter.handler);
