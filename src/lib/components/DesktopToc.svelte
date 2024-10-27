@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { Snippet } from "svelte"
+    import type { MouseEventHandler } from "svelte/elements"
     import { IconChevronRight } from "$lib/components/icons"
     import type { Headings } from "$lib/utilities/getHeadings"
 
@@ -12,7 +13,7 @@
         headings?: Headings
         class?: string
         children?: Snippet
-        onclick?: (e: MouseEvent) => void
+        onclick?: MouseEventHandler<HTMLAnchorElement>
     } = $props()
 </script>
 
