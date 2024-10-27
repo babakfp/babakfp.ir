@@ -24,17 +24,3 @@ export const docsFrontmatterSchema = z.object({
         .min(1, 'Doc "description" field is required.')
         .optional(),
 })
-
-export type Package = {
-    name: string
-    description: string
-    avatarUrl: string
-    starsCount: number
-    forksCount: number
-    openIssuesCount: number
-    version: string
-    license: string
-    fileCount: number
-    unpackedSize: number
-    downloadsCount: number
-}
