@@ -1,9 +1,9 @@
 <script lang="ts">
     import { OutClick } from "svelte-outclick"
     import { beforeNavigate } from "$app/navigation"
-    import { focusTrap } from "$lib/focusTrap"
     import PrimMenuItem from "$lib/PrimMenuItem.svelte"
     import { isMainMenuOpen, mainMenuItems } from "$lib/stores/mainMenu"
+    import { focusTrap } from "$lib/utilities/focusTrap"
 
     beforeNavigate(() => ($isMainMenuOpen = false))
 </script>
