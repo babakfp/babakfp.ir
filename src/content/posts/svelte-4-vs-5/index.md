@@ -49,7 +49,7 @@ The Svelte 5 example is approximately 302% (4x) larger than Svelte 4.
 
 ## A component
 
-Svelte 4:
+### Svelte 4
 
 ```svelte
 <!-- 54 characters -->
@@ -58,7 +58,7 @@ Svelte 4:
 </script>
 ```
 
-Svelte 5:
+### Svelte 5
 
 ```svelte
 <!-- 395 characters -->
@@ -83,6 +83,32 @@ Svelte 5:
 ```
 
 The Svelte 5 example is approximately 631% (7.3x) larger than Svelte 4.
+
+## Reactivity in `.js`/`.ts` files
+
+### Svelte 4
+
+```js
+import { writable } from "svelte/store"
+
+export const count = writable(0)
+```
+
+### Svelte 5
+
+```js
+export const count = $state(0)
+```
+
+This won't work. do this instead:
+
+```js
+export const count = $state({ value: 0 })
+```
+
+### Conclusion
+
+This is stupid.
 
 ## Wrapping up
 
