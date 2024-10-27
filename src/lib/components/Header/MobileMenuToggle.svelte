@@ -1,7 +1,7 @@
 <script lang="ts">
+    import IconMenu from "$lib/components/icons/IconMenu.svelte"
+    import IconX from "$lib/components/icons/IconX.svelte"
     import IconToggler from "$lib/components/IconToggler.svelte"
-    import IconMenu from "$lib/icons/IconMenu.svelte"
-    import IconX from "$lib/icons/IconX.svelte"
     import { isMainMenuOpen } from "$lib/stores/mainMenu"
 </script>
 

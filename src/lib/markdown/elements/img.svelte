@@ -1,5 +1,5 @@
 <script lang="ts">
-    import IconArrowUpRightSquare from "$lib/icons/IconArrowUpRightSquare.svelte"
+    import IconArrowUpRightSquare from "$lib/components/icons/IconArrowUpRightSquare.svelte"
 
     let {
         src,

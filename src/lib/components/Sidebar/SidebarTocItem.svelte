@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { Snippet } from "svelte"
-    import IconChevronRight from "$lib/icons/IconChevronRight.svelte"
+    import IconChevronRight from "$lib/components/icons/IconChevronRight.svelte"
 
     let {
         href,

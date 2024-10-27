@@ -2,8 +2,8 @@
     import { page } from "$app/stores"
     import BackToTopBtn from "$lib/components/BackToTopBtn.svelte"
     import DesktopToc from "$lib/components/DesktopToc.svelte"
+    import IconList from "$lib/components/icons/IconList.svelte"
     import MobileToc from "$lib/components/MobileToc.svelte"
-    import IconList from "$lib/icons/IconList.svelte"
     import { getHeadings, type Headings } from "$lib/utilities/getHeadings.js"
     import { timeSince } from "$lib/utilities/timeSince"
 

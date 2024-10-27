@@ -2,9 +2,9 @@
     import { page } from "$app/stores"
     import BackToTopBtn from "$lib/components/BackToTopBtn.svelte"
     import DesktopToc from "$lib/components/DesktopToc.svelte"
+    import IconBarsBottomRight from "$lib/components/icons/IconBarsBottomRight.svelte"
+    import IconList from "$lib/components/icons/IconList.svelte"
     import MobileToc from "$lib/components/MobileToc.svelte"
-    import IconBarsBottomRight from "$lib/icons/IconBarsBottomRight.svelte"
-    import IconList from "$lib/icons/IconList.svelte"
     import { getHeadings, type Headings } from "$lib/utilities/getHeadings.js"
     import DocsMenu from "./DocsMenu.svelte"
 

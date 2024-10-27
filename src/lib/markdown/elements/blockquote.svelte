@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { Snippet } from "svelte"
-    import IconQuoteLeft from "$lib/icons/IconQuoteLeft.svelte"
+    import IconQuoteLeft from "$lib/components/icons/IconQuoteLeft.svelte"
 
     let {
         children,

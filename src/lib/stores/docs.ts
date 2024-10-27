@@ -1,7 +1,7 @@
 import { readable, writable } from "svelte/store"
-import IconCode from "$lib/icons/IconCode.svelte"
-import IconGithub from "$lib/icons/IconGithub.svelte"
-import IconNpm from "$lib/icons/IconNpm.svelte"
+import IconCode from "$lib/components/icons/IconCode.svelte"
+import IconGithub from "$lib/components/icons/IconGithub.svelte"
+import IconNpm from "$lib/components/icons/IconNpm.svelte"
 
 export const docsSidebarItems = readable([
     {
