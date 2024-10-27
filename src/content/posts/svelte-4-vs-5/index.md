@@ -9,9 +9,8 @@ create: 2024/10/26
 
 In SvelteKit, inside a `+page.server` file, you can return a whole bunch of data, and inside the `+page.svelte` file, you can use the data. The below example is how it works with Svelte 4.
 
-`+page.svelte`:
-
 ```svelte
+<!-- 46 characters -->
 <script lang="ts">
     export let data
 </script>
@@ -20,6 +19,7 @@ In SvelteKit, inside a `+page.server` file, you can return a whole bunch of data
 The `data` variable will be automatically typed based on the data returned from the server. The below example is how it works with Svelte 5.
 
 ```svelte
+<!-- 105 characters -->
 <script lang="ts">
     import type { PageData } from "./$types"
 
@@ -27,9 +27,12 @@ The `data` variable will be automatically typed based on the data returned from 
 </script>
 ```
 
-What if the data is coming from a `+layout.server.ts` file and we want to use the data inside a `+page.svelte` file? Svelte 4 code will stay the same, but Svelte 5 code will be:
+The Svelte 5 example is approximately 128% (2.28x) larger than Svelte 4.
+
+What if the data is coming from a `+layout.server.ts` file and we want to use the data inside a `+page.svelte` file? Svelte 4 code will stay the same, but Svelte 5 code will be.
 
 ```svelte
+<!-- 185 characters -->
 <script lang="ts">
     import type { PageData } from "./$types"
 
@@ -42,13 +45,14 @@ What if the data is coming from a `+layout.server.ts` file and we want to use th
 </script>
 ```
 
-The Svelte 5 example has 8 times more lines of code than Svelte 4.
+The Svelte 5 example is approximately 302% (4x) larger than Svelte 4.
 
-## 1 line vs 11 lines
+## A component
 
 Svelte 4:
 
 ```svelte
+<!-- 54 characters -->
 <script lang="ts">
     export let message = ""
 </script>
@@ -57,6 +61,7 @@ Svelte 4:
 Svelte 5:
 
 ```svelte
+<!-- 395 characters -->
 <script lang="ts">
     import type { Snippet } from "svelte"
     import type { MouseEventHandler } from "svelte/elements"
@@ -77,7 +82,7 @@ Svelte 5:
 </script>
 ```
 
-The Svelte 5 example has 11 times more lines of code than Svelte 4.
+The Svelte 5 example is approximately 631% (7.3x) larger than Svelte 4.
 
 ## Wrapping up
 
