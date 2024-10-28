@@ -96,11 +96,13 @@ export const count = writable(0)
 
 ### Svelte 5
 
+This won't work.
+
 ```js
 export const count = $state(0)
 ```
 
-This won't work. do this instead:
+Do this instead:
 
 ```js
 export const count = $state({ value: 0 })
