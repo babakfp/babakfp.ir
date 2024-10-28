@@ -1,7 +1,7 @@
 import { error } from "@sveltejs/kit"
 import { z } from "zod"
+import { collectionSchema, slugSegmentSchema } from "./schemas"
 import type { CollectionEntry, ImportGlobMarkdownMap } from "./types"
-import { validateCollection, validateSlugSegment } from "./validations"
 
 /**
  * Paths that contain (`_`) in their name should be ignored to avoid conflict between pages and components.
@@ -28,13 +28,15 @@ const markdownFilesToEntries = () => {
         const segments = path.replace("/src/content/", "").split("/")
 
         const collection = segments[0]
-        validateCollection(collection)
+        collectionSchema.parse(collection)
 
         const file = segments[segments.length - 1]
-        validateSlugSegment(file.replace(".md", ""))
+        slugSegmentSchema.parse(file.replace(".md", ""))
 
         const slugSegments = segments.slice(1, -1)
-        slugSegments.forEach((slugSegment) => validateSlugSegment(slugSegment))
+        slugSegments.forEach((slugSegment) =>
+            slugSegmentSchema.parse(slugSegment),
+        )
 
         const slug = segments
             .slice(1)
