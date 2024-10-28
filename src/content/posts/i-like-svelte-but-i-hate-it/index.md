@@ -22,7 +22,7 @@ First, let's learn a bit about me. I'm a web developer since 2019/2020. I have b
 
 ## I got banned from the [Discord group](https://svelte.dev/chat)
 
-Svelte documentation UI sucks, right? In _2021_ I designed a logo a UI for SvelteKit documentation (before the official documentation existed). I share them in the Discord group. I and some community members discussed the design and the related stuff (in a **civil** manner). In the middle of the conversation, _suddenly_ I got removed from the group! Later when I joined (with an alternate account), I couldn't find any of my messages. They probably automatically cleaned up everything after removing me. You can download all UI and logo design source files I ever create for Svelte, [from here](https://bit.ly/3tf6mPL)
+Svelte documentation UI sucks, right? In _2021_ I designed a logo a UI for SvelteKit documentation (before the official documentation existed). I share them in the Discord group. I and some community members discussed the design and the related stuff (in a **civil** manner). In the middle of the conversation, _suddenly_ I got removed from the group! Later when I joined (with an alternate account), I couldn't find any of my messages. They probably automatically cleaned up everything after removing me. You can download all UI and logo design source files I ever create for Svelte, [from here](https://bit.ly/3tf6mPL).
 
 _This is the result of trying to contribute to Svelte:_
 
