@@ -1,8 +1,8 @@
 import { getCollectionEntries } from "$lib/markdown/collections"
-import { postsFrontmatterSchema } from "$lib/markdown/frontmatterSchemas"
+import { postsSchema } from "$lib/markdown/schemas"
 
 export const getPosts = async () => {
-    const entries = await getCollectionEntries("posts", postsFrontmatterSchema)
+    const entries = await getCollectionEntries("posts", postsSchema)
 
     const posts = entries
         .filter((entry) => entry.slug.split("/").length === 1)
