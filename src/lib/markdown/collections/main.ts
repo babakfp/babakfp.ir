@@ -4,20 +4,22 @@ import type { CollectionEntry, ImportGlobMarkdownMap } from "./types"
 import { validateCollection, validateSlugSegment } from "./validations"
 
 /**
- * All markdown content pages.
- *
- * Paths that contain (`_`) in their name are ignored to avoid conflict between pages and components.
+ * Paths that contain (`_`) in their name should be ignored to avoid conflict between pages and components.
  *
  * [Glob Import](https://vitejs.dev/guide/features.html#glob-import).
  */
-const pages = import.meta.glob(
-    [
-        "/src/content/*/**/*.md",
-        "!/src/content/*/**/_*/*.md",
-        "!/src/content/*/**/_*.md",
-    ],
-    { eager: true },
-) satisfies ImportGlobMarkdownMap
+const importMetaGlob = (glob: string[]): ImportGlobMarkdownMap => {
+    return import.meta.glob(glob, { eager: true })
+}
+
+/**
+ * All markdown content pages.
+ */
+const pages = importMetaGlob([
+    "/src/content/*/**/*.md",
+    "!/src/content/*/**/_*/*.md",
+    "!/src/content/*/**/_*.md",
+])
 
 const markdownFilesToEntries = () => {
     const entries: CollectionEntry[] = []
