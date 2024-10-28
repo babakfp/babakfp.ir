@@ -112,6 +112,10 @@ export const count = $state({ value: 0 })
 
 This is stupid.
 
+## Constant props
+
+In Svelte 5, you can't declare a prop as `const` and another prop as `let`. This is the case with Svelte 4 too.
+
 ## Wrapping up
 
 I don't fell like writing this anymore.
