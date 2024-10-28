@@ -2,7 +2,10 @@
     import { OutClick } from "svelte-outclick"
     import { beforeNavigate } from "$app/navigation"
     import PrimMenuItem from "$lib/components/PrimMenuItem.svelte"
-    import { isMainMenuOpen, mainMenuItems } from "$lib/stores/mainMenu"
+    import {
+        isMainMenuOpen,
+        mainMenuItems,
+    } from "$lib/stores/mainMenu.svelte.js"
     import { focusTrap } from "$lib/utilities/focusTrap"
 
     beforeNavigate(() => (isMainMenuOpen.value = false))

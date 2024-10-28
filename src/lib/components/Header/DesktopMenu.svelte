@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { mainMenuItems } from "$lib/stores/mainMenu"
+    import { mainMenuItems } from "$lib/stores/mainMenu.svelte.js"
 </script>
 
 <nav class="hidden xl:flex">
