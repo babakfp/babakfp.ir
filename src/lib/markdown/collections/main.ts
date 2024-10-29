@@ -1,5 +1,4 @@
-import { error } from "@sveltejs/kit"
-import { z } from "zod"
+import type { z } from "zod"
 import { collectionSchema, slugSegmentSchema } from "./schemas"
 import type { CollectionEntry, ImportGlobMarkdownMap } from "./types"
 
@@ -68,13 +67,7 @@ const getGlobEntryValue = <T extends z.ZodRawShape>(
 ) => {
     const validateFrontmatter = () => {
         if (schema) {
-            const frontmatterParseResult = schema.safeParse(entry.frontmatter)
-
-            if (!frontmatterParseResult.success) {
-                return error(400, frontmatterParseResult.error.message)
-            }
-
-            return frontmatterParseResult.data
+            return schema.parse(entry.frontmatter)
         }
 
         return {}
