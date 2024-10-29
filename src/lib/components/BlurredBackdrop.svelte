@@ -1,4 +1,6 @@
 <script lang="ts">
+    import type { MouseEventHandler } from "svelte/elements"
+
     let {
         id,
         isVisible,
@@ -6,7 +8,7 @@
     }: {
         id?: string
         isVisible?: boolean
-        onclick: (e: MouseEvent) => void
+        onclick: MouseEventHandler<HTMLDivElement>
     } = $props()
 </script>
 

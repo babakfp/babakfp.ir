@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { Snippet } from "svelte"
+    import type { MouseEventHandler } from "svelte/elements"
     import { IconChevronRight } from "$lib/components/icons"
 
     let {
@@ -13,7 +14,7 @@
         isActive?: boolean
         depthLvl: number
         children: Snippet
-        onclick: (e: MouseEvent) => void
+        onclick: MouseEventHandler<HTMLAnchorElement>
     } = $props()
 </script>
 
