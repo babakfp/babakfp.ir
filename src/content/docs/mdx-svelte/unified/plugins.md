@@ -140,9 +140,9 @@ All importable styles:
 > Negative potential consequences of an action.
 ```
 
-## "remark-unwrap-images"
+## "rehype-unwrap-images"
 
-["remark-unwrap-images"](https://npmjs.com/package/remark-unwrap-images).
+["rehype-unwrap-images"](https://npmjs.com/package/rehype-unwrap-images).
 
 > [!NOTE]
 > Please refer to the jsDoc comments to learn more.
