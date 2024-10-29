@@ -20,7 +20,7 @@
         {#each headings as heading}
             <li class="group">
                 <a
-                    class="flex items-center gap-2 py-2 pr-4 outline-inset group-first:pt-6 group-last:pb-6"
+                    class="flex items-center gap-2 py-2 pr-4 duration-100 outline-inset hover:text-gray-50 group-first:pt-6 group-last:pb-6"
                     href="#{heading.id}"
                     onclick={() => (isOpen = false)}
                     style="padding-left: calc(1rem * {heading.level - 1});"
