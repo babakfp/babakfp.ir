@@ -226,6 +226,13 @@
             @apply !not-italic;
         }
 
+        code [data-line].remove {
+            @apply bg-[#f47067]/10;
+        }
+        code [data-line].add {
+            @apply bg-[#8ddb8c]/10;
+        }
+
         code:not(pre code) {
             @apply select-text rounded-md bg-gray-50/10 px-1.5 py-0.5 text-[.9em] selection:bg-brand-600/50;
         }
@@ -253,10 +260,18 @@
         }
 
         pre {
-            @apply -mx-4 !bg-gray-50/5 p-0.5 text-sm [tab-size:4] selection:bg-gray-50/10 sm:mx-0 sm:rounded;
+            @apply -mx-4 !bg-gray-50/5 text-sm [tab-size:4] selection:bg-gray-50/10 sm:mx-0 sm:rounded sm:p-0.5;
 
             code {
-                @apply block select-text overflow-x-auto p-4 leading-8;
+                @apply block select-text overflow-x-auto py-4 leading-8;
+
+                [data-line] {
+                    @apply px-4;
+                }
+
+                &::-webkit-scrollbar {
+                    @apply bg-transparent;
+                }
             }
         }
 
