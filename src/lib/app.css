@@ -214,7 +214,7 @@
         blockquote {
             @apply relative rounded bg-gray-400/5 p-4 shadow-sm shadow-gray-400/20;
             blockquote {
-                @apply -mr-4 mt-[--md-base-mt] sm:mr-0;
+                @apply -mr-3 mt-[--md-base-mt] sm:mr-0;
             }
         }
 
