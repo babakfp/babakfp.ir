@@ -1,6 +1,6 @@
 <script lang="ts">
     import { copyText } from "svelte-copy"
-    import toast from "svelte-french-toast"
+    import toast from "svelte-hot-french-toast"
     import {
         IconDribbble,
         IconEnvelope,
@@ -90,7 +90,7 @@
                     await copyText("babak.bxf@gmail.com")
                     toast.success(
                         "The email address copied to your Clipboard!",
-                        { position: "bottom-right" },
+                        { position: "bottom-end" },
                     )
                 }}
             >
