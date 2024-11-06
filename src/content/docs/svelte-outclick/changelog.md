@@ -6,9 +6,7 @@ Restart your app after updating the package.
 
 ## 4.1.0
 
--   feat: add generic type support for props.
-
-    Added `tag` prop and rest props type suggestion support with generic type support based on the `tag` prop.
+-   [feature] Added `tag` prop and rest props type suggestion support with generic type support based on the `tag` prop.
 
 ## 4.0.1
 
