@@ -1,8 +1,8 @@
 import { error } from "@sveltejs/kit"
-import { getCollectionEntry } from "$lib/markdown/collections"
+import { collections } from "$lib/markdown/collections.js"
 
 export const load = async ({ params }) => {
-    const portfolio = await getCollectionEntry("portfolios", params.slug)
+    const portfolio = collections.getEntry("portfolios", params.slug)
 
     if (!portfolio) {
         error(404)
