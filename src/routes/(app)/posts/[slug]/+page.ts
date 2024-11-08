@@ -1,10 +1,9 @@
 import { error } from "@sveltejs/kit"
 import { collections } from "$lib/markdown/collections.js"
-import { postsSchema } from "$lib/markdown/schemas.js"
 import { getPosts } from "$lib/utilities/getPosts.js"
 
 export const load = async ({ params }) => {
-    const post = collections.getEntry("posts", params.slug, postsSchema)
+    const post = collections.getEntry("posts", params.slug)
 
     if (!post) {
         error(404)

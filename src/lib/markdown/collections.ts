@@ -1,7 +1,8 @@
 import {
-    useCollections,
+    useTypedCollections,
     type ImportGlobMarkdownMap,
 } from "mdx-collections-svelte"
+import { z } from "mdx-collections-svelte/zod"
 
 /**
  * All markdown content pages.
@@ -19,4 +20,16 @@ export const pages = import.meta.glob(
     { eager: true },
 ) satisfies ImportGlobMarkdownMap
 
-export const collections = useCollections(pages)
+export const collections = useTypedCollections(pages, {
+    posts: z.object({
+        title: z.string().min(1),
+        description: z.string().min(1),
+        update: z.string().min(1),
+        create: z.string().min(1),
+    }),
+    docs: z.object({
+        title: z.string().min(1),
+        description: z.string().min(1).optional(),
+    }),
+    portfolios: z.object({}).default({}),
+})
