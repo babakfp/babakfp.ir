@@ -39,12 +39,16 @@ import { ReactElement } from "react"
 const toasts = [{ text: "Hello, World!" }]
 
 const Toast = (props?: { Item?: (item: { text: string }) => ReactElement }) => {
-    return toasts.map((item) =>
-        props?.Item ? props.Item(item) : <p>{item.text}</p>
-    )
+    return toasts.map((item) => {
+        return props?.Item ? props.Item(item) : <p>{item.text}</p>
+    }
 }
 
-const Item = (item: { text: string }) => <p>{item.text}</p>
+const Item = (item: { text: string }) => {
+    return <p>{item.text}</p>
+}
 
-export default () => <Toast Item={Item} />
+export default () => {
+    return <Toast Item={Item} />
+}
 ```
