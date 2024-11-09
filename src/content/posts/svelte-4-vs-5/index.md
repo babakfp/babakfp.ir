@@ -1,8 +1,8 @@
 ---
 title: Svelte 4 vs 5
 description: A real, honest, and unbiased comparison of Svelte 4 vs 5.
-update: 2024/10/26
-create: 2024/11/09
+create: 2024/10/26
+update: 2024/11/09
 ---
 
 ## The `data` prop

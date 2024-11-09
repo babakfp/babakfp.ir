@@ -1,8 +1,8 @@
 ---
 title: Fuck Svelte
 description: A real, honest, and unbiased opition about Svelte.
-update: 2024/10/26
-create: 2024/11/09
+create: 2024/10/26
+update: 2024/11/09
 ---
 
 <script>
