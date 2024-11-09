@@ -13,6 +13,7 @@ create: 2024/11/09
 1. [Make Svelte better](/posts/make-svelte-better)
 2. [Svelte - A Journey of Hate and Frustration](/posts/i-like-svelte-but-i-hate-it)
 3. [Svelte 4 vs 5](/posts/svelte-4-vs-5)
+4. [Svelte vs JSX](/posts/svelte-vs-jsx)
 
 <YoutubeCommentReplyOne />
 <YoutubeCommentReplyTwo />
