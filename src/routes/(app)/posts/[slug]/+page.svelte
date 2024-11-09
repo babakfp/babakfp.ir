@@ -49,17 +49,17 @@
             <div
                 class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-400"
             >
-                {#if data.frontmatter.update}
-                    <span>
-                        Updated: <b title={data.frontmatter.update}>
-                            {timeSince(new Date(data.frontmatter.update))}
-                        </b>
-                    </span>
-                {/if}
                 {#if data.frontmatter.create}
                     <span>
                         Created: <b title={data.frontmatter.create}>
                             {timeSince(new Date(data.frontmatter.create))}
+                        </b>
+                    </span>
+                {/if}
+                {#if data.frontmatter.update}
+                    <span>
+                        Updated: <b title={data.frontmatter.update}>
+                            {timeSince(new Date(data.frontmatter.update))}
                         </b>
                     </span>
                 {/if}

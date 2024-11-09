@@ -24,8 +24,8 @@ export const collections = useTypedCollections(pages, {
     posts: z.object({
         title: z.string().min(1),
         description: z.string().min(1),
-        update: z.string().min(1),
         create: z.string().min(1),
+        update: z.string().min(1),
     }),
     docs: z.object({
         title: z.string().min(1),
