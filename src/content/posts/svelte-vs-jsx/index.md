@@ -5,8 +5,6 @@ create: 2024/11/09
 update: 2024/11/09
 ---
 
-## Svelte vs JSX
-
 Svelte:
 
 ```svelte showLineNumbers
