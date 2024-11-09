@@ -1,8 +1,8 @@
 ---
 title: Deno - A Journey of Frustration and Disappointment
 description: I'll share my experiences with Deno. I hate it.
-update: 2024/06/22
 create: 2024/06/20
+update: 2024/06/22
 ---
 
 When Deno was first released, I was excited to see the potential of the project. I thought it would be a great alternative to Node.js, and I was _wrong_.

@@ -1,8 +1,8 @@
 ---
 title: Fuck Linux
 description: My experience with Linux. I hate it.
-update: 2024/06/23
-create: 2024/08/23
+create: 2024/06/23
+update: 2024/08/23
 ---
 
 Whenever I tried using Linux, "Fuck Linux" was always how I ended up feeling. Despite giving it three tries over the years, I kept returning to Windows. This story is about my third experience, where I explored both Linux Mint and Ubuntu.
