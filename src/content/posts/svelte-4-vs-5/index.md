@@ -2,7 +2,7 @@
 title: Svelte 4 vs 5
 description: A real, honest, and unbiased comparison of Svelte 4 vs 5.
 update: 2024/10/26
-create: 2024/10/26
+create: 2024/11/09
 ---
 
 ## The `data` prop
@@ -84,7 +84,7 @@ The Svelte 5 example is approximately 302% (4x) larger than Svelte 4.
 
 The Svelte 5 example is approximately 631% (7.3x) larger than Svelte 4.
 
-## Reactivity in `.js`/`.ts` files
+## Reactivity in `.svelte.js`/`.svelte.ts` files
 
 ### Svelte 4
 
