@@ -18,6 +18,7 @@
         "mdx-collections-svelte": "2.0.0",
         "mdx-svelte": "4.0.0",
         "postcss": "8.4.47",
+        "postcss-load-config": "6.0.1",
         "prettier": "3.3.3",
         "prettier-plugin-svelte": "3.2.7",
         "prettier-plugin-tailwindcss": "0.6.8",
