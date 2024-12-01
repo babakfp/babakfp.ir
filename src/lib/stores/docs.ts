@@ -213,6 +213,10 @@ export const docsSidebarItems = [
                         title: "Options",
                         path: "/docs/mdx-svelte/options",
                     },
+                    {
+                        title: "Collections",
+                        path: "/docs/mdx-svelte/collections",
+                    },
                 ],
             },
             {
