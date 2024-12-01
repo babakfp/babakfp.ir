@@ -63,10 +63,12 @@ By using an array, all components inside it with be applied to all markdown file
 <script lang="ts">
     import { setContext } from "svelte"
 
+    let { children } = $props()
+
     setContext("mdxElements", mdxElements)
 </script>
 
-<slot />
+{@render children()}
 ```
 
 A `getContext` will be preprocessed to all of the markdown files to receive the value of `mdxElements`.
