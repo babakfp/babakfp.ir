@@ -16,14 +16,10 @@
         Babak Farkhoopak
     </h1>
     <p class="font-light leading-8">
-        I'm a <strong>FrontEnd</strong> developer with strong
-        <strong>UI</strong>/<strong>UX</strong>
-        skills. My tech stack includes <strong>TypeScript</strong>,
-        <strong>Svelte</strong>/<strong>Kit</strong>,
-        <strong>Tailwind CSS</strong>, and
-        <strong>PocketBase</strong>. I'm open to
-        <strong>remote work</strong>, and seeking opportunities that offer
-        <strong>relocation</strong> options.
+        I'm a <i>Front-end</i> Developer with strong <i>UI/UX</i> expertise,
+        proficient in <i>TypeScript</i>, <i>Svelte</i>, <i>SvelteKit</i>,
+        <i>Tailwind CSS</i>, and <i>PocketBase</i>. I am open to <i>remote</i>
+        opportunities and seeking roles that offer <i>relocation</i> options.
     </p>
     <div class="mt-2 flex flex-wrap justify-between gap-4">
         <div class="flex gap-2">
