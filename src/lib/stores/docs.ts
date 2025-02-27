@@ -63,15 +63,6 @@ export const docsSidebarItems = [
                 ],
             },
             {
-                title: "Theme",
-                items: [
-                    {
-                        title: "Extra Defaults",
-                        path: "/docs/tailwindcss-addons/extra-defaults",
-                    },
-                ],
-            },
-            {
                 title: "New Utilities",
                 items: [
                     {
@@ -142,10 +133,6 @@ export const docsSidebarItems = [
                 title: "Modified Utilities",
                 items: [
                     {
-                        title: "Flex Grid",
-                        path: "/docs/tailwindcss-addons/flex-grid",
-                    },
-                    {
                         title: "Font Regular",
                         path: "/docs/tailwindcss-addons/font-regular",
                     },
@@ -157,22 +144,6 @@ export const docsSidebarItems = [
                     {
                         title: "Hocus",
                         path: "/docs/tailwindcss-addons/hocus",
-                    },
-                    {
-                        title: "Not",
-                        path: "/docs/tailwindcss-addons/not",
-                    },
-                    {
-                        title: "Supports Hover",
-                        path: "/docs/tailwindcss-addons/supports-hover",
-                    },
-                    {
-                        title: "Supports Focus",
-                        path: "/docs/tailwindcss-addons/supports-focus",
-                    },
-                    {
-                        title: "Supports Hocus",
-                        path: "/docs/tailwindcss-addons/supports-hocus",
                     },
                 ],
             },
