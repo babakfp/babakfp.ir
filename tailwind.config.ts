@@ -32,45 +32,11 @@ export default {
             black: "900",
         },
     },
-    plugins: [
-        ...allAddons(),
-        outlineInsetUtility(),
-        highlightUtility(),
-        buttonComponents(),
-        linkComponents(),
-    ],
+    plugins: [...allAddons(), highlightUtility()],
     future: {
         hoverOnlyWhenSupported: true,
     },
 } satisfies Config
-
-function buttonComponents() {
-    return plugin(({ addComponents }) => {
-        addComponents({
-            ".btn": {},
-            ".btn-icon": {},
-            ".btn-primary": {},
-        })
-    })
-}
-
-function linkComponents() {
-    return plugin(({ addComponents }) => {
-        addComponents({
-            ".link": {},
-        })
-    })
-}
-
-function outlineInsetUtility() {
-    return plugin(({ addUtilities }) => {
-        addUtilities({
-            ".outline-inset": {
-                "@apply -outline-offset-2": "",
-            },
-        })
-    })
-}
 
 function highlightUtility() {
     return plugin(({ matchUtilities, theme }) => {
