@@ -55,7 +55,7 @@ Add you custom plugin inside the `builtinPlugins` after `remarkFrontmatter`.
 
 ### Related resources
 
--   ["remark-frontmatter-yaml"](/docs/mdx-svelte/unified/plugins#remark-frontmatter-yaml)
+- ["remark-frontmatter-yaml"](/docs/mdx-svelte/unified/plugins#remark-frontmatter-yaml)
 
 ## "remark-frontmatter-yaml"
 
@@ -66,7 +66,7 @@ Add you custom plugin inside the `builtinPlugins` after `remarkFrontmatter`.
 
 ### Related resources
 
--   ["remark-frontmatter"](/docs/mdx-svelte/unified/plugins#remark-frontmatter)
+- ["remark-frontmatter"](/docs/mdx-svelte/unified/plugins#remark-frontmatter)
 
 ## "remark-gfm"
 
@@ -156,7 +156,7 @@ All importable styles:
 
 ### Related resources
 
--   [TOC - Table of Contents](/docs/mdx-svelte/table-of-contents)
+- [TOC - Table of Contents](/docs/mdx-svelte/table-of-contents)
 
 ## "remark-directive"
 
@@ -164,12 +164,12 @@ All importable styles:
 
 This plugin is used to create custom built-in directives. Built-in directives:
 
--   `info`
--   `warning`
--   `danger`
--   `success`
--   `tip`
--   `details`
+- `info`
+- `warning`
+- `danger`
+- `success`
+- `tip`
+- `details`
 
 Input:
 
@@ -267,7 +267,7 @@ rehypeAutolinkHeadings: {
 
 ### Related resources
 
--   [Table of Contents](/docs/mdx-svelte/table-of-contents)
+- [Table of Contents](/docs/mdx-svelte/table-of-contents)
 
 ## "rehype-external-links"
 

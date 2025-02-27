@@ -9,11 +9,11 @@ A Svelte component that allows you to listen to the clicks that happen outside o
 
 Why choose this over the other packages?
 
--   [No extra wrapper](#no-extra-wrapper)
--   Supports [`class`](#class-prop) prop
--   [Exclude elements](#excluding-elements) from triggering the event
--   [Half click](#halfclick) support
--   TypeScript support
+- [No extra wrapper](#no-extra-wrapper)
+- Supports [`class`](#class-prop) prop
+- [Exclude elements](#excluding-elements) from triggering the event
+- [Half click](#halfclick) support
+- TypeScript support
 
 ## Install
 
@@ -49,7 +49,7 @@ You may want to exclude some elements from triggering the event. For example, a 
 
 #### `excludeElements`
 
--   Type: `HTMLElement | HTMLElement[]`
+- Type: `HTMLElement | HTMLElement[]`
 
 This prop expects HTML elements. Clicks on those elements (and their children) will be ignored. Learn about [`bind:this`](https://svelte.dev/tutorial/bind-this).
 
@@ -77,7 +77,7 @@ This prop can receive a single element or an array of elements.
 
 #### `excludeQuerySelectorAll`
 
--   Type: `string`
+- Type: `string`
 
 This prop expects a string of css selectors. Clicks on those elements (and their children) will be ignored.
 
@@ -104,7 +104,7 @@ This prop works the same as the `querySelectorAll` method. It can contain any va
 
 ### `class` prop
 
--   Type: `string`
+- Type: `string`
 
 This is equivalent to the CSS class attribute. You can seamlessly utilize tools such as Tailwind CSS by adding your classes in the usual manner, without encountering any issues.
 
@@ -134,22 +134,22 @@ This is equivalent to the CSS class attribute. You can seamlessly utilize tools 
 
 ### `includeSelf`
 
--   Type: `boolean`
--   Default: `false`
+- Type: `boolean`
+- Default: `false`
 
 For example, if you want to close the dropdown when you click on any of its items, set the value of this option to `true`, so a self-click can trigger the event.
 
 ### `halfClick`
 
--   Type: `boolean`
--   Default: `true`
+- Type: `boolean`
+- Default: `true`
 
 If `true`, `pointerdown` can solely determine the click outside. If `false`, outclick will happen when `pointerdown` and `pointerup` events happen after each other, outside of the element.
 
 ### `tag`
 
--   Type: `string`
--   Default: `"div"`
+- Type: `string`
+- Default: `"div"`
 
 You can change the tag name of the wrapper element.
 
@@ -173,5 +173,5 @@ At first, we were using the `click` event to capture the `outclick` event, but l
 
 ### Learn more
 
--   `keydown` event on `document.body` is ignored because this is how it works when you use `click` event instead.
--   `keydown` event only triggers with `Enter`, `NumpadEnter`, and `Space` keys (because this is how it works when you use the `click` event instead).
+- `keydown` event on `document.body` is ignored because this is how it works when you use `click` event instead.
+- `keydown` event only triggers with `Enter`, `NumpadEnter`, and `Space` keys (because this is how it works when you use the `click` event instead).

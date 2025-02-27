@@ -63,4 +63,4 @@ mdxPreprocess({
 
 ## Related resources
 
--   Learn more about the [`elements`](/docs/mdx-svelte/options#elements) option.
+- Learn more about the [`elements`](/docs/mdx-svelte/options#elements) option.

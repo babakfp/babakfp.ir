@@ -12,7 +12,7 @@ title: Flip
 
 <UtilsTable {utilities} />
 
--   [Point reflection](https://en.wikipedia.org/wiki/Point_reflection)
+- [Point reflection](https://en.wikipedia.org/wiki/Point_reflection)
 
 ## Examples
 

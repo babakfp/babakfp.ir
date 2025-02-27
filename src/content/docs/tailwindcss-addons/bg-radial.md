@@ -27,10 +27,10 @@ title: Background Radial
 }
 ```
 
--   [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
--   [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
--   [`background-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
--   [`radial-gradient()`](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient)
+- [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)
+- [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- [`background-image`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-image)
+- [`radial-gradient()`](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient)
 
 ### Center
 
@@ -43,7 +43,7 @@ title: Background Radial
 <div class="bg-center bg-radial-gray-700 ..." />
 ```
 
--   [`background-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
+- [`background-position`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
 
 ### Shadow
 
@@ -56,7 +56,7 @@ title: Background Radial
 <div class="bg-center shadow-[inset_0_0_4rem_2rem_theme(colors.gray.900)] bg-radial-gray-700 ..." />
 ```
 
--   [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
+- [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
 
 ### Spacing
 
@@ -78,7 +78,7 @@ title: Background Radial
 }
 ```
 
--   [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 
 #### X
 
@@ -97,7 +97,7 @@ title: Background Radial
 }
 ```
 
--   [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 
 #### Y
 
@@ -116,7 +116,7 @@ title: Background Radial
 }
 ```
 
--   [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 
 ## Size
 
@@ -135,7 +135,7 @@ title: Background Radial
 }
 ```
 
--   [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 
 ## Usage
 

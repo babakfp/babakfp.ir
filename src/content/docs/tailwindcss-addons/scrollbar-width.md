@@ -11,7 +11,7 @@ title: Scrollbar Width
 
 <UtilsTable {utilities} />
 
--   [`scrollbar-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-width)
+- [`scrollbar-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-width)
 
 ## Usage
 

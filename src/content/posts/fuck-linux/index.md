@@ -7,8 +7,8 @@ update: 2024/08/23
 
 Whenever I tried using Linux, "Fuck Linux" was always how I ended up feeling. Despite giving it three tries over the years, I kept returning to Windows. This story is about my third experience, where I explored both Linux Mint and Ubuntu.
 
--   Ubuntu: `ubuntu-24.04-desktop-amd64.iso`
--   Linux Mint: `linuxmint-21.3-cinnamon-64bit.iso`
+- Ubuntu: `ubuntu-24.04-desktop-amd64.iso`
+- Linux Mint: `linuxmint-21.3-cinnamon-64bit.iso`
 
 ## From Linux Mint to Ubuntu
 
@@ -78,10 +78,10 @@ I use VSCode, and on Linux/Ubuntu, the shortcuts were different. [Terminal short
 
 The shortcuts and the behavior of keys and their features are different on Windows and Linux.
 
--   No (`ctrl` + `c`) to copy text.
--   No (`ctrl` + `v`) to paste text.
--   No (`ctrl` + `a`) to select input text. Only input text, not the whote output text.
--   No (`shift` + ArrowKeys) and (`ctrl` + `shift` + ArrowKeys) for text selection.
+- No (`ctrl` + `c`) to copy text.
+- No (`ctrl` + `v`) to paste text.
+- No (`ctrl` + `a`) to select input text. Only input text, not the whote output text.
+- No (`shift` + ArrowKeys) and (`ctrl` + `shift` + ArrowKeys) for text selection.
 
 I modified some Terminal configuration options, but the changes only applied to the Terminal app, not to the Bash environment I use in VSCode.
 
@@ -113,13 +113,13 @@ In my country, network speeds are slow and extremely expensive. Using over 1GB o
 
 I tried other Linux distributions during this third experience:
 
--   Fedora: I couldn't even get it to boot. Something was wrong with the ISO file (`Fedora-Workstation-Live-x86_64-40-1.14.iso`).
--   NixOS: It wouldn't boot either (`nixos-gnome-24.05.1503.752c634c09ce-x86_64-linux.iso`).
+- Fedora: I couldn't even get it to boot. Something was wrong with the ISO file (`Fedora-Workstation-Live-x86_64-40-1.14.iso`).
+- NixOS: It wouldn't boot either (`nixos-gnome-24.05.1503.752c634c09ce-x86_64-linux.iso`).
 
 ## What Others Say About Linux? (Honest Reviews)
 
--   [Linux Is a Garbage/Joke Of a OS Windows Is KING](https://www.youtube.com/watch?v=GZUujOCPJKE)
--   [Why Linux Sucks](https://www.youtube.com/watch?v=oTiztqndGco)
+- [Linux Is a Garbage/Joke Of a OS Windows Is KING](https://www.youtube.com/watch?v=GZUujOCPJKE)
+- [Why Linux Sucks](https://www.youtube.com/watch?v=oTiztqndGco)
 
 ## Last Words
 

@@ -8,4 +8,4 @@ In this context, transformers are functions that take a string as an argument an
 
 ## Built-in transformers
 
--   [Unified](/docs/mdx-svelte/unified)
+- [Unified](/docs/mdx-svelte/unified)

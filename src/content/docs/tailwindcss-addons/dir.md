@@ -11,7 +11,7 @@ title: Dir
 
 <UtilsTable {utilities} />
 
--   [`direction`](https://developer.mozilla.org/en-US/docs/Web/CSS/direction)
+- [`direction`](https://developer.mozilla.org/en-US/docs/Web/CSS/direction)
 
 ## Usage
 

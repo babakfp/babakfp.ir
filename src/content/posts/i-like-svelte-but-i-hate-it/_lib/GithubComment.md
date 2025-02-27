@@ -2,8 +2,8 @@
 
 Is my changes 100% accessible?😂 Such a silly question! Let me ask, is the Svelte site 100% accessible? Let me answer, it doesn't even cover the basics. Now I'm confused because I didn't see any PR's from you related to accessibility. Why is that?:
 
--   You don't know what accessibility is. Maybe you do because you sent me a wiki link about it😂.
--   You don't care about accessibility but you mention it in public.
+- You don't know what accessibility is. Maybe you do because you sent me a wiki link about it😂.
+- You don't care about accessibility but you mention it in public.
 
 Did you (@dummdidumm) look at the commits? I'm sure you didn't because then you would know that I know what the heck accessibility is and I spend a good time making sure that it's accessible. But you didn't bother yourself, did you?
 

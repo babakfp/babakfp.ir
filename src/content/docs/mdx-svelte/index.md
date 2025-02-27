@@ -45,17 +45,17 @@ I developed this project due to the issues and limitations with ["mdsvex"](https
 
 ### What does it address?
 
--   Built-in ["unified"](/docs/mdx-svelte/unified) transformer with good defaults.
--   Offers the flexibility to create custom [transformers](/docs/mdx-svelte/transformers).
--   Can [auto-import](/docs/mdx-svelte/auto-imports) files and components into Markdown files.
--   Built-in [`hastFromHtml`](/docs/mdx-svelte/unified/helpers#hastfromhtml) and [`isHrefExternal`](/docs/mdx-svelte/unified/helpers#ishrefexternal) "unified" utilities.
--   Eliminates annoying "was created with unknown prop" warnings.
--   Allows utilization of the native SvelteKit layouts (`+layout.svelte`).
--   Replace HTML elements with components using [tag name](/docs/mdx-svelte/customize-markdown-elements) or [CSS selectors](/docs/mdx-svelte/customize-markdown-elements#advanced).
--   Enables usage of any code highlighting libraries without encountering issues like the need to escape certain characters to prevent conflicts with Svelte syntax.
+- Built-in ["unified"](/docs/mdx-svelte/unified) transformer with good defaults.
+- Offers the flexibility to create custom [transformers](/docs/mdx-svelte/transformers).
+- Can [auto-import](/docs/mdx-svelte/auto-imports) files and components into Markdown files.
+- Built-in [`hastFromHtml`](/docs/mdx-svelte/unified/helpers#hastfromhtml) and [`isHrefExternal`](/docs/mdx-svelte/unified/helpers#ishrefexternal) "unified" utilities.
+- Eliminates annoying "was created with unknown prop" warnings.
+- Allows utilization of the native SvelteKit layouts (`+layout.svelte`).
+- Replace HTML elements with components using [tag name](/docs/mdx-svelte/customize-markdown-elements) or [CSS selectors](/docs/mdx-svelte/customize-markdown-elements#advanced).
+- Enables usage of any code highlighting libraries without encountering issues like the need to escape certain characters to prevent conflicts with Svelte syntax.
 
 ## Limitations
 
--   Only works in SvelteKit projects.
--   Prettier can't properly format Svelte code in Markdown files.
--   No IntelliSense support.
+- Only works in SvelteKit projects.
+- Prettier can't properly format Svelte code in Markdown files.
+- No IntelliSense support.

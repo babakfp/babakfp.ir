@@ -6,9 +6,9 @@ The options are passed to the `mdxPreprocess` function.
 
 ## `extensions`
 
--   Optional
--   Type: `string[]`
--   Default: `[".md"]`
+- Optional
+- Type: `string[]`
+- Default: `[".md"]`
 
 Include the extension of files to be preprocessed and transformed. Don't include the `.svelte` extension.
 
@@ -35,8 +35,8 @@ const config = {
 
 ## `elements`
 
--   Optional
--   Type: `string[] | { [x: string]: string[] }`
+- Optional
+- Type: `string[] | { [x: string]: string[] }`
 
 This option is useful for replacing markdown elements with custom components.
 
@@ -96,9 +96,9 @@ layout: posts
 
 ## `preprocessDependencies`
 
--   Optional
--   Type: `string[]`
--   Default: `[]`
+- Optional
+- Type: `string[]`
+- Default: `[]`
 
 Preprocess of the files located in the `node_modules` folder are disabled by default. Include the name of the packages to be preprocessed.
 
