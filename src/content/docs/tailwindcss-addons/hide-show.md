@@ -3,13 +3,33 @@ title: Hide & Show
 ---
 
 <script>
-	import UtilsTable from "$lib/components/UtilsTable.svelte"
-	import { getUtilities } from "$lib/utilities/tailwind.js"
-	import { hideShow } from "tailwindcss-addons"
-	const utilities = getUtilities(hideShow.handler);
+    import dedent from "dedent"
+    import ApiTable from "$lib/components/ApiTable.svelte"
+
+    const utilities = [
+        [
+            "hide",
+            dedent`
+                visibility: hidden;
+                opacity: 0;
+                pointer-events: none;
+            `,
+        ],
+        [
+            "show",
+            dedent`
+                visibility: visible;
+                opacity: 1;
+                pointer-events: auto;
+            `,
+        ],
+    ]
 </script>
 
-<UtilsTable {utilities} />
+<!-- prettier-ignore -->
+<ApiTable
+    rows={utilities}
+/>
 
 ## Usage
 

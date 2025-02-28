@@ -3,23 +3,66 @@ title: Scrollbar Color
 ---
 
 <script>
-    import UtilsTable from "$lib/components/UtilsTable.svelte"
-	const utilities = {
-		'.scrollbar-thumb-<color>': {
-            '--tw-scrollbar-thumb': '<value>',
-            'scrollbar-color': 'var(--tw-scrollbar-thumb) var(--tw-scrollbar-track)',
-        },
-        '.scrollbar-track-<color>': {
-            '--tw-scrollbar-track': '<value>',
-            'scrollbar-color': 'var(--tw-scrollbar-thumb) var(--tw-scrollbar-track)',
-        },
-	}
+    import dedent from "dedent"
+    import ApiTable from "$lib/components/ApiTable.svelte"
+
+    const utilities = [
+        [
+            "scrollbar-thumb-<theme-color>",
+            dedent`
+                --tw-scrollbar-thumb: var(--<theme-color>);
+                scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
+            `,
+        ],
+        [
+            "scrollbar-thumb-(<custom-property>)",
+            dedent`
+                --tw-scrollbar-thumb: var(<custom-property>);
+                scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
+            `,
+        ],
+        [
+            "scrollbar-thumb-[<arbitrary-value>]",
+            dedent`
+                --tw-scrollbar-thumb: <arbitrary-value>;
+                scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
+            `,
+        ],
+
+        [
+            "scrollbar-track-<theme-color>",
+            dedent`
+                --tw-scrollbar-track: var(--<theme-color>);
+                scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
+            `,
+        ],
+        [
+            "scrollbar-track-(<custom-property>)",
+            dedent`
+                --tw-scrollbar-track: var(<custom-property>);
+                scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
+            `,
+        ],
+        [
+            "scrollbar-track-[<arbitrary-value>]",
+            dedent`
+                --tw-scrollbar-track: [<arbitrary-value>];
+                scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-track);
+            `,
+        ],
+    ]
 </script>
 
-<UtilsTable {utilities} />
+<!-- prettier-ignore -->
+<ApiTable
+    rows={utilities}
+/>
 
 - [`scrollbar-color`](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-color)
 - [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+- [See all colors](https://tailwindcss.com/docs/colors)
+- [Changing the opacity](https://tailwindcss.com/docs/background-color#changing-the-opacity)
+- [Arbitrary values](https://tailwindcss.com/docs/background-color#arbitrary-values)
 
 ## Usage
 

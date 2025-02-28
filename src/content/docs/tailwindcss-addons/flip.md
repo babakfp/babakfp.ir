@@ -3,14 +3,24 @@ title: Flip
 ---
 
 <script>
-	import UtilsTable from "$lib/components/UtilsTable.svelte"
-	import { getUtilities } from "$lib/utilities/tailwind.js"
-	import { flip } from "tailwindcss-addons"
+    import ApiTable from "$lib/components/ApiTable.svelte"
     import Preview from "$lib/components/Preview.svelte"
-	const utilities = getUtilities(flip.handler);
+
+    const utilities = [
+        ["flip", "@apply scale-x-[-1] scale-y-[-1];"],
+        ["flip-x", "@apply scale-x-[-1];"],
+        ["flip-y", "@apply scale-y-[-1];"],
+    ]
 </script>
 
-<UtilsTable {utilities} />
+<!-- prettier-ignore -->
+<ApiTable
+    rows={utilities}
+/>
+
+- [Tailwind CSS: `scale`](https://tailwindcss.com/docs/scale)
+- [MDN Web Docs: `scale()
+`](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale)
 
 - [Point reflection](https://en.wikipedia.org/wiki/Point_reflection)
 
@@ -22,11 +32,10 @@ title: Flip
             <span class="text-gray-400 font-mono">...</span>
             <div class="border-t-2 border-l-2 border-gray-200 size-8"></div>
         </div>
-        {#each Object.keys(utilities) as classWithDot}
-            {@const class_ = classWithDot.replace(".", "")}
+        {#each Object.keys(utilities) as utility}
             <div class="grid gap-4 justify-items-center flex-1">
-                <span class="text-gray-400 font-mono">{classWithDot}</span>
-                <div class="border-t-2 border-l-2 border-gray-200 size-8 {class_}"></div>
+                <span class="text-gray-400 font-mono">.{utility}</span>
+                <div class="border-t-2 border-l-2 border-gray-200 size-8 {utility}"></div>
             </div>
         {/each}
     </div>

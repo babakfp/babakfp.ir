@@ -3,15 +3,33 @@ title: Reset Number Input
 ---
 
 <script>
-	import UtilsTable from '$lib/components/UtilsTable.svelte'
-	import { getUtilities } from "$lib/utilities/tailwind.js"
-    import { resetNumberInput } from "tailwindcss-addons"
-    const utilities = getUtilities(resetNumberInput().handler);
+    import dedent from "dedent"
+    import ApiTable from "$lib/components/ApiTable.svelte"
+    
+    const utilities = [
+        [
+            "reset-number-input",
+            dedent`
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    /* Using \`display: none\` crashes Chrome on hover. */
+                    -webkit-appearance: none;
+                    /* Apparently some margin are still there even though it's hidden. */
+                    margin: 0;
+                    /* Firefox. */
+                    -moz-appearance: textfield;
+                }
+            `,
+        ],
+    ]
 </script>
 
 Removes the arrows from number inputs.
 
-<UtilsTable {utilities} />
+<!-- prettier-ignore -->
+<ApiTable
+    rows={utilities}
+/>
 
 ## Usage
 
@@ -43,18 +61,6 @@ export default {
 }
 ```
 
-## Options
+## Preflight
 
-```ts
-function resetNumberInput(options?: { base?: boolean })
-```
-
-### `base`
-
-If set to `true` the `reset-number-input` class gets included in the base styles as:
-
-```css
-input[type="number"] {
-    @apply reset-number-input;
-}
-```
+TODO

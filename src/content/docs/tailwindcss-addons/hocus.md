@@ -3,24 +3,38 @@ title: Hocus Variants
 ---
 
 <script>
-	import UtilsTable from "$lib/components/UtilsTable.svelte"
-	const utilities = {
-		".hocus": {
-			"&:hover": "",
-			"&:focus": "",
-		},
-		".hocus-within": {
-			"&:hover": "",
-			"&:focus-within": "",
-		},
-		".hocus-visible": {
-			"&:hover": "",
-			"&:focus-visible": "",
-		},
-	}
+    import dedent from "dedent"
+    import ApiTable from "$lib/components/ApiTable.svelte"
+
+    const utilities = [
+        [
+            "hocus",
+            dedent`
+                &:hover,
+                &:focus
+            `,
+        ],
+        [
+            "hocus-within",
+            dedent`
+                &:hover,
+                &:focus-within
+            `,
+        ],
+        [
+            "hocus-visible",
+            dedent`
+                &:hover,
+                &:focus-visible
+            `,
+        ],
+    ]
 </script>
 
-<UtilsTable {utilities} />
+<!-- prettier-ignore -->
+<ApiTable
+    rows={utilities}
+/>
 
 ## Usage
 

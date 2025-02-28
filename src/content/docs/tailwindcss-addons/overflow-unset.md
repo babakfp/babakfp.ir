@@ -3,13 +3,17 @@ title: Overflow Unset
 ---
 
 <script>
-	import UtilsTable from "$lib/components/UtilsTable.svelte"
-	import { getUtilities } from "$lib/utilities/tailwind.js"
-	import { overflowUnset } from "tailwindcss-addons"
-	const utilities = getUtilities(overflowUnset.handler);
+    import ApiTable from "$lib/components/ApiTable.svelte"
 </script>
 
-<UtilsTable {utilities} />
+<!-- prettier-ignore -->
+<ApiTable
+    rows={[
+        ["overflow-unset", "overflow: unset;"],
+        ["overflow-y-unset", "overflow-y: unset;"],
+        ["overflow-x-unset", "overflow-x: unset;"],
+    ]}
+/>
 
 > [!NOTE]
 > How is this userful? I don't remember. Feel free to open an issue or PR if you know.

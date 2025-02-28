@@ -3,12 +3,43 @@ title: Background Grid
 ---
 
 <script>
+    import dedent from "dedent"
+    import ApiTable from "$lib/components/ApiTable.svelte"
     import Preview from "$lib/components/Preview.svelte"
+
+    const utilities = [
+        [
+            "bg-grid-<theme-color>",
+            dedent`
+                background-size: var(--tw-bg-grid-w, 32px) var(--tw-bg-grid-h, 32px);
+                background-image: linear-gradient(to right, var(--<theme-color>) var(--tw-bg-grid-border-w, 1px), transparent 0px), linear-gradient( to bottom, var(--<theme-color>) var(--tw-bg-grid-border-w, 1px), transparent 0px);
+            `,
+        ],
+        [
+            "bg-grid-(<custom-property>)",
+            dedent`
+                background-size: var(--tw-bg-grid-w, 32px) var(--tw-bg-grid-h, 32px);
+                background-image: linear-gradient(to right, var(<custom-property>) var(--tw-bg-grid-border-w, 1px), transparent 0px), linear-gradient( to bottom, var(<custom-property>) var(--tw-bg-grid-border-w, 1px), transparent 0px);
+            `,
+        ],
+        [
+            "bg-grid-[<arbitrary-value>]",
+            dedent`
+                background-size: var(--tw-bg-grid-w, 32px) var(--tw-bg-grid-h, 32px);
+                background-image: linear-gradient(to right, <arbitrary-value> var(--tw-bg-grid-border-w, 1px), transparent 0px), linear-gradient( to bottom, <arbitrary-value> var(--tw-bg-grid-border-w, 1px), transparent 0px);
+            `,
+        ],
+    ]
 </script>
 
 ## Examples
 
 ### Basic
+
+<!-- prettier-ignore -->
+<ApiTable
+    rows={utilities}
+/>
 
 <Preview useGrid={false}>
     <div class="h-32 bg-grid-gray-800"></div>
@@ -17,14 +48,6 @@ title: Background Grid
 <!-- prettier-ignore -->
 ```svelte /bg-grid-gray-800/
 <div class="bg-grid-gray-800 ..." />
-```
-
-<!-- prettier-ignore -->
-```css
-.bg-grid-COLOR: {
-    background-size: var(--tw-bg-grid-w, 32px) var(--tw-bg-grid-h, 32px);
-    background-image: linear-gradient(to right, COLOR var(--tw-bg-grid-border-w, 1px), transparent 0px), linear-gradient( to bottom, COLOR var(--tw-bg-grid-border-w, 1px), transparent 0px);
-}
 ```
 
 - [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)

@@ -15,6 +15,7 @@
         "@tailwindcss/vite": "4.0.9",
         "autoprefixer": "10.4.20",
         "clsx": "2.1.1",
+        "dedent": "1.5.3",
         "mdx-collections-svelte": "2.0.0",
         "mdx-svelte": "4.1.0",
         "prettier": "3.4.2",

@@ -3,15 +3,30 @@ title: Reset Search Input
 ---
 
 <script>
-	import UtilsTable from '$lib/components/UtilsTable.svelte'
-	import { getUtilities } from "$lib/utilities/tailwind.js"
-    import { resetSearchInput } from "tailwindcss-addons"
-    const utilities = getUtilities(resetSearchInput().handler);
+    import dedent from "dedent"
+    import ApiTable from "$lib/components/ApiTable.svelte"
+
+    const utilities = [
+        [
+            "reset-search-input",
+            dedent`
+                &::-webkit-search-decoration,
+                &::-webkit-search-cancel-button,
+                &::-webkit-search-results-button,
+                &::-webkit-search-results-decoration {
+                    -webkit-appearance: none;
+                }
+            `,
+        ],
+    ]
 </script>
 
 Removed the x from search inputs.
 
-<UtilsTable {utilities} />
+<!-- prettier-ignore -->
+<ApiTable
+    rows={utilities}
+/>
 
 ## Usage
 
@@ -43,18 +58,6 @@ export default {
 }
 ```
 
-## Options
+## Preflight
 
-```ts
-function resetSearchInput(options?: { base?: boolean })
-```
-
-### `base`
-
-If set to `true` the `reset-search-input` class gets included in the base styles as:
-
-```css
-input[type="search"] {
-    @apply reset-search-input;
-}
-```
+TODO

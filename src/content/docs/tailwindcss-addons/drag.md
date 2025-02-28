@@ -3,13 +3,17 @@ title: Drag
 ---
 
 <script>
-    import UtilsTable from "$lib/components/UtilsTable.svelte"
-    import { getUtilities } from "$lib/utilities/tailwind.js"
-    import { drag } from "tailwindcss-addons"
-    const utilities = getUtilities(drag.handler);
+    import ApiTable from "$lib/components/ApiTable.svelte"
 </script>
 
-<UtilsTable {utilities} />
+<!-- prettier-ignore -->
+<ApiTable
+    rows={[
+        ["drag-none", "-webkit-user-drag: none;"],
+        ["drag-element", "-webkit-user-drag: element;"],
+        ["drag-auto", "-webkit-user-drag: auto;"],
+    ]}
+/>
 
 - [Can I use `-webkit-user-drag`?](https://caniuse.com/webkit-user-drag)
 

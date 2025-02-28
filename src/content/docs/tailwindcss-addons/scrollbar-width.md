@@ -3,13 +3,17 @@ title: Scrollbar Width
 ---
 
 <script>
-    import UtilsTable from "$lib/components/UtilsTable.svelte"
-    import { getUtilities } from "$lib/utilities/tailwind.js"
-    import { scrollbarWidth } from "tailwindcss-addons"
-    const utilities = getUtilities(scrollbarWidth.handler);
+    import ApiTable from "$lib/components/ApiTable.svelte"
 </script>
 
-<UtilsTable {utilities} />
+<!-- prettier-ignore -->
+<ApiTable
+    rows={[
+        ["scrollbar-auto", "scrollbar-width: auto;"],
+        ["scrollbar-thin", "scrollbar-width: thin;"],
+        ["scrollbar-none", "scrollbar-width: none;"],
+    ]}
+/>
 
 - [`scrollbar-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-width)
 

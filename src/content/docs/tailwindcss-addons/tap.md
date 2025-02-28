@@ -3,18 +3,20 @@ title: Tap
 ---
 
 <script>
-	import UtilsTable from '$lib/components/UtilsTable.svelte'
-	const utilities = {
-		'.tap-<color>': {
-			'-webkit-tap-highlight-color': '<value>',
-		}
-	}
+    import ApiTable from "$lib/components/ApiTable.svelte"
 </script>
 
-<UtilsTable {utilities} />
+<!-- prettier-ignore -->
+<ApiTable
+    rows={[
+        ["tap-<theme-color>", "-webkit-tap-highlight-color: var(--<theme-color>);"],
+        ["tap-(<custom-property>)", "-webkit-tap-highlight-color: var(<custom-property>);"],
+        ["bg-[<arbitrary-value>]", "-webkit-tap-highlight-color: <arbitrary-value>;"],
+    ]}
+/>
 
 - [What is `-webkit-tap-highlight-color`?](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-tap-highlight-color)
-- [See all colors](https://tailwindcss.com/docs/customizing-colors)
+- [See all colors](https://tailwindcss.com/docs/colors)
 - [Changing the opacity](https://tailwindcss.com/docs/background-color#changing-the-opacity)
 - [Arbitrary values](https://tailwindcss.com/docs/background-color#arbitrary-values)
 
