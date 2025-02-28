@@ -54,40 +54,6 @@
 }
 
 @layer base {
-    ::-webkit-scrollbar {
-        @apply bg-gray-800;
-        &-thumb {
-            @apply border-solid border-transparent bg-gray-700 bg-clip-padding hover:bg-gray-600;
-        }
-    }
-
-    ::-webkit-scrollbar {
-        &:vertical {
-            @apply h-2.5 w-1.5;
-        }
-        &:horizontal {
-            @apply h-1.5 w-2.5;
-        }
-    }
-
-    ::-webkit-scrollbar-thumb {
-        &:vertical {
-            @apply border-x-2 border-y-0;
-        }
-        &:horizontal {
-            @apply border-x-0 border-y-2;
-        }
-    }
-
-    body::-webkit-scrollbar:vertical {
-        @apply w-3;
-    }
-    body::-webkit-scrollbar-thumb:vertical {
-        @apply border-x-4;
-    }
-}
-
-@layer base {
     :root {
         --header-height: --spacing(16);
         --svh-no-header: calc(theme(height.svh) - var(--header-height));
@@ -312,10 +278,6 @@
 
             [data-line] {
                 @apply px-4;
-            }
-
-            &::-webkit-scrollbar {
-                @apply bg-transparent;
             }
         }
     }

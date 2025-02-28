@@ -18,7 +18,7 @@
 </script>
 
 <nav
-    class="{class_} sticky top-(--header-height) max-h-(--svh-no-header) max-w-72 min-w-72 overflow-y-auto overscroll-y-contain pt-(--main-pt) pb-(--main-pb) [&::-webkit-scrollbar]:w-0"
+    class="{class_} sticky top-(--header-height) max-h-(--svh-no-header) max-w-72 min-w-72 overflow-y-auto overscroll-y-contain pt-(--main-pt) pb-(--main-pb)"
 >
     <ul class="text-gray-300">
         {#each headings as heading}

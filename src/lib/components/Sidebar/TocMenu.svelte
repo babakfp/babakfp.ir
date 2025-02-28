@@ -29,7 +29,6 @@
         toggleButtonId="{name}-toc-menu-toggle"
         ariaLabel="{name.charAt(0).toUpperCase() +
             name.slice(1)} (on this page) menu"
-        hideScrollbar={true}
     >
         <ul>
             {#each headings as heading}

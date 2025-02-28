@@ -12,7 +12,7 @@
 </script>
 
 <div class="relative">
-    <div class="table-wrapper overflow-x-auto">
+    <div class="overflow-x-auto">
         <table
             class="w-full border-collapse text-left text-sm whitespace-nowrap"
         >
@@ -64,8 +64,4 @@
 
 	thead th div, tbody td { @apply py-3 px-4 }
 	tbody tr:first-of-type td { @apply pt-4 }
-
-	.table-wrapper::-webkit-scrollbar { @apply h-4 bg-gray-50/5 rounded-full;
-		&-thumb { @apply border-[6px] border-gray-200 rounded-full }
-	}
 </style>

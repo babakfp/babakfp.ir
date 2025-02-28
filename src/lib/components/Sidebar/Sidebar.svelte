@@ -10,7 +10,6 @@
         toggleButtonId,
         ariaLabel,
         class: class_,
-        hideScrollbar,
         children,
     }: {
         isOpen?: boolean
@@ -18,7 +17,6 @@
         toggleButtonId: string
         ariaLabel: string
         class?: string
-        hideScrollbar?: boolean
         children: Snippet
     } = $props()
 
@@ -53,12 +51,11 @@
     {id}
     class="
 		{class_}
-		{hideScrollbar && '[&::-webkit-scrollbar]:w-0!'}
 		sidebar fixed top-(--header-height) right-14 bottom-0 left-0 z-40 -translate-x-full overflow-y-auto overscroll-y-contain bg-gray-900 pt-(--main-pt) pb-(--main-pb) duration-200
 		{isOpen && 'translate-x-0'}
 		sm:w-72
         xl:sticky
-		xl:right-auto xl:bottom-auto xl:z-0 xl:max-h-(--svh-no-header) xl:translate-x-0 xl:[&::-webkit-scrollbar]:bg-gray-50/5
+		xl:right-auto xl:bottom-auto xl:z-0 xl:max-h-(--svh-no-header) xl:translate-x-0
 	"
     onOutClick={() => (isOpen = false)}
     excludeQuerySelectorAll="#{toggleButtonId}, #{id}-backdrop"
