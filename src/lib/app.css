@@ -1,6 +1,12 @@
 @import "tailwindcss";
 @import "tailwindcss-addons";
 
+@layer base {
+    * {
+        @apply scrollbar-none;
+    }
+}
+
 @theme {
     --color-gray-50: var(--color-zinc-50);
     --color-gray-100: var(--color-zinc-100);
