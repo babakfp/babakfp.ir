@@ -8,7 +8,7 @@
         utilities: object
     } = $props()
 
-    const theadItems = ["Class", "Properties"]
+    const theadItems = ["Class", "Styles"]
 </script>
 
 <div class="relative">
