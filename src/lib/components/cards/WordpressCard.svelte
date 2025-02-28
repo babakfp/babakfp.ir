@@ -25,7 +25,7 @@
     <div class="mt-2 flex items-center gap-4 sm:mt-0">
         <div class="relative">
             <img
-                class="aspect-square w-20 min-w-20 drop-shadow"
+                class="aspect-square w-20 min-w-20 drop-shadow-sm"
                 src={thumb}
                 alt={title}
                 loading="lazy"

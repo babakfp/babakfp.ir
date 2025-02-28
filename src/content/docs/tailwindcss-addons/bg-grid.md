@@ -48,12 +48,12 @@ title: Background Grid
 ### Shadow
 
 <Preview useGrid={false}>
-    <div class="h-32 bg-grid-gray-800 bg-center shadow-[inset_0_0_4rem_2rem_theme(colors.gray.900)]"></div>
+    <div class="h-32 bg-grid-gray-800 bg-center shadow-[inset_0_0_4rem_2rem_var(--color-gray-900)]"></div>
 </Preview>
 
 <!-- prettier-ignore -->
-```svelte /shadow-[inset_0_0_4rem_2rem_theme(colors.gray.900)]/
-<div class="bg-center shadow-[inset_0_0_4rem_2rem_theme(colors.gray.900)] bg-grid-gray-800 ..." />
+```svelte /shadow-[inset_0_0_4rem_2rem_var(--color-gray-900)]/
+<div class="bg-center shadow-[inset_0_0_4rem_2rem_var(--color-gray-900)] bg-grid-gray-800 ..." />
 ```
 
 - [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)

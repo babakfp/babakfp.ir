@@ -16,7 +16,7 @@
 </script>
 
 <a
-    class="{class_} group relative block overflow-hidden rounded bg-gray-50 bg-opacity-5 p-4 shadow duration-200 highlight-gray-50/10 hover:bg-opacity-10 sm:p-6"
+    class="{class_} highlight-gray-50/10 group relative block overflow-hidden rounded bg-gray-50/5 p-4 shadow-sm duration-200 hover:bg-gray-50/10 sm:p-6"
     {href}
     target={isExternal ? "_blank" : null}
 >
@@ -24,7 +24,7 @@
 
     {#if isExternal}
         <div
-            class="absolute right-0 top-0 flex -translate-x-4 translate-y-4 text-gray-400 sm:-translate-y-full sm:translate-x-full sm:scale-0 sm:duration-200 sm:group-hover:-translate-x-4 sm:group-hover:translate-y-4 sm:group-hover:scale-100"
+            class="absolute top-0 right-0 flex -translate-x-4 translate-y-4 text-gray-400 sm:-translate-y-full sm:translate-x-full sm:scale-0 sm:duration-200 sm:group-hover:-translate-x-4 sm:group-hover:translate-y-4 sm:group-hover:scale-100"
         >
             <IconArrowUpRightSquare />
         </div>

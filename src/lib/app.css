@@ -1,6 +1,57 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "tailwindcss-addons";
+
+@theme {
+    --color-gray-50: var(--color-zinc-50);
+    --color-gray-100: var(--color-zinc-100);
+    --color-gray-200: var(--color-zinc-200);
+    --color-gray-300: var(--color-zinc-300);
+    --color-gray-400: var(--color-zinc-400);
+    --color-gray-500: var(--color-zinc-500);
+    --color-gray-600: var(--color-zinc-600);
+    --color-gray-700: var(--color-zinc-700);
+    --color-gray-800: var(--color-zinc-800);
+    --color-gray-900: var(--color-zinc-900);
+    --color-gray-950: var(--color-zinc-950);
+
+    --color-brand-50: var(--color-indigo-50);
+    --color-brand-100: var(--color-indigo-100);
+    --color-brand-200: var(--color-indigo-200);
+    --color-brand-300: var(--color-indigo-300);
+    --color-brand-400: var(--color-indigo-400);
+    --color-brand-500: var(--color-indigo-500);
+    --color-brand-600: var(--color-indigo-600);
+    --color-brand-700: var(--color-indigo-700);
+    --color-brand-800: var(--color-indigo-800);
+    --color-brand-900: var(--color-indigo-900);
+    --color-brand-950: var(--color-indigo-950);
+
+    --radius: var(--radius-lg);
+
+    --font-sans: "Recursive Variable";
+    --font-mono: "Recursive Variable";
+    --font-mono--font-feature-settings: "'MONO' 1";
+
+    --font-weight-thin: initial;
+    --font-weight-extralight: initial;
+    --font-weight-normal: initial;
+    --font-weight-medium: initial;
+    --font-weight-extrabold: initial;
+}
+
+@utility container {
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+@utility highlight-* {
+    --opacity: --modifier(integer);
+    --tw-highlight: inset 0 1px 0 0
+        --alpha(--value(--color- *, [color]) / var(--opacity, 100%));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
+        var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow),
+        var(--tw-highlight);
+}
 
 @layer base {
     ::-webkit-scrollbar {
@@ -38,16 +89,16 @@
 
 @layer base {
     :root {
-        --header-height: theme(spacing.16);
+        --header-height: --spacing(16);
         --svh-no-header: calc(theme(height.svh) - var(--header-height));
-        --main-pt: theme(spacing.12);
-        --main-pb: theme(spacing.20);
+        --main-pt: --spacing(12);
+        --main-pb: --spacing(20);
     }
     ::selection {
         @apply bg-brand-600/60;
     }
     * {
-        @apply scroll-mt-[calc(var(--header-height)+theme(spacing.8))] outline-none drag-none;
+        @apply drag-none scroll-mt-[calc(var(--header-height)+(--spacing(8)))];
     }
     b,
     strong,
@@ -65,225 +116,218 @@
     }
 }
 
-@layer utilities {
-    .font-title {
-        @apply font-black uppercase;
-    }
+@utility font-title {
+    @apply font-black uppercase;
 }
 
 /* Outline */
 @layer base {
     * {
-        @apply outline-none outline outline-2 focus-visible:outline-brand-400;
+        @apply focus-visible:outline-brand-400 outline-2 outline-transparent;
     }
     a {
         @apply outline-dashed;
     }
 }
 
-@layer components {
-    .header-btn {
-        @apply flex h-full items-center px-4 outline-inset;
-    }
+@utility header-btn {
+    @apply outline-inset flex h-full items-center px-4;
+}
+
+@layer base {
     a.header-btn,
     button.header-btn {
         @apply duration-100 hover:bg-gray-50/10 hover:text-gray-50;
     }
 }
 
-@layer components {
-    .link {
-        @apply break-words text-brand-300 underline decoration-transparent decoration-2 duration-75 hover:text-brand-100;
-    }
+@utility link {
+    @apply text-brand-300 hover:text-brand-100 break-words underline decoration-transparent decoration-2 duration-75;
 }
 
-@layer components {
-    .btn {
-        @apply relative inline-flex items-center justify-center gap-2 rounded bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-50 duration-100 drag-none highlight-gray-50/10 hover:bg-gray-700;
-    }
-    .btn-icon {
-        @apply h-9 w-9 p-0 text-gray-400 hover:text-gray-50;
-    }
-    .btn-primary {
-        @apply bg-brand-600 text-brand-50 hover:bg-brand-500;
-    }
+@utility btn {
+    @apply drag-none highlight-gray-50/10 relative inline-flex items-center justify-center gap-2 rounded bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-50 duration-100 hover:bg-gray-700;
 }
 
-@layer utilities {
-    .outline-inset {
-        @apply -outline-offset-2;
-    }
+@utility btn-icon {
+    @apply h-9 w-9 p-0 text-gray-400 hover:text-gray-50;
 }
 
-@layer components {
-    .article-content {
-        --md-base-mt: theme(spacing.6);
-        --md-title-mt: theme(spacing.10);
+@utility btn-primary {
+    @apply bg-brand-600 text-brand-50 hover:bg-brand-500;
+}
 
-        @apply space-y-[--md-base-mt] leading-7;
+@utility outline-inset {
+    @apply -outline-offset-2;
+}
 
-        /* prettier-ignore */
-        h1, h2, h3, h4, h5, h6 {
+@utility article-content {
+    --md-base-mt: --spacing(6);
+    --md-title-mt: --spacing(10);
+
+    @apply space-y-(--md-base-mt) leading-7;
+
+    /* prettier-ignore */
+    h1, h2, h3, h4, h5, h6 {
             @apply break-words text-gray-50;
             code {
                 @apply [text-transform:none];
             }
         }
 
-        /* prettier-ignore */
-        h2, h3, h4, h5, h6 {
-            @apply !mt-[--md-title-mt] font-bold;
+    /* prettier-ignore */
+    h2, h3, h4, h5, h6 {
+            @apply mt-(--md-title-mt)! font-bold;
         }
 
-        h1 {
-            @apply font-title text-5xl sm:text-6xl;
-        }
-        h2 {
-            @apply border-b border-gray-50/10 pb-2 text-3xl sm:text-4xl;
-        }
-        h3 {
-            @apply text-xl sm:text-2xl;
-        }
-        h4 {
-            @apply text-base sm:text-lg;
-        }
-        h5 {
-            @apply text-sm;
-        }
+    h1 {
+        @apply font-title text-5xl sm:text-6xl;
+    }
+    h2 {
+        @apply border-b border-gray-50/10 pb-2 text-3xl sm:text-4xl;
+    }
+    h3 {
+        @apply text-xl sm:text-2xl;
+    }
+    h4 {
+        @apply text-base sm:text-lg;
+    }
+    h5 {
+        @apply text-sm;
+    }
 
-        /* prettier-ignore */
-        h2, h3, h4, h5, h6 {
+    /* prettier-ignore */
+    h2, h3, h4, h5, h6 {
             @apply relative [&:hover_.heading-permalink]:show;
         }
-        .heading-permalink {
-            @apply absolute text-[1em] delay-300 duration-300 hide;
-        }
+    .heading-permalink {
+        @apply hide absolute text-[1em] delay-300 duration-300;
+    }
 
-        p strong {
-            @apply font-bold underline decoration-double decoration-[1.6px] underline-offset-[6px];
-        }
+    p strong {
+        @apply font-bold underline decoration-double decoration-[1.6px] underline-offset-[6px];
+    }
 
-        a:not(.btn) {
-            @apply link;
+    a:not(.btn) {
+        @apply link;
+    }
+    hr {
+        @apply my-8!;
+    }
+
+    ul,
+    ol {
+        @apply list-inside space-y-2;
+        ul,
+        ol {
+            @apply ml-6;
         }
-        hr {
-            @apply !my-8;
-        }
+    }
+    ul {
+        @apply list-disc;
+    }
+    ol {
+        @apply list-decimal;
+    }
+    li {
+        @apply space-y-4 leading-6;
 
         ul,
         ol {
-            @apply list-inside space-y-2;
-            ul,
-            ol {
-                @apply ml-6;
-            }
-        }
-        ul {
-            @apply list-disc;
-        }
-        ol {
-            @apply list-decimal;
-        }
-        li {
-            @apply space-y-4 leading-6;
-
-            ul,
-            ol {
-                @apply my-4;
-            }
-
-            > p:first-child {
-                @apply inline-block;
-            }
+            @apply my-4;
         }
 
-        img,
-        video {
-            @apply rounded;
+        > p:first-child {
+            @apply inline-block;
         }
+    }
 
-        img:not([inline]),
-        video {
-            @apply border-4 border-gray-50/5 bg-gray-50/5;
-        }
+    img,
+    video {
+        @apply rounded;
+    }
 
-        video {
-            @apply w-full;
-        }
+    img:not([inline]),
+    video {
+        @apply border-4 border-gray-50/5 bg-gray-50/5;
+    }
 
+    video {
+        @apply w-full;
+    }
+
+    blockquote {
+        @apply relative rounded bg-gray-400/5 p-4 shadow-xs shadow-gray-400/20;
         blockquote {
-            @apply relative rounded bg-gray-400/5 p-4 shadow-sm shadow-gray-400/20;
-            blockquote {
-                @apply -mr-3 mt-[--md-base-mt] sm:mr-0;
+            @apply mt-(--md-base-mt) -mr-3 sm:mr-0;
+        }
+    }
+
+    [data-highlighted-chars] {
+        @apply selection:bg-brand-600/50 bg-gray-50/10 p-1 text-[.9em];
+    }
+
+    code span {
+        @apply not-italic!;
+    }
+
+    code [data-line].remove {
+        @apply bg-[#f47067]/10;
+    }
+    code [data-line].add {
+        @apply bg-[#8ddb8c]/10;
+    }
+
+    code:not(pre code) {
+        @apply selection:bg-brand-600/50 rounded-md bg-gray-50/10 px-1.5 py-0.5 text-[.9em] select-text;
+    }
+
+    code[data-line-numbers] {
+        counter-reset: line;
+    }
+
+    code[data-line-numbers] > [data-line]::before {
+        counter-increment: line;
+        content: counter(line);
+        @apply mr-8 inline-block w-3 text-right text-gray-50/10;
+    }
+
+    code[data-line-numbers-max-digits="2"] > [data-line]::before {
+        @apply w-5;
+    }
+
+    code[data-line-numbers-max-digits="3"] > [data-line]::before {
+        @apply w-7;
+    }
+
+    code[data-line-numbers-max-digits="4"] > [data-line]::before {
+        @apply w-9;
+    }
+
+    pre {
+        @apply -mx-4 bg-gray-50/5! text-sm [tab-size:4] selection:bg-gray-50/10 sm:mx-0 sm:rounded sm:p-0.5;
+
+        code {
+            @apply block overflow-x-auto py-4 leading-8 select-text;
+
+            [data-line] {
+                @apply px-4;
+            }
+
+            &::-webkit-scrollbar {
+                @apply bg-transparent;
             }
         }
+    }
 
-        [data-highlighted-chars] {
-            @apply bg-gray-50/10 p-1 text-[.9em] selection:bg-brand-600/50;
-        }
+    .remark-github-alerts {
+        @apply border-l-3 pt-4 pl-6;
 
-        code span {
-            @apply !not-italic;
-        }
+        .remark-github-alerts-title {
+            @apply mb-4;
 
-        code [data-line].remove {
-            @apply bg-[#f47067]/10;
-        }
-        code [data-line].add {
-            @apply bg-[#8ddb8c]/10;
-        }
-
-        code:not(pre code) {
-            @apply select-text rounded-md bg-gray-50/10 px-1.5 py-0.5 text-[.9em] selection:bg-brand-600/50;
-        }
-
-        code[data-line-numbers] {
-            counter-reset: line;
-        }
-
-        code[data-line-numbers] > [data-line]::before {
-            counter-increment: line;
-            content: counter(line);
-            @apply mr-8 inline-block w-3 text-right text-gray-50/10;
-        }
-
-        code[data-line-numbers-max-digits="2"] > [data-line]::before {
-            @apply w-5;
-        }
-
-        code[data-line-numbers-max-digits="3"] > [data-line]::before {
-            @apply w-7;
-        }
-
-        code[data-line-numbers-max-digits="4"] > [data-line]::before {
-            @apply w-9;
-        }
-
-        pre {
-            @apply -mx-4 !bg-gray-50/5 text-sm [tab-size:4] selection:bg-gray-50/10 sm:mx-0 sm:rounded sm:p-0.5;
-
-            code {
-                @apply block select-text overflow-x-auto py-4 leading-8;
-
-                [data-line] {
-                    @apply px-4;
-                }
-
-                &::-webkit-scrollbar {
-                    @apply bg-transparent;
-                }
-            }
-        }
-
-        .remark-github-alerts {
-            @apply border-l-3 pl-6 pt-4;
-
-            .remark-github-alerts-title {
-                @apply mb-4;
-
-                svg {
-                    @apply text-xl;
-                }
+            svg {
+                @apply text-xl;
             }
         }
     }
@@ -291,9 +335,9 @@
 
 .toaster {
     .base {
-        @apply !bg-gray-800 !pl-4 !highlight-gray-50/10;
+        @apply highlight-gray-50/10! bg-gray-800! pl-4!;
     }
     .message {
-        @apply text-sm !text-gray-300;
+        @apply text-sm text-gray-300!;
     }
 }

@@ -31,7 +31,7 @@
 </svelte:head>
 
 <main
-    class="container max-w-screen-xl xl:grid xl:grid-cols-[auto_1fr_auto] xl:gap-12"
+    class="container max-w-(--breakpoint-xl) xl:grid xl:grid-cols-[auto_1fr_auto] xl:gap-12"
 >
     <DocsMenu
         class="xl:border-r xl:border-gray-50/5"
@@ -39,7 +39,7 @@
     />
 
     <article
-        class="article-content mx-auto max-w-prose pb-[--main-pb] pt-[--main-pt] xl:mx-0 xl:min-h-[--svh-no-header]"
+        class="article-content mx-auto max-w-prose pt-(--main-pt) pb-(--main-pb) xl:mx-0 xl:min-h-(--svh-no-header)"
     >
         {#if data.frontmatter.title}
             <h1>{data.frontmatter.title}</h1>
@@ -56,7 +56,7 @@
 
 {#if !isTocOpen}
     <button
-        class="btn fixed bottom-16 right-4 xl:!hidden"
+        class="btn fixed right-4 bottom-16 xl:hidden!"
         onclick={() => (isTocOpen = true)}
     >
         <IconList class="text-xl" />
@@ -65,7 +65,7 @@
 
 {#if !isMenuOpen}
     <button
-        class="btn fixed bottom-28 right-4 xl:!hidden"
+        class="btn fixed right-4 bottom-28 xl:hidden!"
         onclick={() => (isMenuOpen = true)}
     >
         <IconBarsBottomRight class="text-xl" />

@@ -20,13 +20,13 @@ title: Flip
     <div class="flex flex-wrap gap-8">
         <div class="grid gap-4 justify-items-center flex-1">
             <span class="text-gray-400 font-mono">...</span>
-            <div class="border-t-2 border-l-2 size-8"></div>
+            <div class="border-t-2 border-l-2 border-gray-200 size-8"></div>
         </div>
         {#each Object.keys(utilities) as classWithDot}
             {@const class_ = classWithDot.replace(".", "")}
             <div class="grid gap-4 justify-items-center flex-1">
                 <span class="text-gray-400 font-mono">{classWithDot}</span>
-                <div class="border-t-2 border-l-2 size-8 {class_}"></div>
+                <div class="border-t-2 border-l-2 border-gray-200 size-8 {class_}"></div>
             </div>
         {/each}
     </div>

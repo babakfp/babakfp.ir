@@ -30,10 +30,10 @@
 </svelte:head>
 
 <main
-    class="container max-w-screen-xl xl:grid xl:grid-cols-[1fr_auto] xl:gap-12 xl:pl-8"
+    class="container max-w-(--breakpoint-xl) xl:grid xl:grid-cols-[1fr_auto] xl:gap-12 xl:pl-8"
 >
     <article
-        class="mx-auto max-w-prose pb-[--main-pb] pt-[--main-pt] xl:mx-0 xl:min-h-[--svh-no-header] xl:max-w-none"
+        class="mx-auto max-w-prose pt-(--main-pt) pb-(--main-pb) xl:mx-0 xl:min-h-(--svh-no-header) xl:max-w-none"
     >
         <ul class="flex items-center gap-2 text-sm">
             <li>
@@ -68,7 +68,7 @@
 
         <div class="article-content">
             {#if data.frontmatter.title}
-                <h1 class="mt-[--md-title-mt]">
+                <h1 class="mt-(--md-title-mt)">
                     {data.frontmatter.title}
                 </h1>
             {/if}
@@ -86,7 +86,7 @@
 {#if !isTocOpen}
     <button
         id="open-mobile-toc"
-        class="btn fixed bottom-16 right-4 xl:!hidden"
+        class="btn fixed right-4 bottom-16 xl:hidden!"
         onclick={() => (isTocOpen = true)}
     >
         <IconList class="text-xl" />

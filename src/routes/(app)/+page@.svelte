@@ -12,13 +12,13 @@
     />
 </svelte:head>
 
-<div class="container max-w-screen-xl">
+<div class="container max-w-(--breakpoint-xl)">
     <main
-        class="grid min-h-[--svh-no-header] content-center border-x border-dashed border-gray-800 px-6 pb-[--main-pb] pt-[--main-pt] shadow-[inset_0_0_4rem_2rem_theme(colors.gray.900)] bg-grid-gray-800/25"
+        class="bg-grid-gray-800/25 grid min-h-(--svh-no-header) content-center border-x border-dashed border-gray-800 px-6 pt-(--main-pt) pb-(--main-pb) shadow-[inset_0_0_4rem_2rem_var(--color-gray-900)]"
     >
         <div class="relative">
             <div
-                class="absolute z-0 size-1/2 bg-gray-900 shadow-[0_0_4rem_2rem_theme(colors.gray.900)] inset-center"
+                class="inset-center absolute z-0 size-1/2 bg-gray-900 shadow-[0_0_4rem_2rem_var(--color-gray-900)]"
             ></div>
             <HeroSection />
         </div>

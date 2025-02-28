@@ -124,7 +124,7 @@ This is equivalent to the CSS class attribute. You can seamlessly utilize tools 
 	</OutClick>
 </div>
 
-<style lang="postcss">
+<style>
 	/* You need to use :global() here because of some stupid issue with Svelte. You also need to use an extra element (div) to wrap the component inside it, to scope the styles. */
 	div :global(.my-custom-class) {
 		color: red;

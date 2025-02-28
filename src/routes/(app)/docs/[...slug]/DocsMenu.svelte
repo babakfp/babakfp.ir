@@ -12,7 +12,7 @@
 </script>
 
 <Sidebar
-    class="xl:min-w-56 xl:max-w-56 {class_}"
+    class="xl:max-w-56 xl:min-w-56 {class_}"
     id="docs-menu"
     bind:isOpen
     toggleButtonId="docs-menu-toggle"

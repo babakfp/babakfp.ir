@@ -9,7 +9,7 @@
 </script>
 
 <main
-    class="container min-h-[--svh-no-header] max-w-screen-xl pb-[--main-pb] pt-[--main-pt]"
+    class="container min-h-(--svh-no-header) max-w-(--breakpoint-xl) pt-(--main-pt) pb-(--main-pb)"
 >
     {@render children()}
 </main>

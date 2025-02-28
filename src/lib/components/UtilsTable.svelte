@@ -14,7 +14,7 @@
 <div class="relative">
     <div class="table-wrapper overflow-x-auto">
         <table
-            class="w-full border-collapse whitespace-nowrap text-left text-sm"
+            class="w-full border-collapse text-left text-sm whitespace-nowrap"
         >
             <thead>
                 <tr>
@@ -29,7 +29,7 @@
             </thead>
 
             <tbody
-                class="select-text align-baseline font-mono selection:bg-gray-50/10"
+                class="align-baseline font-mono select-text selection:bg-gray-50/10"
             >
                 {#each Object.entries(utilities) as [_class, selectorAndStyles]}
                     <tr
@@ -53,7 +53,9 @@
 </div>
 
 <!-- prettier-ignore -->
-<style lang="postcss">
+<style>
+    @reference "../../app.css";
+
 	thead th, tbody td { @apply p-0 }
 	tbody tr { @apply m-0 }
 
@@ -64,6 +66,6 @@
 	tbody tr:first-of-type td { @apply pt-4 }
 
 	.table-wrapper::-webkit-scrollbar { @apply h-4 bg-gray-50/5 rounded-full;
-		&-thumb { @apply border-[6px] rounded-full }
+		&-thumb { @apply border-[6px] border-gray-200 rounded-full }
 	}
 </style>

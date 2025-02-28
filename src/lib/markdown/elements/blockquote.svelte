@@ -10,7 +10,7 @@
 </script>
 
 <blockquote>
-    <div class="absolute left-0 top-0 pl-1.5 text-sm text-gray-600">
+    <div class="absolute top-0 left-0 pl-1.5 text-sm text-gray-600">
         <IconQuoteLeft />
     </div>
 

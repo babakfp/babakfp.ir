@@ -63,9 +63,9 @@
 </article>
 
 <div
-    class="container fixed inset-x-0 bottom-0 max-w-screen-xl border-t border-gray-800 bg-gray-900 sm:border-none"
+    class="fixed inset-x-0 bottom-0 container max-w-(--breakpoint-xl) border-t border-gray-800 bg-gray-900 sm:border-none"
 >
-    <div class="flex justify-center gap-4 pb-8 pt-4">
+    <div class="flex justify-center gap-4 pt-4 pb-8">
         <a
             class="btn btn-primary"
             href={portfolioData.urls.main}

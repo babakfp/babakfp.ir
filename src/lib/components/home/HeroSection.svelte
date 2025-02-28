@@ -15,7 +15,7 @@
     <h1 class="font-title text-5xl text-gray-50 sm:text-7xl">
         Babak Farkhoopak
     </h1>
-    <p class="font-light leading-8">
+    <p class="leading-8 font-light">
         I'm a <i>Front-end</i> Developer with strong <i>UI/UX</i> expertise,
         proficient in <i>TypeScript</i>, <i>Svelte</i>, <i>SvelteKit</i>,
         <i>Tailwind CSS</i>, and <i>PocketBase</i>. I am open to <i>remote</i>
@@ -79,9 +79,13 @@
             >
                 <IconTelegram />
             </a>
-            <button
+
+            <a
                 title="Email address"
                 class="btn btn-icon"
+                href="mailto:babak.bxf@gmail.com"
+                rel="noreferrer"
+                aria-label="Email address"
                 onclick={async () => {
                     await copyText("babak.bxf@gmail.com")
                     toast.success(
@@ -91,15 +95,7 @@
                 }}
             >
                 <IconEnvelope />
-
-                <a
-                    title="Email address"
-                    class="absolute inset-0"
-                    href="mailto:babak.bxf@gmail.com"
-                    rel="noreferrer"
-                    aria-label="Email address"
-                ></a>
-            </button>
+            </a>
         </div>
     </div>
 </section>

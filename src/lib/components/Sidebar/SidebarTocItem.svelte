@@ -19,7 +19,7 @@
 </script>
 
 <a
-    class="SidebarMenuItem group block px-4 outline-inset xl:pr-0
+    class="SidebarMenuItem group outline-inset block px-4 xl:pr-0
 	{isActive && 'pointer-events-none'}"
     {href}
     {onclick}

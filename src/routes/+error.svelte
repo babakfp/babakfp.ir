@@ -7,7 +7,7 @@
 </svelte:head>
 
 <main
-    class="container grid min-h-[--svh-no-header] max-w-xs content-center gap-2 text-center"
+    class="container grid min-h-(--svh-no-header) max-w-xs content-center gap-2 text-center"
 >
     <h1 class="text-8xl font-bold text-gray-50">
         {$page.status}

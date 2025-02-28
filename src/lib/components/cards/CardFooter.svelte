@@ -8,6 +8,6 @@
     } = $props()
 </script>
 
-<ul class="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-2xs text-gray-500">
+<ul class="text-2xs mt-3 flex flex-wrap gap-x-4 gap-y-2 text-gray-500">
     {@render children()}
 </ul>

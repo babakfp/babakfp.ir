@@ -48,12 +48,12 @@ title: Background Radial
 ### Shadow
 
 <Preview useGrid={false}>
-    <div class="h-32 bg-radial-gray-700 bg-center shadow-[inset_0_0_4rem_2rem_theme(colors.gray.900)]"></div>
+    <div class="h-32 bg-radial-gray-700 bg-center shadow-[inset_0_0_4rem_2rem_var(--color-gray-900)]"></div>
 </Preview>
 
 <!-- prettier-ignore -->
-```svelte /shadow-[inset_0_0_4rem_2rem_theme(colors.gray.900)]/
-<div class="bg-center shadow-[inset_0_0_4rem_2rem_theme(colors.gray.900)] bg-radial-gray-700 ..." />
+```svelte /shadow-[inset_0_0_4rem_2rem_var(--color-gray-900)]/
+<div class="bg-center shadow-[inset_0_0_4rem_2rem_var(--color-gray-900)] bg-radial-gray-700 ..." />
 ```
 
 - [`box-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
