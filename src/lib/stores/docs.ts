@@ -92,11 +92,11 @@ export const docsSidebarItems = [
                 title: "Utilities",
                 items: [
                     {
-                        title: "Bg Grid",
+                        title: "Background Grid",
                         path: "/docs/tailwindcss-addons/utilities/bg-grid",
                     },
                     {
-                        title: "Bg Radial",
+                        title: "Background Radial",
                         path: "/docs/tailwindcss-addons/utilities/bg-radial",
                     },
                     {
