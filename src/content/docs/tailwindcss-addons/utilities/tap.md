@@ -23,32 +23,14 @@ title: Tap
 > [!NOTE]
 > The tap color is transparent by default, when using Tailwind CSS.
 
-## Usage
+## Import
 
-### Single import
+This utility is imported by default.
 
-```js
-// tailwind.config.js
+### Manual
 
-import { tap } from "tailwindcss-addons"
-
-export default {
-    plugins: [tap],
-}
-```
-
-### Multi import
-
-```js
-// tailwind.config.js
-
-import { allAddons } from "tailwindcss-addons"
-
-export default {
-    plugins: [
-        ...allAddons({
-            tap: false, // Enabled by default.
-        }),
-    ],
-}
+```css
+@import "tailwindcss-addons/utilities";
+/* Or */
+@import "tailwindcss-addons/utilities/tap.css";
 ```

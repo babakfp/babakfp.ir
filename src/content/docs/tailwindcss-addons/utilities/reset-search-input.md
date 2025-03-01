@@ -21,43 +21,21 @@ title: Reset Search Input
     ]
 </script>
 
-Removed the x from search inputs.
+Removes the x (value clear button) from search inputs.
 
 <!-- prettier-ignore -->
 <ApiTable
     rows={utilities}
 />
 
-## Usage
+## Import
 
-### Single import
+This utility and its [prefligh](/tailwindcss-addons/preflight/reset-search-input) is imported by default.
 
-```js
-// tailwind.config.js
+### Manual
 
-import { resetSearchInput } from "tailwindcss-addons"
-
-export default {
-    plugins: [resetSearchInput()],
-}
+```css
+@import "tailwindcss-addons/utilities";
+/* Or */
+@import "tailwindcss-addons/utilities/reset-search-input.css";
 ```
-
-### Multi import
-
-```js
-// tailwind.config.js
-
-import { allAddons } from "tailwindcss-addons"
-
-export default {
-    plugins: [
-        ...allAddons({
-            resetSearchInput: false, // Enabled by default.
-        }),
-    ],
-}
-```
-
-## Preflight
-
-TODO

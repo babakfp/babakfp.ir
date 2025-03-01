@@ -31,36 +31,14 @@ Removes the arrows from number inputs.
     rows={utilities}
 />
 
-## Usage
+## Import
 
-### Single import
+This utility and its [prefligh](/tailwindcss-addons/preflight/reset-number-input) is imported by default.
 
-```js
-// tailwind.config.js
+### Manual
 
-import { resetNumberInput } from "tailwindcss-addons"
-
-export default {
-    plugins: [resetNumberInput()],
-}
+```css
+@import "tailwindcss-addons/utilities";
+/* Or */
+@import "tailwindcss-addons/utilities/reset-number-input.css";
 ```
-
-### Multi import
-
-```js
-// tailwind.config.js
-
-import { allAddons } from "tailwindcss-addons"
-
-export default {
-    plugins: [
-        ...allAddons({
-            resetNumberInput: false, // Enabled by default.
-        }),
-    ],
-}
-```
-
-## Preflight
-
-TODO

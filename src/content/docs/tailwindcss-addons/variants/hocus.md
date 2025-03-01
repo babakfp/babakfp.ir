@@ -36,32 +36,14 @@ title: Hocus Variants
     rows={utilities}
 />
 
-## Usage
+## Import
 
-### Single import
+This utility is imported by default.
 
-```js
-// tailwind.config.js
+### Manual
 
-import { hocus } from "tailwindcss-addons"
-
-export default {
-    plugins: [hocus],
-}
-```
-
-### Multi import
-
-```js
-// tailwind.config.js
-
-import { allAddons } from "tailwindcss-addons"
-
-export default {
-    plugins: [
-        ...allAddons({
-            hocus: false, // Enabled by default.
-        }),
-    ],
-}
+```css
+@import "tailwindcss-addons/variants";
+/* Or */
+@import "tailwindcss-addons/variants/hocus.css";
 ```

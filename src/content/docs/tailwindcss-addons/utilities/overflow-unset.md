@@ -18,32 +18,14 @@ title: Overflow Unset
 > [!NOTE]
 > How is this userful? I don't remember. Feel free to open an issue or PR if you know.
 
-## Usage
+## Import
 
-### Single import
+This utility is imported by default.
 
-```js
-// tailwind.config.js
+### Manual
 
-import { overflowUnset } from "tailwindcss-addons"
-
-export default {
-    plugins: [overflowUnset],
-}
-```
-
-### Multi import
-
-```js
-// tailwind.config.js
-
-import { allAddons } from "tailwindcss-addons"
-
-export default {
-    plugins: [
-        ...allAddons({
-            overflowUnset: false, // Enabled by default.
-        }),
-    ],
-}
+```css
+@import "tailwindcss-addons/utilities";
+/* Or */
+@import "tailwindcss-addons/utilities/overflow-unset.css";
 ```

@@ -63,78 +63,89 @@ export const docsSidebarItems = [
                 ],
             },
             {
-                title: "New Utilities",
-                items: [
-                    {
-                        title: "Background Grid",
-                        path: "/docs/tailwindcss-addons/bg-grid",
-                    },
-                    {
-                        title: "Background Radial",
-                        path: "/docs/tailwindcss-addons/bg-radial",
-                    },
-                    {
-                        title: "Dir",
-                        path: "/docs/tailwindcss-addons/dir",
-                    },
-                    {
-                        title: "Drag",
-                        path: "/docs/tailwindcss-addons/drag",
-                    },
-                    {
-                        title: "Flip",
-                        path: "/docs/tailwindcss-addons/flip",
-                    },
-                    {
-                        title: "Hide Show",
-                        path: "/docs/tailwindcss-addons/hide-show",
-                    },
-                    {
-                        title: "Scrollbar Color",
-                        path: "/docs/tailwindcss-addons/scrollbar-color",
-                    },
-                    {
-                        title: "Scrollbar Width",
-                        path: "/docs/tailwindcss-addons/scrollbar-width",
-                    },
-                    {
-                        title: "Tap",
-                        path: "/docs/tailwindcss-addons/tap",
-                    },
-                ],
-            },
-            {
-                title: "Reset Utilities",
+                title: "Preflight",
                 items: [
                     {
                         title: "Reset Number Input",
-                        path: "/docs/tailwindcss-addons/reset-number-input",
+                        path: "/docs/tailwindcss-addons/preflight/reset-number-input",
                     },
                     {
                         title: "Reset Search Input",
-                        path: "/docs/tailwindcss-addons/reset-search-input",
+                        path: "/docs/tailwindcss-addons/preflight/reset-search-input",
                     },
                 ],
             },
             {
-                title: "Extended Utilities",
-                items: [
-                    {
-                        title: "Inset Center",
-                        path: "/docs/tailwindcss-addons/inset-center",
-                    },
-                    {
-                        title: "Overflow Unset",
-                        path: "/docs/tailwindcss-addons/overflow-unset",
-                    },
-                ],
-            },
-            {
-                title: "Modified Utilities",
+                title: "Themes",
                 items: [
                     {
                         title: "Font Regular",
-                        path: "/docs/tailwindcss-addons/font-regular",
+                        path: "/docs/tailwindcss-addons/theme/font-regular",
+                    },
+                    {
+                        title: "Font Size",
+                        path: "/docs/tailwindcss-addons/theme/font-size",
+                    },
+                ],
+            },
+            {
+                title: "Utilities",
+                items: [
+                    {
+                        title: "Bg Grid",
+                        path: "/docs/tailwindcss-addons/utilities/bg-grid",
+                    },
+                    {
+                        title: "Bg Radial",
+                        path: "/docs/tailwindcss-addons/utilities/bg-radial",
+                    },
+                    {
+                        title: "Dir",
+                        path: "/docs/tailwindcss-addons/utilities/dir",
+                    },
+                    {
+                        title: "Drag",
+                        path: "/docs/tailwindcss-addons/utilities/drag",
+                    },
+                    {
+                        title: "Flex Grid",
+                        path: "/docs/tailwindcss-addons/utilities/flex-grid",
+                    },
+                    {
+                        title: "Flip",
+                        path: "/docs/tailwindcss-addons/utilities/flip",
+                    },
+                    {
+                        title: "Hide Show",
+                        path: "/docs/tailwindcss-addons/utilities/hide-show",
+                    },
+                    {
+                        title: "Inset Center",
+                        path: "/docs/tailwindcss-addons/utilities/inset-center",
+                    },
+                    {
+                        title: "Overflow Unset",
+                        path: "/docs/tailwindcss-addons/utilities/overflow-unset",
+                    },
+                    {
+                        title: "Reset Number Input",
+                        path: "/docs/tailwindcss-addons/utilities/reset-number-input",
+                    },
+                    {
+                        title: "Reset Search Input",
+                        path: "/docs/tailwindcss-addons/utilities/reset-search-input",
+                    },
+                    {
+                        title: "Scrollbar Color",
+                        path: "/docs/tailwindcss-addons/utilities/scrollbar-color",
+                    },
+                    {
+                        title: "Scrollbar Width",
+                        path: "/docs/tailwindcss-addons/utilities/scrollbar-width",
+                    },
+                    {
+                        title: "Tap",
+                        path: "/docs/tailwindcss-addons/utilities/tap",
                     },
                 ],
             },
@@ -143,7 +154,7 @@ export const docsSidebarItems = [
                 items: [
                     {
                         title: "Hocus",
-                        path: "/docs/tailwindcss-addons/hocus",
+                        path: "/docs/tailwindcss-addons/variants/hocus",
                     },
                 ],
             },

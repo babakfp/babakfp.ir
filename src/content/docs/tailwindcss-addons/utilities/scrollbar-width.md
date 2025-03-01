@@ -17,32 +17,14 @@ title: Scrollbar Width
 
 - [`scrollbar-width`](https://developer.mozilla.org/en-US/docs/Web/CSS/scrollbar-width)
 
-## Usage
+## Import
 
-### Single import
+This utility is imported by default.
 
-```js
-// tailwind.config.js
+### Manual
 
-import { scrollbarWidth } from "tailwindcss-addons"
-
-export default {
-    plugins: [scrollbarWidth],
-}
-```
-
-### Multi import
-
-```js
-// tailwind.config.js
-
-import { allAddons } from "tailwindcss-addons"
-
-export default {
-    plugins: [
-        ...allAddons({
-            scrollbarWidth: false, // Enabled by default.
-        }),
-    ],
-}
+```css
+@import "tailwindcss-addons/utilities";
+/* Or */
+@import "tailwindcss-addons/utilities/scrollbar-width.css";
 ```

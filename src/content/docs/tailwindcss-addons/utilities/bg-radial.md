@@ -137,32 +137,14 @@ title: Background Radial
 
 - [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
 
-## Usage
+## Import
 
-### Single import
+This utility is imported by default.
 
-```js
-// tailwind.config.js
+### Manual
 
-import { bgRadial } from "tailwindcss-addons"
-
-export default {
-    plugins: [bgRadial],
-}
-```
-
-### Multi import
-
-```js
-// tailwind.config.js
-
-import { allAddons } from "tailwindcss-addons"
-
-export default {
-    plugins: [
-        ...allAddons({
-            bgRadial: false, // Enabled by default.
-        }),
-    ],
-}
+```css
+@import "tailwindcss-addons/utilities";
+/* Or */
+@import "tailwindcss-addons/utilities/bg-radial.css";
 ```

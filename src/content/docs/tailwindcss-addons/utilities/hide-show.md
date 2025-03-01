@@ -31,32 +31,14 @@ title: Hide & Show
     rows={utilities}
 />
 
-## Usage
+## Import
 
-### Single import
+This utility is imported by default.
 
-```js
-// tailwind.config.js
+### Manual
 
-import { hideShow } from "tailwindcss-addons"
-
-export default {
-    plugins: [hideShow],
-}
-```
-
-### Multi import
-
-```js
-// tailwind.config.js
-
-import { allAddons } from "tailwindcss-addons"
-
-export default {
-    plugins: [
-        ...allAddons({
-            hideShow: false, // Enabled by default.
-        }),
-    ],
-}
+```css
+@import "tailwindcss-addons/utilities";
+/* Or */
+@import "tailwindcss-addons/utilities/hide-show.css";
 ```

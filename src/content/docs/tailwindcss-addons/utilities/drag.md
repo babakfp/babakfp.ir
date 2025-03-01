@@ -17,32 +17,14 @@ title: Drag
 
 - [Can I use `-webkit-user-drag`?](https://caniuse.com/webkit-user-drag)
 
-## Usage
+## Import
 
-### Single import
+This utility is imported by default.
 
-```js
-// tailwind.config.js
+### Manual
 
-import { drag } from "tailwindcss-addons"
-
-export default {
-    plugins: [drag],
-}
-```
-
-### Multi import
-
-```js
-// tailwind.config.js
-
-import { allAddons } from "tailwindcss-addons"
-
-export default {
-    plugins: [
-        ...allAddons({
-            drag: false, // Enabled by default.
-        }),
-    ],
-}
+```css
+@import "tailwindcss-addons/utilities";
+/* Or */
+@import "tailwindcss-addons/utilities/drag.css";
 ```
