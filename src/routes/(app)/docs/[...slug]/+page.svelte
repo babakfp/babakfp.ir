@@ -39,7 +39,7 @@
     />
 
     <article
-        class="article-content mx-auto max-w-prose pt-(--main-pt) pb-(--main-pb) xl:mx-0 xl:min-h-(--svh-no-header)"
+        class="article-content mx-auto max-w-prose pt-(--main-pt) pb-(--main-pb) xl:min-h-(--svh-no-header) xl:w-full xl:max-w-none"
     >
         {#if data.frontmatter.title}
             <h1>{data.frontmatter.title}</h1>
