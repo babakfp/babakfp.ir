@@ -13,6 +13,8 @@ title: Reset Search Input
     ]
 </script>
 
+Removes the x (value clear button) from search inputs.
+
 What is a [Preflight](https://tailwindcss.com/docs/preflight)?
 
 ## Import

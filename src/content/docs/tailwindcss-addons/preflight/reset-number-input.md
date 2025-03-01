@@ -13,6 +13,8 @@ title: Reset Number Input
     ]
 </script>
 
+Removes the arrows from number inputs.
+
 What is a [Preflight](https://tailwindcss.com/docs/preflight)?
 
 ## Import
