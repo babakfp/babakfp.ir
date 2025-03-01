@@ -231,9 +231,9 @@ Output:
 > [!NOTE]
 > Please refer to the jsDoc comments to learn more.
 
-## "rehype-pretty-code"
+## "@shikijs/rehype"
 
-["rehype-pretty-code"](https://npmjs.com/package/rehype-pretty-code).
+["@shikijs/rehype"](https://npmjs.com/package/@shikijs/rehype).
 
 ## "rehype-autolink-headings"
 
