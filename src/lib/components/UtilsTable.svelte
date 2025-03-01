@@ -16,8 +16,10 @@
             <thead>
                 <tr>
                     {#each theadItems as title}
-                        <th>
-                            <div class="bg-gray-50/5">
+                        <th class="group p-0">
+                            <div
+                                class="bg-gray-50/5 px-4 py-3 group-first-of-type:rounded-tl group-first-of-type:rounded-bl group-last-of-type:rounded-tr group-last-of-type:rounded-br"
+                            >
                                 {title}
                             </div>
                         </th>
@@ -30,12 +32,14 @@
             >
                 {#each Object.entries(utilities) as [_class, selectorAndStyles]}
                     <tr
-                        class="not-first-of-type:border-t-[0.1px] not-first-of-type:border-gray-50/5 xl:table-row"
+                        class="group m-0 not-first-of-type:border-t-[0.1px] not-first-of-type:border-gray-50/5 xl:table-row"
                     >
-                        <td style="color: #C4A7E7">
+                        <td
+                            class="px-4 py-3 text-[#c4a7e7] group-first-of-type:pt-4"
+                        >
                             {_class.replace(".", "")}
                         </td>
-                        <td>
+                        <td class="px-4 py-3 group-first-of-type:pt-4">
                             {#if typeof selectorAndStyles === "string"}
                                 {@html selectorAndStyles}
                             {:else}
@@ -104,18 +108,3 @@
         {/each}
     </div>
 {/snippet}
-
-<!-- TODO -->
-<!-- prettier-ignore -->
-<style>
-    @reference "../../app.css";
-
-	thead th, tbody td { @apply p-0 }
-	tbody tr { @apply m-0 }
-
-	thead th:first-of-type div { @apply rounded-tl rounded-bl }
-	thead th:last-of-type div { @apply rounded-tr rounded-br }
-
-	thead th div, tbody td { @apply py-3 px-4 }
-	tbody tr:first-of-type td { @apply pt-4 }
-</style>
