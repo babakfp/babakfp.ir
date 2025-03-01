@@ -51,7 +51,7 @@
 }
 
 @utility highlight-* {
-    --opacity: --modifier(integer);
+    --opacity: calc(--modifier(integer) * 1%);
     --tw-highlight: inset 0 1px 0 0
         --alpha(--value(--color- *, [color]) / var(--opacity, 100%));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
