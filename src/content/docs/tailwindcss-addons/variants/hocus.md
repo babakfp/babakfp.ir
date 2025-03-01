@@ -11,21 +11,27 @@ title: Hocus Variants
             "hocus",
             dedent`
                 &:hover,
-                &:focus
+                &:focus {
+                    @media (hover: hover)
+                }
             `,
         ],
         [
             "hocus-within",
             dedent`
                 &:hover,
-                &:focus-within
+                &:focus-within {
+                    @media (hover: hover)
+                }
             `,
         ],
         [
             "hocus-visible",
             dedent`
                 &:hover,
-                &:focus-visible
+                &:focus-visible {
+                    @media (hover: hover)
+                }
             `,
         ],
     ]
@@ -35,6 +41,8 @@ title: Hocus Variants
 <ApiTable
     rows={utilities}
 />
+
+- [Hover styles on mobile](https://tailwindcss.com/docs/upgrade-guide#hover-styles-on-mobile)
 
 ## Import
 
