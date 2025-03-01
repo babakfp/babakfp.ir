@@ -1,9 +1,9 @@
 ---
 title: Tailwind CSS Addons
-description: A set of Tailwind CSS plugins that add extra defaults, utilities, variants, and more.
+description: A set of Tailwind CSS preflights, themes, utilities and variants.
 ---
 
-A set of Tailwind CSS plugins that add extra defaults, utilities, variants, and more.
+A set of Tailwind CSS preflights, themes, utilities and variants.
 
 ## Install
 
@@ -11,54 +11,61 @@ A set of Tailwind CSS plugins that add extra defaults, utilities, variants, and 
 pnpm add -D tailwindcss-addons
 ```
 
-<!-- prettier-ignore -->
-```js
-// tailwind.config.js
-
-import { allAddons } from "tailwindcss-addons"
-
-export default {
-    plugins: [
-        ...allAddons(),
-    ],
-}
+```css
+@import "tailwindcss";
+@import "tailwindcss-addons";
 ```
 
 ## Usage
 
-### Single import
+All of the preflights, themes, utilities, and variants are imported by default, except:
 
-<!-- prettier-ignore -->
-```js
-// tailwind.config.js
+- `"tailwindcss-addons/theme/font-weight-regular.css"`
+- `"tailwindcss-addons/utilities/flex-grid.css"`
 
-import { /* <plugin-name> */ } from "tailwindcss-addons"
+### Preflights
 
-export default {
-    plugins: [/* <plugin-name> */],
-}
+```css
+@import "tailwindcss-addons/preflight";
+/* Or */
+@import "tailwindcss-addons/preflight/reset-number-input.css";
+@import "tailwindcss-addons/preflight/reset-search-input.css";
 ```
 
-### Multi import
+### Themes
 
-```js
-// tailwind.config.js
-
-import { allAddons } from "tailwindcss-addons"
-
-export default {
-    plugins: [
-        ...allAddons({
-            /* <plugin-name> */: /* <boolean> */,
-        }),
-    ],
-}
+```css
+@import "tailwindcss-addons/theme";
+/* Or */
+@import "tailwindcss-addons/theme/font-size.css";
+/* @import "tailwindcss-addons/theme/font-weight-regular.css"; */
 ```
 
-### Default options
+### Utilities
 
-When using multi import syntax, all options except `flexGrid` and `fontRegular` are enabled by default.
+```css
+@import "tailwindcss-addons/utilities";
+/* Or */
+@import "tailwindcss-addons/utilities/bg-grid.css";
+@import "tailwindcss-addons/utilities/bg-radial.css";
+@import "tailwindcss-addons/utilities/dir.css";
+@import "tailwindcss-addons/utilities/drag.css";
+@import "tailwindcss-addons/utilities/flex-grid.css";
+/* @import "tailwindcss-addons/utilities/flip.css"; */
+@import "tailwindcss-addons/utilities/hide-show.css";
+@import "tailwindcss-addons/utilities/inset-center.css";
+@import "tailwindcss-addons/utilities/overflow-unset.css";
+@import "tailwindcss-addons/utilities/reset-number-input.css";
+@import "tailwindcss-addons/utilities/reset-search-input.css";
+@import "tailwindcss-addons/utilities/scrollbar-color.css";
+@import "tailwindcss-addons/utilities/scrollbar-width.css";
+@import "tailwindcss-addons/utilities/tap.css";
+```
 
-### Enable or disable
+### Variants
 
-Use `true` to enable and use `false` to disable.
+```css
+@import "tailwindcss-addons/variants";
+/* Or */
+@import "tailwindcss-addons/variants/hocus.css";
+```
