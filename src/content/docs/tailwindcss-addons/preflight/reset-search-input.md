@@ -13,9 +13,11 @@ title: Reset Search Input
     ]
 </script>
 
-Removes the x (value clear button) from search inputs.
+A [preflight](https://tailwindcss.com/docs/preflight) CSS that removes the arrows from number inputs.
 
-What is a [Preflight](https://tailwindcss.com/docs/preflight)?
+<ApiTable
+    rows={utilities}
+/>
 
 ## Import
 
