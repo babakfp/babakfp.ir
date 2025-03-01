@@ -1,4 +1,3 @@
-import { transformerNotationDiff } from "@shikijs/transformers"
 import adapter from "@sveltejs/adapter-vercel"
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte"
 import { EXTENSIONS, mdxPreprocess } from "mdx-svelte"
@@ -33,11 +32,6 @@ export default {
                                     )
                                 },
                                 test: ["h2", "h3", "h4", "h5", "h6"],
-                            },
-                        },
-                        rehypePrettyCode: {
-                            options: {
-                                transformers: [transformerNotationDiff()],
                             },
                         },
                     },
