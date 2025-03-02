@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { page } from "$app/stores"
+    import { page } from "$app/state"
     import BackToTopBtn from "$lib/components/BackToTopBtn.svelte"
     import DesktopToc from "$lib/components/DesktopToc.svelte"
     import { IconList } from "$lib/components/icons"
@@ -14,7 +14,7 @@
     let headings: Headings = $state([])
 
     $effect(() => {
-        if ($page.url.pathname) {
+        if (page.url.pathname) {
             headings = getHeadings()
         }
     })

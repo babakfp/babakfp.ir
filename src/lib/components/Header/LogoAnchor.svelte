@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { Snippet } from "svelte"
-    import { page } from "$app/stores"
+    import { page } from "$app/state"
 
     let {
         children,
@@ -8,7 +8,7 @@
         children: Snippet
     } = $props()
 
-    const isHome = $derived($page.url.pathname === "/")
+    const isHome = $derived(page.url.pathname === "/")
 </script>
 
 <svelte:element
