@@ -14,11 +14,6 @@
 
 <h1 class="text-center text-4xl font-black text-gray-50">Portfolios</h1>
 
-<p class="mt-4 text-center">
-    My portfolios are all over the place. Here are some of them. Please check
-    all links to my profiles on the Home page.
-</p>
-
 <section class="mt-8">
     <ul class="grid gap-8 sm:px-12 lg:grid-cols-2 lg:gap-6 lg:gap-y-8 xl:px-0">
         {#each frontendPortfolios as portfolio}
