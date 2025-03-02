@@ -5,7 +5,6 @@
         IconDribbble,
         IconEnvelope,
         IconGithub,
-        IconLinkedin,
         IconTelegram,
     } from "$lib/components/icons"
 </script>
@@ -33,15 +32,6 @@
             <a class="btn" href="/portfolios">Portfolios</a>
         </div>
         <div class="flex gap-2">
-            <a
-                title="LinkedIn profile"
-                class="btn btn-icon"
-                href="https://www.linkedin.com/in/babakfp"
-                target="_blank"
-                rel="noreferrer"
-            >
-                <IconLinkedin />
-            </a>
             <a
                 title="GitHub repos"
                 class="btn btn-icon"
