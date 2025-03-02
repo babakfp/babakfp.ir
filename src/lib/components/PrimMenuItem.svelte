@@ -17,7 +17,7 @@
 </script>
 
 <a
-    class="{class_} group outline-inset flex items-center gap-4 px-4 py-1 font-mono text-sm duration-100 hover:text-gray-50 xl:px-0"
+    class="{class_} group outline-inset flex items-center gap-4 px-4 py-1 text-sm duration-100 hover:text-gray-50 xl:px-0"
     {href}
     target={isExternal ? "_blank" : null}
     rel={isExternal ? "noreferrer" : null}

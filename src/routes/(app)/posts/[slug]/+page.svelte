@@ -37,11 +37,11 @@
     >
         <ul class="flex items-center gap-2 text-sm">
             <li>
-                <a class="link" href="/">HOME</a>
+                <a class="link" href="/">Home</a>
             </li>
             <span class="text-xs text-gray-700">/</span>
             <li>
-                <a class="link" href="/posts">POSTS</a>
+                <a class="link" href="/posts">Posts</a>
             </li>
         </ul>
 
