@@ -1,11 +1,9 @@
 <script lang="ts">
     import FrontendCard from "$lib/components/cards/FrontendCard/FrontendCard.svelte"
     import RtlThemeCard from "$lib/components/cards/RtlThemeCard.svelte"
-    import WordpressPluginCard from "$lib/components/cards/WordpressPluginCard.svelte"
     import Section from "$lib/components/home/Section.svelte"
     import frontendPortfolios from "$lib/portfolios/frontend.json"
     import rtlthemeProducts from "$lib/portfolios/rtltheme-products.json"
-    import wordpressPlugins from "$lib/portfolios/wordpress-plugins.json"
 </script>
 
 <svelte:head>
@@ -28,14 +26,6 @@
         {/each}
     </ul>
 </section>
-
-<Section title="WordPress.org plugins">
-    {#each wordpressPlugins as plg}
-        <li>
-            <WordpressPluginCard {...plg} />
-        </li>
-    {/each}
-</Section>
 
 <Section title="WordPress products">
     {#each rtlthemeProducts as prd}
