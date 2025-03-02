@@ -45,7 +45,7 @@ So, I opened a PR and this is how it went:
 Here is the comment that got me banned (the comment got removed after I got banned, that's why it doesn't exist in the screenshot above). Before we continue forward, read the content of the screenshot above.
 
 <ShowMore>
-	<PlatformQuote title="GITHUB: COMMENT">
+	<PlatformQuote title="GitHub comment">
 		<GithubComment />
 	</PlatformQuote>
 </ShowMore>
@@ -59,7 +59,7 @@ _This is the result of contributing to svelte:_
 After I got banned from the Svelte repositories on GitHub, the same day, I write an article about what happened, and my account got restricted because! This is the article:
 
 <ShowMore>
-	<PlatformQuote title="DEV.TO: ARTICLE">
+	<PlatformQuote title="dev.to article">
 		<DevDotToArticle />
 	</PlatformQuote>
 </ShowMore>
@@ -67,7 +67,7 @@ After I got banned from the Svelte repositories on GitHub, the same day, I write
 I also replied to one of the comments under the article:
 
 <ShowMore>
-	<PlatformQuote title="DEV.TO: ARTICLE REPLY">
+	<PlatformQuote title="dev.to article reply">
 		<DevDotToArticleReply />
 	</PlatformQuote>
 </ShowMore>
