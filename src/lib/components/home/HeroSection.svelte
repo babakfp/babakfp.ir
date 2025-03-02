@@ -42,25 +42,6 @@
                 <IconGithub />
             </a>
             <a
-                title="UI designs"
-                class="btn btn-icon"
-                href="https://dribbble.com/babakfp"
-                target="_blank"
-                rel="noreferrer"
-            >
-                <IconDribbble />
-            </a>
-            <a
-                title="Telegram account"
-                class="btn btn-icon"
-                href="https://t.me/babakfp"
-                target="_blank"
-                rel="noreferrer"
-            >
-                <IconTelegram />
-            </a>
-
-            <a
                 title="Email address"
                 class="btn btn-icon"
                 href="mailto:babak.bxf@gmail.com"
@@ -75,6 +56,24 @@
                 }}
             >
                 <IconEnvelope />
+            </a>
+            <a
+                title="Telegram account"
+                class="btn btn-icon"
+                href="https://t.me/babakfp"
+                target="_blank"
+                rel="noreferrer"
+            >
+                <IconTelegram />
+            </a>
+            <a
+                title="UI designs"
+                class="btn btn-icon"
+                href="https://dribbble.com/babakfp"
+                target="_blank"
+                rel="noreferrer"
+            >
+                <IconDribbble />
             </a>
         </div>
     </div>
