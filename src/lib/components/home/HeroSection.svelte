@@ -12,7 +12,7 @@
 </script>
 
 <section class="relative mx-auto grid max-w-prose gap-4">
-    <h1 class="font-title text-5xl text-gray-50 sm:text-7xl">
+    <h1 class="text-5xl font-black text-gray-50 sm:text-7xl">
         Babak Farkhoopak
     </h1>
     <p class="leading-8 font-light">

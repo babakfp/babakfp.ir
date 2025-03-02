@@ -34,15 +34,9 @@
 
     --radius: var(--radius-lg);
 
-    --font-sans: "Recursive Variable";
-    --font-mono: "Recursive Variable";
+    --font-sans: "Jost Variable";
+    --font-mono: "JetBrains Mono Variable";
     --font-mono--font-feature-settings: "'MONO' 1";
-
-    --font-weight-thin: initial;
-    --font-weight-extralight: initial;
-    --font-weight-normal: initial;
-    --font-weight-medium: initial;
-    --font-weight-extrabold: initial;
 }
 
 @utility container {
@@ -86,10 +80,6 @@
             @apply fill-current;
         }
     }
-}
-
-@utility font-title {
-    @apply font-black uppercase;
 }
 
 /* Outline */
@@ -153,7 +143,7 @@
         }
 
     h1 {
-        @apply font-title text-5xl sm:text-6xl;
+        @apply text-5xl font-black sm:text-6xl;
     }
     h2 {
         @apply border-b border-gray-50/10 pb-2 text-3xl sm:text-4xl;

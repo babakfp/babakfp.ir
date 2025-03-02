@@ -52,7 +52,7 @@
         >
             <div class="flex items-center justify-between">
                 <h2
-                    class="font-title text-3xl text-gray-50
+                    class="text-3xl font-black text-gray-50
                         {isSingleRow && 'lg:text-5xl'}"
                 >
                     {title}

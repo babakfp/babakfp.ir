@@ -12,7 +12,7 @@
     <title>Portfolios</title>
 </svelte:head>
 
-<h1 class="font-title text-center text-4xl text-gray-50">Portfolios</h1>
+<h1 class="text-center text-4xl font-black text-gray-50">Portfolios</h1>
 
 <p class="mt-4 text-center">
     My portfolios are all over the place. Here are some of them. Please check
