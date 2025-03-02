@@ -20,17 +20,8 @@
     --color-gray-900: var(--color-zinc-900);
     --color-gray-950: var(--color-zinc-950);
 
-    --color-brand-50: var(--color-amber-50);
-    --color-brand-100: var(--color-amber-100);
-    --color-brand-200: var(--color-amber-200);
-    --color-brand-300: var(--color-amber-300);
-    --color-brand-400: var(--color-amber-400);
-    --color-brand-500: var(--color-amber-500);
-    --color-brand-600: var(--color-amber-600);
-    --color-brand-700: var(--color-amber-700);
-    --color-brand-800: var(--color-amber-800);
-    --color-brand-900: var(--color-amber-900);
-    --color-brand-950: var(--color-amber-950);
+    --color-brand-dark: rgb(124 45 18);
+    --color-brand-light: rgb(254 215 170);
 
     --radius: var(--radius-lg);
 
@@ -61,7 +52,7 @@
         --main-pb: --spacing(20);
     }
     ::selection {
-        @apply bg-brand-600/60;
+        @apply bg-brand-dark;
     }
     * {
         @apply drag-none scroll-mt-[calc(var(--header-height)+(--spacing(8)))];
@@ -85,7 +76,7 @@
 /* Outline */
 @layer base {
     * {
-        @apply focus-visible:outline-brand-300 outline-2 outline-transparent;
+        @apply focus-visible:outline-brand-light outline-2 outline-transparent;
     }
     a {
         @apply outline-dashed;
@@ -104,11 +95,11 @@
 }
 
 @utility link {
-    @apply text-brand-300 hover:text-brand-100 break-words underline decoration-transparent decoration-2 duration-75;
+    @apply text-brand-light hover:decoration-brand-light focus-visible:decoration-brand-light break-words underline decoration-transparent duration-75;
 }
 
 @utility btn {
-    @apply drag-none highlight-gray-50/10 relative inline-flex items-center justify-center gap-2 rounded bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-50 duration-100 hover:bg-gray-700;
+    @apply drag-none highlight-gray-50/10 relative inline-flex items-center justify-center gap-2 rounded bg-gray-800 px-3 py-2 text-sm font-semibold text-gray-50 outline-offset-2 transition-colors duration-100 hover:bg-gray-700;
 }
 
 @utility btn-icon {
@@ -116,7 +107,7 @@
 }
 
 @utility btn-primary {
-    @apply bg-brand-600 text-brand-50 hover:bg-brand-500;
+    @apply bg-brand-light text-brand-dark hover:bg-brand-dark hover:text-brand-light;
 }
 
 @utility outline-inset {
@@ -226,7 +217,7 @@
     }
 
     [data-highlighted-chars] {
-        @apply selection:bg-brand-600/50 bg-gray-50/10 p-1 text-[.9em];
+        @apply bg-gray-50/10 p-1 text-[.9em];
     }
 
     code span {
@@ -241,7 +232,7 @@
     }
 
     code:not(pre code):not(#quick-reference *) {
-        @apply selection:bg-brand-600/50 rounded-md bg-gray-50/10 px-1.5 py-0.5 text-[.9em] select-text;
+        @apply rounded-md bg-gray-50/10 px-1.5 py-0.5 text-[.9em] select-text;
     }
 
     code[data-line-numbers] {

@@ -5,7 +5,7 @@ Managing dynamic classes in Svelte can be improved for better code readability a
 ### The `class` directive
 
 ```svelte
-<div class:bg-brand={condition} />
+<div class:my-class={condition} />
 ```
 
 - ❌ Can only add one class at a time.
