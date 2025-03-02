@@ -6,7 +6,6 @@
         IconEnvelope,
         IconGithub,
         IconLinkedin,
-        IconNpm,
         IconTelegram,
     } from "$lib/components/icons"
 </script>
@@ -51,15 +50,6 @@
                 rel="noreferrer"
             >
                 <IconGithub />
-            </a>
-            <a
-                title="NPM packages"
-                class="btn btn-icon"
-                href="https://www.npmjs.com/~babakfp"
-                target="_blank"
-                rel="noreferrer"
-            >
-                <IconNpm />
             </a>
             <a
                 title="UI designs"
