@@ -23,13 +23,6 @@
         technologies: string[]
         isSingleRow?: boolean
     } = $props()
-
-    type TechStack =
-        | "Svelte"
-        | "Tailwind CSS"
-        | "Sass"
-        | "PocketBase"
-        | "TypeScript"
 </script>
 
 <li class={isSingleRow ? "lg:col-span-full" : ""}>
@@ -129,7 +122,7 @@
     class: className,
     Logo,
 }: {
-    title: TechStack
+    title: "Svelte" | "Tailwind CSS" | "Sass" | "PocketBase" | "TypeScript"
     class?: string
     Logo: Component
 })}
