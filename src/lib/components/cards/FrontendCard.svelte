@@ -123,7 +123,7 @@
     Logo,
 }: {
     title: "Svelte" | "Tailwind CSS" | "Sass" | "PocketBase" | "TypeScript"
-    class?: string
+    class: string
     Logo: Component
 })}
     <div
