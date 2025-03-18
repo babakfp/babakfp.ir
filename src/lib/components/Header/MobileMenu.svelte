@@ -47,10 +47,9 @@
             {#each mainMenuItems as item}
                 <li class="odd:bg-gray-50/[0.02]">
                     {@render primMenuItem({
-                        class: "py-2 hover:bg-gray-50/10",
                         title: item.title,
                         href: item.href,
-                        icon: item.icon,
+                        Icon: item.icon,
                     })}
                 </li>
             {/each}
@@ -58,25 +57,25 @@
     </OutClick>
 </nav>
 
-{#snippet primMenuItem(props: {
+{#snippet primMenuItem({
+    title,
+    href,
+    Icon,
+}: {
     title: string
     href: string
-    isExternal?: boolean
-    class?: string
-    icon: Component
+    Icon: Component
 })}
     <a
-        class="{props.class} group outline-inset flex items-center gap-4 px-4 py-1 text-sm duration-100 hover:text-gray-50 xl:px-0"
-        href={props.href}
-        target={props.isExternal ? "_blank" : null}
-        rel={props.isExternal ? "noreferrer" : null}
+        class="group outline-inset flex items-center gap-4 px-4 py-2 text-sm duration-100 hover:bg-gray-50/10 hover:text-gray-50 xl:px-0"
+        {href}
     >
         <div
             class="highlight-gray-50/10 flex h-7.5 w-7.5 items-center justify-center rounded bg-gray-50/5 text-gray-400 shadow-sm duration-100 group-hover:bg-gray-50/10 group-hover:text-gray-50"
         >
-            <svelte:component this={props.icon} />
+            <Icon />
         </div>
 
-        <span>{props.title}</span>
+        <span>{title}</span>
     </a>
 {/snippet}
