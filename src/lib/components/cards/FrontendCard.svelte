@@ -74,35 +74,35 @@
                             {@render Item({
                                 class: "ring-offset-[#cd6799]",
                                 title: technology,
-                                children: Sass,
+                                Logo: Sass,
                             })}
                         {/if}
                         {#if technology === "Svelte"}
                             {@render Item({
                                 class: "ring-offset-[#ff3e00]",
                                 title: technology,
-                                children: Svelte,
+                                Logo: Svelte,
                             })}
                         {/if}
                         {#if technology === "Tailwind CSS"}
                             {@render Item({
                                 class: "ring-offset-[#38bdf8]",
                                 title: technology,
-                                children: TailwindCss,
+                                Logo: TailwindCss,
                             })}
                         {/if}
                         {#if technology === "PocketBase"}
                             {@render Item({
                                 class: "ring-offset-[#16161a]/75",
                                 title: technology,
-                                children: PocketBaseOutline,
+                                Logo: PocketBaseOutline,
                             })}
                         {/if}
                         {#if technology === "TypeScript"}
                             {@render Item({
                                 class: "ring-offset-[#3178c6]",
                                 title: technology,
-                                children: TypeScript,
+                                Logo: TypeScript,
                             })}
                         {/if}
                     {/each}
@@ -127,16 +127,16 @@
 {#snippet Item({
     title,
     class: className,
-    children,
+    Logo,
 }: {
     title: TechStack
     class?: string
-    children: Component
+    Logo: Component
 })}
     <div
         class="flex rounded-full bg-gray-50 p-1.5 ring-2 ring-gray-50 ring-offset-2 {className}"
         {title}
     >
-        <svelte:component this={children} />
+        <Logo />
     </div>
 {/snippet}
