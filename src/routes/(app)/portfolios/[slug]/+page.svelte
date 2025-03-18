@@ -1,10 +1,12 @@
 <script lang="ts">
     import { IconArrowUpRightSquare } from "$lib/components/icons"
-    import PocketBaseFill from "$lib/components/technology-logos/PocketBaseFill.svelte"
-    import Sass from "$lib/components/technology-logos/Sass.svelte"
-    import Svelte from "$lib/components/technology-logos/Svelte.svelte"
-    import TailwindCss from "$lib/components/technology-logos/TailwindCss.svelte"
-    import TypeScript from "$lib/components/technology-logos/TypeScript.svelte"
+    import {
+        PocketBaseFill,
+        Sass,
+        Svelte,
+        TailwindCss,
+        TypeScript,
+    } from "$lib/components/technology-logos"
     import frontendPortfolios from "$lib/portfolios/frontend.json"
     import TechnologyBox from "./TechnologyBox.svelte"
 

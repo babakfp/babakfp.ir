@@ -1,10 +1,12 @@
 <script lang="ts">
     import FrontendCardTechItem from "$lib/components/cards/FrontendCard/FrontendCardTechItem.svelte"
-    import PocketBaseOutline from "$lib/components/technology-logos/PocketBaseOutline.svelte"
-    import Sass from "$lib/components/technology-logos/Sass.svelte"
-    import Svelte from "$lib/components/technology-logos/Svelte.svelte"
-    import TailwindCss from "$lib/components/technology-logos/TailwindCss.svelte"
-    import TypeScript from "$lib/components/technology-logos/TypeScript.svelte"
+    import {
+        PocketBaseOutline,
+        Sass,
+        Svelte,
+        TailwindCss,
+        TypeScript,
+    } from "$lib/components/technology-logos"
 
     let {
         slug,

@@ -1,0 +1,6 @@
+export { default as PocketBaseFill } from "./PocketBaseFill.svelte"
+export { default as PocketBaseOutline } from "./PocketBaseOutline.svelte"
+export { default as Sass } from "./Sass.svelte"
+export { default as Svelte } from "./Svelte.svelte"
+export { default as TailwindCss } from "./TailwindCss.svelte"
+export { default as TypeScript } from "./TypeScript.svelte"
