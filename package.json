@@ -14,7 +14,6 @@
         "@sveltejs/kit": "2.18.0",
         "@sveltejs/vite-plugin-svelte": "5.0.3",
         "@tailwindcss/vite": "4.0.13",
-        "autoprefixer": "10.4.20",
         "mdx-collections-svelte": "2.0.1",
         "mdx-svelte": "4.0.1",
         "prettier": "3.5.3",
