@@ -1,5 +1,5 @@
 <script lang="ts">
-    import SimpleTextCard from "$lib/components/cards/SimpleTextCard.svelte"
+    import PostCard from "$lib/components/cards/PostCard.svelte"
 
     let { data } = $props()
 </script>
@@ -13,7 +13,7 @@
 <ul class="mx-auto mt-8 grid max-w-prose gap-4">
     {#each data.posts as post}
         <li>
-            <SimpleTextCard
+            <PostCard
                 title={post.frontmatter.title}
                 description={post.frontmatter.description}
                 href={post.href}
