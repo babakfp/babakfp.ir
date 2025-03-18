@@ -1,12 +1,6 @@
 {
-    "editor.formatOnSave": true,
     "search.exclude": {
-        "**/.gitignore": true,
-        "**/pnpm-lock.yaml": true,
         "**/*.svg": true,
         "**/Icon*.svelte": true
-    },
-    "path-intellisense.mappings": {
-        "$lib": "${workspaceFolder}/src/lib"
     }
 }
