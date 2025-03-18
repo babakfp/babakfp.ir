@@ -27,8 +27,8 @@
         id="{name}-toc-menu"
         bind:isOpen
         toggleButtonId="{name}-toc-menu-toggle"
-        ariaLabel="{name.charAt(0).toUpperCase() +
-            name.slice(1)} (on this page) menu"
+        ariaLabel="{name.charAt(0).toUpperCase()
+            + name.slice(1)} (on this page) menu"
     >
         <ul>
             {#each headings as heading}

@@ -7,8 +7,8 @@ export const getPosts = async () => {
         .filter((entry) => entry.slug.split("/").length === 1)
         .sort(
             (first, second) =>
-                new Date(second.frontmatter.update).getTime() -
-                new Date(first.frontmatter.update).getTime(),
+                new Date(second.frontmatter.update).getTime()
+                - new Date(first.frontmatter.update).getTime(),
         )
 
     return posts

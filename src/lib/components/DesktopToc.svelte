@@ -27,9 +27,9 @@
                     class="outline-inset flex items-center gap-2 py-2 pr-4 text-gray-400 duration-100 hover:text-gray-50"
                     href="#{heading.id}"
                     {onclick}
-                    style="padding-left: calc(1rem * {heading.level === 2
-                        ? 2
-                        : heading.level});"
+                    style="padding-left: calc(1rem * {heading.level === 2 ?
+                        2
+                    :   heading.level});"
                 >
                     {#if heading.level > 2}
                         <IconChevronRight class="text-2xs text-gray-600" />
