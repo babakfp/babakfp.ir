@@ -1,4 +1,5 @@
 <script lang="ts">
+    import type { Component } from "svelte"
     import { IconArrowUpRightSquare } from "$lib/components/icons"
     import {
         PocketBaseFill,
@@ -8,7 +9,6 @@
         TypeScript,
     } from "$lib/components/technology-logos"
     import frontendPortfolios from "$lib/portfolios/frontend.json"
-    import TechnologyBox from "./TechnologyBox.svelte"
 
     let { data } = $props()
 
@@ -45,9 +45,10 @@
                     (tech) => tech.name === technology,
                 )}
                 {#if tech?.component}
-                    <TechnologyBox title={technology}>
-                        <tech.component />
-                    </TechnologyBox>
+                    {@render TechnologyBox({
+                        title: technology,
+                        Children: tech.component,
+                    })}
                 {/if}
             {/each}
         </div>
@@ -85,3 +86,15 @@
         {/if}
     </div>
 </div>
+
+{#snippet TechnologyBox({
+    title,
+    Children,
+}: {
+    title: string
+    Children: Component
+})}
+    <div class="flex rounded bg-gray-800 p-4 text-3xl" {title}>
+        <Children />
+    </div>
+{/snippet}
