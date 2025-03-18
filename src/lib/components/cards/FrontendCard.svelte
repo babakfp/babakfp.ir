@@ -1,5 +1,5 @@
 <script lang="ts">
-    import FrontendCardTechItem from "$lib/components/cards/FrontendCard/FrontendCardTechItem.svelte"
+    import type { Component } from "svelte"
     import {
         PocketBaseOutline,
         Sass,
@@ -23,6 +23,13 @@
         technologies: string[]
         isSingleRow?: boolean
     } = $props()
+
+    type TechStack =
+        | "Svelte"
+        | "Tailwind CSS"
+        | "Sass"
+        | "PocketBase"
+        | "TypeScript"
 </script>
 
 <li class={isSingleRow ? "lg:col-span-full" : ""}>
@@ -64,44 +71,39 @@
                 >
                     {#each technologies as technology}
                         {#if technology === "Sass"}
-                            <FrontendCardTechItem
-                                class="ring-offset-[#cd6799]"
-                                title={technology}
-                            >
-                                <Sass />
-                            </FrontendCardTechItem>
+                            {@render Item({
+                                class: "ring-offset-[#cd6799]",
+                                title: technology,
+                                children: Sass,
+                            })}
                         {/if}
                         {#if technology === "Svelte"}
-                            <FrontendCardTechItem
-                                class="ring-offset-[#ff3e00]"
-                                title={technology}
-                            >
-                                <Svelte />
-                            </FrontendCardTechItem>
+                            {@render Item({
+                                class: "ring-offset-[#ff3e00]",
+                                title: technology,
+                                children: Svelte,
+                            })}
                         {/if}
                         {#if technology === "Tailwind CSS"}
-                            <FrontendCardTechItem
-                                class="ring-offset-[#38bdf8]"
-                                title={technology}
-                            >
-                                <TailwindCss />
-                            </FrontendCardTechItem>
+                            {@render Item({
+                                class: "ring-offset-[#38bdf8]",
+                                title: technology,
+                                children: TailwindCss,
+                            })}
                         {/if}
                         {#if technology === "PocketBase"}
-                            <FrontendCardTechItem
-                                class="ring-offset-[#16161a]/75"
-                                title={technology}
-                            >
-                                <PocketBaseOutline />
-                            </FrontendCardTechItem>
+                            {@render Item({
+                                class: "ring-offset-[#16161a]/75",
+                                title: technology,
+                                children: PocketBaseOutline,
+                            })}
                         {/if}
                         {#if technology === "TypeScript"}
-                            <FrontendCardTechItem
-                                class="ring-offset-[#3178c6]"
-                                title={technology}
-                            >
-                                <TypeScript />
-                            </FrontendCardTechItem>
+                            {@render Item({
+                                class: "ring-offset-[#3178c6]",
+                                title: technology,
+                                children: TypeScript,
+                            })}
                         {/if}
                     {/each}
                 </div>
@@ -121,3 +123,20 @@
         </div>
     </a>
 </li>
+
+{#snippet Item({
+    title,
+    class: className,
+    children,
+}: {
+    title: TechStack
+    class?: string
+    children: Component
+})}
+    <div
+        class="flex rounded-full bg-gray-50 p-1.5 ring-2 ring-gray-50 ring-offset-2 {className}"
+        {title}
+    >
+        <svelte:component this={children} />
+    </div>
+{/snippet}
