@@ -1,4 +1,4 @@
-import { IconArticle, IconBookOpen, IconHome } from "$lib/components/icons"
+import { IconArticle, IconHome } from "$lib/components/icons"
 
 export const isMainMenuOpen = $state({ value: false })
 

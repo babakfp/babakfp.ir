@@ -2,7 +2,6 @@ export { default as IconArrowUpRightSquare } from "./IconArrowUpRightSquare.svel
 export { default as IconArticle } from "./IconArticle.svelte"
 export { default as IconBarsBottomRight } from "./IconBarsBottomRight.svelte"
 export { default as IconBook } from "./IconBook.svelte"
-export { default as IconBookOpen } from "./IconBookOpen.svelte"
 export { default as IconChevronRight } from "./IconChevronRight.svelte"
 export { default as IconCode } from "./IconCode.svelte"
 export { default as IconDribbble } from "./IconDribbble.svelte"
