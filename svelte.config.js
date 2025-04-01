@@ -1,4 +1,4 @@
-import adapter from "@sveltejs/adapter-vercel"
+import adapter from "@sveltejs/adapter-static"
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte"
 import { EXTENSIONS, mdxPreprocess } from "mdx-svelte"
 import { hastFromHtml, unifiedTransformer } from "mdx-svelte/unified"

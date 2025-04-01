@@ -23,7 +23,7 @@
         <div class="flex gap-2">
             <a
                 class="btn btn-primary"
-                href="/resume"
+                href="https://drive.google.com/file/d/1e1tNjEYYA0t2BtnTPyK2TMPSr7mNReMK/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
             >

@@ -36,7 +36,13 @@
 
     <p class="text-xl leading-8">{portfolioData.description}</p>
 
-    <img class="w-full" src={portfolioData.poster} alt={portfolioData.title} />
+    <img
+        class="w-full"
+        src={portfolioData.poster}
+        alt={portfolioData.title}
+        width="1797"
+        height="1011"
+    />
 
     {#if portfolioData.technologies.length}
         <div class="flex flex-wrap gap-2">
