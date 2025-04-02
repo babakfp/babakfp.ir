@@ -39,6 +39,8 @@
                     src={poster}
                     alt="Portfolio poster"
                     loading={isSingleRow ? "eager" : "lazy"}
+                    width="1797"
+                    height="1011"
                 />
                 <div
                     class="hide group-hover:show absolute inset-0 aspect-16/9 h-full w-full -translate-y-8 scale-90 rounded-[2px] border-2 border-dashed border-gray-50/20 duration-1000 ease-in-out group-hover:translate-y-0 group-hover:scale-[.85] group-hover:rotate-1"
