@@ -289,11 +289,13 @@
     }
 }
 
-.toaster {
-    .base {
-        @apply highlight-gray-50/10! bg-gray-800! pl-4!;
-    }
-    .message {
-        @apply text-sm text-gray-300!;
+@layer base {
+    .toaster {
+        .base {
+            @apply highlight-gray-50/10! bg-gray-800! pl-4!;
+        }
+        .message {
+            @apply text-sm text-gray-300!;
+        }
     }
 }
