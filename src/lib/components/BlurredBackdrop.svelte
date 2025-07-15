@@ -14,7 +14,10 @@
 
 <div
     {id}
-    class="hide fixed inset-0 z-40 bg-gray-950/95
-	duration-100 {isVisible && 'show'} xl:hidden"
+    class={[
+        "hide fixed inset-0 z-40 bg-gray-950/95 duration-100",
+        { show: isVisible },
+        "xl:hidden",
+    ]}
     {onclick}
 ></div>

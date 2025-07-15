@@ -27,12 +27,15 @@
 
 <li class={isSingleRow ? "lg:col-span-full" : ""}>
     <a
-        class="group block outline-offset-8
-			{isSingleRow && 'lg:grid lg:grid-cols-12 lg:gap-6'}
-		"
+        class={[
+            "group block outline-offset-8",
+            { "lg:grid lg:grid-cols-12 lg:gap-6": isSingleRow },
+        ]}
         href="/portfolios/{slug}"
     >
-        <div class="relative {isSingleRow && 'lg:col-start-1 lg:col-end-8'}">
+        <div
+            class={["relative", { "lg:col-start-1 lg:col-end-8": isSingleRow }]}
+        >
             <div class="relative overflow-hidden">
                 <img
                     class="aspect-16/9 w-full rounded-[2px] bg-gray-800 duration-700 ease-in-out group-hover:scale-95"
@@ -51,13 +54,20 @@
             ></div>
         </div>
         <div
-            class="mt-4 grid content-center gap-2 {isSingleRow
-                && 'lg:col-start-8 lg:col-end-13 lg:mt-0 lg:gap-4'}"
+            class={[
+                "mt-4 grid content-center gap-2",
+                {
+                    "lg:col-start-8 lg:col-end-13 lg:mt-0 lg:gap-4":
+                        isSingleRow,
+                },
+            ]}
         >
             <div class="flex items-center justify-between">
                 <h2
-                    class="text-3xl font-black text-gray-50
-                        {isSingleRow && 'lg:text-5xl'}"
+                    class={[
+                        "text-3xl font-black text-gray-50",
+                        { "lg:text-5xl": isSingleRow },
+                    ]}
                 >
                     {title}
                 </h2>
@@ -104,10 +114,7 @@
                 </div>
             </div>
 
-            <p
-                class="text-sm text-gray-400
-				{isSingleRow && 'lg:text-lg'}"
-            >
+            <p class={["text-sm text-gray-400", { "lg:text-lg": isSingleRow }]}>
                 {description}
             </p>
             {#if isSingleRow}

@@ -15,11 +15,13 @@
 </script>
 
 <div class="{class_} flex">
-    <div class="flex duration-100 {isTrue && 'scale-0'}">
+    <div class={["flex duration-100", { "scale-0": isTrue }]}>
         {@render first()}
     </div>
 
-    <div class="absolute flex scale-0 duration-100 {isTrue && 'scale-100'}">
+    <div
+        class={["absolute flex scale-0 duration-100", { "scale-100": isTrue }]}
+    >
         {@render second()}
     </div>
 </div>

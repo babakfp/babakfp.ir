@@ -23,8 +23,10 @@
 />
 
 <nav
-    class="fixed inset-x-0 top-(--header-height) bottom-0 z-40 hidden xl:hidden {isMainMenuOpen.value
-        && 'block!'}"
+    class={[
+        "fixed inset-x-0 top-(--header-height) bottom-0 z-40 hidden xl:hidden",
+        { "block!": isMainMenuOpen.value },
+    ]}
     aria-hidden={!isMainMenuOpen.value}
     aria-label="Main menu"
     aria-labelledby="main-menu-toggle"

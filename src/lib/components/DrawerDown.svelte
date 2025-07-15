@@ -17,7 +17,7 @@
     let backdrop = $state<HTMLDivElement>()
 </script>
 
-<div class="relative z-40 hidden {isOpen && 'block!'} {class_}">
+<div class={["relative z-40 hidden", { "block!": isOpen }, class_]}>
     <div
         class="fixed inset-0 bg-gray-950/95"
         bind:this={backdrop}
