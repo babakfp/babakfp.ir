@@ -2,7 +2,7 @@
 title: Fuck Svelte
 description: A real, honest, and unbiased opition about Svelte.
 create: 2024/10/26
-update: 2024/11/09
+update: Sat Aug 30 2025 23:35:43 GMT+0330 (Iran Standard Time)
 ---
 
 <script>
@@ -17,3 +17,12 @@ update: 2024/11/09
 
 <YoutubeCommentReplyOne />
 <YoutubeCommentReplyTwo />
+
+## Can't hide that your website uses Svelte
+
+Classes like `svelte-*`, `s-*` can be removed but that's it!
+
+Can't hide/remove/rename:
+
+- Elements `id="svelte-announcer"`.
+- Attributes like `data-sveltekit-preload-data`.
