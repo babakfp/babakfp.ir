@@ -2,7 +2,7 @@
 title: The Right Way to Implement RTL Support in CSS
 description: A step-by-step guide to adding RTL support with pure CSS.
 create: Sat Aug 30 2025 01:14:48 GMT+0330 (Iran Standard Time)
-update: Sat Aug 30 2025 01:14:48 GMT+0330 (Iran Standard Time)
+update: Sun Aug 31 2025 04:19:28 GMT+0330 (Iran Standard Time)
 ---
 
 <script lang="ts">
@@ -155,6 +155,8 @@ This list may not be complete.
 - `inset-right`
 - `background-position`
 - `background-position-x`
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values
 
 ## You are not done yet!
 
