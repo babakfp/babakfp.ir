@@ -1,6 +1,5 @@
 import { error } from "@sveltejs/kit"
 import { collections } from "$lib/markdown/collections.js"
-import { getPosts } from "$lib/utilities/getPosts.js"
 
 export const load = async ({ params }) => {
     const post = collections.getEntry("posts", params.slug)
@@ -9,8 +8,5 @@ export const load = async ({ params }) => {
         error(404)
     }
 
-    return {
-        ...post,
-        posts: await getPosts(),
-    }
+    return post
 }
