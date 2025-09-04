@@ -9,7 +9,8 @@ export const load = async ({ params }) => {
         error(404)
     }
 
-    const posts = await getPosts()
-
-    return { ...post, posts }
+    return {
+        ...post,
+        posts: await getPosts(),
+    }
 }
