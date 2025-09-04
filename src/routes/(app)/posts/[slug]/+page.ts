@@ -8,5 +8,7 @@ export const load = async ({ params }) => {
         error(404)
     }
 
-    return post
+    return {
+        post,
+    }
 }

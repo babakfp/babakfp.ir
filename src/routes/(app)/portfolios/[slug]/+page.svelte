@@ -13,7 +13,7 @@
     let { data } = $props()
 
     const portfolioData = frontendPortfolios.filter(
-        (portfolio) => portfolio.slug === data.slug,
+        (portfolio) => portfolio.slug === data.params.slug,
     )[0]
 
     const technologyComponents = [
@@ -60,7 +60,7 @@
         </div>
     {/if}
 
-    <data.default />
+    <data.portfolio.default />
 
     {#if portfolioData.gallery}
         <h2>Gallery</h2>

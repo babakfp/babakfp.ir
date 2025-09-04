@@ -21,11 +21,11 @@
 </script>
 
 <svelte:head>
-    {#if data.frontmatter.title}
-        <title>{data.frontmatter.title}</title>
+    {#if data.post.frontmatter.title}
+        <title>{data.post.frontmatter.title}</title>
     {/if}
-    {#if data.frontmatter.description}
-        <meta name="description" content={data.frontmatter.description} />
+    {#if data.post.frontmatter.description}
+        <meta name="description" content={data.post.frontmatter.description} />
     {/if}
 </svelte:head>
 
@@ -45,21 +45,21 @@
             </li>
         </ul>
 
-        {#if data.frontmatter.update || data.frontmatter.create}
+        {#if data.post.frontmatter.update || data.post.frontmatter.create}
             <div
                 class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-400"
             >
-                {#if data.frontmatter.create}
+                {#if data.post.frontmatter.create}
                     <span>
-                        Created: <b title={data.frontmatter.create}>
-                            {timeSince(new Date(data.frontmatter.create))}
+                        Created: <b title={data.post.frontmatter.create}>
+                            {timeSince(new Date(data.post.frontmatter.create))}
                         </b>
                     </span>
                 {/if}
-                {#if data.frontmatter.update}
+                {#if data.post.frontmatter.update}
                     <span>
-                        Updated: <b title={data.frontmatter.update}>
-                            {timeSince(new Date(data.frontmatter.update))}
+                        Updated: <b title={data.post.frontmatter.update}>
+                            {timeSince(new Date(data.post.frontmatter.update))}
                         </b>
                     </span>
                 {/if}
@@ -67,13 +67,13 @@
         {/if}
 
         <div class="article-content">
-            {#if data.frontmatter.title}
+            {#if data.post.frontmatter.title}
                 <h1 class="mt-(--md-title-mt)">
-                    {data.frontmatter.title}
+                    {data.post.frontmatter.title}
                 </h1>
             {/if}
 
-            <data.default />
+            <data.post.default />
         </div>
     </article>
 
