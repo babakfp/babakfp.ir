@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { Component } from "svelte"
+    import { page } from "$app/state"
     import { IconArrowUpRightSquare } from "$lib/components/icons"
     import {
         PocketBaseFill,
@@ -13,7 +14,7 @@
     let { data } = $props()
 
     const portfolioData = frontendPortfolios.filter(
-        (portfolio) => portfolio.slug === data.params.slug,
+        (portfolio) => portfolio.slug === page.params.slug,
     )[0]
 
     const technologyComponents = [
