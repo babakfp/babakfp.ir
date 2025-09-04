@@ -2,7 +2,7 @@
 title: The Right Way to Implement RTL Support in CSS
 description: A step-by-step guide to adding RTL support with pure CSS.
 create: Sat Aug 30 2025 01:14:48 GMT+0330 (Iran Standard Time)
-update: Sun Aug 31 2025 04:19:28 GMT+0330 (Iran Standard Time)
+update: Thu Sep 04 2025 09:39:25 GMT+0330 (Iran Standard Time)
 ---
 
 <script lang="ts">
@@ -90,6 +90,10 @@ And I wanted to make it work for RTL languages. Something like this won't work:
 ```
 
 So, the result would be `top left` for LTR languages and `top right` for RTL languages.
+
+### `--start` or `--inline-start`
+
+CSS uses `start` and `end` for `text-align`, and `inline-start` and `inline-end` for `float`. It seems like there isn't any consistency in naming these values. Properties that have `top` and `bottom` values, CSS uses `inline-start` and `inline-end` for `left` and `right`.
 
 #### Can use it for `rotate()` too:
 
