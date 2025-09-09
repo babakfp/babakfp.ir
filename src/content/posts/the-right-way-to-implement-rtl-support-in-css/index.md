@@ -2,7 +2,7 @@
 title: The Right Way to Implement RTL Support in CSS
 description: A step-by-step guide to adding RTL support with pure CSS.
 create: Sat Aug 30 2025 01:14:48 GMT+0330 (Iran Standard Time)
-update: Thu Sep 04 2025 09:39:25 GMT+0330 (Iran Standard Time)
+update: Tue Sep 09 2025 21:17:05 GMT+0330 (Iran Standard Time)
 ---
 
 <script lang="ts">
@@ -94,6 +94,14 @@ So, the result would be `top left` for LTR languages and `top right` for RTL lan
 ### `--start` or `--inline-start`
 
 CSS uses `start` and `end` for `text-align`, and `inline-start` and `inline-end` for `float`. It seems like there isn't any consistency in naming these values. Properties that have `top` and `bottom` values, CSS uses `inline-start` and `inline-end` for `left` and `right`.
+
+#### Update
+
+In this example, `--start` means `left` and `right`. The `vertical-align` property can only be vertically aligned. So, using `--start` and `--end` won't work. Should we come up with a new name for these values? No, just use `--{inline,block}-{start-end}` and forget about `--start` and `--end`.
+
+#### Update 2
+
+I just figured out that reverting top to bottom and vise verca isn't a good idea. If that's the case, doesn't that mean using logical border radius for top and bottom is a bad idea too? I'm not sure. Fuck it. Fuck it. Fuck it.
 
 #### Can use it for `rotate()` too:
 
@@ -215,3 +223,4 @@ Maybe you can exclude some icons from being flipped. Or maybe you can just not f
 ## Final Words
 
 I hope this guide helps you implement RTL support using pure CSS effectively.
+
