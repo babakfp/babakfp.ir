@@ -18,5 +18,5 @@
     aria-label={!isHome ? "Go to home page" : undefined}
 >
     {@render children()}
-    <span class="font-bold">BabakFp</span>
+    <span class="font-bold">babakfp</span>
 </svelte:element>
