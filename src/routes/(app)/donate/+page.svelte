@@ -3,6 +3,10 @@
     import toast from "svelte-hot-french-toast"
 
     const BANK_CARD_NUMBER = "6219861807445076"
+    const bankCardNumberReadable = BANK_CARD_NUMBER.replace(
+        /(\d{4})(?=\d)/g,
+        "$1-",
+    )
 </script>
 
 <div class="border p-4">
@@ -28,7 +32,7 @@
                             })
                         }}
                     >
-                        <b><code>{BANK_CARD_NUMBER}</code></b>
+                        <b><code>{bankCardNumberReadable}</code></b>
                     </button>
                 </td>
             </tr>
