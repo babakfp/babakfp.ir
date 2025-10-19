@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { Toaster } from "svelte-hot-french-toast"
     import HeroSection from "$lib/components/home/HeroSection.svelte"
 </script>
 
@@ -23,5 +22,3 @@
         </div>
     </main>
 </div>
-
-<Toaster />
