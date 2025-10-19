@@ -1,1 +1,5 @@
-<img src="/favicon.png" alt="Logo" class="w-8" width="100" height="100" />
+<script lang="ts">
+    import IconBracketsCurlyBold from "phosphor-icons-svelte/IconBracketsCurlyBold.svelte"
+</script>
+
+<IconBracketsCurlyBold class="text-brand-light text-3xl" />

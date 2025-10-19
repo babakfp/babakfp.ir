@@ -1,6 +1,5 @@
 <script lang="ts">
     import { Toaster } from "svelte-hot-french-toast"
-    import Footer from "$lib/components/Footer.svelte"
     import HeroSection from "$lib/components/home/HeroSection.svelte"
 </script>
 
@@ -24,7 +23,5 @@
         </div>
     </main>
 </div>
-
-<Footer />
 
 <Toaster />
