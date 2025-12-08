@@ -2,13 +2,15 @@
 title: Fuck Svelte
 description: A real, honest, and unbiased opition about Svelte.
 create: 2024/10/26
-update: Sat Aug 30 2025 23:35:43 GMT+0330 (Iran Standard Time)
+update: Mon Dec 08 2025 05:48:09 GMT+0330 (Iran Standard Time)
 ---
 
 <script>
     import YoutubeCommentReplyOne from "./_YoutubeCommentReplyOne.md"
     import YoutubeCommentReplyTwo from "./_YoutubeCommentReplyTwo.md"
 </script>
+
+Related:
 
 1. [Make Svelte better](/posts/make-svelte-better)
 2. [Svelte - A Journey of Hate and Frustration](/posts/i-like-svelte-but-i-hate-it)
