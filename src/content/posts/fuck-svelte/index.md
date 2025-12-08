@@ -2,7 +2,7 @@
 title: Fuck Svelte
 description: A real, honest, and unbiased opition about Svelte.
 create: 2024/10/26
-update: Mon Dec 08 2025 05:48:09 GMT+0330 (Iran Standard Time)
+update: Mon Dec 08 2025 05:51:04 GMT+0330 (Iran Standard Time)
 ---
 
 <script>
@@ -28,3 +28,7 @@ Can't hide/remove/rename:
 
 - Elements `id="svelte-announcer"`.
 - Attributes like `data-sveltekit-preload-data`.
+
+## Remote functions
+
+Not officially out yet, but currently they are a buggy mess.
