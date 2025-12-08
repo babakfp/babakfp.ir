@@ -2,7 +2,7 @@
 title: Svelte - A Journey of Hate and Frustration
 description: My experiences with Svelte since 2020. I hate it. I hate some of the maintainers and the community members.
 create: 2022/02/19
-update: 2023/09/15
+update: Mon Dec 08 2025 06:02:56 GMT+0330 (Iran Standard Time)
 ---
 
 <script>
@@ -106,7 +106,11 @@ For example if you are a back-end developer, and back-end is all you know, you d
 
 ## Rich Harris isn't active in the community
 
-Since 2020, when I started using Svelte, I have never seen him sending any messages in the Discord _public_ community. I think they have a separate private server for the maintainer themselves, but I haven't seen him sending any messages to the public servers. He is the creator of Svelte and you can't find him anywhere in the Discord community, it's weird. It's less likely, but he may reply to one of your comments in the Svelte or SvelteKit repositories.
+Since 2020, when I started using Svelte, I have never seen him send any messages in the Discord _public_ community. I think they have a separate private server for the maintainers themselves, but I haven't seen him send any messages to the public servers. He is the creator of Svelte and you can't find him anywhere in the Discord community, which is weird. It's less likely, but he may reply to one of your comments in the Svelte or SvelteKit repositories.
+
+On the other hand, you look at someone like the creator of SolidJS and see he is engaging with the community, both on GitHub and in the Discord community.
+
+To me, Rich Harris seems like someone who sees himself and his opinions as above and superior to others. That's just how I see it. And Ryan Carniato (creator of SolidJS) seems like a normal person, who sees himself in the same level as others.
 
 ## They are just showing you what you want to see
 
