@@ -38,7 +38,7 @@
         >
             <div class="relative overflow-hidden">
                 <img
-                    class="aspect-16/9 w-full rounded-[2px] bg-gray-800 duration-700 ease-in-out group-hover:scale-95"
+                    class="aspect-video w-full rounded-xs bg-gray-800 duration-700 ease-in-out group-hover:scale-95"
                     src={poster}
                     alt="Portfolio poster"
                     loading={isSingleRow ? "eager" : "lazy"}
@@ -46,11 +46,11 @@
                     height="1011"
                 />
                 <div
-                    class="hide group-hover:show absolute inset-0 aspect-16/9 h-full w-full -translate-y-8 scale-90 rounded-[2px] border-2 border-dashed border-gray-50/20 duration-1000 ease-in-out group-hover:translate-y-0 group-hover:scale-[.85] group-hover:rotate-1"
+                    class="hide group-hover:show absolute inset-0 aspect-video h-full w-full -translate-y-8 scale-90 rounded-xs border-2 border-dashed border-gray-50/20 duration-1000 ease-in-out group-hover:translate-y-0 group-hover:scale-[.85] group-hover:rotate-1"
                 ></div>
             </div>
             <div
-                class="hide group-hover:show absolute inset-0 -z-1 aspect-16/9 h-full w-full rounded-[2px] bg-gray-50/10 duration-700 ease-in-out group-hover:-translate-y-4"
+                class="hide group-hover:show absolute inset-0 -z-1 aspect-video h-full w-full rounded-xs bg-gray-50/10 duration-700 ease-in-out group-hover:-translate-y-4"
             ></div>
         </div>
         <div

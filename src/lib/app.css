@@ -8,28 +8,23 @@
 }
 
 @theme {
-    --color-zinc-*: initial;
     --color-slate-*: initial;
     --color-stone-*: initial;
     --color-neutral-*: initial;
+    --color-gray-50: var(--color-zinc-50);
+    --color-gray-100: var(--color-zinc-100);
+    --color-gray-200: var(--color-zinc-200);
+    --color-gray-300: var(--color-zinc-300);
+    --color-gray-400: var(--color-zinc-400);
+    --color-gray-500: var(--color-zinc-500);
+    --color-gray-600: var(--color-zinc-600);
+    --color-gray-700: var(--color-zinc-700);
+    --color-gray-800: var(--color-zinc-800);
+    --color-gray-900: var(--color-zinc-900);
+    --color-gray-950: var(--color-zinc-950);
 
-    --color-gray-50: oklch(0.985 0 0); /* --color-zinc-50 */
-    --color-gray-100: oklch(0.967 0.001 286.375); /* --color-zinc-100 */
-    --color-gray-200: oklch(0.92 0.004 286.32); /* --color-zinc-200 */
-    --color-gray-300: oklch(0.871 0.006 286.286); /* --color-zinc-300 */
-    --color-gray-400: oklch(0.705 0.015 286.067); /* --color-zinc-400 */
-    --color-gray-500: oklch(0.552 0.016 285.938); /* --color-zinc-500 */
-    --color-gray-600: oklch(0.442 0.017 285.786); /* --color-zinc-600 */
-    --color-gray-700: oklch(0.37 0.013 285.805); /* --color-zinc-700 */
-    --color-gray-800: oklch(0.274 0.006 286.033); /* --color-zinc-800 */
-    --color-gray-900: oklch(0.21 0.006 285.885); /* --color-zinc-900 */
-    --color-gray-950: oklch(0.141 0.005 285.823); /* --color-zinc-950 */
-
-    --color-brand-dark: rgb(124 45 18);
-    --color-brand-light: rgb(254 215 170);
-
-    --radius-lg: initial;
-    --radius: 0.5rem; /* --radius-lg */
+    --color-brand-dark: var(--color-orange-900);
+    --color-brand-light: var(--color-orange-200);
 
     --font-sans: "Jost Variable";
     --font-mono: "JetBrains Mono Variable";
@@ -102,11 +97,11 @@
 }
 
 @utility link {
-    @apply text-brand-light hover:decoration-brand-light focus-visible:decoration-brand-light break-words underline decoration-transparent duration-75;
+    @apply text-brand-light hover:decoration-brand-light focus-visible:decoration-brand-light wrap-break-word underline decoration-transparent duration-75;
 }
 
 @utility btn {
-    @apply drag-none highlight-gray-50/10 relative inline-flex items-center justify-center gap-2 rounded bg-gray-800 px-3 py-2 text-sm font-medium text-gray-50 outline-offset-2 transition-colors duration-100 hover:bg-gray-700;
+    @apply drag-none highlight-gray-50/10 relative inline-flex items-center justify-center gap-2 rounded-lg bg-gray-800 px-3 py-2 text-sm font-medium text-gray-50 outline-offset-2 transition-colors duration-100 hover:bg-gray-700;
 }
 
 @utility btn-icon {
@@ -129,9 +124,9 @@
 
     /* prettier-ignore */
     h1, h2, h3, h4, h5, h6 {
-            @apply break-words text-gray-50;
+            @apply wrap-break-word text-gray-50;
             code {
-                @apply [text-transform:none];
+                @apply normal-case;
             }
         }
 
@@ -204,7 +199,7 @@
 
     img,
     video {
-        @apply rounded;
+        @apply rounded-lg;
     }
 
     img:not([inline]),
@@ -217,7 +212,7 @@
     }
 
     blockquote {
-        @apply relative rounded bg-gray-400/5 p-4 shadow-xs shadow-gray-400/20;
+        @apply relative rounded-lg bg-gray-400/5 p-4 shadow-xs shadow-gray-400/20;
         blockquote {
             @apply mt-(--md-base-mt) -mr-3 sm:mr-0;
         }
@@ -265,7 +260,7 @@
     }
 
     pre {
-        @apply -mx-4 bg-gray-50/5! text-sm [tab-size:4] selection:bg-gray-50/10 sm:mx-0 sm:rounded sm:p-0.5;
+        @apply -mx-4 bg-gray-50/5! text-sm tab-4 selection:bg-gray-50/10 sm:mx-0 sm:rounded-lg sm:p-0.5;
 
         code {
             @apply block overflow-x-auto py-4 leading-8 select-text;

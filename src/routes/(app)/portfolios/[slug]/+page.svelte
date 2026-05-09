@@ -101,7 +101,7 @@
     title: string
     Children: Component
 })}
-    <div class="flex rounded bg-gray-800 p-4 text-3xl" {title}>
+    <div class="flex rounded-lg bg-gray-800 p-4 text-3xl" {title}>
         <Children />
     </div>
 {/snippet}
