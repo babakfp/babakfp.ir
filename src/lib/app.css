@@ -172,7 +172,9 @@
 
     ul,
     ol {
-        @apply list-inside space-y-2;
+        /* Using `pl-[1.05em]` in favor of `list-inside` because it doesn't have its issues. */
+        @apply space-y-2 pl-[1.05em];
+
         ul,
         ol {
             @apply ml-6;
@@ -190,10 +192,6 @@
         ul,
         ol {
             @apply my-4;
-        }
-
-        > p:first-child {
-            @apply inline-block;
         }
     }
 
