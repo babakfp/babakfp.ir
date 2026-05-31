@@ -2,16 +2,16 @@
     import type { Snippet } from "svelte"
     import CopyButton from "../components/CopyButton.svelte"
     import Pre from "../components/Pre.svelte"
+    import type { HTMLAttributes } from "svelte/elements"
 
     let {
         children,
         ...restProps
     }: {
         children: Snippet
-        [key: string]: any
-    } = $props()
+    } & HTMLAttributes<HTMLPreElement> = $props()
 
-    let pre = $state<HTMLPreElement>()
+    let ref = $state<HTMLPreElement>()
 </script>
 
-<Pre bind:pre {...restProps}>{@render children()}<CopyButton {pre} /></Pre>
+<Pre bind:ref {...restProps}>{@render children()}<CopyButton pre={ref} /></Pre>

@@ -1,19 +1,18 @@
 <script lang="ts">
     import type { Snippet } from "svelte"
+    import type { HTMLAttributes } from "svelte/elements"
 
     let {
-        pre = $bindable(),
+        ref = $bindable(),
         children,
         ...restProps
     }: {
-        pre: HTMLPreElement | undefined
+        ref: HTMLPreElement | undefined
         children: Snippet
-        // TODO: Fix type.
-        [key: string]: any
-    } = $props()
+    } & HTMLAttributes<HTMLPreElement> = $props()
 </script>
 
 <pre
-    bind:this={pre}
-    class="group relative"
-    {...restProps}>{@render children()}</pre>
+    bind:this={ref}
+    {...restProps}
+    class={["group relative", restProps.class]}>{@render children()}</pre>
