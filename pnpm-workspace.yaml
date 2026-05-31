@@ -1,1 +1,4 @@
+saveExact: true
+engineStrict: true
+packageLock: false
 dangerouslyAllowAllBuilds: []
