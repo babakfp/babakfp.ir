@@ -223,4 +223,3 @@ Maybe you can exclude some icons from being flipped. Or maybe you can just not f
 ## Final Words
 
 I hope this guide helps you implement RTL support using pure CSS effectively.
-
