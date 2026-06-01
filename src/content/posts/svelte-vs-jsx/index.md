@@ -11,7 +11,7 @@ Here you can see that in Svelte you need to learn about something called Snippet
 
 ### Svelte
 
-```svelte showLineNumbers
+```svelte
 <script lang="ts">
     import type { Snippet } from "svelte"
 
@@ -37,7 +37,7 @@ Here you can see that in Svelte you need to learn about something called Snippet
 
 ### JSX
 
-```jsx showLineNumbers
+```jsx
 import { ReactElement } from "react"
 
 const toasts = [{ text: "Hello, World!" }]

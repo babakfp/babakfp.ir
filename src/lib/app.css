@@ -216,55 +216,29 @@
         }
     }
 
-    [data-highlighted-chars] {
-        @apply bg-gray-50/10 p-1 text-[.9em];
-    }
-
-    code span {
-        @apply not-italic!;
-    }
-
-    code [data-line].remove {
-        @apply bg-[#f47067]/10;
-    }
-    code [data-line].add {
-        @apply bg-[#8ddb8c]/10;
-    }
-
+    /* `code` tag that is not a child of `pre` tag */
     code:not(pre code):not(#quick-reference *) {
         @apply rounded-md bg-gray-50/10 px-1.5 py-0.5 text-[.9em] select-text;
     }
 
-    code[data-line-numbers] {
-        counter-reset: line;
+    /* `span.shiki` is for highlighted inline code */
+    span.shiki {
+        @apply bg-transparent!;
     }
 
-    code[data-line-numbers] > [data-line]::before {
-        counter-increment: line;
-        content: counter(line);
-        @apply mr-8 inline-block w-3 text-right text-gray-50/10;
-    }
-
-    code[data-line-numbers-max-digits="2"] > [data-line]::before {
-        @apply w-5;
-    }
-
-    code[data-line-numbers-max-digits="3"] > [data-line]::before {
-        @apply w-7;
-    }
-
-    code[data-line-numbers-max-digits="4"] > [data-line]::before {
-        @apply w-9;
+    span.shiki,
+    .shiki span {
+        @apply not-italic!;
     }
 
     pre {
-        @apply -mx-4 bg-gray-50/5! text-sm tab-4 selection:bg-gray-50/10 sm:mx-0 sm:rounded-lg sm:p-0.5;
+        @apply -mx-4 overflow-x-auto bg-gray-50/2! text-sm tab-4 ring ring-gray-50/5 selection:bg-gray-50/10 sm:mx-0 sm:rounded-lg;
 
         code {
-            @apply block overflow-x-auto py-4 leading-8 select-text;
+            @apply block w-fit py-4 leading-8 select-text;
 
-            [data-line] {
-                @apply px-4;
+            .line {
+                @apply inline-block w-full px-4 sm:px-8;
             }
         }
     }

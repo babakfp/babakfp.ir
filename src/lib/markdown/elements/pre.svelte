@@ -1,7 +1,6 @@
 <script lang="ts">
     import type { Snippet } from "svelte"
     import CopyButton from "../components/CopyButton.svelte"
-    import Pre from "../components/Pre.svelte"
     import type { HTMLAttributes } from "svelte/elements"
 
     let {
@@ -14,4 +13,7 @@
     let ref = $state<HTMLPreElement>()
 </script>
 
-<Pre bind:ref {...restProps}>{@render children()}<CopyButton pre={ref} /></Pre>
+<div class="group relative">
+    <pre bind:this={ref} {...restProps}>{@render children()}</pre>
+    <CopyButton pre={ref} />
+</div>
