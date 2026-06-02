@@ -17,9 +17,9 @@
         "mdx-svelte": "5.0.0",
         "phosphor-icons-svelte": "2.1.0",
         "prettier": "3.8.3",
-        "prettier-plugin-svelte": "4.0.1",
+        "prettier-plugin-svelte": "4.1.0",
         "prettier-plugin-tailwindcss": "0.8.0",
-        "svelte": "5.56.0",
+        "svelte": "5.56.1",
         "svelte-copy": "2.0.0",
         "svelte-hot-french-toast": "4.0.0",
         "svelte-loading-bar": "2.0.4",
@@ -27,8 +27,8 @@
         "tailwindcss": "4.3.0",
         "tailwindcss-addons": "4.2.0",
         "typescript": "6.0.3",
-        "vite": "8.0.14"
+        "vite": "8.0.16"
     },
-    "packageManager": "pnpm@11.5.0",
+    "packageManager": "pnpm@11.5.1",
     "type": "module"
 }
