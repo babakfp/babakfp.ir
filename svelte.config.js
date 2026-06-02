@@ -38,7 +38,6 @@ export default {
                         rehypeShiki: {
                             options: {
                                 theme: "slack-dark",
-                                inline: "tailing-curly-colon",
                                 transformers: [transformerColorizedBrackets()],
                             },
                         },
