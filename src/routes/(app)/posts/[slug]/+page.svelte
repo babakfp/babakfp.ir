@@ -30,7 +30,7 @@
 </svelte:head>
 
 <main
-    class="container max-w-(--breakpoint-xl) xl:grid xl:grid-cols-[1fr_auto] xl:gap-12 xl:pl-8"
+    class="container max-w-(--breakpoint-xl) xl:grid xl:grid-cols-[1fr_auto] xl:gap-12"
 >
     <article
         class="mx-auto max-w-prose pt-(--main-pt) pb-(--main-pb) xl:mx-0 xl:min-h-(--svh-no-header) xl:max-w-none"
