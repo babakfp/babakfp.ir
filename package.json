@@ -29,6 +29,6 @@
         "typescript": "6.0.3",
         "vite": "8.0.14"
     },
-    "type": "module",
-    "packageManager": "pnpm@11.5.0"
+    "packageManager": "pnpm@11.5.0",
+    "type": "module"
 }
