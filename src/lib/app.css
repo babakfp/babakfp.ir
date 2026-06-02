@@ -120,7 +120,7 @@
     --md-base-mt: --spacing(6);
     --md-title-mt: --spacing(10);
 
-    @apply space-y-(--md-base-mt) leading-7;
+    @apply space-y-(--md-base-mt) leading-7 text-balance;
 
     /* prettier-ignore */
     h1, h2, h3, h4, h5, h6 {
