@@ -122,18 +122,26 @@
 
     @apply space-y-(--md-base-mt) leading-7 text-balance;
 
-    /* prettier-ignore */
-    h1, h2, h3, h4, h5, h6 {
-            @apply wrap-break-word text-gray-50;
-            code {
-                @apply normal-case;
-            }
-        }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply wrap-break-word text-gray-50;
 
-    /* prettier-ignore */
-    h2, h3, h4, h5, h6 {
-            @apply mt-(--md-title-mt)! font-bold;
+        code {
+            @apply normal-case;
         }
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply mt-(--md-title-mt)! font-bold;
+    }
 
     h1 {
         @apply text-5xl font-black sm:text-6xl;
@@ -151,10 +159,13 @@
         @apply text-sm;
     }
 
-    /* prettier-ignore */
-    h2, h3, h4, h5, h6 {
-            @apply relative [&:hover_.heading-permalink]:show;
-        }
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply [&:hover_.heading-permalink]:show relative;
+    }
     .heading-permalink {
         @apply hide absolute text-[1em] delay-300 duration-300;
     }
@@ -166,6 +177,7 @@
     a:not(.btn) {
         @apply link;
     }
+
     hr {
         @apply my-8!;
     }
@@ -211,6 +223,7 @@
 
     blockquote {
         @apply relative rounded-lg bg-gray-400/5 p-4 shadow-xs shadow-gray-400/20;
+
         blockquote {
             @apply mt-(--md-base-mt) -mr-3 sm:mr-0;
         }
