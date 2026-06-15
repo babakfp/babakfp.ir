@@ -2,7 +2,7 @@
 title: The Right Way to Implement RTL Support in CSS
 description: A step-by-step guide to adding RTL support with pure CSS.
 create: Sat Aug 30 2025 01:14:48 GMT+0330 (Iran Standard Time)
-update: Tue Sep 09 2025 21:17:05 GMT+0330 (Iran Standard Time)
+update: Mon Jun 15 2026 14:29:00 GMT+0330 (Iran Standard Time)
 ---
 
 <script lang="ts">
@@ -15,21 +15,21 @@ update: Tue Sep 09 2025 21:17:05 GMT+0330 (Iran Standard Time)
 
 A step-by-step guide to adding RTL support with pure CSS. Learn best practices, avoid common mistakes, and make your layouts work smoothly for both LTR and RTL languages.
 
-Let me first say, thank you for trying to improve user experience of RTL users. It's very much appreciated.
+Let me first say, thank you for trying to improve RTL UX and making your site usable for RTL users. It's very much appreciated.
 
 ## Make sure to use the `dir` attribute
 
 On your `<html>` tag, add the `dir` attribute with the value `rtl` or `ltr`. This will tell the browser that the page is in RTL or LTR mode.
 
-As a result, browsers will get many things working for you, but they won't know what to do with your CSS.
+As a result, browsers will get many things working for you, but they won't know what to do with your (non-logical, and some other) CSS.
 
 Make sure to use the HTML `dir` attribute as much as possible instead of using the CSS `direction` property.
 
 ## CSS Logical Properties
 
-Search using your browser or ask AI to learn more about CSS Logical Properties.
+NOTE: You can search on the Internet or ask AI to learn more about CSS Logical Properties.
 
-In short, instead of writing this CSS:
+In short, instead of writing this CSS code:
 
 ```css
 .container {
@@ -38,7 +38,7 @@ In short, instead of writing this CSS:
 }
 ```
 
-You can write this CSS:
+You should write this:
 
 ```css
 .container {
@@ -46,7 +46,7 @@ You can write this CSS:
 }
 ```
 
-This is a shorthand for:
+Which is a shorthand for:
 
 ```css
 .container {
@@ -56,6 +56,8 @@ This is a shorthand for:
 ```
 
 And this would just work for both LTR and RTL languages.
+
+Learn mode: [CSS logical properties and values](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)
 
 ## What to do when there is no CSS Logical Properties support?
 
@@ -178,7 +180,7 @@ Let's continue with the next step.
 
 ## In RTL, some things should still stay LTR and left-aligned
 
-For example, an input that takes URL as input should still be LTR and left-aligned. Because the content inside the input is in a LTR language. Even when it contains RTL characters, the first characters like `https://` are still LTR. So, URL inputs should always be LTR.
+For example, an input tag that takes URL as input should still be LTR and left-aligned. Because the content inside the input is in a LTR language. Even when it contains RTL characters, the first characters like `https://` are still LTR. So, URL inputs should always be LTR.
 
 Fields that are always in LTR languages, should always stay LTR, like urls, passwords, slugs, paths, file names and UUIDs, code fields, number fields, etc.
 
@@ -189,6 +191,43 @@ You can copy-paste a text inside an input with `dir="auto"` attribute, and you c
 As far as I know, numbers should always be LTR. For example in Farsi/Persian langauge, numbers are written from left to right. So, they should always be shown from left to right.
 
 It's not just about inputs, you may have content that should be LTR and left-aligned. For example, code blocks, text that shows a path like `/home`, and so on. Something like `/home` may look like `home/` in RTL direction, which is incorrect, because it looks like a different value visually. So, it should always be LTR.
+
+### When RTL text in the placeholder of a number input is shown from LTR
+
+Example:
+
+```html
+<html lang="fa" dir="rtl">
+    <input type="number" dir="ltr" placeholder="شماره موبایل" />
+</html>
+```
+
+The input has `dir="ltr"` because as it's explained above, somethings should always stay LTR.
+
+The placeholder text will be shown from LTR, and this is not good because the text is RTL. So, the input content should be LTR but the placeholder should be RTL. Solution:
+
+```css
+input[type="number"]:placeholder-shown {
+    direction: inherit;
+}
+```
+
+This means select `input` tag that is type of `number` when the placeholder is shown, if so, set direction of the input to inherit from the parent, which is `rtl`.
+
+You may want to adjust styling to this, because maybe for some inputs, their parent isn't going to be `rtl`, if so it would be problamatic.
+
+```css
+html[dir="rtl"] input[type="number"]:placeholder-shown {
+    direction: rtl;
+}
+```
+
+Note that you should add this placeholder related code to every input that is LTR, so it isn't only for `number` inputs.
+
+Learn more:
+
+- [`:placeholder-shown` CSS pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:placeholder-shown)
+- [`inherit` CSS keyword](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/inherit)
 
 ## Custom font for new languages
 
