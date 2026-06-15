@@ -270,12 +270,10 @@
 }
 
 @layer base {
-    .toaster {
-        .base {
-            @apply highlight-gray-50/10! bg-gray-800! pl-4!;
-        }
-        .message {
-            @apply text-sm text-gray-300!;
-        }
+    .svelte-hot-french-toast__base {
+        @apply highlight-gray-50/10! bg-gray-800! pl-4!;
+    }
+    .svelte-hot-french-toast__message {
+        @apply text-sm text-gray-300!;
     }
 }
