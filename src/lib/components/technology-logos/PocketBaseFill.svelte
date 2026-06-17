@@ -1,8 +1,10 @@
 <script lang="ts">
+    import type { ClassValue } from "svelte/elements"
+
     let {
         class: class_,
     }: {
-        class?: string
+        class?: ClassValue
     } = $props()
 </script>
 

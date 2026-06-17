@@ -1,6 +1,7 @@
 <script lang="ts">
     import type { Snippet } from "svelte"
     import { OutClick } from "svelte-outclick"
+    import type { ClassValue } from "svelte/elements"
 
     let {
         isOpen = $bindable(),
@@ -9,7 +10,7 @@
         children,
     }: {
         isOpen?: boolean
-        class?: string
+        class?: ClassValue
         excluderQuery: string
         children: Snippet
     } = $props()
