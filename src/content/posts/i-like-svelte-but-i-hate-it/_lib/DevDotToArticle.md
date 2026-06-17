@@ -15,7 +15,7 @@ The short story is that the community is toxic. You can find really good people 
 
 @Rich-Harris Hey, you may want to read this🙂
 
-<PlatformQuote title="GitHub comment">
+<PlatformQuote title="github.com comment">
 	<GithubComment />
 </PlatformQuote>
 

@@ -45,7 +45,7 @@ So, I opened a PR and this is how it went:
 Here is the comment that got me banned (the comment got removed after I got banned, that's why it doesn't exist in the screenshot above). Before we continue forward, read the content of the screenshot above.
 
 <ShowMore>
-	<PlatformQuote title="GitHub comment">
+	<PlatformQuote title="github.com comment">
 		<GithubComment />
 	</PlatformQuote>
 </ShowMore>
