@@ -20,6 +20,10 @@
             isMainMenuOpen.value = false
         }
     }}
+    onresize={(e) => {
+        if (e.currentTarget.innerWidth < 1280) return
+        isMainMenuOpen.value = false
+    }}
 />
 
 <nav
