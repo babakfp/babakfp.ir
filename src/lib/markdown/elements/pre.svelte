@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { Snippet } from "svelte"
-    import CopyButton from "../components/CopyButton.svelte"
     import type { HTMLAttributes } from "svelte/elements"
+    import CopyButton from "../components/CopyButton.svelte"
 
     let {
         children,
