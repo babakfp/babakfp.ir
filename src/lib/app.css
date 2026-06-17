@@ -5,6 +5,9 @@
     * {
         @apply scrollbar-none;
     }
+    code {
+        box-decoration-break: clone;
+    }
 }
 
 @theme {
