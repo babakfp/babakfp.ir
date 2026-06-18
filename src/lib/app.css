@@ -266,7 +266,7 @@
     .remark-github-alerts {
         @apply border-l-3 pt-4 pl-6;
 
-        .remark-github-alerts-title {
+        .remark-github-alerts-title:not(:first-chlid) {
             @apply mb-4;
 
             svg {
@@ -283,4 +283,8 @@
     .svelte-hot-french-toast__message {
         @apply text-sm;
     }
+}
+
+@utility icon-wrapper {
+    @apply mb-0 inline-block rounded bg-gray-50/2 px-[0.5em] py-[0.25em] ring ring-gray-50/5;
 }

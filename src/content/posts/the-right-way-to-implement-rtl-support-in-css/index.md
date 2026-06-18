@@ -5,14 +5,6 @@ create: Sat Aug 30 2025 01:14:48 GMT+0330 (Iran Standard Time)
 update: Mon Jun 15 2026 14:29:00 GMT+0330 (Iran Standard Time)
 ---
 
-<script lang="ts">
-    import IconCheckBold from "phosphor-icons-svelte/IconCheckBold.svelte"
-    import IconArrowRightBold from "phosphor-icons-svelte/IconArrowRightBold.svelte"
-    import IconTextHOneBold from "phosphor-icons-svelte/IconTextHOneBold.svelte"
-    import IconTwitterLogoBold from "phosphor-icons-svelte/IconTwitterLogoBold.svelte"
-    import IconWrapper from "./IconWrapper.svelte"
-</script>
-
 A step-by-step guide to adding RTL support with pure CSS. Learn best practices, avoid common mistakes, and make your layouts work smoothly for both LTR and RTL languages.
 
 Let me first say, thank you for trying to improve RTL UX and making your site usable for RTL users. It's very much appreciated.
@@ -249,15 +241,56 @@ It's free, looks good, and has no licensing or legal issues.
 
 ## Icon direction
 
-Some icons like Checkmark <IconWrapper><IconCheckBold /></IconWrapper>, can stay the same in both LTR and RTL languages. But, icons like Arrow-Right <IconWrapper><IconArrowRightBold /></IconWrapper> need to be flipped.
+> [!NOTE] note that we are using emojies and emojies can look different based on device OS.
 
-What if we just flip them all horizontally? This could work, but not really. Let's try it.
+Icons can be mirrored, or in another word, (horizontally) flipped; So they can match the reading and looking direction of the users and provide a better visual and experiense for them.
 
-- Recognized symbols: <IconWrapper><IconCheckBold /></IconWrapper> <IconWrapper><IconCheckBold class="flip-x" /></IconWrapper>
-- Texts: <IconWrapper><IconTextHOneBold /></IconWrapper> <IconWrapper><IconTextHOneBold class="flip-x" /></IconWrapper>
-- Brand logos: <IconWrapper><IconTwitterLogoBold /></IconWrapper> <IconWrapper><IconTwitterLogoBold class="flip-x" /></IconWrapper>
+- _Shouldn't be mirrored:_ When the meaning or the shape breaks. Example:
+    - <span class="icon-wrapper text-xl">✅</span> : <span class="icon-wrapper text-xl flip-x">✅</span>
+    - <span class="icon-wrapper text-xl">🕒</span> : <span class="icon-wrapper text-xl flip-x">🕒</span>
 
-Maybe you can exclude some icons from being flipped. Or maybe you can just not flip them at all. If you flip a wrong icon, it's a worse issue than if you don't flip it at all.
+- _Shouldn't be mirrored:_ When it's a brand logo, flag or similar. Example:
+    - <span class="icon-wrapper text-xl">🐦</span> : <span class="icon-wrapper text-xl flip-x">🐦</span> Logo
+    - <span class="icon-wrapper text-xl">☯️</span> : <span class="icon-wrapper text-xl flip-x">☯️</span> Symbol
+    - <span class="icon-wrapper text-xl">🔰</span> : <span class="icon-wrapper text-xl flip-x">🔰</span> Flag
+
+- _Shouldn't be mirrored:_ When a text is displayed. Example:
+    - <span class="icon-wrapper text-xl">💲</span> : <span class="icon-wrapper text-xl flip-x">💲</span>
+    - <span class="icon-wrapper text-xl">💯</span> : <span class="icon-wrapper text-xl flip-x">💯</span>
+    - <span class="icon-wrapper text-xl">🔝</span> : <span class="icon-wrapper text-xl flip-x">🔝</span>
+    - <span class="icon-wrapper text-xl">🤬</span> : <span class="icon-wrapper text-xl flip-x">🤬</span>
+
+- _Shouldn't be mirrored:_ When one part of a shape _should_ be mirrored but another part _shouldn't_. Example:
+    - <span class="icon-wrapper text-xl">🔚</span> : <span class="icon-wrapper text-xl flip-x">🔚</span>
+    - The example above contains text, but sometimes it may be two shapes (with no text) that one should and another shouldn't be mirrored.
+    - The solution is to duplicate the icon and modify it; Mirror what needs to be mirrored; Now you would have an RTL version of that icon that can be used in RTL contexts.
+
+- _Doesn't need to be mirrored:_ When they are symmetrical. Examples:
+    - <span class="icon-wrapper text-xl">😊</span> : <span class="icon-wrapper text-xl flip-x">😊</span>
+    - <span class="icon-wrapper text-xl">♥️</span> : <span class="icon-wrapper text-xl flip-x">♥️</span>
+    - <span class="icon-wrapper text-xl">🛑</span> : <span class="icon-wrapper text-xl flip-x">🛑</span>
+    - <span class="icon-wrapper text-xl">☢️</span> : <span class="icon-wrapper text-xl flip-x">☢️</span>
+
+- _Not sure about these:_
+    - <span class="icon-wrapper text-xl">♻️</span> : <span class="icon-wrapper text-xl flip-x">♻️</span>
+
+- _Could easily be mirrored:_ When it wouldn't break the meaning or the shap. Example:
+    - <span class="icon-wrapper text-xl">📞</span> : <span class="icon-wrapper text-xl flip-x">📞</span>
+    - <span class="icon-wrapper text-xl">🚀</span> : <span class="icon-wrapper text-xl flip-x">🚀</span>
+    - <span class="icon-wrapper text-xl">🔊</span> : <span class="icon-wrapper text-xl flip-x">🔊</span>
+    - <span class="icon-wrapper text-xl">🏳️</span> : <span class="icon-wrapper text-xl flip-x">🏳️</span>
+    - <span class="icon-wrapper text-xl">➡️</span> : <span class="icon-wrapper text-xl flip-x">➡️</span>
+    - <span class="icon-wrapper text-xl">👈</span> : <span class="icon-wrapper text-xl flip-x">👈</span>
+
+Is it a good idea to mirror traffic lights <span class="icon-wrapper text-xl">🚥</span> : <span class="icon-wrapper text-xl flip-x">🚥</span> in MacOC app window acctions? No, it's a bad idea! The same with Windows. It would cause UX issues; The OS may be in English (LTR) but your app could be set to an RTL lanauge, in this scenario all apps other than yours would have LTR traffic light acctions, and user would get annoyed and frasturated that it's only your app that behaves this way and breaks their muscle memory. So, they should be untouched, you should specifically check to make sure they bot on LTR and RTL they look the same and are in the same place and position as eachother.
+
+It may be better to manually review all icons, exclude what doesn't make sense and mirror what makes sense. This would mean reviewed ones gonna work as expected but in feature new icons should be reviewed to which may be missed. What if we just mirrored them all? This could work, but not really. If you flip a wrong icon, it's a worse issue than if you don't flip it at all.
+
+## Naming things by considering the direction
+
+When naming class names, IDs or whatever else, it's a good idea to keep in mind the writing direction of the reader. For classes it's a good idea to use naming like `.end-sidebar` (or `.inline-end-sidebar`) instead of `.right-sidebar`. Because if we use `.right-sidebar` in LTR site and then the site gets translated to an RTL langauge, the element with `.right-sidebar` class is going to be on their left side of the screen! The site that is in LTR is going to get `dir="rtl"` in `html` tag and as a result things going to change direction automatically to match the reading direction. So it's not going to make sense anymore.
+
+Keep this rule in mind when writing explanations too. The documentation or whatever you write should keep the writing direction of the reader in mind.
 
 ## Final Words
 
