@@ -2,7 +2,7 @@
 title: The Right Way to Implement RTL Support in CSS
 description: A step-by-step guide to adding RTL support with pure CSS.
 create: Sat Aug 30 2025 01:14:48 GMT+0330 (Iran Standard Time)
-update: Thu Jun 18 2026 14:56:29 GMT+0330 (Iran Standard Time)
+update: Thu Jun 18 2026 15:22:44 GMT+0330 (Iran Standard Time)
 ---
 
 A step-by-step guide to adding RTL support with pure CSS. Learn best practices, avoid common mistakes, and make your layouts work smoothly for both LTR and RTL languages.
@@ -286,9 +286,9 @@ It may be better to manually review all icons, exclude what doesn't make sense a
 
 ## OS window traffic light actions
 
-Is it a good idea to mirror traffic lights <span class="icon-wrapper text-xl">🚥</span> : <span class="icon-wrapper text-xl flip-x">🚥</span> in MacOC app window acctions? No, it's a bad idea! The same with Windows. It would cause UX issues; The OS may be in English (LTR) but your app could be set to an RTL lanauge, in this scenario all apps other than yours would have LTR traffic light acctions, and user would get annoyed and frasturated that it's only your app that behaves this way and breaks their muscle memory. So, they should be untouched, you should specifically check to make sure they bot on LTR and RTL they look the same and are in the same place and position as eachother.
+Is it a good idea to mirror traffic lights <span class="icon-wrapper text-xl flip-x">🚥</span> : <span class="icon-wrapper text-xl">🚥</span> in MacOC app window acctions? No, it's a bad idea! The same with Windows. It would cause UX issues; The OS may be in English (LTR) but your app could be set to an RTL lanauge, in this scenario all apps other than yours would have LTR traffic light acctions, and user would get annoyed and frasturated that it's only your app that behaves this way and breaks their muscle memory. So, they should be untouched, you should specifically check to make sure they bot on LTR and RTL they look the same and are in the same place and position as eachother.
 
-Note that this may not make sense, and you are right to think that way because it doens't. If the traffic light actions look like <span class="icon-wrapper text-xl">🚥</span> in LTR, it makes sense for them to look like <span class="icon-wrapper text-xl flip-x">🚥</span> in RTL. But as explained, the actions in the rest of the apps and windows are going to look like how they are in LTR.
+Note that this may not make sense, and you are right to think that way because it doens't. If the traffic light actions look like <span class="icon-wrapper text-xl flip-x">🚥</span> in LTR, it makes sense for them to look like <span class="icon-wrapper text-xl">🚥</span> in RTL. But as explained, the actions in the rest of the apps and windows ((➖🟪✖️) being placed on the right side) are going to look like how they are in LTR.
 
 Same thing applied to scrollbars too. For LTR sites the scrollbar is on the right side, but for RTL it should be on the left side, so that it's not on the way and you looking at it all the time. The same rules that effects everything, should apply here too. But it's the same as window traffic light actions. In RTL sites with `<html lang="fa" dir="rtl">` you would have the scrollbar on the right side. This is just how it is and the broser doens't change it to be on the left side.
 
