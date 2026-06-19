@@ -13,13 +13,9 @@
 </script>
 
 <LoadingBar />
-<Header />
-{@render children()}
-<Toaster />
-{@render SmoothBlackToContentShadow()}
 
-{#snippet SmoothBlackToContentShadow()}
-    <div
-        class="fixed inset-0 shadow-[inset_0_0_--spacing(4)_black] z-50 pointer-events-none"
-    ></div>
-{/snippet}
+<Header />
+
+{@render children()}
+
+<Toaster />
