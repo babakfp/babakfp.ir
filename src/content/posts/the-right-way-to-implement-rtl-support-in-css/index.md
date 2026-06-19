@@ -272,9 +272,6 @@ Icons can be mirrored, or in another word, (horizontally) flipped; So they can m
     - <span class="icon-wrapper text-xl">🛑</span> : <span class="icon-wrapper text-xl flip-x">🛑</span>
     - <span class="icon-wrapper text-xl">☢️</span> : <span class="icon-wrapper text-xl flip-x">☢️</span>
 
-- _Not sure about these:_
-    - <span class="icon-wrapper text-xl">♻️</span> : <span class="icon-wrapper text-xl flip-x">♻️</span>
-
 - _Could easily be mirrored:_ When it wouldn't break the meaning or the shap. Example:
     - <span class="icon-wrapper text-xl">📞</span> : <span class="icon-wrapper text-xl flip-x">📞</span>
     - <span class="icon-wrapper text-xl">🚀</span> : <span class="icon-wrapper text-xl flip-x">🚀</span>
@@ -282,6 +279,9 @@ Icons can be mirrored, or in another word, (horizontally) flipped; So they can m
     - <span class="icon-wrapper text-xl">🏳️</span> : <span class="icon-wrapper text-xl flip-x">🏳️</span>
     - <span class="icon-wrapper text-xl">➡️</span> : <span class="icon-wrapper text-xl flip-x">➡️</span>
     - <span class="icon-wrapper text-xl">👈</span> : <span class="icon-wrapper text-xl flip-x">👈</span>
+
+- _Not sure about these:_
+    - <span class="icon-wrapper text-xl">♻️</span> : <span class="icon-wrapper text-xl flip-x">♻️</span>
 
 It may be better to manually review all icons, exclude what doesn't make sense and mirror what makes sense. This would mean reviewed ones gonna work as expected but in feature new icons should be reviewed to which may be missed. What if we just mirrored them all? This could work, but not really. If you flip a wrong icon, it's a worse issue than if you don't flip it at all.
 
