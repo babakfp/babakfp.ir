@@ -170,10 +170,10 @@
     h4,
     h5,
     h6 {
-        @apply [&:hover_.heading-permalink]:show relative;
+        @apply [&:hover_.heading-permalink]:show;
     }
     .heading-permalink {
-        @apply hide absolute text-[1em] delay-300 duration-300;
+        @apply hide text-[1em] delay-300 duration-300;
     }
 
     p strong {
