@@ -6,8 +6,8 @@ update: Mon Dec 08 2025 08:02:08 GMT+0330 (Iran Standard Time)
 ---
 
 <script>
-    import YoutubeCommentReplyOne from "./_YoutubeCommentReplyOne.md"
-    import YoutubeCommentReplyTwo from "./_YoutubeCommentReplyTwo.md"
+    import YoutubeCommentReplyOne from "./_lib/YoutubeCommentReplyOne.md"
+    import YoutubeCommentReplyTwo from "./_lib/YoutubeCommentReplyTwo.md"
 </script>
 
 Read these too:
