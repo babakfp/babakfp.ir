@@ -120,10 +120,10 @@
 }
 
 @utility article-content {
-    --md-base-mt: --spacing(6);
-    --md-title-mt: --spacing(10);
+    --content-gap: --spacing(6);
+    --heading-gap: --spacing(10);
 
-    @apply space-y-(--md-base-mt) leading-7 text-balance;
+    @apply space-y-(--content-gap) leading-7 text-balance;
 
     h1,
     h2,
@@ -143,7 +143,7 @@
     h4,
     h5,
     h6 {
-        @apply mt-(--md-title-mt)! font-bold;
+        @apply mt-(--heading-gap)! font-bold;
     }
 
     h1 {
@@ -228,7 +228,7 @@
         @apply relative rounded-lg p-4 ring sm:p-6;
 
         blockquote {
-            @apply mt-(--md-base-mt) -mr-3 -mb-3 sm:-mr-5 sm:-mb-5;
+            @apply mt-(--content-gap) -mr-3 -mb-3 sm:-mr-5 sm:-mb-5;
         }
     }
 

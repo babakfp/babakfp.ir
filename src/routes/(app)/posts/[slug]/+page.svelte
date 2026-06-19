@@ -68,7 +68,7 @@
 
         <div class="article-content">
             {#if data.post.frontmatter.title}
-                <h1 class="mt-(--md-title-mt)">
+                <h1 class="mt-(--heading-gap)">
                     {data.post.frontmatter.title}
                 </h1>
             {/if}
