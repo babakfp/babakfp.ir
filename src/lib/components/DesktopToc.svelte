@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { ClassValue, MouseEventHandler } from "svelte/elements"
+    import type { ClassValue } from "svelte/elements"
     import { IconChevronRight } from "$lib/components/icons"
     import type { Headings } from "$lib/utilities/getHeadings"
 
@@ -7,7 +7,7 @@
         headings = [],
         class: class_,
     }: {
-        headings?: Headings
+        headings: Headings
         class?: ClassValue
     } = $props()
 </script>
