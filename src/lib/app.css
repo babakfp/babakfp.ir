@@ -258,7 +258,7 @@
         @apply -mx-4 overflow-x-auto bg-white/2! text-sm tab-4 ring ring-white/5 selection:bg-white/10 sm:mx-0 sm:rounded-lg;
 
         code {
-            @apply block w-fit py-4 leading-8 select-text;
+            @apply block w-fit min-w-full py-4 leading-8 select-text;
 
             .line {
                 @apply inline-block w-full px-4 sm:px-8;
