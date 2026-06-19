@@ -21,7 +21,7 @@
         {#each headings as heading}
             <li class="group">
                 <a
-                    class="outline-inset block text-gray-300 group-first:pt-6 group-last:pb-4 py-2 px-4 duration-100 hover:text-gray-50"
+                    class="outline-inset block text-gray-300 group-first:pt-6 group-last:pb-6 py-2 px-4 duration-100 hover:text-gray-50"
                     href="#{heading.id}"
                     onclick={() => (isOpen = false)}
                 >

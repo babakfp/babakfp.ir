@@ -20,7 +20,7 @@
 
 <div class={["relative z-40 hidden", { "block!": isOpen }, class_]}>
     <div
-        class="fixed inset-0 bg-gray-950/95"
+        class="fixed inset-0 bg-gray-900/95"
         bind:this={backdrop}
         onclick={() => (isOpen = false)}
     ></div>
