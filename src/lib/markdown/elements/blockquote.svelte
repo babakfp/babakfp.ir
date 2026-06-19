@@ -4,9 +4,9 @@
 </script>
 
 <script lang="ts">
+    import IconQuotesFill from "phosphor-icons-svelte/IconQuotesFill.svelte"
     import type { Snippet } from "svelte"
     import { getContext, setContext } from "svelte"
-    import IconQuotesFill from "phosphor-icons-svelte/IconQuotesFill.svelte"
 
     let {
         children,

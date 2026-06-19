@@ -1,7 +1,7 @@
 <script lang="ts">
+    import IconCaretRightRegular from "phosphor-icons-svelte/IconCaretRightRegular.svelte"
     import type { ClassValue } from "svelte/elements"
     import type { Headings } from "$lib/utilities/getHeadings"
-    import IconCaretRightRegular from "phosphor-icons-svelte/IconCaretRightRegular.svelte"
 
     let {
         headings = [],

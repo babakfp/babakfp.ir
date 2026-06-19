@@ -1,9 +1,9 @@
 <script lang="ts">
+    import IconCaretRightRegular from "phosphor-icons-svelte/IconCaretRightRegular.svelte"
+    import IconXRegular from "phosphor-icons-svelte/IconXRegular.svelte"
     import DrawerDown from "$lib/components/DrawerDown.svelte"
     import { focusTrap } from "$lib/utilities/focusTrap"
     import type { Headings } from "$lib/utilities/getHeadings"
-    import IconCaretRightRegular from "phosphor-icons-svelte/IconCaretRightRegular.svelte"
-    import IconXRegular from "phosphor-icons-svelte/IconXRegular.svelte"
 
     let {
         isOpen = $bindable(),

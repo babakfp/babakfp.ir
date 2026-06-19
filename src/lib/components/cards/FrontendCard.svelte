@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { Component } from "svelte"
+    import type { ClassValue } from "svelte/elements"
     import {
         PocketBaseOutline,
         Sass,
@@ -7,7 +8,6 @@
         TailwindCss,
         TypeScript,
     } from "$lib/components/technology-logos"
-    import type { ClassValue } from "svelte/elements"
 
     let {
         slug,
