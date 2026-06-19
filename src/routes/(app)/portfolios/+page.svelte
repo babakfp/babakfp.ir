@@ -7,7 +7,9 @@
     <title>Portfolios</title>
 </svelte:head>
 
-<h1 class="text-center text-4xl font-extralight uppercase">Portfolios</h1>
+<h1 class="text-center text-4xl font-extralight uppercase text-gray-50">
+    Portfolios
+</h1>
 
 <section class="mt-8">
     <ul class="grid gap-8 sm:px-12 lg:grid-cols-2 lg:gap-6 lg:gap-y-8 xl:px-0">

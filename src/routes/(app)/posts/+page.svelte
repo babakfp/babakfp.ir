@@ -8,7 +8,9 @@
     <title>Posts</title>
 </svelte:head>
 
-<h1 class="text-center text-4xl font-extralight uppercase">Posts</h1>
+<h1 class="text-center text-4xl font-extralight uppercase text-gray-50">
+    Posts
+</h1>
 
 <ul class="mx-auto mt-8 grid max-w-prose gap-4">
     {#each data.posts as post}
