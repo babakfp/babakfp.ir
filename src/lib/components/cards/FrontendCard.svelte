@@ -7,6 +7,7 @@
         TailwindCss,
         TypeScript,
     } from "$lib/components/technology-logos"
+    import type { ClassValue } from "svelte/elements"
 
     let {
         slug,
@@ -132,7 +133,7 @@
     Logo,
 }: {
     title: "Svelte" | "Tailwind CSS" | "Sass" | "PocketBase" | "TypeScript"
-    class: string
+    class: ClassValue
     Logo: Component
 })}
     <div
