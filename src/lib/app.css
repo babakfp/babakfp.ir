@@ -281,8 +281,13 @@
     }
 
     .remark-github-alerts-title > svg {
-        width: 1.5em !important;
-        height: 1.5em !important;
+        /* width: 1.5em !important; */
+        /* height: 1.5em !important; */
+        display: none !important;
+    }
+
+    .remark-github-alerts {
+        @apply space-y-2;
     }
 }
 
