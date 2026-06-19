@@ -3,7 +3,6 @@
     import Logo from "./Logo.svelte"
     import LogoAnchor from "./LogoAnchor.svelte"
     import MobileMenu from "./MobileMenu.svelte"
-    import MobileMenuToggle from "./MobileMenuToggle.svelte"
 </script>
 
 <header
@@ -16,9 +15,7 @@
             <Logo />
         </LogoAnchor>
 
-        <MobileMenuToggle />
+        <MobileMenu />
         <DesktopMenu />
     </div>
 </header>
-
-<MobileMenu />
