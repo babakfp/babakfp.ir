@@ -213,6 +213,10 @@
         ol {
             @apply my-4;
         }
+
+        p {
+            @apply mt-(--content-gap);
+        }
     }
 
     img,

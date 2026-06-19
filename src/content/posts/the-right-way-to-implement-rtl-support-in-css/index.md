@@ -263,8 +263,10 @@ Icons can be mirrored, or in another word, (horizontally) flipped; So they can m
 
 - _Shouldn't be mirrored:_ When one part of a shape _should_ be mirrored but another part _shouldn't_. Example:
     - <span class="icon-wrapper text-xl">🔚</span> : <span class="icon-wrapper text-xl flip-x">🔚</span>
-    - The example above contains text, but sometimes it may be two shapes (with no text) that one should and another shouldn't be mirrored.
-    - The solution is to duplicate the icon and modify it; Mirror what needs to be mirrored; Now you would have an RTL version of that icon that can be used in RTL contexts.
+
+        The example above contains text, but sometimes it may be two shapes (with no text) that one should and another shouldn't be mirrored.
+
+        The solution is to duplicate the icon and modify it; Mirror what needs to be mirrored; Now you would have an RTL version of that icon that can be used in RTL contexts.
 
 - _Doesn't need to be mirrored:_ When they are symmetrical. Examples:
     - <span class="icon-wrapper text-xl">😊</span> : <span class="icon-wrapper text-xl flip-x">😊</span>
