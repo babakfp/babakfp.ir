@@ -82,6 +82,6 @@
             <Icon class="text-lg" />
         </div>
 
-        <span>{title}</span>
+        <span class="uppercase">{title}</span>
     </a>
 {/snippet}

@@ -26,6 +26,9 @@
     --color-gray-900: var(--color-zinc-900);
     --color-gray-950: var(--color-zinc-950);
 
+    --color-background: var(--color-zinc-900);
+    --color-foreground: var(--color-zinc-100);
+
     --color-brand-dark: var(--color-orange-900);
     --color-brand-light: var(--color-orange-200);
 
