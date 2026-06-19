@@ -1,5 +1,5 @@
 <script lang="ts">
-    import IconCaretRightRegular from "phosphor-icons-svelte/IconCaretRightRegular.svelte"
+    import IconMinusRegular from "phosphor-icons-svelte/IconMinusRegular.svelte"
     import IconXRegular from "phosphor-icons-svelte/IconXRegular.svelte"
     import DrawerDown from "$lib/components/DrawerDown.svelte"
     import { focusTrap } from "$lib/utilities/focusTrap"
@@ -29,11 +29,7 @@
                         class="flex items-center gap-2"
                         style:padding-left="calc(1.5rem * {heading.level - 2})"
                     >
-                        {#if heading.level > 2}
-                            <IconCaretRightRegular
-                                class="text-2xs text-gray-600"
-                            />
-                        {/if}
+                        <IconMinusRegular class="text-2xs opacity-20" />
 
                         <span class="line-clamp-1">
                             {heading.textContent}
