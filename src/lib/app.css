@@ -237,7 +237,7 @@
     }
 
     /* `code` tag that is not a child of `pre` tag */
-    code:not(pre code):not(#quick-reference *) {
+    code:not(pre code) {
         @apply rounded-md bg-gray-50/10 px-1.5 py-0.5 text-[.9em] select-text;
     }
 
