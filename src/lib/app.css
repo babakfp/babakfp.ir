@@ -266,7 +266,7 @@
     .remark-github-alerts {
         @apply border-l-3 pt-4 pl-6;
 
-        .remark-github-alerts-title:not(:first-chlid) {
+        .remark-github-alerts-title:not(:first-child) {
             @apply mb-4;
 
             svg {
