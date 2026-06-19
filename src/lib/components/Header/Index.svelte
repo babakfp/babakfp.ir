@@ -7,7 +7,7 @@
 </script>
 
 <header
-    class="sticky top-0 z-50 h-(--header-height) border-b border-gray-800 bg-gray-900"
+    class="sticky top-0 z-50 h-(--header-height) border-b border-gray-800 bg-background"
 >
     <div
         class="container flex h-full max-w-(--breakpoint-xl) justify-between px-0"

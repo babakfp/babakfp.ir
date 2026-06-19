@@ -73,7 +73,7 @@
 </article>
 
 <div
-    class="fixed inset-x-0 -bottom-0.5 container max-w-(--breakpoint-xl) bg-gray-900/80 backdrop-blur-xs"
+    class="fixed inset-x-0 -bottom-0.5 container max-w-(--breakpoint-xl) bg-background/80 backdrop-blur-xs"
 >
     <div class="flex justify-center gap-4 pt-4 pb-8">
         <a
