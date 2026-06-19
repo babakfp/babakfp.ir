@@ -16,14 +16,14 @@
 </script>
 
 <DrawerDown class="xl:hidden" bind:isOpen {excluderQuery}>
-    <ul class="pt-4 pb-8 text-gray-300" use:focusTrap>
+    <ul class="pt-4 pb-8" use:focusTrap>
         {#each headings as heading}
             <li class="group">
                 <a
-                    class="outline-inset flex items-center gap-2 py-2 pr-4 duration-100 hover:text-gray-50"
+                    class="outline-inset flex text-gray-300 items-center gap-2 py-2 pr-4 duration-100 hover:text-gray-50"
                     href="#{heading.id}"
                     onclick={() => (isOpen = false)}
-                    style="padding-left: calc(1rem * {heading.level - 1});"
+                    style:padding-left="calc(1rem * {heading.level - 1})"
                 >
                     {#if heading.level > 2}
                         <IconChevronRight class="text-2xs text-gray-600" />
