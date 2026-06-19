@@ -241,7 +241,7 @@
 
     /* `code` tag that is not a child of `pre` tag */
     code:not(pre code) {
-        @apply rounded-md bg-gray-50/10 px-1.5 py-0.5 text-[.9em] select-text;
+        @apply rounded-md bg-white/10 px-1.5 py-0.5 text-[.9em] select-text;
     }
 
     /* `span.shiki` is for highlighted inline code */
@@ -255,7 +255,7 @@
     }
 
     pre {
-        @apply -mx-4 overflow-x-auto bg-gray-50/2! text-sm tab-4 ring ring-gray-50/5 selection:bg-gray-50/10 sm:mx-0 sm:rounded-lg;
+        @apply -mx-4 overflow-x-auto bg-white/2! text-sm tab-4 ring ring-white/5 selection:bg-white/10 sm:mx-0 sm:rounded-lg;
 
         code {
             @apply block w-fit py-4 leading-8 select-text;
