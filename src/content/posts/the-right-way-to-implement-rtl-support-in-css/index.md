@@ -241,7 +241,8 @@ It's free, looks good, and has no licensing or legal issues.
 
 ## Icon direction
 
-> [!NOTE] note that we are using emojies and emojies can look different based on device OS.
+> [!NOTE]
+> note that we are using emojies and emojies can look different based on device OS.
 
 Icons can be mirrored, or in another word, (horizontally) flipped; So they can match the reading and looking direction of the users and provide a better visual and experiense for them.
 

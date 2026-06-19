@@ -279,6 +279,11 @@
             }
         }
     }
+
+    .remark-github-alerts-title > svg {
+        width: 1.5em !important;
+        height: 1.5em !important;
+    }
 }
 
 @layer base {
