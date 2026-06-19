@@ -175,7 +175,7 @@
         }
     }
     .heading-permalink {
-        @apply hide text-[1em] delay-300 duration-300;
+        @apply hide float-right text-[1em] delay-300 duration-300;
     }
 
     p strong {
