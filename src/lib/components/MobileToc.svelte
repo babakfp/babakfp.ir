@@ -10,7 +10,7 @@
         excluderQuery,
     }: {
         isOpen?: boolean
-        headings?: Headings
+        headings: Headings
         excluderQuery: string
     } = $props()
 </script>
