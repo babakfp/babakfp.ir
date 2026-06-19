@@ -2,10 +2,10 @@
     import { page } from "$app/state"
     import BackToTopBtn from "$lib/components/BackToTopBtn.svelte"
     import DesktopToc from "$lib/components/DesktopToc.svelte"
-    import { IconList } from "$lib/components/icons"
     import MobileToc from "$lib/components/MobileToc.svelte"
     import { getHeadings, type Headings } from "$lib/utilities/getHeadings.js"
     import { timeSince } from "$lib/utilities/timeSince"
+    import IconListRegular from "phosphor-icons-svelte/IconListRegular.svelte"
 
     let { data } = $props()
 
@@ -89,7 +89,7 @@
         class="btn fixed right-4 bottom-16 xl:hidden!"
         onclick={() => (isTocOpen = true)}
     >
-        <IconList class="text-xl" />
+        <IconListRegular class="text-xl" />
     </button>
 {/if}
 

@@ -123,7 +123,7 @@
     --content-gap: --spacing(6);
     --heading-gap: --spacing(10);
 
-    @apply space-y-(--content-gap) leading-7 text-balance;
+    @apply space-y-(--content-gap) leading-8 text-balance;
 
     h1,
     h2,
@@ -286,5 +286,5 @@
 }
 
 @utility icon-wrapper {
-    @apply mb-0 inline-block rounded bg-gray-50/2 px-[0.5em] py-[0.25em] ring ring-gray-50/5;
+    @apply mb-0 inline-block rounded bg-gray-50/2 px-[0.25em] ring ring-gray-50/5;
 }

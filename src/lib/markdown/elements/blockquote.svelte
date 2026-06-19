@@ -5,8 +5,8 @@
 
 <script lang="ts">
     import type { Snippet } from "svelte"
-    import { IconQuoteLeft } from "$lib/components/icons"
     import { getContext, setContext } from "svelte"
+    import IconQuotesFill from "phosphor-icons-svelte/IconQuotesFill.svelte"
 
     let {
         children,
@@ -29,10 +29,10 @@
     style:background-color={`oklch(from var(--color-orange-400) l c calc(h + ${index} * 70) / 5%)`}
 >
     <div
-        class="absolute top-0 right-1.5 pointer-events-none text-xl"
+        class="absolute top-1 right-1.5 pointer-events-none text-xl"
         style:color={`oklch(from var(--color-orange-400) l c calc(h + ${index} * 70) / 25%)`}
     >
-        <IconQuoteLeft />
+        <IconQuotesFill />
     </div>
 
     <div>

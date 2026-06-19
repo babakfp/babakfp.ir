@@ -1,8 +1,9 @@
 <script lang="ts">
     import DrawerDown from "$lib/components/DrawerDown.svelte"
-    import { IconChevronRight, IconX } from "$lib/components/icons"
     import { focusTrap } from "$lib/utilities/focusTrap"
     import type { Headings } from "$lib/utilities/getHeadings"
+    import IconCaretRightRegular from "phosphor-icons-svelte/IconCaretRightRegular.svelte"
+    import IconXRegular from "phosphor-icons-svelte/IconXRegular.svelte"
 
     let {
         isOpen = $bindable(),
@@ -16,21 +17,27 @@
 </script>
 
 <DrawerDown class="xl:hidden" bind:isOpen {excluderQuery}>
-    <ul class="pt-4 pb-8" use:focusTrap>
+    <ul class="pb-26" use:focusTrap>
         {#each headings as heading}
             <li class="group">
                 <a
-                    class="outline-inset flex text-gray-300 items-center gap-2 py-2 pr-4 duration-100 hover:text-gray-50"
+                    class="outline-inset block text-gray-300 group-first:pt-6 group-last:pb-4 py-2 px-4 duration-100 hover:text-gray-50"
                     href="#{heading.id}"
                     onclick={() => (isOpen = false)}
-                    style:padding-left="calc(1rem * {heading.level - 1})"
                 >
-                    {#if heading.level > 2}
-                        <IconChevronRight class="text-2xs text-gray-600" />
-                    {/if}
+                    <div
+                        class="flex items-center gap-2"
+                        style:padding-left="calc(1.5rem * {heading.level - 2})"
+                    >
+                        {#if heading.level > 2}
+                            <IconCaretRightRegular
+                                class="text-2xs text-gray-600"
+                            />
+                        {/if}
 
-                    <div class="line-clamp-1">
-                        {heading.textContent}
+                        <span class="line-clamp-1">
+                            {heading.textContent}
+                        </span>
                     </div>
                 </a>
             </li>
@@ -41,6 +48,6 @@
         class="btn fixed right-4 bottom-16"
         onclick={() => (isOpen = false)}
     >
-        <IconX class="text-xl" />
+        <IconXRegular class="text-xl" />
     </button>
 </DrawerDown>

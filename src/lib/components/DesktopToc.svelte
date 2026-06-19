@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { ClassValue } from "svelte/elements"
-    import { IconChevronRight } from "$lib/components/icons"
     import type { Headings } from "$lib/utilities/getHeadings"
+    import IconCaretRightRegular from "phosphor-icons-svelte/IconCaretRightRegular.svelte"
 
     let {
         headings = [],
@@ -27,7 +27,7 @@
                     style="padding-left: calc(1rem * {heading.level});"
                 >
                     {#if heading.level > 2}
-                        <IconChevronRight class="text-2xs text-gray-600" />
+                        <IconCaretRightRegular class="text-2xs text-gray-600" />
                     {/if}
 
                     <div class="line-clamp-1">

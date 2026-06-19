@@ -51,7 +51,7 @@
     >
         <ul use:focusTrap>
             {#each mainMenuItems as item}
-                <li class="odd:bg-gray-50/2">
+                <li>
                     {@render primMenuItem({
                         title: item.title,
                         href: item.href,
@@ -79,7 +79,7 @@
         <div
             class="highlight-gray-50/10 flex h-7.5 w-7.5 items-center justify-center rounded-lg bg-gray-50/5 text-gray-400 shadow-sm duration-100 group-hover:bg-gray-50/10 group-hover:text-gray-50"
         >
-            <Icon />
+            <Icon class="text-lg" />
         </div>
 
         <span>{title}</span>
