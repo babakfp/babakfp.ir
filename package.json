@@ -10,14 +10,14 @@
         "@ianvs/prettier-plugin-sort-imports": "4.7.1",
         "@shikijs/colorized-brackets": "4.2.0",
         "@sveltejs/adapter-static": "3.0.10",
-        "@sveltejs/kit": "2.65.1",
+        "@sveltejs/kit": "2.66.0",
         "@sveltejs/vite-plugin-svelte": "7.1.2",
         "@tailwindcss/vite": "4.3.1",
         "mdx-collections-svelte": "2.0.1",
         "mdx-svelte": "5.0.0",
         "phosphor-icons-svelte": "2.1.0",
         "prettier": "3.8.4",
-        "prettier-plugin-svelte": "4.1.0",
+        "prettier-plugin-svelte": "4.1.1",
         "prettier-plugin-tailwindcss": "0.8.0",
         "svelte": "5.56.3",
         "svelte-copy": "2.0.0",
@@ -29,6 +29,6 @@
         "typescript": "6.0.3",
         "vite": "8.0.16"
     },
-    "packageManager": "pnpm@11.7.0",
+    "packageManager": "pnpm@11.8.0",
     "type": "module"
 }
