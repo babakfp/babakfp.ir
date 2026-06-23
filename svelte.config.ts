@@ -3,9 +3,10 @@ import adapter from "@sveltejs/adapter-static"
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte"
 import { EXTENSIONS, mdxPreprocess } from "mdx-svelte"
 import { hastFromHtml, unifiedTransformer } from "mdx-svelte/unified"
+import type { Config } from "@sveltejs/kit"
 
-/** @type {import("@sveltejs/kit").Config} */
 export default {
+    // @ts-expect-error
     extensions: EXTENSIONS,
     kit: {
         adapter: adapter(),
@@ -27,7 +28,8 @@ export default {
                                     class: "heading-permalink",
                                     "aria-label": "Permalink to this headline",
                                 },
-                                content() {
+                                // @ts-expect-error
+                                content: () => {
                                     return hastFromHtml(
                                         '<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M216 152h-48v-48h48a8 8 0 0 0 0-16h-48V40a8 8 0 0 0-16 0v48h-48V40a8 8 0 0 0-16 0v48H40a8 8 0 0 0 0 16h48v48H40a8 8 0 0 0 0 16h48v48a8 8 0 0 0 16 0v-48h48v48a8 8 0 0 0 16 0v-48h48a8 8 0 0 0 0-16Zm-112 0v-48h48v48Z"/></svg>',
                                     )
@@ -47,9 +49,8 @@ export default {
         }),
         vitePreprocess(),
     ],
-    // Disable A11Y warnings
     onwarn: (warning, handler) => {
         if (warning.code.startsWith("a11y_")) return
         handler(warning)
     },
-}
+} satisfies Config
