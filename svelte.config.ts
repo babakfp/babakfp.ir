@@ -1,4 +1,3 @@
-import { transformerColorizedBrackets } from "@shikijs/colorized-brackets"
 import adapter from "@sveltejs/adapter-static"
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte"
 import { EXTENSIONS, mdxPreprocess } from "mdx-svelte"
@@ -39,7 +38,6 @@ export default {
                         rehypeShiki: {
                             options: {
                                 theme: "slack-dark",
-                                transformers: [transformerColorizedBrackets()],
                             },
                         },
                     },
