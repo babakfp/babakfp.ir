@@ -126,7 +126,7 @@
     --content-gap: --spacing(6);
     --heading-gap: --spacing(10);
 
-    @apply space-y-(--content-gap) leading-8 text-balance;
+    @apply space-y-(--content-gap) leading-8 text-pretty;
 
     h1,
     h2,
