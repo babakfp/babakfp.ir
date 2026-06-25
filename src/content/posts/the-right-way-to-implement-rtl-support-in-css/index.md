@@ -1,8 +1,8 @@
 ---
 title: The Right Way to Implement RTL Support in CSS
 description: A step-by-step guide to adding RTL support with pure CSS.
-create: Sat Aug 30 2025 01:14:48 GMT+0330 (Iran Standard Time)
-update: Thu Jun 25 2026 22:02:03 GMT+0330 (Iran Standard Time)
+create: 2025-08-30
+update: 2026-06-25
 ---
 
 A step-by-step guide to adding RTL support with pure CSS. Learn best practices, avoid common mistakes, and make your layouts work smoothly for both LTR and RTL languages.

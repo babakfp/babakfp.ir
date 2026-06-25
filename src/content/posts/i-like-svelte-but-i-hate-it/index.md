@@ -1,8 +1,8 @@
 ---
 title: Svelte - A Journey of Hate and Frustration
 description: My experiences with Svelte since 2020. I hate it. I hate some of the maintainers and the community members.
-create: 2022/02/19
-update: Mon Dec 08 2025 06:02:56 GMT+0330 (Iran Standard Time)
+create: 2022-02-19
+update: 2025-12-08
 ---
 
 <script>

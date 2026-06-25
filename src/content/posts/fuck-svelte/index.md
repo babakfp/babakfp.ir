@@ -1,8 +1,8 @@
 ---
 title: Fuck Svelte
 description: A real, honest, and unbiased opition about Svelte.
-create: 2024/10/26
-update: Mon Dec 08 2025 08:02:08 GMT+0330 (Iran Standard Time)
+create: 2024-10-26
+update: 2025-12-08
 ---
 
 <script>
