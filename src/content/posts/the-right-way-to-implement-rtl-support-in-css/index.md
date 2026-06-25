@@ -2,7 +2,7 @@
 title: The Right Way to Implement RTL Support in CSS
 description: A step-by-step guide to adding RTL support with pure CSS.
 create: Sat Aug 30 2025 01:14:48 GMT+0330 (Iran Standard Time)
-update: Thu Jun 18 2026 15:22:44 GMT+0330 (Iran Standard Time)
+update: Thu Jun 25 2026 22:02:03 GMT+0330 (Iran Standard Time)
 ---
 
 A step-by-step guide to adding RTL support with pure CSS. Learn best practices, avoid common mistakes, and make your layouts work smoothly for both LTR and RTL languages.
@@ -51,6 +51,18 @@ And this would just work for both LTR and RTL languages.
 
 Learn mode: [CSS logical properties and values](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)
 
+## CSS Properties that doesn't have logical support
+
+- [`caption-side` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/caption-side)
+- [`clear` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/clear)
+- [`resize` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/resize)
+- [`background-position` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-position)
+    - [`background-position-x` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-position-x)
+    - [`background-position-y` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/background-position-y)
+- [`transform-origin` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/transform-origin)
+- [`translateX()` CSS function](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/translateX)
+- [`rotate()` CSS function](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate)
+
 ## What to do when there is no CSS Logical Properties support?
 
 I had this code:
@@ -87,15 +99,13 @@ So, the result would be `top left` for LTR languages and `top right` for RTL lan
 
 ### `--start` or `--inline-start`
 
-CSS uses `start` and `end` for `text-align`, and `inline-start` and `inline-end` for `float`. It seems like there isn't any consistency in naming these values. Properties that have `top` and `bottom` values, CSS uses `inline-start` and `inline-end` for `left` and `right`.
+At first you may think that the `inline` and `block` prefixes (`[inline | block]-[start - end]`) are only used when properties have all four sides (top right bottom left). But this doesn't seem to be true:
 
-#### Update
+Some properties use `start` and `end` (like [`text-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-align)) and some other use `inline-start` and `inline-end` (like [`float`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/float)). So, there doesn't seem to be any naming consistency being followed.
 
-In this example, `--start` means `left` and `right`. The `vertical-align` property can only be vertically aligned. So, using `--start` and `--end` won't work. Should we come up with a new name for these values? No, just use `--{inline,block}-{start-end}` and forget about `--start` and `--end`.
+Some properties (like [`text-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-align)) only have left and right sides, and some other properties (like [`vertical-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/vertical-align)) only have top and bottom properties. So, if we were to just use `--[start | end]`, would it be for left and right or top and bottom?
 
-#### Update 2
-
-I just figured out that reverting top to bottom and vise verca isn't a good idea. If that's the case, doesn't that mean using logical border radius for top and bottom is a bad idea too? I'm not sure. Fuck it. Fuck it. Fuck it.
+So, using `--start` and `--end` won't work. Let's just use `--{inline,block}-{start-end}`. This would make it super clear what side we are targetting and remove any confusion and issues.
 
 #### Can use it for `rotate()` too:
 
@@ -133,17 +143,16 @@ So, the result would be `90deg` for LTR languages and `-90deg` for RTL languages
 
 For example, if your site is in LTR, you don't need to add CSS `text-align: left` to any or every element, unless it's necessary for some reason.
 
-## CSS Properties That May Require RTL Adjustments
+## CSS properties that need RTL support
 
-This list may not be complete.
+The list may not be complete.
 
 - `text-align`
 - `float`
-- `transform: translateX()`
-- `transform: rotate()`
-- `transform-origin`
+- `margin`[^1]
 - `margin-left`
 - `margin-right`
+- `padding`[^1]
 - `padding-left`
 - `padding-right`
 - `border-left`
@@ -157,12 +166,14 @@ This list may not be complete.
 - `border-right-width`
 - `left`
 - `right`
+- `inset`[^1]
 - `inset-left`
 - `inset-right`
 - `background-position`
 - `background-position-x`
+- [CSS Properties that doesn't have logical support](#css-properties-that-doesnt-have-logical-support)
 
-https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties_and_values
+Learn mode: [CSS logical properties and values: reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Logical_properties_and_values#reference)
 
 ## You are not done yet!
 
@@ -303,6 +314,38 @@ When naming class names, IDs or whatever else, it's a good idea to keep in mind 
 
 Keep this rule in mind when writing explanations too. The documentation or whatever you write should keep the writing direction of the reader in mind.
 
+## Top and Bottom logical properties
+
+Should we use the vertical logical properties too?
+
+- `margin-block-start` instead of `margin-top`
+- `margin-block-end` instead of `margin-bottom`
+
+Or only horizontal writing directions? I don't know. My brain doesn't work to understand how vertical would work. This guide is for RTL only.
+
+I just figured out that reverting top and bottom may not be a good idea. If that's the case, doesn't that mean using logical border radius for top and bottom is a bad idea too? I'm not sure. Fuck it. Fuck it. Fuck it.
+
+## Should we just use a LTR to RTL tools?
+
+There are tools like [`"rtlcss"`](https://www.npmjs.com/package/rtlcss) package (and [`"cssjanus"`](https://github.com/wikimedia/node-cssjanus)). These tools can just automatically convert styles from LTR to RTL.
+
+No need to learn logical properties and the hacks; No needs to have a linter to inforce it and make sure that no non-logical CSS is used; Existing tools don't even properly handle all cases. No proper tools to handle all cases to convert your already existing CSS to logical solution (can't handle when logical is not supported).
+
+At this point, logical properties are fucking disapointing.
+
+So, should we just forget about logical properties? **Yeah**, **maybe**! I'm more thwords usign something like rtlcss than using logical properties with all the BS that comes with them.
+
+CSS logical properties **cons**:
+
+- Learning curve. like `width` to `inline-size` :|
+- Naming inconsistencies.
+- No proper tooling support for migration.
+- Not all properties have logical support. So, no true RTL support can be achives without putting so much work in.
+- Mental overhead.
+- Needs a lot of work to be done to migrate existing projects.
+
 ## Final Words
 
 I hope this guide helps you implement RTL support using pure CSS effectively.
+
+[^1]: Only when it contains all four sides: `top right bottom left`.
