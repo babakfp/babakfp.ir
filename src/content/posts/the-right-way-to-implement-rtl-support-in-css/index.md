@@ -1,13 +1,13 @@
 ---
-title: The Right Way to Implement RTL Support in CSS
-description: A step-by-step guide to adding RTL support with pure CSS.
+title: The Right Way to Add RTL Support
+description: A step-by-step guide to add RTL support to your site.
 create: 2025-08-30
 update: 2026-06-25
 ---
 
-A step-by-step guide to adding RTL support with pure CSS. Learn best practices, avoid common mistakes, and make your layouts work smoothly for both LTR and RTL languages.
+Thank you having RTL support in mind; It's very much appreciated.
 
-Let me first say, thank you for trying to improve RTL UX and making your site usable for RTL users. It's very much appreciated.
+Without RTL support, sites are not useable for RTL users. Some other times, RTL support is implemented poorly and results in usability and UI/UX issues.
 
 ## Make sure to use the `dir` attribute
 
@@ -83,6 +83,8 @@ And I wanted to make it work for RTL languages. Something like this won't work:
 
 ### Instead, use CSS variables:
 
+_`transform-origin` example:_
+
 ```css
 :root {
     --start: left;
@@ -95,19 +97,9 @@ And I wanted to make it work for RTL languages. Something like this won't work:
 }
 ```
 
-So, the result would be `top left` for LTR languages and `top right` for RTL languages.
+The result would be `top left` for LTR languages and `top right` for RTL languages.
 
-### `--start` or `--inline-start`
-
-At first you may think that the `inline` and `block` prefixes (`[inline | block]-[start - end]`) are only used when properties have all four sides (top right bottom left). But this doesn't seem to be true:
-
-Some properties use `start` and `end` (like [`text-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-align)) and some other use `inline-start` and `inline-end` (like [`float`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/float)). So, there doesn't seem to be any naming consistency being followed.
-
-Some properties (like [`text-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-align)) only have left and right sides, and some other properties (like [`vertical-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/vertical-align)) only have top and bottom properties. So, if we were to just use `--[start | end]`, would it be for left and right or top and bottom?
-
-So, using `--start` and `--end` won't work. Let's just use `--{inline,block}-{start-end}`. This would make it super clear what side we are targetting and remove any confusion and issues.
-
-#### Can use it for `rotate()` too:
+_`rotate()` example_:
 
 ```css
 :root {
@@ -121,9 +113,9 @@ So, using `--start` and `--end` won't work. Let's just use `--{inline,block}-{st
 }
 ```
 
-So, the result would be `90deg` for LTR languages and `-90deg` for RTL languages.
+The result would be `90deg` for LTR languages and `-90deg` for RTL languages.
 
-#### Same with `translate()`:
+_`translate()` example_:
 
 ```css
 :root {
@@ -138,6 +130,18 @@ So, the result would be `90deg` for LTR languages and `-90deg` for RTL languages
     transform: translateX(calc(-50% * var(--rtl)));
 }
 ```
+
+The result would be `-50%` for LTR languages and `50%` for RTL languages.
+
+### `--start` or `--inline-start`
+
+At first you may think that the `inline` and `block` prefixes (`[inline | block]-[start - end]`) are only used when properties have all four sides (top right bottom left). But this doesn't seem to be true:
+
+Some properties use `start` and `end` (like [`text-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-align)) and some other use `inline-start` and `inline-end` (like [`float`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/float)). So, there doesn't seem to be any naming consistency being followed.
+
+Some properties (like [`text-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-align)) only have left and right sides, and some other properties (like [`vertical-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/vertical-align)) only have top and bottom properties. So, if we were to just use `--[start | end]`, would it be for left and right or top and bottom?
+
+So, using `--start` and `--end` won't work. Let's just use `--{inline,block}-{start-end}`. This would make it super clear what side we are targetting and remove any confusion and issues.
 
 ## Always make sure to use as little as possible code
 

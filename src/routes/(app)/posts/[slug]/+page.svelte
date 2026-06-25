@@ -11,11 +11,17 @@
 
     let isTocOpen = $state(false)
 
-    let headings: Headings = $state([])
+    const overview: Headings[number] = {
+        id: "article-content",
+        textContent: "Overview",
+        level: 0,
+    }
+
+    let headings = $state<Headings>([overview])
 
     $effect(() => {
         if (page.url.pathname) {
-            headings = getHeadings()
+            headings = [overview, ...getHeadings()]
         }
     })
 </script>
@@ -66,11 +72,21 @@
             </div>
         {/if}
 
-        <div class="article-content">
+        <div id="article-content" class="article-content">
             {#if data.post.frontmatter.title}
                 <h1 class="mt-(--heading-gap)">
                     {data.post.frontmatter.title}
                 </h1>
+            {/if}
+
+            {#if data.post.frontmatter.description}
+                <p class="text-3xl">
+                    {data.post.frontmatter.description}
+                </p>
+            {/if}
+
+            {#if data.post.frontmatter.title || data.post.frontmatter.description}
+                <hr />
             {/if}
 
             <data.post.default />
