@@ -13,7 +13,7 @@
 
 <svelte:element
     this={!isHome ? "a" : "div"}
-    class="header-btn gap-2"
+    class="outline-inset flex items-center px-4 gap-2"
     href={!isHome ? "/" : undefined}
     aria-label={!isHome ? "Go to home page" : undefined}
 >

@@ -7,7 +7,7 @@
 
 <button
     id="main-menu-toggle"
-    class="header-btn xl:hidden!"
+    class="outline-inset px-4 xl:hidden!"
     onclick={() => (isMainMenuOpen.value = !isMainMenuOpen.value)}
     aria-label="{isMainMenuOpen.value ? 'Close' : 'Open'} main menu"
     aria-controls="main-menu-mobile"

@@ -91,17 +91,6 @@
     }
 }
 
-@utility header-btn {
-    @apply outline-inset flex h-full items-center px-4;
-}
-
-@layer base {
-    a.header-btn,
-    button.header-btn {
-        @apply duration-100 hover:bg-gray-50/10 hover:text-gray-50;
-    }
-}
-
 @utility link {
     @apply text-brand-light hover:decoration-brand-light focus-visible:decoration-brand-light wrap-break-word underline decoration-transparent duration-75;
 }
