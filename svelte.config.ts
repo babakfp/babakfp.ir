@@ -1,8 +1,8 @@
 import adapter from "@sveltejs/adapter-static"
+import type { Config } from "@sveltejs/kit"
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte"
 import { EXTENSIONS, mdxPreprocess } from "mdx-svelte"
 import { hastFromHtml, unifiedTransformer } from "mdx-svelte/unified"
-import type { Config } from "@sveltejs/kit"
 
 export default {
     // @ts-expect-error

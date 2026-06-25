@@ -1,8 +1,8 @@
 <script lang="ts">
+    import IconEqualsRegular from "phosphor-icons-svelte/IconEqualsRegular.svelte"
+    import IconXRegular from "phosphor-icons-svelte/IconXRegular.svelte"
     import IconToggler from "$lib/components/IconToggler.svelte"
     import { isMainMenuOpen } from "$lib/stores/mainMenu.svelte.js"
-    import IconXRegular from "phosphor-icons-svelte/IconXRegular.svelte"
-    import IconEqualsRegular from "phosphor-icons-svelte/IconEqualsRegular.svelte"
 </script>
 
 <button
