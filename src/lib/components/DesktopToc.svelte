@@ -1,10 +1,10 @@
 <script lang="ts">
-    import IconCaretRightRegular from "phosphor-icons-svelte/IconCaretRightRegular.svelte"
     import type { ClassValue } from "svelte/elements"
     import type { Headings } from "$lib/utilities/getHeadings"
+    import TocItem from "$lib/components/TocItem.svelte"
 
     let {
-        headings = [],
+        headings,
         class: class_,
     }: {
         headings: Headings
@@ -21,19 +21,12 @@
     <ul class="text-gray-300">
         {#each headings as heading}
             <li>
-                <a
-                    class="outline-inset flex items-center gap-2 py-2 pr-4 text-gray-400 duration-100 hover:text-gray-50"
-                    href="#{heading.id}"
-                    style="padding-left: calc(1rem * {heading.level});"
-                >
-                    {#if heading.level > 2}
-                        <IconCaretRightRegular class="text-2xs text-gray-600" />
-                    {/if}
-
-                    <div class="line-clamp-1">
-                        {heading.textContent}
-                    </div>
-                </a>
+                <TocItem
+                    {heading}
+                    class={heading.level === 2 ?
+                        "text-gray-400"
+                    :   "text-gray-500"}
+                />
             </li>
         {/each}
     </ul>

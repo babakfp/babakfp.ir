@@ -1,13 +1,13 @@
 <script lang="ts">
-    import IconMinusRegular from "phosphor-icons-svelte/IconMinusRegular.svelte"
     import IconXRegular from "phosphor-icons-svelte/IconXRegular.svelte"
     import DrawerDown from "$lib/components/DrawerDown.svelte"
     import { focusTrap } from "$lib/utilities/focusTrap"
     import type { Headings } from "$lib/utilities/getHeadings"
+    import TocItem from "$lib/components/TocItem.svelte"
 
     let {
         isOpen = $bindable(),
-        headings = [],
+        headings,
         excluderQuery,
     }: {
         isOpen?: boolean
@@ -20,22 +20,14 @@
     <ul class="pb-26" use:focusTrap>
         {#each headings as heading}
             <li class="group">
-                <a
-                    class="outline-inset block text-gray-300 group-first:pt-6 group-last:pb-6 py-2 px-4 duration-100 hover:text-gray-50"
-                    href="#{heading.id}"
+                <TocItem
+                    {heading}
+                    class={[
+                        "group-first:pt-6 group-last:pb-6 px-4",
+                        heading.level === 2 ? "text-gray-300" : "text-gray-400",
+                    ]}
                     onclick={() => (isOpen = false)}
-                >
-                    <div
-                        class="flex items-center gap-2"
-                        style:padding-left="calc(1.5rem * {heading.level - 2})"
-                    >
-                        <IconMinusRegular class="text-2xs opacity-20" />
-
-                        <span class="line-clamp-1">
-                            {heading.textContent}
-                        </span>
-                    </div>
-                </a>
+                />
             </li>
         {/each}
     </ul>
