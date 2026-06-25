@@ -24,8 +24,8 @@ importers:
         specifier: 4.3.1
         version: 4.3.1(vite@8.1.0(jiti@2.7.0))
       mdx-collections-svelte:
-        specifier: 2.0.1
-        version: 2.0.1(@sveltejs/kit@2.68.0(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.56.4)(vite@8.1.0(jiti@2.7.0)))(svelte@5.56.4)(typescript@6.0.3)(vite@8.1.0(jiti@2.7.0)))(mdx-svelte@6.0.1(@sveltejs/kit@2.68.0(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.56.4)(vite@8.1.0(jiti@2.7.0)))(svelte@5.56.4)(typescript@6.0.3)(vite@8.1.0(jiti@2.7.0)))(svelte@5.56.4)(typescript@6.0.3))(svelte@5.56.4)
+        specifier: 2.0.2
+        version: 2.0.2(@sveltejs/kit@2.68.0(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.56.4)(vite@8.1.0(jiti@2.7.0)))(svelte@5.56.4)(typescript@6.0.3)(vite@8.1.0(jiti@2.7.0)))(mdx-svelte@6.0.1(@sveltejs/kit@2.68.0(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.56.4)(vite@8.1.0(jiti@2.7.0)))(svelte@5.56.4)(typescript@6.0.3)(vite@8.1.0(jiti@2.7.0)))(svelte@5.56.4)(typescript@6.0.3))(svelte@5.56.4)
       mdx-svelte:
         specifier: 6.0.1
         version: 6.0.1(@sveltejs/kit@2.68.0(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.56.4)(vite@8.1.0(jiti@2.7.0)))(svelte@5.56.4)(typescript@6.0.3)(vite@8.1.0(jiti@2.7.0)))(svelte@5.56.4)(typescript@6.0.3)
@@ -816,11 +816,11 @@ packages:
   mdast-util-toc@7.1.0:
     resolution: {integrity: sha512-2TVKotOQzqdY7THOdn2gGzS9d1Sdd66bvxUyw3aNpWfcPXCLYSJCCgfPy30sEtuzkDraJgqF35dzgmz6xlvH/w==}
 
-  mdx-collections-svelte@2.0.1:
-    resolution: {integrity: sha512-EqNcjwlRPyKC5WmNeOS0GIZYaqVej5RmBZWz2kSBnoVPignVP5SgMB60KqnP8H+dlR6j1IoZzQRQTHDsB0+0lw==}
+  mdx-collections-svelte@2.0.2:
+    resolution: {integrity: sha512-vHcogxVpImAfu5vWLQew5MTtAxj/VR5na/miwcW/SdIX8cu2b1LWaM2Y+MiCtLjWfkF3Pl5pQiGvZKnud8pgrw==}
     peerDependencies:
       '@sveltejs/kit': '2'
-      mdx-svelte: 4 || 5
+      mdx-svelte: 4 || 5 || 6
       svelte: '5'
 
   mdx-svelte@6.0.1:
@@ -2063,7 +2063,7 @@ snapshots:
       unist-util-is: 6.0.1
       unist-util-visit: 5.1.0
 
-  mdx-collections-svelte@2.0.1(@sveltejs/kit@2.68.0(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.56.4)(vite@8.1.0(jiti@2.7.0)))(svelte@5.56.4)(typescript@6.0.3)(vite@8.1.0(jiti@2.7.0)))(mdx-svelte@6.0.1(@sveltejs/kit@2.68.0(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.56.4)(vite@8.1.0(jiti@2.7.0)))(svelte@5.56.4)(typescript@6.0.3)(vite@8.1.0(jiti@2.7.0)))(svelte@5.56.4)(typescript@6.0.3))(svelte@5.56.4):
+  mdx-collections-svelte@2.0.2(@sveltejs/kit@2.68.0(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.56.4)(vite@8.1.0(jiti@2.7.0)))(svelte@5.56.4)(typescript@6.0.3)(vite@8.1.0(jiti@2.7.0)))(mdx-svelte@6.0.1(@sveltejs/kit@2.68.0(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.56.4)(vite@8.1.0(jiti@2.7.0)))(svelte@5.56.4)(typescript@6.0.3)(vite@8.1.0(jiti@2.7.0)))(svelte@5.56.4)(typescript@6.0.3))(svelte@5.56.4):
     dependencies:
       '@sveltejs/kit': 2.68.0(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.56.4)(vite@8.1.0(jiti@2.7.0)))(svelte@5.56.4)(typescript@6.0.3)(vite@8.1.0(jiti@2.7.0))
       mdx-svelte: 6.0.1(@sveltejs/kit@2.68.0(@sveltejs/vite-plugin-svelte@7.1.2(svelte@5.56.4)(vite@8.1.0(jiti@2.7.0)))(svelte@5.56.4)(typescript@6.0.3)(vite@8.1.0(jiti@2.7.0)))(svelte@5.56.4)(typescript@6.0.3)
