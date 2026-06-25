@@ -13,7 +13,7 @@
         "@sveltejs/vite-plugin-svelte": "7.1.2",
         "@tailwindcss/vite": "4.3.1",
         "mdx-collections-svelte": "2.0.1",
-        "mdx-svelte": "6.0.0",
+        "mdx-svelte": "6.0.1",
         "phosphor-icons-svelte": "2.1.0",
         "prettier": "3.8.4",
         "prettier-plugin-svelte": "4.1.1",
