@@ -18,7 +18,7 @@
         "sticky top-(--header-height) max-h-(--svh-no-header) overflow-y-auto overscroll-y-contain pt-(--main-pt) pb-(--main-pb)",
     ]}
 >
-    <ul class="text-gray-300">
+    <ul>
         {#each headings as heading}
             <li>
                 <TocItem
