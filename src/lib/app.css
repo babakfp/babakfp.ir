@@ -32,8 +32,8 @@
     --color-brand-dark: var(--color-orange-900);
     --color-brand-light: var(--color-orange-200);
 
-    --font-sans: "Jost Variable";
-    --font-mono: "JetBrains Mono Variable";
+    --font-sans: "Geist Variable";
+    --font-mono: "Geist Mono Variable";
     --font-mono--font-feature-settings: "'MONO' 1";
 }
 
@@ -58,6 +58,8 @@
         --svh-no-header: calc(theme(height.svh) - var(--header-height));
         --main-pt: --spacing(12);
         --main-pb: --spacing(20);
+
+        font-synthesis: none;
     }
     ::selection {
         @apply bg-brand-dark;
