@@ -1,15 +1,6 @@
 @import "tailwindcss";
 @import "tailwindcss-addons";
 
-@layer base {
-    * {
-        @apply scrollbar-none;
-    }
-    code {
-        box-decoration-break: clone;
-    }
-}
-
 @theme {
     --color-gray-50: var(--color-zinc-50);
     --color-gray-100: var(--color-zinc-100);
@@ -61,7 +52,7 @@
         @apply bg-brand-dark;
     }
     * {
-        @apply drag-none scroll-mt-[calc(var(--header-height)+(--spacing(8)))];
+        @apply drag-none scroll-mt-[calc(var(--header-height)+(--spacing(8)))] scrollbar-none;
     }
     b,
     strong,
@@ -235,6 +226,7 @@
     /* `code` tag that is not a child of `pre` tag */
     code:not(pre code) {
         @apply rounded-md bg-current/10 px-1.5 py-0.5 text-[.9em] ring ring-current/5 select-text ring-inset;
+        box-decoration-break: clone;
     }
 
     /* `span.shiki` is for highlighted inline code */
