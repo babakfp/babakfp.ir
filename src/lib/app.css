@@ -11,9 +11,6 @@
 }
 
 @theme {
-    --color-slate-*: initial;
-    --color-stone-*: initial;
-    --color-neutral-*: initial;
     --color-gray-50: var(--color-zinc-50);
     --color-gray-100: var(--color-zinc-100);
     --color-gray-200: var(--color-zinc-200);
@@ -34,7 +31,6 @@
 
     --font-sans: "Geist Variable";
     --font-mono: "Geist Mono Variable";
-    --font-mono--font-feature-settings: "'MONO' 1";
 }
 
 @utility container {
