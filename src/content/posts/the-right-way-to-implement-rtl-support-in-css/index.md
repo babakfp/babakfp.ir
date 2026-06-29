@@ -2,24 +2,27 @@
 title: The Right Way to Add RTL Support
 description: A step-by-step guide to add RTL support to your site.
 create: 2025-08-30
-update: 2026-06-25
+update: 2026-06-29
 ---
 
 Thank you having RTL support in mind; It's very much appreciated.
 
 Without RTL support, sites are not useable for RTL users. Some other times, RTL support is implemented poorly and results in usability and UI/UX issues.
 
-## Make sure to use the `dir` attribute
+## Use `dir="rtl"` attribute
 
-On your `<html>` tag, add the `dir` attribute with the value `rtl` or `ltr`. This will tell the browser that the page is in RTL or LTR mode.
+Using `dir="rtl"` attribute tells the broser the site content langauge is written from right to left. When the site language is set to a LTR langauge, make sure to change it to `dir="ltr"`, or remove it.
 
-As a result, browsers will get many things working for you, but they won't know what to do with your (non-logical, and some other) CSS.
+As a result of using `dir="rtl"` attribute on the `html` tag, browsers will get many RTL things doen and working for you by default and out of the box. Note that the browsers won't know what to do with the CSS/JS styles of a site.
 
 Make sure to use the HTML `dir` attribute as much as possible instead of using the CSS `direction` property.
 
+- [`dir` HTML attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/dir)
+- [`direction` CSS property](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/direction)
+
 ## CSS Logical Properties
 
-NOTE: You can search on the Internet or ask AI to learn more about CSS Logical Properties.
+Your LTR CSS styles doesn't get automatically mirrored for RTL langauges. A property like `margin-left` functions as left margin no matter the writing direction. In order to mirror styles and not have naming issues, something called CSS Logical Properties was introduced to CSS.
 
 In short, instead of writing this CSS code:
 
@@ -30,15 +33,7 @@ In short, instead of writing this CSS code:
 }
 ```
 
-You should write this:
-
-```css
-.container {
-    margin-inline: auto;
-}
-```
-
-Which is a shorthand for:
+You should write:
 
 ```css
 .container {
@@ -47,9 +42,17 @@ Which is a shorthand for:
 }
 ```
 
-And this would just work for both LTR and RTL languages.
+Or the shorthand:
 
-Learn mode: [CSS logical properties and values](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)
+```css
+.container {
+    margin-inline: auto;
+}
+```
+
+And this would function properly for both LTR and RTL languages.
+
+- [CSS logical properties and values](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)
 
 ## CSS Properties that doesn't have logical support
 
@@ -81,19 +84,19 @@ And I wanted to make it work for RTL languages. Something like this won't work:
 }
 ```
 
-### Instead, use CSS variables:
+The solution is to use CSS variables.
 
 _`transform-origin` example:_
 
 ```css
 :root {
-    --start: left;
+    --inline-start: left;
 }
 [dir="rtl"] {
-    --start: right;
+    --inline-start: right;
 }
 .element {
-    transform-origin: top var(--start);
+    transform-origin: top var(--inline-start);
 }
 ```
 
@@ -133,7 +136,9 @@ _`translate()` example_:
 
 The result would be `-50%` for LTR languages and `50%` for RTL languages.
 
-### `--start` or `--inline-start`
+- [CSS custom properties (variables)](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
+
+### `--inline-start` or `--start`
 
 At first you may think that the `inline` and `block` prefixes (`[inline | block]-[start - end]`) are only used when properties have all four sides (top right bottom left). But this doesn't seem to be true:
 
@@ -142,10 +147,6 @@ Some properties use `start` and `end` (like [`text-align`](https://developer.moz
 Some properties (like [`text-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-align)) only have left and right sides, and some other properties (like [`vertical-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/vertical-align)) only have top and bottom properties. So, if we were to just use `--[start | end]`, would it be for left and right or top and bottom?
 
 So, using `--start` and `--end` won't work. Let's just use `--{inline,block}-{start-end}`. This would make it super clear what side we are targetting and remove any confusion and issues.
-
-## Always make sure to use as little as possible code
-
-For example, if your site is in LTR, you don't need to add CSS `text-align: left` to any or every element, unless it's necessary for some reason.
 
 ## CSS properties that need RTL support
 
@@ -177,7 +178,11 @@ The list may not be complete.
 - `background-position-x`
 - [CSS Properties that doesn't have logical support](#css-properties-that-doesnt-have-logical-support)
 
-Learn mode: [CSS logical properties and values: reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Logical_properties_and_values#reference)
+- [CSS logical properties and values: reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Logical_properties_and_values#reference)
+
+## Always make sure to use as little as possible code
+
+I've seen it a lot that styling like `text-align: left` is all over the place is some sites and libraries. This is a bad practise even outside of subject of this article. For example, if your site is in LTR, you don't need to add CSS `text-align: left` to any or every element, unless it's necessary for some reason.
 
 ## You are not done yet!
 
@@ -235,24 +240,6 @@ Learn more:
 
 - [`:placeholder-shown` CSS pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:placeholder-shown)
 - [`inherit` CSS keyword](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/inherit)
-
-## Custom font for new languages
-
-It's always a good idea to use a good looking custom font for new languages.
-
-### Why Use a Custom Font for Farsi?
-
-Default OS fonts often look unattractive. Custom fonts for secondary languages, can be configured to load only when characters from that language appear on the page, so performance remains unaffected.
-
-Using a custom font also gives the impression that the software or tool is built with users in mind.
-
-The first time I opened [Canva](https://www.canva.com), Farsi was automatically selected as the language, and the interface used a custom Farsi font. At first, I thought the site was made by Iranian developers, but it wasn't. They simply implemented translations, RTL support, and a well-designed Farsi font. That attention to detail made me think positively about the product.
-
-The takeaway is clear: custom fonts matter, they influence user perception and enhance the overall experience.
-
-### Why Vazirmatn?
-
-It's free, looks good, and has no licensing or legal issues.
 
 ## Icon direction
 
@@ -317,6 +304,22 @@ I'm not 100% sure, but if I remember correct, the scrollbar move to left side in
 When naming class names, IDs or whatever else, it's a good idea to keep in mind the writing direction of the reader. For classes it's a good idea to use naming like `.end-sidebar` (or `.inline-end-sidebar`) instead of `.right-sidebar`. Because if we use `.right-sidebar` in LTR site and then the site gets translated to an RTL langauge, the element with `.right-sidebar` class is going to be on their left side of the screen! The site that is in LTR is going to get `dir="rtl"` in `html` tag and as a result things going to change direction automatically to match the reading direction. So it's not going to make sense anymore.
 
 Keep this rule in mind when writing explanations too. The documentation or whatever you write should keep the writing direction of the reader in mind.
+
+## Custom a custom font for new languages
+
+It's always a good idea to use a good looking custom font for new languages.
+
+### Why Use a Custom Font for Farsi?
+
+Default OS fonts often look unattractive. Custom fonts for secondary languages, can be configured to load only when characters from that language appear on the page, so performance remains unaffected.
+
+Using a custom font also gives the impression that the software or tool is built with users in mind.
+
+The first time I opened [Canva](https://www.canva.com), Farsi was automatically selected as the language, and the interface used a custom Farsi font. At first, I thought the site was made by Iranian developers, but it wasn't. They simply implemented translations, RTL support, and a well-designed Farsi font. That attention to detail made me think positively about the product.
+
+For example, you could use [Vazirmatn](https://github.com/rastikerdar/vazirmatn/releases/latest) font. It's free, looks good, and has a good license.
+
+The takeaway is clear: custom fonts matter, they influence user perception and enhance the overall experience.
 
 ## Top and Bottom logical properties
 
