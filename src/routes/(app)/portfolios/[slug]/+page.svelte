@@ -32,7 +32,7 @@
     {/if}
 </svelte:head>
 
-<article class="article-content pb-12 sm:pb-24">
+<article class="markdown-content pb-12 sm:pb-24">
     <h1>{portfolioData.title}</h1>
 
     <p class="text-xl leading-8">{portfolioData.description}</p>

@@ -100,7 +100,7 @@
     @apply -outline-offset-2;
 }
 
-@utility article-content {
+@utility markdown-content {
     --content-gap: --spacing(6);
     --heading-gap: --spacing(10);
 

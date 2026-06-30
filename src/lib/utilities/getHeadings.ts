@@ -8,7 +8,7 @@ export type Headings = {
 
 export const getHeadings = () =>
     makeToc({
-        container: ".article-content",
+        container: ".markdown-content",
     }).map((heading) => ({
         id: heading.attributes.id ?? "",
         level: Number(heading.level),
