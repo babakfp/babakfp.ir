@@ -181,15 +181,11 @@
         @apply list-decimal;
     }
     li {
-        @apply space-y-4 leading-6;
+        @apply space-y-2;
 
         ul,
         ol {
-            @apply my-4;
-        }
-
-        p {
-            @apply mt-(--markdown-content-gap);
+            @apply mt-2;
         }
     }
 
