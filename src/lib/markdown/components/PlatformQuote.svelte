@@ -37,7 +37,9 @@
         {title}
     </div>
 
-    <div class="mt-4 space-y-(--content-gap) text-sm sm:mt-8 sm:text-base">
+    <div
+        class="mt-4 space-y-(--markdown-content-gap) text-sm sm:mt-8 sm:text-base"
+    >
         {@render children()}
     </div>
 </div>

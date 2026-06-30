@@ -74,7 +74,7 @@
 
         <div class="markdown-content">
             {#if data.post.frontmatter.title}
-                <h1 id="$overview" class="mt-(--heading-gap)">
+                <h1 id="$overview" class="mt-(--markdown-heading-gap)">
                     {data.post.frontmatter.title}
                 </h1>
             {/if}
