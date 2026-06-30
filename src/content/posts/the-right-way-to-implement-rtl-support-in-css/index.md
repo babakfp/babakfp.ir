@@ -2,7 +2,7 @@
 title: The Right Way to Add RTL Support
 description: A step-by-step guide to add RTL support to your site.
 create: 2025-08-30
-update: 2026-06-29
+update: 2026-06-30
 ---
 
 Thank you having RTL support in mind; It's very much appreciated.
@@ -350,6 +350,107 @@ CSS logical properties **cons**:
 - Not all properties have logical support. So, no true RTL support can be achives without putting so much work in.
 - Mental overhead.
 - Needs a lot of work to be done to migrate existing projects.
+
+## More on `dir="auto"`
+
+### Diacritics
+
+There are characters ([diacritics](https://en.wikipedia.org/wiki/Diacritic)) in [unicode](https://en.wikipedia.org/wiki/Unicode) that are classified as a **Nonspacing Mark (NSM)**. These characters do not possess an inherent directional property.
+
+Under the Unicode Bidirectional (Bidi) Algorithm, characters classified as NSM are explicitly categorized as **Weak characters** rather than Strong (LTR/RTL) or Neutral characters. [Wikipedia](https://en.wikipedia.org/wiki/Bidirectional_text).
+
+> [!NOTE]
+> You could ask AI to explain you more about these topics. For example, learn about what it means when a characters is: Strong LTR, Strong RTL, Neutral or Nonspacing Mark.
+
+#### The bug
+
+What issues does this cause? For example in Obsidian, a table cell has `dir="auto"` and if you put a value like `◌َ` in there, it would be displayed from LTR instead of RTL! This has nothing to do with the browser doing it wrong, it has to do with how Unicode is classified diacritics.
+
+#### The workaround
+
+You can insert the invisible Unicode character `&rlm;` (U+200F) right at the start of your content. Example:
+
+This would be LTR:
+
+```html
+<p dir="auto">◌َ</p>
+```
+
+But this one would be RTL:
+
+```html
+<p dir="auto">&rlm;◌َ</p>
+```
+
+This invisible character acts as a "strong RTL" anchor. The `dir="auto"` algorithm hits it instantly, sets the element direction to RTL, and correctly formats the text layout.
+
+#### Ideal solution
+
+If would be great if brosers did it the expected way, but that would never happen; Because it follows Unicode standard. There were discussions about adding something like `dir="auto rtl"` but I don't know where they have gotten.
+
+A user-space solution would be to make a NPM package that handles the direction by going trough a string and detecting what the direction should be. It should take the parent direction as a drefrence. Such a package does not exist yet. TODO: maybe I can make this?
+
+### `:dir()` is awesome
+
+The [`:dir()` CSS pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:dir) matches elements based on the directionality of the text contained in them.
+
+If `dir="auto"` results in RTL, you could select that element using `dir="auto":dir(rtl)`.
+
+### `dir="auto"` does not inherit
+
+Let's imagine a website that its primary langauge is RTL (so `<html dir="rtl">`), wants to display text both in RTL and LTR in the same document (like an article page). This is from my real experiense on a project. I was using markdown and added an NPM package named `"rehype-github-dir"` to automatically add `dir="auto"` to every tag.
+
+One issue was, images that did not span the whole width of the document, were aligned to left side, meaning `dir="auto"` was resulting in LTR instead of respecting and inheriting `<html dir="rtl">`!
+
+Another issues was, in [Starlight](https://starlight.astro.build) headings have `dir="auto"` attribute and `display: inline` CSS property; They have a sibling for # permalink and a parent as a wrapper. So, even when headings contained Strong LTR, and `dir="auto"` resulted in LTR, they were still being placed on the right side!
+
+There was other issues similar to this too, but I don't remember and don't remember and feel like explaining.
+
+In short, I added this CSS:
+
+```css
+.sl-markdown-content *:has(> [dir="auto"]:dir(ltr)) {
+    direction: ltr;
+}
+.sl-markdown-content *:has(> [dir="auto"]:dir(rtl)) {
+    direction: rtl;
+}
+
+.sl-markdown-content [dir="auto"]:not(:has([dir="auto"]:dir(rtl))) img {
+    margin-left: auto;
+}
+```
+
+And options for `"rehype-github-dir"`:
+
+```js
+const rehypeGithubDirOptions: RehypeGithubDirOptions = {
+    include: [
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "p",
+        "ul",
+        "ol",
+        "blockquote",
+        "th",
+        "td",
+    ],
+}
+```
+
+As you can see, I excluded some tags from getting `dir="auto"` because there just causing stupid issues... You would need to test it yourself and see how it goes.
+
+Other example, in Obsidian, you could have a list with items containing Strong RTL (so being displayed on the right side) with another item containing Neutral characters and this one being displayed on the left side! Like:
+
+```
+- STRONG RTL CONTENT (right aligned)
+- STRONG RTL CONTENT (right aligned)
+- CONTENT WITH ONLY NEUTRAL CHARACERS (left aligned)
+```
 
 ## Final Words
 
