@@ -12,7 +12,7 @@
     let isTocOpen = $state(false)
 
     const overview: Headings[number] = {
-        id: "markdown-content",
+        id: "$overview",
         textContent: "Overview",
         level: 0,
     }
@@ -72,9 +72,9 @@
             </div>
         {/if}
 
-        <div id="markdown-content" class="markdown-content">
+        <div class="markdown-content">
             {#if data.post.frontmatter.title}
-                <h1 class="mt-(--heading-gap)">
+                <h1 id="$overview" class="mt-(--heading-gap)">
                     {data.post.frontmatter.title}
                 </h1>
             {/if}
