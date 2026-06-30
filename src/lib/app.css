@@ -156,10 +156,6 @@
         @apply hide float-right text-[1em] delay-300 duration-300;
     }
 
-    p strong {
-        @apply font-bold underline decoration-double decoration-[1.6px] underline-offset-[6px];
-    }
-
     a:not(.btn) {
         @apply link;
     }
