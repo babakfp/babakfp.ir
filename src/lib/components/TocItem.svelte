@@ -1,6 +1,6 @@
 <script lang="ts">
-    import type { Headings } from "$lib/utilities/getHeadings"
     import type { HTMLAnchorAttributes } from "svelte/elements"
+    import type { Headings } from "$lib/utilities/getHeadings"
 
     let {
         heading,
