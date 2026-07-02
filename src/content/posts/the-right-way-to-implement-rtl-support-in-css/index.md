@@ -2,7 +2,7 @@
 title: The Right Way to Add RTL Support
 description: A step-by-step guide to add RTL support to your site.
 create: 2025-08-30
-update: 2026-06-30
+update: 2026-07-02
 ---
 
 Thank you having RTL support in mind; It's very much appreciated.
@@ -451,6 +451,76 @@ Other example, in Obsidian, you could have a list with items containing Strong R
 - STRONG RTL CONTENT (right aligned)
 - CONTENT WITH ONLY NEUTRAL CHARACERS (left aligned)
 ```
+
+## Struggles with RTL support
+
+### Example 1: Lists
+
+```html
+<html dir="rtl">
+    <ul>
+        <li dir="auto">یک</li>
+        <li dir="auto">دو</li>
+        <li dir="auto">سه</li>
+        <li dir="auto">...</li>
+    </ul>
+</html>
+```
+
+![](/content/posts/the-right-way-to-implement-rtl-support-in-css/example-1.png)
+
+RTL issues:
+
+- `...` is LTR.
+- Horizontal scrollbar caused by overflow.
+
+A solution:
+
+```css
+html[dir="rtl"] ul:has(li:dir(rtl)) li {
+    direction: rtl;
+}
+```
+
+![](/content/posts/the-right-way-to-implement-rtl-support-in-css/example-1-solution.png)
+
+### Example 2: Inline heading
+
+```html
+<html dir="rtl">
+    <style>
+        .heading {
+            display: inline;
+        }
+    </style>
+    <div class="heading-wrapper">
+        <h2 dir="auto" class="heading" id="rtl-hello-world">سلام, دنیا!</h2>
+        <a href="#rtl-hello-world">#</a>
+    </div>
+    <div class="heading-wrapper">
+        <h2 dir="auto" class="heading" id="hello-world">Hello, World!</h2>
+        <a href="#hello-world">#</a>
+    </div>
+</html>
+```
+
+RTL issues:
+
+- English (LTR) heading is RTL. This happenes because its wrapper is RTL and heading is inline so it stays on the right side.
+
+![](/content/posts/the-right-way-to-implement-rtl-support-in-css/example-2.png)
+
+The reason we are not adding `dir="auto"` to the wrapper (instead of the heading) is simply because we want to simulate a scenario where doing that is not possible. For example I had to deal with this exact scenario when I was using markdown for content and `"rehype-github-dir"` for adding `dir="auto"` to **tags** and I had both RTL and LTR content in the same page.
+
+A solution:
+
+```css
+html[dir="rtl"] .heading-wrapper:has(.heading:dir(ltr)) {
+    direction: ltr;
+}
+```
+
+![](/content/posts/the-right-way-to-implement-rtl-support-in-css/example-2-solution.png)
 
 ## Final Words
 
