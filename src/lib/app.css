@@ -103,6 +103,10 @@
     @apply -outline-offset-2;
 }
 
+@utility icon-wrapper {
+    @apply mb-0 inline-block rounded bg-gray-50/2 px-[0.25em] ring ring-gray-50/5;
+}
+
 @utility markdown-content {
     @apply space-y-(--markdown-content-gap) leading-8 text-pretty;
 
@@ -203,16 +207,49 @@
         @apply w-full;
     }
 
+    /* prettier-ignore */
+    :is(blockquote, .platformquote) {
+        --nesting: 0;
+        --color-brand: oklch(from var(--color-orange-400) l c calc(h + var(--nesting) * 70));
+
+        &:has(:is(blockquote, .platformquote)) { --nesting: 1 }
+        &:has(:is(blockquote, .platformquote) :is(blockquote, .platformquote)) { --nesting: 2 }
+        &:has(:is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote)) { --nesting: 3 }
+        &:has(:is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote)) { --nesting: 4 }
+        &:has(:is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote)) { --nesting: 5 }
+        &:has(:is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote)) { --nesting: 6 }
+        &:has(:is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote)) { --nesting: 7 }
+        &:has(:is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote)) { --nesting: 8 }
+        &:has(:is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote)) { --nesting: 9 }
+        &:has(:is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote) :is(blockquote, .platformquote)) { --nesting: 10 }
+    }
+
     blockquote {
-        @apply relative rounded-lg p-4 ring sm:p-6;
+        --bottom-right-radius: calc(
+            var(--radius-lg) + calc(var(--spacing) * var(--nesting))
+        );
+
+        @apply relative rounded-lg rounded-br-(--bottom-right-radius) bg-(--color-brand)/5 p-4 ring ring-(--color-brand)/5 ring-inset sm:p-6 sm:px-8;
+
+        > div:first-child {
+            @apply text-(--color-brand)/25;
+        }
 
         blockquote {
-            @apply mt-(--markdown-content-gap) -mr-3 -mb-3 sm:-mr-5 sm:-mb-5;
+            @apply mt-(--markdown-content-gap) -mr-3 -mb-3 sm:-mr-7 sm:-mb-5;
         }
     }
 
-    .platform-quote .platform-quote {
-        @apply -mr-3 sm:-mr-6;
+    .platformquote {
+        @apply bg-(--color-brand)/5 ring-(--color-brand)/10;
+
+        > div:first-child {
+            @apply text-(--color-brand)/50;
+        }
+
+        .platformquote {
+            @apply -mr-3 sm:-mr-6;
+        }
     }
 
     /* `code` tag that is not a child of `pre` tag */
@@ -242,37 +279,38 @@
             }
         }
     }
-
-    .remark-github-alerts {
-        @apply border-l-3 pt-4 pl-6;
-
-        .remark-github-alerts-title:not(:first-child) {
-            @apply mb-4;
-
-            svg {
-                @apply text-xl;
-            }
-        }
-    }
-
-    .remark-github-alerts-title > svg {
-        @apply hidden!;
-    }
-
-    .remark-github-alerts {
-        @apply space-y-2;
-    }
 }
 
-@layer base {
-    .svelte-hot-french-toast__base {
-        @apply highlight-gray-50/10! bg-gray-800! pl-4! text-gray-300!;
-    }
-    .svelte-hot-french-toast__message {
-        @apply text-sm;
-    }
+/* Svelte Hot French Toast */
+
+.svelte-hot-french-toast__base {
+    @apply highlight-gray-50/10! bg-gray-800! pl-4! text-gray-300!;
+}
+.svelte-hot-french-toast__message {
+    @apply text-sm;
 }
 
-@utility icon-wrapper {
-    @apply mb-0 inline-block rounded bg-gray-50/2 px-[0.25em] ring ring-gray-50/5;
+/* Remark GitHub Alerts */
+
+.remark-github-alerts {
+    @apply -mx-4 space-y-2 border-l-0 p-4 ring sm:mx-0 sm:rounded-lg sm:px-8;
+}
+.remark-github-alerts-title svg {
+    @apply hidden;
+}
+
+.remark-github-alerts-note {
+    @apply bg-(--remark-github-alerts-note)/10 ring-(--remark-github-alerts-note)/15;
+}
+.remark-github-alerts-tip {
+    @apply bg-(--remark-github-alerts-tip)/10 ring-(--remark-github-alerts-tip)/15;
+}
+.remark-github-alerts-important {
+    @apply bg-(--remark-github-alerts-important)/10 ring-(--remark-github-alerts-important)/15;
+}
+.remark-github-alerts-warning {
+    @apply bg-(--remark-github-alerts-warning)/10 ring-(--remark-github-alerts-warning)/15;
+}
+.remark-github-alerts-caution {
+    @apply bg-(--remark-github-alerts-caution)/10 ring-(--remark-github-alerts-caution)/15;
 }
