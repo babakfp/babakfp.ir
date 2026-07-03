@@ -7,8 +7,6 @@
 </script>
 
 <script lang="ts">
-    import "mdx-svelte/unified/remark-github-alerts/github-base.css"
-    import "mdx-svelte/unified/remark-github-alerts/github-colors-dark.css"
     import { setContext, type Snippet } from "svelte"
 
     let {
