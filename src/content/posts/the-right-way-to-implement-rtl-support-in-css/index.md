@@ -2,7 +2,7 @@
 title: The Right Way to Add RTL Support
 description: A step-by-step guide to add RTL support to your site.
 create: 2025-08-30
-update: 2026-07-02
+update: 2026-07-03
 ---
 
 Thank you having RTL support in mind; It's very much appreciated.
@@ -521,6 +521,38 @@ html[dir="rtl"] .heading-wrapper:has(.heading:dir(ltr)) {
 ```
 
 ![](/content/posts/the-right-way-to-implement-rtl-support-in-css/example-2-solution.png)
+
+## `input` and `textarea` initial caret direction
+
+```html
+<html dir="rtl">
+    <input dir="auto" placeholder />
+    <textarea dir="auto" placeholder></textarea>
+</html>
+```
+
+![](/content/posts/the-right-way-to-implement-rtl-support-in-css/input-initial-caret-ltr.png)
+
+```css
+[dir="rtl"] [dir="auto"]:placeholder-shown {
+    direction: rtl;
+}
+```
+
+> [!IMPORTANT]
+> `:placeholder-shown` would not work if the target element does not have the `placeholder` attribute.
+>
+> When using frameworks, make sure the `placeholder` attribute is rendered on the element even when there is no placeholder text to display.
+
+> [!NOTE]
+> Elements with `contenteditable` attribute don't need this because they don't show the caret when they're empty.
+
+![](/content/posts/the-right-way-to-implement-rtl-support-in-css/input-initial-caret-rtl.png)
+
+> [!NOTE]
+> Do not use [`:empty` CSS pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:empty) because it doesn't work as expected.
+
+- [`:placeholder-shown` CSS pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:placeholder-shown)
 
 ## Final Words
 
