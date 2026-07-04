@@ -2,7 +2,7 @@
 title: The Right Way to Add RTL Support
 description: A step-by-step guide to add RTL support to your site.
 create: 2025-08-30
-update: 2026-07-03
+update: 2026-07-04
 ---
 
 Thank you having RTL support in mind; It's very much appreciated.
@@ -550,7 +550,7 @@ html[dir="rtl"] .heading-wrapper:has(.heading:dir(ltr)) {
 ![](/content/posts/the-right-way-to-implement-rtl-support-in-css/input-initial-caret-rtl.png)
 
 > [!NOTE]
-> Do not use [`:empty` CSS pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:empty) because it doesn't work as expected.
+> Do not use [`:empty` CSS pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:empty) because it doesn't work as expected[^2].
 
 - [`:placeholder-shown` CSS pseudo-class](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:placeholder-shown)
 
@@ -559,3 +559,47 @@ html[dir="rtl"] .heading-wrapper:has(.heading:dir(ltr)) {
 I hope this guide helps you implement RTL support using pure CSS effectively.
 
 [^1]: Only when it contains all four sides: `top right bottom left`.
+
+[^2]: Example issues of using `:empty` and `contenteditable`:
+
+    ```html
+    <html dir="rtl">
+        <input type="text" dir="auto" />
+        <br />
+        <br />
+        <input type="search" dir="auto" />
+        <br />
+        <br />
+        <input placeholder type="search" dir="auto" />
+    </html>
+    <style>
+        [dir="rtl"] [type="text"][dir="auto"]:empty {
+            direction: rtl;
+        }
+        [dir="rtl"] [dir="auto"]:not([placeholder]):empty {
+            direction: rtl;
+        }
+        [dir="rtl"] [dir="auto"][placeholder]:placeholder-shown {
+            direction: rtl;
+        }
+    </style>
+    ```
+
+    ![](/content/posts/the-right-way-to-implement-rtl-support-in-css/dir-auto-empty-issues.gif)
+
+    ```html
+    <p dir="auto" contenteditable data-placeholder="تست"></p>
+    <p dir="auto" contenteditable data-placeholder="test"></p>
+    <style>
+        [contenteditable]:empty::before {
+            content: attr(data-placeholder);
+            color: gray;
+            pointer-events: none;
+        }
+    </style>
+    ```
+
+    ![](/content/posts/the-right-way-to-implement-rtl-support-in-css/contenteditable-fake-placeholder.gif)
+
+    <!-- Used to the ake the footnote ↩️ icon to the next line. -->
+    <br>

@@ -237,6 +237,10 @@
             @apply text-(--color-brand)/25;
         }
 
+        > div:last-child {
+            @apply space-y-(--markdown-content-gap);
+        }
+
         blockquote {
             @apply mt-(--markdown-content-gap) -mr-3 -mb-3 sm:-mr-7 sm:-mb-5;
         }
