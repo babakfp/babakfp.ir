@@ -1,4 +1,6 @@
 <script lang="ts">
+    import IconArrowURightUpRegular from "phosphor-icons-svelte/IconArrowURightUpRegular.svelte"
+
     let windowScrollY = $state(0)
     let windowHeight = $state(0)
 </script>
@@ -11,6 +13,7 @@
         { "-translate-y-4!": windowScrollY >= windowHeight },
     ]}
     href="#body"
+    aria-label="Return to top"
 >
-    Return to top
+    <IconArrowURightUpRegular class="text-xl" />
 </a>
