@@ -63,7 +63,7 @@
         font-synthesis: none;
     }
     ::selection {
-        @apply bg-brand-900;
+        @apply bg-brand-800;
     }
     * {
         @apply drag-none scroll-mt-[calc(var(--header-height)+(--spacing(8)))] scrollbar-none;
@@ -107,7 +107,7 @@
 }
 
 @utility btn-primary {
-    @apply bg-brand-200 text-brand-900 hover:bg-brand-900 hover:text-brand-200;
+    @apply bg-brand-900 text-brand-50 hover:bg-brand-800;
 }
 
 @utility outline-inset {
@@ -221,7 +221,7 @@
     /* prettier-ignore */
     :is(blockquote, .platformquote) {
         --nesting: 0;
-        --color-brand: oklch(from var(--color-orange-400) l c calc(h + var(--nesting) * 70));
+        --color-primary: oklch(from var(--color-brand-400) l c calc(h + var(--nesting) * 70));
 
         &:has(:is(blockquote, .platformquote)) { --nesting: 1 }
         &:has(:is(blockquote, .platformquote) :is(blockquote, .platformquote)) { --nesting: 2 }
@@ -240,10 +240,10 @@
             var(--radius-lg) + calc(var(--spacing) * var(--nesting))
         );
 
-        @apply relative rounded-lg rounded-br-(--bottom-right-radius) bg-(--color-brand)/5 p-4 ring ring-(--color-brand)/5 ring-inset sm:p-6 sm:px-8;
+        @apply relative rounded-lg rounded-br-(--bottom-right-radius) bg-(--color-primary)/5 p-4 ring ring-(--color-primary)/5 ring-inset sm:p-6 sm:px-8;
 
         > div:first-child {
-            @apply text-(--color-brand)/25;
+            @apply text-(--color-primary)/25;
         }
 
         > div:last-child {
@@ -256,10 +256,10 @@
     }
 
     .platformquote {
-        @apply bg-(--color-brand)/5 ring-(--color-brand)/10;
+        @apply bg-(--color-primary)/5 ring-(--color-primary)/10;
 
         > div:first-child {
-            @apply text-(--color-brand)/50;
+            @apply text-(--color-primary)/50;
         }
 
         .platformquote {
