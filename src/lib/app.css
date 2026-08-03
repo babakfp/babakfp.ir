@@ -19,8 +19,17 @@
     --color-background: var(--color-zinc-950);
     --color-foreground: var(--color-zinc-100);
 
-    --color-brand-dark: var(--color-orange-900);
-    --color-brand-light: var(--color-orange-200);
+    --color-brand-50: var(--color-orange-50);
+    --color-brand-100: var(--color-orange-100);
+    --color-brand-200: var(--color-orange-200);
+    --color-brand-300: var(--color-orange-300);
+    --color-brand-400: var(--color-orange-400);
+    --color-brand-500: var(--color-orange-500);
+    --color-brand-600: var(--color-orange-600);
+    --color-brand-700: var(--color-orange-700);
+    --color-brand-800: var(--color-orange-800);
+    --color-brand-900: var(--color-orange-900);
+    --color-brand-950: var(--color-orange-950);
 
     --font-sans: "Geist Variable";
     --font-mono: "Geist Mono Variable";
@@ -54,7 +63,7 @@
         font-synthesis: none;
     }
     ::selection {
-        @apply bg-brand-dark;
+        @apply bg-brand-900;
     }
     * {
         @apply drag-none scroll-mt-[calc(var(--header-height)+(--spacing(8)))] scrollbar-none;
@@ -78,7 +87,7 @@
 /* Outline */
 @layer base {
     * {
-        @apply focus-visible:outline-brand-light outline-2 outline-transparent;
+        @apply focus-visible:outline-brand-200 outline-2 outline-transparent;
     }
     a {
         @apply outline-dashed;
@@ -86,7 +95,7 @@
 }
 
 @utility link {
-    @apply text-brand-light hover:decoration-brand-light focus-visible:decoration-brand-light wrap-break-word underline decoration-transparent duration-75;
+    @apply text-brand-200 hover:decoration-brand-200 focus-visible:decoration-brand-200 wrap-break-word underline decoration-transparent duration-75;
 }
 
 @utility btn {
@@ -98,7 +107,7 @@
 }
 
 @utility btn-primary {
-    @apply bg-brand-light text-brand-dark hover:bg-brand-dark hover:text-brand-light;
+    @apply bg-brand-200 text-brand-900 hover:bg-brand-900 hover:text-brand-200;
 }
 
 @utility outline-inset {
