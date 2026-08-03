@@ -9,7 +9,7 @@
     } from "$lib/components/icons"
 </script>
 
-<section class="relative mx-auto grid max-w-prose gap-4">
+<section class="relative mx-auto grid max-w-prose gap-4 pb-(--header-height)">
     <h1 class="text-5xl font-black text-gray-50 sm:text-7xl">
         Babak Farkhoopak
     </h1>

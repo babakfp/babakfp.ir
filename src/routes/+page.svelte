@@ -12,13 +12,8 @@
 
 <div class="container max-w-(--breakpoint-xl)">
     <main
-        class="bg-grid-gray-900 grid min-h-(--svh-no-header) content-center border-x border-gray-900 px-6 pt-(--main-pt) pb-(--main-pb) shadow-[inset_0_0_4rem_2rem_var(--color-background)]"
+        class="grid min-h-(--svh-no-header) content-center px-6 pt-(--main-pt) pb-(--main-pb)"
     >
-        <div class="relative">
-            <div
-                class="inset-center bg-background absolute z-0 size-1/2 shadow-[0_0_4rem_2rem_var(--color-background)]"
-            ></div>
-            <HeroSection />
-        </div>
+        <HeroSection />
     </main>
 </div>
