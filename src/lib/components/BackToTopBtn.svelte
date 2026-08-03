@@ -1,5 +1,5 @@
 <script lang="ts">
-    import IconArrowURightUpRegular from "phosphor-icons-svelte/IconArrowURightUpRegular.svelte"
+    import IconArrowLineUpRegular from "phosphor-icons-svelte/IconArrowLineUpRegular.svelte"
     import { innerHeight, scrollY } from "svelte/reactivity/window"
 </script>
 
@@ -11,5 +11,5 @@
     href="#body"
     aria-label="Return to top"
 >
-    <IconArrowURightUpRegular class="text-xl" />
+    <IconArrowLineUpRegular class="text-xl" />
 </a>
