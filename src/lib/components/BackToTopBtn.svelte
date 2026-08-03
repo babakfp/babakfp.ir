@@ -1,16 +1,12 @@
 <script lang="ts">
     import IconArrowURightUpRegular from "phosphor-icons-svelte/IconArrowURightUpRegular.svelte"
-
-    let windowScrollY = $state(0)
-    let windowHeight = $state(0)
+    import { innerHeight, scrollY } from "svelte/reactivity/window"
 </script>
-
-<svelte:window bind:scrollY={windowScrollY} bind:innerHeight={windowHeight} />
 
 <a
     class={[
         "btn fixed right-4 bottom-0 z-30 translate-y-full duration-200",
-        { "-translate-y-4!": windowScrollY >= windowHeight },
+        { "-translate-y-4!": scrollY >= innerHeight },
     ]}
     href="#body"
     aria-label="Return to top"
