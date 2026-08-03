@@ -63,7 +63,7 @@
         font-synthesis: none;
     }
     ::selection {
-        @apply bg-brand-800;
+        @apply bg-brand-900;
     }
     * {
         @apply drag-none scroll-mt-[calc(var(--header-height)+(--spacing(8)))] scrollbar-none;
@@ -269,7 +269,7 @@
 
     /* `code` tag that is not a child of `pre` tag */
     code:not(pre code) {
-        @apply rounded-md bg-current/10 px-1.5 py-0.5 text-[.9em] ring ring-current/5 select-text ring-inset;
+        @apply rounded-md bg-current/10 px-1.5 py-0.5 text-[.9em] ring ring-current/5 select-all ring-inset;
         box-decoration-break: clone;
     }
 

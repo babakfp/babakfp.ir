@@ -80,6 +80,143 @@
                 src: url("/fonts/GeistMono-Italic[wght].woff2") format("woff2-variations");
             }
         </style>
+        <script>
+            /**
+             * Clears any active text selection when the user clicks on an element
+             * (or any ancestor of it, no depth limit) that has `user-select: none`,
+             * UNLESS the click landed on the element that actually contains the
+             * selected text (clicking that element or inside it keeps the selection;
+             * clicking one of ITS ancestors clears it).
+             *
+             * Wrapped in an IIFE so the helper functions don't leak onto `window`.
+             *
+             * https://claude.ai/chat/909fad66-67a9-41ab-af80-a3f0dbbc63d3
+             */
+            ;(() => {
+                /**
+                 * Walk up from `el` and return the first ancestor (inclusive) whose
+                 * computed style has `user-select: none`. Returns null if none found.
+                 *
+                 * Note: `user-select` has shipped unprefixed in every evergreen browser
+                 * (including Safari, since 15.4) for years, so no vendor-prefix fallback
+                 * is needed here.
+                 *
+                 * @param {Element | null} el
+                 * @returns {Element | null}
+                 */
+                function getUserSelectNoneAncestor(el) {
+                    /** @type {Element | null} */
+                    let current = el
+
+                    while (current) {
+                        if (getComputedStyle(current).userSelect === "none") {
+                            return current
+                        }
+                        current = current.parentElement
+                    }
+
+                    return null
+                }
+
+                /**
+                 * Returns the element(s) that "contain" the current selection, i.e. the
+                 * common ancestor element of each range in the selection. Most
+                 * selections only have one range, but Firefox allows multiple disjoint
+                 * ranges (e.g. via Ctrl+drag), so every range is accounted for.
+                 *
+                 * @param {Selection} selection
+                 * @returns {Element[]}
+                 */
+                function getSelectionContainerElements(selection) {
+                    /** @type {Element[]} */
+                    const containers = []
+
+                    for (let i = 0; i < selection.rangeCount; i++) {
+                        const commonAncestor =
+                            selection.getRangeAt(i).commonAncestorContainer
+                        const container =
+                            commonAncestor instanceof Element ? commonAncestor
+                            :   commonAncestor.parentElement
+
+                        if (container) {
+                            containers.push(container)
+                        }
+                    }
+
+                    return containers
+                }
+
+                /**
+                 * Resolves the "real" element a click originated from, accounting for
+                 * shadow DOM. `event.target` gets retargeted to the shadow host once an
+                 * event crosses a shadow boundary, so `composedPath()[0]` is used to get
+                 * the actual innermost element instead.
+                 *
+                 * @param {MouseEvent} event
+                 * @returns {Element | null}
+                 */
+                function getClickedElement(event) {
+                    const path =
+                        typeof event.composedPath === "function" ?
+                            event.composedPath()
+                        :   []
+                    const innermost = path.length > 0 ? path[0] : event.target
+                    return innermost instanceof Element ? innermost : null
+                }
+
+                /**
+                 * Click handler: clears the selection when the click lands on a
+                 * user-select:none ancestor chain that is itself outside the element
+                 * containing the current selection.
+                 *
+                 * Caveat: this listens on `click`, which fires after `mousedown`. Some
+                 * browsers collapse an existing selection on `mousedown` by default
+                 * before `click` ever runs, which can make the selection already gone
+                 * by the time this handler sees it. If that's observed in practice,
+                 * move this same logic to `mousedown` (calling `event.preventDefault()`
+                 * on the "keep selection" branch to stop that native collapse).
+                 *
+                 * @param {MouseEvent} event
+                 */
+                function handleDocumentClick(event) {
+                    const selection = window.getSelection()
+
+                    // Nothing selected -> nothing to do.
+                    if (!selection || selection.isCollapsed) {
+                        return
+                    }
+
+                    const target = getClickedElement(event)
+                    if (!target) {
+                        return
+                    }
+
+                    // Click wasn't on (or inside) any element with user-select:none -> ignore.
+                    if (!getUserSelectNoneAncestor(target)) {
+                        return
+                    }
+
+                    const selectionContainers =
+                        getSelectionContainerElements(selection)
+
+                    // If the click happened on (or inside) the element that actually
+                    // contains the selected text, leave the selection alone.
+                    const clickedInsideSelection = selectionContainers.some(
+                        (container) =>
+                            container === target || container.contains(target),
+                    )
+                    if (clickedInsideSelection) {
+                        return
+                    }
+
+                    // Otherwise (click was on an ancestor of the selection container, and
+                    // that ancestor chain has user-select:none) -> clear the selection.
+                    selection.removeAllRanges()
+                }
+
+                document.addEventListener("click", handleDocumentClick)
+            })()
+        </script>
         %sveltekit.head%
     </head>
     <body
