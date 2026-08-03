@@ -26,7 +26,7 @@
     ></div>
 
     <OutClick
-        class="fixed inset-x-0 bottom-0 max-h-(--svh-no-header) overflow-y-auto overscroll-contain border-t border-gray-800 bg-background"
+        class="fixed inset-x-0 bottom-0 max-h-(--svh-no-header) overflow-y-auto overscroll-contain border-t border-gray-900 bg-background"
         excludeElements={[backdrop]}
         excludeQuerySelectorAll={excluderQuery}
         onOutClick={() => (isOpen = false)}

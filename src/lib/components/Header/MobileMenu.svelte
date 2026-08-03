@@ -45,7 +45,7 @@
     <OutClick
         id="main-menu-mobile"
         tag="div"
-        class="relative border-b border-gray-800 bg-background py-4"
+        class="relative border-b border-gray-900 bg-background py-4"
         excludeQuerySelectorAll="#main-menu-toggle, #main-menu-backdrop"
         onOutClick={() => (isMainMenuOpen.value = false)}
     >

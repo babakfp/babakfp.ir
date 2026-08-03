@@ -12,7 +12,7 @@
 
 <div class="container max-w-(--breakpoint-xl)">
     <main
-        class="bg-grid-gray-800/25 grid min-h-(--svh-no-header) content-center border-x border-dashed border-gray-800 px-6 pt-(--main-pt) pb-(--main-pb) shadow-[inset_0_0_4rem_2rem_var(--color-background)]"
+        class="bg-grid-gray-900 grid min-h-(--svh-no-header) content-center border-x border-gray-900 px-6 pt-(--main-pt) pb-(--main-pb) shadow-[inset_0_0_4rem_2rem_var(--color-background)]"
     >
         <div class="relative">
             <div
