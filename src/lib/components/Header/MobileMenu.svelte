@@ -38,14 +38,14 @@
 >
     <div
         id="main-menu-backdrop"
-        class="absolute inset-0 bg-background/95"
+        class="bg-background/95 absolute inset-0"
         onclick={() => (isMainMenuOpen.value = false)}
     ></div>
 
     <OutClick
         id="main-menu-mobile"
         tag="div"
-        class="relative border-b border-gray-900 bg-background py-4"
+        class="bg-background relative border-b border-gray-900 py-4"
         excludeQuerySelectorAll="#main-menu-toggle, #main-menu-backdrop"
         onOutClick={() => (isMainMenuOpen.value = false)}
     >

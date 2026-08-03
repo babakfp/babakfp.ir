@@ -16,7 +16,7 @@
     >
         <div class="relative">
             <div
-                class="inset-center absolute z-0 size-1/2 bg-background shadow-[0_0_4rem_2rem_var(--color-background)]"
+                class="inset-center bg-background absolute z-0 size-1/2 shadow-[0_0_4rem_2rem_var(--color-background)]"
             ></div>
             <HeroSection />
         </div>

@@ -7,7 +7,7 @@
     <title>Portfolios</title>
 </svelte:head>
 
-<h1 class="text-center text-4xl font-extralight uppercase text-gray-50">
+<h1 class="text-center text-4xl font-extralight text-gray-50 uppercase">
     Portfolios
 </h1>
 

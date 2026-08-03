@@ -10,7 +10,7 @@
 </script>
 
 <blockquote>
-    <div class="absolute top-1 right-1.5 pointer-events-none text-xl">
+    <div class="pointer-events-none absolute top-1 right-1.5 text-xl">
         <IconQuotesFill />
     </div>
 

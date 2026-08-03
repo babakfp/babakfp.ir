@@ -11,7 +11,7 @@
 </script>
 
 <a
-    class="group relative block overflow-hidden rounded-lg bg-white/2 p-4 duration-200 ring ring-white/10 hover:ring-white/15 hover:bg-white/10 sm:p-6"
+    class="group relative block overflow-hidden rounded-lg bg-white/2 p-4 ring ring-white/10 duration-200 hover:bg-white/10 hover:ring-white/15 sm:p-6"
     {href}
 >
     <h3 class="text-lg font-bold text-gray-50">

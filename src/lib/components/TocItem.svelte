@@ -13,7 +13,7 @@
 <a
     {...rest}
     class={[
-        "outline-inset block gap-2 py-2 px-8 duration-100 hover:text-gray-50",
+        "outline-inset block gap-2 px-8 py-2 duration-100 hover:text-gray-50",
         rest.class,
     ]}
     href="#{heading.id}"

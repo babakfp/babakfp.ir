@@ -36,7 +36,7 @@
 </svelte:head>
 
 <main
-    class="container max-w-(--breakpoint-xl) xl:flex xl:gap-12 xl:mr-0 xl:max-w-[calc(var(--breakpoint-xl)+((100%-var(--breakpoint-xl))/2))]"
+    class="container max-w-(--breakpoint-xl) xl:mr-0 xl:flex xl:max-w-[calc(var(--breakpoint-xl)+((100%-var(--breakpoint-xl))/2))] xl:gap-12"
 >
     <article
         class="mx-auto max-w-prose pt-(--main-pt) pb-(--main-pb) xl:mx-0 xl:min-h-(--svh-no-header) xl:max-w-none"
@@ -94,7 +94,7 @@
     </article>
 
     <DesktopToc
-        class="hidden border-l border-gray-50/5 min-w-1/3 max-w-1/3 w-full xl:block"
+        class="hidden w-full max-w-1/3 min-w-1/3 border-l border-gray-50/5 xl:block"
         {headings}
     />
 </main>

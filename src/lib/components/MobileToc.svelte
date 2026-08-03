@@ -23,7 +23,7 @@
                 <TocItem
                     {heading}
                     class={[
-                        "group-first:pt-6 group-last:pb-6 px-4",
+                        "px-4 group-first:pt-6 group-last:pb-6",
                         heading.level === 2 ? "text-gray-300" : "text-gray-400",
                     ]}
                     onclick={() => (isOpen = false)}
