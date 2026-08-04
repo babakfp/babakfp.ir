@@ -23,9 +23,10 @@
             <li>
                 <TocItem
                     {heading}
-                    class={heading.level === 2 ?
-                        "text-gray-400"
-                    :   "text-gray-500"}
+                    class={[
+                        "pr-4",
+                        heading.level === 2 ? "text-gray-400" : "text-gray-500",
+                    ]}
                 />
             </li>
         {/each}
