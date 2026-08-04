@@ -6,6 +6,7 @@
 </script>
 
 <button
+    type="button"
     id="main-menu-toggle"
     class="outline-inset px-4 xl:hidden!"
     onclick={() => (isMainMenuOpen.value = !isMainMenuOpen.value)}

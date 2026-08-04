@@ -18,6 +18,7 @@
 </script>
 
 <button
+    type="button"
     id="open-mobile-toc"
     class="btn fixed right-4 bottom-4 xl:hidden!"
     onclick={() => (isOpen = true)}
@@ -41,7 +42,11 @@
         {/each}
     </ul>
 
-    <button class="btn fixed right-4 bottom-4" onclick={() => (isOpen = false)}>
+    <button
+        type="button"
+        class="btn fixed right-4 bottom-4"
+        onclick={() => (isOpen = false)}
+    >
         <IconXRegular class="text-xl" />
     </button>
 </DrawerDown>

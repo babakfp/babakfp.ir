@@ -24,6 +24,7 @@
                 <td class="px-4 py-2">Card:</td>
                 <td>
                     <button
+                        type="button"
                         class="px-4 py-2"
                         onclick={async () => {
                             await copyText(BANK_CARD_NUMBER)

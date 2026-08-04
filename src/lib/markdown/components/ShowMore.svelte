@@ -42,7 +42,7 @@
     </div>
 
     <div class="sticky bottom-4 mt-4 flex justify-center xl:bottom-8">
-        <button class="btn" onclick={handleClick}>
+        <button type="button" class="btn" onclick={handleClick}>
             {isOpen ? "Show less" : "Show more"}
         </button>
     </div>
