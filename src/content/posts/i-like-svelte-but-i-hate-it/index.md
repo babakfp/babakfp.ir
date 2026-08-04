@@ -76,7 +76,7 @@ I also replied to one of the comments under the article:
 
 This is the whole conversation:
 
-<Video src="/content/posts/i-like-svelte-but-i-hate-it/3.mp4" captions="The full conversation between me and that maintainer (Kev#3238)" />
+<Video src="/content/posts/i-like-svelte-but-i-hate-it/3.mp4" label="The full conversation between me and that maintainer (Kev#3238)" />
 
 After that conversation, they banned me:
 
@@ -86,7 +86,7 @@ After that conversation, they banned me:
 
 Everything went great🤩, just kidding. My heart got broken! To be honest, I wasn't expecting much. I was expecting the same. Whatever, this is the whole conversation:
 
-<Video src="/content/posts/i-like-svelte-but-i-hate-it/8.mp4" captions="A The full conversation between me and that maintainer (pngwn#8431)" />
+<Video src="/content/posts/i-like-svelte-but-i-hate-it/8.mp4" label="The full conversation between me and that maintainer (pngwn#8431)" />
 
 ## I open another PR and it got my alternate account banned from (GitHub and Discord) 🙂
 

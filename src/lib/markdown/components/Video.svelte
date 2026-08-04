@@ -1,14 +1,19 @@
 <script lang="ts">
     let {
         src,
-        captions,
+        label,
     }: {
         src: string
-        captions: string
+        label: string
     } = $props()
 </script>
 
-<video controls>
+<video
+    controls
+    controlslist="nodownload noplaybackrate noremoteplayback"
+    disablepictureinpicture
+    disableremoteplayback
+    title={label}
+>
     <source {src} type="video/mp4" />
-    <track kind="captions" label={captions} />
 </video>
