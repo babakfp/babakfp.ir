@@ -33,7 +33,7 @@
 </svelte:head>
 
 <main
-    class="container max-w-(--breakpoint-xl) xl:mr-0 xl:flex xl:max-w-[calc(var(--breakpoint-xl)+((100%-var(--breakpoint-xl))/2))] xl:gap-12 xl:pr-0"
+    class="container max-w-(--breakpoint-xl) xl:mr-0 xl:flex xl:max-w-[calc(var(--breakpoint-xl)+((100%-var(--breakpoint-xl))/2))] xl:gap-8 xl:pr-0"
 >
     <div
         class="mx-auto max-w-prose pt-(--main-pt) pb-(--main-pb) xl:mx-0 xl:min-h-(--svh-no-header) xl:max-w-none"
