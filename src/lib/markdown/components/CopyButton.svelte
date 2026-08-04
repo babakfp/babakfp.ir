@@ -1,5 +1,7 @@
 <script lang="ts">
     import { copyText } from "svelte-copy"
+    import IconCheckRegular from "phosphor-icons-svelte/IconCheckRegular.svelte"
+    import IconCopySimpleRegular from "phosphor-icons-svelte/IconCopySimpleRegular.svelte"
 
     let {
         pre,
@@ -21,9 +23,14 @@
 </script>
 
 <button
-    class="btn absolute top-0 -right-4 rounded-none text-xs opacity-0 group-focus-within:opacity-100 group-[:hover]:opacity-100 sm:top-4 sm:right-4 sm:rounded-lg"
+    class="btn btn-icon absolute top-0 -right-4 rounded-none text-xs opacity-0 group-focus-within:opacity-100 group-[:hover]:opacity-100 sm:top-4 sm:right-4 sm:rounded-lg"
     onclick={handleCopy}
     disabled={isDisabled}
+    title={isDisabled ? "Copied" : "Copy"}
 >
-    {isDisabled ? "Copied" : "Copy"}
+    {#if isDisabled}
+        <IconCheckRegular class="text-lg" />
+    {:else}
+        <IconCopySimpleRegular class="text-lg" />
+    {/if}
 </button>
