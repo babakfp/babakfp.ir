@@ -23,10 +23,11 @@
 </script>
 
 <button
-    class="btn btn-icon absolute top-0 -right-4 rounded-none text-xs opacity-0 group-focus-within:opacity-100 group-[:hover]:opacity-100 sm:top-4 sm:right-4 sm:rounded-lg"
+    type="button"
+    class="btn btn-icon rounded-none text-xs sm:rounded-lg"
     onclick={handleCopy}
     disabled={isDisabled}
-    title={isDisabled ? "Copied" : "Copy"}
+    aria-label={isDisabled ? "Copied to clipboard" : "Copy to clipboard"}
 >
     {#if isDisabled}
         <IconCheckRegular class="text-lg" />
