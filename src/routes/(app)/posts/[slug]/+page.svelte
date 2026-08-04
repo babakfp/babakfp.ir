@@ -1,5 +1,4 @@
 <script lang="ts">
-    import IconListRegular from "phosphor-icons-svelte/IconListRegular.svelte"
     import { page } from "$app/state"
     import BackToTopBtn from "$lib/components/BackToTopBtn.svelte"
     import DesktopToc from "$lib/components/DesktopToc.svelte"
@@ -8,8 +7,6 @@
     import { timeSince } from "$lib/utilities/timeSince"
 
     let { data } = $props()
-
-    let isTocOpen = $state(false)
 
     const overview: Headings[number] = {
         id: "$overview",
@@ -38,7 +35,7 @@
 <main
     class="container max-w-(--breakpoint-xl) xl:mr-0 xl:flex xl:max-w-[calc(var(--breakpoint-xl)+((100%-var(--breakpoint-xl))/2))] xl:gap-12"
 >
-    <article
+    <div
         class="mx-auto max-w-prose pt-(--main-pt) pb-(--main-pb) xl:mx-0 xl:min-h-(--svh-no-header) xl:max-w-none"
     >
         <ul class="flex items-center gap-2 text-sm">
@@ -72,7 +69,7 @@
             </div>
         {/if}
 
-        <div class="markdown-content">
+        <article class="markdown-content">
             {#if data.post.frontmatter.title}
                 <h1 id="$overview" class="mt-(--markdown-heading-gap)">
                     {data.post.frontmatter.title}
@@ -90,8 +87,8 @@
             {/if}
 
             <data.post.default />
-        </div>
-    </article>
+        </article>
+    </div>
 
     <DesktopToc
         class="hidden w-full max-w-1/3 min-w-1/3 border-l border-gray-50/5 xl:block"
@@ -99,20 +96,6 @@
     />
 </main>
 
-{#if !isTocOpen}
-    <button
-        id="open-mobile-toc"
-        class="btn fixed right-4 bottom-16 xl:hidden!"
-        onclick={() => (isTocOpen = true)}
-    >
-        <IconListRegular class="text-xl" />
-    </button>
-{/if}
-
 <BackToTopBtn />
 
-<MobileToc
-    {headings}
-    bind:isOpen={isTocOpen}
-    excluderQuery="#open-mobile-toc"
-/>
+<MobileToc {headings} excluderQuery="#open-mobile-toc" />

@@ -1,4 +1,5 @@
 <script lang="ts">
+    import IconListRegular from "phosphor-icons-svelte/IconListRegular.svelte"
     import IconXRegular from "phosphor-icons-svelte/IconXRegular.svelte"
     import DrawerDown from "$lib/components/DrawerDown.svelte"
     import TocItem from "$lib/components/TocItem.svelte"
@@ -6,18 +7,26 @@
     import type { Headings } from "$lib/utilities/getHeadings"
 
     let {
-        isOpen = $bindable(),
         headings,
         excluderQuery,
     }: {
-        isOpen?: boolean
         headings: Headings
         excluderQuery: string
     } = $props()
+
+    let isOpen = $state(false)
 </script>
 
+<button
+    id="open-mobile-toc"
+    class="btn fixed right-4 bottom-4 xl:hidden!"
+    onclick={() => (isOpen = true)}
+>
+    <IconListRegular class="text-xl" />
+</button>
+
 <DrawerDown class="xl:hidden" bind:isOpen {excluderQuery}>
-    <ul class="pb-26" use:focusTrap>
+    <ul class="pb-17" use:focusTrap>
         {#each headings as heading}
             <li class="group">
                 <TocItem
@@ -32,10 +41,7 @@
         {/each}
     </ul>
 
-    <button
-        class="btn fixed right-4 bottom-16"
-        onclick={() => (isOpen = false)}
-    >
+    <button class="btn fixed right-4 bottom-4" onclick={() => (isOpen = false)}>
         <IconXRegular class="text-xl" />
     </button>
 </DrawerDown>
