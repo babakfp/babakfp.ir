@@ -298,6 +298,10 @@
             @apply -mr-3 sm:-mr-6;
         }
     }
+
+    .footnotes {
+        @apply space-y-(--markdown-content-gap);
+    }
 }
 
 /* Svelte Hot French Toast */
