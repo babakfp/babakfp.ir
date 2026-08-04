@@ -43,16 +43,6 @@
     padding-inline: 1rem;
 }
 
-@utility highlight-* {
-    --opacity: calc(--modifier(integer) * 1%);
-    --tw-highlight: inset 0 1px 0 0
-        --alpha(--value(--color-*, [color]) / var(--opacity, 100%));
-    box-shadow:
-        var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
-        var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow),
-        var(--tw-highlight);
-}
-
 @layer base {
     :root {
         --header-height: --spacing(16);
@@ -99,7 +89,7 @@
 }
 
 @utility btn {
-    @apply drag-none highlight-gray-50/10 relative inline-flex items-center justify-center gap-2 rounded-lg bg-gray-800 px-3 py-2 text-sm font-medium text-gray-50 outline-offset-2 transition-colors duration-100 hover:bg-gray-700;
+    @apply drag-none relative inline-flex items-center justify-center gap-2 rounded-lg bg-gray-800 px-3 py-2 text-sm font-medium text-gray-50 ring ring-gray-50/5 outline-offset-2 transition-colors duration-100 ring-inset hover:bg-gray-700;
 }
 
 @utility btn-icon {
@@ -107,7 +97,7 @@
 }
 
 @utility btn-primary {
-    @apply bg-brand-900 text-brand-50 hover:bg-brand-800;
+    @apply bg-brand-900 text-brand-50 hover:bg-brand-800 ring-brand-50/5 ring ring-inset;
 }
 
 @utility outline-inset {
@@ -224,7 +214,7 @@
         box-decoration-break: clone;
     }
 
-    /* `span.shiki` is for highlighted inline code */
+    /* Highlighted inline code */
     span.shiki {
         @apply bg-transparent!;
     }
@@ -307,7 +297,8 @@
 /* Svelte Hot French Toast */
 
 .svelte-hot-french-toast__base {
-    @apply highlight-gray-50/10! bg-gray-800! pl-4! text-gray-300!;
+    @apply bg-gray-800! pl-4! text-gray-300!;
+    @apply ring! ring-gray-50/5! ring-inset!;
 }
 .svelte-hot-french-toast__message {
     @apply text-sm;

@@ -77,7 +77,7 @@
         {href}
     >
         <div
-            class="highlight-gray-50/10 flex h-7.5 w-7.5 items-center justify-center rounded-lg bg-gray-50/5 text-gray-400 duration-100 group-hover:bg-gray-50/10 group-hover:text-gray-50"
+            class="flex h-7.5 w-7.5 items-center justify-center rounded-lg bg-gray-50/5 text-gray-400 ring ring-gray-50/5 duration-100 ring-inset group-hover:bg-gray-50/10 group-hover:text-gray-50"
         >
             <Icon class="text-lg" />
         </div>
