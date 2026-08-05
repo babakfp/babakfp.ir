@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { copyText } from "svelte-copy"
     import IconCheckRegular from "phosphor-icons-svelte/IconCheckRegular.svelte"
     import IconCopySimpleRegular from "phosphor-icons-svelte/IconCopySimpleRegular.svelte"
+    import { copyText } from "svelte-copy"
 
     let {
         pre,
