@@ -9,7 +9,7 @@
 
 <a
     class={[
-        "btn btn-icon hide fixed right-4 bottom-32 z-30 size-12 translate-y-4 rounded-full transition-all duration-200",
+        "btn btn-icon hide fixed right-4 bottom-32 z-30 size-12 translate-y-4 rounded-full shadow-[0_0_0_1px_var(--color-background)] transition-all duration-200",
         { "show! translate-y-0!": showButton },
     ]}
     href="#body"

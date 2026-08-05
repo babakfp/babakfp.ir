@@ -20,7 +20,7 @@
 <button
     type="button"
     id="open-mobile-toc"
-    class="btn btn-icon fixed right-4 bottom-18 size-12 rounded-full xl:hidden!"
+    class="btn btn-icon fixed right-4 bottom-18 size-12 rounded-full shadow-[0_0_0_1px_var(--color-background)] xl:hidden!"
     onclick={() => (isOpen = true)}
 >
     <IconListRegular class="text-xl" />
@@ -44,7 +44,7 @@
 
     <button
         type="button"
-        class="btn btn-icon fixed right-4 bottom-18 size-12 rounded-full"
+        class="btn btn-icon fixed right-4 bottom-18 size-12 rounded-full shadow-[0_0_0_1px_var(--color-background)]"
         onclick={() => (isOpen = false)}
     >
         <IconXRegular class="text-xl" />
