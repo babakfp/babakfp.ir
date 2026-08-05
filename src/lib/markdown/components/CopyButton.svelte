@@ -24,14 +24,14 @@
 
 <button
     type="button"
-    class="btn btn-icon rounded-none text-xs sm:rounded-lg"
+    class="btn btn-icon rounded-none text-xs sm:rounded-full"
     onclick={handleCopy}
     disabled={isDisabled}
     aria-label={isDisabled ? "Copied to clipboard" : "Copy to clipboard"}
 >
     {#if isDisabled}
-        <IconCheckRegular class="text-lg" />
+        <IconCheckRegular class="text-base" />
     {:else}
-        <IconCopySimpleRegular class="text-lg" />
+        <IconCopySimpleRegular class="text-base" />
     {/if}
 </button>

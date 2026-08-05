@@ -14,7 +14,7 @@
     <img class="inline" {src} {alt} loading="lazy" />
 
     <a
-        class="hide group-hover:show btn btn-icon absolute top-3 right-3"
+        class="hide group-hover:show btn btn-icon absolute top-4 right-4 rounded-full"
         href={src}
         target="_blank"
     >

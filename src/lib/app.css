@@ -93,7 +93,7 @@
 }
 
 @utility btn-icon {
-    @apply h-9 w-9 p-0 text-gray-400 hover:text-gray-50;
+    @apply size-9 p-0 text-gray-400 hover:text-gray-50;
 }
 
 @utility btn-primary {
