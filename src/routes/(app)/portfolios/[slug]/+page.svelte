@@ -121,19 +121,19 @@
         --linear-gradient-side: to top;
         --linear-gradient-color: var(--color-background);
         --linear-gradient-steps:
-            oklch(from var(--linear-gradient-color) l c h / 1) 0%,
-            oklch(from var(--linear-gradient-color) l c h / 0.738) 19%,
-            oklch(from var(--linear-gradient-color) l c h / 0.541) 34%,
-            oklch(from var(--linear-gradient-color) l c h / 0.382) 47%,
-            oklch(from var(--linear-gradient-color) l c h / 0.278) 56.5%,
-            oklch(from var(--linear-gradient-color) l c h / 0.194) 65%,
-            oklch(from var(--linear-gradient-color) l c h / 0.126) 73%,
-            oklch(from var(--linear-gradient-color) l c h / 0.075) 80.2%,
-            oklch(from var(--linear-gradient-color) l c h / 0.042) 86.1%,
-            oklch(from var(--linear-gradient-color) l c h / 0.021) 91%,
-            oklch(from var(--linear-gradient-color) l c h / 0.008) 95.2%,
-            oklch(from var(--linear-gradient-color) l c h / 0.002) 98.2%,
-            oklch(from var(--linear-gradient-color) l c h / 0) 100%;
+            oklch(from var(--linear-gradient-color) l c h / 100%) 0%,
+            oklch(from var(--linear-gradient-color) l c h / 73.8%) 19%,
+            oklch(from var(--linear-gradient-color) l c h / 54.1%) 34%,
+            oklch(from var(--linear-gradient-color) l c h / 38.2%) 47%,
+            oklch(from var(--linear-gradient-color) l c h / 27.8%) 56.5%,
+            oklch(from var(--linear-gradient-color) l c h / 19.4%) 65%,
+            oklch(from var(--linear-gradient-color) l c h / 12.6%) 73%,
+            oklch(from var(--linear-gradient-color) l c h / 7.5%) 80.2%,
+            oklch(from var(--linear-gradient-color) l c h / 4.2%) 86.1%,
+            oklch(from var(--linear-gradient-color) l c h / 2.1%) 91%,
+            oklch(from var(--linear-gradient-color) l c h / 0.8%) 95.2%,
+            oklch(from var(--linear-gradient-color) l c h / 0.2%) 98.2%,
+            oklch(from var(--linear-gradient-color) l c h / 0%) 100%;
         --linear-gradient: linear-gradient(
             var(--linear-gradient-side),
             var(--linear-gradient-steps)
