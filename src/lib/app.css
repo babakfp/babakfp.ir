@@ -34,6 +34,8 @@
     --font-sans: "Geist Variable";
     --font-mono: "Geist Mono Variable";
 
+    --shadow-outline: 0 0 0 1px var(--color-background);
+
     --markdown-content-gap: --spacing(6);
     --markdown-heading-gap: --spacing(10);
 }

@@ -83,7 +83,7 @@
 
     <div class="flex justify-center gap-4 pt-4 pb-8">
         <a
-            class="btn btn-primary shadow-[0_0_0_1px_var(--color-background)]"
+            class="btn btn-primary shadow-outline"
             href={portfolioData.urls.main}
             target="_blank"
         >
@@ -93,7 +93,7 @@
 
         {#if portfolioData.urls.github}
             <a
-                class="btn shadow-[0_0_0_1px_var(--color-background)]"
+                class="btn shadow-outline"
                 href={portfolioData.urls.github}
                 target="_blank"
             >
