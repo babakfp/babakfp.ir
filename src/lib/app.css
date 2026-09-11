@@ -69,7 +69,7 @@
         @apply border-t-2 border-gray-50/10;
     }
     svg.icon {
-        @apply pointer-events-none inline-block h-[1em] w-[1em];
+        @apply pointer-events-none inline-block size-[1em];
         &:not([fill="none"]) {
             @apply fill-current;
         }
@@ -155,12 +155,20 @@
     h4,
     h5,
     h6 {
+        @apply relative;
         &:hover .heading-permalink {
             @apply show;
         }
     }
     .heading-permalink {
-        @apply hide float-right text-[1em] delay-300 duration-300;
+        @apply hide delay-300 duration-300;
+        @apply bg-background/50 shadow-outline absolute inset-y-0 right-0 flex items-center text-[1em] ring ring-gray-50/10 backdrop-blur-xs ring-inset;
+    }
+    h2 .heading-permalink {
+        @apply -bottom-px rounded-t-md px-[0.25em];
+    }
+    :is(h3, h4, h5, h6) .heading-permalink {
+        @apply inset-y-center size-[1.75em] justify-center rounded-full rounded-md;
     }
 
     a:not(.btn) {
