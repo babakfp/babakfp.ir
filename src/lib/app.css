@@ -164,11 +164,21 @@
         @apply hide delay-300 duration-300;
         @apply bg-background/50 shadow-outline absolute inset-y-0 right-0 flex items-center text-[1em] ring ring-gray-50/10 backdrop-blur-xs ring-inset;
     }
-    h2 .heading-permalink {
-        @apply -bottom-px rounded-t-md px-[0.25em];
+    h2 {
+        .heading-permalink {
+            @apply -bottom-px translate-y-2 rounded-t-md px-[0.25em];
+        }
+        &:hover .heading-permalink {
+            @apply translate-y-0;
+        }
     }
-    :is(h3, h4, h5, h6) .heading-permalink {
-        @apply inset-y-center size-[1.75em] justify-center rounded-full rounded-md;
+    :is(h3, h4, h5, h6) {
+        .heading-permalink {
+            @apply inset-y-center size-[1.75em] scale-0 justify-center rounded-full rounded-md;
+        }
+        &:hover .heading-permalink {
+            @apply scale-100;
+        }
     }
 
     a:not(.btn) {
