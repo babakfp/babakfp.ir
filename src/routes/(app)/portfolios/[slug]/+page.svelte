@@ -72,13 +72,13 @@
     {/if}
 </article>
 
-<div
+<nav
     class="fixed inset-x-0 -bottom-0 container max-w-(--breakpoint-xl)"
-    style="background: var(--linear-gradient);"
+    style="background: var(--bg-gradient);"
 >
     <div
-        class="absolute inset-0 backdrop-blur-xs backdrop-saturate-0"
-        style="mask: linear-gradient(to top, black, black, var(--linear-gradient-steps));"
+        class="absolute inset-0 backdrop-blur-xs backdrop-brightness-0 backdrop-saturate-0"
+        style="mask: var(--mask-gradient);"
     ></div>
 
     <div class="flex justify-center gap-4 pt-4 pb-8">
@@ -102,7 +102,7 @@
             </a>
         {/if}
     </div>
-</div>
+</nav>
 
 {#snippet TechnologyBox({
     title,
@@ -117,26 +117,32 @@
 {/snippet}
 
 <style>
-    :root {
-        --linear-gradient-side: to top;
-        --linear-gradient-color: var(--color-background);
-        --linear-gradient-steps:
-            oklch(from var(--linear-gradient-color) l c h / 100%) 0%,
-            oklch(from var(--linear-gradient-color) l c h / 73.8%) 19%,
-            oklch(from var(--linear-gradient-color) l c h / 54.1%) 34%,
-            oklch(from var(--linear-gradient-color) l c h / 38.2%) 47%,
-            oklch(from var(--linear-gradient-color) l c h / 27.8%) 56.5%,
-            oklch(from var(--linear-gradient-color) l c h / 19.4%) 65%,
-            oklch(from var(--linear-gradient-color) l c h / 12.6%) 73%,
-            oklch(from var(--linear-gradient-color) l c h / 7.5%) 80.2%,
-            oklch(from var(--linear-gradient-color) l c h / 4.2%) 86.1%,
-            oklch(from var(--linear-gradient-color) l c h / 2.1%) 91%,
-            oklch(from var(--linear-gradient-color) l c h / 0.8%) 95.2%,
-            oklch(from var(--linear-gradient-color) l c h / 0.2%) 98.2%,
-            oklch(from var(--linear-gradient-color) l c h / 0%) 100%;
-        --linear-gradient: linear-gradient(
-            var(--linear-gradient-side),
-            var(--linear-gradient-steps)
+    nav {
+        --gradient-side: to top;
+        --gradient-color: var(--color-background);
+        --gradient-steps:
+            oklch(from var(--gradient-color) l c h / 100%) 0%,
+            oklch(from var(--gradient-color) l c h / 73.8%) 19%,
+            oklch(from var(--gradient-color) l c h / 54.1%) 34%,
+            oklch(from var(--gradient-color) l c h / 38.2%) 47%,
+            oklch(from var(--gradient-color) l c h / 27.8%) 56.5%,
+            oklch(from var(--gradient-color) l c h / 19.4%) 65%,
+            oklch(from var(--gradient-color) l c h / 12.6%) 73%,
+            oklch(from var(--gradient-color) l c h / 7.5%) 80.2%,
+            oklch(from var(--gradient-color) l c h / 4.2%) 86.1%,
+            oklch(from var(--gradient-color) l c h / 2.1%) 91%,
+            oklch(from var(--gradient-color) l c h / 0.8%) 95.2%,
+            oklch(from var(--gradient-color) l c h / 0.2%) 98.2%,
+            oklch(from var(--gradient-color) l c h / 0%) 100%;
+        --bg-gradient: linear-gradient(
+            var(--gradient-side),
+            var(--gradient-steps)
+        );
+        --mask-gradient: linear-gradient(
+            var(--gradient-side),
+            black,
+            black,
+            var(--gradient-steps)
         );
     }
 </style>
