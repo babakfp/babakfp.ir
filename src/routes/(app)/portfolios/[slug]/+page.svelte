@@ -73,11 +73,17 @@
 </article>
 
 <div
-    class="bg-background/80 fixed inset-x-0 -bottom-0.5 container max-w-(--breakpoint-xl) backdrop-blur-xs"
+    class="fixed inset-x-0 -bottom-0 container max-w-(--breakpoint-xl)"
+    style="background: var(--linear-gradient);"
 >
+    <div
+        class="absolute inset-0 backdrop-blur-xs backdrop-saturate-0"
+        style="mask: linear-gradient(to top, black, black, var(--linear-gradient-steps));"
+    ></div>
+
     <div class="flex justify-center gap-4 pt-4 pb-8">
         <a
-            class="btn btn-primary"
+            class="btn btn-primary shadow-[0_0_0_1px_var(--color-background)]"
             href={portfolioData.urls.main}
             target="_blank"
         >
@@ -86,7 +92,11 @@
         </a>
 
         {#if portfolioData.urls.github}
-            <a class="btn" href={portfolioData.urls.github} target="_blank">
+            <a
+                class="btn shadow-[0_0_0_1px_var(--color-background)]"
+                href={portfolioData.urls.github}
+                target="_blank"
+            >
                 View repository
                 <IconArrowUpRightSquare />
             </a>
@@ -105,3 +115,28 @@
         <Children />
     </div>
 {/snippet}
+
+<style>
+    :root {
+        --linear-gradient-side: to top;
+        --linear-gradient-color: var(--color-background);
+        --linear-gradient-steps:
+            hsl(from var(--linear-gradient-color) h s l / 1) 0%,
+            hsl(from var(--linear-gradient-color) h s l / 0.738) 19%,
+            hsl(from var(--linear-gradient-color) h s l / 0.541) 34%,
+            hsl(from var(--linear-gradient-color) h s l / 0.382) 47%,
+            hsl(from var(--linear-gradient-color) h s l / 0.278) 56.5%,
+            hsl(from var(--linear-gradient-color) h s l / 0.194) 65%,
+            hsl(from var(--linear-gradient-color) h s l / 0.126) 73%,
+            hsl(from var(--linear-gradient-color) h s l / 0.075) 80.2%,
+            hsl(from var(--linear-gradient-color) h s l / 0.042) 86.1%,
+            hsl(from var(--linear-gradient-color) h s l / 0.021) 91%,
+            hsl(from var(--linear-gradient-color) h s l / 0.008) 95.2%,
+            hsl(from var(--linear-gradient-color) h s l / 0.002) 98.2%,
+            hsl(from var(--linear-gradient-color) h s l / 0) 100%;
+        --linear-gradient: linear-gradient(
+            var(--linear-gradient-side),
+            var(--linear-gradient-steps)
+        );
+    }
+</style>
