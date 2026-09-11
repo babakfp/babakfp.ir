@@ -121,19 +121,19 @@
         --linear-gradient-side: to top;
         --linear-gradient-color: var(--color-background);
         --linear-gradient-steps:
-            hsl(from var(--linear-gradient-color) h s l / 1) 0%,
-            hsl(from var(--linear-gradient-color) h s l / 0.738) 19%,
-            hsl(from var(--linear-gradient-color) h s l / 0.541) 34%,
-            hsl(from var(--linear-gradient-color) h s l / 0.382) 47%,
-            hsl(from var(--linear-gradient-color) h s l / 0.278) 56.5%,
-            hsl(from var(--linear-gradient-color) h s l / 0.194) 65%,
-            hsl(from var(--linear-gradient-color) h s l / 0.126) 73%,
-            hsl(from var(--linear-gradient-color) h s l / 0.075) 80.2%,
-            hsl(from var(--linear-gradient-color) h s l / 0.042) 86.1%,
-            hsl(from var(--linear-gradient-color) h s l / 0.021) 91%,
-            hsl(from var(--linear-gradient-color) h s l / 0.008) 95.2%,
-            hsl(from var(--linear-gradient-color) h s l / 0.002) 98.2%,
-            hsl(from var(--linear-gradient-color) h s l / 0) 100%;
+            oklch(from var(--linear-gradient-color) l c h / 1) 0%,
+            oklch(from var(--linear-gradient-color) l c h / 0.738) 19%,
+            oklch(from var(--linear-gradient-color) l c h / 0.541) 34%,
+            oklch(from var(--linear-gradient-color) l c h / 0.382) 47%,
+            oklch(from var(--linear-gradient-color) l c h / 0.278) 56.5%,
+            oklch(from var(--linear-gradient-color) l c h / 0.194) 65%,
+            oklch(from var(--linear-gradient-color) l c h / 0.126) 73%,
+            oklch(from var(--linear-gradient-color) l c h / 0.075) 80.2%,
+            oklch(from var(--linear-gradient-color) l c h / 0.042) 86.1%,
+            oklch(from var(--linear-gradient-color) l c h / 0.021) 91%,
+            oklch(from var(--linear-gradient-color) l c h / 0.008) 95.2%,
+            oklch(from var(--linear-gradient-color) l c h / 0.002) 98.2%,
+            oklch(from var(--linear-gradient-color) l c h / 0) 100%;
         --linear-gradient: linear-gradient(
             var(--linear-gradient-side),
             var(--linear-gradient-steps)
