@@ -87,7 +87,7 @@
 }
 
 @utility link {
-    @apply text-brand-200 hover:decoration-brand-200 focus-visible:decoration-brand-200 wrap-break-word underline decoration-transparent duration-75;
+    @apply text-brand-200 hover:text-brand-50 wrap-break-word duration-100;
 }
 
 @utility btn {
