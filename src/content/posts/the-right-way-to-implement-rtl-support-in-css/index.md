@@ -388,7 +388,9 @@ This invisible character acts as a "strong RTL" anchor. The `dir="auto"` algorit
 
 If would be great if brosers did it the expected way, but that would never happen; Because it follows Unicode standard. There were discussions about adding something like `dir="auto rtl"` but I don't know where they have gotten.
 
-A user-space solution would be to make a NPM package that handles the direction by going trough a string and detecting what the direction should be. It should take the parent direction as a drefrence. Such a package does not exist yet. TODO: maybe I can make this?
+A user-space solution would be to make a NPM package that handles the direction by going trough a string and detecting what the direction should be. It should take the parent direction as a drefrence. Such a package does not exist yet.
+
+<!-- TODO: maybe I can make this? -->
 
 ### `:dir()` is awesome
 
