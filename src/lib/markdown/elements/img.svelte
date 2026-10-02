@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { IconArrowUpRightSquare } from "$lib/components/icons"
+    import { IconArrowUpRightSquare } from "#lib/components/icons"
 
     let {
         src,

@@ -1,6 +1,6 @@
 <script lang="ts">
-    import IconBracketsCurlyBold from "phosphor-icons-svelte/IconBracketsCurlyBold.svelte"
     import IconBracketsAngleBold from "phosphor-icons-svelte/IconBracketsAngleBold.svelte"
+    import IconBracketsCurlyBold from "phosphor-icons-svelte/IconBracketsCurlyBold.svelte"
 </script>
 
 {#if import.meta.env.DEV}

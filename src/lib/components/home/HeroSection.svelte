@@ -6,7 +6,7 @@
         IconEnvelope,
         IconGithub,
         IconTelegram,
-    } from "$lib/components/icons"
+    } from "#lib/components/icons"
 </script>
 
 <section class="relative mx-auto grid max-w-prose gap-4 pb-(--header-height)">

@@ -7,7 +7,7 @@
         Svelte,
         TailwindCss,
         TypeScript,
-    } from "$lib/components/technology-logos"
+    } from "#lib/components/technology-logos"
 
     let {
         slug,

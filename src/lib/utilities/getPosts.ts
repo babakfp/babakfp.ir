@@ -1,4 +1,4 @@
-import { collections } from "$lib/markdown/collections.js"
+import { collections } from "#lib/markdown/collections.js"
 
 export const getPosts = async () => {
     const entries = collections.getEntries("posts")

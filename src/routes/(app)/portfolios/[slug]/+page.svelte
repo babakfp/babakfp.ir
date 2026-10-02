@@ -1,15 +1,15 @@
 <script lang="ts">
     import type { Component } from "svelte"
     import { page } from "$app/state"
-    import { IconArrowUpRightSquare } from "$lib/components/icons"
+    import { IconArrowUpRightSquare } from "#lib/components/icons"
     import {
         PocketBaseFill,
         Sass,
         Svelte,
         TailwindCss,
         TypeScript,
-    } from "$lib/components/technology-logos"
-    import frontendPortfolios from "$lib/portfolios/frontend.json"
+    } from "#lib/components/technology-logos"
+    import frontendPortfolios from "#lib/portfolios/frontend.json"
 
     let { data } = $props()
 

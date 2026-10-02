@@ -1,10 +1,10 @@
 <script lang="ts">
     import IconListRegular from "phosphor-icons-svelte/IconListRegular.svelte"
     import IconXRegular from "phosphor-icons-svelte/IconXRegular.svelte"
-    import DrawerDown from "$lib/components/DrawerDown.svelte"
-    import TocItem from "$lib/components/TocItem.svelte"
-    import { focusTrap } from "$lib/utilities/focusTrap"
-    import type { Headings } from "$lib/utilities/getHeadings"
+    import DrawerDown from "#lib/components/DrawerDown.svelte"
+    import TocItem from "#lib/components/TocItem.svelte"
+    import { focusTrap } from "#lib/utilities/focusTrap.js"
+    import type { Headings } from "#lib/utilities/getHeadings.js"
 
     let {
         headings,

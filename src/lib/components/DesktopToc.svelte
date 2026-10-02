@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { ClassValue } from "svelte/elements"
-    import TocItem from "$lib/components/TocItem.svelte"
-    import type { Headings } from "$lib/utilities/getHeadings"
+    import TocItem from "#lib/components/TocItem.svelte"
+    import type { Headings } from "#lib/utilities/getHeadings.js"
 
     let {
         headings,

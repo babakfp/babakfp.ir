@@ -1,6 +1,6 @@
 <script lang="ts">
-    import FrontendCard from "$lib/components/cards/FrontendCard.svelte"
-    import frontendPortfolios from "$lib/portfolios/frontend.json"
+    import FrontendCard from "#lib/components/cards/FrontendCard.svelte"
+    import frontendPortfolios from "#lib/portfolios/frontend.json"
 </script>
 
 <svelte:head>

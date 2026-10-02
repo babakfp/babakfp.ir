@@ -1,10 +1,10 @@
 <script lang="ts">
     import { page } from "$app/state"
-    import BackToTopBtn from "$lib/components/BackToTopBtn.svelte"
-    import DesktopToc from "$lib/components/DesktopToc.svelte"
-    import MobileToc from "$lib/components/MobileToc.svelte"
-    import { getHeadings, type Headings } from "$lib/utilities/getHeadings.js"
-    import { timeSince } from "$lib/utilities/timeSince"
+    import BackToTopBtn from "#lib/components/BackToTopBtn.svelte"
+    import DesktopToc from "#lib/components/DesktopToc.svelte"
+    import MobileToc from "#lib/components/MobileToc.svelte"
+    import { getHeadings, type Headings } from "#lib/utilities/getHeadings.js"
+    import { timeSince } from "#lib/utilities/timeSince.js"
 
     let { data } = $props()
 

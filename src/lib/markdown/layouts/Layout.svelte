@@ -1,7 +1,7 @@
 <script lang="ts" module>
-    import blockquote from "$lib/markdown/elements/blockquote.svelte"
-    import img from "$lib/markdown/elements/img.svelte"
-    import pre from "$lib/markdown/elements/pre.svelte"
+    import blockquote from "#lib/markdown/elements/blockquote.svelte"
+    import img from "#lib/markdown/elements/img.svelte"
+    import pre from "#lib/markdown/elements/pre.svelte"
 
     export const mdxElements = { blockquote, img, pre }
 </script>

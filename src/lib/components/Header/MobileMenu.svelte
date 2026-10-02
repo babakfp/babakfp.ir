@@ -5,8 +5,8 @@
     import {
         isMainMenuOpen,
         mainMenuItems,
-    } from "$lib/stores/mainMenu.svelte.js"
-    import { focusTrap } from "$lib/utilities/focusTrap"
+    } from "#lib/stores/mainMenu.svelte.js"
+    import { focusTrap } from "#lib/utilities/focusTrap.js"
 
     beforeNavigate(() => (isMainMenuOpen.value = false))
 </script>
