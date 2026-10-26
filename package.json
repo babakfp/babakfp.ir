@@ -4,7 +4,7 @@
         "build": "vite build",
         "preview": "vite preview",
         "prepare": "svelte-kit sync",
-        "format": "prettier -w ."
+        "format": "prettier --log-level=warn -w ."
     },
     "imports": {
         "#lib/*": "./src/lib/*"
