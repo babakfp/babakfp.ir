@@ -45,9 +45,6 @@ export default defineConfig({
             ],
             compilerOptions: {
                 discloseVersion: false,
-                // modernAst: true,
-                // TODO: not sure if it works or not.
-                // https://next.svelte.dev/docs/svelte/svelte-compiler#ModuleCompileOptions
                 warningFilter: (warning) => !warning.code.startsWith("a11y"),
             },
         }),
