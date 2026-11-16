@@ -4,5 +4,5 @@
         "rewriteRelativeImportExtensions": true,
         "sourceMap": true
     },
-    "include": ["src"]
+    "include": ["src", "vite.config.ts"]
 }
