@@ -1,4 +1,3 @@
-saveExact: true
 engineStrict: true
 # Vercel hack for "ERROR packages field missing or empty".
 packages:
