@@ -21,7 +21,7 @@
         "prettier": "^3.10.1",
         "prettier-plugin-svelte": "^4.2.0",
         "prettier-plugin-tailwindcss": "^0.8.1",
-        "svelte": "^5.58.0",
+        "svelte": "^5.59.1",
         "svelte-copy": "^2.0.0",
         "svelte-hot-french-toast": "^4.1.2",
         "svelte-loading-bar": "^3.0.0",
